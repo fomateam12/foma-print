@@ -21,7 +21,6 @@ import {
   Layers,
 } from "lucide-react";
 import { ProductGrid } from "@/components/product-grid";
-import { ProductImage } from "@/components/product-image";
 import { CategoryIcon } from "@/components/category-icon";
 import { SectionHeader } from "@/components/section-header";
 import { BentoGrid, BentoCard } from "@/components/bento";
@@ -122,7 +121,6 @@ const TESTIMONIALS = [
 export default function HomePage() {
   const categories = getCategories();
   const featured = getFeaturedProducts(8);
-  const heroTiles = getFeaturedProducts(20).slice(8, 12);
   const productCount = getProductCount();
 
   return (
@@ -134,22 +132,22 @@ export default function HomePage() {
           <div className="absolute left-[-15%] top-32 h-[30rem] w-[30rem] rounded-full bg-secondary blur-3xl" />
         </div>
 
-        <div className="container-px grid items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
-          <Reveal>
+        <div className="container-px flex flex-col items-center py-16 text-center lg:py-24">
+          <Reveal className="flex flex-col items-center">
             <span className="eyebrow inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-3 py-1 text-brand-strong backdrop-blur-sm">
               <MapPin className="size-3.5" />
               Made in the USA · Ships next day
             </span>
-            <h1 className="mt-5 text-display text-foreground">
+            <h1 className="mt-5 max-w-4xl text-display text-foreground">
               Print under your brand.{" "}
               <span className="font-serif text-metallic">We make &amp; ship it.</span>
             </h1>
-            <p className="mt-5 max-w-xl text-lead text-muted-foreground">
+            <p className="mt-5 max-w-2xl text-lead text-muted-foreground">
               You sell. We print, quality-check and blind-ship to your customer
               under your label — fast production from our US print center.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-3">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link href="/sell" className={cn(buttonVariants({ variant: "brand", size: "lg" }))}>
                 Apply to Sell
                 <ArrowRight className="size-4" />
@@ -162,7 +160,7 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <ul className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-muted-foreground">
+            <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium text-muted-foreground">
               {["White-label", "Next-day production", "No MOQ"].map((chip) => (
                 <li key={chip} className="flex items-center gap-1.5">
                   <BadgeCheck className="size-4 text-brand-strong" />
@@ -171,7 +169,7 @@ export default function HomePage() {
               ))}
             </ul>
 
-            <dl className="mt-10 flex flex-wrap gap-x-8 gap-y-4">
+            <dl className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-4">
               <div>
                 <dt className="sr-only">Products</dt>
                 <dd className="font-heading text-2xl font-bold text-foreground">
@@ -190,40 +188,6 @@ export default function HomePage() {
                 <p className="text-xs text-muted-foreground">drop-ship under your brand</p>
               </div>
             </dl>
-          </Reveal>
-
-          {/* Collage */}
-          <Reveal delay={0.12} className="relative">
-            <div className="grid grid-cols-2 gap-4">
-              {heroTiles.map((p, i) => (
-                <Link
-                  key={p.id}
-                  href={`/product/${p.id}`}
-                  className={cn(
-                    "group relative overflow-hidden rounded-2xl border border-border bg-white shadow-card transition-shadow hover:shadow-lg",
-                    i % 2 === 1 && "translate-y-6",
-                  )}
-                >
-                  <ProductImage
-                    src={p.image}
-                    alt={p.name}
-                    seed={p.sku}
-                    width={500}
-                    priority={i < 2}
-                    sizes="(max-width: 1024px) 45vw, 24vw"
-                    className="aspect-square"
-                    imgClassName="p-4 transition-transform duration-500 group-hover:scale-105"
-                  />
-                </Link>
-              ))}
-            </div>
-
-            <div className="glass absolute -bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-2.5 rounded-full px-4 py-2.5 shadow-lg">
-              <BadgeCheck className="size-4 text-brand-strong" />
-              <span className="text-sm font-medium text-foreground">
-                Free design proof on every order
-              </span>
-            </div>
           </Reveal>
         </div>
       </section>
