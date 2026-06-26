@@ -45,5 +45,10 @@ Manual responsive pass at **390 / 768 / 1280 / 1440 px** on home, the product ba
 (empty + filled), and `/how-it-works`. No horizontal overflow; hero, banner and quote form all
 reflow cleanly. (Captured via the live preview tool — see BLOCKERS for the screenshots-to-disk note.)
 
-## Not done (by instruction)
-No merge to `main`; no production deploy. See BLOCKERS.md for the Vercel preview + env notes.
+## Not done
+- **By instruction:** no merge to `main`; no production deploy. `foma-design.vercel.app` is
+  untouched. All work stays on `redesign/b2b-unify` (12 commits ahead).
+- **Blocked (needs one human step):** the Vercel *preview* deploy couldn't be triggered
+  unattended — no Vercel CLI/auth token and no git remote in this environment, and the MCP deploy
+  tool is advisory only. One command finishes it: `npx vercel deploy` (preview, **not** `--prod`).
+  See BLOCKERS.md for the full hand-off + the git-push alternative.
