@@ -126,28 +126,66 @@ export default function HomePage() {
     <>
       {/* ----------------------------- Hero ----------------------------- */}
       <section className="relative overflow-hidden border-b border-border">
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute -top-40 right-[-10%] h-[42rem] w-[42rem] rounded-full bg-brand-muted/70 blur-3xl" />
-          <div className="absolute left-[-15%] top-32 h-[30rem] w-[30rem] rounded-full bg-secondary blur-3xl" />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
+        >
+          {/* ambient depth: a whisper of light at the top settling into cream */}
+          <div
+            className="absolute inset-x-0 top-0 h-2/3"
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(255,255,255,0.6), transparent)",
+            }}
+          />
+          {/* the single soft warm halo behind the headline */}
+          <div
+            className="absolute left-1/2 top-[18%] h-[24rem] w-[38rem] max-w-[92vw] -translate-x-1/2 blur-2xl sm:h-[32rem] sm:w-[46rem]"
+            style={{
+              background:
+                "radial-gradient(closest-side, rgba(192,90,40,0.15), rgba(192,90,40,0.05) 55%, transparent)",
+            }}
+          />
         </div>
 
         <div className="container-px flex flex-col items-center py-16 text-center lg:py-24">
-          <Reveal className="flex flex-col items-center">
-            <span className="eyebrow inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-3 py-1 text-brand-strong backdrop-blur-sm">
+          <div className="flex flex-col items-center">
+            <span className="hero-rise eyebrow inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-3 py-1 text-brand-strong backdrop-blur-sm">
               <MapPin className="size-3.5" />
               Made in the USA · Ships next day
             </span>
+
             <h1 className="mt-5 max-w-4xl text-display text-foreground">
-              Print under your brand.{" "}
-              <span className="font-serif text-metallic">We make &amp; ship it.</span>
+              <span className="hero-rise block" style={{ animationDelay: "0.06s" }}>
+                Print under your brand.
+              </span>
+              <span
+                className="hero-rise hero-headline-accent font-serif block"
+                style={{ animationDelay: "0.12s" }}
+              >
+                We make and ship it.
+              </span>
             </h1>
-            <p className="mt-5 max-w-2xl text-lead text-muted-foreground">
+
+            <p
+              className="hero-rise mt-5 max-w-2xl text-lead text-muted-foreground"
+              style={{ animationDelay: "0.18s" }}
+            >
               You sell. We print, quality-check and blind-ship to your customer
               under your label — fast production from our US print center.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <Link href="/sell" className={cn(buttonVariants({ variant: "brand", size: "lg" }))}>
+            <div
+              className="hero-rise mt-8 flex flex-wrap items-center justify-center gap-3"
+              style={{ animationDelay: "0.24s" }}
+            >
+              <Link
+                href="/sell"
+                className={cn(
+                  buttonVariants({ variant: "brand", size: "lg" }),
+                  "transition-all duration-300 ease-premium hover:-translate-y-0.5 motion-reduce:transform-none",
+                )}
+              >
                 Apply to Sell
                 <ArrowRight className="size-4" />
               </Link>
@@ -159,7 +197,10 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium text-muted-foreground">
+            <ul
+              className="hero-rise mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium text-muted-foreground"
+              style={{ animationDelay: "0.3s" }}
+            >
               {["White-label", "Next-day production", "No MOQ"].map((chip) => (
                 <li key={chip} className="flex items-center gap-1.5">
                   <BadgeCheck className="size-4 text-brand-strong" />
@@ -168,7 +209,10 @@ export default function HomePage() {
               ))}
             </ul>
 
-            <dl className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-4">
+            <dl
+              className="hero-rise mt-10 flex flex-wrap justify-center gap-x-8 gap-y-4"
+              style={{ animationDelay: "0.36s" }}
+            >
               <div>
                 <dt className="sr-only">Products</dt>
                 <dd className="font-heading text-2xl font-bold text-foreground">
@@ -187,7 +231,7 @@ export default function HomePage() {
                 <p className="text-xs text-muted-foreground">drop-ship under your brand</p>
               </div>
             </dl>
-          </Reveal>
+          </div>
         </div>
       </section>
 

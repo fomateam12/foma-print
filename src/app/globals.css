@@ -281,6 +281,44 @@
     color: var(--rust);
   }
 
+  /* Hero headline accent — a refined single-family copper gradient with a
+     guaranteed solid-rust fallback. Scoped to the hero so the site-wide
+     .text-metallic accents stay flat rust. Clean default glyphs only
+     (no swash / discretionary), so no character can collide. */
+  .hero-headline-accent {
+    color: var(--rust); /* fallback: never invisible text */
+    font-weight: 560;
+    font-size: 0.95em; /* optical balance against the heavier sans line */
+    letter-spacing: -0.012em;
+    font-kerning: normal;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    font-variant-ligatures: common-ligatures no-discretionary-ligatures;
+  }
+  @supports ((background-clip: text) or (-webkit-background-clip: text)) {
+    .hero-headline-accent {
+      background-image: linear-gradient(
+        108deg,
+        #c2602e 0%,
+        var(--rust) 52%,
+        #8a3a16 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      /* ambient warm lift — no offset, generous blur → reads as light, not a shadow */
+      text-shadow: 0 0 24px rgba(168, 72, 30, 0.12);
+    }
+  }
+
+  /* One-time entrance for above-the-fold hero elements. CSS-driven (not JS),
+     so it begins at first paint and never gates the LCP headline behind
+     hydration. Resting state is fully visible; per-element animation-delay
+     (set inline) creates the staggered cascade. */
+  .hero-rise {
+    animation: hero-rise 0.55s var(--ease-premium) both;
+  }
+
   /* Film-grain / noise overlay for dark sections */
   .grain {
     position: relative;
@@ -342,6 +380,17 @@
   }
 }
 
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -353,5 +402,10 @@
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+  }
+  /* Skip the staggered entrance entirely: render the final state at once
+     (the animation-delay would otherwise hold elements hidden). */
+  .hero-rise {
+    animation: none !important;
   }
 }
