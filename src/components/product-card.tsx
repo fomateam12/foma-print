@@ -33,13 +33,22 @@ export function ProductCard({
   const icon = SLUG_ICON[product.categorySlug] ?? "gift";
   const [quickOpen, setQuickOpen] = useState(false);
 
-  // For the hover swap: prefer the second curated view (typically "OPEN" /
-  // "COMPLETE" / "BACK" — a different angle), so the buyer can preview the
-  // alternate view without opening the card. When the SKU has only one image
-  // we skip rendering the second layer to avoid a wasted request.
-  const secondary = product.images && product.images.length >= 2
-    ? product.images[1]
-    : null;
+  // For the hover swap: pick the first image whose basename differs from the
+  // primary, because the curated list often pairs a PNG + JPG of the same
+  // hero (e.g. images[0]=BPN101.png, images[1]=BPN101.jpg — identical photo,
+  // hover swap would be invisible). We want the alternate-angle view —
+  // typically the _OPEN / _COMPLETE / _BACK variant. Falls back to null when
+  // every image in the array is the same view in different file formats.
+  const primaryStem = product.images?.[0]
+    ?.split("/")
+    .pop()
+    ?.replace(/\.[^.]+$/, "");
+  const secondary =
+    product.images?.find((url, i) => {
+      if (i === 0) return false;
+      const stem = url.split("/").pop()?.replace(/\.[^.]+$/, "");
+      return stem !== primaryStem;
+    }) ?? null;
 
   return (
     <div className={cn("group relative flex flex-col", className)}>
