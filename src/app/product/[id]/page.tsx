@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import {
   Check,
   ArrowRight,
@@ -14,6 +13,7 @@ import {
 } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProductGrid } from "@/components/product-grid";
+import { ProductGallery } from "@/components/product-gallery";
 import { AddToQuoteButton } from "@/components/add-to-quote-button";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -99,18 +99,18 @@ export default async function ProductPage({
       />
 
       <div className="grid gap-10 lg:grid-cols-2">
-        {/* Image */}
+        {/* Gallery — when the SKU has a curated multi-view binding the gallery
+            shows up to 6 thumbnails; otherwise it falls back to the single
+            supplier image, sized + transformed through Cloudinary. */}
         <div className="lg:sticky lg:top-24 lg:self-start">
-          <div className="relative aspect-square overflow-hidden rounded-3xl border border-border bg-white">
-            <Image
-              src={cloudinary(product.imageFull, { width: 900 })}
-              alt={product.name}
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-contain p-8"
-            />
-          </div>
+          <ProductGallery
+            images={
+              product.images && product.images.length > 0
+                ? product.images
+                : [cloudinary(product.imageFull, { width: 900 })]
+            }
+            alt={product.name}
+          />
         </div>
 
         {/* Details */}
