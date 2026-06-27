@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { cn } from "@/lib/utils";
 
 interface ProductGalleryProps {
@@ -24,10 +24,12 @@ export function ProductGallery({ images, alt }: ProductGalleryProps) {
   const [active, setActive] = useState(0);
   const count = images.length;
 
-  // Keep `active` valid if the prop ever shrinks (e.g. variant swap).
-  useEffect(() => {
-    if (active >= count) setActive(0);
-  }, [active, count]);
+  // Clamp during render instead of correcting via an effect: if the prop ever
+  // shrinks (e.g. variant swap) `active` may point past the new end, so derive
+  // a safe index for this render. `setActive` self-corrects on the next click
+  // or `cycle` (which is modulo-bounded). Avoids the cascading-render that a
+  // setState-in-effect would trigger.
+  const activeIndex = active < count ? active : 0;
 
   const cycle = useCallback(
     (delta: number) => {
@@ -65,13 +67,13 @@ export function ProductGallery({ images, alt }: ProductGalleryProps) {
     >
       <div className="relative aspect-square overflow-hidden rounded-3xl border border-border bg-white">
         <Image
-          key={images[active]}
-          src={images[active]}
+          key={images[activeIndex]}
+          src={images[activeIndex]}
           alt={
-            count > 1 ? `${alt} — view ${active + 1} of ${count}` : alt
+            count > 1 ? `${alt} — view ${activeIndex + 1} of ${count}` : alt
           }
           fill
-          priority={active === 0}
+          priority={activeIndex === 0}
           sizes="(max-width: 1024px) 100vw, 50vw"
           className="object-contain p-8 transition-opacity duration-200"
         />
@@ -90,7 +92,7 @@ export function ProductGallery({ images, alt }: ProductGalleryProps) {
               type="button"
               onClick={() => setActive(i)}
               aria-label={`Show image ${i + 1} of ${count}`}
-              aria-pressed={i === active}
+              aria-pressed={i === activeIndex}
               className={cn(
                 "relative aspect-square overflow-hidden rounded-xl border bg-white transition",
                 i === active
