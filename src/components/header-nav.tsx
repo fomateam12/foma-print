@@ -246,9 +246,9 @@ export function HeaderNav({
                       </span>
                     </Link>
 
-                    <ul className="grid grid-cols-2 content-start gap-1">
+                    <ul className="grid grid-cols-2 content-start gap-x-3 gap-y-4">
                       {nav.map((cat) => (
-                        <li key={cat.slug}>
+                        <li key={cat.slug} className="min-w-0">
                           <NavigationMenuLink
                             render={<Link href={`/category/${cat.slug}`} />}
                             className="flex items-center gap-3 rounded-lg p-2"
@@ -272,6 +272,24 @@ export function HeaderNav({
                               </span>
                             </span>
                           </NavigationMenuLink>
+                          {cat.subcategories.length > 0 ? (
+                            <ul className="mt-1 ml-[3.5rem] space-y-0.5">
+                              {cat.subcategories.slice(0, 4).map((sc) => (
+                                <li key={sc.slug}>
+                                  <NavigationMenuLink
+                                    render={
+                                      <Link
+                                        href={`/category/${cat.slug}/${sc.slug}`}
+                                      />
+                                    }
+                                    className="block truncate rounded px-2 py-1 text-xs text-muted-foreground hover:text-brand-strong"
+                                  >
+                                    {sc.name}
+                                  </NavigationMenuLink>
+                                </li>
+                              ))}
+                            </ul>
+                          ) : null}
                         </li>
                       ))}
                     </ul>
