@@ -52,14 +52,14 @@ const VALUES = [
   },
 ];
 
-const STATS = [
-  { value: 1542, suffix: "+", label: "products to private-label" },
-  { value: 100, suffix: "%", label: "blind drop-shipped" },
-  { value: 2, suffix: "-day", label: "pricing reply" },
-];
-
 export default function AboutPage() {
   const productCount = getProductCount();
+
+  const STATS = [
+    { value: productCount, suffix: "+", label: "products to private-label" },
+    { value: 100, suffix: "%", label: "blind drop-shipped" },
+    { value: 2, suffix: "-day", label: "pricing reply" },
+  ];
 
   return (
     <div>
