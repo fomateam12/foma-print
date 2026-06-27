@@ -130,4 +130,45 @@ export const fomaProducts: Product[] = [
       },
     ],
   },
+  {
+    id: "foma-tumbler-40oz-engraved",
+    name: "Custom Engraved 40oz Stainless Steel Tumbler with Handle",
+    sku: "FOMA-TMB-40OZ-ENG",
+    size: '40oz · 26.5 × 10 × 7.5 cm',
+    // TODO: placeholder wholesale reference price — confirm the real number
+    // with the user before this goes to production. Hidden from buyers (B2B
+    // pricing is gated behind "Add to quote"), but used internally.
+    basePrice: 12.99,
+    image: "/foma/tumbler-40oz-engraved.jpg",
+    imageFull: "/foma/tumbler-40oz-engraved.jpg",
+    categoryId: "foma-best-seller",
+    categorySlug: "best-seller",
+    categoryName: "Best Sellers",
+    subcategorySlug: "40oz-tumblers",
+    subcategoryName: "40oz Tumblers",
+    description:
+      "Personalized 40oz stainless steel tumbler with handle — double-wall vacuum insulated and laser-engraved to order with a name, monogram or floral design.",
+    longDescription:
+      "A 40oz double-wall vacuum-insulated stainless steel tumbler with a comfortable handle and spill-resistant lid. Laser-engraved to order with a name, monogram, floral motif or custom design for a crisp, permanent finish that won't fade or peel. Keeps drinks cold for up to 12 hours or hot for up to 6. Available in soft powder-coated colors — Rose Pink, Sage Green and Cream. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays. Made to order in the USA.",
+    badges: ["New"],
+    leadTimeDays: 5,
+    personalization: [
+      {
+        id: "color",
+        label: "Color",
+        type: "select",
+        required: true,
+        options: ["Rose Pink", "Sage Green", "Cream"],
+      },
+      {
+        id: "engraving-text",
+        label: "Engraving text",
+        type: "text",
+        required: true,
+        placeholder: "Name, monogram, or short message",
+        maxLength: 40,
+        helpText: "The name or text we'll laser-engrave on the tumbler.",
+      },
+    ],
+  },
 ];
