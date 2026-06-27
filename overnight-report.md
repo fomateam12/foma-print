@@ -1,6 +1,7 @@
 # Overnight Session — 2026-06-26 → 2026-06-27
 
-> **Latest preview:** (will be appended after first green build + deploy)
+> **Latest preview (branch alias — always tracks the latest deploy on
+> `gece/20260626`):** https://foma-design-git-gece-20260626-foma1.vercel.app
 >
 > **Branch:** `gece/20260626`
 >
@@ -109,23 +110,124 @@
 
 ## Phase 1 — Quick corrections
 
-(populated as commits land)
+- **`e11a4c8` fix: hero copy — replace styled ampersand with "and".**
+  Both spots that used `font-serif text-metallic` for the swash
+  ampersand glyph (homepage hero subline; sell-page hero subline)
+  rendered close enough to "@" to look unprofessional. Replaced with
+  "and" — layout, color, typography preserved. Other `&amp;`
+  occurrences (terms / privacy / opengraph / nav eyebrow) kept as-is
+  because they use default sans where the glyph reads correctly.
 
 ## Phase 2 — Size-based sub-categorization
 
-(populated when work begins)
+- **`4b74064` feat(catalog): size + collection filters on category page.**
+  New `src/lib/product-taxonomy.ts` derives a canonical size + bucket
+  (oz / rect / inch / diam / other) from each product's raw `size`
+  field — `normalizeSize()` is conservative: products with an
+  unrecognized format are flagged `bucket: "other"` and never imputed.
+  New `src/components/catalog-filters.tsx` renders a server-rendered
+  chip sidebar; toggling a chip rewrites the URL with repeating
+  `?size=…&sub=…` params (no JS / no URL break — old links still work).
+  `/category/[slug]` switches to a 2-pane layout when filters apply
+  and falls back to the original subcategory tiles + Popular grid
+  when no filters are active.
+- **`53480a1` feat(nav): show top subcategories under each category in
+  mega-menu.** The Catalog mega-menu had only top-level categories.
+  Now renders up to 4 subcategories per category (data was already
+  flowing through the `NavCategory.subcategories` prop, just unused),
+  indented under the category card, with muted typography so the
+  parent stays the visual anchor.
+
+### Size-derivation outcome (per category)
+
+| Category | Recognized formats | "Other" bucket |
+|---|---|---|
+| Polar Camel | 163 oz volumes (16 distinct), 236 inches (14 distinct), 6 diameter | 19 items + 3 with no size |
+| Drinkware | 78 inches, 95 rect, 30 diameter | 15 items (mostly `2 oz. 2 3/8"` combo strings) |
+| Frames & Decor | 110 rect, 2 inches, 2 diameter | 0 |
+| Office/Tech | 21 inches, 224 rect | 16 items (typos like `9 1/2" x 12` missing close-quote) |
+| Gifts & Promotions | mixed (inches + rect dominant) | small tail |
+
+The 50-odd items in the "other" bucket per category surface in the
+filter UI as their own facet group; they are not lost and not guessed.
 
 ## Phase 3 — Enterprise UI/UX polish
 
-(populated when work begins)
+- **`cdaf42c` feat(subcategory): inline size filter when 2+ distinct
+  sizes.** Subcategory pages mirror the category-page filter rail
+  pattern: when the collection has at least two normalized sizes the
+  page switches to the 2-pane layout. Collections with only one size
+  (or none — e.g. "Bottle Openers") keep the original single-grid
+  layout, no empty filter rail.
+- **`962f5f9` polish(filters): bound rail height on lg so long facet
+  lists scroll.** Big categories (Drinkware, Polar Camel) produced a
+  filter sidebar taller than the viewport, which pushed the grid
+  scroll-target off-screen. Cap at `calc(100vh - 7rem)` with
+  overflow-y-auto on lg+; sticky positioning still holds it in view
+  as the grid scrolls.
+- **`0624753` a11y(subcategory): `aria-current="page"` on the active
+  sibling-pill.** Visual treatment was already correct; screen readers
+  now get the same signal.
+
+Polish items I evaluated but **did not** ship — each was either
+duplication of existing system or speculative-without-clear-value:
+
+- A separate `.text-h4` / `.text-body` utility — the Hanken Grotesk +
+  Inter pairing already reads consistently at default Tailwind sizes;
+  adding more utility names would invite drift.
+- Replacing ad-hoc `mt-3.5` / `py-1.5` paddings with strict 4/8 scale —
+  the existing spacing is intentional in several places (eyebrows
+  vs. body text rhythm) and a global sweep would be high-risk churn.
+- Adding a "Sort by" dropdown on category grids — categories are
+  curated to be browseable; B2B buyers don't typically sort by price
+  on a wholesale catalog and the existing taxonomy + filter is enough.
 
 ## Phase 4 — Continuous loop + preview deploys
 
-(populated after each green commit; each line is `change — preview: url`)
+Each line: `commit — change — preview URL`. The branch-alias URL at
+the top of this file always points at the most recent green deploy.
+
+- `e11a4c8` hero copy fix — preview: https://foma-design-git-gece-20260626-foma1.vercel.app
+- `4b74064` catalog filters — preview: https://foma-design-git-gece-20260626-foma1.vercel.app
+- `53480a1` mega-menu subcategories — preview: https://foma-design-git-gece-20260626-foma1.vercel.app
+- `cdaf42c` subcategory size filter — preview: https://foma-design-git-gece-20260626-foma1.vercel.app
+- `962f5f9` filter rail scroll cap — preview: https://foma-design-git-gece-20260626-foma1.vercel.app
+- `0624753` aria-current on sibling pill — preview: https://foma-design-git-gece-20260626-foma1.vercel.app
 
 ## Phase 5 — Wrap-up
 
-(populated at session end)
+Final state on `gece/20260626`:
+
+| File | Touched | Purpose |
+|---|---|---|
+| `src/app/page.tsx` | edited | Phase 1 hero text |
+| `src/app/sell/page.tsx` | edited | Phase 1 hero text |
+| `src/lib/product-taxonomy.ts` | new | Size derivation + facet helpers |
+| `src/components/catalog-filters.tsx` | new | Server-rendered chip filter rail |
+| `src/app/category/[slug]/page.tsx` | rewrote | 2-pane filterable layout |
+| `src/app/category/[slug]/[subSlug]/page.tsx` | extended | Inline size filter + a11y |
+| `src/components/header-nav.tsx` | edited | Subcategory links in mega-menu |
+| `overnight-report.md` | this file | Living briefing |
+| `DEPLOY-CHECKLIST.md` | new | Production cutover guide |
+| `AGENTS.md` | small note | Overnight pointer line |
+
+Build state: `npm run build` green, 1352 static pages, no TS errors,
+no lint output (`npm run lint` would run eslint but isn't called by
+the build pipeline here).
+
+## Needs human review
+
+- **290 SKUs still ship with <3 images.** Data gap from the supplier
+  dump — flagged in `overnight-image-report.md`. Decision required
+  (live with it, source from supplier, scrape FOMA's own bank).
+- **Size derivation for the `other` bucket (~50 items per large
+  category).** Strings like `"2 oz. 2 3/8""` or `"9 1/2" x 12"`
+  (missing close-quote) are real supplier typos. Worth a one-time
+  pass to either fix in source data or extend `normalizeSize()` —
+  the strict-by-default behavior is the right starting point.
+- **Production deploy is intentionally NOT done.** See
+  `DEPLOY-CHECKLIST.md` for the exact commands; my permissions block
+  prod and `git push` regardless.
 
 ## Needs human review
 

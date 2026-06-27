@@ -53,3 +53,30 @@ yazmadan önce node_modules/next/dist/docs/ oku) + Tailwind.
 - Bekleyen karar: 290 SKU hâlâ <3 görselli — supplier dump'ta yok. Çözüm
   yolları için raporun "Next steps" kısmı.
 <!-- END:foma-overnight -->
+
+## Gece durumu — 2026-06-26 23:00 (UI/UX polish + size taxonomy)
+- Şube: `gece/20260626` üzerine 6 yeni commit (`e11a4c8` → `0624753`).
+  Push edilmedi (`git push *` deny aktif). Detay: `overnight-report.md`
+  (kök, living log) + `DEPLOY-CHECKLIST.md` (kök, prod cutover guide).
+- **Phase 1:** Hero subline glyph fix — `font-serif text-metallic`
+  swash ampersand'i `@`'ye benziyordu, "and"a çevrildi (homepage +
+  sell page).
+- **Phase 2:** Size derivation + filtering.
+  - `src/lib/product-taxonomy.ts` — `normalizeSize()` raw `size`
+    field'ı 5 bucket'a böler (oz/rect/inch/diam/other). Strict-by-default,
+    bilinmeyen format `other` bucket'a düşer, asla guess yok.
+  - `src/components/catalog-filters.tsx` — server-rendered chip
+    filter rail, repeating `?size=&sub=` query params, no JS.
+  - `/category/[slug]` ve `/category/[slug]/[subSlug]` filter'a kavuştu;
+    no-filter case'inde mevcut layout korunur — hiçbir URL kırılmadı.
+  - Catalog mega-menu'ye kategori altında 4 subcategory link'i eklendi
+    (data zaten geliyordu, gösterilmiyordu).
+- **Phase 3:** Filter rail viewport-bounded scroll, `aria-current="page"`
+  active sibling-pill'de. Daha geniş bir typography/spacing sweep
+  yapmadım — mevcut sistem zaten tutarlı, sweep churn olur (gerekçe
+  raporda).
+- Preview branch alias: `foma-design-git-gece-20260626-foma1.vercel.app`
+  (her green commit sonrası `vercel --yes` ile preview deploy).
+- Prod'a giden yol: `DEPLOY-CHECKLIST.md` "Commands to ship" bloğu —
+  human çalıştırır, agent değil (`vercel --prod` + `git push *`
+  ikisi de deny rule'da).
