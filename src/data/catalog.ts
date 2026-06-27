@@ -216,84 +216,21 @@ const REMOVED_SKUS = new Set<string>([
   "LSC106", "LSC107", "LSC108", "LTM072", "LTM076", "SLT060",
   "SLT061", "SLT062", "SLT071", "SLT075", "SLT076", "SLT077",
   "SLT078", "SLT079", "SLT080", "SLT081", "SLT088",
+
+  // Marked "SIL (x)" in fomaprint liste.xlsx (2026-06-27 refresh) — 20 SKUs
+  // that were still live in the feed; removed per the spreadsheet. The 5
+  // silicone-grip-coaster SKUs also marked "SIL (x)" were curated additions
+  // (see ADDED_PRODUCTS) and are dropped there, not here. No other curation changed.
+  "BR2251", "BR2501", "FSK101", "FSK102", "FSK103", "FSK104",
+  "FSK111", "FSK303", "FSK309", "FSK312", "FSK628", "FSK651SETA",
+  "GFT014", "GFT015", "GFT441", "GFT442", "GFT443", "GFT444",
+  "GFT485", "SLT087",
 ]);
 
 const ADDED_PRODUCTS: RawProduct[] = [
-  {
-    id: "gft2091",
-    name: "Pink Round Silicone Grip Coaster",
-    sku: "GFT2091",
-    size: "3 3/4\" diameter",
-    price: 3.6,
-    image: "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1669753944/products/images/large/GFT2091--de027336.png",
-    imageFull: "https://res.cloudinary.com/business-products/image/upload/q_auto/v1669753944/products/images/large/GFT2091--de027336.png",
-    categoryId: "3",
-    categorySlug: "drinkware",
-    categoryName: "Drinkware",
-    subId: "sgc",
-    subSlug: "silicone-grip-coasters",
-    subName: "Silicone Grip Coasters",
-  },
-  {
-    id: "gft2101",
-    name: "Pink Square Silicone Grip Coaster",
-    sku: "GFT2101",
-    size: "3 3/4\" x 3 3/4\"",
-    price: 3.6,
-    image: "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1669753959/products/images/large/GFT2101--6eabc84a.png",
-    imageFull: "https://res.cloudinary.com/business-products/image/upload/q_auto/v1669753959/products/images/large/GFT2101--6eabc84a.png",
-    categoryId: "3",
-    categorySlug: "drinkware",
-    categoryName: "Drinkware",
-    subId: "sgc",
-    subSlug: "silicone-grip-coasters",
-    subName: "Silicone Grip Coasters",
-  },
-  {
-    id: "gft2071",
-    name: "Red Round Silicone Grip Coaster",
-    sku: "GFT2071",
-    size: "3 3/4\" diameter",
-    price: 3.6,
-    image: "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1669753908/products/images/large/GFT2071--e4157213.png",
-    imageFull: "https://res.cloudinary.com/business-products/image/upload/q_auto/v1669753908/products/images/large/GFT2071--e4157213.png",
-    categoryId: "3",
-    categorySlug: "drinkware",
-    categoryName: "Drinkware",
-    subId: "sgc",
-    subSlug: "silicone-grip-coasters",
-    subName: "Silicone Grip Coasters",
-  },
-  {
-    id: "gft2081",
-    name: "Red Square Silicone Grip Coaster",
-    sku: "GFT2081",
-    size: "3 3/4\" x 3 3/4\"",
-    price: 3.6,
-    image: "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1669753926/products/images/large/GFT2081--4b00d095.png",
-    imageFull: "https://res.cloudinary.com/business-products/image/upload/q_auto/v1669753926/products/images/large/GFT2081--4b00d095.png",
-    categoryId: "3",
-    categorySlug: "drinkware",
-    categoryName: "Drinkware",
-    subId: "sgc",
-    subSlug: "silicone-grip-coasters",
-    subName: "Silicone Grip Coasters",
-  },
-  {
-    id: "gft2102",
-    name: "Teal Square Silicone Grip Coaster",
-    sku: "GFT2102",
-    size: "3 3/4\" x 3 3/4\"",
-    price: 3.6,
-    image: "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1669753965/products/images/large/GFT2102--8ed26440.png",
-    imageFull: "https://res.cloudinary.com/business-products/image/upload/q_auto/v1669753965/products/images/large/GFT2102--8ed26440.png",
-    categoryId: "3",
-    categorySlug: "drinkware",
-    categoryName: "Drinkware",
-    subId: "sgc",
-    subSlug: "silicone-grip-coasters",
-    subName: "Silicone Grip Coasters",
-  },
+  // The five silicone-grip-coaster additions (GFT2071/2081/2091/2101/2102) were
+  // marked "SIL (x)" in fomaprint liste.xlsx (2026-06-27 refresh) and dropped.
+  // Their now-empty "Silicone Grip Coasters" subcategory was removed below.
   {
     id: "lbh21",
     name: "Stainless Steel Polar Camel Insulated Beverage Holder",
@@ -313,11 +250,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
 
 /* New subcategories the additions introduce, keyed by the (post-merge)
    category slug they belong under. Count is recomputed from products. */
-const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
-  drinkware: [
-    { subId: "sgc", slug: "silicone-grip-coasters", name: "Silicone Grip Coasters", count: 0 },
-  ],
-};
+const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {};
 
 function stripBrand(text: string): string {
   return text
