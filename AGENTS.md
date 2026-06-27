@@ -25,16 +25,31 @@ yazmadan önce node_modules/next/dist/docs/ oku) + Tailwind.
 - [ ] (madde 2)
 
 ## Gece durumu — 2026-06-26 (image gallery binding)
-- Şube: `gece/20260626` (commits `5d2842f`, `3ddd524`, `9c3ca5d`); push edilmedi.
-- Eşleşme: 1279/1279 katalog SKU'su (REMOVED_SKUS sonrası), 4599 görsel
-  URL'si. Eşleme stratejisi: filename `_` öncesi adayı SKU set'ine
-  case-insensitive **exact** match — fuzzy / prefix-strip yok. Detay:
-  `overnight-image-report.md` (kök).
-- Yerleştirme: `public/products/{SKU}/` altına APFS clonefile ile, 8.3 GB.
-  Boyut 500 MB eşiğini aştığı için `.gitignore` ile commit dışı bırakıldı.
-- Bekleyen karar (sabah): görseller nereye gidecek? Seçenekler:
-  Vercel Blob / Cloudinary / S3+CDN. URL şeması `/products/{SKU}/...` —
-  CDN seçilirse `src/data/product-images.json` ya doğrudan yeniden
-  yazılır ya da Next rewrite ile `cdn.example.com/...` arkasına alınır.
-- Yardımcı script'ler `.scrape/overnight/`'ta (gitignore'lu).
+- Şube: `gece/20260626` (commits `5d2842f` → `84971b5`); GitHub'a push edildi
+  (`github.com/eymen160/foma-design`).
+- Eşleşme: 1279/1279 katalog SKU'su (REMOVED_SKUS sonrası), 4609 görsel URL'si
+  (tire-separator extension dahil). Eşleme stratejisi: filename'in **leading
+  alnum run**'ını adaya çevirir, SKU set'ine case-insensitive **exact** match —
+  fuzzy / prefix-strip yok. Letter-ending SKU testleri (GFT254A) regresyon
+  vermiyor. Detay: `overnight-image-report.md` (kök).
+- Hosting: **Vercel Blob denedik, Hobby tier 1 GB cap'i aştı → Cloudinary'e
+  pivot ettik.** Cloudinary cloud `mxepungb`, 4609 dosya yüklendi
+  (8.24 GB, ~25 dk). Vercel project env'da `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=mxepungb`
+  Production + Preview için set. `src/lib/cloudinary-loader.ts` (custom next/image
+  loader) build-time'da `/products/...` paths → `res.cloudinary.com/mxepungb/.../q_auto,f_auto/...`
+  URL'lerine çevirir. `next.config.ts` rewrite YOK — loader doğrudan halleder
+  (next/image optimizer rewrite'ları follow etmiyordu, ilk preview'da broken'dı).
+- UI: detail page'de `ProductGallery` (hero + thumbnail strip, arrow nav),
+  listing card'da hover-cycle (PNG/JPG dupe atlanır, ilk DIFFERENT-stem URL'i
+  swap için seçilir), her kartta "Quick view" pill → modal'da aynı galeri +
+  add-to-quote.
+- Deploy: GitHub'a bağlı, `main` → production (`foma-design.vercel.app`),
+  her branch push → preview URL. CI yaml yok — Vercel pipeline yeter.
+- Cross-machine handoff: `DEPLOY.md` (kök) — clone-to-deploy walkthrough, env
+  var tablosu, image library lifecycle, prod cutover checklist.
+- Yardımcı script'ler `.scrape/overnight/`'ta (gitignore'lu):
+  `build_image_report.py` (matching + sidecar), `place_images.py` (APFS clone),
+  `upload_to_cloudinary.mjs` (idempotent, deterministic public_id).
+- Bekleyen karar: 290 SKU hâlâ <3 görselli — supplier dump'ta yok. Çözüm
+  yolları için raporun "Next steps" kısmı.
 <!-- END:foma-overnight -->

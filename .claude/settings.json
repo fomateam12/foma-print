@@ -4,8 +4,6 @@
       "Bash(rm -rf *)",
       "Bash(git push *)",
       "Bash(git reset --hard *)",
-      "Bash(vercel *)",
-      "Bash(npx vercel *)",
       "Read(./.env*)",
       "Edit(./.env*)",
       "Bash(curl * | *)"
