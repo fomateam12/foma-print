@@ -139,7 +139,7 @@ export default function HomePage() {
             </span>
             <h1 className="mt-5 max-w-4xl text-display text-foreground">
               Print under your brand.{" "}
-              <span className="font-serif text-metallic">We make &amp; ship it.</span>
+              <span className="font-serif text-metallic">We make and ship it.</span>
             </h1>
             <p className="mt-5 max-w-2xl text-lead text-muted-foreground">
               You sell. We print, quality-check and blind-ship to your customer
