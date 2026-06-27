@@ -1,73 +1,141 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-import { Star } from "lucide-react";
+import { useState, type ReactNode } from "react";
+import { Eye } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { formatPrice } from "@/lib/format";
-import { cloudinary } from "@/lib/format";
-import type { Product } from "@/data/types";
+import { ProductImage } from "@/components/product-image";
+import { ProductQuickView } from "@/components/product-quick-view";
+import type { IconKey, Product } from "@/data/types";
+
+/** Client-safe category-slug → fallback icon map (mirrors catalog.ts). */
+const SLUG_ICON: Record<string, IconKey> = {
+  "best-seller": "award",
+  "gifts-and-promotions": "gift",
+  drinkware: "coffee",
+  "frames-and-decor": "frame",
+  "office-tech": "notebook",
+};
 
 export function ProductCard({
   product,
   className,
   priority = false,
+  action,
 }: {
   product: Product;
   className?: string;
   priority?: boolean;
+  /** Optional overlay action (e.g. an Add-to-quote button). */
+  action?: ReactNode;
 }) {
-  const badge = product.badges[0];
+  const icon = SLUG_ICON[product.categorySlug] ?? "gift";
+  const [quickOpen, setQuickOpen] = useState(false);
+
+  // For the hover swap: pick the first image whose basename differs from the
+  // primary, because the curated list often pairs a PNG + JPG of the same
+  // hero (e.g. images[0]=BPN101.png, images[1]=BPN101.jpg — identical photo,
+  // hover swap would be invisible). We want the alternate-angle view —
+  // typically the _OPEN / _COMPLETE / _BACK variant. Falls back to null when
+  // every image in the array is the same view in different file formats.
+  const primaryStem = product.images?.[0]
+    ?.split("/")
+    .pop()
+    ?.replace(/\.[^.]+$/, "");
+  const secondary =
+    product.images?.find((url, i) => {
+      if (i === 0) return false;
+      const stem = url.split("/").pop()?.replace(/\.[^.]+$/, "");
+      return stem !== primaryStem;
+    }) ?? null;
 
   return (
-    <Link
-      href={`/product/${product.id}`}
-      className={cn(
-        "group relative flex flex-col rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-        className,
-      )}
-    >
-      <div className="relative aspect-square overflow-hidden rounded-2xl border border-border bg-white">
-        <Image
-          src={cloudinary(product.image, { width: 500 })}
-          alt={product.name}
-          fill
-          priority={priority}
-          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-          className="object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-[1.04]"
-        />
-        {badge ? (
-          <span
-            className={cn(
-              "absolute left-3 top-3 rounded-full px-2.5 py-1 text-[11px] font-semibold shadow-sm",
-              badge === "Bestseller"
-                ? "bg-brand text-brand-foreground"
-                : "bg-evergreen text-evergreen-foreground",
+    <div className={cn("group relative flex flex-col", className)}>
+      <Link
+        href={`/product/${product.id}`}
+        className="flex flex-1 flex-col rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+      >
+        <div className="relative aspect-square overflow-hidden rounded-2xl border border-border bg-white">
+          <ProductImage
+            src={product.image}
+            alt={product.name}
+            seed={product.sku}
+            icon={icon}
+            priority={priority}
+            className="absolute inset-0"
+            imgClassName={cn(
+              "p-3 transition-all duration-300",
+              secondary
+                ? "group-hover:scale-[1.02] group-hover:opacity-0"
+                : "group-hover:scale-[1.04]",
             )}
-          >
-            {badge}
-          </span>
-        ) : null}
-      </div>
-
-      <div className="mt-3.5 flex flex-1 flex-col gap-1 px-0.5">
-        <p className="text-xs font-medium text-muted-foreground">
-          {product.subcategoryName}
-        </p>
-        <h3 className="line-clamp-2 text-[0.95rem] font-medium text-foreground transition-colors group-hover:text-brand-strong">
-          {product.name}
-        </h3>
-        <div className="mt-auto flex items-center justify-between pt-1.5">
-          <span className="font-semibold text-foreground">
-            {formatPrice(product.basePrice)}
-          </span>
-          <span className="flex items-center gap-1 text-xs text-muted-foreground">
-            <Star className="size-3.5 fill-brand text-brand" />
-            {product.rating.toFixed(1)}
-            <span className="text-muted-foreground/70">
-              ({product.reviewCount})
-            </span>
-          </span>
+          />
+          {secondary ? (
+            <Image
+              src={secondary}
+              alt=""
+              aria-hidden="true"
+              fill
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              className="absolute inset-0 object-contain p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            />
+          ) : null}
         </div>
-      </div>
-    </Link>
+
+        <div className="mt-3.5 flex flex-1 flex-col gap-1 px-0.5">
+          <p className="text-xs font-medium text-muted-foreground">
+            {product.subcategoryName}
+          </p>
+          <h3 className="line-clamp-2 text-[0.95rem] font-medium text-foreground transition-colors group-hover:text-brand-strong">
+            {product.name}
+          </h3>
+          <div className="mt-auto flex items-center justify-between pt-1.5">
+            <span className="font-mono text-[11px] uppercase tracking-wide text-muted-foreground/80">
+              {product.sku}
+            </span>
+            <span className="text-xs font-medium text-brand-strong">
+              Request pricing
+            </span>
+          </div>
+        </div>
+      </Link>
+
+      {/* Quick view pill — fades in on hover (desktop) and is always visible
+          on mobile, where there is no hover state. Sits outside the Link so
+          its click doesn't navigate. */}
+      <button
+        type="button"
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          setQuickOpen(true);
+        }}
+        aria-label={`Quick view: ${product.name}`}
+        className={cn(
+          "absolute left-3 top-3 z-10 inline-flex items-center gap-1.5",
+          "rounded-full bg-white/95 px-3 py-1.5 text-xs font-medium text-foreground",
+          "shadow-sm backdrop-blur transition-opacity duration-300",
+          "focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+          // Desktop: hidden until hover. Mobile (<sm): always visible.
+          "opacity-0 group-hover:opacity-100 max-sm:opacity-100",
+        )}
+      >
+        <Eye className="size-3.5" />
+        Quick view
+      </button>
+
+      {action ? (
+        <div className="absolute right-3 top-3 z-10 opacity-0 transition-opacity duration-300 ease-premium group-hover:opacity-100 focus-within:opacity-100">
+          {action}
+        </div>
+      ) : null}
+
+      <ProductQuickView
+        product={product}
+        open={quickOpen}
+        onOpenChange={setQuickOpen}
+      />
+    </div>
   );
 }

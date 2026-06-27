@@ -25,8 +25,16 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true });
   }
 
-  const result = await sendSellerApplicationEmails(parsed.data);
-  if (!result.ok) {
+  try {
+    const result = await sendSellerApplicationEmails(parsed.data);
+    if (!result.ok) {
+      return NextResponse.json(
+        { error: "We couldn't submit your application. Please email us directly." },
+        { status: 502 },
+      );
+    }
+  } catch (err) {
+    console.error("[seller-application] dispatch threw:", err);
     return NextResponse.json(
       { error: "We couldn't submit your application. Please email us directly." },
       { status: 502 },

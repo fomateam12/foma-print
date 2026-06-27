@@ -4,7 +4,13 @@
  * product dataset into the browser bundle.
  */
 
-export type IconKey = "gift" | "cup-soda" | "coffee" | "frame" | "notebook";
+export type IconKey =
+  | "gift"
+  | "cup-soda"
+  | "coffee"
+  | "frame"
+  | "notebook"
+  | "award";
 
 export type PersonalizationType = "text" | "select";
 
@@ -24,9 +30,16 @@ export interface Product {
   name: string;
   sku: string;
   size: string | null;
+  /** Internal wholesale reference price. Never rendered as a retail tag —
+   *  B2B pricing is gated behind "Request pricing" / "Add to quote". */
   basePrice: number;
   image: string;
   imageFull: string;
+  /** Ordered gallery of additional view URLs (primary first, BLANK variants
+   *  last). Optional — undefined when no curated gallery has been bound for
+   *  this SKU. The single `image` / `imageFull` fields above remain the
+   *  primary references and stay populated regardless. */
+  images?: string[];
   categoryId: string;
   categorySlug: string;
   categoryName: string;
@@ -35,8 +48,6 @@ export interface Product {
   description: string;
   longDescription: string;
   badges: string[];
-  rating: number;
-  reviewCount: number;
   leadTimeDays: number;
   personalization: PersonalizationOption[];
 }
