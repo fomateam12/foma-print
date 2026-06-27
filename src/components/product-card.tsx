@@ -1,7 +1,12 @@
+"use client";
+
 import Link from "next/link";
-import type { ReactNode } from "react";
+import Image from "next/image";
+import { useState, type ReactNode } from "react";
+import { Eye } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ProductImage } from "@/components/product-image";
+import { ProductQuickView } from "@/components/product-quick-view";
 import type { IconKey, Product } from "@/data/types";
 
 /** Client-safe category-slug → fallback icon map (mirrors catalog.ts). */
@@ -26,6 +31,15 @@ export function ProductCard({
   action?: ReactNode;
 }) {
   const icon = SLUG_ICON[product.categorySlug] ?? "gift";
+  const [quickOpen, setQuickOpen] = useState(false);
+
+  // For the hover swap: prefer the second curated view (typically "OPEN" /
+  // "COMPLETE" / "BACK" — a different angle), so the buyer can preview the
+  // alternate view without opening the card. When the SKU has only one image
+  // we skip rendering the second layer to avoid a wasted request.
+  const secondary = product.images && product.images.length >= 2
+    ? product.images[1]
+    : null;
 
   return (
     <div className={cn("group relative flex flex-col", className)}>
@@ -33,15 +47,32 @@ export function ProductCard({
         href={`/product/${product.id}`}
         className="flex flex-1 flex-col rounded-2xl outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
       >
-        <ProductImage
-          src={product.image}
-          alt={product.name}
-          seed={product.sku}
-          icon={icon}
-          priority={priority}
-          className="aspect-square rounded-2xl border border-border"
-          imgClassName="p-3 group-hover:scale-[1.04]"
-        />
+        <div className="relative aspect-square overflow-hidden rounded-2xl border border-border bg-white">
+          <ProductImage
+            src={product.image}
+            alt={product.name}
+            seed={product.sku}
+            icon={icon}
+            priority={priority}
+            className="absolute inset-0"
+            imgClassName={cn(
+              "p-3 transition-all duration-300",
+              secondary
+                ? "group-hover:scale-[1.02] group-hover:opacity-0"
+                : "group-hover:scale-[1.04]",
+            )}
+          />
+          {secondary ? (
+            <Image
+              src={secondary}
+              alt=""
+              aria-hidden="true"
+              fill
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              className="absolute inset-0 object-contain p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            />
+          ) : null}
+        </div>
 
         <div className="mt-3.5 flex flex-1 flex-col gap-1 px-0.5">
           <p className="text-xs font-medium text-muted-foreground">
@@ -61,11 +92,41 @@ export function ProductCard({
         </div>
       </Link>
 
+      {/* Quick view pill — fades in on hover (desktop) and is always visible
+          on mobile, where there is no hover state. Sits outside the Link so
+          its click doesn't navigate. */}
+      <button
+        type="button"
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          setQuickOpen(true);
+        }}
+        aria-label={`Quick view: ${product.name}`}
+        className={cn(
+          "absolute left-3 top-3 z-10 inline-flex items-center gap-1.5",
+          "rounded-full bg-white/95 px-3 py-1.5 text-xs font-medium text-foreground",
+          "shadow-sm backdrop-blur transition-opacity duration-300",
+          "focus-visible:opacity-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+          // Desktop: hidden until hover. Mobile (<sm): always visible.
+          "opacity-0 group-hover:opacity-100 max-sm:opacity-100",
+        )}
+      >
+        <Eye className="size-3.5" />
+        Quick view
+      </button>
+
       {action ? (
         <div className="absolute right-3 top-3 z-10 opacity-0 transition-opacity duration-300 ease-premium group-hover:opacity-100 focus-within:opacity-100">
           {action}
         </div>
       ) : null}
+
+      <ProductQuickView
+        product={product}
+        open={quickOpen}
+        onOpenChange={setQuickOpen}
+      />
     </div>
   );
 }
