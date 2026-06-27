@@ -520,20 +520,24 @@
     "/products/FSK652SETA/FSK652SETA_COMPLETED.jpg"
   ],
   "FSK655SETA": [
-    "/products/FSK655SETA/FSK655SETA.jpg"
+    "/products/FSK655SETA/FSK655SETA.jpg",
+    "/products/FSK655SETA/FSK655SETA-COMPLETED.jpg"
   ],
   "FSK661SETA": [
-    "/products/FSK661SETA/FSK661SETA.jpg"
+    "/products/FSK661SETA/FSK661SETA.jpg",
+    "/products/FSK661SETA/FSK661SETA-COMPLETED.jpg"
   ],
   "FSK671SET": [
-    "/products/FSK671SET/FSK671SET.jpg"
+    "/products/FSK671SET/FSK671SET.jpg",
+    "/products/FSK671SET/FSK671SET-COMPLETED.jpg"
   ],
   "FSK672SET": [
     "/products/FSK672SET/FSK672SET.jpg",
     "/products/FSK672SET/FSK672SET_COMPLETED.jpg"
   ],
   "FSK675SET": [
-    "/products/FSK675SET/FSK675SET.jpg"
+    "/products/FSK675SET/FSK675SET.jpg",
+    "/products/FSK675SET/FSK675SET-COMPLETED.jpg"
   ],
   "FSK705A": [
     "/products/FSK705A/FSK705A.png",
@@ -953,7 +957,8 @@
     "/products/GFT1247/GFT1247_BLANK.png"
   ],
   "GFT125": [
-    "/products/GFT125/GFT125.jpg"
+    "/products/GFT125/GFT125.jpg",
+    "/products/GFT125/GFT125-29_open.jpg"
   ],
   "GFT1251": [
     "/products/GFT1251/GFT1251.png",
@@ -1329,7 +1334,8 @@
     "/products/GFT169/GFT169.jpg"
   ],
   "GFT170": [
-    "/products/GFT170/GFT170.jpg"
+    "/products/GFT170/GFT170.jpg",
+    "/products/GFT170/GFT170-174_STYLED.jpg"
   ],
   "GFT171": [
     "/products/GFT171/GFT171.jpg"
@@ -2126,6 +2132,7 @@
   ],
   "GFT232": [
     "/products/GFT232/GFT232.png",
+    "/products/GFT232/GFT232-COMPLETE.png",
     "/products/GFT232/GFT232.jpg",
     "/products/GFT232/GFT232_Open.png"
   ],
@@ -4828,7 +4835,8 @@
     "/products/LCM218/LCM218_BLANK.png"
   ],
   "LL11": [
-    "/products/LL11/LL11.jpg"
+    "/products/LL11/LL11.jpg",
+    "/products/LL11/LL11-complete.jpg"
   ],
   "LLF157": [
     "/products/LLF157/LLF157.png",
@@ -7013,7 +7021,8 @@
   ],
   "PTF157": [
     "/products/PTF157/PTF157.png",
-    "/products/PTF157/PTF157.jpg"
+    "/products/PTF157/PTF157.jpg",
+    "/products/PTF157/PTF157-Lasered.jpg"
   ],
   "PTF1810": [
     "/products/PTF1810/PTF1810.jpg"
@@ -7028,7 +7037,8 @@
     "/products/PTF257/ptf257.jpg"
   ],
   "PTF2810": [
-    "/products/PTF2810/ptf2810.jpg"
+    "/products/PTF2810/ptf2810.jpg",
+    "/products/PTF2810/PTF2810-Lasered.jpg"
   ],
   "PTF446": [
     "/products/PTF446/PTF446.jpg",

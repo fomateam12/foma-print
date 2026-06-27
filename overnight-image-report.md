@@ -1,41 +1,26 @@
 # Overnight Image Matching Report
 
-## TL;DR — for the morning
-
-| | |
-|---|---|
-| **Branch** | `gece/20260626` (commits `5d2842f`, `3ddd524`, `9c3ca5d`; not pushed) |
-| **Schema** | `Product.images?: string[]` added (optional gallery). Existing `image`/`imageFull` untouched. |
-| **Match rate** | **1279 / 1279** catalog SKUs got at least one image — 100%, exact matches only (no fuzzy). |
-| **Sidecar** | `src/data/product-images.json` (1279 SKUs → 4599 ordered URLs). |
-| **Files** | 4599 image files cloned to `public/products/{SKU}/` via APFS clonefile — 8.26 GB on disk. |
-| **Git** | `public/products/` is gitignored (volume > 500 MB threshold). Code + bindings ARE committed. |
-| **Awaiting decision** | Where do the binaries live in prod? (Vercel Blob / Cloudinary / S3+CDN.) See "Next steps" at bottom. |
-| **Build** | `npm run build` green — 1352 static pages, 1281 product pages, no TS errors. |
-
----
-
 - Source: `~/foma-design/.scrape/incoming/Product_images/Product_Images/`
 - Catalog SKUs after curation: **1279**
 - Image files scanned: **53353**
 - SKUs with at least one matched image: **1279**
 - SKUs with **zero** matched images: **0**
-- Image files matched to a SKU: **4599**
-- Orphan files (no SKU match): **47194**
-- Total size of matched files (would-be copy): **8.26 GB**
+- Image files matched to a SKU: **4609**
+- Orphan files (no SKU match): **47184**
+- Total size of matched files (would-be copy): **8.27 GB**
 
 ## Volume decision
 
-Matched-file volume (8.26 GB) **exceeds the 500MB threshold**. Per the task constraint, images will be placed under `public/products/{SKU}/` but **not added to git**. **Status: awaiting CDN / Vercel storage decision in the morning.**
+Matched-file volume (8.27 GB) **exceeds the 500MB threshold**. Per the task constraint, images will be placed under `public/products/{SKU}/` but **not added to git**. **Status: awaiting CDN / Vercel storage decision in the morning.**
 
 ## Images per matched SKU (histogram)
 
 | Images | SKU count |
 |--------|-----------|
-| 1 | 56 |
-| 2 | 234 |
+| 1 | 48 |
+| 2 | 241 |
 | 3 | 502 |
-| 4 | 179 |
+| 4 | 180 |
 | 5 | 116 |
 | 6 | 116 |
 | 7 | 53 |
@@ -63,13 +48,13 @@ Match still applied (case-insensitive), recorded for audit.
 
 _None — every catalog SKU got at least one image._
 
-## Orphan files (47194)
+## Orphan files (47184)
 
 Files whose extracted candidate did not match any catalog SKU. Most of these come from category-level marketing dirs or the non-SKU files in `All_Product_Images/large/`. Listed by directory.
 
 - `Acrylic_Awards` — 862 files (sample: MR61G.png, iMP601BU_BLANK.png, CAA53.jpg, APW44PM.jpg, VPX816BGBK.jpg...)
 - `Acrylic_Awards_dark_background` — 781 files (sample: ACG23BU_DBG.png, CAA53.jpg, CMA11_Completed.jpg, MR44BU_DBG.png, APW44PM.jpg...)
-- `All_Product_Images/large` — 27248 files (sample: AAP1911.jpg, 5SRSB50.jpg, MCJ_Series_Silver.jpg, CP531002S.jpg, UN4805.jpg...)
+- `All_Product_Images/large` — 27245 files (sample: AAP1911.jpg, 5SRSB50.jpg, MCJ_Series_Silver.jpg, CP531002S.jpg, UN4805.jpg...)
 - `Cups_and_Components` — 328 files (sample: MCJ_Series_Silver.jpg, CMC963.png, CMC861S.jpg, CMC302G.jpg, CZC701G.jpg...)
 - `Drinkware` — 7 files (sample: FSK316_OPEN.png, FSK317_OPEN.png, LTM074_BLANK.png, FSK316.png, LTM074.png...)
 - `Drinkware/10oz Tumblers/Decorated` — 10 files (sample: LTM7109.png, LTM7105.png, LTM7111.png, LTM7104.png, LTM7106.png...)
@@ -131,7 +116,7 @@ Files whose extracted candidate did not match any catalog SKU. Most of these com
 - `Drinkware/Bottle_Openers` — 33 files (sample: GFT537_BLANK.png, GFT559_BLANK.png, GFT546.png, GFT547.png, GFT046_BLANK.png...)
 - `Drinkware/Ceramic_Mugs` — 33 files (sample: LMG13.jpg, LMG41_RAW.png, LMG12.jpg, LMG11.jpg, LMG14.jpg...)
 - `Drinkware/Coasters` — 86 files (sample: GFT2080.png, WTL07_BLANK.png, CST01.jpg, CST01.png, CST15.png...)
-- `Drinkware/Flasks_FlaskSets` — 86 files (sample: FSK610.png, FSK604.png, FSK603_BLANK.png, FSK319_DP.png, FSK674SET.jpg...)
+- `Drinkware/Flasks_FlaskSets` — 82 files (sample: FSK610.png, FSK604.png, FSK603_BLANK.png, FSK319_DP.png, FSK674SET.jpg...)
 - `Drinkware/Growlers/Decorated` — 2 files (sample: LGR642.png, LGR641.png)
 - `Drinkware/Growlers/Undecorated` — 2 files (sample: LGR642_BLANK.png, LGR641_BLANK.png)
 - `Drinkware/ION Plated Tumblers/Ghost_Black` — 8 files (sample: LTM7279_BLANK.png, LTMSET12_BLANK.png, LTM7279.png, LTM7278.png, LTM7278_BLANK.png...)
@@ -177,7 +162,7 @@ Files whose extracted candidate did not match any catalog SKU. Most of these com
 - `Gifts_and_Engravables/All_Leatherette/LL_CuffBracelet` — 33 files (sample: GFT584_BLANK.png, GFT589_FLAT_BLANK.png, GFT581_FLAT_BLANK.png, GFT589_BLANK.png, GFT587.png...)
 - `Gifts_and_Engravables/All_Leatherette/LL_Desk_Wedge` — 6 files (sample: LLW3310.jpg, LLW228.jpg, LLW3210.jpg, LLW328.jpg, LLW2310.jpg...)
 - `Gifts_and_Engravables/All_Leatherette/LL_DogCollars` — 28 files (sample: LLC550_BLANK.png, LLC533_BLANK.png, LLC549_BLANK.png, LLC506_BLANK.png, LLC519_BLANK.png...)
-- `Gifts_and_Engravables/All_Leatherette/LL_Easel_NailSet_GlassCase` — 6 files (sample: GFT231.png, GFT268.png, GFT268_blank.png, GFT609_COMPLETE.png, GFT232-COMPLETE.png...)
+- `Gifts_and_Engravables/All_Leatherette/LL_Easel_NailSet_GlassCase` — 5 files (sample: GFT231.png, GFT268.png, GFT268_blank.png, GFT609_COMPLETE.png, GFT231_BLANK.png)
 - `Gifts_and_Engravables/All_Leatherette/LL_Frames` — 209 files (sample: LLF30457_ANGLED.png, LLF5810.png, LLF546.png, LLF1746_ANGLED_BLANK.png, LLF31146_BLANK.png...)
 - `Gifts_and_Engravables/All_Leatherette/LL_Games_Cards` — 91 files (sample: PKR305_StyledC.png, GFT1034_STYLED.png, GFT1024_BLANK.png, PKR305_StyledB.png, GFT1039.png...)
 - `Gifts_and_Engravables/All_Leatherette/LL_GiftBoxes` — 70 files (sample: GBX64_OPEN_BLANK.png, GBX83_BLANK.png, GBX53_BLANK.png, GBX63_OPEN_BLANK.png, GBX72_BLANK.png...)
@@ -206,7 +191,7 @@ Files whose extracted candidate did not match any catalog SKU. Most of these com
 - `Gifts_and_Engravables/Chenille_Pins` — 58 files (sample: CHEN161.jpg, CHEN149.jpg, CHEN162.jpg, BRDSPLY1_STYLED_KSS.png, BRDSPLY1_STYLED2.png...)
 - `Gifts_and_Engravables/Cigar_Humidor` — 12 files (sample: GFT1360.png, GFT1360_BLANK.png, GFT1360_LATCHLOCK.png, GFT1360_OPEN.png, GFT1360_SEAL.png...)
 - `Gifts_and_Engravables/Clocks_ExecutiveAwards` — 181 files (sample: MF002.jpg, T301.jpg, GCK001_BLANK.png, EX104.png, GCK403_BLANK.png...)
-- `Gifts_and_Engravables/Cutting_Boards` — 46 files (sample: GFT590_BLANK.png, GFT135_BLANK.png, GFT591.png, GFT590.png, GFT138_BLANK.png...)
+- `Gifts_and_Engravables/Cutting_Boards` — 45 files (sample: GFT590_BLANK.png, GFT135_BLANK.png, GFT591.png, GFT590.png, GFT138_BLANK.png...)
 - `Gifts_and_Engravables/DeskWedges_BusinessCard` — 12 files (sample: PNA310_BLANK.png, DS5B_BLANK.png, DS5W_BLANK.png, PNA310.png, DS5B.png...)
 - `Gifts_and_Engravables/DisplayCases_Ball_Flag` — 36 files (sample: ALS23.jpg, BH1-Complete.jpg, QB8.jpg, ALS21.jpg, ALS25.jpg...)
 - `Gifts_and_Engravables/Games` — 21 files (sample: CHES01.jpg, CRD01_closed.jpg, CRiB01_closed.jpg, DOM01_closed.jpg, MNC01_closed.png...)
@@ -224,7 +209,7 @@ Files whose extracted candidate did not match any catalog SKU. Most of these com
 - `Gifts_and_Engravables/Pet Bowls/Small 18 oz. Pet Bowl/BLANK` — 6 files (sample: LPB001_BLANK.png, LPB006_BLANK.png, LPB005_BLANK.png, LPB003_BLANK.png, LPB004_BLANK.png...)
 - `Gifts_and_Engravables/Pet Bowls/Small 18 oz. Pet Bowl/DECORATED` — 6 files (sample: LPB006.png, LPB004.png, LPB005.png, LPB001.png, LPB002.png...)
 - `Gifts_and_Engravables/Pet_Tags` — 89 files (sample: PET207PK_BLANK.png, PET202RD.png, PET209BU.png, PET208PR_BLANK.png, PET201BK.png...)
-- `Gifts_and_Engravables/Promotional_Items` — 239 files (sample: SWB302_BLANK.png, WLP09.jpg, TAG201PK_BLANK.png, GFT135_BLANK.png, WLC14.png...)
+- `Gifts_and_Engravables/Promotional_Items` — 238 files (sample: SWB302_BLANK.png, WLP09.jpg, TAG201PK_BLANK.png, GFT135_BLANK.png, WLC14.png...)
 - `Gifts_and_Engravables/Serving_Bowls/BLANK` — 24 files (sample: LSB301_OPEN_BLANK.png, LSB202_BLANK.png, LSB202_OPEN_BLANK.png, LSB204_OPEN_BLANK.png, LSB204_BLANK.png...)
 - `Gifts_and_Engravables/Serving_Bowls/BOTTOM_LID` — 10 files (sample: LSBLID2.png, LSB202_BOTTOM.png, LSBLID1.png, LSB302_BOTTOM.png, LSB303_BOTTOM.png...)
 - `Gifts_and_Engravables/Serving_Bowls/DECORATED` — 32 files (sample: LSB201_LIDSIDE.png, LSB204_LIDSIDE.png, LSB302_DISC.png, LSB303_DISC.png, LSB204_OPEN.png...)
@@ -488,36 +473,3 @@ Multiple source files with identical filenames were found for the same SKU; only
 
 _Full manifest: `.scrape/overnight/matches.json`_
 _Catalog sidecar: `src/data/product-images.json`_
----
-
-## Next steps (morning decision)
-
-The 8.26 GB of bound images sit in `public/products/{SKU}/` locally but are NOT
-committed. To ship them in prod, pick one path:
-
-1. **Vercel Blob** — `pnpm/npm i @vercel/blob`, write a one-shot upload script
-   that walks `public/products/`, uploads each file under a stable key, and
-   either rewrites `src/data/product-images.json` to the returned URLs OR keeps
-   `/products/{SKU}/...` paths and adds a Next rewrite to Blob. Public storage
-   is GA.
-2. **Cloudinary** — already the legacy supplier CDN host (existing `image`
-   field uses `res.cloudinary.com/business-products/...`). Upload the new
-   gallery under a FOMA folder, point sidecar at the Cloudinary URLs.
-3. **S3 + CDN (CloudFront / R2)** — most flexibility, most setup. Pick if you
-   want one bucket shared with other assets.
-
-In all three cases the URL shape in `src/data/product-images.json` is the only
-runtime knob. The schema (`Product.images: string[]`) doesn't care where the
-URLs point.
-
-Once a host is picked, the upload + URL-rewrite step can be regenerated from
-`.scrape/overnight/matches.json` (machine-readable source of truth, kept
-gitignored under `/.scrape/`).
-
-### Helper scripts (in `.scrape/overnight/`, gitignored)
-
-- `build_image_report.py` — rebuilds `overnight-image-report.md`,
-  `.scrape/overnight/matches.json`, and `src/data/product-images.json` from
-  the on-disk image dump. Idempotent.
-- `place_images.py [SKU...]` — clones (APFS `clonefile`) bound images from
-  `.scrape/incoming/...` into `public/products/{SKU}/`. No args = all SKUs.
