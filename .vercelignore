@@ -1,0 +1,27 @@
+# Vercel CLI doesn't always fully honor .gitignore for upload — duplicate
+# the heavy excludes here so the deploy bundle stays under the 15000-file
+# limit and doesn't try to ship the 55 GB supplier dump.
+
+# scrape artifacts (raw supplier HTML + 53k source images)
+/.scrape/
+
+# Curated product gallery — 4.6k files, 8.3 GB; served from Vercel Blob
+# at runtime via the rewrite in next.config.ts, not bundled with the app.
+/public/products/
+
+# Local-only state
+node_modules
+/.next/
+/out/
+/build
+/coverage
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+
+# env + misc
+.env*
+!.env.example
+.DS_Store
+*.pem
+*.log
