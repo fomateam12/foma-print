@@ -287,4 +287,62 @@ export const fomaProducts: Product[] = [
       },
     ],
   },
+  {
+    id: "foma-bbq-grill-set-11pc",
+    name: "BBQ Grill Set with Case – 11 Piece Set",
+    sku: "FOMA-BBQ-11PC",
+    size: "18 × 6.25 × 3 in · 11-piece set",
+    // Wholesale reference price from the MakerFlo single-unit listing; hidden
+    // from buyers (B2B pricing is gated behind "Add to quote"). Confirm the
+    // real wholesale number with the user before relying on it internally.
+    basePrice: 39.95,
+    image: "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC.jpg",
+    imageFull: "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC.jpg",
+    images: [
+      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC.jpg",
+      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_2.jpg",
+      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_3.jpg",
+      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_4.jpg",
+      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_5.jpg",
+      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_6.jpg",
+      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_7.jpg",
+      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_8.jpg",
+    ],
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subcategorySlug: "bbq-sets-and-utensils",
+    subcategoryName: "BBQ Sets and Utensils",
+    weightLb: 6,
+    dimensions: "18 × 6.25 × 3 in",
+    description:
+      "11-piece BBQ grill set with a wooden carrying case — spatula, tongs, brush, fork, knife, silicone hot glove and four skewers, laser-engraved to order.",
+    longDescription:
+      "A complete 11-piece BBQ grill set for the grill master — spatula, tongs, basting brush, fork, knife, silicone hot glove and four skewers, all housed in a wooden carrying case (18 × 6.25 × 3 in). Made from high-quality rubber wood; natural variations in grain, color and knots are unique to each piece, not defects. Personalize the case and tools with laser engraving for a crisp, permanent finish — a standout groomsman, Father's Day or housewarming gift. Made to order.",
+    badges: ["New"],
+    leadTimeDays: 5,
+    personalization: [
+      {
+        id: "personalization",
+        label: "Personalization",
+        type: "select",
+        required: true,
+        options: [
+          "Laser Engraving (most popular)",
+          "UV Printing",
+          "UV DTF",
+          "Blank — no personalization",
+        ],
+      },
+      {
+        id: "engraving-text",
+        label: "Engraving text",
+        type: "text",
+        required: false,
+        placeholder: "Name, monogram, logo text, or short message",
+        maxLength: 40,
+        helpText: "Leave blank if you selected the blank option.",
+      },
+    ],
+  },
 ];
