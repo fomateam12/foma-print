@@ -39,19 +39,22 @@ export default function cloudinaryLoader({
     const path = src.replace(/^\//, "");
 
     if (R2_BASE) {
-      // R2 is plain object storage — no transformation pipeline.
-      // We return the canonical R2 URL and Vercel's optimizer handles
-      // AVIF/WebP + width resizing via /_next/image, governed by the
-      // `formats` and `qualities` config in next.config.ts. Vercel's
-      // optimizer ignores `width` / `quality` here for the *output*
-      // (those are set per its own URL params), so we just return the
-      // origin URL untouched.
-      return `${R2_BASE.replace(/\/$/, "")}/${path}`;
+      // R2 is plain object storage with no transformation pipeline.
+      // We hand the canonical R2 URL to Vercel's optimizer (/_next/image)
+      // so it can re-encode to AVIF / WebP per the `formats` and
+      // `qualities` config in next.config.ts and emit width-sized
+      // variants. That combination recovers Cloudinary's `q_auto, f_auto`
+      // behavior end-to-end. Image optimization is a paid Vercel feature
+      // — on the Hobby tier the optimizer returns HTTP 402.
+      const origin = `${R2_BASE.replace(/\/$/, "")}/${path}`;
+      const q = quality ?? 75;
+      return `/_next/image?url=${encodeURIComponent(origin)}&w=${width}&q=${q}`;
     }
 
     if (CLOUDINARY_CLOUD) {
-      // Fallback during cutover. Same shape as the original
-      // implementation.
+      // Cutover fallback. Same shape as the original implementation —
+      // Cloudinary does its own encoding so we keep `q_auto, f_auto`
+      // inside the URL rather than routing through Vercel.
       const q = quality ?? 75;
       return `https://res.cloudinary.com/${CLOUDINARY_CLOUD}/image/upload/q_${q},f_auto,w_${width}/${path}`;
     }
