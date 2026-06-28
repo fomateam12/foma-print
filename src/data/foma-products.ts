@@ -431,4 +431,56 @@ export const fomaProducts: Product[] = [
       },
     ],
   },
+  {
+    id: "foma-ring-box-walnut",
+    name: "Personalized Walnut Wood Ring Box – Hexagon 3-Slot Wedding Ring Holder",
+    sku: "FOMA-RINGBOX-WAL",
+    size: "77 × 67 × 38 mm · 3 × 2.6 × 1.5 in",
+    // FOMA's own Amazon listing retails at $14.95. basePrice here is a hidden
+    // reference (B2B pricing is gated behind "Add to quote").
+    basePrice: 14.95,
+    image: "/products/FOMA-RINGBOX-WAL/FOMA-RINGBOX-WAL.jpg",
+    imageFull: "/products/FOMA-RINGBOX-WAL/FOMA-RINGBOX-WAL.jpg",
+    images: [
+      "/products/FOMA-RINGBOX-WAL/FOMA-RINGBOX-WAL.jpg",
+      "/products/FOMA-RINGBOX-WAL/FOMA-RINGBOX-WAL_2.jpg",
+      "/products/FOMA-RINGBOX-WAL/FOMA-RINGBOX-WAL_3.jpg",
+      "/products/FOMA-RINGBOX-WAL/FOMA-RINGBOX-WAL_4.jpg",
+      "/products/FOMA-RINGBOX-WAL/FOMA-RINGBOX-WAL_5.jpg",
+      "/products/FOMA-RINGBOX-WAL/FOMA-RINGBOX-WAL_6.jpg",
+      "/products/FOMA-RINGBOX-WAL/FOMA-RINGBOX-WAL_7.jpg",
+      "/products/FOMA-RINGBOX-WAL/FOMA-RINGBOX-WAL_8.jpg",
+    ],
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subcategorySlug: "personal-items",
+    subcategoryName: "Personal Items",
+    weightLb: 0.11,
+    dimensions: "3 × 2.6 × 1.5 in",
+    description:
+      "Personalized hexagon walnut wood ring box with a soft velvet 3-slot holder — a handmade keepsake for weddings, proposals and ring-bearer ceremonies, laser-engraved to order.",
+    longDescription:
+      "A handmade hexagon ring box turned from high-quality walnut wood, hand-polished to a smooth, warm finish and laser-engraved to order with names, initials or a date. The triple-slot black velvet interior cradles an engagement ring and two wedding bands, making it a refined ring-bearer or proposal keepsake box for the ceremony — and a lasting anniversary memento afterward. Compact at 77 × 67 × 38 mm (3 × 2.6 × 1.5 in). Each box is individually made, so the natural grain is unique to your piece. A heartfelt gift for engagements, weddings, anniversaries and couples.",
+    badges: ["New"],
+    leadTimeDays: 1,
+    personalization: [
+      {
+        id: "wood",
+        label: "Wood",
+        type: "select",
+        required: true,
+        options: ["Walnut", "Koa"],
+      },
+      {
+        id: "engraving-text",
+        label: "Engraving text",
+        type: "text",
+        required: true,
+        placeholder: "Names, initials, or date (e.g. R & V · 06.20.25)",
+        maxLength: 40,
+        helpText: "The names, initials or date we'll laser-engrave on the lid.",
+      },
+    ],
+  },
 ];
