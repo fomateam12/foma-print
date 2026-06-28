@@ -171,4 +171,62 @@ export const fomaProducts: Product[] = [
       },
     ],
   },
+  {
+    id: "foma-charcuterie-marble",
+    name: "Marble Charcuterie Board – 11 Piece Set",
+    sku: "FOMA-CHAR-MARB",
+    size: "16.25 × 12 × 0.5 in · 11-piece set",
+    // Wholesale reference price from the MakerFlo single-unit listing; hidden
+    // from buyers (B2B pricing is gated behind "Add to quote"). Confirm the
+    // real wholesale number with the user before relying on it internally.
+    basePrice: 39.95,
+    image: "/products/FOMA-CHAR-MARB/FOMA-CHAR-MARB.jpg",
+    imageFull: "/products/FOMA-CHAR-MARB/FOMA-CHAR-MARB.jpg",
+    images: [
+      "/products/FOMA-CHAR-MARB/FOMA-CHAR-MARB.jpg",
+      "/products/FOMA-CHAR-MARB/FOMA-CHAR-MARB_2.jpg",
+      "/products/FOMA-CHAR-MARB/FOMA-CHAR-MARB_3.jpg",
+      "/products/FOMA-CHAR-MARB/FOMA-CHAR-MARB_4.jpg",
+      "/products/FOMA-CHAR-MARB/FOMA-CHAR-MARB_5.jpg",
+      "/products/FOMA-CHAR-MARB/FOMA-CHAR-MARB_6.jpg",
+      "/products/FOMA-CHAR-MARB/FOMA-CHAR-MARB_7.jpg",
+      "/products/FOMA-CHAR-MARB/FOMA-CHAR-MARB_8.jpg",
+    ],
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subcategorySlug: "cutting-boards-cake-pans-kitchen",
+    subcategoryName: "Cutting Boards, Cake Pans, Kitchen",
+    weightLb: 7.94,
+    dimensions: "16.25 × 12 × 0.5 in",
+    description:
+      "Marble and acacia wood charcuterie serving set — an 11-piece spread with three dipping spoons, three ceramic bowls and four cheese tools, laser-engraved to order.",
+    longDescription:
+      "A luxurious charcuterie serving set pairing heavy marble with premium acacia wood, prized for its one-of-a-kind grain. The 16.25 × 12 × 0.5 in board anchors a complete 11-piece set — three dipping spoons, three ceramic bowls and four charcuterie utensils — for a gift-ready spread. Each board ships individually packaged in a foam-protected white gift box. Acacia is a natural material: variations in grain, color and knots are unique to each piece, not defects. Personalize with laser engraving for a crisp, permanent finish that won't fade. Made to order.",
+    badges: ["New"],
+    leadTimeDays: 5,
+    personalization: [
+      {
+        id: "personalization",
+        label: "Personalization",
+        type: "select",
+        required: true,
+        options: [
+          "Laser Engraving (most popular)",
+          "UV Printing",
+          "UV DTF",
+          "Blank — no personalization",
+        ],
+      },
+      {
+        id: "engraving-text",
+        label: "Engraving text",
+        type: "text",
+        required: false,
+        placeholder: "Name, monogram, logo text, or short message",
+        maxLength: 40,
+        helpText: "Leave blank if you selected the blank option.",
+      },
+    ],
+  },
 ];
