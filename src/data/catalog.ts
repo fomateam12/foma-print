@@ -313,6 +313,43 @@ const ADDED_PRODUCTS: RawProduct[] = [
     subName: "Polar Camel Beverage Holders",
   },
 
+  // Polar Camel water-bottle lids from the JDS DRINKCAT26 catalog (page 57,
+  // "Great for attaching your Polar Camel Water Bottle"). Not in the feed yet —
+  // added by SKU on user request. Placed in the Water Bottles subcategory so
+  // they sit with the bottles they fit. Images cropped from the catalog page
+  // (low-res placeholder) pending JDS official shots; basePrice is a placeholder
+  // accessory price, hidden behind "Add to quote".
+  {
+    id: "lwbl1",
+    name: "Black Replacement Lid for 12, 20, 30, 32 & 40 oz. Water Bottles",
+    sku: "LWBL1",
+    size: "Fits 12 / 20 / 30 / 32 / 40 oz.",
+    price: 6,
+    image: "/products/LWBL1/LWBL1.jpg",
+    imageFull: "/products/LWBL1/LWBL1.jpg",
+    categoryId: "2",
+    categorySlug: "polar-camel",
+    categoryName: "Polar Camel",
+    subId: "14",
+    subSlug: "polar-camel-water-bottles",
+    subName: "Polar Camel Water Bottles",
+  },
+  {
+    id: "lwbl2",
+    name: "Black \"Lug\" Lid for 12, 20, 30, 32 & 40 oz. Water Bottles",
+    sku: "LWBL2",
+    size: "Fits 12 / 20 / 30 / 32 / 40 oz.",
+    price: 6,
+    image: "/products/LWBL2/LWBL2.jpg",
+    imageFull: "/products/LWBL2/LWBL2.jpg",
+    categoryId: "2",
+    categorySlug: "polar-camel",
+    categoryName: "Polar Camel",
+    subId: "14",
+    subSlug: "polar-camel-water-bottles",
+    subName: "Polar Camel Water Bottles",
+  },
+
   // New 2026/27 Polar Camel drinkware from the JDS DRINKCAT26 catalog, placed by
   // ACTUAL SIZE into the existing size subcategories (per user rule — size wins
   // over catalog page/name): the Bright Gold Ion & Ghost Black colors are 20 oz
