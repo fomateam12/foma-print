@@ -229,4 +229,62 @@ export const fomaProducts: Product[] = [
       },
     ],
   },
+  {
+    id: "foma-serving-board-marble",
+    name: "Marble Serving Board Set – 5 Piece Set with Handle",
+    sku: "FOMA-SERV-MARB",
+    size: "15.5 × 9 × 0.5 in · 5-piece set",
+    // Wholesale reference price from the MakerFlo single-unit listing; hidden
+    // from buyers (B2B pricing is gated behind "Add to quote"). Confirm the
+    // real wholesale number with the user before relying on it internally.
+    basePrice: 19.95,
+    image: "/products/FOMA-SERV-MARB/FOMA-SERV-MARB.jpg",
+    imageFull: "/products/FOMA-SERV-MARB/FOMA-SERV-MARB.jpg",
+    images: [
+      "/products/FOMA-SERV-MARB/FOMA-SERV-MARB.jpg",
+      "/products/FOMA-SERV-MARB/FOMA-SERV-MARB_2.jpg",
+      "/products/FOMA-SERV-MARB/FOMA-SERV-MARB_3.jpg",
+      "/products/FOMA-SERV-MARB/FOMA-SERV-MARB_4.jpg",
+      "/products/FOMA-SERV-MARB/FOMA-SERV-MARB_5.jpg",
+      "/products/FOMA-SERV-MARB/FOMA-SERV-MARB_6.jpg",
+      "/products/FOMA-SERV-MARB/FOMA-SERV-MARB_7.jpg",
+      "/products/FOMA-SERV-MARB/FOMA-SERV-MARB_8.jpg",
+    ],
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subcategorySlug: "cutting-boards-cake-pans-kitchen",
+    subcategoryName: "Cutting Boards, Cake Pans, Kitchen",
+    weightLb: 4.9,
+    dimensions: "15.5 × 9 × 0.5 in",
+    description:
+      "Marble and acacia wood serving board with handle — a 5-piece set with four serving tools, laser-engraved to order.",
+    longDescription:
+      "A handled serving board crafted from premium acacia wood with elegant marble accents. The 15.5 × 9 × 0.5 in board comes as a complete 5-piece set with four serving tools and a convenient carry handle. Each board ships individually packaged in a foam-protected white gift box. Acacia is a natural material: variations in grain, color and knots are unique to each piece, not defects. Personalize with laser engraving, vinyl decals or epoxy for a crisp, lasting finish. Made to order.",
+    badges: ["New"],
+    leadTimeDays: 5,
+    personalization: [
+      {
+        id: "personalization",
+        label: "Personalization",
+        type: "select",
+        required: true,
+        options: [
+          "Laser Engraving (most popular)",
+          "UV Printing",
+          "UV DTF",
+          "Blank — no personalization",
+        ],
+      },
+      {
+        id: "engraving-text",
+        label: "Engraving text",
+        type: "text",
+        required: false,
+        placeholder: "Name, monogram, logo text, or short message",
+        maxLength: 40,
+        helpText: "Leave blank if you selected the blank option.",
+      },
+    ],
+  },
 ];
