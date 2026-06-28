@@ -213,10 +213,11 @@ const REMOVED_SKUS = new Set<string>([
   "LLW3210A", "LLW328A", "LLW3310A", "LLW4210", "LLW428", "LLW4310",
   "LMG26", "LMG66", "LTM033", "LTM071", "LTM073", "LTM12L",
   "LTM20L", "LTM20MG", "LTM20SN", "LTM30L", "LTM30MG", "LTM30SN",
-  "LTM5210", "LTM5212", "LTM7002", "LTM7003", "LTM7004", "LTM7005",
-  "LTM7006", "LTM7007", "LTM7008", "LTM7009", "LTM7010", "LTM7011",
-  "LTM7012", "LTM7013", "LTM7014", "LTM7015", "LTM7016", "LTM7017",
-  "LTM7018", "LTM7219", "LTM7252", "LTM7253", "LTM7254", "LTM7255",
+  "LTM5210", "LTM5212",
+  // LTM7002–LTM7018: legacy 22 oz Polar Camel Skinny Tumblers (colored
+  // PNG + BLANK template, no third image variant). Restored — the
+  // min-3 image gate was over-aggressive for this single-color line.
+  "LTM7219", "LTM7252", "LTM7253", "LTM7254", "LTM7255",
   "LTM7256", "LTM7257", "LTM7258", "LTM7259", "LTM7260", "LTM7261",
   "LTM7262", "LTM7263", "LTM7264", "LTM7265", "LTM7266", "LTM7267",
   "LTM7268", "LTM7269", "LTM7319", "LTM7352", "LTM7353", "LTM7354",
