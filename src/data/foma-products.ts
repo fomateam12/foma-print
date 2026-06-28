@@ -483,4 +483,60 @@ export const fomaProducts: Product[] = [
       },
     ],
   },
+  {
+    id: "foma-cutting-board-bamboo",
+    name: "Personalized Bamboo Engraved Cutting & Charcuterie Board – 16 × 11 × 1 in",
+    sku: "FOMA-CUTBOARD-BMB",
+    size: "16 × 11 × 1 in",
+    // FOMA's own Amazon listing retails at $23.95. basePrice here is a hidden
+    // reference (B2B pricing is gated behind "Add to quote").
+    basePrice: 23.95,
+    image: "/products/FOMA-CUTBOARD-BMB/FOMA-CUTBOARD-BMB.jpg",
+    imageFull: "/products/FOMA-CUTBOARD-BMB/FOMA-CUTBOARD-BMB.jpg",
+    images: [
+      "/products/FOMA-CUTBOARD-BMB/FOMA-CUTBOARD-BMB.jpg",
+      "/products/FOMA-CUTBOARD-BMB/FOMA-CUTBOARD-BMB_2.jpg",
+      "/products/FOMA-CUTBOARD-BMB/FOMA-CUTBOARD-BMB_3.jpg",
+      "/products/FOMA-CUTBOARD-BMB/FOMA-CUTBOARD-BMB_4.jpg",
+      "/products/FOMA-CUTBOARD-BMB/FOMA-CUTBOARD-BMB_5.jpg",
+      "/products/FOMA-CUTBOARD-BMB/FOMA-CUTBOARD-BMB_6.jpg",
+      "/products/FOMA-CUTBOARD-BMB/FOMA-CUTBOARD-BMB_7.jpg",
+      "/products/FOMA-CUTBOARD-BMB/FOMA-CUTBOARD-BMB_8.jpg",
+    ],
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subcategorySlug: "cutting-boards-cake-pans-kitchen",
+    subcategoryName: "Cutting Boards, Cake Pans, Kitchen",
+    dimensions: "16 × 11 × 1 in",
+    description:
+      "Personalized double-sided bamboo cutting & charcuterie board (16 × 11 × 1 in) with a juice groove and side handles — laser-engraved to order with a name, monogram or family design. Ships next day.",
+    longDescription:
+      "A large 16 × 11 × 1 in cutting and charcuterie board crafted from durable, elegant-grain bamboo. Double-sided so you can cut on one face and serve on the other, with a deep juice groove to catch runoff and carved side handles for an easy carry. Laser-engraved to order with a family name, monogram, initial-with-flower motif or custom design for a crisp, permanent finish — choose from designs for every initial letter. BPA-free, chemical-free and knife-friendly. Arrives in a gift box, making it a heartfelt wedding, anniversary, housewarming, birthday or Mother's/Father's Day gift. Ships next day.",
+    badges: ["Bestseller"],
+    leadTimeDays: 1,
+    personalization: [
+      {
+        id: "design",
+        label: "Engraving design",
+        type: "select",
+        required: true,
+        options: [
+          "Initial with flower",
+          "Initial without flower",
+          "Name / family name",
+          "Custom design",
+        ],
+      },
+      {
+        id: "engraving-text",
+        label: "Engraving text",
+        type: "text",
+        required: true,
+        placeholder: "Family name, initial, or date (e.g. ALBERT · EST. 2025)",
+        maxLength: 40,
+        helpText: "The name, initial or text we'll laser-engrave on the board.",
+      },
+    ],
+  },
 ];
