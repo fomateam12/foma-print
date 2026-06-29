@@ -1162,6 +1162,7 @@ const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
   ],
   drinkware: [
     { subId: "100", slug: "bamboo-cork-slate-coasters", name: "Bamboo, Cork & Slate Coasters", count: 0 },
+    { subId: "102", slug: "40-oz-tumblers", name: "40 oz. Tumblers", count: 0 },
   ],
   "travel-accessories": [
     { subId: "96", slug: "passport-holders", name: "Passport Holders", count: 0 },
