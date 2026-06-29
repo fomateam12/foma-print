@@ -27,8 +27,8 @@ const STEPS = [
     body: "We create your FomaFlow account; you only see your own orders.",
   },
   {
-    title: "Load a prepaid balance + membership.",
-    body: "Orders draw from your balance. Membership is $25/month (draft pricing).",
+    title: "Load a prepaid balance.",
+    body: "Top up your wallet once; every order draws from the balance. No subscription, no monthly fee.",
   },
   {
     title: "Submit orders + files.",

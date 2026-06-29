@@ -38,7 +38,7 @@ const FAQS = [
   },
   {
     q: "How do I pay?",
-    a: "Prepaid balance; orders draw from it. Membership $25/month (draft pricing).",
+    a: "You load a prepaid balance (wallet) and orders draw from it — no subscription or monthly fee. Per-unit pricing is quote-based; we send rates when you apply.",
   },
   {
     q: "What about file requirements?",

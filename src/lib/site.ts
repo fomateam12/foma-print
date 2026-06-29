@@ -11,7 +11,9 @@ export const site = {
   /** One-line positioning used in heroes and OG copy. */
   positioning: "You sell it. We engrave, make and ship it — under your brand.",
   madeIn: "Made to order in the USA",
-  email: "fomafamilydesign@gmail.com",
+  /** Public contact mailbox on the fomaprint.com domain. Single source — used
+   *  in the footer, contact page, forms and email backend (Resend `to`). */
+  email: "info@fomaprint.com",
   phoneDisplay: "(404) 934-8917",
   phoneHref: "tel:+14049348917",
   /** WhatsApp business line — same number, click-to-chat. */
