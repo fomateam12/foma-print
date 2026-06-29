@@ -499,6 +499,25 @@ const REMOVED_SKUS = new Set<string>([
 ]);
 
 const ADDED_PRODUCTS: RawProduct[] = [
+  // Added from the JDS master CSV (not in the scraped feed). Image is JDS's own
+  // Cloudinary asset (res.cloudinary.com is whitelisted in next.config).
+  {
+    id: "ptf657d",
+    name: "Genuine Red Alder Dual Picture Frame – 5\" x 7\"",
+    sku: "PTF657D",
+    size: "13 1/4\" x 8 1/2\"",
+    price: 23.15,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1741021358/products/images/large/PTF657D--15a7576b.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1741021358/products/images/large/PTF657D--15a7576b.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "44",
+    subSlug: "solid-wood-photo-frames",
+    subName: "Solid Wood Photo Frames",
+  },
   // The five silicone-grip-coaster additions (GFT2071/2081/2091/2101/2102) were
   // marked "SIL (x)" in fomaprint liste.xlsx (2026-06-27 refresh) and dropped.
   // Their now-empty "Silicone Grip Coasters" subcategory was removed below.
