@@ -5,7 +5,7 @@ import { ArrowRight, Tags } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProductGrid } from "@/components/product-grid";
 import { SiblingSubcategoryNav } from "@/components/sibling-subcategory-nav";
-import { cn } from "@/lib/utils";
+import { ChipScroller, FilterChip } from "@/components/filter-chip";
 import {
   getCategories,
   getSubcategory,
@@ -140,36 +140,16 @@ export default async function SubcategoryPage({
       {sizeAxis !== "none" ? (
         <nav
           aria-label={`${subcategory.name} by size`}
-          className="mt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3"
+          className="mt-6 space-y-2"
         >
-          <h2 className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
-            Browse by size
-          </h2>
-          <ul className="no-scrollbar flex gap-1.5 overflow-x-auto pb-1">
-            <li>
-              <Link
-                href={basePath}
-                aria-current={activeSizes.length === 0 ? "page" : undefined}
-                className={cn(
-                  "inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm transition-colors",
-                  activeSizes.length === 0
-                    ? "border-brand-strong bg-brand-strong font-medium text-brand-foreground"
-                    : "border-border text-muted-foreground hover:border-brand-strong/60 hover:text-foreground",
-                )}
-              >
-                All sizes
-                <span
-                  className={cn(
-                    "rounded-full px-1.5 text-[10px] font-semibold",
-                    activeSizes.length === 0
-                      ? "bg-brand-foreground/15"
-                      : "bg-muted text-muted-foreground",
-                  )}
-                >
-                  {all.length}
-                </span>
-              </Link>
-            </li>
+          <p className="overline">Browse by size</p>
+          <ChipScroller aria-label={`${subcategory.name} by size`}>
+            <FilterChip
+              href={basePath}
+              label="All sizes"
+              count={all.length}
+              selected={activeSizes.length === 0}
+            />
             {sizeFacets.map((f) => {
               const isActive = activeSizes.includes(f.canonical);
               const params = new URLSearchParams();
@@ -179,34 +159,16 @@ export default async function SubcategoryPage({
                   ? ` ${subcategory.name.replace(/^\d+\s*oz\.?\s*/i, "")}`
                   : "";
               return (
-                <li key={f.canonical}>
-                  <Link
-                    href={`${basePath}?${params.toString()}`}
-                    aria-current={isActive ? "page" : undefined}
-                    className={cn(
-                      "inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm transition-colors",
-                      isActive
-                        ? "border-brand-strong bg-brand-strong font-medium text-brand-foreground"
-                        : "border-border text-muted-foreground hover:border-brand-strong/60 hover:text-foreground",
-                    )}
-                  >
-                    {f.canonical}
-                    {labelSuffix}
-                    <span
-                      className={cn(
-                        "rounded-full px-1.5 text-[10px] font-semibold",
-                        isActive
-                          ? "bg-brand-foreground/15"
-                          : "bg-muted text-muted-foreground",
-                      )}
-                    >
-                      {f.count}
-                    </span>
-                  </Link>
-                </li>
+                <FilterChip
+                  key={f.canonical}
+                  href={`${basePath}?${params.toString()}`}
+                  label={`${f.canonical}${labelSuffix}`}
+                  count={f.count}
+                  selected={isActive}
+                />
               );
             })}
-          </ul>
+          </ChipScroller>
         </nav>
       ) : null}
 

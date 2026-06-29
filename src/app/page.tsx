@@ -14,7 +14,6 @@ import {
   LayoutDashboard,
   Gauge,
   Palette,
-  Quote,
   ShieldCheck,
   Clock,
   Layers,
@@ -23,7 +22,6 @@ import { ProductGrid } from "@/components/product-grid";
 import { CategoryIcon } from "@/components/category-icon";
 import { SectionHeader } from "@/components/section-header";
 import { BentoGrid, BentoCard } from "@/components/bento";
-import { Marquee } from "@/components/marquee";
 import { ProductBanner } from "@/components/product-banner";
 import { Reveal } from "@/components/reveal";
 import { StatCounter } from "@/components/stat-counter";
@@ -36,16 +34,6 @@ import {
 } from "@/data/catalog";
 import { site } from "@/lib/site";
 import { ORDER_CUTOFF, TURNAROUND_SHORT } from "@/lib/site-copy";
-
-const CHANNELS = [
-  "Etsy",
-  "Shopify",
-  "Amazon Handmade",
-  "eBay",
-  "Walmart",
-  "TikTok Shop",
-  "WooCommerce",
-];
 
 const STEPS = [
   {
@@ -97,31 +85,20 @@ const TOOL_FEATURES = [
   },
 ];
 
-const TESTIMONIALS = [
-  {
-    quote:
-      "I list the tumblers, they engrave and ship under my label. My Etsy shop scaled without me touching a laser.",
-    name: "Etsy shop owner",
-    role: "Personalized drinkware",
-  },
-  {
-    quote:
-      "The free proof on every order is the reason my reviews stay five stars. Customers see exactly what they get.",
-    name: "Shopify store",
-    role: "Wedding & event gifts",
-  },
-  {
-    quote:
-      "Blind drop-ship from the USA means fast delivery and no branding leaks. It just works.",
-    name: "Amazon Handmade seller",
-    role: "Corporate gifting",
-  },
-];
-
 export default function HomePage() {
   const categories = getCategories();
   const featured = getFeaturedProducts(8);
   const productCount = getProductCount();
+
+  // Larger pool for the rotating home banner; the client samples a shuffled
+  // subset per visit. Only the fields the banner renders are passed.
+  const bannerProducts = getFeaturedProducts(30).map((p) => ({
+    id: p.id,
+    name: p.name,
+    image: p.image,
+    sku: p.sku,
+    categorySlug: p.categorySlug,
+  }));
 
   return (
     <>
@@ -149,7 +126,7 @@ export default function HomePage() {
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link href="/sell" className={cn(buttonVariants({ variant: "brand", size: "lg" }))}>
-                Apply to Sell
+                Apply to sell
                 <ArrowRight className="size-4" />
               </Link>
               <Link
@@ -193,27 +170,7 @@ export default function HomePage() {
       </section>
 
       {/* ---------------------- Live product banner --------------------- */}
-      <ProductBanner />
-
-      {/* ----------------------- Integration marquee -------------------- */}
-      <section className="border-b border-border bg-secondary/30 py-12">
-        <p className="container-px text-center text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-          Fulfill Amazon, Etsy &amp; Shopify orders through us
-        </p>
-        <Marquee className="mt-8">
-          {CHANNELS.map((c) => (
-            <span
-              key={c}
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-sm font-semibold text-foreground/80"
-            >
-              {c}
-              <span className="rounded-full bg-brand-muted px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-brand-strong">
-                Soon
-              </span>
-            </span>
-          ))}
-        </Marquee>
-      </section>
+      <ProductBanner products={bannerProducts} />
 
       {/* --------------------------- How it works ----------------------- */}
       <section id="how" className="container-px scroll-mt-24 py-20 lg:py-28">
@@ -488,25 +445,6 @@ export default function HomePage() {
                 </div>
                 <p className="mt-1 text-sm text-muted-foreground">{s.label}</p>
               </div>
-            </Reveal>
-          ))}
-        </div>
-
-        <div className="mt-8 grid gap-4 lg:grid-cols-3">
-          {TESTIMONIALS.map((t, i) => (
-            <Reveal key={t.name} delay={i * 0.08}>
-              <figure className="flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-card">
-                <Quote className="size-6 text-brand/40" />
-                <blockquote className="mt-3 flex-1 text-sm leading-relaxed text-foreground">
-                  “{t.quote}”
-                </blockquote>
-                <figcaption className="mt-4 border-t border-border pt-4">
-                  <span className="block text-sm font-semibold text-foreground">
-                    {t.name}
-                  </span>
-                  <span className="block text-xs text-muted-foreground">{t.role}</span>
-                </figcaption>
-              </figure>
             </Reveal>
           ))}
         </div>

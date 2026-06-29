@@ -27,6 +27,7 @@ import {
   getRelatedProducts,
 } from "@/data/catalog";
 import { site } from "@/lib/site";
+import { DISPATCH_NOTE } from "@/lib/site-copy";
 
 export function generateStaticParams() {
   return getAllProducts().map((p) => ({ id: p.id }));
@@ -270,8 +271,7 @@ export default async function ProductPage({
             <div className="flex items-start gap-2.5">
               <Truck className="mt-0.5 size-5 text-brand-strong" />
               <p className="text-xs leading-relaxed text-muted-foreground">
-                Made to order, ships in {product.leadTimeDays}–
-                {product.leadTimeDays + 4} business days
+                Made to order · {DISPATCH_NOTE}
               </p>
             </div>
             <div className="flex items-start gap-2.5">

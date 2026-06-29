@@ -1,47 +1,66 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Marquee } from "@/components/marquee";
 import { ProductImage } from "@/components/product-image";
-import { getProduct } from "@/data/catalog";
-import { formatPrice } from "@/lib/format";
-import type { IconKey, Product } from "@/data/types";
+import type { IconKey } from "@/data/types";
 
 /**
  * Signature home banner: an auto-scrolling row of curated, high-margin catalog
- * products a reseller would dropship. SKUs are the catalog defaults (JDS +
- * FOMA); any id missing from the dataset is skipped so the row never breaks.
- * The Marquee is pure CSS, so it pauses under prefers-reduced-motion.
+ * products a reseller would dropship. The server passes a larger pool; we show
+ * a capped, shuffled subset that rotates per visit so it isn't the same items
+ * every load. Pricing is quote-based, so cards say "Request pricing" instead of
+ * a retail tag (consistent with the catalog grid and PDPs). The Marquee is pure
+ * CSS, so it pauses under prefers-reduced-motion.
  */
-const CURATED_SKUS = [
-  "gft167",
-  "apf4810gy",
-  "gft905",
-  "foma-tumbler-40oz",
-  "ltm858",
-  "llf2810",
-  "gft1210",
-  "ltm7262",
-  "gft1023",
-  "foma-lighter-groomsmen",
-];
+export interface BannerProduct {
+  id: string;
+  name: string;
+  image: string;
+  sku: string;
+  categorySlug: string;
+}
 
 const SLUG_ICON: Record<string, IconKey> = {
   "best-seller": "award",
   "gifts-and-promotions": "gift",
-  "kitchen-and-bar": "gift",
-  "travel-accessories": "gift",
-  "personal-accessories": "gift",
+  "kitchen-and-bar": "utensils",
+  "travel-accessories": "luggage",
+  "personal-accessories": "wallet",
   drinkware: "coffee",
   "frames-and-decor": "frame",
   "office-tech": "notebook",
 };
 
-export function ProductBanner() {
-  const products = CURATED_SKUS.map((id) => getProduct(id)).filter(
-    (p): p is Product => Boolean(p),
+/** Cards shown at once — capped for performance (each is mounted twice by the
+ *  seamless marquee loop). */
+const VISIBLE = 12;
+
+export function ProductBanner({ products }: { products: BannerProduct[] }) {
+  // First paint uses a deterministic slice so SSR and the initial client render
+  // match (no hydration mismatch); after mount we shuffle the full pool and take
+  // a fresh subset, which rotates the lineup per visit.
+  const [items, setItems] = useState<BannerProduct[]>(() =>
+    products.slice(0, VISIBLE),
   );
 
-  if (products.length === 0) return null;
+  useEffect(() => {
+    // Shuffle after first paint (in a deferred callback, not synchronously) so
+    // SSR/hydration stay matched and we don't trigger a cascading render.
+    const id = requestAnimationFrame(() => {
+      const pool = [...products];
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+      }
+      setItems(pool.slice(0, VISIBLE));
+    });
+    return () => cancelAnimationFrame(id);
+  }, [products]);
+
+  if (items.length === 0) return null;
 
   return (
     <section
@@ -68,7 +87,7 @@ export function ProductBanner() {
       </div>
 
       <Marquee className="mt-7">
-        {products.map((p, i) => (
+        {items.map((p) => (
           <Link
             key={p.id}
             href={`/product/${p.id}`}
@@ -80,7 +99,6 @@ export function ProductBanner() {
               seed={p.sku}
               icon={SLUG_ICON[p.categorySlug] ?? "gift"}
               width={400}
-              priority={i < 4}
               sizes="200px"
               className="aspect-square rounded-2xl border border-border shadow-soft transition-all duration-300 ease-premium group-hover/card:-translate-y-1 group-hover/card:shadow-lg group-focus-visible/card:ring-2 group-focus-visible/card:ring-ring"
               imgClassName="p-4 transition-transform duration-500 group-hover/card:scale-[1.04]"
@@ -89,7 +107,7 @@ export function ProductBanner() {
               {p.name}
             </p>
             <p className="mt-0.5 text-sm font-semibold text-brand-strong">
-              from {formatPrice(p.basePrice)}
+              Request pricing
             </p>
           </Link>
         ))}

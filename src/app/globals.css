@@ -84,9 +84,11 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.4);
 
-  /* Layered warm shadows */
-  --shadow-soft: 0 1px 2px oklch(0.2 0.02 60 / 0.04), 0 8px 24px oklch(0.2 0.02 60 / 0.06);
-  --shadow-card: 0 1px 3px oklch(0.2 0.02 60 / 0.05), 0 12px 32px oklch(0.2 0.02 60 / 0.07);
+  /* Layered warm shadows — refined to deliberate, hairline-first steps
+     (Phase 3). Paired with the border-border most cards already carry, this
+     reads as engineered depth rather than a uniform floaty soft shadow. */
+  --shadow-soft: 0 1px 2px oklch(0.2 0.02 60 / 0.05);
+  --shadow-card: 0 2px 4px oklch(0.2 0.02 60 / 0.05), 0 8px 20px -8px oklch(0.2 0.02 60 / 0.1);
   --shadow-lg: 0 2px 4px oklch(0.2 0.02 60 / 0.05), 0 18px 44px -10px oklch(0.2 0.02 60 / 0.13);
   --shadow-xl: 0 4px 8px oklch(0.2 0.02 60 / 0.06), 0 40px 80px -18px oklch(0.2 0.02 60 / 0.2);
   --shadow-brand: 0 12px 30px -12px rgba(168, 72, 30, 0.3);
@@ -180,6 +182,8 @@
   html {
     @apply font-sans antialiased;
     scroll-behavior: smooth;
+    /* Keep in-page anchor targets clear of the sticky header (~4.5rem) */
+    scroll-padding-top: 5.5rem;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
@@ -206,9 +210,12 @@
 }
 
 @layer components {
-  /* Page gutter container used across the app */
+  /* Page gutter container used across the app. Widened to an intentional
+     enterprise shell (90rem / 1440px) with gutters that scale 16 → 24 → 40px;
+     prose is kept readable with `.measure`. */
   .container-px {
-    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto w-full px-4 sm:px-6 lg:px-10;
+    max-width: var(--container-wide);
   }
 
   /* Small uppercase label used above section headings */
@@ -306,20 +313,22 @@
   scrollbar-width: none;
 }
 
-/* Mask for edge-faded marquee rows */
+/* Mask for edge-faded marquee rows. A fixed, narrow vignette (not a width %)
+   so the first/last cards get a soft edge instead of being half-cut on wide
+   viewports. */
 @utility marquee-mask {
   -webkit-mask-image: linear-gradient(
     to right,
     transparent,
-    black 8%,
-    black 92%,
+    black 2.5rem,
+    black calc(100% - 2.5rem),
     transparent
   );
   mask-image: linear-gradient(
     to right,
     transparent,
-    black 8%,
-    black 92%,
+    black 2.5rem,
+    black calc(100% - 2.5rem),
     transparent
   );
 }
@@ -353,5 +362,72 @@
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+  }
+}
+
+/* =====================================================================
+   Phase 2 — proposed design-token formalization (pending Gate 2)
+   ---------------------------------------------------------------------
+   ADDITIVE ONLY. New token names + utilities used by /styleguide so the
+   direction can be approved visually. Nothing here changes existing
+   components until it is rolled out in Phase 3.
+   ===================================================================== */
+@theme inline {
+  /* Dual radius: tighter for controls (inputs/buttons), softer for cards */
+  --radius-control: 0.5rem;
+  --radius-card: 1rem;
+
+  /* Refined 3-step elevation — hairline-first, less "floaty" than the
+     uniform soft shadow currently used on every card. */
+  --shadow-e1: 0 1px 2px oklch(0.2 0.02 60 / 0.05);
+  --shadow-e2: 0 2px 4px oklch(0.2 0.02 60 / 0.05),
+    0 8px 20px -8px oklch(0.2 0.02 60 / 0.1);
+  --shadow-e3: 0 4px 10px -2px oklch(0.2 0.02 60 / 0.08),
+    0 24px 48px -16px oklch(0.2 0.02 60 / 0.16);
+}
+
+:root {
+  /* Layout shell + readable measure (the "wide shell, narrow words" system) */
+  --container-wide: 90rem; /* 1440px — proposed wider shell vs. current 80rem */
+  --measure: 68ch; /* comfortable prose column inside the wide shell */
+
+  /* Z-index scale — replaces ad-hoc z-50 / z-[100] literals */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-sticky: 40;
+  --z-header: 50;
+  --z-overlay: 60;
+  --z-modal: 70;
+  --z-toast: 80;
+  --z-max: 100;
+}
+
+@layer components {
+  /* Proposed wider page shell. Demoed in /styleguide; .container-px stays the
+     site-wide default until Phase 3 rolls this in. Gutters scale with
+     viewport: 16 → 24 → 40px. */
+  .shell {
+    @apply mx-auto w-full px-4 sm:px-6 lg:px-10;
+    max-width: var(--container-wide);
+  }
+
+  /* Keep prose readable even inside a wide shell. */
+  .measure {
+    max-width: var(--measure);
+  }
+
+  /* Caption / overline tokens to round out the type ramp. */
+  .text-caption {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: var(--muted-foreground);
+  }
+  .overline {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
   }
 }
