@@ -777,6 +777,74 @@ const ADDED_PRODUCTS: RawProduct[] = [
     subSlug: "cigar-accessories-and-bar-gift-sets",
     subName: "Cigar Accessories & Bar Gift Sets",
   },
+  {
+    id: "fc11",
+    name: "Flame Facet Glass on Black Base \u2013 8 1/2\"",
+    sku: "FC11",
+    size: "5\" x 8 1/2\"",
+    price: 17.7,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1685630614/products/images/large/FC11--fd6e7ff7.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1685630614/products/images/large/FC11--fd6e7ff7.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "101",
+    subSlug: "glass-frames-and-decor",
+    subName: "Glass Frames & Decor",
+  },
+  {
+    id: "fpg21113",
+    name: "Black Piano Finish Floating Glass Frame \u2013 10 1/2\" x 13\"",
+    sku: "FPG21113",
+    size: "10 1/2\" x 13\"",
+    price: 54.5,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1669752130/products/images/large/FPG21113--f47a800d.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1669752130/products/images/large/FPG21113--f47a800d.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "101",
+    subSlug: "glass-frames-and-decor",
+    subName: "Glass Frames & Decor",
+  },
+  {
+    id: "fpg2912",
+    name: "Black Piano Finish Floating Glass Frame \u2013 9\" x 12\"",
+    sku: "FPG2912",
+    size: "9\" x 12\"",
+    price: 45.1,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1669752149/products/images/large/FPG2912--9cd88cfb.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1669752149/products/images/large/FPG2912--9cd88cfb.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "101",
+    subSlug: "glass-frames-and-decor",
+    subName: "Glass Frames & Decor",
+  },
+  {
+    id: "fpg2810",
+    name: "Black Piano Finish Floating Glass Frame \u2013 8\" x 10\"",
+    sku: "FPG2810",
+    size: "8\" x 10\"",
+    price: 37.55,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1669752142/products/images/large/FPG2810--6bf99ae4.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1669752142/products/images/large/FPG2810--6bf99ae4.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "101",
+    subSlug: "glass-frames-and-decor",
+    subName: "Glass Frames & Decor",
+  },
   // The five silicone-grip-coaster additions (GFT2071/2081/2091/2101/2102) were
   // marked "SIL (x)" in fomaprint liste.xlsx (2026-06-27 refresh) and dropped.
   // Their now-empty "Silicone Grip Coasters" subcategory was removed below.
@@ -1040,6 +1108,9 @@ const ADDED_PRODUCTS: RawProduct[] = [
 /* New subcategories the additions introduce, keyed by the (post-merge)
    category slug they belong under. Count is recomputed from products. */
 const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
+  "frames-and-decor": [
+    { subId: "101", slug: "glass-frames-and-decor", name: "Glass Frames & Decor", count: 0 },
+  ],
   drinkware: [
     { subId: "100", slug: "bamboo-cork-slate-coasters", name: "Bamboo, Cork & Slate Coasters", count: 0 },
   ],
