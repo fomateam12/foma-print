@@ -359,13 +359,12 @@ const SUB_OVERRIDES: Record<string, SubAssignment> = {
 /* ------------------------------------------------------------------ */
 
 const REMOVED_SKUS = new Set<string>([
-  "ADW10BK", "ADW10CL", "ADW8BK", "ADW8CL", "APF446B", "APF446GY",
+  "ADW10BK", "ADW8BK", "ADW8CL", "APF446B", "APF446GY",
   "APF457B", "APF457GY", "APF4810B", "APF4810GY", "BBQ01A", "BBQ02A",
   "BBQ03B", "BBQ11B", "BBQ12B", "BBQ13B", "BBQ14B", "BR2252",
   "BR2253", "CDL1011", "CDL1012", "CDL1013", "CDL1014", "CDL1015",
   "CDL1016", "CDL1017", "CDL1061", "CDL1062", "CDL1063", "CDL1064",
-  "CDL1065", "CDL1066", "CDL1067", "DS10", "DS12", "DS20",
-  "DS8", "FNL01", "FSK633", "FSK634", "FSK655SETA",
+  "CDL1065", "CDL1066", "CDL1067", "FNL01", "FSK633", "FSK634", "FSK655SETA",
   "FSK661SETA", "FSK671SET", "FSK675SET", "GFT008", "GFT010",
   "GFT024", "GFT048", "GFT049", "GFT1001", "GFT1002",
   "GFT1003", "GFT1004", "GFT1005", "GFT1006", "GFT1007", "GFT1008",
@@ -422,8 +421,7 @@ const REMOVED_SKUS = new Set<string>([
   "PCG107", "PCG115", "PCG116", "PCG117", "PCG118", "PCG125",
   "PCG200", "PCG205", "PCG211", "PCG212", "PCG213", "PCG300",
   "PCG305", "PCG310", "PCG350", "PCG351", "PDL101", "PDL150",
-  "PNA210", "PNA28", "PNA410", "PNA48", "PNB210", "PNB28",
-  "PTF135", "PTF1811", "PTF246", "PTF2810", "PTF457", "PTF4810", "RA210", "RA28",
+  "PTF135", "PTF1811", "PTF246", "PTF2810", "PTF457", "PTF4810", "RA28",
   "SLT010", "SLT011", "SLT020", "SLT021", "SLT030", "SLT031",
   "SLT040", "SLT041", "SLT042", "SLT050", "SLT051", "SLT085",
   "SLT086", "BPN101", "BPN102", "BPN103", "BPN104", "BPN105",
@@ -842,6 +840,57 @@ const ADDED_PRODUCTS: RawProduct[] = [
     subId: "101",
     subSlug: "glass-frames-and-decor",
     subName: "Glass Frames & Decor",
+  },
+  {
+    id: "gdw8j",
+    name: "Jade Glass Desk Wedge \u2013 8\" x 2\"",
+    sku: "GDW8J",
+    size: "8\" x 2\"",
+    price: 8.7,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1684341456/products/images/large/GDW8J--b2dc8010.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1684341456/products/images/large/GDW8J--b2dc8010.png",
+    categoryId: "6",
+    categorySlug: "office-tech",
+    categoryName: "Office, Tech",
+    subId: "65",
+    subSlug: "business-card-holders-desk-wedges",
+    subName: "Business Card Holders/Desk Wedges",
+  },
+  {
+    id: "556",
+    name: "Black Piano Finish Desk Wedge with Black Plate \u2013 9 1/2\"",
+    sku: "556",
+    size: "9 1/2\" x 2 1/2\" x 2\"",
+    price: 31,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1747322253/products/images/large/556--c807c3e4.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1747322253/products/images/large/556--c807c3e4.png",
+    categoryId: "6",
+    categorySlug: "office-tech",
+    categoryName: "Office, Tech",
+    subId: "65",
+    subSlug: "business-card-holders-desk-wedges",
+    subName: "Business Card Holders/Desk Wedges",
+  },
+  {
+    id: "np8",
+    name: "Black/Gold Brass Plate for 8 1/2\" Desk Wedges \u2013 7 1/2\"",
+    sku: "NP8",
+    size: "7 1/2\" x 1 3/4\"",
+    price: 6.85,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1733933785/products/images/large/NP8--c85bedad.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1733933785/products/images/large/NP8--c85bedad.png",
+    categoryId: "6",
+    categorySlug: "office-tech",
+    categoryName: "Office, Tech",
+    subId: "65",
+    subSlug: "business-card-holders-desk-wedges",
+    subName: "Business Card Holders/Desk Wedges",
   },
   // The five silicone-grip-coaster additions (GFT2071/2081/2091/2101/2102) were
   // marked "SIL (x)" in fomaprint liste.xlsx (2026-06-27 refresh) and dropped.
