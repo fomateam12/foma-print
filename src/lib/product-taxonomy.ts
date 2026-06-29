@@ -115,7 +115,7 @@ function parseInchToken(s: string): number {
   return total;
 }
 
-export function productSizeTier(product: Product): SizeTier | null {
+function rawSizeTier(product: Product): SizeTier | null {
   const ns = productSize(product);
   if (!ns) return null;
   if (ns.bucket === "rect") {
@@ -146,6 +146,20 @@ export function productSizeTier(product: Product): SizeTier | null {
     return "Large";
   }
   return null;
+}
+
+export function productSizeTier(product: Product): SizeTier | null {
+  const tier = rawSizeTier(product);
+  if (!tier) return tier;
+  // Commercial presentation override (user request): in the Leatherette Journals
+  // subcategory, present each size one tier larger so nothing reads as "Small"
+  // (5¼×8¼ → Medium, 7×9¾ → Large). Journals only; the rest of the site keeps
+  // the absolute area-based tiers.
+  if (product.subcategorySlug === "leatherette-journals") {
+    if (tier === "Small") return "Medium";
+    if (tier === "Medium") return "Large";
+  }
+  return tier;
 }
 
 const TIER_ORDER: Record<SizeTier, number> = {
