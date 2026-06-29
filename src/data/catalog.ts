@@ -426,6 +426,7 @@ const REMOVED_SKUS = new Set<string>([
   // 2026-06-29: remove batch.
   "GFT1295", "GFT200", "GFT703",
   "GFT923",
+  "GFT444",
 ]);
 
 const ADDED_PRODUCTS: RawProduct[] = [
