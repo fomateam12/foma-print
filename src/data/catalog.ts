@@ -375,7 +375,7 @@ const REMOVED_SKUS = new Set<string>([
   "GFT2126", "GFT2127", "GFT219", "GFT221", "GFT2213",
   "GFT223", "GFT2316", "GFT2317", "GFT2318", "GFT2319", "GFT2320",
   "GFT2321", "GFT236", "GFT2364", "GFT2365", "GFT2425", "GFT245A",
-  "GFT261A", "GFT281", "GFT282", "GFT290",
+  "GFT261A", "GFT290",
   "GFT291", "GFT300", "GFT301", "GFT460",
   "GFT462BU", "GFT462GR", "GFT462NG", "GFT462PR", "GFT462RD", "GFT462YW",
   "GFT486", "GFT496", "GFT540", "GFT608", "GFT611", "GFT647", "GFT712", "GFT717", "GFT719",
@@ -688,6 +688,74 @@ const ADDED_PRODUCTS: RawProduct[] = [
     subSlug: "cigar-accessories-and-bar-gift-sets",
     subName: "Cigar Accessories & Bar Gift Sets",
   },
+  {
+    id: "slt003",
+    name: "Charcoal Gray Square Slate Coaster Set (6 Piece)",
+    sku: "SLT003",
+    size: "4\" x 4\"",
+    price: 10.15,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1700086055/products/images/large/SLT003--920cbc1a.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1700086055/products/images/large/SLT003--920cbc1a.png",
+    categoryId: "3",
+    categorySlug: "drinkware",
+    categoryName: "Drinkware",
+    subId: "100",
+    subSlug: "bamboo-cork-slate-coasters",
+    subName: "Bamboo, Cork & Slate Coasters",
+  },
+  {
+    id: "slt004",
+    name: "Charcoal Gray Round Slate Coaster Set (6 Piece)",
+    sku: "SLT004",
+    size: "4\" Round",
+    price: 10.15,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1700086029/products/images/large/SLT004--f34558ee.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1700086029/products/images/large/SLT004--f34558ee.png",
+    categoryId: "3",
+    categorySlug: "drinkware",
+    categoryName: "Drinkware",
+    subId: "100",
+    subSlug: "bamboo-cork-slate-coasters",
+    subName: "Bamboo, Cork & Slate Coasters",
+  },
+  {
+    id: "cst01",
+    name: "Bamboo Square 4-Coaster Set with Holder",
+    sku: "CST01",
+    size: "4 3/4\" x 4 3/4\" x 2\"",
+    price: 9.85,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1667527109/products/images/large/CST01--eebd5c59.jpg",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1667527109/products/images/large/CST01--eebd5c59.jpg",
+    categoryId: "3",
+    categorySlug: "drinkware",
+    categoryName: "Drinkware",
+    subId: "100",
+    subSlug: "bamboo-cork-slate-coasters",
+    subName: "Bamboo, Cork & Slate Coasters",
+  },
+  {
+    id: "ws125",
+    name: "Lazerburst Whiskey Set with Two 9 oz. Glasses",
+    sku: "WS125",
+    size: "9 1/2\" x 8 1/4\" x 4 3/4\"",
+    price: 17.95,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1732637937/products/images/large/WS125--995c94c2.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1732637937/products/images/large/WS125--995c94c2.png",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "6",
+    subSlug: "cigar-accessories-and-bar-gift-sets",
+    subName: "Cigar Accessories & Bar Gift Sets",
+  },
   // The five silicone-grip-coaster additions (GFT2071/2081/2091/2101/2102) were
   // marked "SIL (x)" in fomaprint liste.xlsx (2026-06-27 refresh) and dropped.
   // Their now-empty "Silicone Grip Coasters" subcategory was removed below.
@@ -951,6 +1019,9 @@ const ADDED_PRODUCTS: RawProduct[] = [
 /* New subcategories the additions introduce, keyed by the (post-merge)
    category slug they belong under. Count is recomputed from products. */
 const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
+  drinkware: [
+    { subId: "100", slug: "bamboo-cork-slate-coasters", name: "Bamboo, Cork & Slate Coasters", count: 0 },
+  ],
   "travel-accessories": [
     { subId: "96", slug: "passport-holders", name: "Passport Holders", count: 0 },
     { subId: "97", slug: "travel-jewelry-boxes", name: "Travel Jewelry Boxes", count: 0 },
