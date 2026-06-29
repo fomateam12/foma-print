@@ -288,6 +288,18 @@ const SUB_OVERRIDES: Record<string, SubAssignment> = {
   GFT991: { subId: "98", subSlug: "luggage-tags", subName: "Luggage Tags" },
   GFT992: { subId: "98", subSlug: "luggage-tags", subName: "Luggage Tags" },
   GFT993: { subId: "98", subSlug: "luggage-tags", subName: "Luggage Tags" },
+  // Coaster with Bottle Opener -> Bottle Openers subcategory (user request).
+  GFT1235: { subId: "39", subSlug: "bottle-openers", subName: "Bottle Openers" },
+  GFT1236: { subId: "39", subSlug: "bottle-openers", subName: "Bottle Openers" },
+  GFT1237: { subId: "39", subSlug: "bottle-openers", subName: "Bottle Openers" },
+  GFT1238: { subId: "39", subSlug: "bottle-openers", subName: "Bottle Openers" },
+  GFT1239: { subId: "39", subSlug: "bottle-openers", subName: "Bottle Openers" },
+  GFT1240: { subId: "39", subSlug: "bottle-openers", subName: "Bottle Openers" },
+  GFT1241: { subId: "39", subSlug: "bottle-openers", subName: "Bottle Openers" },
+  GFT1242: { subId: "39", subSlug: "bottle-openers", subName: "Bottle Openers" },
+  GFT1243: { subId: "39", subSlug: "bottle-openers", subName: "Bottle Openers" },
+  GFT1244: { subId: "39", subSlug: "bottle-openers", subName: "Bottle Openers" },
+  GFT1245: { subId: "39", subSlug: "bottle-openers", subName: "Bottle Openers" },
   // 22 oz Skinny Tumblers → Skinny Tumblers
   LTM7030: { subId: "17", subSlug: "polar-camel-skinny-tumblers", subName: "Polar Camel Skinny Tumblers" },
   LTM7031: { subId: "17", subSlug: "polar-camel-skinny-tumblers", subName: "Polar Camel Skinny Tumblers" },
@@ -498,7 +510,7 @@ const REMOVED_SKUS = new Set<string>([
   "GFT375", "GFT376", "GFT780", "GFT868", "GFT942", "GFT943",
   "GFT1177", "GFT1181",
   // remove 26 coasters (user request)
-  "GFT1235", "GFT1237", "GFT1236", "GFT1243", "GFT193", "GFT194", "GFT195", "GFT196", "GFT238", "GFT240", "GFT380", "GFT381", "GFT384", "GFT620", "GFT621", "GFT622", "GFT624", "GFT625", "GFT626", "GFT871", "GFT873", "GFT872", "GFT874", "GFT912", "GFT913", "GFT914",
+  "GFT193", "GFT194", "GFT195", "GFT196", "GFT238", "GFT240", "GFT380", "GFT381", "GFT384", "GFT620", "GFT621", "GFT622", "GFT624", "GFT625", "GFT626", "GFT871", "GFT873", "GFT872", "GFT874", "GFT912", "GFT913", "GFT914",
   // keep only Beverage Holders in mug-sleeve sub — remove mug sleeves
   "GFT210", "GFT211", "GFT274", "GFT713",
   // remove leatherette Slim Beverage Holders (user request)
