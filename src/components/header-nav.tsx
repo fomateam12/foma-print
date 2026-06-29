@@ -88,8 +88,8 @@ export function HeaderNav({
         className={cn(
           "sticky top-0 z-50 w-full transition-all duration-300 ease-premium",
           scrolled
-            ? "glass border-b border-border shadow-soft"
-            : "border-b border-transparent bg-background/70 backdrop-blur-md",
+            ? "border-b border-border bg-background/95 shadow-soft backdrop-blur-md supports-[backdrop-filter]:bg-background/85"
+            : "border-b border-transparent bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/70",
         )}
       >
         <div className="container-px flex h-16 items-center gap-3 lg:h-[4.5rem] lg:gap-5">
