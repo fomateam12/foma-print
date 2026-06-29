@@ -518,6 +518,53 @@ const REMOVED_SKUS = new Set<string>([
 ]);
 
 const ADDED_PRODUCTS: RawProduct[] = [
+  // Leatherette cord/tech organizer cases from the JDS master CSV (not in the
+  // scraped feed). Self-hosted on R2 under products/{SKU}/.
+  {
+    id: "gft2450",
+    name: "Rawhide Leatherette Cord Case",
+    sku: "GFT2450",
+    size: "8 1/2\" x 6\" x 1 3/4\"",
+    price: 14.3,
+    image: "/products/GFT2450/GFT2450.jpg",
+    imageFull: "/products/GFT2450/GFT2450.jpg",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "41",
+    subSlug: "travel-items",
+    subName: "Travel Items",
+  },
+  {
+    id: "gft2451",
+    name: "Black/Silver Leatherette Cord Case",
+    sku: "GFT2451",
+    size: "8 1/2\" x 6\" x 1 3/4\"",
+    price: 14.3,
+    image: "/products/GFT2451/GFT2451.jpg",
+    imageFull: "/products/GFT2451/GFT2451.jpg",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "41",
+    subSlug: "travel-items",
+    subName: "Travel Items",
+  },
+  {
+    id: "gft2452",
+    name: "Gray Leatherette Cord Case",
+    sku: "GFT2452",
+    size: "8 1/2\" x 6\" x 1 3/4\"",
+    price: 14.3,
+    image: "/products/GFT2452/GFT2452.jpg",
+    imageFull: "/products/GFT2452/GFT2452.jpg",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "41",
+    subSlug: "travel-items",
+    subName: "Travel Items",
+  },
   // Added from the JDS master CSV (not in the scraped feed). Image is JDS's own
   // Cloudinary asset (res.cloudinary.com is whitelisted in next.config).
   {
