@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { X } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { FilterChip } from "@/components/filter-chip";
 import type {
   FacetPlan,
   SimpleFacet,
@@ -38,64 +38,6 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
     <h4 className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
       {children}
     </h4>
-  );
-}
-
-interface ChipProps {
-  active: boolean;
-  href: string;
-  count: number;
-  children: React.ReactNode;
-  /** Hex(es) for the leading color swatch. `null` / omit = no swatch. */
-  swatch?: string | string[] | null;
-}
-
-function FilterChip({ active, href, count, children, swatch }: ChipProps) {
-  return (
-    <li>
-      <Link
-        href={href}
-        aria-pressed={active}
-        className={cn(
-          "inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium transition",
-          active
-            ? "border-brand-strong bg-brand-strong text-brand-foreground"
-            : "border-border bg-background text-foreground hover:border-brand-strong/60",
-        )}
-      >
-        {swatch ? <Swatch hex={swatch} /> : null}
-        <span className="leading-none">{children}</span>
-        <span
-          className={cn(
-            "ml-0.5 inline-flex h-4 min-w-4 items-center justify-center rounded-full px-1 text-[10px] font-semibold leading-none",
-            active ? "bg-brand-foreground/15" : "bg-muted text-muted-foreground",
-          )}
-        >
-          {count}
-        </span>
-      </Link>
-    </li>
-  );
-}
-
-function Swatch({ hex }: { hex: string | string[] }) {
-  if (Array.isArray(hex)) {
-    return (
-      <span
-        aria-hidden="true"
-        className="block size-3 shrink-0 rounded-full border border-border/60"
-        style={{
-          backgroundImage: `conic-gradient(${hex.join(", ")})`,
-        }}
-      />
-    );
-  }
-  return (
-    <span
-      aria-hidden="true"
-      className="block size-3 shrink-0 rounded-full border border-border/60"
-      style={{ backgroundColor: hex }}
-    />
   );
 }
 
@@ -179,18 +121,17 @@ export function CatalogFilters({
       {subs.length > 0 ? (
         <section className="mt-5 space-y-2">
           <SectionHeading>Collection</SectionHeading>
-          <ul className="flex flex-wrap gap-1.5">
+          <div className="flex flex-wrap gap-1.5">
             {subs.map((sub) => (
               <FilterChip
                 key={sub.slug}
-                active={activeSubs.includes(sub.slug)}
+                selected={activeSubs.includes(sub.slug)}
                 href={buildHref(basePath, state, { key: "sub", value: sub.slug })}
                 count={sub.count}
-              >
-                {sub.name}
-              </FilterChip>
+                label={sub.name}
+              />
             ))}
-          </ul>
+          </div>
           {subFacets.length > TOP_SUBS ? (
             <p className="text-[11px] text-muted-foreground">
               {subFacets.length - TOP_SUBS} more — see tiles below
@@ -202,55 +143,51 @@ export function CatalogFilters({
       {colors.length > 0 ? (
         <section className="mt-5 space-y-2">
           <SectionHeading>Color</SectionHeading>
-          <ul className="flex flex-wrap gap-1.5">
+          <div className="flex flex-wrap gap-1.5">
             {colors.map((f) => (
               <FilterChip
                 key={f.canonical}
-                active={activeColors.includes(f.canonical)}
+                selected={activeColors.includes(f.canonical)}
                 href={buildHref(basePath, state, { key: "color", value: f.canonical })}
                 count={f.count}
-                swatch={f.swatch}
-              >
-                {f.canonical}
-              </FilterChip>
+                label={f.canonical}
+              />
             ))}
-          </ul>
+          </div>
         </section>
       ) : null}
 
       {materials.length > 0 ? (
         <section className="mt-5 space-y-2">
           <SectionHeading>Material</SectionHeading>
-          <ul className="flex flex-wrap gap-1.5">
+          <div className="flex flex-wrap gap-1.5">
             {materials.map((f) => (
               <FilterChip
                 key={f.canonical}
-                active={activeMaterials.includes(f.canonical)}
+                selected={activeMaterials.includes(f.canonical)}
                 href={buildHref(basePath, state, { key: "material", value: f.canonical })}
                 count={f.count}
-              >
-                {f.canonical}
-              </FilterChip>
+                label={f.canonical}
+              />
             ))}
-          </ul>
+          </div>
         </section>
       ) : null}
 
       {volumes.length > 0 ? (
         <section className="mt-5 space-y-2">
           <SectionHeading>Volume</SectionHeading>
-          <ul className="flex flex-wrap gap-1.5">
+          <div className="flex flex-wrap gap-1.5">
             {volumes.map((f) => (
               <FilterChip
                 key={f.canonical}
-                active={activeSizes.includes(f.canonical)}
+                selected={activeSizes.includes(f.canonical)}
                 href={buildHref(basePath, state, { key: "size", value: f.canonical })}
                 count={f.count}
-              >
-                {f.canonical}
-              </FilterChip>
+                label={f.canonical}
+              />
             ))}
-          </ul>
+          </div>
         </section>
       ) : null}
     </aside>
