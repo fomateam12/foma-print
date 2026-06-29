@@ -84,9 +84,11 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.4);
 
-  /* Layered warm shadows */
-  --shadow-soft: 0 1px 2px oklch(0.2 0.02 60 / 0.04), 0 8px 24px oklch(0.2 0.02 60 / 0.06);
-  --shadow-card: 0 1px 3px oklch(0.2 0.02 60 / 0.05), 0 12px 32px oklch(0.2 0.02 60 / 0.07);
+  /* Layered warm shadows — refined to deliberate, hairline-first steps
+     (Phase 3). Paired with the border-border most cards already carry, this
+     reads as engineered depth rather than a uniform floaty soft shadow. */
+  --shadow-soft: 0 1px 2px oklch(0.2 0.02 60 / 0.05);
+  --shadow-card: 0 2px 4px oklch(0.2 0.02 60 / 0.05), 0 8px 20px -8px oklch(0.2 0.02 60 / 0.1);
   --shadow-lg: 0 2px 4px oklch(0.2 0.02 60 / 0.05), 0 18px 44px -10px oklch(0.2 0.02 60 / 0.13);
   --shadow-xl: 0 4px 8px oklch(0.2 0.02 60 / 0.06), 0 40px 80px -18px oklch(0.2 0.02 60 / 0.2);
   --shadow-brand: 0 12px 30px -12px rgba(168, 72, 30, 0.3);
@@ -208,9 +210,12 @@
 }
 
 @layer components {
-  /* Page gutter container used across the app */
+  /* Page gutter container used across the app. Widened to an intentional
+     enterprise shell (90rem / 1440px) with gutters that scale 16 → 24 → 40px;
+     prose is kept readable with `.measure`. */
   .container-px {
-    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto w-full px-4 sm:px-6 lg:px-10;
+    max-width: var(--container-wide);
   }
 
   /* Small uppercase label used above section headings */
