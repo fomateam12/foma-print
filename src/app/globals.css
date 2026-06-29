@@ -308,20 +308,22 @@
   scrollbar-width: none;
 }
 
-/* Mask for edge-faded marquee rows */
+/* Mask for edge-faded marquee rows. A fixed, narrow vignette (not a width %)
+   so the first/last cards get a soft edge instead of being half-cut on wide
+   viewports. */
 @utility marquee-mask {
   -webkit-mask-image: linear-gradient(
     to right,
     transparent,
-    black 8%,
-    black 92%,
+    black 2.5rem,
+    black calc(100% - 2.5rem),
     transparent
   );
   mask-image: linear-gradient(
     to right,
     transparent,
-    black 8%,
-    black 92%,
+    black 2.5rem,
+    black calc(100% - 2.5rem),
     transparent
   );
 }
