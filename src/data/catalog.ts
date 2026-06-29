@@ -499,6 +499,8 @@ const REMOVED_SKUS = new Set<string>([
   "GFT1177", "GFT1181",
   // remove 26 coasters (user request)
   "GFT1235", "GFT1237", "GFT1236", "GFT1243", "GFT193", "GFT194", "GFT195", "GFT196", "GFT238", "GFT240", "GFT380", "GFT381", "GFT384", "GFT620", "GFT621", "GFT622", "GFT624", "GFT625", "GFT626", "GFT871", "GFT873", "GFT872", "GFT874", "GFT912", "GFT913", "GFT914",
+  // keep only Beverage Holders in mug-sleeve sub — remove mug sleeves
+  "GFT210", "GFT211", "GFT274", "GFT713",
 ]);
 
 const ADDED_PRODUCTS: RawProduct[] = [
