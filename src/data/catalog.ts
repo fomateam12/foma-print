@@ -1357,7 +1357,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
 /* New subcategories the additions introduce, keyed by the (post-merge)
    category slug they belong under. Count is recomputed from products. */
 const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
-  "gifts-and-promotions": [
+  "personal-accessories": [
     { subId: "106", slug: "wallets-with-strap", name: "Leatherette Wallet with Strap", count: 0 },
     { subId: "107", slug: "wallets-bifold-flip-id", name: "Leatherette Bifold Wallet with Flip ID", count: 0 },
     { subId: "108", slug: "wallets-bifold", name: "Leatherette Bifold Wallet", count: 0 },
@@ -1489,6 +1489,9 @@ const GIFTS_SPLIT: Record<string, { id: string; slug: string; name: string }> = 
   "large-jewelry-boxes": GIFTS_CATS.travel,
   "personal-items": GIFTS_CATS.personal,
   "wallets": GIFTS_CATS.personal,
+  "wallets-with-strap": GIFTS_CATS.personal,
+  "wallets-bifold-flip-id": GIFTS_CATS.personal,
+  "wallets-bifold": GIFTS_CATS.personal,
   "checkbook-covers": GIFTS_CATS.personal,
   "money-clips": GIFTS_CATS.personal,
   "promotional-items": GIFTS_CATS.personal,
