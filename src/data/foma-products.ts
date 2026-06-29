@@ -661,17 +661,13 @@ export const fomaProducts: Product[] = [
     // from buyers (B2B pricing is gated behind "Add to quote"). Confirm the
     // real wholesale number with the user before relying on it internally.
     basePrice: 39.95,
-    image: "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC.jpg",
-    imageFull: "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC.jpg",
+    image: "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_v2.jpg",
+    imageFull: "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_v2.jpg",
     images: [
-      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC.jpg",
-      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_2.jpg",
-      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_3.jpg",
-      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_4.jpg",
-      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_5.jpg",
-      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_6.jpg",
-      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_7.jpg",
-      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_8.jpg",
+      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_v2.jpg",
+      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_v2_2.jpg",
+      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_v2_3.jpg",
+      "/products/FOMA-BBQ-11PC/FOMA-BBQ-11PC_v2_4.jpg",
     ],
     categoryId: "1",
     categorySlug: "gifts-and-promotions",
