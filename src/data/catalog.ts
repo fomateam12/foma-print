@@ -103,6 +103,60 @@ interface SubAssignment {
   subName: string;
 }
 const SUB_OVERRIDES: Record<string, SubAssignment> = {
+  // Leatherette canvas portfolios with notepad → their own subcategory under
+  // Office, Tech (moved out of Leatherette and Cork Portfolios, user request).
+  GFT1205: { subId: "91", subSlug: "leatherette-canvas-portfolio-with-notepad", subName: "Leatherette Canvas Portfolio with Notepad" },
+  GFT1206: { subId: "91", subSlug: "leatherette-canvas-portfolio-with-notepad", subName: "Leatherette Canvas Portfolio with Notepad" },
+  GFT1207: { subId: "91", subSlug: "leatherette-canvas-portfolio-with-notepad", subName: "Leatherette Canvas Portfolio with Notepad" },
+  GFT1208: { subId: "91", subSlug: "leatherette-canvas-portfolio-with-notepad", subName: "Leatherette Canvas Portfolio with Notepad" },
+  GFT1209: { subId: "91", subSlug: "leatherette-canvas-portfolio-with-notepad", subName: "Leatherette Canvas Portfolio with Notepad" },
+  GFT1210: { subId: "91", subSlug: "leatherette-canvas-portfolio-with-notepad", subName: "Leatherette Canvas Portfolio with Notepad" },
+  GFT1211: { subId: "91", subSlug: "leatherette-canvas-portfolio-with-notepad", subName: "Leatherette Canvas Portfolio with Notepad" },
+  GFT1215: { subId: "91", subSlug: "leatherette-canvas-portfolio-with-notepad", subName: "Leatherette Canvas Portfolio with Notepad" },
+  GFT1216: { subId: "91", subSlug: "leatherette-canvas-portfolio-with-notepad", subName: "Leatherette Canvas Portfolio with Notepad" },
+  GFT1217: { subId: "91", subSlug: "leatherette-canvas-portfolio-with-notepad", subName: "Leatherette Canvas Portfolio with Notepad" },
+  GFT1218: { subId: "91", subSlug: "leatherette-canvas-portfolio-with-notepad", subName: "Leatherette Canvas Portfolio with Notepad" },
+  GFT1219: { subId: "91", subSlug: "leatherette-canvas-portfolio-with-notepad", subName: "Leatherette Canvas Portfolio with Notepad" },
+  GFT1220: { subId: "91", subSlug: "leatherette-canvas-portfolio-with-notepad", subName: "Leatherette Canvas Portfolio with Notepad" },
+  GFT1221: { subId: "91", subSlug: "leatherette-canvas-portfolio-with-notepad", subName: "Leatherette Canvas Portfolio with Notepad" },
+  GFT1222: { subId: "91", subSlug: "leatherette-canvas-portfolio-with-notepad", subName: "Leatherette Canvas Portfolio with Notepad" },
+  GFT1223: { subId: "91", subSlug: "leatherette-canvas-portfolio-with-notepad", subName: "Leatherette Canvas Portfolio with Notepad" },
+  // Remaining leatherette/cork portfolios → "Leatherette Portfolio" (split of
+  // Leatherette and Cork Portfolios, user request).
+  GFT185: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT186: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT212: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT213: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT246A: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT254A: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT267: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT275: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT346: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT347: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT349: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT388: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT389: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT391: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT612: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT613: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT706: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT714: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT783: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT784: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT806: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT807: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT840: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT841: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT881: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT883: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT905: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT907: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT950: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT951: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT970: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT971: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT972: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
+  GFT973: { subId: "92", subSlug: "leatherette-portfolio", subName: "Leatherette Portfolio" },
   // 22 oz Skinny Tumblers → Skinny Tumblers
   LTM7030: { subId: "17", subSlug: "polar-camel-skinny-tumblers", subName: "Polar Camel Skinny Tumblers" },
   LTM7031: { subId: "17", subSlug: "polar-camel-skinny-tumblers", subName: "Polar Camel Skinny Tumblers" },
@@ -560,7 +614,25 @@ const ADDED_PRODUCTS: RawProduct[] = [
 
 /* New subcategories the additions introduce, keyed by the (post-merge)
    category slug they belong under. Count is recomputed from products. */
-const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {};
+const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
+  // New subcategory under Office, Tech: the 16 leatherette canvas portfolios
+  // with notepad get their own tile, moved out of "Leatherette and Cork
+  // Portfolios" (user request). productCount is recomputed from actual products.
+  "office-tech": [
+    {
+      subId: "91",
+      slug: "leatherette-canvas-portfolio-with-notepad",
+      name: "Leatherette Canvas Portfolio with Notepad",
+      count: 0,
+    },
+    {
+      subId: "92",
+      slug: "leatherette-portfolio",
+      name: "Leatherette Portfolio",
+      count: 0,
+    },
+  ],
+};
 
 function stripBrand(text: string): string {
   return text
