@@ -353,8 +353,8 @@ const REMOVED_SKUS = new Set<string>([
   "BR2253", "CDL1011", "CDL1012", "CDL1013", "CDL1014", "CDL1015",
   "CDL1016", "CDL1017", "CDL1061", "CDL1062", "CDL1063", "CDL1064",
   "CDL1065", "CDL1066", "CDL1067", "DS10", "DS12", "DS20",
-  "DS8", "FNL01", "FSK633", "FSK634", "FSK652SETA", "FSK655SETA",
-  "FSK661SETA", "FSK671SET", "FSK672SET", "FSK675SET", "GFT008", "GFT010",
+  "DS8", "FNL01", "FSK633", "FSK634", "FSK655SETA",
+  "FSK661SETA", "FSK671SET", "FSK675SET", "GFT008", "GFT010",
   "GFT024", "GFT045", "GFT048", "GFT049", "GFT1001", "GFT1002",
   "GFT1003", "GFT1004", "GFT1005", "GFT1006", "GFT1007", "GFT1008",
   "GFT1009", "GFT1010", "GFT1011", "GFT1012", "GFT1046", "GFT1047",
@@ -460,7 +460,7 @@ const REMOVED_SKUS = new Set<string>([
   // marked for removal (flasks, leatherette bottle openers/coasters/mug sleeves/
   // beverage holders). Boards GFT441-444/GFT485/SLT087 were SIL-marked too but
   // EXCLUDED by user direction (same wrongly-marked items rolled back on 06-27).
-  "FSK302", "FSK304", "FSK305", "FSK308", "FSK311", "FSK321",
+  "FSK302", "FSK305", "FSK308", "FSK311", "FSK321",
   "FSK322", "FSK503", "FSK504", "FSK505", "FSK506", "FSK509",
   "FSK511", "FSK513", "FSK514", "FSK601", "FSK605", "FSK611",
   "FSK622", "FSK626", "FSK629", "FSK630", "GFT1151", "GFT1152",
