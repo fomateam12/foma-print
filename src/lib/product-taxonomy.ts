@@ -159,6 +159,19 @@ export function productSizeTier(product: Product): SizeTier | null {
     if (tier === "Small") return "Medium";
     if (tier === "Medium") return "Large";
   }
+  // Leatherette Book/Bible Cover with Zipper: both supplier sizes compute as
+  // Medium by absolute area (6¾×9¼ ≈ 62 in², 7½×10¾ ≈ 81 in²). Split them so
+  // the catalog shows a clear two-size choice — Medium and Large (user request).
+  if (product.subcategorySlug === "leatherette-book-bible-cover-with-zipper") {
+    const ns = productSize(product);
+    if (ns?.bucket === "rect") {
+      const m = ns.canonical.match(/^([\d\s/.]+)"\s*x\s*([\d\s/.]+)"$/);
+      if (m) {
+        const area = parseInchToken(m[1]) * parseInchToken(m[2]);
+        if (area > 0) return area >= 70 ? "Large" : "Medium";
+      }
+    }
+  }
   return tier;
 }
 
