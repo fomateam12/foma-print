@@ -511,6 +511,68 @@ const REMOVED_SKUS = new Set<string>([
 ]);
 
 const ADDED_PRODUCTS: RawProduct[] = [
+  // Creekside Collection leatherette wallets (Wallet with Strap, RFID) from the
+  // JDS master CSV (not in the scraped feed). Self-hosted on R2.
+  {
+    id: "gft2145",
+    name: "Light Brown Leatherette Wallet with Strap",
+    sku: "GFT2145",
+    size: "7 1/2\" x 4\"",
+    price: 17.95,
+    image: "/products/GFT2145/GFT2145.jpg",
+    imageFull: "/products/GFT2145/GFT2145.jpg",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "61",
+    subSlug: "wallets",
+    subName: "Wallets",
+  },
+  {
+    id: "gft2146",
+    name: "Blush Leatherette Wallet with Strap",
+    sku: "GFT2146",
+    size: "7 1/2\" x 4\"",
+    price: 17.95,
+    image: "/products/GFT2146/GFT2146.jpg",
+    imageFull: "/products/GFT2146/GFT2146.jpg",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "61",
+    subSlug: "wallets",
+    subName: "Wallets",
+  },
+  {
+    id: "gft2147",
+    name: "Light Gray Leatherette Wallet with Strap",
+    sku: "GFT2147",
+    size: "7 1/2\" x 4\"",
+    price: 17.95,
+    image: "/products/GFT2147/GFT2147.jpg",
+    imageFull: "/products/GFT2147/GFT2147.jpg",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "61",
+    subSlug: "wallets",
+    subName: "Wallets",
+  },
+  {
+    id: "gft2148",
+    name: "Light Green Leatherette Wallet with Strap",
+    sku: "GFT2148",
+    size: "7 1/2\" x 4\"",
+    price: 17.95,
+    image: "/products/GFT2148/GFT2148.jpg",
+    imageFull: "/products/GFT2148/GFT2148.jpg",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "61",
+    subSlug: "wallets",
+    subName: "Wallets",
+  },
   // Leatherette cord/tech organizer cases from the JDS master CSV (not in the
   // scraped feed). Self-hosted on R2 under products/{SKU}/.
   {
