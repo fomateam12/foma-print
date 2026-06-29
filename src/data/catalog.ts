@@ -389,6 +389,7 @@ const REMOVED_SKUS = new Set<string>([
   "GFT2244", "GFT785",
   // 2026-06-29: user removal batch (17 leatherette portfolios).
   "GFT391", "GFT388", "GFT907", "GFT389", "GFT883", "GFT347", "GFT807", "GFT881", "GFT885", "GFT806", "GFT355", "GFT961", "GFT971", "GFT357", "GFT212", "GFT808", "GFT1223",
+  "GFT925", "GFT926",
 ]);
 
 const ADDED_PRODUCTS: RawProduct[] = [
