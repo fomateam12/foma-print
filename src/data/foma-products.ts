@@ -21,10 +21,105 @@ export const FOMA_CATEGORY = {
   subcategories: [
     { subId: "foma-tumblers", slug: "40oz-tumblers", name: "40oz Tumblers", count: 1 },
     { subId: "foma-lighters", slug: "lighters", name: "Lighters", count: 1 },
+    { subId: "foma-knives", slug: "pocket-knives", name: "Pocket Knives", count: 1 },
   ],
 };
 
 export const fomaProducts: Product[] = [
+  {
+    id: "foma-knife-multitool",
+    name: "Personalized Multi-Tool Pocket Knife – Custom Engraved",
+    sku: "FOMA-KNIFE-MULTI",
+    size: "8-in-1 folding multi-tool",
+    // Retail reference from FOMA's Etsy listing ($32.95). basePrice is an
+    // internal wholesale placeholder — hidden from buyers (B2B pricing is
+    // gated behind "Add to quote"). Confirm the real wholesale number.
+    basePrice: 32.95,
+    image: "/products/FOMA-KNIFE-MULTI/FOMA-KNIFE-MULTI.jpg",
+    imageFull: "/products/FOMA-KNIFE-MULTI/FOMA-KNIFE-MULTI.jpg",
+    images: [
+      "/products/FOMA-KNIFE-MULTI/FOMA-KNIFE-MULTI.jpg",
+      "/products/FOMA-KNIFE-MULTI/FOMA-KNIFE-MULTI_2.jpg",
+      "/products/FOMA-KNIFE-MULTI/FOMA-KNIFE-MULTI_3.jpg",
+      "/products/FOMA-KNIFE-MULTI/FOMA-KNIFE-MULTI_4.jpg",
+      "/products/FOMA-KNIFE-MULTI/FOMA-KNIFE-MULTI_5.jpg",
+      "/products/FOMA-KNIFE-MULTI/FOMA-KNIFE-MULTI_6.jpg",
+    ],
+    categoryId: "foma-best-seller",
+    categorySlug: "best-seller",
+    categoryName: "Best Sellers",
+    subcategorySlug: "pocket-knives",
+    subcategoryName: "Pocket Knives",
+    description:
+      "Personalized 8-in-1 multi-tool folding pocket knife, laser-engraved to order — a rugged custom gift for husbands, groomsmen, boyfriends and dads for anniversaries and Father's Day.",
+    longDescription:
+      "A black tactical multi-tool that packs eight functions into one folding pocket knife: a sharp drop-point blade, serrated edge, bottle opener, mini LED flashlight, magnesium fire starter, rope cutter, glass breaker and a secure liner lock. Laser-engraved to order with a name, monogram, date or short message across the handle for a crisp, permanent finish that won't fade. A thoughtful, practical keepsake for groomsmen proposals, weddings, anniversaries, birthdays and Father's Day. Made to order.",
+    badges: ["New"],
+    leadTimeDays: 5,
+    personalization: [
+      {
+        id: "engraving-text",
+        label: "Engraving text",
+        type: "text",
+        required: true,
+        placeholder: "Name, monogram, date, or short message",
+        maxLength: 60,
+        helpText: "The name or text we'll laser-engrave on the knife.",
+      },
+    ],
+  },
+  {
+    id: "foma-lighter-monogram",
+    name: "Personalized Monogram Lighter with Tin Case – Custom Engraved",
+    sku: "FOMA-LTR-MONO",
+    size: 'Lighter 1½" × 2¼" · Tin case 2¼" × 3¼"',
+    // Retail reference from FOMA's Etsy listing ($19.00). basePrice is an
+    // internal wholesale placeholder — hidden from buyers (B2B pricing is
+    // gated behind "Add to quote"). Confirm the real wholesale number.
+    basePrice: 19.0,
+    image: "/products/FOMA-LTR-MONO/FOMA-LTR-MONO.jpg",
+    imageFull: "/products/FOMA-LTR-MONO/FOMA-LTR-MONO.jpg",
+    images: [
+      "/products/FOMA-LTR-MONO/FOMA-LTR-MONO.jpg",
+      "/products/FOMA-LTR-MONO/FOMA-LTR-MONO_2.jpg",
+      "/products/FOMA-LTR-MONO/FOMA-LTR-MONO_3.jpg",
+      "/products/FOMA-LTR-MONO/FOMA-LTR-MONO_4.jpg",
+      "/products/FOMA-LTR-MONO/FOMA-LTR-MONO_5.jpg",
+    ],
+    categoryId: "foma-best-seller",
+    categorySlug: "best-seller",
+    categoryName: "Best Sellers",
+    subcategorySlug: "lighters",
+    subcategoryName: "Lighters",
+    description:
+      "Personalized metal flip lighter with a matching engraved tin case, laser-engraved to order — a custom monogram gift for him for anniversaries, Valentine's Day, groomsmen and weddings.",
+    longDescription:
+      "A classic black metal flip lighter paired with a matching engraved tin gift case. Laser-engraved to order with a monogram, name, date or short message for a crisp, permanent finish that won't fade. Choose lighter-only or add double-sided plus tin-case engraving for a complete gift-ready set. A thoughtful keepsake for groomsmen proposals, weddings, anniversaries, Valentine's Day and birthdays. Made to order. (Ships without fuel.)",
+    badges: ["New"],
+    leadTimeDays: 5,
+    personalization: [
+      {
+        id: "engraving",
+        label: "Engraving",
+        type: "select",
+        required: true,
+        options: [
+          "Lighter front only",
+          "Lighter double-sided",
+          "Lighter double-sided + engraved tin case",
+        ],
+      },
+      {
+        id: "engraving-text",
+        label: "Engraving text",
+        type: "text",
+        required: true,
+        placeholder: "Monogram, name, date, or short message",
+        maxLength: 60,
+        helpText: "The monogram or text we'll laser-engrave.",
+      },
+    ],
+  },
   {
     id: "foma-tumbler-40oz",
     name: "Custom Logo 40oz Tumbler with Handle & Straw",
