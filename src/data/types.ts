@@ -10,7 +10,10 @@ export type IconKey =
   | "coffee"
   | "frame"
   | "notebook"
-  | "award";
+  | "award"
+  | "utensils"
+  | "wallet"
+  | "luggage";
 
 export type PersonalizationType = "text" | "select";
 

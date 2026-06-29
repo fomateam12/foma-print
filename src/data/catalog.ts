@@ -1436,9 +1436,9 @@ const { products: normProducts, categories: normCategories } = normalizeCatalog(
 
 const CATEGORY_ICONS: Record<string, IconKey> = {
   "best-seller": "award",
-  "kitchen-and-bar": "gift",
-  "travel-accessories": "gift",
-  "personal-accessories": "gift",
+  "kitchen-and-bar": "utensils",
+  "travel-accessories": "luggage",
+  "personal-accessories": "wallet",
   drinkware: "coffee",
   "frames-and-decor": "frame",
   "office-tech": "notebook",
