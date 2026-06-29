@@ -13,6 +13,9 @@ import type { IconKey, Product } from "@/data/types";
 const SLUG_ICON: Record<string, IconKey> = {
   "best-seller": "award",
   "gifts-and-promotions": "gift",
+  "kitchen-and-bar": "gift",
+  "travel-accessories": "gift",
+  "personal-accessories": "gift",
   drinkware: "coffee",
   "frames-and-decor": "frame",
   "office-tech": "notebook",

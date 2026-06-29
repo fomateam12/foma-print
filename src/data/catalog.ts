@@ -782,6 +782,32 @@ const NAME_OVERRIDES: Record<string, string> = {
   GFT973: "Football Small Leatherette Portfolio with Notepad",
 };
 
+const GIFTS_SOURCE_SLUG = "gifts-and-promotions";
+const GIFTS_CATS = {
+  kitchen: { id: "10", slug: "kitchen-and-bar", name: "Kitchen & Bar" },
+  travel: { id: "11", slug: "travel-accessories", name: "Travel Accessories" },
+  personal: { id: "12", slug: "personal-accessories", name: "Personal Accessories" },
+} as const;
+// Route the supplier's single "Gifts & Promotions" into three storefront
+// categories by subcategory (user request). Unmapped subs fall to Personal.
+const GIFTS_SPLIT: Record<string, { id: string; slug: string; name: string }> = {
+  "cutting-boards-cake-pans-kitchen": GIFTS_CATS.kitchen,
+  "bbq-sets-and-utensils": GIFTS_CATS.kitchen,
+  "flasks-flask-sets-and-accessories": GIFTS_CATS.kitchen,
+  "scented-candles": GIFTS_CATS.kitchen,
+  "cigar-accessories-and-bar-gift-sets": GIFTS_CATS.kitchen,
+  "travel-items": GIFTS_CATS.travel,
+  "personal-items": GIFTS_CATS.personal,
+  "wallets": GIFTS_CATS.personal,
+  "checkbook-covers": GIFTS_CATS.personal,
+  "money-clips": GIFTS_CATS.personal,
+  "promotional-items": GIFTS_CATS.personal,
+  "bison-river-knives": GIFTS_CATS.personal,
+};
+function giftsCategoryFor(subSlug: string) {
+  return GIFTS_SPLIT[subSlug] ?? GIFTS_CATS.personal;
+}
+
 function normalizeCatalog(): { products: RawProduct[]; categories: RawCategory[] } {
   const subSlugBySubId = new Map<string, string>();
   const categories: RawCategory[] = [];
@@ -806,6 +832,18 @@ function normalizeCatalog(): { products: RawProduct[]; categories: RawCategory[]
         categories.push(target);
       }
       for (const sc of c.subcategories) addSub(target, sc);
+      continue;
+    }
+    if (c.slug === GIFTS_SOURCE_SLUG) {
+      for (const sc of c.subcategories) {
+        const t = giftsCategoryFor(stripBrandSlug(sc.slug));
+        let gcat = categories.find((x) => x.slug === t.slug);
+        if (!gcat) {
+          gcat = { id: t.id, slug: t.slug, name: t.name, subcategories: [] };
+          categories.push(gcat);
+        }
+        addSub(gcat, sc);
+      }
       continue;
     }
     const cat: RawCategory = { ...c, subcategories: [] };
@@ -834,16 +872,26 @@ function normalizeCatalog(): { products: RawProduct[]; categories: RawCategory[]
     const override = SUB_OVERRIDES[p.sku.toUpperCase()];
     const effectiveSubId = override?.subId ?? p.subId;
     const fallbackSlug = subSlugBySubId.get(effectiveSubId) ?? p.subSlug;
+    const subSlug = override
+      ? subSlugBySubId.get(override.subId) ?? override.subSlug
+      : fallbackSlug;
+    let categoryId = merged ? MERGE_TARGET.id : p.categoryId;
+    let categorySlug = merged ? MERGE_TARGET.slug : p.categorySlug;
+    let categoryName = merged ? MERGE_TARGET.name : p.categoryName;
+    if (p.categorySlug === GIFTS_SOURCE_SLUG) {
+      const t = giftsCategoryFor(subSlug);
+      categoryId = t.id;
+      categorySlug = t.slug;
+      categoryName = t.name;
+    }
     return {
       ...p,
       name: NAME_OVERRIDES[p.sku.toUpperCase()] ?? stripBrand(p.name),
-      categoryId: merged ? MERGE_TARGET.id : p.categoryId,
-      categorySlug: merged ? MERGE_TARGET.slug : p.categorySlug,
-      categoryName: merged ? MERGE_TARGET.name : p.categoryName,
+      categoryId,
+      categorySlug,
+      categoryName,
       subId: effectiveSubId,
-      subSlug: override
-        ? subSlugBySubId.get(override.subId) ?? override.subSlug
-        : fallbackSlug,
+      subSlug,
       subName: stripBrand(override?.subName ?? p.subName),
     };
   });
@@ -859,7 +907,9 @@ const { products: normProducts, categories: normCategories } = normalizeCatalog(
 
 const CATEGORY_ICONS: Record<string, IconKey> = {
   "best-seller": "award",
-  "gifts-and-promotions": "gift",
+  "kitchen-and-bar": "gift",
+  "travel-accessories": "gift",
+  "personal-accessories": "gift",
   drinkware: "coffee",
   "frames-and-decor": "frame",
   "office-tech": "notebook",
@@ -868,8 +918,12 @@ const CATEGORY_ICONS: Record<string, IconKey> = {
 const CATEGORY_BLURBS: Record<string, string> = {
   "best-seller":
     "Our own laser-engraved best sellers — personalized tumblers and lighters, made to order by FOMA FAMILY LLC.",
-  "gifts-and-promotions":
-    "Laser-engraved keepsakes, awards, barware and promotional gifts for every milestone.",
+  "kitchen-and-bar":
+    "Engraved cutting & charcuterie boards, flasks, BBQ sets and barware for hosts and home cooks.",
+  "travel-accessories":
+    "Passport holders, jewelry boxes and travel organizers, personalized for life on the go.",
+  "personal-accessories":
+    "Wallets, money clips, checkbook covers and valet trays — everyday carry, engraved to order.",
   drinkware:
     "Insulated tumblers, water bottles, mugs, coasters and glassware ready for crisp, permanent engraving.",
   "frames-and-decor":
@@ -1062,7 +1116,13 @@ function enrich(p: Product): Product {
 // FOMA's own inventory (foma-products.ts) is merged in alongside the reseller
 // catalog without altering it. The curated gallery + weight enrichments are
 // applied uniformly so any future FOMA SKU can pick up its bindings the same way.
-const allProducts: Product[] = [...jdsProducts, ...fomaProducts].map(enrich);
+const allProducts: Product[] = [...jdsProducts, ...fomaProducts]
+  .map(enrich)
+  .map((p) => {
+    if (p.categorySlug !== GIFTS_SOURCE_SLUG) return p;
+    const t = giftsCategoryFor(p.subcategorySlug);
+    return { ...p, categoryId: t.id, categorySlug: t.slug, categoryName: t.name };
+  });
 
 const productById = new Map(allProducts.map((p) => [p.id, p]));
 
