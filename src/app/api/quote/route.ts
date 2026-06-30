@@ -5,6 +5,8 @@ import { isSameOrigin } from "@/lib/security";
 import { fingerprint, shouldProcess } from "@/lib/idempotency";
 import { log } from "@/lib/log";
 import { getTraceId, TRACE_HEADER } from "@/lib/trace";
+import { verifyTurnstile } from "@/lib/turnstile";
+import { ipFromRequest } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 
@@ -60,6 +62,22 @@ export async function POST(request: Request) {
     return NextResponse.json(
       { ok: true },
       { headers: { [TRACE_HEADER]: traceId } },
+    );
+  }
+
+  // Cloudflare Turnstile — bot challenge gate. Fail-open only when the
+  // secret is unset (local dev); production env always has it and any
+  // missing / forged / replayed token returns 403 here without dispatch.
+  const turnstile = await verifyTurnstile(parsed.data.cfTurnstileToken, {
+    ip: ipFromRequest(request),
+    traceId,
+  });
+  if (!turnstile.ok) {
+    return NextResponse.json(
+      {
+        error: "We couldn't verify your request. Please reload and try again.",
+      },
+      { status: 403, headers: { [TRACE_HEADER]: traceId } },
     );
   }
 
