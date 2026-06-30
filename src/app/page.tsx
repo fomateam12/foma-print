@@ -117,7 +117,9 @@ export default function HomePage() {
             </span>
             <h1 className="mt-5 max-w-4xl text-display text-foreground">
               Print under your brand.{" "}
-              <span className="font-serif text-metallic">We make and ship it.</span>
+              <span className="block font-serif italic text-metallic">
+                We make and ship it.
+              </span>
             </h1>
             <p className="mt-5 max-w-2xl text-lead text-muted-foreground">
               You sell. We print, quality-check and blind-ship to your customer
@@ -205,7 +207,7 @@ export default function HomePage() {
         <div className="mt-10 text-center">
           <Link
             href="/how-it-works"
-            className="inline-flex items-center gap-1 text-sm font-semibold text-brand-strong hover:underline"
+            className="inline-flex items-center gap-1 text-sm font-semibold text-brand-strong transition-colors hover:text-rust-bright"
           >
             See how it works
             <ArrowRight className="size-4" />
@@ -223,7 +225,7 @@ export default function HomePage() {
             action={
               <Link
                 href="/sell"
-                className="inline-flex items-center gap-1 text-sm font-semibold text-brand-strong hover:underline"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-brand-strong transition-colors hover:text-rust-bright"
               >
                 Apply to sell
                 <ArrowRight className="size-4" />
@@ -279,7 +281,7 @@ export default function HomePage() {
           action={
             <Link
               href="/categories"
-              className="inline-flex items-center gap-1 text-sm font-semibold text-brand-strong hover:underline"
+              className="inline-flex items-center gap-1 text-sm font-semibold text-brand-strong transition-colors hover:text-rust-bright"
             >
               All categories
               <ArrowRight className="size-4" />

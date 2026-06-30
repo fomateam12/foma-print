@@ -79,7 +79,7 @@ export function ProductBanner({ products }: { products: BannerProduct[] }) {
         </div>
         <Link
           href="/categories"
-          className="hidden shrink-0 items-center gap-1 text-sm font-semibold text-brand-strong hover:underline sm:inline-flex"
+          className="hidden shrink-0 items-center gap-1 text-sm font-semibold text-brand-strong transition-colors hover:text-rust-bright sm:inline-flex"
         >
           All products
           <ArrowRight className="size-4" />
