@@ -44,11 +44,7 @@ export function SectionHeader({
               centered && "justify-center",
             )}
           >
-            <span
-              aria-hidden="true"
-              className="h-px w-8 rounded-full"
-              style={{ background: "var(--metallic)" }}
-            />
+            <span aria-hidden="true" className="scribe-rule" />
             <span
               className={cn(
                 "text-xs font-semibold uppercase tracking-[0.18em]",

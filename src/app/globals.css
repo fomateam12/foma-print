@@ -269,6 +269,28 @@
     -webkit-backdrop-filter: saturate(160%) blur(14px);
   }
 
+  /* Measurement-scribe mark — the eyebrow rule reads like a dimension line off
+     the engraving-area diagrams: a hairline with a tick at its origin. Carries
+     the engraved-craft signature into the page's structure, not just its type. */
+  .scribe-rule {
+    position: relative;
+    display: inline-block;
+    height: 1px;
+    width: 2rem;
+    border-radius: 9999px;
+    background: var(--metallic);
+  }
+  .scribe-rule::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -2px;
+    height: 5px;
+    width: 1px;
+    border-radius: 9999px;
+    background: color-mix(in oklch, var(--rust) 65%, transparent);
+  }
+
   /* Thin hairline rule (subtle rust → transparent) */
   .rule-metallic {
     height: 1px;
