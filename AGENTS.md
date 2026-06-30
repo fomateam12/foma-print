@@ -4,6 +4,131 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
+<!-- BEGIN:loop-engineering -->
+# Loop Engineering — autonomous + /loop runs
+
+When you are running unattended (`/loop`, an overnight pass, a multi-tick
+auto-mode session) the operator is not in the room. The work has to design
+itself. The five moves below are the contract every tick on this repo
+follows; deviations need explicit human confirmation.
+
+## Five moves
+
+1. **Schedule** — `/loop <interval> …` or autonomous pacing via
+   `ScheduleWakeup`. Pick the interval against the cost of a wasted tick,
+   not a round number of minutes.
+2. **Discover** — read the current state before deciding the work. `git
+   status`, `git log origin/main..HEAD`, `gh pr list`, this file's
+   `## Gece durumu …` sections, `BLOCKERS.md`, `TODO-david.md`. Never
+   re-derive intent from training data when a file in the repo states it.
+3. **Build** — smallest reversible change that makes the next tick easier.
+   Commit on completion of each item, not at the end of the run.
+4. **Verify** — never declare done from vibes. Required gates:
+   - `npm run build` must pass.
+   - For data changes, diff against the canonical source (manifest, xlsx,
+     supplier JSON) and print the delta.
+   - For image / URL work, `curl -sI` the live URL and read the status +
+     `content-type`.
+   - The user's standing rule (`feedback_verify_with_evidence.md`): if you
+     would say "this should work" or "I think this is fine," instead show
+     output that proves it.
+5. **Report** — append a dated block to `## Gece durumu — YYYY-MM-DD …`
+   in this file (or `overnight-report.md` for long-form). One paragraph,
+   what changed, what's pending, what's risky. The historical sections
+   below are the audit trail; don't rewrite them.
+
+## Anchors (do not re-derive)
+
+This file, `BLOCKERS.md`, `DEPLOY-CHECKLIST.md`, `ENV.md`, and the
+project memory at `~/.claude/projects/-Users-eymen-foma-design/memory/`
+are the intent anchors. A tick that disagrees with one of them needs an
+explicit update commit, not a silent override.
+
+## Guardrails — operator policy, not deny rules
+
+`.claude/settings.json` currently allows everything (`"deny": []`,
+`"allow": ["*"]`). The hard blocks that used to gate dangerous commands
+are off. That means **the agent is the guardrail now**: nothing will
+stop you mid-command, so the discipline has to live in the loop design.
+
+Treat these as still-binding, even with no file-level deny:
+
+- **`git push` to `main` / `git reset --hard` / `git push --force`** —
+  never on `main`, never on a branch with an open PR, without explicit
+  operator authorization for that specific push.
+- **`vercel --prod*` / `vercel deploy --prod*`** — production deploys
+  remain operator-only. PR merge to `main` is the only path to prod;
+  do not bypass.
+- **`.env*` files** — readable now, but they hold rotation-pending
+  secrets. Don't print them, don't echo them to logs, don't include
+  them in commits (`.gitignore` already excludes them but `git add -f`
+  would override). If you ingest a credential into your context, flag
+  it for rotation before exiting the tick.
+- **`rm -rf` and piped `curl | sh`** — only against well-scoped paths
+  you fully understand. A wildcard or untrusted URL is a hard stop.
+
+The Claude Code auto-mode classifier may still ask before a few
+production-impacting actions even though settings.json no longer blocks
+them. When it does, treat the prompt as a real checkpoint, not noise —
+re-read the next move before answering.
+
+## Halt conditions
+
+End the loop early when any of these trip:
+
+- **No-progress**: two consecutive ticks with the same failing build /
+  test / curl output. Write a one-line summary to `BLOCKERS.md` and stop.
+- **Ambiguous intent**: the next move requires a decision the anchors
+  don't cover. Ask the operator via `AskUserQuestion`; do not guess.
+- **Secret exposure**: a credential leaked into chat or a log. Flag it,
+  do not persist it further, and surface the rotation steps. The R2 and
+  Cloudinary keys have already been pasted to chat once each — treat any
+  new leak the same way.
+- **Production-touching action without explicit authorization**: a merge
+  to `main`, a `vercel --prod`, a domain change, a token rotation. These
+  need the operator in the loop even when auto mode is active.
+
+## Skills, not re-derived prompts
+
+When you find yourself re-explaining a recipe to the next tick, lift it
+into a named script in `.scrape/` (already gitignored) or a documented
+sub-command. The repo already has:
+
+- `.scrape/r2-migration/audit_cloudinary.py` — full bucket audit + manifest
+- `.scrape/r2-migration/migrate_to_r2.py` — idempotent Cloudinary → R2 copy
+- `.scrape/r2-migration/verify_migration.py` — manifest ↔ R2 parity report
+- `.scrape/build_product_shipping.py` — per-SKU shipping JSON generator
+- `.scrape/append_shipping_to_xlsx.py` — writes `fomaprint liste (N).xlsx`
+
+Invoke these by name in /loop prompts (`run verify_migration.py and
+report parity`) instead of re-spelling the steps every tick. Loops that
+call sharp named skills get cheaper over time; loops that re-derive
+everything do not.
+
+## Worktrees for parallel work
+
+For independent PRs running in parallel (e.g. one tick on a content fix,
+another on a build-config tweak) use `git worktree add ../foma-design-<purpose>
+<branch>` so the checkouts do not collide. The main repo at
+`~/foma-design` stays on whatever branch the operator left it on.
+
+## Project context the loop must keep in mind
+
+- Customer-facing copy is English; agent-to-operator chat is Turkish.
+- Next.js 16: read `node_modules/next/dist/docs/` before writing new
+  Next-specific code (see `nextjs-agent-rules` above).
+- Image origin is **Cloudflare R2** (`pub-7dbfe9f161d34085b011aea74e8f75ac.r2.dev`).
+  `src/lib/cloudinary-loader.ts` is R2-first with a Cloudinary fallback
+  while `NEXT_PUBLIC_R2_BASE_URL` is unset. The Vercel optimizer
+  (`/_next/image`) does the AVIF/WebP encoding, which is a paid feature
+  — Hobby tier returns 402 on optimizer requests, so any redesign of
+  the loader needs to stay aware of the plan tier.
+- Catalog truth: `src/data/products.json` (supplier feed) + curation
+  layer in `src/data/catalog.ts` (`REMOVED_SKUS`, `ADDED_PRODUCTS`,
+  `SUB_OVERRIDES`) + enrich data files (`product-images.json`,
+  `product-weights.json`, `product-shipping.json`).
+<!-- END:loop-engineering -->
+
 <!-- BEGIN:foma-overnight (manuel — sync tooling buraya dokunmaz) -->
 # FomaPrint — Gece Geliştirme Yönü
 

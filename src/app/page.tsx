@@ -207,7 +207,7 @@ export default function HomePage() {
         <div className="mt-10 text-center">
           <Link
             href="/how-it-works"
-            className="inline-flex items-center gap-1 text-sm font-semibold text-brand-strong hover:underline"
+            className="inline-flex items-center gap-1 text-sm font-semibold text-brand-strong transition-colors hover:text-rust-bright"
           >
             See how it works
             <ArrowRight className="size-4" />
@@ -225,7 +225,7 @@ export default function HomePage() {
             action={
               <Link
                 href="/sell"
-                className="inline-flex items-center gap-1 text-sm font-semibold text-brand-strong hover:underline"
+                className="inline-flex items-center gap-1 text-sm font-semibold text-brand-strong transition-colors hover:text-rust-bright"
               >
                 Apply to sell
                 <ArrowRight className="size-4" />
@@ -281,7 +281,7 @@ export default function HomePage() {
           action={
             <Link
               href="/categories"
-              className="inline-flex items-center gap-1 text-sm font-semibold text-brand-strong hover:underline"
+              className="inline-flex items-center gap-1 text-sm font-semibold text-brand-strong transition-colors hover:text-rust-bright"
             >
               All categories
               <ArrowRight className="size-4" />

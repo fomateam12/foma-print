@@ -196,7 +196,7 @@ export default async function SubcategoryPage({
           </p>
           <Link
             href={basePath}
-            className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-strong hover:underline"
+            className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-strong transition-colors hover:text-rust-bright"
           >
             See all sizes
             <ArrowRight className="size-4" />

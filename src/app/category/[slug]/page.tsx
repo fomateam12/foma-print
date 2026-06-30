@@ -143,7 +143,7 @@ export default async function CategoryPage({
               </h2>
               <Link
                 href={`/category/${category.slug}/${category.subcategories[0]?.slug ?? ""}`}
-                className="hidden shrink-0 items-center gap-1 text-sm font-semibold text-brand-strong hover:underline sm:inline-flex"
+                className="hidden shrink-0 items-center gap-1 text-sm font-semibold text-brand-strong transition-colors hover:text-rust-bright sm:inline-flex"
               >
                 Shop the collection
                 <ArrowRight className="size-4" />
