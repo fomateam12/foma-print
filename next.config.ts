@@ -15,11 +15,17 @@ const CSP = [
   "object-src 'none'",
   "frame-ancestors 'none'",
   "form-action 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  // Turnstile loads its widget JS from challenges.cloudflare.com.
+  "script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https://*.r2.dev https://res.cloudinary.com https://fomafamilyllc.com",
   "font-src 'self'",
-  "connect-src 'self'",
+  // Turnstile siteverify happens server-side, but the widget itself
+  // sends telemetry/challenge POSTs from the browser to its own host.
+  "connect-src 'self' https://challenges.cloudflare.com",
+  // The Turnstile widget renders inside an iframe sourced from
+  // challenges.cloudflare.com; allow it.
+  "frame-src 'self' https://challenges.cloudflare.com",
   "worker-src 'self' blob:",
   "upgrade-insecure-requests",
 ].join("; ");

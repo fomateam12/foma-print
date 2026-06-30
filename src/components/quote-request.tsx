@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
@@ -19,6 +20,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button, buttonVariants } from "@/components/ui/button";
+import { TurnstileWidget } from "@/components/turnstile-widget";
 import { useQuote } from "@/components/quote-provider";
 import { cn } from "@/lib/utils";
 import {
@@ -75,9 +77,17 @@ export function QuoteRequest() {
     },
   });
 
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const onTurnstileVerify = useCallback(
+    (token: string) => setTurnstileToken(token),
+    [],
+  );
+  const onTurnstileExpire = useCallback(() => setTurnstileToken(null), []);
+
   async function onSubmit(values: QuoteFormInput) {
     const payload = {
       ...values,
+      cfTurnstileToken: turnstileToken ?? undefined,
       items: items.map((i) => ({
         sku: i.sku,
         name: i.name,
@@ -455,6 +465,12 @@ export function QuoteRequest() {
                 </label>
                 <ErrorText msg={errors.consent?.message} />
               </div>
+
+              <TurnstileWidget
+                onVerify={onTurnstileVerify}
+                onExpire={onTurnstileExpire}
+                className="flex justify-center"
+              />
 
               <Button
                 type="submit"

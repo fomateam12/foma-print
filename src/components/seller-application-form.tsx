@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2, Send, CheckCircle2 } from "lucide-react";
@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import { TurnstileWidget } from "@/components/turnstile-widget";
 import { cn } from "@/lib/utils";
 import {
   resellerApplicationSchema,
@@ -63,6 +64,13 @@ export function SellerApplicationForm() {
 
   const hearAboutUs = watch("hearAboutUs");
 
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const onTurnstileVerify = useCallback(
+    (token: string) => setTurnstileToken(token),
+    [],
+  );
+  const onTurnstileExpire = useCallback(() => setTurnstileToken(null), []);
+
   async function onSubmit(values: ResellerApplicationInput) {
     setSubmitError(null);
     const started = mountedAt.current;
@@ -71,7 +79,11 @@ export function SellerApplicationForm() {
       const res = await fetch("/api/reseller-application", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...values, elapsedMs }),
+        body: JSON.stringify({
+          ...values,
+          elapsedMs,
+          cfTurnstileToken: turnstileToken ?? undefined,
+        }),
       });
       const data = (await res.json().catch(() => ({}))) as {
         ok?: boolean;
@@ -292,6 +304,12 @@ export function SellerApplicationForm() {
         </label>
         <ErrorText msg={errors.consent?.message} />
       </div>
+
+      <TurnstileWidget
+        onVerify={onTurnstileVerify}
+        onExpire={onTurnstileExpire}
+        className="flex justify-start"
+      />
 
       {submitError ? (
         <p

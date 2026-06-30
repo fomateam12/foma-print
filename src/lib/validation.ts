@@ -77,6 +77,11 @@ export const resellerApplicationSchema = z.object({
   // suspiciously fast submissions. Optional so a missing value never blocks a
   // real applicant.
   elapsedMs: z.number().nonnegative().optional(),
+  // Cloudflare Turnstile token. Required from the client; the server-side
+  // verifier hits Cloudflare's siteverify endpoint before dispatch. Optional
+  // here so a missing token surfaces as a 403 from the handler with a clear
+  // log line, not a Zod 422 noise event.
+  cfTurnstileToken: z.string().optional(),
 });
 
 export type ResellerApplicationInput = z.infer<typeof resellerApplicationSchema>;
@@ -134,6 +139,8 @@ export const quoteFormSchema = z.object({
   }),
   // Honeypot — must stay empty.
   company: z.string().optional(),
+  // Cloudflare Turnstile token. See resellerApplicationSchema comment.
+  cfTurnstileToken: z.string().optional(),
 });
 
 /** Full payload sent to the API: contact brief + the line items from the cart. */

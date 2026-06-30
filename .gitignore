@@ -56,3 +56,4 @@ settings.local.json
 
 # stray nested clone (accidental — belongs outside this repo)
 FOMAETSYAUTOMATION/
+.claude/scheduled_tasks.lock
