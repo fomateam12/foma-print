@@ -1794,6 +1794,22 @@ const productShippingByUpper = new Map<string, ShippingInfo>(
   ),
 );
 
+/** Feature / spec infographics shared by every Polar Camel water bottle (same
+ *  physical product line across sizes/colors). Appended to the gallery of
+ *  water-bottle products ONLY — matched by product name, with accessories
+ *  (lids, straws, etc.) explicitly excluded so nothing else picks them up. */
+const WATER_BOTTLE_SPEC_IMAGES = [
+  "/products/_shared/water-bottle-features-1.jpg",
+  "/products/_shared/water-bottle-features-2.jpg",
+];
+
+function isWaterBottle(p: Product): boolean {
+  return (
+    /water bottle/i.test(p.name) &&
+    !/\b(lid|lids|straw|cap|holder|sleeve|replacement|gasket)\b/i.test(p.name)
+  );
+}
+
 function enrich(p: Product): Product {
   const upper = p.sku.toUpperCase();
   const images = productImagesByUpper.get(upper);
@@ -1802,6 +1818,14 @@ function enrich(p: Product): Product {
 
   let next = p;
   if (images && images.length > 0) next = { ...next, images };
+
+  // Append the shared water-bottle feature diagrams to the gallery of water
+  // bottles only (every match already has a curated gallery; the fallback keeps
+  // it safe if one ever doesn't).
+  if (isWaterBottle(next)) {
+    const base = next.images && next.images.length > 0 ? next.images : [next.image];
+    next = { ...next, images: [...base, ...WATER_BOTTLE_SPEC_IMAGES] };
+  }
 
   // `weightLb` is the item weight from the per-SKU master list. It is the
   // value that flows into the existing "Weight" spec chip.
