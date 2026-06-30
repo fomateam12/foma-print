@@ -83,12 +83,15 @@ export function ProductGallery({ images, alt }: ProductGalleryProps) {
         <div
           className="mt-3 grid gap-2"
           style={{
+            // Up to 6 thumbnails per row; extras (e.g. spec/feature diagrams
+            // appended to a full product gallery) wrap to the next row instead
+            // of being clipped.
             gridTemplateColumns: `repeat(${Math.min(count, 6)}, minmax(0, 1fr))`,
           }}
         >
-          {images.slice(0, 6).map((src, i) => (
+          {images.map((src, i) => (
             <button
-              key={src}
+              key={`${src}-${i}`}
               type="button"
               onClick={() => setActive(i)}
               aria-label={`Show image ${i + 1} of ${count}`}
