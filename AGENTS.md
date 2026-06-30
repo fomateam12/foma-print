@@ -208,7 +208,6 @@ yazmadan önce node_modules/next/dist/docs/ oku) + Tailwind.
 
 ## Gece durumu — 2026-06-30 (overnight loop)
 
-<<<<<<< HEAD
 - **Tick #2** (start 01:28 local, ~10 min wall) — Agent C koştu (önceki
   skip telafi). Bulguları: (a) 4 dead export `src/lib/site-copy.ts`
   içinde (PRINTING_PROMISE, SHIPPING_PROMISE, REPLY_PROMISE, SAME_DAY_TRIO
@@ -238,3 +237,10 @@ yazmadan önce node_modules/next/dist/docs/ oku) + Tailwind.
   (low priority). Pick: package.json (engines + lint scope). PR #35.
   Build ✓, lint clean (0 errors + 4 pre-existing react-hooks warnings
   src/ içinde — backlog için flag).
+
+- **Tick #5** (start 02:59 local, ~5 min wall) — Agent A Tick #4'te
+  surface ettiği orphan SVG bulgusunu doğruladım: `public/{file,globe,
+  next,vercel,window}.svg` Next.js create-next-app boilerplate'inden
+  kalmış, src/ + config + .well-known + tüm dosyalarda **0 referans**
+  (kapsamlı grep ile triple-verified). Pick: sil. PR #36. Build ✓,
+  public/ artık sadece anlamlı asset'lere ev sahipliği yapıyor.
