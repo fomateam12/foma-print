@@ -1,13 +1,13 @@
 import type { NextConfig } from "next";
 
 /**
- * Content-Security-Policy. Shipped as REPORT-ONLY first (see headers() below) so
- * it can never blank the live site — violations surface in the browser console
- * on Preview/prod; once that window is clean, switch the header name to the
- * enforcing `Content-Security-Policy`. Sources mirror next.config images
- * (R2 / Cloudinary) + next/font (self-hosted) + same-origin API/fetch.
- * `'unsafe-inline'` on script/style is the report-only baseline; tighten to
- * nonce/hash before enforcing.
+ * Content-Security-Policy — now ENFORCING. The report-only window ran clean
+ * (site healthy, all 200s, no console violations) and the built client bundle
+ * contains no eval/new Function, so enforcing this allowlist won't break
+ * hydration. Sources mirror next.config images (R2 / Cloudinary) + next/font
+ * (self-hosted) + same-origin API/fetch. `'unsafe-inline'` on script/style
+ * remains the one weak spot — the next hardening step is nonce/hash-based
+ * scripts (needs middleware), which can drop `'unsafe-inline'` from script-src.
  */
 const CSP = [
   "default-src 'self'",
@@ -26,11 +26,11 @@ const CSP = [
 
 /** Static security headers applied to every response. */
 const SECURITY_HEADERS = [
-  // Report-only for now — never enforce a blind CSP on a live site.
-  { key: "Content-Security-Policy-Report-Only", value: CSP },
-  // HSTS: short max-age to start (1 day), no preload (preload is irreversible),
+  // Enforcing — validated safe (clean report-only window + no eval in bundle).
+  { key: "Content-Security-Policy", value: CSP },
+  // HSTS: 30 days (the recommended minimum). Still no preload (irreversible) and
   // no includeSubDomains until every subdomain is confirmed HTTPS.
-  { key: "Strict-Transport-Security", value: "max-age=86400" },
+  { key: "Strict-Transport-Security", value: "max-age=2592000" },
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "X-Frame-Options", value: "DENY" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
