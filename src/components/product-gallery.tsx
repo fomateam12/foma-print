@@ -75,6 +75,10 @@ export function ProductGallery({ images, alt }: ProductGalleryProps) {
           fill
           priority={activeIndex === 0}
           sizes="(max-width: 1024px) 100vw, 50vw"
+          // The detail-page hero is the closest look a buyer gets — bump
+          // to 95 so the AVIF conversion preserves fine engraving detail
+          // on the 4 MB source PNGs. Thumbnails below stay at the default 75.
+          quality={95}
           className="object-contain p-8 transition-opacity duration-200"
         />
       </div>
