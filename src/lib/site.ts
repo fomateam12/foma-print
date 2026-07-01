@@ -20,7 +20,7 @@ export const site = {
   whatsappDisplay: "(404) 934-8917",
   whatsappHref: "https://wa.me/14049348917",
   /** Public site URL. Overridden in production via NEXT_PUBLIC_SITE_URL. */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://foma-design.vercel.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://fomaprint.com",
   /**
    * Social profiles. Only verified, live channels should be listed here so the
    * footer never renders a dead link. Add real FOMA FAMILY LLC handles when

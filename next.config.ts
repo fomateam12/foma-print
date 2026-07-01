@@ -70,9 +70,10 @@ const nextConfig: NextConfig = {
 
     // Required in Next.js 16 — the allowlist of `quality` values the
     // optimizer will honor. 75 is the default for thumbnails / grids,
-    // 85 is what we pass on hero / gallery / detail-page imagery so
-    // those land closer to Cloudinary's `q_auto:good`.
-    qualities: [75, 85],
+    // 85 for standard hero / gallery imagery, 95 for the product detail
+    // gallery hero where extra AVIF fidelity buys visible engraving
+    // detail on 4 MB source PNGs.
+    qualities: [75, 85, 95],
 
     remotePatterns: [
       // R2 default subdomain (post-migration target). `pub-<hash>.r2.dev`
