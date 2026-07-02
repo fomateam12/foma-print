@@ -743,6 +743,23 @@ const ADDED_PRODUCTS: RawProduct[] = [
     subSlug: "travel-items",
     subName: "Travel Items",
   },
+  // Explorer Crossbody Bag, Creekside Collection (JDS master CSV, not in the
+  // scraped feed). Self-hosted on R2 under products/{SKU}/.
+  {
+    id: "llb126",
+    name: "Medium Brown Leatherette Explorer Crossbody Bag",
+    sku: "LLB126",
+    size: "6 1/4\" x 10\" x 3\"",
+    price: 33.15,
+    image: "/products/LLB126/LLB126.jpg",
+    imageFull: "/products/LLB126/LLB126.jpg",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "41",
+    subSlug: "travel-items",
+    subName: "Travel Items",
+  },
   // Added from the JDS master CSV (not in the scraped feed). Image is JDS's own
   // Cloudinary asset (res.cloudinary.com is whitelisted in next.config).
   {
