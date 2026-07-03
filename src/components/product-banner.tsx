@@ -24,7 +24,6 @@ export interface BannerProduct {
 }
 
 const SLUG_ICON: Record<string, IconKey> = {
-  "best-seller": "award",
   "gifts-and-promotions": "gift",
   "kitchen-and-bar": "utensils",
   "travel-accessories": "luggage",

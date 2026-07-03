@@ -11,7 +11,6 @@ import type { IconKey, Product } from "@/data/types";
 
 /** Client-safe category-slug → fallback icon map (mirrors catalog.ts). */
 const SLUG_ICON: Record<string, IconKey> = {
-  "best-seller": "award",
   "gifts-and-promotions": "gift",
   "kitchen-and-bar": "gift",
   "travel-accessories": "gift",

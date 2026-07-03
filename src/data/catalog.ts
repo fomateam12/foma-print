@@ -18,7 +18,7 @@ import rawData from "./products.json";
 import productImagesRaw from "./product-images.json";
 import productWeightsRaw from "./product-weights.json";
 import productShippingRaw from "./product-shipping.json";
-import { fomaProducts, FOMA_CATEGORY } from "./foma-products";
+import { fomaProducts } from "./foma-products";
 import type {
   Category,
   IconKey,
@@ -2233,6 +2233,12 @@ const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
     { subId: "110", slug: "bar-gift-sets", name: "Bar Gift Sets", count: 0 },
   ],
   "personal-accessories": [
+    // FOMA's own knife + lighter products, rehomed here when the dedicated
+    // "Best Sellers" category was dissolved (user request). Keyed by the
+    // POST-MERGE slug: their raw category is gifts-and-promotions, which
+    // GIFTS_SPLIT routes to Personal Accessories.
+    { subId: "122", slug: "pocket-knives", name: "Pocket Knives", count: 0 },
+    { subId: "123", slug: "lighters", name: "Lighters", count: 0 },
     { subId: "106", slug: "wallets-with-strap", name: "Leatherette Wallet with Strap", count: 0 },
     { subId: "107", slug: "wallets-bifold-flip-id", name: "Leatherette Bifold Wallet with Flip ID", count: 0 },
     { subId: "108", slug: "wallets-bifold", name: "Leatherette Bifold Wallet", count: 0 },
@@ -2393,6 +2399,9 @@ const GIFTS_SPLIT: Record<string, { id: string; slug: string; name: string }> = 
   "money-clips": GIFTS_CATS.personal,
   "promotional-items": GIFTS_CATS.personal,
   "bison-river-knives": GIFTS_CATS.personal,
+  // FOMA's own products from the dissolved "Best Sellers" category.
+  "pocket-knives": GIFTS_CATS.personal,
+  "lighters": GIFTS_CATS.personal,
 };
 function giftsCategoryFor(subSlug: string) {
   return GIFTS_SPLIT[subSlug] ?? GIFTS_CATS.personal;
@@ -2507,7 +2516,6 @@ const { products: normProducts, categories: normCategories } = normalizeCatalog(
 /* ------------------------------------------------------------------ */
 
 const CATEGORY_ICONS: Record<string, IconKey> = {
-  "best-seller": "award",
   "kitchen-and-bar": "utensils",
   "travel-accessories": "luggage",
   "personal-accessories": "wallet",
@@ -2518,8 +2526,6 @@ const CATEGORY_ICONS: Record<string, IconKey> = {
 };
 
 const CATEGORY_BLURBS: Record<string, string> = {
-  "best-seller":
-    "Our own laser-engraved best sellers — personalized tumblers and lighters, made to order by FOMA FAMILY LLC.",
   "kitchen-and-bar":
     "Engraved cutting & charcuterie boards, flasks, BBQ sets and barware for hosts and home cooks.",
   "travel-accessories":
@@ -2763,7 +2769,7 @@ for (const p of allProducts) {
   (productsBySub.get(sKey) ?? productsBySub.set(sKey, []).get(sKey)!).push(p);
 }
 
-const categories: Category[] = [...normCategories, FOMA_CATEGORY].map((c) => {
+const categories: Category[] = normCategories.map((c) => {
   const subcategories: Subcategory[] = c.subcategories
     .map((sc) => {
       const items = productsBySub.get(`${c.slug}/${sc.slug}`) ?? [];

@@ -112,6 +112,18 @@ const nextConfig: NextConfig = {
       // application. 308 = permanent, method-preserving.
       { source: "/login", destination: "/sell", permanent: true },
       { source: "/seller", destination: "/sell", permanent: true },
+      // "Best Sellers" category dissolved — its knife/lighter products moved
+      // to Personal Accessories; tumblers were already under Drinkware.
+      {
+        source: "/category/best-seller",
+        destination: "/category/personal-accessories",
+        permanent: true,
+      },
+      {
+        source: "/category/best-seller/:sub*",
+        destination: "/category/personal-accessories",
+        permanent: true,
+      },
     ];
   },
 };
