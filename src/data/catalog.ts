@@ -857,7 +857,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Card & Dice Set",
   },
   {
     id: "gft1032",
@@ -872,7 +872,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Card & Dice Set",
   },
   {
     id: "gft1033",
@@ -887,7 +887,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Card & Dice Set",
   },
   {
     id: "gft1034",
@@ -902,7 +902,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Card & Dice Set",
   },
   {
     id: "gft1035",
@@ -917,7 +917,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Card & Dice Set",
   },
   {
     id: "gft1036",
@@ -932,7 +932,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Card & Dice Set",
   },
   {
     id: "gft1037",
@@ -947,7 +947,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Card & Dice Set",
   },
   {
     id: "gft1038",
@@ -962,7 +962,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Card & Dice Set",
   },
   {
     id: "gft1039",
@@ -977,7 +977,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Card & Dice Set",
   },
   {
     id: "gft1040",
@@ -992,7 +992,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Card & Dice Set",
   },
   {
     id: "gft1041",
@@ -1007,7 +1007,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Card & Dice Set",
   },
   {
     id: "gft1042",
@@ -1022,7 +1022,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Card & Dice Set",
   },
   {
     id: "gft1043",
@@ -1037,7 +1037,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Card & Dice Set",
   },
   // Laserable Leatherette Serving Tray, 16x12 (JDS master CSV, not in the
   // scraped feed).
@@ -1466,7 +1466,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Poker Set",
   },
   {
     id: "pkr305",
@@ -1483,7 +1483,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Poker Set",
   },
   {
     id: "pkr309",
@@ -1500,7 +1500,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Poker Set",
   },
   {
     id: "pkr310",
@@ -1517,7 +1517,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Poker Set",
   },
   {
     id: "brs125",
@@ -1534,7 +1534,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Whiskey & Beer Set",
   },
   {
     id: "gft1360",
@@ -1619,7 +1619,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Whiskey & Beer Set",
   },
   {
     id: "fc11",
@@ -2148,7 +2148,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Whiskey & Beer Set",
   },
   {
     id: "ws125",
@@ -2163,7 +2163,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Whiskey & Beer Set",
   },
   {
     id: "wbx31",
@@ -2178,7 +2178,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Wine Box",
   },
   {
     id: "wbx11",
@@ -2193,7 +2193,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Wine Box",
   },
   {
     id: "wbx21",
@@ -2208,7 +2208,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Gifts & Promotions",
     subId: "110",
     subSlug: "bar-gift-sets",
-    subName: "Bar Gift Sets",
+    subName: "Wine Box",
   },
   // Polar Camel 20 oz. Golf Tumblers (JDS master CSV, not in the scraped
   // feed). Own subcategory alongside the restored LTM838 (see SUB_OVERRIDES).
