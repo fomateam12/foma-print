@@ -558,9 +558,7 @@ const REMOVED_SKUS = new Set<string>([
   "LTM7361", "LTM7362", "LTM7363", "LTM7364", "LTM7365", "LTM7366",
   "LTM7367", "LTM7368", "LTM7369", "LTM768", "LTM833", "LTM834",
   "MRT01", "PDL101", "PDL150",
-  "PTF135", "PTF1811", "PTF246", "PTF2810", "PTF457", "PTF4810", "SLT010", "SLT011", "SLT020", "SLT021", "SLT030", "SLT031",
-  "SLT040", "SLT041", "SLT042", "SLT050", "SLT051", "SLT085",
-  "SLT086", "BPN101", "BPN102", "BPN103", "BPN104", "BPN105",
+  "PTF135", "PTF1811", "PTF246", "PTF2810", "PTF457", "PTF4810", "BPN101", "BPN102", "BPN103", "BPN104", "BPN105",
   "BR1001", "BR1002", "BR1003", "BR1004", "BR1251", "BR1252",
   "BR1253", "BR1501", "BR1502", "BR1751", "BR1752", "BR1753",
   "BR2001", "CH103", "CH104", "CH105", "CH109", "CH110",
@@ -589,7 +587,7 @@ const REMOVED_SKUS = new Set<string>([
   "GSC104", "GSC201", "GSC202", "GSC203", "GSC301", "GSC302",
   "GSC303", "GSC304", "LSC101", "LSC102", "LSC103", "LSC104",
   "LSC105", "LSC106", "LSC107", "LSC108",
-  "SLT060", "SLT061", "SLT062", "SLT071", "SLT075", "SLT076",
+  "SLT075", "SLT076",
   "SLT077", "SLT078", "SLT079", "SLT080", "SLT081", "SLT088",
   "FSK101", "FSK102", "FSK103", "FSK104", "FSK111", "FSK303",
   "FSK309", "FSK312", "FSK628", "FSK651SETA", "GFT014", "GFT015",
@@ -2702,6 +2700,8 @@ function isWaterBottle(p: Product): boolean {
   );
 }
 
+const WHITE_BG_HERO = new Set<string>(["SLT010", "SLT011", "SLT020", "SLT021", "SLT030", "SLT031", "SLT040", "SLT041", "SLT042", "SLT050", "SLT051", "SLT060", "SLT061", "SLT062", "SLT071", "SLT085", "SLT086"]);
+
 function enrich(p: Product): Product {
   const upper = p.sku.toUpperCase();
   const images = productImagesByUpper.get(upper);
@@ -2710,6 +2710,14 @@ function enrich(p: Product): Product {
 
   let next = p;
   if (images && images.length > 0) next = { ...next, images };
+
+  // Supplier-feed images for these SKUs are palette PNGs on a green matte
+  // (renders green when transparency is dropped). Their card/hero image is
+  // rebound to the white-background R2 copy; see the SLT restore commit.
+  if (WHITE_BG_HERO.has(upper)) {
+    const path = `/products/${upper}/${upper}.jpg`;
+    next = { ...next, image: path, imageFull: path };
+  }
 
   // Append the shared water-bottle feature diagrams to the gallery of water
   // bottles only (every match already has a curated gallery; the fallback keeps
