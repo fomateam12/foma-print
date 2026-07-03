@@ -159,7 +159,7 @@ export default function ContactPage() {
               <div>
                 <dt className="text-muted-foreground">Production</dt>
                 <dd className="font-medium text-foreground">
-                  {site.madeIn}
+                  {site.location} · {site.madeIn}
                 </dd>
               </div>
             </div>

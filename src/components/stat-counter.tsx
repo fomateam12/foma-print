@@ -26,7 +26,9 @@ export function StatCounter({
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "0px 0px -15% 0px" });
   const reduce = useReducedMotion();
-  const [display, setDisplay] = useState(0);
+  // Start at the final value so SSR/crawlers and no-JS clients see the real
+  // number ("828+"), never "0+". The count-up only runs client-side in view.
+  const [display, setDisplay] = useState(value);
 
   useEffect(() => {
     if (!inView || reduce) return;

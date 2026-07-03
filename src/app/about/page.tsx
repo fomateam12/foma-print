@@ -58,7 +58,7 @@ export default function AboutPage() {
   const STATS = [
     { value: productCount, suffix: "+", label: "products to private-label" },
     { value: 100, suffix: "%", label: "blind drop-shipped" },
-    { value: 2, suffix: "-day", label: "pricing reply" },
+    { value: 5, suffix: "+ years", label: "in personalized gifts" },
   ];
 
   return (
@@ -121,10 +121,18 @@ export default function AboutPage() {
               title={`Why we started ${site.name}`}
             />
             <p className="mt-5 leading-relaxed text-muted-foreground">
-              We kept meeting small online sellers — Etsy shops, boutique brands,
-              corporate-gift resellers — with great products to sell and nowhere
-              dependable to make them. Sourcing, engraving, packing and shipping
-              were eating the hours that should have gone into growing their store.
+              FomaPrint is the fulfillment arm of {site.legalName}, a
+              Georgia-based company founded in 2021. We started on the retail
+              side — selling personalized engraved gifts to shoppers on Amazon
+              under our Foma Family brand — and spent years engraving, packing
+              and shipping one-at-a-time orders with our own machines.
+            </p>
+            <p className="mt-4 leading-relaxed text-muted-foreground">
+              Along the way we kept meeting small online sellers — Etsy shops,
+              boutique brands, corporate-gift resellers — with great products to
+              sell and nowhere dependable to make them. Sourcing, engraving,
+              packing and shipping were eating the hours that should have gone
+              into growing their store.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
               So we became the part nobody sees. Today {site.legalName} runs a

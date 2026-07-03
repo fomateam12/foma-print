@@ -69,6 +69,25 @@ export const viewport: Viewport = {
   colorScheme: "light",
 };
 
+// Site-wide Organization schema: gives crawlers and partnership evaluators a
+// machine-readable identity (legal entity, founding year, location, contact).
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: site.name,
+  legalName: site.legalName,
+  foundingDate: String(site.foundedYear),
+  url: site.url,
+  email: site.email,
+  telephone: "+1-404-934-8917",
+  address: {
+    "@type": "PostalAddress",
+    addressRegion: "GA",
+    addressCountry: "US",
+  },
+  description: site.description,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -80,6 +99,12 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="flex min-h-full flex-col bg-background text-foreground">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(orgJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground focus:shadow-lg"

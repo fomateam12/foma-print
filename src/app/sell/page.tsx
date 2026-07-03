@@ -65,8 +65,8 @@ const BENEFITS = [
   },
   {
     icon: DollarSign,
-    title: "Low minimums to start",
-    body: "Test the catalog with small orders, then unlock deeper pricing as you grow.",
+    title: "No minimums",
+    body: "Test the catalog one order at a time, then unlock deeper pricing as you grow.",
   },
 ];
 

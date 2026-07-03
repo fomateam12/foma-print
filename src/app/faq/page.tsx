@@ -42,7 +42,7 @@ const FAQS = [
   },
   {
     q: "What about file requirements?",
-    a: "Upload print files per our file specs (reference the spec).",
+    a: "High-contrast black artwork on a transparent background (PNG, or vector SVG/PDF), sized to the product's engraving area. We send the full per-product spec sheet with your reseller welcome pack.",
   },
   {
     q: "Where do you ship from?",
@@ -50,13 +50,29 @@ const FAQS = [
   },
   {
     q: "Do you work with Amazon/Etsy/Shopify?",
-    a: "Yes — fulfill your channel orders through us.",
+    a: "Yes — many of our resellers sell on Amazon, Etsy and Shopify and route their orders to us for production and blind shipping. We fulfill the order; the listing, storefront and customer stay yours.",
   },
 ];
 
 export default function FaqPage() {
+  // FAQPage structured data: the accordion renders answers client-side only,
+  // so this is what crawlers and rich results read.
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQS.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-border">
         <div

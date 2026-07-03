@@ -51,8 +51,8 @@ const INCLUDED = [
   },
   {
     icon: Boxes,
-    title: "Low minimums",
-    body: "Start small and scale. Most products carry no large minimum to unlock wholesale pricing.",
+    title: "No minimums",
+    body: "Print on demand means exactly that — order one unit or one thousand. Volume improves your pricing, it never gates access.",
   },
   {
     icon: ShieldCheck,

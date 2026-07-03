@@ -50,11 +50,13 @@ const CARDS = [
   },
   {
     icon: ShieldCheck,
-    title: "Lost or damaged",
+    title: "Production faults: our fault, our fix",
     body: (
       <>
-        Lost or damaged in transit: see our <Link href="/terms">Terms</Link> for
-        the reprint/replacement policy.
+        If we misprint, mis-engrave or produce the wrong item, we remake and
+        reship it to your customer free — report it within 30 days with a
+        photo, no physical return needed. Transit loss or damage is a carrier
+        claim; full policy in our <Link href="/terms">Terms</Link>.
       </>
     ),
   },
