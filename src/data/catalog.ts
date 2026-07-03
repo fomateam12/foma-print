@@ -557,10 +557,7 @@ const REMOVED_SKUS = new Set<string>([
   "LTM7355", "LTM7356", "LTM7357", "LTM7358", "LTM7359", "LTM7360",
   "LTM7361", "LTM7362", "LTM7363", "LTM7364", "LTM7365", "LTM7366",
   "LTM7367", "LTM7368", "LTM7369", "LTM768", "LTM833", "LTM834",
-  "MRT01", "PCG100", "PCG101", "PCG105", "PCG106",
-  "PCG107", "PCG115", "PCG116", "PCG117", "PCG118", "PCG125",
-  "PCG200", "PCG205", "PCG211", "PCG212", "PCG213", "PCG300",
-  "PCG305", "PCG310", "PCG350", "PCG351", "PDL101", "PDL150",
+  "MRT01", "PDL101", "PDL150",
   "PTF135", "PTF1811", "PTF246", "PTF2810", "PTF457", "PTF4810", "SLT010", "SLT011", "SLT020", "SLT021", "SLT030", "SLT031",
   "SLT040", "SLT041", "SLT042", "SLT050", "SLT051", "SLT085",
   "SLT086", "BPN101", "BPN102", "BPN103", "BPN104", "BPN105",
@@ -2256,8 +2253,10 @@ const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
   // now holds only actual cigar accessories.
   // Bar-gift-set items (card & dice sets, whiskey stone sets, wine boxes,
   // poker/beer sets) split out of "Cigar Accessories & Bar Gift Sets" (user
-  // request) into their own tile under Kitchen & Bar (post GIFTS_SPLIT reroute).
-  "kitchen-and-bar": [
+  // request). Promoted to its OWN top-level "Gift Sets" storefront category
+  // (was a Kitchen & Bar subcategory) — keyed here by the POST-MERGE
+  // "gift-sets" slug per GIFTS_SPLIT's giftSets target, not "kitchen-and-bar".
+  "gift-sets": [
     { subId: "110", slug: "bar-gift-sets", name: "Bar Gift Sets", count: 0 },
   ],
   "personal-accessories": [
@@ -2395,8 +2394,9 @@ const GIFTS_CATS = {
   kitchen: { id: "10", slug: "kitchen-and-bar", name: "Kitchen & Bar" },
   travel: { id: "11", slug: "travel-accessories", name: "Travel Accessories" },
   personal: { id: "12", slug: "personal-accessories", name: "Personal Accessories" },
+  giftSets: { id: "13", slug: "gift-sets", name: "Gift Sets" },
 } as const;
-// Route the supplier's single "Gifts & Promotions" into three storefront
+// Route the supplier's single "Gifts & Promotions" into storefront
 // categories by subcategory (user request). Unmapped subs fall to Personal.
 const GIFTS_SPLIT: Record<string, { id: string; slug: string; name: string }> = {
   "cutting-boards-cake-pans-kitchen": GIFTS_CATS.kitchen,
@@ -2404,7 +2404,7 @@ const GIFTS_SPLIT: Record<string, { id: string; slug: string; name: string }> = 
   "flasks-flask-sets-and-accessories": GIFTS_CATS.kitchen,
   "scented-candles": GIFTS_CATS.kitchen,
   "cigar-accessories-and-bar-gift-sets": GIFTS_CATS.kitchen,
-  "bar-gift-sets": GIFTS_CATS.kitchen,
+  "bar-gift-sets": GIFTS_CATS.giftSets,
   "travel-items": GIFTS_CATS.travel,
   "passport-holders": GIFTS_CATS.travel,
   "travel-jewelry-boxes": GIFTS_CATS.travel,
@@ -2466,6 +2466,17 @@ function normalizeCatalog(): { products: RawProduct[]; categories: RawCategory[]
     const cat: RawCategory = { ...c, subcategories: [] };
     categories.push(cat);
     for (const sc of c.subcategories) addSub(cat, sc);
+  }
+
+  // Create any brand-new top-level categories an ADDED_SUBCATEGORIES key
+  // introduces (e.g. "gift-sets") that no native feed subcategory ever
+  // routes to via GIFTS_SPLIT/MERGE_TARGET — without this, the category
+  // object never exists by the time the loop below runs and the whole
+  // tile silently vanishes (same class of bug as the polar-camel merge).
+  for (const t of Object.values(GIFTS_CATS)) {
+    if (ADDED_SUBCATEGORIES[t.slug] && !categories.some((c) => c.slug === t.slug)) {
+      categories.push({ id: t.id, slug: t.slug, name: t.name, subcategories: [] });
+    }
   }
 
   // Append any FomaPrint-introduced subcategories to their category.
@@ -2530,6 +2541,7 @@ const CATEGORY_ICONS: Record<string, IconKey> = {
   drinkware: "coffee",
   "frames-and-decor": "frame",
   "office-tech": "notebook",
+  "gift-sets": "gift",
 };
 
 const CATEGORY_BLURBS: Record<string, string> = {
@@ -2547,6 +2559,8 @@ const CATEGORY_BLURBS: Record<string, string> = {
     "Photo frames, slate signage and ornaments that turn moments into heirlooms.",
   "office-tech":
     "Journals, portfolios and desk accessories engraved for teams and gifting.",
+  "gift-sets":
+    "Card & dice sets, whiskey stone sets, wine boxes and poker/beer sets, ready to personalize and gift.",
 };
 
 const DEFAULT_ICON: IconKey = "gift";
