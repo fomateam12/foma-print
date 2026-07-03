@@ -416,6 +416,43 @@ export function buildSubcategoryFacets(products: Product[]): SubcategoryFacet[] 
   return [...counts.values()].sort((a, b) => b.count - a.count);
 }
 
+function slugifyLabel(s: string): string {
+  return s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+}
+
+/**
+ * "Type" facet for a single merged subcategory whose products still carry
+ * distinct `subcategoryName` values (e.g. one "20 oz. Tumblers" page that
+ * groups Clear Lid / Slider Lid / ION-Plated / Gold ION / Golf variants).
+ * Unlike buildSubcategoryFacets (grouped by subcategorySlug, i.e. routing),
+ * this groups by the finer-grained per-product name so a single URL can
+ * still offer a "Browse by type" chip rail. Inert (empty) on any ordinary
+ * subcategory where every product shares the same subcategoryName.
+ */
+export function buildTypeFacets(
+  products: Product[],
+  { minCount = 2 }: { minCount?: number } = {},
+): SubcategoryFacet[] {
+  const counts = new Map<string, SubcategoryFacet>();
+  for (const p of products) {
+    const name = p.subcategoryName;
+    if (!name) continue;
+    const slug = slugifyLabel(name);
+    const prev = counts.get(slug);
+    if (prev) prev.count += 1;
+    else counts.set(slug, { slug, name, count: 1 });
+  }
+  return [...counts.values()]
+    .filter((f) => f.count >= minCount)
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+}
+
+export function filterByType(products: Product[], allowed: readonly string[]): Product[] {
+  if (allowed.length === 0) return products;
+  const set = new Set(allowed);
+  return products.filter((p) => p.subcategoryName && set.has(slugifyLabel(p.subcategoryName)));
+}
+
 /* ------------------------------------------------------------------ */
 /* Per-page facet selection                                            */
 /*                                                                     */

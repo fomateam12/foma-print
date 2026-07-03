@@ -13,8 +13,10 @@ import {
 } from "@/data/catalog";
 import {
   buildSizeTierFacets,
+  buildTypeFacets,
   buildVolumeFacets,
   filterBySizeTier,
+  filterByType,
   filterByVolume,
 } from "@/lib/product-taxonomy";
 
@@ -57,7 +59,7 @@ export default async function SubcategoryPage({
   searchParams,
 }: {
   params: Promise<{ slug: string; subSlug: string }>;
-  searchParams: Promise<{ size?: string | string[] }>;
+  searchParams: Promise<{ size?: string | string[]; type?: string | string[] }>;
 }) {
   const { slug, subSlug } = await params;
   const sp = await searchParams;
@@ -67,6 +69,8 @@ export default async function SubcategoryPage({
   const all = getProductsBySubcategory(category.slug, subcategory.slug);
 
   const activeSizes = asArray(sp.size);
+  const activeTypes = asArray(sp.type);
+  const typeFacets = buildTypeFacets(all);
 
   // Pick the secondary axis automatically:
   //   - Drinkware-style subcategories with ≥2 volumes → oz chips.
@@ -85,12 +89,27 @@ export default async function SubcategoryPage({
         : "none";
   const sizeFacets = sizeAxis === "volume" ? volumeFacets : sizeTierFacets;
 
-  const filtered =
+  const sizeFiltered =
     sizeAxis === "tier"
       ? filterBySizeTier(all, activeSizes)
       : filterByVolume(all, activeSizes);
+  const filtered = filterByType(sizeFiltered, activeTypes);
 
   const basePath = `/category/${category.slug}/${subcategory.slug}`;
+  // Build a query string carrying over the OTHER axis's current selection
+  // (sizes when constructing a type-chip link, types when constructing a
+  // size-chip link) so the two filters compose instead of clobbering
+  // each other.
+  const carrySizes = () => {
+    const params = new URLSearchParams();
+    for (const s of activeSizes) params.append("size", s);
+    return params;
+  };
+  const carryTypes = () => {
+    const params = new URLSearchParams();
+    for (const t of activeTypes) params.append("type", t);
+    return params;
+  };
 
   return (
     <div className="container-px py-10 lg:py-14">
@@ -145,14 +164,14 @@ export default async function SubcategoryPage({
           <p className="overline">Browse by size</p>
           <ChipScroller aria-label={`${subcategory.name} by size`}>
             <FilterChip
-              href={basePath}
+              href={activeTypes.length ? `${basePath}?${carryTypes().toString()}` : basePath}
               label="All sizes"
-              count={all.length}
+              count={filterByType(all, activeTypes).length}
               selected={activeSizes.length === 0}
             />
             {sizeFacets.map((f) => {
               const isActive = activeSizes.includes(f.canonical);
-              const params = new URLSearchParams();
+              const params = carryTypes();
               params.append("size", f.canonical);
               const labelSuffix =
                 sizeAxis === "volume"
@@ -172,14 +191,49 @@ export default async function SubcategoryPage({
         </nav>
       ) : null}
 
+      {/* Type sub-navigation — only appears when a merged subcategory's
+          products carry ≥2 distinct finer-grained subcategoryName values
+          (e.g. a single "20 oz. Tumblers" page grouping Clear Lid / Slider
+          Lid / ION-Plated / Gold ION / Golf variants under one URL). */}
+      {typeFacets.length >= 2 ? (
+        <nav
+          aria-label={`${subcategory.name} by type`}
+          className="mt-6 space-y-2"
+        >
+          <p className="overline">Browse by type</p>
+          <ChipScroller aria-label={`${subcategory.name} by type`}>
+            <FilterChip
+              href={activeSizes.length ? `${basePath}?${carrySizes().toString()}` : basePath}
+              label="All types"
+              count={sizeFiltered.length}
+              selected={activeTypes.length === 0}
+            />
+            {typeFacets.map((f) => {
+              const isActive = activeTypes.includes(f.slug);
+              const params = carrySizes();
+              params.append("type", f.slug);
+              return (
+                <FilterChip
+                  key={f.slug}
+                  href={`${basePath}?${params.toString()}`}
+                  label={f.name}
+                  count={f.count}
+                  selected={isActive}
+                />
+              );
+            })}
+          </ChipScroller>
+        </nav>
+      ) : null}
+
       {filtered.length > 0 ? (
         <>
-          {activeSizes.length > 0 ? (
+          {activeSizes.length > 0 || activeTypes.length > 0 ? (
             <p className="mt-6 text-sm text-muted-foreground">
               {filtered.length.toLocaleString()}{" "}
               {filtered.length === 1 ? "match" : "matches"} for{" "}
               <span className="font-medium text-foreground">
-                {activeSizes.join(", ")}
+                {[...activeSizes, ...activeTypes].join(", ")}
               </span>
             </p>
           ) : null}
@@ -190,7 +244,7 @@ export default async function SubcategoryPage({
           <p className="text-sm text-muted-foreground">
             No <strong>{subcategory.name}</strong> match{" "}
             <span className="font-medium text-foreground">
-              {activeSizes.join(", ")}
+              {[...activeSizes, ...activeTypes].join(", ")}
             </span>
             .
           </p>
@@ -198,7 +252,7 @@ export default async function SubcategoryPage({
             href={basePath}
             className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-strong transition-colors hover:text-rust-bright"
           >
-            See all sizes
+            See all
             <ArrowRight className="size-4" />
           </Link>
         </div>
