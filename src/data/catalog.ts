@@ -1457,10 +1457,8 @@ const ADDED_PRODUCTS: RawProduct[] = [
     sku: "PKR303",
     size: "8 7/8\" x 7 3/4\" x 2 1/4\"",
     price: 24.75,
-    image:
-      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1714751918/products/images/large/PKR303--a379319a.png",
-    imageFull:
-      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1714751918/products/images/large/PKR303--a379319a.png",
+    image: "/products/PKR303/PKR303.jpg",
+    imageFull: "/products/PKR303/PKR303.jpg",
     categoryId: "1",
     categorySlug: "gifts-and-promotions",
     categoryName: "Gifts & Promotions",
@@ -1474,10 +1472,8 @@ const ADDED_PRODUCTS: RawProduct[] = [
     sku: "PKR305",
     size: "8 7/8\" x 7 3/4\" x 2 1/4\"",
     price: 24.75,
-    image:
-      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1714751925/products/images/large/PKR305--3d03a3f7.png",
-    imageFull:
-      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1714751925/products/images/large/PKR305--3d03a3f7.png",
+    image: "/products/PKR305/PKR305.jpg",
+    imageFull: "/products/PKR305/PKR305.jpg",
     categoryId: "1",
     categorySlug: "gifts-and-promotions",
     categoryName: "Gifts & Promotions",
@@ -1491,10 +1487,8 @@ const ADDED_PRODUCTS: RawProduct[] = [
     sku: "PKR309",
     size: "8 7/8\" x 7 3/4\" x 2 1/4\"",
     price: 24.75,
-    image:
-      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1714751939/products/images/large/PKR309--7d62de73.png",
-    imageFull:
-      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1714751939/products/images/large/PKR309--7d62de73.png",
+    image: "/products/PKR309/PKR309.jpg",
+    imageFull: "/products/PKR309/PKR309.jpg",
     categoryId: "1",
     categorySlug: "gifts-and-promotions",
     categoryName: "Gifts & Promotions",
@@ -1508,10 +1502,8 @@ const ADDED_PRODUCTS: RawProduct[] = [
     sku: "PKR310",
     size: "8 7/8\" x 7 3/4\" x 2 1/4\"",
     price: 24.75,
-    image:
-      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1714752155/products/images/large/PKR310--e4437aad.png",
-    imageFull:
-      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1714752155/products/images/large/PKR310--e4437aad.png",
+    image: "/products/PKR310/PKR310.jpg",
+    imageFull: "/products/PKR310/PKR310.jpg",
     categoryId: "1",
     categorySlug: "gifts-and-promotions",
     categoryName: "Gifts & Promotions",
@@ -1525,10 +1517,8 @@ const ADDED_PRODUCTS: RawProduct[] = [
     sku: "BRS125",
     size: "11 1/2\" x 8 1/4\" x 4\"",
     price: 13.4,
-    image:
-      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1733847561/products/images/large/BRS125--65a885b1.png",
-    imageFull:
-      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1733847561/products/images/large/BRS125--65a885b1.png",
+    image: "/products/BRS125/BRS125.jpg",
+    imageFull: "/products/BRS125/BRS125.jpg",
     categoryId: "1",
     categorySlug: "gifts-and-promotions",
     categoryName: "Gifts & Promotions",
