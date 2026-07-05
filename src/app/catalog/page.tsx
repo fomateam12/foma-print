@@ -10,6 +10,7 @@ import {
 } from "@/data/catalog";
 import { cloudinary, formatWeight } from "@/lib/format";
 import { site } from "@/lib/site";
+import printifyPricesRaw from "@/data/printify-prices.json";
 
 /**
  * Full wholesale catalog on a single page — built for partner/platform
@@ -27,11 +28,27 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+/** Authoritative wholesale prices from the operator's Printify price list
+ *  (FomaPrint-Product-List xlsx): per-SKU blank price plus flat engraving
+ *  fees. SKUs absent from that list are quoted individually — the scraped
+ *  feed's price field is NOT a real price and is never shown here. */
+interface PartnerPrice {
+  blank: number;
+  front: number;
+  back: number;
+  other: number;
+  total: number;
+}
+const partnerPrices = new Map<string, PartnerPrice>(
+  Object.entries(printifyPricesRaw as Record<string, PartnerPrice>),
+);
+
 function thumb(p: Product): string {
   return cloudinary(p.image, { width: 96 });
 }
 
 function ProductRow({ p }: { p: Product }) {
+  const price = partnerPrices.get(p.sku.toUpperCase());
   return (
     <tr className="border-b border-border/60 last:border-0">
       <td className="py-2 pr-3">
@@ -69,8 +86,11 @@ function ProductRow({ p }: { p: Product }) {
       <td className="whitespace-nowrap py-2 pr-3 text-muted-foreground">
         {p.dimensions ?? "—"}
       </td>
+      <td className="whitespace-nowrap py-2 pr-3 text-right text-muted-foreground">
+        {price ? formatPrice(price.blank) : "—"}
+      </td>
       <td className="whitespace-nowrap py-2 text-right font-medium text-foreground">
-        {p.basePrice > 0 ? formatPrice(p.basePrice) : "Quote"}
+        {price ? formatPrice(price.total) : "Quote"}
       </td>
     </tr>
   );
@@ -143,6 +163,22 @@ export default function CatalogPage() {
               </div>
             </dl>
             <p className="mt-6 text-sm text-muted-foreground">
+              <strong className="font-medium text-foreground">Pricing:</strong>{" "}
+              &quot;Blank&quot; is the undecorated unit price;
+              &quot;Engraved&quot; is the all-in price per personalized unit
+              (blank + $4.00 front engraving + $1.00 handling). Back-side
+              engraving adds $2.00. Products marked &quot;Quote&quot; are
+              priced per order.{" "}
+              <a
+                href="/FomaPrint-Price-List.xlsx"
+                className="font-medium text-brand-strong underline underline-offset-2"
+                download
+              >
+                Download the price list (Excel)
+              </a>
+              .
+            </p>
+            <p className="mt-3 text-sm text-muted-foreground">
               Shipping is weight-based using the per-SKU weights below —
               turnaround, packaging and tracking policy is on the{" "}
               <Link
@@ -184,7 +220,7 @@ export default function CatalogPage() {
                     {sc.name}
                   </h3>
                   <div className="mt-3 overflow-x-auto rounded-xl border border-border">
-                    <table className="w-full min-w-[760px] border-collapse text-sm">
+                    <table className="w-full min-w-[840px] border-collapse text-sm">
                       <thead>
                         <tr className="border-b border-border bg-background/60 text-left text-xs uppercase tracking-wide text-muted-foreground">
                           <th className="px-3 py-2 font-medium">Product</th>
@@ -193,7 +229,10 @@ export default function CatalogPage() {
                           <th className="px-3 py-2 font-medium">Ship weight</th>
                           <th className="px-3 py-2 font-medium">Carton dims</th>
                           <th className="px-3 py-2 text-right font-medium">
-                            Wholesale
+                            Blank
+                          </th>
+                          <th className="px-3 py-2 text-right font-medium">
+                            Engraved
                           </th>
                         </tr>
                       </thead>
@@ -214,8 +253,9 @@ export default function CatalogPage() {
       <section>
         <div className="container-px py-10 text-sm text-muted-foreground">
           <p>
-            Prices are wholesale, per unit, personalization included. Weights
-            are pounds; &quot;Ship weight&quot; and &quot;Carton dims&quot; are
+            Prices are wholesale per unit: blank price plus flat engraving
+            fees ($4.00 front, $2.00 back, $1.00 handling). Weights are
+            pounds; &quot;Ship weight&quot; and &quot;Carton dims&quot; are
             per product type from our supplier&apos;s shipping master. Contact{" "}
             <a
               href={`mailto:${site.email}`}

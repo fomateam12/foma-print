@@ -1,0 +1,5917 @@
+{
+ "556": {
+  "back": 2.0,
+  "blank": 31.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 36.0
+ },
+ "ADW10CL": {
+  "back": 2.0,
+  "blank": 13.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.95
+ },
+ "BRS125": {
+  "back": 2.0,
+  "blank": 10.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.1
+ },
+ "CGS101": {
+  "back": 2.0,
+  "blank": 3.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.65
+ },
+ "CST01": {
+  "back": 2.0,
+  "blank": 7.2,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.2
+ },
+ "DC301S": {
+  "back": 2.0,
+  "blank": 17.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 22.05
+ },
+ "DS10": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "DS12": {
+  "back": 2.0,
+  "blank": 13.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.15
+ },
+ "DS20": {
+  "back": 2.0,
+  "blank": 13.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.15
+ },
+ "DS8": {
+  "back": 2.0,
+  "blank": 9.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.5
+ },
+ "FC11": {
+  "back": 2.0,
+  "blank": 13.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.95
+ },
+ "FOMA-BBQ-11PC": {
+  "back": 2.0,
+  "blank": 39.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 44.95
+ },
+ "FOMA-CHAR-DRAWER": {
+  "back": 2.0,
+  "blank": 34.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 39.95
+ },
+ "FOMA-CHAR-MARB": {
+  "back": 2.0,
+  "blank": 39.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 44.95
+ },
+ "FOMA-CUTBOARD-BMB": {
+  "back": 2.0,
+  "blank": 23.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 28.95
+ },
+ "FOMA-DOPP-1L": {
+  "back": 2.0,
+  "blank": 18.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 23.95
+ },
+ "FOMA-DOPP-PU": {
+  "back": 2.0,
+  "blank": 5.88,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.88
+ },
+ "FOMA-KNIFE-MULTI": {
+  "back": 2.0,
+  "blank": 32.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 37.95
+ },
+ "FOMA-LTR-GROOM": {
+  "back": 2.0,
+  "blank": 7.99,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.99
+ },
+ "FOMA-LTR-MONO": {
+  "back": 2.0,
+  "blank": 19.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 24.0
+ },
+ "FOMA-RINGBOX-WAL": {
+  "back": 2.0,
+  "blank": 14.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.95
+ },
+ "FOMA-SERV-MARB": {
+  "back": 2.0,
+  "blank": 19.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 24.95
+ },
+ "FPG21113": {
+  "back": 2.0,
+  "blank": 46.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 51.9
+ },
+ "FPG2810": {
+  "back": 2.0,
+  "blank": 30.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 35.7
+ },
+ "FPG2912": {
+  "back": 2.0,
+  "blank": 38.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 43.15
+ },
+ "FSK304": {
+  "back": 2.0,
+  "blank": 12.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.9
+ },
+ "FSK310": {
+  "back": 2.0,
+  "blank": 12.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.9
+ },
+ "FSK502": {
+  "back": 2.0,
+  "blank": 3.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.45
+ },
+ "FSK510": {
+  "back": 2.0,
+  "blank": 3.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.45
+ },
+ "FSK602": {
+  "back": 2.0,
+  "blank": 3.25,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.25
+ },
+ "FSK615": {
+  "back": 2.0,
+  "blank": 5.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.45
+ },
+ "FSK616": {
+  "back": 2.0,
+  "blank": 5.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.45
+ },
+ "FSK617A": {
+  "back": 2.0,
+  "blank": 5.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.45
+ },
+ "FSK618": {
+  "back": 2.0,
+  "blank": 5.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.45
+ },
+ "FSK619": {
+  "back": 2.0,
+  "blank": 5.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.45
+ },
+ "FSK623": {
+  "back": 2.0,
+  "blank": 5.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.45
+ },
+ "FSK624": {
+  "back": 2.0,
+  "blank": 5.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.45
+ },
+ "FSK627": {
+  "back": 2.0,
+  "blank": 5.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.45
+ },
+ "FSK652SETA": {
+  "back": 2.0,
+  "blank": 6.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.95
+ },
+ "FSK672SET": {
+  "back": 2.0,
+  "blank": 4.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.95
+ },
+ "FSK705A": {
+  "back": 2.0,
+  "blank": 5.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.75
+ },
+ "GDW8J": {
+  "back": 2.0,
+  "blank": 6.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.5
+ },
+ "GFT034": {
+  "back": 2.0,
+  "blank": 4.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.3
+ },
+ "GFT045": {
+  "back": 2.0,
+  "blank": 3.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.85
+ },
+ "GFT1001": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "GFT1002": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "GFT1003": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "GFT1004": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "GFT1005": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "GFT1006": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "GFT1007": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "GFT1008": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "GFT1009": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "GFT1010": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "GFT1011": {
+  "back": 2.0,
+  "blank": 16.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 21.45
+ },
+ "GFT1012": {
+  "back": 2.0,
+  "blank": 16.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 21.45
+ },
+ "GFT1031": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT1032": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT1033": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT1034": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT1035": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT1036": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT1037": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT1038": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT1039": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT1040": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT1041": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT1042": {
+  "back": 2.0,
+  "blank": 7.2,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.2
+ },
+ "GFT1043": {
+  "back": 2.0,
+  "blank": 7.2,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.2
+ },
+ "GFT1136C": {
+  "back": 2.0,
+  "blank": 7.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.0
+ },
+ "GFT1137C": {
+  "back": 2.0,
+  "blank": 7.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.0
+ },
+ "GFT1138C": {
+  "back": 2.0,
+  "blank": 7.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.0
+ },
+ "GFT1139C": {
+  "back": 2.0,
+  "blank": 7.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.0
+ },
+ "GFT1145C": {
+  "back": 2.0,
+  "blank": 7.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.0
+ },
+ "GFT1148C": {
+  "back": 2.0,
+  "blank": 7.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.0
+ },
+ "GFT1170": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "GFT1171": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "GFT1172": {
+  "back": 2.0,
+  "blank": 17.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 22.35
+ },
+ "GFT1195": {
+  "back": 2.0,
+  "blank": 6.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.55
+ },
+ "GFT1196": {
+  "back": 2.0,
+  "blank": 6.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.55
+ },
+ "GFT1197": {
+  "back": 2.0,
+  "blank": 6.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.55
+ },
+ "GFT1198": {
+  "back": 2.0,
+  "blank": 6.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.55
+ },
+ "GFT1199": {
+  "back": 2.0,
+  "blank": 6.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.55
+ },
+ "GFT1205": {
+  "back": 2.0,
+  "blank": 7.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.45
+ },
+ "GFT1206": {
+  "back": 2.0,
+  "blank": 7.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.45
+ },
+ "GFT1207": {
+  "back": 2.0,
+  "blank": 7.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.45
+ },
+ "GFT1208": {
+  "back": 2.0,
+  "blank": 7.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.45
+ },
+ "GFT1209": {
+  "back": 2.0,
+  "blank": 7.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.45
+ },
+ "GFT1210": {
+  "back": 2.0,
+  "blank": 7.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.45
+ },
+ "GFT1211": {
+  "back": 2.0,
+  "blank": 7.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.45
+ },
+ "GFT1215": {
+  "back": 2.0,
+  "blank": 9.8,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.8
+ },
+ "GFT1216": {
+  "back": 2.0,
+  "blank": 9.8,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.8
+ },
+ "GFT1217": {
+  "back": 2.0,
+  "blank": 9.8,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.8
+ },
+ "GFT1218": {
+  "back": 2.0,
+  "blank": 9.8,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.8
+ },
+ "GFT1219": {
+  "back": 2.0,
+  "blank": 9.8,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.8
+ },
+ "GFT1220": {
+  "back": 2.0,
+  "blank": 9.8,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.8
+ },
+ "GFT1221": {
+  "back": 2.0,
+  "blank": 9.8,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.8
+ },
+ "GFT1222": {
+  "back": 2.0,
+  "blank": 9.8,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.8
+ },
+ "GFT1235": {
+  "back": 2.0,
+  "blank": 1.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.65
+ },
+ "GFT1236": {
+  "back": 2.0,
+  "blank": 1.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.65
+ },
+ "GFT1237": {
+  "back": 2.0,
+  "blank": 1.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.65
+ },
+ "GFT1238": {
+  "back": 2.0,
+  "blank": 1.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.65
+ },
+ "GFT1239": {
+  "back": 2.0,
+  "blank": 1.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.65
+ },
+ "GFT1240": {
+  "back": 2.0,
+  "blank": 1.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.65
+ },
+ "GFT1241": {
+  "back": 2.0,
+  "blank": 1.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.65
+ },
+ "GFT1242": {
+  "back": 2.0,
+  "blank": 1.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.65
+ },
+ "GFT1243": {
+  "back": 2.0,
+  "blank": 1.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.65
+ },
+ "GFT1251": {
+  "back": 2.0,
+  "blank": 10.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.6
+ },
+ "GFT1252": {
+  "back": 2.0,
+  "blank": 10.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.6
+ },
+ "GFT1253": {
+  "back": 2.0,
+  "blank": 10.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.6
+ },
+ "GFT1254": {
+  "back": 2.0,
+  "blank": 10.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.6
+ },
+ "GFT1255": {
+  "back": 2.0,
+  "blank": 11.8,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 16.8
+ },
+ "GFT1256": {
+  "back": 2.0,
+  "blank": 10.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.6
+ },
+ "GFT1257": {
+  "back": 2.0,
+  "blank": 10.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.6
+ },
+ "GFT1258": {
+  "back": 2.0,
+  "blank": 11.8,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 16.8
+ },
+ "GFT1265": {
+  "back": 2.0,
+  "blank": 2.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 7.55
+ },
+ "GFT1268": {
+  "back": 2.0,
+  "blank": 2.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 7.55
+ },
+ "GFT1285": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "GFT1286": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "GFT1287": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "GFT1288": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "GFT1289": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "GFT1290": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "GFT1291": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "GFT1360": {
+  "back": 2.0,
+  "blank": 14.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.0
+ },
+ "GFT160": {
+  "back": 2.0,
+  "blank": 8.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.6
+ },
+ "GFT172": {
+  "back": 2.0,
+  "blank": 4.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.1
+ },
+ "GFT185": {
+  "back": 2.0,
+  "blank": 13.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.85
+ },
+ "GFT186": {
+  "back": 2.0,
+  "blank": 13.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.85
+ },
+ "GFT189": {
+  "back": 2.0,
+  "blank": 5.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.7
+ },
+ "GFT190": {
+  "back": 2.0,
+  "blank": 7.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.45
+ },
+ "GFT191": {
+  "back": 2.0,
+  "blank": 1.47,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.47
+ },
+ "GFT192": {
+  "back": 2.0,
+  "blank": 1.47,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.47
+ },
+ "GFT2035": {
+  "back": 2.0,
+  "blank": 4.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.5
+ },
+ "GFT2036": {
+  "back": 2.0,
+  "blank": 4.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.5
+ },
+ "GFT2037": {
+  "back": 2.0,
+  "blank": 4.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.5
+ },
+ "GFT2038": {
+  "back": 2.0,
+  "blank": 4.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.5
+ },
+ "GFT2039": {
+  "back": 2.0,
+  "blank": 4.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.5
+ },
+ "GFT2040": {
+  "back": 2.0,
+  "blank": 4.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.5
+ },
+ "GFT2041": {
+  "back": 2.0,
+  "blank": 4.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.5
+ },
+ "GFT2042": {
+  "back": 2.0,
+  "blank": 4.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.5
+ },
+ "GFT2043": {
+  "back": 2.0,
+  "blank": 4.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.5
+ },
+ "GFT2044": {
+  "back": 2.0,
+  "blank": 4.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.5
+ },
+ "GFT2046": {
+  "back": 2.0,
+  "blank": 4.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.5
+ },
+ "GFT2047": {
+  "back": 2.0,
+  "blank": 4.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.5
+ },
+ "GFT2115": {
+  "back": 2.0,
+  "blank": 5.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.9
+ },
+ "GFT2116": {
+  "back": 2.0,
+  "blank": 5.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.9
+ },
+ "GFT2117": {
+  "back": 2.0,
+  "blank": 5.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.9
+ },
+ "GFT2118": {
+  "back": 2.0,
+  "blank": 5.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.9
+ },
+ "GFT2119": {
+  "back": 2.0,
+  "blank": 5.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.9
+ },
+ "GFT2120": {
+  "back": 2.0,
+  "blank": 5.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.9
+ },
+ "GFT2121": {
+  "back": 2.0,
+  "blank": 5.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.9
+ },
+ "GFT2122": {
+  "back": 2.0,
+  "blank": 5.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.9
+ },
+ "GFT2123": {
+  "back": 2.0,
+  "blank": 5.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.9
+ },
+ "GFT2124": {
+  "back": 2.0,
+  "blank": 5.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.9
+ },
+ "GFT2126": {
+  "back": 2.0,
+  "blank": 5.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.9
+ },
+ "GFT2127": {
+  "back": 2.0,
+  "blank": 5.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.9
+ },
+ "GFT2135": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2136": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2137": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2138": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2139": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2140": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2141": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2142": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2143": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2144": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2145": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2146": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2147": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2148": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT215": {
+  "back": 2.0,
+  "blank": 4.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.7
+ },
+ "GFT220": {
+  "back": 2.0,
+  "blank": 8.25,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.25
+ },
+ "GFT2235": {
+  "back": 2.0,
+  "blank": 9.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.3
+ },
+ "GFT2236": {
+  "back": 2.0,
+  "blank": 9.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.3
+ },
+ "GFT2237": {
+  "back": 2.0,
+  "blank": 9.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.3
+ },
+ "GFT2238": {
+  "back": 2.0,
+  "blank": 9.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.3
+ },
+ "GFT2239": {
+  "back": 2.0,
+  "blank": 9.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.3
+ },
+ "GFT2241": {
+  "back": 2.0,
+  "blank": 9.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.3
+ },
+ "GFT2242": {
+  "back": 2.0,
+  "blank": 9.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.3
+ },
+ "GFT2243": {
+  "back": 2.0,
+  "blank": 9.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.3
+ },
+ "GFT2245": {
+  "back": 2.0,
+  "blank": 9.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.3
+ },
+ "GFT2246": {
+  "back": 2.0,
+  "blank": 9.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.3
+ },
+ "GFT2249": {
+  "back": 2.0,
+  "blank": 9.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.3
+ },
+ "GFT2251": {
+  "back": 2.0,
+  "blank": 9.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.3
+ },
+ "GFT2300": {
+  "back": 2.0,
+  "blank": 6.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.0
+ },
+ "GFT2301": {
+  "back": 2.0,
+  "blank": 6.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.0
+ },
+ "GFT2302": {
+  "back": 2.0,
+  "blank": 6.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.0
+ },
+ "GFT2303": {
+  "back": 2.0,
+  "blank": 6.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.0
+ },
+ "GFT2304": {
+  "back": 2.0,
+  "blank": 6.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.0
+ },
+ "GFT2305": {
+  "back": 2.0,
+  "blank": 6.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.0
+ },
+ "GFT2306": {
+  "back": 2.0,
+  "blank": 6.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.0
+ },
+ "GFT2308": {
+  "back": 2.0,
+  "blank": 6.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.0
+ },
+ "GFT2341": {
+  "back": 2.0,
+  "blank": 6.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.0
+ },
+ "GFT2342": {
+  "back": 2.0,
+  "blank": 6.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.0
+ },
+ "GFT2343": {
+  "back": 2.0,
+  "blank": 6.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.0
+ },
+ "GFT2344": {
+  "back": 2.0,
+  "blank": 6.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.0
+ },
+ "GFT2400": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2401": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2402": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2403": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2404": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2405": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2406": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2407": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2408": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2409": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2410": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT2450": {
+  "back": 2.0,
+  "blank": 10.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.95
+ },
+ "GFT2451": {
+  "back": 2.0,
+  "blank": 10.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.95
+ },
+ "GFT2452": {
+  "back": 2.0,
+  "blank": 10.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.95
+ },
+ "GFT246A": {
+  "back": 2.0,
+  "blank": 13.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.85
+ },
+ "GFT248A": {
+  "back": 2.0,
+  "blank": 7.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.45
+ },
+ "GFT249A": {
+  "back": 2.0,
+  "blank": 1.47,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.47
+ },
+ "GFT255A": {
+  "back": 2.0,
+  "blank": 4.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.7
+ },
+ "GFT260A": {
+  "back": 2.0,
+  "blank": 7.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.0
+ },
+ "GFT267": {
+  "back": 2.0,
+  "blank": 13.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.85
+ },
+ "GFT269": {
+  "back": 2.0,
+  "blank": 7.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.45
+ },
+ "GFT270": {
+  "back": 2.0,
+  "blank": 1.47,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.47
+ },
+ "GFT271": {
+  "back": 2.0,
+  "blank": 0.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 5.9
+ },
+ "GFT272": {
+  "back": 2.0,
+  "blank": 0.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 5.9
+ },
+ "GFT276": {
+  "back": 2.0,
+  "blank": 4.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.7
+ },
+ "GFT281": {
+  "back": 2.0,
+  "blank": 7.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.0
+ },
+ "GFT282": {
+  "back": 2.0,
+  "blank": 7.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.0
+ },
+ "GFT283": {
+  "back": 2.0,
+  "blank": 7.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.0
+ },
+ "GFT284": {
+  "back": 2.0,
+  "blank": 7.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.0
+ },
+ "GFT286": {
+  "back": 2.0,
+  "blank": 13.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.6
+ },
+ "GFT287A": {
+  "back": 2.0,
+  "blank": 13.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.6
+ },
+ "GFT288": {
+  "back": 2.0,
+  "blank": 13.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.6
+ },
+ "GFT292": {
+  "back": 2.0,
+  "blank": 13.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.6
+ },
+ "GFT293": {
+  "back": 2.0,
+  "blank": 13.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.6
+ },
+ "GFT296": {
+  "back": 2.0,
+  "blank": 16.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 21.0
+ },
+ "GFT297A": {
+  "back": 2.0,
+  "blank": 16.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 21.0
+ },
+ "GFT298": {
+  "back": 2.0,
+  "blank": 16.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 21.0
+ },
+ "GFT302": {
+  "back": 2.0,
+  "blank": 16.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 21.0
+ },
+ "GFT303": {
+  "back": 2.0,
+  "blank": 16.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 21.0
+ },
+ "GFT321": {
+  "back": 2.0,
+  "blank": 3.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.1
+ },
+ "GFT322": {
+  "back": 2.0,
+  "blank": 3.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.1
+ },
+ "GFT323A": {
+  "back": 2.0,
+  "blank": 3.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.1
+ },
+ "GFT324": {
+  "back": 2.0,
+  "blank": 3.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.1
+ },
+ "GFT325": {
+  "back": 2.0,
+  "blank": 3.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.1
+ },
+ "GFT329": {
+  "back": 2.0,
+  "blank": 3.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.1
+ },
+ "GFT346": {
+  "back": 2.0,
+  "blank": 13.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.85
+ },
+ "GFT349": {
+  "back": 2.0,
+  "blank": 13.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.85
+ },
+ "GFT350": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT351": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT352A": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT353": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT354": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT358": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT373": {
+  "back": 2.0,
+  "blank": 7.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.45
+ },
+ "GFT374": {
+  "back": 2.0,
+  "blank": 1.47,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.47
+ },
+ "GFT377": {
+  "back": 2.0,
+  "blank": 1.47,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.47
+ },
+ "GFT392": {
+  "back": 2.0,
+  "blank": 4.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.7
+ },
+ "GFT395": {
+  "back": 2.0,
+  "blank": 4.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.7
+ },
+ "GFT405": {
+  "back": 2.0,
+  "blank": 7.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.0
+ },
+ "GFT409": {
+  "back": 2.0,
+  "blank": 7.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.0
+ },
+ "GFT413": {
+  "back": 2.0,
+  "blank": 13.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.6
+ },
+ "GFT414": {
+  "back": 2.0,
+  "blank": 16.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 21.0
+ },
+ "GFT439": {
+  "back": 2.0,
+  "blank": 5.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.15
+ },
+ "GFT441": {
+  "back": 2.0,
+  "blank": 4.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.3
+ },
+ "GFT442": {
+  "back": 2.0,
+  "blank": 4.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.45
+ },
+ "GFT443": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "GFT485": {
+  "back": 2.0,
+  "blank": 58.25,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 63.25
+ },
+ "GFT533": {
+  "back": 2.0,
+  "blank": 2.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 7.0
+ },
+ "GFT607": {
+  "back": 2.0,
+  "blank": 7.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.45
+ },
+ "GFT612": {
+  "back": 2.0,
+  "blank": 13.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.85
+ },
+ "GFT614": {
+  "back": 2.0,
+  "blank": 4.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.7
+ },
+ "GFT615": {
+  "back": 2.0,
+  "blank": 1.47,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.47
+ },
+ "GFT628": {
+  "back": 2.0,
+  "blank": 4.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.55
+ },
+ "GFT631": {
+  "back": 2.0,
+  "blank": 4.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.55
+ },
+ "GFT632": {
+  "back": 2.0,
+  "blank": 4.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.55
+ },
+ "GFT633": {
+  "back": 2.0,
+  "blank": 4.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.55
+ },
+ "GFT634": {
+  "back": 2.0,
+  "blank": 4.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.55
+ },
+ "GFT638": {
+  "back": 2.0,
+  "blank": 4.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.55
+ },
+ "GFT639": {
+  "back": 2.0,
+  "blank": 4.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.55
+ },
+ "GFT641": {
+  "back": 2.0,
+  "blank": 4.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.75
+ },
+ "GFT642": {
+  "back": 2.0,
+  "blank": 4.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.75
+ },
+ "GFT643": {
+  "back": 2.0,
+  "blank": 4.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.75
+ },
+ "GFT644": {
+  "back": 2.0,
+  "blank": 4.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.75
+ },
+ "GFT645": {
+  "back": 2.0,
+  "blank": 4.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.75
+ },
+ "GFT648": {
+  "back": 2.0,
+  "blank": 4.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.75
+ },
+ "GFT649": {
+  "back": 2.0,
+  "blank": 4.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.75
+ },
+ "GFT650": {
+  "back": 2.0,
+  "blank": 4.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.75
+ },
+ "GFT651": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT652": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT653": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT654": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT655": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT658": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT659": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT660": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT706": {
+  "back": 2.0,
+  "blank": 13.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.85
+ },
+ "GFT708": {
+  "back": 2.0,
+  "blank": 7.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.45
+ },
+ "GFT709": {
+  "back": 2.0,
+  "blank": 1.47,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.47
+ },
+ "GFT715": {
+  "back": 2.0,
+  "blank": 4.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.7
+ },
+ "GFT720": {
+  "back": 2.0,
+  "blank": 7.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.0
+ },
+ "GFT721": {
+  "back": 2.0,
+  "blank": 7.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.0
+ },
+ "GFT726": {
+  "back": 2.0,
+  "blank": 3.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.1
+ },
+ "GFT729": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT766": {
+  "back": 2.0,
+  "blank": 2.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 7.3
+ },
+ "GFT767": {
+  "back": 2.0,
+  "blank": 2.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 7.3
+ },
+ "GFT768": {
+  "back": 2.0,
+  "blank": 2.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 7.3
+ },
+ "GFT769": {
+  "back": 2.0,
+  "blank": 2.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 7.3
+ },
+ "GFT773": {
+  "back": 2.0,
+  "blank": 2.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 7.3
+ },
+ "GFT774": {
+  "back": 2.0,
+  "blank": 2.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 7.3
+ },
+ "GFT803": {
+  "back": 2.0,
+  "blank": 1.47,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.47
+ },
+ "GFT805": {
+  "back": 2.0,
+  "blank": 4.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.7
+ },
+ "GFT807": {
+  "back": 2.0,
+  "blank": 13.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.85
+ },
+ "GFT808": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT809": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT810": {
+  "back": 2.0,
+  "blank": 4.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.75
+ },
+ "GFT833": {
+  "back": 2.0,
+  "blank": 1.47,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.47
+ },
+ "GFT835": {
+  "back": 2.0,
+  "blank": 0.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 5.9
+ },
+ "GFT836": {
+  "back": 2.0,
+  "blank": 0.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 5.9
+ },
+ "GFT837": {
+  "back": 2.0,
+  "blank": 2.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 7.3
+ },
+ "GFT838": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT839": {
+  "back": 2.0,
+  "blank": 4.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.7
+ },
+ "GFT841": {
+  "back": 2.0,
+  "blank": 13.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.85
+ },
+ "GFT842": {
+  "back": 2.0,
+  "blank": 14.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.4
+ },
+ "GFT843": {
+  "back": 2.0,
+  "blank": 4.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.75
+ },
+ "GFT903": {
+  "back": 2.0,
+  "blank": 4.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.75
+ },
+ "GFT905": {
+  "back": 2.0,
+  "blank": 13.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.85
+ },
+ "GFT908": {
+  "back": 2.0,
+  "blank": 4.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.7
+ },
+ "GFT909": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT916": {
+  "back": 2.0,
+  "blank": 1.47,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.47
+ },
+ "GFT919": {
+  "back": 2.0,
+  "blank": 3.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.1
+ },
+ "GFT920": {
+  "back": 2.0,
+  "blank": 3.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.1
+ },
+ "GFT931": {
+  "back": 2.0,
+  "blank": 6.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.85
+ },
+ "GFT936": {
+  "back": 2.0,
+  "blank": 4.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.75
+ },
+ "GFT941": {
+  "back": 2.0,
+  "blank": 1.47,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.47
+ },
+ "GFT951": {
+  "back": 2.0,
+  "blank": 13.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.85
+ },
+ "LBH21": {
+  "back": 2.0,
+  "blank": 5.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.45
+ },
+ "LBH22": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH23": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH24": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH25": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH26": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH27": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH28": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH29": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH30": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH31": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH32": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH33": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH34": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH35": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH36": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH37": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH38": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH52": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH53": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH54": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH55": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH56": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH57": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH58": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH59": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH60": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH61": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH62": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH63": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH64": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH65": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH66": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH67": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LBH68": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "LCM102": {
+  "back": 2.0,
+  "blank": 9.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.15
+ },
+ "LCM103": {
+  "back": 2.0,
+  "blank": 9.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.15
+ },
+ "LCM104": {
+  "back": 2.0,
+  "blank": 9.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.15
+ },
+ "LCM105": {
+  "back": 2.0,
+  "blank": 9.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.15
+ },
+ "LCM106": {
+  "back": 2.0,
+  "blank": 9.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.15
+ },
+ "LCM107": {
+  "back": 2.0,
+  "blank": 9.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.15
+ },
+ "LCM108": {
+  "back": 2.0,
+  "blank": 9.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.15
+ },
+ "LCM109": {
+  "back": 2.0,
+  "blank": 9.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.15
+ },
+ "LCM110": {
+  "back": 2.0,
+  "blank": 9.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.15
+ },
+ "LCM111": {
+  "back": 2.0,
+  "blank": 9.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.15
+ },
+ "LCM112": {
+  "back": 2.0,
+  "blank": 9.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.15
+ },
+ "LCM113": {
+  "back": 2.0,
+  "blank": 9.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.15
+ },
+ "LCM114": {
+  "back": 2.0,
+  "blank": 9.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.15
+ },
+ "LCM115": {
+  "back": 2.0,
+  "blank": 9.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.15
+ },
+ "LCM116": {
+  "back": 2.0,
+  "blank": 9.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.15
+ },
+ "LCM117": {
+  "back": 2.0,
+  "blank": 9.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.15
+ },
+ "LCM202": {
+  "back": 2.0,
+  "blank": 10.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.3
+ },
+ "LCM203": {
+  "back": 2.0,
+  "blank": 10.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.3
+ },
+ "LCM204": {
+  "back": 2.0,
+  "blank": 10.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.3
+ },
+ "LCM205": {
+  "back": 2.0,
+  "blank": 10.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.3
+ },
+ "LCM206": {
+  "back": 2.0,
+  "blank": 10.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.3
+ },
+ "LCM207": {
+  "back": 2.0,
+  "blank": 10.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.3
+ },
+ "LCM208": {
+  "back": 2.0,
+  "blank": 10.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.3
+ },
+ "LCM209": {
+  "back": 2.0,
+  "blank": 10.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.3
+ },
+ "LCM210": {
+  "back": 2.0,
+  "blank": 10.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.3
+ },
+ "LCM211": {
+  "back": 2.0,
+  "blank": 10.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.3
+ },
+ "LCM212": {
+  "back": 2.0,
+  "blank": 10.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.3
+ },
+ "LCM213": {
+  "back": 2.0,
+  "blank": 10.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.3
+ },
+ "LCM214": {
+  "back": 2.0,
+  "blank": 10.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.3
+ },
+ "LCM215": {
+  "back": 2.0,
+  "blank": 10.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.3
+ },
+ "LCM216": {
+  "back": 2.0,
+  "blank": 10.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.3
+ },
+ "LCM217": {
+  "back": 2.0,
+  "blank": 10.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.3
+ },
+ "LG5011": {
+  "back": 2.0,
+  "blank": 2.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 7.45
+ },
+ "LG5272": {
+  "back": 2.0,
+  "blank": 3.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.35
+ },
+ "LLB101": {
+  "back": 2.0,
+  "blank": 19.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 24.95
+ },
+ "LLB102": {
+  "back": 2.0,
+  "blank": 19.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 24.95
+ },
+ "LLB103": {
+  "back": 2.0,
+  "blank": 19.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 24.95
+ },
+ "LLB104": {
+  "back": 2.0,
+  "blank": 19.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 24.95
+ },
+ "LLB105": {
+  "back": 2.0,
+  "blank": 19.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 24.95
+ },
+ "LLB125": {
+  "back": 2.0,
+  "blank": 30.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 35.65
+ },
+ "LLB126": {
+  "back": 2.0,
+  "blank": 30.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 35.65
+ },
+ "LLB127": {
+  "back": 2.0,
+  "blank": 30.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 35.65
+ },
+ "LLB128": {
+  "back": 2.0,
+  "blank": 30.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 35.65
+ },
+ "LLB129": {
+  "back": 2.0,
+  "blank": 30.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 35.65
+ },
+ "LLB149": {
+  "back": 2.0,
+  "blank": 21.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 26.65
+ },
+ "LLB150": {
+  "back": 2.0,
+  "blank": 21.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 26.65
+ },
+ "LLB151": {
+  "back": 2.0,
+  "blank": 21.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 26.65
+ },
+ "LLB152": {
+  "back": 2.0,
+  "blank": 21.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 26.65
+ },
+ "LLB153": {
+  "back": 2.0,
+  "blank": 21.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 26.65
+ },
+ "LLF1057": {
+  "back": 2.0,
+  "blank": 5.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.85
+ },
+ "LLF1246": {
+  "back": 2.0,
+  "blank": 5.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.0
+ },
+ "LLF1257": {
+  "back": 2.0,
+  "blank": 5.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.85
+ },
+ "LLF12810": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LLF146": {
+  "back": 2.0,
+  "blank": 5.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.0
+ },
+ "LLF157": {
+  "back": 2.0,
+  "blank": 5.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.85
+ },
+ "LLF1646": {
+  "back": 2.0,
+  "blank": 5.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.0
+ },
+ "LLF1657": {
+  "back": 2.0,
+  "blank": 5.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.85
+ },
+ "LLF16810": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LLF1810": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LLF1846": {
+  "back": 2.0,
+  "blank": 5.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.35
+ },
+ "LLF18810": {
+  "back": 2.0,
+  "blank": 8.25,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.25
+ },
+ "LLF1946": {
+  "back": 2.0,
+  "blank": 5.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.35
+ },
+ "LLF1957": {
+  "back": 2.0,
+  "blank": 6.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.15
+ },
+ "LLF19810": {
+  "back": 2.0,
+  "blank": 8.25,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.25
+ },
+ "LLF246": {
+  "back": 2.0,
+  "blank": 5.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.0
+ },
+ "LLF257": {
+  "back": 2.0,
+  "blank": 5.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.85
+ },
+ "LLF2810": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LLF346A": {
+  "back": 2.0,
+  "blank": 5.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.0
+ },
+ "LLF357A": {
+  "back": 2.0,
+  "blank": 5.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.85
+ },
+ "LLF3810A": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LLF446": {
+  "back": 2.0,
+  "blank": 5.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.0
+ },
+ "LLF457": {
+  "back": 2.0,
+  "blank": 5.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.85
+ },
+ "LLF4810": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LLF546": {
+  "back": 2.0,
+  "blank": 5.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.0
+ },
+ "LLF557": {
+  "back": 2.0,
+  "blank": 5.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.85
+ },
+ "LLF5810": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LLF946": {
+  "back": 2.0,
+  "blank": 5.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.0
+ },
+ "LLF957": {
+  "back": 2.0,
+  "blank": 5.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.85
+ },
+ "LLF9810": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LMG21": {
+  "back": 2.0,
+  "blank": 3.8,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.8
+ },
+ "LMG22": {
+  "back": 2.0,
+  "blank": 3.8,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.8
+ },
+ "LMG23": {
+  "back": 2.0,
+  "blank": 3.8,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.8
+ },
+ "LMG24": {
+  "back": 2.0,
+  "blank": 3.8,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.8
+ },
+ "LMG25": {
+  "back": 2.0,
+  "blank": 3.8,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.8
+ },
+ "LMG31": {
+  "back": 2.0,
+  "blank": 4.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.6
+ },
+ "LMG32": {
+  "back": 2.0,
+  "blank": 4.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.6
+ },
+ "LMG61": {
+  "back": 2.0,
+  "blank": 5.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.55
+ },
+ "LMG62": {
+  "back": 2.0,
+  "blank": 5.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.55
+ },
+ "LMG63": {
+  "back": 2.0,
+  "blank": 5.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.55
+ },
+ "LMG67": {
+  "back": 2.0,
+  "blank": 6.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.4
+ },
+ "LMG68": {
+  "back": 2.0,
+  "blank": 6.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.4
+ },
+ "LTM033": {
+  "back": 2.0,
+  "blank": 8.2,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.2
+ },
+ "LTM071": {
+  "back": 2.0,
+  "blank": 3.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.75
+ },
+ "LTM072": {
+  "back": 2.0,
+  "blank": 3.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.75
+ },
+ "LTM073": {
+  "back": 2.0,
+  "blank": 3.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.75
+ },
+ "LTM076": {
+  "back": 2.0,
+  "blank": 4.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.1
+ },
+ "LTM5201": {
+  "back": 2.0,
+  "blank": 9.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.7
+ },
+ "LTM5202": {
+  "back": 2.0,
+  "blank": 9.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.7
+ },
+ "LTM5203": {
+  "back": 2.0,
+  "blank": 9.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.7
+ },
+ "LTM5204": {
+  "back": 2.0,
+  "blank": 9.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.7
+ },
+ "LTM5205": {
+  "back": 2.0,
+  "blank": 9.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.7
+ },
+ "LTM5206": {
+  "back": 2.0,
+  "blank": 9.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.7
+ },
+ "LTM5207": {
+  "back": 2.0,
+  "blank": 9.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.7
+ },
+ "LTM5208": {
+  "back": 2.0,
+  "blank": 9.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.7
+ },
+ "LTM5209": {
+  "back": 2.0,
+  "blank": 9.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.7
+ },
+ "LTM5211": {
+  "back": 2.0,
+  "blank": 9.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.7
+ },
+ "LTM5213": {
+  "back": 2.0,
+  "blank": 9.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.7
+ },
+ "LTM5251": {
+  "back": 2.0,
+  "blank": 10.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.35
+ },
+ "LTM5252": {
+  "back": 2.0,
+  "blank": 10.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.35
+ },
+ "LTM5253": {
+  "back": 2.0,
+  "blank": 10.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.35
+ },
+ "LTM5254": {
+  "back": 2.0,
+  "blank": 10.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.35
+ },
+ "LTM5255": {
+  "back": 2.0,
+  "blank": 10.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.35
+ },
+ "LTM5256": {
+  "back": 2.0,
+  "blank": 10.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.35
+ },
+ "LTM7002": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7003": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7004": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7005": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7006": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7007": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7008": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7009": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7010": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7011": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7012": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7013": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7014": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7015": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7016": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7017": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7018": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7030": {
+  "back": 2.0,
+  "blank": 8.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.55
+ },
+ "LTM7031": {
+  "back": 2.0,
+  "blank": 8.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.55
+ },
+ "LTM7050": {
+  "back": 2.0,
+  "blank": 8.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.55
+ },
+ "LTM7051": {
+  "back": 2.0,
+  "blank": 8.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.55
+ },
+ "LTM7065": {
+  "back": 2.0,
+  "blank": 8.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.55
+ },
+ "LTM7066": {
+  "back": 2.0,
+  "blank": 8.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.55
+ },
+ "LTM7202": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM7203": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM7204": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM7205": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM7206": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM7207": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM7208": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM7209": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM7210": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM7211": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM7212": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM7213": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM7214": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM7215": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM7216": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM7217": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM7218": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM7230": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7231": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7232": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7233": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7234": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7235": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7278": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7279": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7280": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7281": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7282": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7283": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7284": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7285": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7290": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7291": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7295": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7296": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM7302": {
+  "back": 2.0,
+  "blank": 7.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.75
+ },
+ "LTM7303": {
+  "back": 2.0,
+  "blank": 7.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.75
+ },
+ "LTM7304": {
+  "back": 2.0,
+  "blank": 7.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.75
+ },
+ "LTM7305": {
+  "back": 2.0,
+  "blank": 7.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.75
+ },
+ "LTM7306": {
+  "back": 2.0,
+  "blank": 7.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.75
+ },
+ "LTM7307": {
+  "back": 2.0,
+  "blank": 7.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.75
+ },
+ "LTM7308": {
+  "back": 2.0,
+  "blank": 7.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.75
+ },
+ "LTM7309": {
+  "back": 2.0,
+  "blank": 7.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.75
+ },
+ "LTM7310": {
+  "back": 2.0,
+  "blank": 7.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.75
+ },
+ "LTM7311": {
+  "back": 2.0,
+  "blank": 7.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.75
+ },
+ "LTM7312": {
+  "back": 2.0,
+  "blank": 7.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.75
+ },
+ "LTM7313": {
+  "back": 2.0,
+  "blank": 7.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.75
+ },
+ "LTM7314": {
+  "back": 2.0,
+  "blank": 7.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.75
+ },
+ "LTM7315": {
+  "back": 2.0,
+  "blank": 7.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.75
+ },
+ "LTM7316": {
+  "back": 2.0,
+  "blank": 7.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.75
+ },
+ "LTM7317": {
+  "back": 2.0,
+  "blank": 7.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.75
+ },
+ "LTM7318": {
+  "back": 2.0,
+  "blank": 7.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.75
+ },
+ "LTM7375": {
+  "back": 2.0,
+  "blank": 12.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.1
+ },
+ "LTM7376": {
+  "back": 2.0,
+  "blank": 12.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.1
+ },
+ "LTM7377": {
+  "back": 2.0,
+  "blank": 12.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.1
+ },
+ "LTM7378": {
+  "back": 2.0,
+  "blank": 12.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.1
+ },
+ "LTM7379": {
+  "back": 2.0,
+  "blank": 12.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.1
+ },
+ "LTM7401": {
+  "back": 2.0,
+  "blank": 14.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.65
+ },
+ "LTM7402": {
+  "back": 2.0,
+  "blank": 14.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.65
+ },
+ "LTM7403": {
+  "back": 2.0,
+  "blank": 14.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.65
+ },
+ "LTM7404": {
+  "back": 2.0,
+  "blank": 14.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.65
+ },
+ "LTM7405": {
+  "back": 2.0,
+  "blank": 14.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.65
+ },
+ "LTM7406": {
+  "back": 2.0,
+  "blank": 14.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.65
+ },
+ "LTM7407": {
+  "back": 2.0,
+  "blank": 14.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.65
+ },
+ "LTM7408": {
+  "back": 2.0,
+  "blank": 14.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.65
+ },
+ "LTM7409": {
+  "back": 2.0,
+  "blank": 14.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.65
+ },
+ "LTM7410": {
+  "back": 2.0,
+  "blank": 14.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.65
+ },
+ "LTM7411": {
+  "back": 2.0,
+  "blank": 14.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.65
+ },
+ "LTM7412": {
+  "back": 2.0,
+  "blank": 14.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.65
+ },
+ "LTM7413": {
+  "back": 2.0,
+  "blank": 14.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.65
+ },
+ "LTM7414": {
+  "back": 2.0,
+  "blank": 14.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.65
+ },
+ "LTM7415": {
+  "back": 2.0,
+  "blank": 14.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.65
+ },
+ "LTM7416": {
+  "back": 2.0,
+  "blank": 14.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.65
+ },
+ "LTM7430": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "LTM7431": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "LTM7432": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "LTM7433": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "LTM7434": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "LTM7435": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "LTM7451": {
+  "back": 2.0,
+  "blank": 18.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 23.6
+ },
+ "LTM7452": {
+  "back": 2.0,
+  "blank": 18.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 23.6
+ },
+ "LTM7453": {
+  "back": 2.0,
+  "blank": 18.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 23.6
+ },
+ "LTM7454": {
+  "back": 2.0,
+  "blank": 18.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 23.6
+ },
+ "LTM7455": {
+  "back": 2.0,
+  "blank": 18.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 23.6
+ },
+ "LTM7456": {
+  "back": 2.0,
+  "blank": 18.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 23.6
+ },
+ "LTM7457": {
+  "back": 2.0,
+  "blank": 18.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 23.6
+ },
+ "LTM7458": {
+  "back": 2.0,
+  "blank": 18.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 23.6
+ },
+ "LTM7470": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "LTM7471": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "LTM7485": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "LTM7486": {
+  "back": 2.0,
+  "blank": 15.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.6
+ },
+ "LTM752": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM753": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM754": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM755": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM756": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM758": {
+  "back": 2.0,
+  "blank": 5.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.95
+ },
+ "LTM759": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM760": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM761": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM762": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM763": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM764": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM765": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM766": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM767": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM802": {
+  "back": 2.0,
+  "blank": 6.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.45
+ },
+ "LTM803": {
+  "back": 2.0,
+  "blank": 6.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.45
+ },
+ "LTM804": {
+  "back": 2.0,
+  "blank": 6.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.45
+ },
+ "LTM805": {
+  "back": 2.0,
+  "blank": 6.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.45
+ },
+ "LTM806": {
+  "back": 2.0,
+  "blank": 6.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.45
+ },
+ "LTM807": {
+  "back": 2.0,
+  "blank": 6.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.45
+ },
+ "LTM808": {
+  "back": 2.0,
+  "blank": 6.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.45
+ },
+ "LTM809": {
+  "back": 2.0,
+  "blank": 6.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.45
+ },
+ "LTM810": {
+  "back": 2.0,
+  "blank": 5.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.75
+ },
+ "LTM811": {
+  "back": 2.0,
+  "blank": 6.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.45
+ },
+ "LTM812": {
+  "back": 2.0,
+  "blank": 5.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.75
+ },
+ "LTM813": {
+  "back": 2.0,
+  "blank": 6.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.45
+ },
+ "LTM814": {
+  "back": 2.0,
+  "blank": 6.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.45
+ },
+ "LTM815": {
+  "back": 2.0,
+  "blank": 5.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.75
+ },
+ "LTM817": {
+  "back": 2.0,
+  "blank": 5.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.75
+ },
+ "LTM830": {
+  "back": 2.0,
+  "blank": 8.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.5
+ },
+ "LTM831": {
+  "back": 2.0,
+  "blank": 8.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.5
+ },
+ "LTM832": {
+  "back": 2.0,
+  "blank": 10.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.35
+ },
+ "LTM835": {
+  "back": 2.0,
+  "blank": 10.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.35
+ },
+ "LTM836": {
+  "back": 2.0,
+  "blank": 10.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.35
+ },
+ "LTM837": {
+  "back": 2.0,
+  "blank": 10.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.35
+ },
+ "LTM838": {
+  "back": 2.0,
+  "blank": 8.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.5
+ },
+ "LTM852": {
+  "back": 2.0,
+  "blank": 5.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.7
+ },
+ "LTM853": {
+  "back": 2.0,
+  "blank": 5.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.7
+ },
+ "LTM854": {
+  "back": 2.0,
+  "blank": 5.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.7
+ },
+ "LTM855": {
+  "back": 2.0,
+  "blank": 5.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.7
+ },
+ "LTM856": {
+  "back": 2.0,
+  "blank": 5.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.7
+ },
+ "LTM857": {
+  "back": 2.0,
+  "blank": 5.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.7
+ },
+ "LTM858": {
+  "back": 2.0,
+  "blank": 5.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.7
+ },
+ "LTM859": {
+  "back": 2.0,
+  "blank": 5.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.7
+ },
+ "LTM860": {
+  "back": 2.0,
+  "blank": 5.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.7
+ },
+ "LTM861": {
+  "back": 2.0,
+  "blank": 5.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.7
+ },
+ "LTM862": {
+  "back": 2.0,
+  "blank": 5.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.7
+ },
+ "LTM863": {
+  "back": 2.0,
+  "blank": 5.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.7
+ },
+ "LTM864": {
+  "back": 2.0,
+  "blank": 5.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.7
+ },
+ "LTM865": {
+  "back": 2.0,
+  "blank": 5.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.7
+ },
+ "LTM866": {
+  "back": 2.0,
+  "blank": 5.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.7
+ },
+ "LTM867": {
+  "back": 2.0,
+  "blank": 5.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.7
+ },
+ "LTM870": {
+  "back": 2.0,
+  "blank": 6.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.4
+ },
+ "LTM871": {
+  "back": 2.0,
+  "blank": 6.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.4
+ },
+ "LTM880": {
+  "back": 2.0,
+  "blank": 6.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.4
+ },
+ "LTM881": {
+  "back": 2.0,
+  "blank": 6.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.4
+ },
+ "LTM890": {
+  "back": 2.0,
+  "blank": 6.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.4
+ },
+ "LTM891": {
+  "back": 2.0,
+  "blank": 6.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.4
+ },
+ "LTM942": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM943": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM944": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM945": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM946": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM947": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM948": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM949": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM950": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM951": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM952": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM953": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM954": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM955": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM956": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM957": {
+  "back": 2.0,
+  "blank": 6.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.7
+ },
+ "LTM972": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM973": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM974": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM975": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM976": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM977": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM978": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM979": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM980": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM981": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM982": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM983": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM984": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM985": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM986": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LTM987": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB052": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB053": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB054": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB055": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB056": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB057": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB058": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB059": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB060": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB061": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB062": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB063": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB064": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB065": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB066": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB067": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB068": {
+  "back": 2.0,
+  "blank": 7.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.9
+ },
+ "LWB102": {
+  "back": 2.0,
+  "blank": 8.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.3
+ },
+ "LWB103": {
+  "back": 2.0,
+  "blank": 8.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.3
+ },
+ "LWB104": {
+  "back": 2.0,
+  "blank": 8.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.3
+ },
+ "LWB105": {
+  "back": 2.0,
+  "blank": 8.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.3
+ },
+ "LWB106": {
+  "back": 2.0,
+  "blank": 8.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.3
+ },
+ "LWB107": {
+  "back": 2.0,
+  "blank": 8.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.3
+ },
+ "LWB108": {
+  "back": 2.0,
+  "blank": 8.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.3
+ },
+ "LWB109": {
+  "back": 2.0,
+  "blank": 8.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.3
+ },
+ "LWB110": {
+  "back": 2.0,
+  "blank": 8.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.3
+ },
+ "LWB111": {
+  "back": 2.0,
+  "blank": 8.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.3
+ },
+ "LWB112": {
+  "back": 2.0,
+  "blank": 8.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.3
+ },
+ "LWB113": {
+  "back": 2.0,
+  "blank": 8.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.3
+ },
+ "LWB114": {
+  "back": 2.0,
+  "blank": 8.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.3
+ },
+ "LWB115": {
+  "back": 2.0,
+  "blank": 8.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.3
+ },
+ "LWB116": {
+  "back": 2.0,
+  "blank": 8.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.3
+ },
+ "LWB117": {
+  "back": 2.0,
+  "blank": 8.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.3
+ },
+ "LWB118": {
+  "back": 2.0,
+  "blank": 8.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.3
+ },
+ "LWB202": {
+  "back": 2.0,
+  "blank": 9.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.65
+ },
+ "LWB203": {
+  "back": 2.0,
+  "blank": 9.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.65
+ },
+ "LWB204": {
+  "back": 2.0,
+  "blank": 9.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.65
+ },
+ "LWB205": {
+  "back": 2.0,
+  "blank": 9.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.65
+ },
+ "LWB206": {
+  "back": 2.0,
+  "blank": 9.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.65
+ },
+ "LWB207": {
+  "back": 2.0,
+  "blank": 9.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.65
+ },
+ "LWB208": {
+  "back": 2.0,
+  "blank": 9.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.65
+ },
+ "LWB209": {
+  "back": 2.0,
+  "blank": 9.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.65
+ },
+ "LWB210": {
+  "back": 2.0,
+  "blank": 9.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.65
+ },
+ "LWB211": {
+  "back": 2.0,
+  "blank": 9.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.65
+ },
+ "LWB212": {
+  "back": 2.0,
+  "blank": 9.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.65
+ },
+ "LWB213": {
+  "back": 2.0,
+  "blank": 9.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.65
+ },
+ "LWB214": {
+  "back": 2.0,
+  "blank": 9.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.65
+ },
+ "LWB215": {
+  "back": 2.0,
+  "blank": 9.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.65
+ },
+ "LWB216": {
+  "back": 2.0,
+  "blank": 9.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.65
+ },
+ "LWB217": {
+  "back": 2.0,
+  "blank": 9.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.65
+ },
+ "LWB218": {
+  "back": 2.0,
+  "blank": 9.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.65
+ },
+ "LWB230": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB231": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB240": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB241": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB250": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB251": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB302": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB303": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB304": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB305": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB306": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB307": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB308": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB309": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB310": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB311": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB312": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB313": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB314": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB315": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB316": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB317": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWB318": {
+  "back": 2.0,
+  "blank": 10.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.45
+ },
+ "LWBL1": {
+  "back": 2.0,
+  "blank": 1.98,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.98
+ },
+ "LWBL2": {
+  "back": 2.0,
+  "blank": 1.34,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.34
+ },
+ "NP8": {
+  "back": 2.0,
+  "blank": 5.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.35
+ },
+ "PCG100": {
+  "back": 2.0,
+  "blank": 0.87,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 5.87
+ },
+ "PCG101": {
+  "back": 2.0,
+  "blank": 1.11,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.11
+ },
+ "PCG105": {
+  "back": 2.0,
+  "blank": 1.03,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.03
+ },
+ "PCG106": {
+  "back": 2.0,
+  "blank": 1.14,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.14
+ },
+ "PCG107": {
+  "back": 2.0,
+  "blank": 1.33,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.33
+ },
+ "PCG115": {
+  "back": 2.0,
+  "blank": 1.33,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.33
+ },
+ "PCG116": {
+  "back": 2.0,
+  "blank": 1.39,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.39
+ },
+ "PCG117": {
+  "back": 2.0,
+  "blank": 1.39,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.39
+ },
+ "PCG118": {
+  "back": 2.0,
+  "blank": 1.48,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.48
+ },
+ "PCG125": {
+  "back": 2.0,
+  "blank": 1.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.3
+ },
+ "PCG200": {
+  "back": 2.0,
+  "blank": 1.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.35
+ },
+ "PCG205": {
+  "back": 2.0,
+  "blank": 2.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 7.5
+ },
+ "PCG211": {
+  "back": 2.0,
+  "blank": 5.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.35
+ },
+ "PCG212": {
+  "back": 2.0,
+  "blank": 4.2,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.2
+ },
+ "PCG213": {
+  "back": 2.0,
+  "blank": 3.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.3
+ },
+ "PCG300": {
+  "back": 2.0,
+  "blank": 3.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.3
+ },
+ "PCG305": {
+  "back": 2.0,
+  "blank": 2.2,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 7.2
+ },
+ "PCG310": {
+  "back": 2.0,
+  "blank": 3.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.15
+ },
+ "PCG350": {
+  "back": 2.0,
+  "blank": 2.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 7.55
+ },
+ "PCG351": {
+  "back": 2.0,
+  "blank": 2.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 7.55
+ },
+ "PKR303": {
+  "back": 2.0,
+  "blank": 19.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 24.45
+ },
+ "PKR305": {
+  "back": 2.0,
+  "blank": 19.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 24.45
+ },
+ "PKR309": {
+  "back": 2.0,
+  "blank": 19.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 24.45
+ },
+ "PKR310": {
+  "back": 2.0,
+  "blank": 19.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 24.45
+ },
+ "PNA210": {
+  "back": 2.0,
+  "blank": 12.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.7
+ },
+ "PNA28": {
+  "back": 2.0,
+  "blank": 11.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 16.4
+ },
+ "PNA410": {
+  "back": 2.0,
+  "blank": 13.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.3
+ },
+ "PNA48": {
+  "back": 2.0,
+  "blank": 11.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 16.95
+ },
+ "PNB210": {
+  "back": 2.0,
+  "blank": 13.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 18.0
+ },
+ "PNB28": {
+  "back": 2.0,
+  "blank": 11.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 16.7
+ },
+ "PTF146": {
+  "back": 2.0,
+  "blank": 7.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.55
+ },
+ "PTF157": {
+  "back": 2.0,
+  "blank": 8.7,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.7
+ },
+ "PTF546": {
+  "back": 2.0,
+  "blank": 10.0,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.0
+ },
+ "PTF557": {
+  "back": 2.0,
+  "blank": 12.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.05
+ },
+ "PTF646D": {
+  "back": 2.0,
+  "blank": 15.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.4
+ },
+ "PTF657D": {
+  "back": 2.0,
+  "blank": 18.2,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 23.2
+ },
+ "PWR801C": {
+  "back": 2.0,
+  "blank": 15.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.9
+ },
+ "PWR802C": {
+  "back": 2.0,
+  "blank": 15.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.9
+ },
+ "PWR803C": {
+  "back": 2.0,
+  "blank": 15.9,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 20.9
+ },
+ "RA210": {
+  "back": 2.0,
+  "blank": 10.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 15.05
+ },
+ "RA28": {
+  "back": 2.0,
+  "blank": 9.4,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.4
+ },
+ "SLT003": {
+  "back": 2.0,
+  "blank": 7.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.55
+ },
+ "SLT004": {
+  "back": 2.0,
+  "blank": 7.55,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.55
+ },
+ "SLT010": {
+  "back": 2.0,
+  "blank": 4.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.3
+ },
+ "SLT011": {
+  "back": 2.0,
+  "blank": 5.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.75
+ },
+ "SLT020": {
+  "back": 2.0,
+  "blank": 4.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.1
+ },
+ "SLT021": {
+  "back": 2.0,
+  "blank": 4.45,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.45
+ },
+ "SLT030": {
+  "back": 2.0,
+  "blank": 3.85,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 8.85
+ },
+ "SLT031": {
+  "back": 2.0,
+  "blank": 5.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.15
+ },
+ "SLT040": {
+  "back": 2.0,
+  "blank": 4.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.3
+ },
+ "SLT041": {
+  "back": 2.0,
+  "blank": 5.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.15
+ },
+ "SLT042": {
+  "back": 2.0,
+  "blank": 5.95,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.95
+ },
+ "SLT050": {
+  "back": 2.0,
+  "blank": 5.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.1
+ },
+ "SLT051": {
+  "back": 2.0,
+  "blank": 6.5,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.5
+ },
+ "SLT060": {
+  "back": 2.0,
+  "blank": 4.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 9.3
+ },
+ "SLT061": {
+  "back": 2.0,
+  "blank": 5.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.6
+ },
+ "SLT062": {
+  "back": 2.0,
+  "blank": 7.8,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.8
+ },
+ "SLT071": {
+  "back": 2.0,
+  "blank": 6.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 11.05
+ },
+ "SLT085": {
+  "back": 2.0,
+  "blank": 5.15,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 10.15
+ },
+ "SLT086": {
+  "back": 2.0,
+  "blank": 7.35,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 12.35
+ },
+ "SLT087": {
+  "back": 2.0,
+  "blank": 17.65,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 22.65
+ },
+ "SM11W": {
+  "back": 2.0,
+  "blank": 1.16,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.16
+ },
+ "SM15W": {
+  "back": 2.0,
+  "blank": 1.71,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 6.71
+ },
+ "STM622": {
+  "back": 2.0,
+  "blank": 8.6,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.6
+ },
+ "STM631": {
+  "back": 2.0,
+  "blank": 8.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 13.75
+ },
+ "STM632": {
+  "back": 2.0,
+  "blank": 9.75,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 14.75
+ },
+ "TM-FOMA-AZR": {
+  "back": 2.0,
+  "blank": 12.99,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.99
+ },
+ "TM-FOMA-BAY": {
+  "back": 2.0,
+  "blank": 12.99,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.99
+ },
+ "TM-FOMA-BLK": {
+  "back": 2.0,
+  "blank": 12.99,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.99
+ },
+ "TM-FOMA-CHA": {
+  "back": 2.0,
+  "blank": 12.99,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.99
+ },
+ "TM-FOMA-CRM": {
+  "back": 2.0,
+  "blank": 12.99,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.99
+ },
+ "TM-FOMA-EUC": {
+  "back": 2.0,
+  "blank": 12.99,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.99
+ },
+ "TM-FOMA-FOG": {
+  "back": 2.0,
+  "blank": 12.99,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.99
+ },
+ "TM-FOMA-FRS": {
+  "back": 2.0,
+  "blank": 12.99,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.99
+ },
+ "TM-FOMA-HPK": {
+  "back": 2.0,
+  "blank": 12.99,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.99
+ },
+ "TM-FOMA-LIL": {
+  "back": 2.0,
+  "blank": 12.99,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.99
+ },
+ "TM-FOMA-ROS": {
+  "back": 2.0,
+  "blank": 12.99,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.99
+ },
+ "TM-FOMA-WHT": {
+  "back": 2.0,
+  "blank": 12.99,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 17.99
+ },
+ "WBX11": {
+  "back": 2.0,
+  "blank": 14.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.1
+ },
+ "WBX21": {
+  "back": 2.0,
+  "blank": 14.1,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.1
+ },
+ "WBX31": {
+  "back": 2.0,
+  "blank": 22.3,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 27.3
+ },
+ "WS101": {
+  "back": 2.0,
+  "blank": 22.8,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 27.8
+ },
+ "WS125": {
+  "back": 2.0,
+  "blank": 14.05,
+  "front": 4.0,
+  "other": 1.0,
+  "total": 19.05
+ }
+}
