@@ -110,14 +110,7 @@ export default function HomePage() {
           <div className="absolute left-[-15%] top-32 h-[30rem] w-[30rem] rounded-full bg-secondary blur-3xl" />
         </div>
 
-        <HeroShowcase
-          products={featured.slice(0, 4).map((p) => ({
-            id: p.id,
-            name: p.name,
-            image: p.image,
-            sku: p.sku,
-          }))}
-        />
+        <HeroShowcase />
 
         <div className="container-px flex flex-col items-center py-16 text-center lg:py-24">
           <Stagger className="flex flex-col items-center">
