@@ -23,7 +23,8 @@ import { CategoryIcon } from "@/components/category-icon";
 import { SectionHeader } from "@/components/section-header";
 import { BentoGrid, BentoCard } from "@/components/bento";
 import { ProductBanner } from "@/components/product-banner";
-import { Reveal } from "@/components/reveal";
+import { Reveal, Stagger, StaggerItem } from "@/components/reveal";
+import { HeroShowcase } from "@/components/hero-showcase";
 import { StatCounter } from "@/components/stat-counter";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -109,65 +110,86 @@ export default function HomePage() {
           <div className="absolute left-[-15%] top-32 h-[30rem] w-[30rem] rounded-full bg-secondary blur-3xl" />
         </div>
 
+        <HeroShowcase
+          products={featured.slice(0, 4).map((p) => ({
+            id: p.id,
+            name: p.name,
+            image: p.image,
+            sku: p.sku,
+          }))}
+        />
+
         <div className="container-px flex flex-col items-center py-16 text-center lg:py-24">
-          <Reveal className="flex flex-col items-center">
-            <span className="eyebrow inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-3 py-1 text-brand-strong backdrop-blur-sm">
-              <MapPin className="size-3.5" />
-              Made in the USA · {TURNAROUND_SHORT}
-            </span>
-            <h1 className="mt-5 max-w-4xl text-display text-foreground">
-              Print under your brand.{" "}
-              <span className="block text-metallic">
-                We make and ship it.
+          <Stagger className="flex flex-col items-center">
+            <StaggerItem>
+              <span className="eyebrow inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-3 py-1 text-brand-strong backdrop-blur-sm">
+                <MapPin className="size-3.5" />
+                Made in the USA · {TURNAROUND_SHORT}
               </span>
-            </h1>
-            <p className="mt-5 max-w-2xl text-lead text-muted-foreground">
-              You sell. We print, quality-check and blind-ship to your customer
-              under your label — fast production from our US print center.
-            </p>
+            </StaggerItem>
+            <StaggerItem>
+              <h1 className="mt-5 max-w-4xl text-display text-foreground">
+                Print under your brand.{" "}
+                <span className="block text-metallic">
+                  We make and ship it.
+                </span>
+              </h1>
+            </StaggerItem>
+            <StaggerItem>
+              <p className="mx-auto mt-5 max-w-2xl text-lead text-muted-foreground">
+                You sell. We print, quality-check and blind-ship to your customer
+                under your label — fast production from our US print center.
+              </p>
+            </StaggerItem>
 
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <Link href="/sell" className={cn(buttonVariants({ variant: "brand", size: "lg" }))}>
-                Apply to sell
-                <ArrowRight className="size-4" />
-              </Link>
-              <Link
-                href="/categories"
-                className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
-              >
-                View Catalog
-              </Link>
-            </div>
+            <StaggerItem>
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+                <Link href="/sell" className={cn(buttonVariants({ variant: "brand", size: "lg" }))}>
+                  Apply to sell
+                  <ArrowRight className="size-4" />
+                </Link>
+                <Link
+                  href="/categories"
+                  className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
+                >
+                  View Catalog
+                </Link>
+              </div>
+            </StaggerItem>
 
-            <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium text-muted-foreground">
-              {["White-label", TURNAROUND_SHORT, "No MOQ"].map((chip) => (
-                <li key={chip} className="flex items-center gap-1.5">
-                  <BadgeCheck className="size-4 text-brand-strong" />
-                  {chip}
-                </li>
-              ))}
-            </ul>
+            <StaggerItem>
+              <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium text-muted-foreground">
+                {["White-label", TURNAROUND_SHORT, "No MOQ"].map((chip) => (
+                  <li key={chip} className="flex items-center gap-1.5">
+                    <BadgeCheck className="size-4 text-brand-strong" />
+                    {chip}
+                  </li>
+                ))}
+              </ul>
+            </StaggerItem>
 
-            <dl className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-4">
-              <div>
-                <dt className="sr-only">Products</dt>
-                <dd className="font-heading text-2xl font-bold text-foreground">
-                  <StatCounter value={productCount} suffix="+" />
-                </dd>
-                <p className="text-xs text-muted-foreground">products to personalize</p>
-              </div>
-              <div className="border-l border-border pl-8">
-                <dt className="sr-only">Production</dt>
-                <dd className="font-heading text-2xl font-bold text-foreground">USA</dd>
-                <p className="text-xs text-muted-foreground">made to order</p>
-              </div>
-              <div className="border-l border-border pl-8">
-                <dt className="sr-only">Shipping</dt>
-                <dd className="font-heading text-2xl font-bold text-foreground">Blind</dd>
-                <p className="text-xs text-muted-foreground">drop-ship under your brand</p>
-              </div>
-            </dl>
-          </Reveal>
+            <StaggerItem>
+              <dl className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-4">
+                <div>
+                  <dt className="sr-only">Products</dt>
+                  <dd className="font-heading text-2xl font-bold text-foreground">
+                    <StatCounter value={productCount} suffix="+" />
+                  </dd>
+                  <p className="text-xs text-muted-foreground">products to personalize</p>
+                </div>
+                <div className="border-l border-border pl-8">
+                  <dt className="sr-only">Production</dt>
+                  <dd className="font-heading text-2xl font-bold text-foreground">USA</dd>
+                  <p className="text-xs text-muted-foreground">made to order</p>
+                </div>
+                <div className="border-l border-border pl-8">
+                  <dt className="sr-only">Shipping</dt>
+                  <dd className="font-heading text-2xl font-bold text-foreground">Blind</dd>
+                  <p className="text-xs text-muted-foreground">drop-ship under your brand</p>
+                </div>
+              </dl>
+            </StaggerItem>
+          </Stagger>
         </div>
       </section>
 
@@ -375,7 +397,11 @@ export default function HomePage() {
                     Seller Portal
                   </span>
                 </div>
-                <span className="rounded-full bg-evergreen/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-evergreen">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-evergreen/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-evergreen">
+                  <span className="relative flex size-1.5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-evergreen opacity-60 motion-reduce:hidden" />
+                    <span className="relative inline-flex size-1.5 rounded-full bg-evergreen" />
+                  </span>
                   Live
                 </span>
               </div>
