@@ -97,11 +97,18 @@ export default function CatalogIndexPage() {
               engraving adds ${ENGRAVING_FEES.back.toFixed(2)}. Products marked
               &quot;Quote&quot; are priced per order.{" "}
               <a
+                href="https://pub-7dbfe9f161d34085b011aea74e8f75ac.r2.dev/catalog/FomaPrint-Catalog.pdf"
+                className="font-medium text-brand-strong underline underline-offset-2"
+              >
+                Download the full catalog (PDF)
+              </a>{" "}
+              or{" "}
+              <a
                 href="/FomaPrint-Price-List.xlsx"
                 className="font-medium text-brand-strong underline underline-offset-2"
                 download
               >
-                Download the price list (Excel)
+                the price list (Excel)
               </a>
               .
             </p>
