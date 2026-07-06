@@ -7,6 +7,8 @@ import { log } from "@/lib/log";
 import { getTraceId, TRACE_HEADER } from "@/lib/trace";
 import { verifyTurnstile } from "@/lib/turnstile";
 import { ipFromRequest } from "@/lib/rate-limit";
+import { appendResellerApplicationRow } from "@/lib/google-sheets";
+import { nyTimestamp } from "@/lib/time";
 
 export const runtime = "nodejs";
 
@@ -109,30 +111,27 @@ export async function POST(request: Request): Promise<NextResponse<ApiResponse>>
     return NextResponse.json({ ok: true, deduplicated: true }, { headers });
   }
 
+  const submittedAt = nyTimestamp();
+  let emailResult: Awaited<ReturnType<typeof sendResellerApplicationEmails>>;
+
   try {
-    const result = await sendResellerApplicationEmails(data, { traceId });
-    if (!result.ok) {
-      log.error({
+    const [settledEmail, settledSheet] = await Promise.allSettled([
+      sendResellerApplicationEmails(data, { traceId, submittedAt }),
+      appendResellerApplicationRow(data, { traceId, submittedAt }),
+    ]);
+
+    if (settledSheet.status === "fulfilled" && !settledSheet.value.ok) {
+      log.warn({
         traceId,
-        event: "reseller.dispatch_failed",
-        reason: result.error,
-        internalSent: result.internalSent,
-        applicantSent: result.applicantSent,
+        event: "reseller.sheets_append_not_ok",
+        reason: settledSheet.value.error,
       });
-      return NextResponse.json(
-        {
-          ok: false,
-          error: "We couldn't submit your application. Please email us directly.",
-        },
-        { status: 500, headers },
-      );
     }
-    log.info({
-      traceId,
-      event: "reseller.dispatched",
-      internalSent: result.internalSent,
-      applicantSent: result.applicantSent,
-    });
+
+    if (settledEmail.status === "rejected") {
+      throw settledEmail.reason;
+    }
+    emailResult = settledEmail.value;
   } catch (err) {
     log.error({
       traceId,
@@ -147,6 +146,30 @@ export async function POST(request: Request): Promise<NextResponse<ApiResponse>>
       { status: 500, headers },
     );
   }
+
+  if (!emailResult.ok) {
+    log.error({
+      traceId,
+      event: "reseller.dispatch_failed",
+      reason: emailResult.error,
+      internalSent: emailResult.internalSent,
+      applicantSent: emailResult.applicantSent,
+    });
+    return NextResponse.json(
+      {
+        ok: false,
+        error: "We couldn't submit your application. Please email us directly.",
+      },
+      { status: 500, headers },
+    );
+  }
+
+  log.info({
+    traceId,
+    event: "reseller.dispatched",
+    internalSent: emailResult.internalSent,
+    applicantSent: emailResult.applicantSent,
+  });
 
   return NextResponse.json({ ok: true }, { headers });
 }
