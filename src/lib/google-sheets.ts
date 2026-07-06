@@ -79,8 +79,10 @@ export async function appendResellerApplicationRow(
     }
 
     const range = encodeURIComponent(`${tabName}!A:M`);
+    // RAW, not USER_ENTERED — a user-submitted "+"/"="/"@"-prefixed field
+    // (e.g. a formatted phone number) would otherwise parse as a formula.
     const res = await fetch(
-      `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}:append?valueInputOption=USER_ENTERED`,
+      `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}:append?valueInputOption=RAW`,
       {
         method: "POST",
         headers: {

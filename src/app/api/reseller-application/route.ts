@@ -120,16 +120,7 @@ export async function POST(request: Request): Promise<NextResponse<ApiResponse>>
       appendResellerApplicationRow(data, { traceId, submittedAt }),
     ]);
 
-    if (settledSheet.status === "rejected") {
-      log.error({
-        traceId,
-        event: "reseller.sheets_append_threw",
-        message:
-          settledSheet.reason instanceof Error
-            ? settledSheet.reason.message
-            : String(settledSheet.reason),
-      });
-    } else if (!settledSheet.value.ok) {
+    if (settledSheet.status === "fulfilled" && !settledSheet.value.ok) {
       log.warn({
         traceId,
         event: "reseller.sheets_append_not_ok",
