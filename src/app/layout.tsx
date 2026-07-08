@@ -6,6 +6,7 @@ import { QuoteProvider } from "@/components/quote-provider";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { site } from "@/lib/site";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -122,6 +123,7 @@ export default function RootLayout({
           <SiteFooter />
         </QuoteProvider>
         <Toaster position="top-center" theme="light" richColors closeButton />
+        <Analytics />
       </body>
     </html>
   );
