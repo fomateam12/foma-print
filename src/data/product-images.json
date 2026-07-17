@@ -6570,48 +6570,48 @@
   "/products/SLT088/SLT088_ANGLE_BLANK.png",
   "/products/SLT088/SLT088_BLANK.png"
  ],
- "TM-FOMA-AZR": [
-  "/products/TM-FOMA-AZR/TM-FOMA-AZR_engraved.png",
-  "/products/TM-FOMA-AZR/TM-FOMA-AZR_p.jpg"
+ "TM-FM-AZR": [
+  "/products/TM-FM-AZR/TM-FM-AZR_engraved.png",
+  "/products/TM-FM-AZR/TM-FM-AZR_p.jpg"
  ],
- "TM-FOMA-BAY": [
-  "/products/TM-FOMA-BAY/TM-FOMA-BAY_engraved.png",
-  "/products/TM-FOMA-BAY/TM-FOMA-BAY_p.jpg"
+ "TM-FM-BAY": [
+  "/products/TM-FM-BAY/TM-FM-BAY_engraved.png",
+  "/products/TM-FM-BAY/TM-FM-BAY_p.jpg"
  ],
- "TM-FOMA-BLK": [
-  "/products/TM-FOMA-BLK/TM-FOMA-BLK_p.jpg"
+ "TM-FM-BLK": [
+  "/products/TM-FM-BLK/TM-FM-BLK_p.jpg"
  ],
- "TM-FOMA-CHA": [
-  "/products/TM-FOMA-CHA/TM-FOMA-CHA_engraved.png",
-  "/products/TM-FOMA-CHA/TM-FOMA-CHA_p.jpg"
+ "TM-FM-CHA": [
+  "/products/TM-FM-CHA/TM-FM-CHA_engraved.png",
+  "/products/TM-FM-CHA/TM-FM-CHA_p.jpg"
  ],
- "TM-FOMA-CRM": [
-  "/products/TM-FOMA-CRM/TM-FOMA-CRM_engraved.png",
-  "/products/TM-FOMA-CRM/TM-FOMA-CRM_p.jpg"
+ "TM-FM-CRM": [
+  "/products/TM-FM-CRM/TM-FM-CRM_engraved.png",
+  "/products/TM-FM-CRM/TM-FM-CRM_p.jpg"
  ],
- "TM-FOMA-EUC": [
-  "/products/TM-FOMA-EUC/TM-FOMA-EUC_engraved.png",
-  "/products/TM-FOMA-EUC/TM-FOMA-EUC_p.jpg"
+ "TM-FM-EUC": [
+  "/products/TM-FM-EUC/TM-FM-EUC_engraved.png",
+  "/products/TM-FM-EUC/TM-FM-EUC_p.jpg"
  ],
- "TM-FOMA-FOG": [
-  "/products/TM-FOMA-FOG/TM-FOMA-FOG_engraved.png",
-  "/products/TM-FOMA-FOG/TM-FOMA-FOG_p.jpg"
+ "TM-FM-FOG": [
+  "/products/TM-FM-FOG/TM-FM-FOG_engraved.png",
+  "/products/TM-FM-FOG/TM-FM-FOG_p.jpg"
  ],
- "TM-FOMA-HPK": [
-  "/products/TM-FOMA-HPK/TM-FOMA-HPK_engraved.png",
-  "/products/TM-FOMA-HPK/TM-FOMA-HPK_p.jpg"
+ "TM-FM-HPK": [
+  "/products/TM-FM-HPK/TM-FM-HPK_engraved.png",
+  "/products/TM-FM-HPK/TM-FM-HPK_p.jpg"
  ],
- "TM-FOMA-LIL": [
-  "/products/TM-FOMA-LIL/TM-FOMA-LIL_engraved.png",
-  "/products/TM-FOMA-LIL/TM-FOMA-LIL_p.jpg"
+ "TM-FM-LIL": [
+  "/products/TM-FM-LIL/TM-FM-LIL_engraved.png",
+  "/products/TM-FM-LIL/TM-FM-LIL_p.jpg"
  ],
- "TM-FOMA-ROS": [
-  "/products/TM-FOMA-ROS/TM-FOMA-ROS_engraved.png",
-  "/products/TM-FOMA-ROS/TM-FOMA-ROS_p.jpg"
+ "TM-FM-ROS": [
+  "/products/TM-FM-ROS/TM-FM-ROS_engraved.png",
+  "/products/TM-FM-ROS/TM-FM-ROS_p.jpg"
  ],
- "TM-FOMA-WHT": [
-  "/products/TM-FOMA-WHT/TM-FOMA-WHT_engraved.png",
-  "/products/TM-FOMA-WHT/TM-FOMA-WHT_p.jpg"
+ "TM-FM-WHT": [
+  "/products/TM-FM-WHT/TM-FM-WHT_engraved.png",
+  "/products/TM-FM-WHT/TM-FM-WHT_p.jpg"
  ],
  "SLT010": [
   "/products/SLT010/SLT010.jpg"
