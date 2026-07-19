@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Tags } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -13,6 +14,7 @@ import {
   getProductsBySubcategory,
   getProductsByCategory,
 } from "@/data/catalog";
+import { CATEGORY_BANNERS } from "@/lib/category-banners";
 
 export function generateStaticParams() {
   return getCategories().map((c) => ({ slug: c.slug }));
@@ -45,6 +47,7 @@ export default async function CategoryPage({
 
   const all = getProductsByCategory(category.slug);
   const popular = all.slice(0, 8);
+  const banner = CATEGORY_BANNERS[category.slug];
 
   return (
     <div>
@@ -56,6 +59,24 @@ export default async function CategoryPage({
         >
           <div className="absolute -top-28 right-[-8%] h-[30rem] w-[30rem] rounded-full bg-brand-muted/60 blur-3xl" />
         </div>
+        {banner ? (
+          // Lifestyle banner panel: fades into the cream header on lg+ so the
+          // text column keeps its measure; on smaller screens it renders as a
+          // rounded strip below the header copy instead (see bottom of section).
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] lg:block [mask-image:linear-gradient(to_right,transparent,black_45%)]"
+          >
+            <Image
+              src={banner.src}
+              alt=""
+              fill
+              priority
+              sizes="46vw"
+              className="object-cover"
+            />
+          </div>
+        ) : null}
         <div className="container-px py-10 lg:py-14">
           <Breadcrumbs
             items={[
@@ -82,6 +103,19 @@ export default async function CategoryPage({
               </p>
             </div>
           </div>
+
+          {banner ? (
+            <div className="relative mt-8 overflow-hidden rounded-2xl border border-border shadow-card lg:hidden">
+              <Image
+                src={banner.src}
+                alt={banner.alt}
+                width={1344}
+                height={768}
+                sizes="100vw"
+                className="aspect-[21/9] w-full object-cover"
+              />
+            </div>
+          ) : null}
         </div>
       </section>
 

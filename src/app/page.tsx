@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -474,6 +475,21 @@ export default function HomePage() {
       {/* ----------------------------- CTA band ------------------------- */}
       <section className="container-px pb-24">
         <div className="grain relative overflow-hidden rounded-[2rem] bg-ink px-8 py-16 text-ink-foreground sm:px-16 sm:py-20">
+          {/* Workshop photograph under an ink veil — the band's one bold
+              visual. Deep-navy source image + 65% ink overlay keeps the
+              centered copy comfortably above 4.5:1. */}
+          <Image
+            src="/banners/cta-workshop.jpg"
+            alt=""
+            aria-hidden="true"
+            fill
+            sizes="(max-width: 1440px) 100vw, 1440px"
+            className="pointer-events-none object-cover opacity-45"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 bg-ink/65"
+          />
           <div
             aria-hidden="true"
             className="pointer-events-none absolute -right-16 -top-16 h-72 w-72 rounded-full bg-brand/20 blur-3xl"
