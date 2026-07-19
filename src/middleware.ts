@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { consume, ipFromRequest, type RateLimitOptions } from "@/lib/rate-limit";
+import { CATALOG_COOKIE, CATALOG_UNLOCK_PATH, expectedCatalogToken } from "@/lib/catalog-gate";
 
 /**
  * Edge / Node middleware. Two jobs:
@@ -24,6 +25,8 @@ const ROUTE_LIMITS: Record<string, RateLimitOptions> = {
   // Search: read-only, but a scraper can enumerate the catalog. 60/minute
   // per IP is generous for humans and unfriendly to scrapers.
   "GET /api/search": { limit: 60, windowMs: 60 * 1000 },
+  // Catalog unlock: brute-force cap on the shared partner password.
+  "POST /api/catalog-unlock": { limit: 10, windowMs: 15 * 60 * 1000 },
 };
 
 function pickLimit(req: NextRequest): RateLimitOptions | null {
@@ -31,7 +34,18 @@ function pickLimit(req: NextRequest): RateLimitOptions | null {
   return ROUTE_LIMITS[key] ?? null;
 }
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
+  // 3. Shared-password gate for the unlisted /catalog partner price pages
+  //    (wholesale prices — see src/lib/catalog-gate.ts).
+  if (request.nextUrl.pathname === "/catalog" || request.nextUrl.pathname.startsWith("/catalog/")) {
+    const token = request.cookies.get(CATALOG_COOKIE)?.value;
+    if (token !== (await expectedCatalogToken())) {
+      const unlock = new URL(CATALOG_UNLOCK_PATH, request.url);
+      unlock.searchParams.set("next", request.nextUrl.pathname);
+      return NextResponse.redirect(unlock);
+    }
+  }
+
   const limit = pickLimit(request);
   const traceId =
     request.headers.get("x-vercel-id") ??
@@ -87,6 +101,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Match all API routes. Static assets and pages don't need the throttle.
-  matcher: ["/api/:path*"],
+  // API routes (throttle) + the gated partner catalog pages.
+  matcher: ["/api/:path*", "/catalog", "/catalog/:path*"],
 };
