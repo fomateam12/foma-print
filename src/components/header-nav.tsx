@@ -73,10 +73,13 @@ export function HeaderNav({
       {/* Announcement bar (scrolls away) */}
       <div className="bg-ink text-ink-foreground">
         <div className="container-px flex h-9 items-center justify-center gap-2 text-center text-[0.78rem] font-medium">
-          <Sparkles className="size-3.5 text-brand" aria-hidden="true" />
-          <span>
-            Wholesale POD &amp; laser engraving · Blind drop-ship from the USA ·
-            Same-day printing · Same-day shipping · Same-day reply
+          <Sparkles className="size-3.5 shrink-0 text-brand" aria-hidden="true" />
+          <span className="min-w-0 truncate">
+            Wholesale POD &amp; laser engraving · Blind drop-ship from the USA
+            <span className="hidden md:inline">
+              {" "}
+              · Same-day printing · Same-day shipping · Same-day reply
+            </span>
           </span>
         </div>
       </div>

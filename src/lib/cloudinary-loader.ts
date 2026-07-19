@@ -47,6 +47,12 @@ export default function cloudinaryLoader({
       // behavior end-to-end. Image optimization is a paid Vercel feature
       // — on the Hobby tier the optimizer returns HTTP 402.
       const origin = `${R2_BASE.replace(/\/$/, "")}/${path}`;
+      // Local `next dev` can't proxy R2 through /_next/image on machines
+      // whose TLS is intercepted (antivirus/corporate CA breaks the
+      // optimizer's upstream fetch) — serve the R2 URL directly there.
+      if (process.env.NODE_ENV === "development") {
+        return origin;
+      }
       const q = quality ?? 75;
       return `/_next/image?url=${encodeURIComponent(origin)}&w=${width}&q=${q}`;
     }

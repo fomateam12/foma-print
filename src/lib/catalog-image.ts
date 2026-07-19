@@ -16,6 +16,11 @@ export function catalogImageUrl(src: string, width = 400): string {
     // R2 serves originals (multi-MB) — route through the Vercel optimizer
     // for a resized variant. `w` must be one of the configured image
     // widths; 96/256/640 are all in the default set.
+    // Local `next dev` can't proxy R2 through /_next/image on machines with
+    // intercepted TLS (see cloudinary-loader.ts) — serve R2 directly there.
+    if (process.env.NODE_ENV === "development") {
+      return `${R2_PUBLIC_BASE}${src}`;
+    }
     const w = width <= 96 ? 96 : width <= 256 ? 256 : 640;
     return `/_next/image?url=${encodeURIComponent(`${R2_PUBLIC_BASE}${src}`)}&w=${w}&q=75`;
   }

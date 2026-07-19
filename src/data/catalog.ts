@@ -2830,7 +2830,9 @@ export function getProductsBySubcategory(
 }
 
 export function getProduct(id: string): Product | undefined {
-  return productById.get(id);
+  // Ids are stored lowercase; people paste SKUs in caps (…/product/GFT220),
+  // so normalize instead of 404ing on case.
+  return productById.get(id) ?? productById.get(id.toLowerCase());
 }
 
 export function getAllProducts(): Product[] {

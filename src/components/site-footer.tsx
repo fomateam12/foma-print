@@ -22,7 +22,7 @@ const COMPANY_LINKS = [
 
 export function SiteFooter() {
   const categories = getCategories();
-  const year = site.foundedYear;
+  const year = new Date().getFullYear();
 
   return (
     <footer className="mt-24 border-t border-border bg-secondary/40">
