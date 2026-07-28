@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { TurnstileWidget } from "@/components/turnstile-widget";
 import { cn } from "@/lib/utils";
+import { useDict } from "@/components/i18n-provider";
 import {
   resellerApplicationSchema,
   BUSINESS_TYPES,
@@ -30,6 +31,11 @@ function ErrorText({ msg }: { msg?: string }) {
 export function SellerApplicationForm() {
   // Time the form has been on screen — sent to the handler as a cheap bot gate.
   // Set in an effect (not during render) so it stays out of the render path.
+  const dict = useDict();
+  const t = dict.sellerForm;
+  // Option values are the API enum; only their labels are translated.
+  const optionLabel = (value: string) =>
+    (t.options as Record<string, string>)[value] ?? value;
   const mountedAt = useRef<number>(0);
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
@@ -90,14 +96,14 @@ export function SellerApplicationForm() {
         error?: string;
       };
       if (!res.ok || !data.ok) {
-        throw new Error(data.error ?? "Something went wrong. Please try again.");
+        throw new Error(data.error ?? t.errorGeneric);
       }
       setSubmitted(true);
     } catch (err) {
       setSubmitError(
         err instanceof Error
           ? err.message
-          : "Couldn't submit your application. Please try again.",
+          : t.errorSubmit,
       );
     }
   }
@@ -109,12 +115,10 @@ export function SellerApplicationForm() {
           <CheckCircle2 className="size-7" />
         </span>
         <h3 className="mt-5 font-heading text-lg font-semibold text-foreground">
-          Application received
+          {t.receivedTitle}
         </h3>
         <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted-foreground">
-          Thanks — check your inbox for a confirmation. We&apos;ll review your
-          application and follow up the same business day with pricing and
-          next steps.
+          {t.receivedBody}
         </p>
       </div>
     );
@@ -138,7 +142,7 @@ export function SellerApplicationForm() {
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <Label htmlFor="se-name">Your name *</Label>
+          <Label htmlFor="se-name">{t.fullName}</Label>
           <Input
             id="se-name"
             className={cn(FIELD, "mt-1.5")}
@@ -148,7 +152,7 @@ export function SellerApplicationForm() {
           <ErrorText msg={errors.name?.message} />
         </div>
         <div>
-          <Label htmlFor="se-business">Business name *</Label>
+          <Label htmlFor="se-business">{t.businessName}</Label>
           <Input
             id="se-business"
             className={cn(FIELD, "mt-1.5")}
@@ -161,7 +165,7 @@ export function SellerApplicationForm() {
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <Label htmlFor="se-email">Email *</Label>
+          <Label htmlFor="se-email">{t.email}</Label>
           <Input
             id="se-email"
             type="email"
@@ -172,7 +176,7 @@ export function SellerApplicationForm() {
           <ErrorText msg={errors.email?.message} />
         </div>
         <div>
-          <Label htmlFor="se-phone">Phone *</Label>
+          <Label htmlFor="se-phone">{t.phone}</Label>
           <Input
             id="se-phone"
             type="tel"
@@ -185,7 +189,7 @@ export function SellerApplicationForm() {
       </div>
 
       <div>
-        <Label htmlFor="se-website">Website or social (optional)</Label>
+        <Label htmlFor="se-website">{t.website}</Label>
         <Input
           id="se-website"
           placeholder="https://"
@@ -196,7 +200,7 @@ export function SellerApplicationForm() {
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <Label htmlFor="se-type">Business type *</Label>
+          <Label htmlFor="se-type">{t.businessType}</Label>
           <select
             id="se-type"
             className={cn(SELECT, "mt-1.5")}
@@ -205,18 +209,18 @@ export function SellerApplicationForm() {
             {...register("businessType")}
           >
             <option value="" disabled>
-              Select…
+              {t.selectPlaceholder}
             </option>
-            {BUSINESS_TYPES.map((t) => (
-              <option key={t} value={t}>
-                {t}
+            {BUSINESS_TYPES.map((bt) => (
+              <option key={bt} value={bt}>
+                {optionLabel(bt)}
               </option>
             ))}
           </select>
           <ErrorText msg={errors.businessType?.message} />
         </div>
         <div>
-          <Label htmlFor="se-volume">Estimated monthly volume *</Label>
+          <Label htmlFor="se-volume">{t.monthlyVolume}</Label>
           <select
             id="se-volume"
             className={cn(SELECT, "mt-1.5")}
@@ -225,11 +229,11 @@ export function SellerApplicationForm() {
             {...register("monthlyVolume")}
           >
             <option value="" disabled>
-              Select…
+              {t.selectPlaceholder}
             </option>
             {MONTHLY_VOLUMES.map((v) => (
               <option key={v} value={v}>
-                {v}
+                {optionLabel(v)}
               </option>
             ))}
           </select>
@@ -238,10 +242,10 @@ export function SellerApplicationForm() {
       </div>
 
       <div>
-        <Label htmlFor="se-interest">Which products are you interested in? *</Label>
+        <Label htmlFor="se-interest">{t.products}</Label>
         <Input
           id="se-interest"
-          placeholder="e.g. tumblers, cutting boards, frames"
+          placeholder={t.productsPlaceholder}
           className={cn(FIELD, "mt-1.5")}
           aria-invalid={!!errors.products}
           {...register("products")}
@@ -250,18 +254,18 @@ export function SellerApplicationForm() {
       </div>
 
       <div>
-        <Label htmlFor="se-message">Tell us about your business</Label>
+        <Label htmlFor="se-message">{t.about}</Label>
         <Textarea
           id="se-message"
           rows={4}
-          placeholder="What you sell, who your customers are, and how we can help…"
+          placeholder={t.aboutPlaceholder}
           className="mt-1.5"
           {...register("about")}
         />
       </div>
 
       <div>
-        <Label htmlFor="se-hear">How did you hear about us?</Label>
+        <Label htmlFor="se-hear">{t.hearAboutUs}</Label>
         <select
           id="se-hear"
           className={cn(SELECT, "mt-1.5")}
@@ -270,20 +274,20 @@ export function SellerApplicationForm() {
           {...register("hearAboutUs")}
         >
           <option value="" disabled>
-            Select…
+            {t.selectPlaceholder}
           </option>
           {HEAR_ABOUT_US.map((h) => (
             <option key={h} value={h}>
-              {h}
+              {optionLabel(h)}
             </option>
           ))}
         </select>
         <ErrorText msg={errors.hearAboutUs?.message} />
         {hearAboutUs === "Other" ? (
           <Input
-            placeholder="How did you find us?"
+            placeholder={t.hearOtherPlaceholder}
             className={cn(FIELD, "mt-2")}
-            aria-label="How did you hear about us — other"
+            aria-label={t.hearOtherAria}
             {...register("hearAboutUsOther")}
           />
         ) : null}
@@ -298,8 +302,9 @@ export function SellerApplicationForm() {
             {...register("consent")}
           />
           <span>
-            I agree to be contacted about reseller pricing by{" "}
-            <span className="text-foreground">FomaPrint</span>. *
+            {t.consentBefore}{" "}
+            <span className="text-foreground">FomaPrint</span>
+            {t.consentAfter}
           </span>
         </label>
         <ErrorText msg={errors.consent?.message} />
@@ -324,12 +329,12 @@ export function SellerApplicationForm() {
         {isSubmitting ? (
           <>
             <Loader2 className="size-4 animate-spin" />
-            Submitting…
+            {t.submitting}
           </>
         ) : (
           <>
             <Send className="size-4" />
-            Submit reseller application
+            {t.submit}
           </>
         )}
       </Button>

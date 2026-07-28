@@ -23,6 +23,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { TurnstileWidget } from "@/components/turnstile-widget";
 import { useQuote } from "@/components/quote-provider";
 import { cn } from "@/lib/utils";
+import { useDict } from "@/components/i18n-provider";
 import {
   quoteFormSchema,
   quoteSchema,
@@ -42,6 +43,11 @@ function ErrorText({ msg }: { msg?: string }) {
 }
 
 export function QuoteRequest() {
+  const dict = useDict();
+  const t = dict.quoteForm;
+  // Option values are the API enum; only their labels are translated.
+  const optionLabel = (value: string) =>
+    (t.options as Record<string, string>)[value] ?? value;
   const {
     items,
     count,
@@ -98,7 +104,7 @@ export function QuoteRequest() {
 
     const check = quoteSchema.safeParse(payload);
     if (!check.success) {
-      toast.error("Add at least one product to your quote first.");
+      toast.error(t.errorEmpty);
       return;
     }
 
@@ -110,14 +116,14 @@ export function QuoteRequest() {
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        throw new Error(data.error ?? "Something went wrong.");
+        throw new Error(data.error ?? t.errorGeneric);
       }
-      toast.success("Quote request sent! We'll reply the same business day.");
+      toast.success(t.success);
       reset();
       clear();
     } catch (err) {
       toast.error(
-        err instanceof Error ? err.message : "Couldn't submit your request.",
+        err instanceof Error ? err.message : t.errorSubmit,
       );
     }
   }
@@ -139,24 +145,25 @@ export function QuoteRequest() {
           <FileText className="size-7" />
         </span>
         <h2 className="mt-5 font-heading text-xl font-semibold text-foreground">
-          Your quote is empty
+          {t.emptyTitle}
         </h2>
         <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
-          Browse the catalog and tap{" "}
-          <span className="font-medium text-foreground">Add to quote</span> on any
-          product. Build a list, then send it over for tiered wholesale pricing —
-          no account required.
+          {t.emptyBodyBefore}{" "}
+          <span className="font-medium text-foreground">
+            {dict.quoteWidget.add}
+          </span>{" "}
+          {t.emptyBodyAfter}
         </p>
         <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link href="/categories" className={cn(buttonVariants({ variant: "brand", size: "lg" }))}>
-            Browse the catalog
+            {dict.about.ctaBrowse}
             <ArrowRight className="size-4" />
           </Link>
           <Link
             href="/sell"
             className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
           >
-            Apply to sell
+            {dict.header.applyToSell}
           </Link>
         </div>
       </div>
@@ -181,10 +188,10 @@ export function QuoteRequest() {
         <div>
           <div className="flex items-end justify-between gap-4">
             <h2 className="font-heading text-lg font-semibold text-foreground">
-              Your items
+              {t.yourItems}
               <span className="ml-2 text-sm font-normal text-muted-foreground">
-                {count} {count === 1 ? "line" : "lines"} · {totalQty}{" "}
-                {totalQty === 1 ? "unit" : "units"}
+                {count} {count === 1 ? t.lineOne : t.lineMany} · {totalQty}{" "}
+                {totalQty === 1 ? t.unitOne : t.unitMany}
               </span>
             </h2>
             <button
@@ -192,7 +199,7 @@ export function QuoteRequest() {
               onClick={clear}
               className="text-xs font-medium text-muted-foreground underline-offset-4 hover:text-destructive hover:underline"
             >
-              Clear all
+              {t.clearAll}
             </button>
           </div>
 
@@ -230,7 +237,7 @@ export function QuoteRequest() {
                     <button
                       type="button"
                       onClick={() => removeItem(item.id)}
-                      aria-label={`Remove ${item.name}`}
+                      aria-label={dict.quoteWidget.removeAria.replace("{name}", item.name)}
                       className="shrink-0 rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-muted hover:text-destructive"
                     >
                       <Trash2 className="size-4" />
@@ -242,7 +249,7 @@ export function QuoteRequest() {
                     <div className="inline-flex items-center rounded-lg border border-border">
                       <button
                         type="button"
-                        aria-label="Decrease quantity"
+                        aria-label={t.decrease}
                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
                         disabled={item.quantity <= 1}
                         className="grid size-8 place-items-center rounded-l-lg text-muted-foreground transition-colors hover:bg-muted disabled:opacity-40"
@@ -256,12 +263,12 @@ export function QuoteRequest() {
                         onChange={(e) =>
                           updateQuantity(item.id, Number(e.target.value))
                         }
-                        aria-label={`Quantity for ${item.name}`}
+                        aria-label={t.quantityFor.replace("{name}", item.name)}
                         className="h-8 w-12 border-x border-border bg-transparent text-center text-sm tabular-nums outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
                       />
                       <button
                         type="button"
-                        aria-label="Increase quantity"
+                        aria-label={t.increase}
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
                         className="grid size-8 place-items-center rounded-r-lg text-muted-foreground transition-colors hover:bg-muted"
                       >
@@ -273,7 +280,7 @@ export function QuoteRequest() {
                       type="text"
                       value={item.note ?? ""}
                       onChange={(e) => updateNote(item.id, e.target.value)}
-                      placeholder="Add a note (engraving, colorway…)"
+                      placeholder={t.notePlaceholder}
                       maxLength={500}
                       className="h-8 min-w-0 flex-1 rounded-lg border border-border bg-transparent px-2.5 text-xs outline-none transition-colors placeholder:text-muted-foreground/70 focus-visible:border-ring"
                     />
@@ -288,7 +295,7 @@ export function QuoteRequest() {
             className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-brand-strong hover:underline"
           >
             <Plus className="size-4" />
-            Add more products
+            {t.addMore}
           </Link>
         </div>
 
@@ -296,15 +303,15 @@ export function QuoteRequest() {
         <div className="lg:sticky lg:top-24 lg:self-start">
           <div className="rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-soft)] sm:p-7">
             <h2 className="font-heading text-lg font-semibold text-foreground">
-              Where should we send your quote?
+              {t.contactTitle}
             </h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              Fields marked * are required.
+              {t.requiredNote}
             </p>
 
             <div className="mt-5 space-y-4">
               <div>
-                <Label htmlFor="q-name">Your name *</Label>
+                <Label htmlFor="q-name">{t.fullName}</Label>
                 <Input
                   id="q-name"
                   className={cn(FIELD, "mt-1.5")}
@@ -316,7 +323,7 @@ export function QuoteRequest() {
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <Label htmlFor="q-email">Email *</Label>
+                  <Label htmlFor="q-email">{t.email}</Label>
                   <Input
                     id="q-email"
                     type="email"
@@ -327,7 +334,7 @@ export function QuoteRequest() {
                   <ErrorText msg={errors.email?.message} />
                 </div>
                 <div>
-                  <Label htmlFor="q-phone">Phone</Label>
+                  <Label htmlFor="q-phone">{t.phone}</Label>
                   <Input
                     id="q-phone"
                     type="tel"
@@ -339,7 +346,7 @@ export function QuoteRequest() {
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <Label htmlFor="q-business">Business name</Label>
+                  <Label htmlFor="q-business">{t.businessName}</Label>
                   <Input
                     id="q-business"
                     className={cn(FIELD, "mt-1.5")}
@@ -347,7 +354,7 @@ export function QuoteRequest() {
                   />
                 </div>
                 <div>
-                  <Label htmlFor="q-website">Store / website</Label>
+                  <Label htmlFor="q-website">{t.website}</Label>
                   <Input
                     id="q-website"
                     placeholder="https://"
@@ -359,7 +366,7 @@ export function QuoteRequest() {
 
               <div>
                 <span className="text-sm font-medium text-foreground">
-                  Where do you sell?
+                  {t.whereSell}
                 </span>
                 <div className="mt-2 flex flex-wrap gap-2">
                   {SALES_CHANNELS.map((c) => (
@@ -373,7 +380,7 @@ export function QuoteRequest() {
                         className="size-3.5 rounded border-input accent-primary"
                         {...register("channels")}
                       />
-                      {c}
+                      {optionLabel(c)}
                     </label>
                   ))}
                 </div>
@@ -381,7 +388,7 @@ export function QuoteRequest() {
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <Label htmlFor="q-ship">Fulfillment model *</Label>
+                  <Label htmlFor="q-ship">{t.shipModel}</Label>
                   <select
                     id="q-ship"
                     className={cn(SELECT, "mt-1.5")}
@@ -390,28 +397,28 @@ export function QuoteRequest() {
                     {...register("shipModel")}
                   >
                     <option value="" disabled>
-                      Select…
+                      {t.selectPlaceholder}
                     </option>
                     {SHIP_MODELS.map((m) => (
                       <option key={m} value={m}>
-                        {m}
+                        {optionLabel(m)}
                       </option>
                     ))}
                   </select>
                   <ErrorText msg={errors.shipModel?.message} />
                 </div>
                 <div>
-                  <Label htmlFor="q-volume">Monthly volume</Label>
+                  <Label htmlFor="q-volume">{t.monthlyVolume}</Label>
                   <select
                     id="q-volume"
                     className={cn(SELECT, "mt-1.5")}
                     defaultValue=""
                     {...register("monthlyVolume")}
                   >
-                    <option value="">Not sure yet</option>
+                    <option value="">{t.notSureYet}</option>
                     {MONTHLY_VOLUMES.map((v) => (
                       <option key={v} value={v}>
-                        {v}
+                        {optionLabel(v)}
                       </option>
                     ))}
                   </select>
@@ -420,19 +427,19 @@ export function QuoteRequest() {
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <Label htmlFor="q-deadline">Target date</Label>
+                  <Label htmlFor="q-deadline">{t.deadline}</Label>
                   <Input
                     id="q-deadline"
-                    placeholder="e.g. before Dec 1"
+                    placeholder={t.deadlinePlaceholder}
                     className={cn(FIELD, "mt-1.5")}
                     {...register("deadline")}
                   />
                 </div>
                 <div>
-                  <Label htmlFor="q-artwork">Artwork link</Label>
+                  <Label htmlFor="q-artwork">{t.artwork}</Label>
                   <Input
                     id="q-artwork"
-                    placeholder="Drive / Dropbox URL"
+                    placeholder={t.artworkPlaceholder}
                     className={cn(FIELD, "mt-1.5")}
                     {...register("artworkUrl")}
                   />
@@ -440,11 +447,11 @@ export function QuoteRequest() {
               </div>
 
               <div>
-                <Label htmlFor="q-notes">Anything else?</Label>
+                <Label htmlFor="q-notes">{t.notes}</Label>
                 <Textarea
                   id="q-notes"
                   rows={3}
-                  placeholder="Personalization details, packaging, branding inserts…"
+                  placeholder={t.notesPlaceholder}
                   className="mt-1.5"
                   {...register("notes")}
                 />
@@ -459,8 +466,9 @@ export function QuoteRequest() {
                     {...register("consent")}
                   />
                   <span>
-                    I agree to be contacted about wholesale pricing by{" "}
-                    <span className="text-foreground">FomaPrint</span>. *
+                    {t.consentBefore}{" "}
+                    <span className="text-foreground">FomaPrint</span>
+                    {t.consentAfter}
                   </span>
                 </label>
                 <ErrorText msg={errors.consent?.message} />
@@ -482,19 +490,19 @@ export function QuoteRequest() {
                 {isSubmitting ? (
                   <>
                     <Loader2 className="size-4 animate-spin" />
-                    Sending…
+                    {t.sending}
                   </>
                 ) : (
                   <>
                     <Send className="size-4" />
-                    Send quote request
+                    {t.submit}
                   </>
                 )}
               </Button>
 
               <p className="flex items-center justify-center gap-1.5 text-center text-xs text-muted-foreground">
                 <ShieldCheck className="size-3.5 text-brand-strong" />
-                No account needed · Same-day reply on every quote
+                {t.assurance}
               </p>
             </div>
           </div>

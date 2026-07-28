@@ -6,6 +6,7 @@ import { Home, RotateCw, TriangleAlert } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { site } from "@/lib/site";
+import { useDict } from "@/components/i18n-provider";
 
 export default function Error({
   error,
@@ -14,6 +15,8 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const t = useDict().errorPage;
+
   useEffect(() => {
     console.error(error);
   }, [error]);
@@ -24,27 +27,26 @@ export default function Error({
         <TriangleAlert className="size-8" />
       </span>
       <h1 className="mt-6 font-heading text-2xl font-semibold text-foreground">
-        Something went wrong
+        {t.title}
       </h1>
       <p className="mt-3 max-w-md text-muted-foreground">
-        An unexpected error occurred. You can try again, or head back home. If
-        the problem keeps happening, please get in touch.
+        {t.body}
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-3">
         <Button size="lg" onClick={reset}>
           <RotateCw className="size-4" />
-          Try again
+          {t.retry}
         </Button>
         <Link
           href="/"
           className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
         >
           <Home className="size-4" />
-          Back home
+          {t.backHome}
         </Link>
       </div>
       <p className="mt-6 text-sm text-muted-foreground">
-        Still stuck? Email{" "}
+        {t.stillStuck}{" "}
         <a
           href={`mailto:${site.email}`}
           className="font-medium text-brand-strong hover:underline"

@@ -1,9 +1,15 @@
+"use client";
+
 import { Link } from "@/components/locale-link";
+import { useDict } from "@/components/i18n-provider";
 import { Compass, Home, Search } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export default function NotFound() {
+  const dict = useDict();
+  const t = dict.notFound;
+
   return (
     <div className="container-px flex min-h-[60vh] flex-col items-center justify-center py-20 text-center">
       <span className="grid size-16 place-items-center rounded-2xl bg-brand-muted text-brand-strong">
@@ -13,30 +19,29 @@ export default function NotFound() {
         404
       </p>
       <h1 className="mt-3 font-heading text-2xl font-semibold text-foreground">
-        We couldn&apos;t find that page
+        {t.title}
       </h1>
       <p className="mt-3 max-w-md text-muted-foreground">
-        The page you&apos;re looking for may have moved or no longer exists.
-        Let&apos;s get you back to the catalog you can sell.
+        {t.body}
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-3">
         <Link href="/" className={cn(buttonVariants({ variant: "brand", size: "lg" }))}>
           <Home className="size-4" />
-          Back home
+          {t.backHome}
         </Link>
         <Link
           href="/categories"
           className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
         >
           <Compass className="size-4" />
-          Browse the catalog
+          {dict.about.ctaBrowse}
         </Link>
         <Link
           href="/search"
           className={cn(buttonVariants({ variant: "ghost", size: "lg" }))}
         >
           <Search className="size-4" />
-          Search products
+          {dict.search.ariaLabel}
         </Link>
       </div>
     </div>

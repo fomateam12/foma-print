@@ -144,5 +144,36 @@
     "requestQuote": "Teklif alın",
     "ctaNoAccount": "Teklif için hesap gerekmez",
     "ctaOneDayReply": "Bir iş günü içinde yanıt"
+  },
+  "quoteForm": {
+    "options": {
+      "Blind drop-ship to my customers": "Müşterilerime gizli kargo",
+      "Bulk ship to me / my warehouse": "Toplu olarak bana / depoma",
+      "Not sure yet — advise me": "Henüz emin değilim — siz önerin",
+      "1–50 items": "1–50 ürün",
+      "51–200 items": "51–200 ürün",
+      "201–1,000 items": "201–1.000 ürün",
+      "1,000+ items": "1.000+ ürün"
+    }
+  },
+  "sellerForm": {
+    "options": {
+      "Retail store": "Perakende mağaza",
+      "Online shop": "Online mağaza",
+      "Corporate / promotional": "Kurumsal / promosyon",
+      "Event planner": "Etkinlik organizatörü",
+      "Other": "Diğer",
+      "1–50 items": "1–50 ürün",
+      "51–200 items": "51–200 ürün",
+      "201–1,000 items": "201–1.000 ürün",
+      "1,000+ items": "1.000+ ürün",
+      "Google / search": "Google / arama",
+      "Instagram": "Instagram",
+      "Facebook": "Facebook",
+      "TikTok": "TikTok",
+      "Etsy or Amazon": "Etsy veya Amazon",
+      "Referral / word of mouth": "Tavsiye / kulaktan kulağa",
+      "Trade show": "Fuar"
+    }
   }
 }

@@ -1,4 +1,7 @@
+"use client";
+
 import { ChipScroller, FilterChip } from "@/components/filter-chip";
+import { useDict } from "@/components/i18n-provider";
 
 interface Sibling {
   slug: string;
@@ -22,10 +25,13 @@ export function SiblingSubcategoryNav({
   siblings: Sibling[];
   activeSlug: string;
 }) {
+  const dict = useDict();
+  const label = dict.subcategory.moreIn.replace("{category}", categoryName);
+
   return (
-    <nav aria-label={`More in ${categoryName}`} className="mt-7 space-y-2">
-      <p className="overline">Browse by type</p>
-      <ChipScroller aria-label={`More in ${categoryName}`}>
+    <nav aria-label={label} className="mt-7 space-y-2">
+      <p className="overline">{dict.subcategory.browseByType}</p>
+      <ChipScroller aria-label={label}>
         {siblings.map((sc) => (
           <FilterChip
             key={sc.slug}
