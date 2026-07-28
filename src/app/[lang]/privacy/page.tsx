@@ -1,127 +1,78 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { LegalDocument, LegalSection } from "@/components/legal-document";
 import { site } from "@/lib/site";
+import { getDictionary } from "@/lib/dictionaries";
+import { DEFAULT_LOCALE, isLocale } from "@/lib/i18n";
+import { alternatesFor } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: `How ${site.legalName} collects, uses and protects your information at ${site.name}.`,
-  alternates: { canonical: "/privacy" },
-};
+export async function generateMetadata({
+  params,
+}: PageProps<"/[lang]/privacy">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const t = (await getDictionary(lang)).privacy;
 
-const UPDATED = "June 2026";
+  return {
+    title: t.metaTitle,
+    description: t.metaDescription,
+    alternates: alternatesFor("/privacy", lang),
+  };
+}
 
-export default function PrivacyPage() {
+export default async function PrivacyPage({
+  params,
+}: PageProps<"/[lang]/privacy">) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
+  const t = dict.privacy;
+
   return (
     <div className="container-px py-10 lg:py-14">
       <Breadcrumbs
-        items={[{ label: "Home", href: "/" }, { label: "Privacy Policy" }]}
+        items={[
+          { label: dict.common.home, href: "/" },
+          { label: t.metaTitle },
+        ]}
       />
 
-      <article className="mt-6 max-w-3xl">
-        <h1 className="text-h2 text-foreground">Privacy Policy</h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Last updated: {UPDATED}
+      <LegalDocument
+        title={t.metaTitle}
+        updatedLabel={`${dict.legal.lastUpdated} ${t.updated}`}
+        notice={lang === DEFAULT_LOCALE ? undefined : dict.legal.notice}
+      >
+        <p>
+          {t.intro
+            .replace("{legal}", site.legalName)
+            .replace(/\{brand\}/g, site.name)}
         </p>
 
-        <div className="mt-8 space-y-8 text-[0.95rem] leading-relaxed text-muted-foreground">
-          <p>
-            {site.legalName} (&ldquo;{site.name},&rdquo; &ldquo;we,&rdquo;
-            &ldquo;us&rdquo;) respects your privacy. This policy explains what
-            information we collect when you use {site.name}, how we use it, and
-            the choices you have. By using our site or submitting a form, you
-            agree to this policy.
+        <LegalSection
+          heading={t.s1Heading}
+          bullets={[t.s1B1, t.s1B2, t.s1B3]}
+        />
+        <LegalSection
+          heading={t.s2Heading}
+          bullets={[t.s2B1, t.s2B2, t.s2B3, t.s2B4]}
+        />
+        <LegalSection heading={t.s3Heading} paragraphs={[t.s3P1]} />
+        <LegalSection heading={t.s4Heading} paragraphs={[t.s4P1]} />
+        <LegalSection heading={t.s5Heading} paragraphs={[t.s5P1]} />
+        <LegalSection heading={t.s6Heading}>
+          <p className="mt-3">
+            {t.s6P1}{" "}
+            <a
+              href={`mailto:${site.email}`}
+              className="font-medium text-brand-strong hover:underline"
+            >
+              {site.email}
+            </a>
+            .
           </p>
-
-          <section>
-            <h2 className="font-heading text-xl font-semibold text-foreground">
-              Information we collect
-            </h2>
-            <ul className="mt-3 list-disc space-y-2 pl-5">
-              <li>
-                <strong className="text-foreground">Contact details</strong> you
-                provide through our custom order or reseller forms, such as your
-                name, business name, email, phone number and website.
-              </li>
-              <li>
-                <strong className="text-foreground">Order details</strong> you
-                share, including the products, quantities, personalization text
-                and any notes needed to fulfill your request.
-              </li>
-              <li>
-                <strong className="text-foreground">Usage data</strong> such as
-                basic, non-identifying analytics about how visitors use the site.
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="font-heading text-xl font-semibold text-foreground">
-              How we use your information
-            </h2>
-            <ul className="mt-3 list-disc space-y-2 pl-5">
-              <li>To respond to your inquiries and prepare quotes.</li>
-              <li>To produce, personalize and ship your orders.</li>
-              <li>
-                To review reseller applications and set up wholesale accounts.
-              </li>
-              <li>
-                To improve our products, website and customer experience.
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="font-heading text-xl font-semibold text-foreground">
-              How we share information
-            </h2>
-            <p className="mt-3">
-              We do not sell your personal information. We share it only with
-              trusted service providers that help us operate — for example, email
-              delivery and shipping partners — and only as needed to provide our
-              services or comply with the law.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-heading text-xl font-semibold text-foreground">
-              Data retention &amp; security
-            </h2>
-            <p className="mt-3">
-              We keep your information only as long as necessary to fulfill the
-              purposes described here, including legal and accounting
-              requirements. We use reasonable safeguards to protect your data,
-              though no method of transmission over the internet is 100% secure.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-heading text-xl font-semibold text-foreground">
-              Your choices
-            </h2>
-            <p className="mt-3">
-              You may request access to, correction of, or deletion of your
-              personal information at any time by contacting us. You can also opt
-              out of non-essential communications.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-heading text-xl font-semibold text-foreground">
-              Contact us
-            </h2>
-            <p className="mt-3">
-              Questions about this policy? Email{" "}
-              <a
-                href={`mailto:${site.email}`}
-                className="font-medium text-brand-strong hover:underline"
-              >
-                {site.email}
-              </a>
-              .
-            </p>
-          </section>
-        </div>
-      </article>
+        </LegalSection>
+      </LegalDocument>
     </div>
   );
 }

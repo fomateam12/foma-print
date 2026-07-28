@@ -5,6 +5,7 @@ import {
   expectedCatalogToken,
   passwordMatches,
 } from "@/lib/catalog-gate";
+import { localeFromPath, localizedPath, stripLocale } from "@/lib/i18n";
 
 /**
  * POST /api/catalog-unlock — shared-password gate for /catalog.
@@ -14,11 +15,18 @@ export async function POST(request: NextRequest) {
   const form = await request.formData();
   const password = String(form.get("password") ?? "");
   const nextRaw = String(form.get("next") ?? "/catalog");
-  // Only allow same-site catalog paths as the redirect target.
-  const next = nextRaw.startsWith("/catalog") ? nextRaw : "/catalog";
+  // The target arrives locale-prefixed (/tr/catalog/…). Validate the bare path
+  // — only same-site catalog paths are allowed — then re-apply the locale so
+  // the visitor lands back in the language they were browsing.
+  const locale = localeFromPath(nextRaw);
+  const bare = stripLocale(nextRaw);
+  const next = localizedPath(
+    bare.startsWith("/catalog") ? bare : "/catalog",
+    locale,
+  );
 
   if (!passwordMatches(password)) {
-    const back = new URL(CATALOG_UNLOCK_PATH, request.url);
+    const back = new URL(localizedPath(CATALOG_UNLOCK_PATH, locale), request.url);
     back.searchParams.set("next", next);
     back.searchParams.set("err", "1");
     return NextResponse.redirect(back, { status: 303 });
