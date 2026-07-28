@@ -1,68 +1,63 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Link } from "@/components/locale-link";
 import { Gauge, MapPin, PackageCheck, ShieldCheck, Sparkles } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Reveal } from "@/components/reveal";
 import { site } from "@/lib/site";
-import { ORDER_CUTOFF } from "@/lib/site-copy";
+import { getDictionary } from "@/lib/dictionaries";
+import { isLocale } from "@/lib/i18n";
+import { alternatesFor } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Shipping & turnaround",
-  description: `Production turnaround, white-label packaging, tracking and damage policy for ${site.name} — blind drop-shipped from the USA under your brand.`,
-  alternates: { canonical: "/shipping" },
-  openGraph: {
-    title: `Shipping & turnaround · ${site.name}`,
-    description: `How ${site.name} produces, packs and blind-ships your orders.`,
-  },
-};
+export async function generateMetadata({
+  params,
+}: PageProps<"/[lang]/shipping">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const t = (await getDictionary(lang)).shipping;
 
-const CARDS = [
-  {
-    icon: Gauge,
-    title: "Turnaround",
-    body: (
-      <>
-        We print and ship most orders the same day — place an order before{" "}
-        {ORDER_CUTOFF} and it goes out that day from our US print center.
-        Transit time is additional.
-      </>
-    ),
-  },
-  {
-    icon: PackageCheck,
-    title: "White-label packaging",
-    body: (
-      <>
-        The package sender name is your brand. The full return address is our US
-        print center. We never include FomaPrint branding or pricing.
-      </>
-    ),
-  },
-  {
-    icon: MapPin,
-    title: "Tracking",
-    body: (
-      <>
-        Carrier labels and tracking numbers are generated via ShipStation and
-        returned to you with the order.
-      </>
-    ),
-  },
-  {
-    icon: ShieldCheck,
-    title: "Production faults: our fault, our fix",
-    body: (
-      <>
-        If we misprint, mis-engrave or produce the wrong item, we remake and
-        reship it to your customer free — report it within 30 days with a
-        photo, no physical return needed. Transit loss or damage is a carrier
-        claim; full policy in our <Link href="/terms">Terms</Link>.
-      </>
-    ),
-  },
-];
+  return {
+    title: t.metaTitle,
+    description: t.metaDescription,
+    alternates: alternatesFor("/shipping", lang),
+    openGraph: {
+      title: `${t.metaTitle} · ${site.name}`,
+      description: t.ogDescription,
+    },
+  };
+}
 
-export default function ShippingPage() {
+export default async function ShippingPage({
+  params,
+}: PageProps<"/[lang]/shipping">) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
+  const t = dict.shipping;
+
+  const cards = [
+    {
+      icon: Gauge,
+      title: t.turnaroundTitle,
+      body: t.turnaroundBody.replace("{cutoff}", dict.copy.orderCutoff),
+    },
+    { icon: PackageCheck, title: t.packagingTitle, body: t.packagingBody },
+    { icon: MapPin, title: t.trackingTitle, body: t.trackingBody },
+    {
+      icon: ShieldCheck,
+      title: t.faultTitle,
+      // Split around the Terms link so the sentence reads naturally in either
+      // language instead of forcing the link to the end.
+      body: (
+        <>
+          {t.faultBodyBefore}
+          <Link href="/terms">{dict.footer.terms}</Link>
+          {t.faultBodyAfter}
+        </>
+      ),
+    },
+  ];
+
   return (
     <div>
       {/* Hero */}
@@ -75,20 +70,22 @@ export default function ShippingPage() {
         </div>
         <div className="container-px py-12 lg:py-16">
           <Breadcrumbs
-            items={[{ label: "Home", href: "/" }, { label: "Shipping" }]}
+            items={[
+              { label: dict.common.home, href: "/" },
+              { label: dict.header.shipping },
+            ]}
           />
           <Reveal className="mt-8 max-w-3xl">
             <span className="eyebrow inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-3 py-1 text-brand-strong backdrop-blur-sm">
               <Sparkles className="size-3.5" />
-              Shipping
+              {dict.header.shipping}
             </span>
             <h1 className="mt-5 text-display text-foreground">
-              Shipping &amp;{" "}
-              <span className="text-metallic">turnaround</span>
+              {t.headingBefore}
+              <span className="text-metallic">{t.headingAccent}</span>
             </h1>
             <p className="mt-5 max-w-2xl text-lead text-muted-foreground">
-              Every order is produced to order and blind-shipped from our U.S.
-              print center — your brand on the label, never ours.
+              {t.lead}
             </p>
           </Reveal>
         </div>
@@ -97,7 +94,7 @@ export default function ShippingPage() {
       {/* Cards */}
       <section className="container-px py-12 lg:py-16">
         <div className="grid gap-4 sm:grid-cols-2">
-          {CARDS.map((card, i) => (
+          {cards.map((card, i) => (
             <Reveal key={card.title} delay={Math.min(i * 0.06, 0.18)}>
               <div className="h-full rounded-2xl border border-border bg-card p-6 shadow-card">
                 <span className="grid size-11 place-items-center rounded-lg bg-brand-muted text-brand-strong">

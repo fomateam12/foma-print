@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Link } from "@/components/locale-link";
 import {
   Clock,
@@ -14,69 +15,88 @@ import { Reveal } from "@/components/reveal";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { site } from "@/lib/site";
+import { getDictionary } from "@/lib/dictionaries";
+import { isLocale } from "@/lib/i18n";
+import { alternatesFor } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: `Get in touch with ${site.name}. Email ${site.email} or message us on WhatsApp for wholesale pricing, quotes and reseller inquiries.`,
-  alternates: { canonical: "/contact" },
-  openGraph: {
-    title: `Contact · ${site.name}`,
-    description: `Questions about wholesale pricing or becoming a reseller? Reach the ${site.name} team.`,
-  },
-};
+export async function generateMetadata({
+  params,
+}: PageProps<"/[lang]/contact">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const t = (await getDictionary(lang)).contact;
 
-const CHANNELS = [
-  {
-    icon: Mail,
-    title: "Email us",
-    body: "Best for detailed requests and artwork.",
-    value: site.email,
-    href: `mailto:${site.email}`,
-  },
-  {
-    icon: MessageCircle,
-    title: "WhatsApp",
-    body: "Quick questions and order updates.",
-    value: site.whatsappDisplay,
-    href: site.whatsappHref,
-    external: true,
-  },
-];
+  return {
+    title: t.metaTitle,
+    description: t.metaDescription.replace("{email}", site.email),
+    alternates: alternatesFor("/contact", lang),
+    openGraph: {
+      title: `${t.metaTitle} · ${site.name}`,
+      description: t.ogDescription,
+    },
+  };
+}
 
-const QUICK_LINKS = [
-  {
-    icon: FileText,
-    title: "Request a quote",
-    body: "Send your product list and volume to get wholesale pricing.",
-    href: "/quote",
-  },
-  {
-    icon: Store,
-    title: "Become a reseller",
-    body: "Apply for a wholesale account on the full catalog.",
-    href: "/sell",
-  },
-];
+export default async function ContactPage({
+  params,
+}: PageProps<"/[lang]/contact">) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
+  const t = dict.contact;
 
-export default function ContactPage() {
+  const channels = [
+    {
+      icon: Mail,
+      title: t.emailTitle,
+      body: t.emailBody,
+      value: site.email,
+      href: `mailto:${site.email}`,
+    },
+    {
+      icon: MessageCircle,
+      title: t.whatsappTitle,
+      body: t.whatsappBody,
+      value: site.whatsappDisplay,
+      href: site.whatsappHref,
+      external: true,
+    },
+  ];
+
+  const quickLinks = [
+    {
+      icon: FileText,
+      title: dict.quote.metaTitle,
+      body: t.quoteLinkBody,
+      href: "/quote",
+    },
+    {
+      icon: Store,
+      title: t.resellerLinkTitle,
+      body: t.resellerLinkBody,
+      href: "/sell",
+    },
+  ];
+
   return (
     <div className="container-px py-10 lg:py-14">
-      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Contact" }]} />
+      <Breadcrumbs
+        items={[
+          { label: dict.common.home, href: "/" },
+          { label: t.metaTitle },
+        ]}
+      />
 
       <Reveal className="mt-6 max-w-2xl">
-        <span className="eyebrow text-brand-strong">Get in touch</span>
-        <h1 className="mt-3 text-h2 text-foreground">
-          Let&apos;s talk shop
-        </h1>
+        <span className="eyebrow text-brand-strong">{t.eyebrow}</span>
+        <h1 className="mt-3 text-h2 text-foreground">{t.heading}</h1>
         <p className="mt-4 text-lead text-muted-foreground">
-          Questions about a product, wholesale pricing or becoming a reseller?
-          Reach out and a real person from the {site.name} team will get back to
-          you — typically the same business day.
+          {t.lead.replace("{brand}", site.name)}
         </p>
       </Reveal>
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2">
-        {CHANNELS.map((c, i) => (
+        {channels.map((c, i) => (
           <Reveal key={c.title} delay={Math.min(i * 0.06, 0.18)}>
             <a
               href={c.href}
@@ -103,7 +123,7 @@ export default function ContactPage() {
       <div className="mt-6 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
         {/* Quick links */}
         <div className="grid gap-4 sm:grid-cols-2">
-          {QUICK_LINKS.map((q) => (
+          {quickLinks.map((q) => (
             <Link
               key={q.title}
               href={q.href}
@@ -119,7 +139,7 @@ export default function ContactPage() {
                 {q.body}
               </p>
               <span className="mt-3 text-sm font-semibold text-brand-strong group-hover:underline">
-                Learn more →
+                {t.learnMore}
               </span>
             </Link>
           ))}
@@ -128,29 +148,27 @@ export default function ContactPage() {
         {/* Business details */}
         <div className="rounded-2xl border border-border bg-card p-6 shadow-card">
           <h2 className="font-heading text-base font-semibold text-foreground">
-            Business details
+            {t.businessDetails}
           </h2>
           <dl className="mt-4 space-y-4 text-sm">
             <div className="flex items-start gap-3">
               <Store className="mt-0.5 size-4 shrink-0 text-brand-strong" />
               <div>
-                <dt className="text-muted-foreground">Company</dt>
+                <dt className="text-muted-foreground">{t.company}</dt>
                 <dd className="font-medium text-foreground">{site.legalName}</dd>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <Clock className="mt-0.5 size-4 shrink-0 text-brand-strong" />
               <div>
-                <dt className="text-muted-foreground">Hours</dt>
-                <dd className="font-medium text-foreground">
-                  Monday – Friday, 9am – 5pm ET
-                </dd>
+                <dt className="text-muted-foreground">{t.hours}</dt>
+                <dd className="font-medium text-foreground">{t.hoursValue}</dd>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <MapPin className="mt-0.5 size-4 shrink-0 text-brand-strong" />
               <div>
-                <dt className="text-muted-foreground">Address</dt>
+                <dt className="text-muted-foreground">{t.address}</dt>
                 <dd className="font-medium text-foreground">
                   {site.address.street}, {site.address.city},{" "}
                   {site.address.state}
@@ -160,8 +178,10 @@ export default function ContactPage() {
             <div className="flex items-start gap-3">
               <Factory className="mt-0.5 size-4 shrink-0 text-brand-strong" />
               <div>
-                <dt className="text-muted-foreground">Production</dt>
-                <dd className="font-medium text-foreground">{site.madeIn}</dd>
+                <dt className="text-muted-foreground">{t.production}</dt>
+                <dd className="font-medium text-foreground">
+                  {dict.site.madeIn}
+                </dd>
               </div>
             </div>
           </dl>
@@ -169,7 +189,7 @@ export default function ContactPage() {
             href="/quote"
             className={cn(buttonVariants({ variant: "brand", size: "sm" }), "mt-6 w-full")}
           >
-            Request a quote
+            {dict.quote.metaTitle}
           </Link>
         </div>
       </div>

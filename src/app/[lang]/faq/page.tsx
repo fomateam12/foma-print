@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Link } from "@/components/locale-link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -12,55 +13,51 @@ import {
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { site } from "@/lib/site";
+import { getDictionary } from "@/lib/dictionaries";
+import { isLocale } from "@/lib/i18n";
+import { alternatesFor } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "FAQ",
-  description: `Common questions about white-label print-on-demand with ${site.name} — blind drop-shipping, sending orders, payment, file specs and supported channels.`,
-  alternates: { canonical: "/faq" },
-  openGraph: {
-    title: `FAQ · ${site.name}`,
-    description: `How white-label POD and blind drop-shipping work with ${site.name}.`,
-  },
-};
+export async function generateMetadata({
+  params,
+}: PageProps<"/[lang]/faq">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const t = (await getDictionary(lang)).faq;
 
-const FAQS = [
-  {
-    q: "What is white-label POD?",
-    a: "You take the order and send it to us; we print and ship to your customer under your brand.",
-  },
-  {
-    q: "Will your branding appear?",
-    a: "No — blind/white-label; the sender is your brand, no FomaPrint branding or pricing in the package.",
-  },
-  {
-    q: "How do I send orders?",
-    a: "Enter orders and upload print files in your seller portal per our file specs (ShipStation automation coming).",
-  },
-  {
-    q: "How do I pay?",
-    a: "You load a prepaid balance (wallet) and orders draw from it — no subscription or monthly fee. Per-unit pricing is quote-based; we send rates when you apply.",
-  },
-  {
-    q: "What about file requirements?",
-    a: "High-contrast black artwork on a transparent background (PNG, or vector SVG/PDF), sized to the product's engraving area. We send the full per-product spec sheet with your reseller welcome pack.",
-  },
-  {
-    q: "Where do you ship from?",
-    a: "Our US print center; made & shipped in the USA.",
-  },
-  {
-    q: "Do you work with Amazon/Etsy/Shopify?",
-    a: "Yes — many of our resellers sell on Amazon, Etsy and Shopify and route their orders to us for production and blind shipping. We fulfill the order; the listing, storefront and customer stay yours.",
-  },
-];
+  return {
+    title: t.metaTitle,
+    description: t.metaDescription,
+    alternates: alternatesFor("/faq", lang),
+    openGraph: {
+      title: `${t.metaTitle} · ${site.name}`,
+      description: t.ogDescription,
+    },
+  };
+}
 
-export default function FaqPage() {
+export default async function FaqPage({ params }: PageProps<"/[lang]/faq">) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
+  const t = dict.faq;
+
+  const faqs = [
+    { q: t.q1, a: t.a1 },
+    { q: t.q2, a: t.a2 },
+    { q: t.q3, a: t.a3 },
+    { q: t.q4, a: t.a4 },
+    { q: t.q5, a: t.a5 },
+    { q: t.q6, a: t.a6 },
+    { q: t.q7, a: t.a7 },
+  ];
+
   // FAQPage structured data: the accordion renders answers client-side only,
   // so this is what crawlers and rich results read.
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: FAQS.map((f) => ({
+    inLanguage: lang,
+    mainEntity: faqs.map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -82,18 +79,22 @@ export default function FaqPage() {
           <div className="absolute -top-32 right-[-8%] h-[34rem] w-[34rem] rounded-full bg-brand-muted/60 blur-3xl" />
         </div>
         <div className="container-px py-12 lg:py-16">
-          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "FAQ" }]} />
+          <Breadcrumbs
+            items={[
+              { label: dict.common.home, href: "/" },
+              { label: dict.header.faq },
+            ]}
+          />
           <Reveal className="mt-8 max-w-3xl">
             <span className="eyebrow inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-3 py-1 text-brand-strong backdrop-blur-sm">
               <Sparkles className="size-3.5" />
-              Questions
+              {t.eyebrow}
             </span>
             <h1 className="mt-5 text-display text-foreground">
-              <span className="text-metallic">FAQ</span>
+              <span className="text-metallic">{dict.header.faq}</span>
             </h1>
             <p className="mt-5 max-w-2xl text-lead text-muted-foreground">
-              The essentials on selling under your brand while we handle
-              production and blind shipping.
+              {t.lead}
             </p>
           </Reveal>
         </div>
@@ -103,7 +104,7 @@ export default function FaqPage() {
       <section className="container-px py-12 lg:py-16">
         <Reveal className="mx-auto max-w-3xl">
           <Accordion className="gap-3">
-            {FAQS.map((item) => (
+            {faqs.map((item) => (
               <AccordionItem
                 key={item.q}
                 value={item.q}
@@ -124,7 +125,7 @@ export default function FaqPage() {
               href="/sell"
               className={cn(buttonVariants({ variant: "brand", size: "lg" }))}
             >
-              Apply to sell
+              {dict.header.applyToSell}
               <ArrowRight className="size-4" />
             </Link>
           </div>
