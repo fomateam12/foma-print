@@ -33,60 +33,33 @@ import {
   getFeaturedProducts,
   getProductCount,
 } from "@/data/catalog";
-import { site } from "@/lib/site";
-import { ORDER_CUTOFF, TURNAROUND_SHORT } from "@/lib/site-copy";
+import { notFound } from "next/navigation";
+import { getDictionary } from "@/lib/dictionaries";
+import { isLocale } from "@/lib/i18n";
+import { categoryName } from "@/lib/catalog-i18n";
 
-const STEPS = [
-  {
-    n: "01",
-    icon: Store,
-    title: "List our products",
-    body: "Add any item from our catalog to your store under your own brand and pricing.",
-  },
-  {
-    n: "02",
-    icon: ShoppingBag,
-    title: "Your customer orders",
-    body: "A sale lands in your shop. You send us the order and the personalization details.",
-  },
-  {
-    n: "03",
-    icon: PenTool,
-    title: "We engrave & make it",
-    body: "We laser-engrave and produce it to order in our U.S. studio — same-day printing on orders placed before 2pm ET.",
-  },
-  {
-    n: "04",
-    icon: PackageCheck,
-    title: "We blind drop-ship",
-    body: "It ships straight to your customer in unbranded packaging — never our name.",
-  },
-];
 
-const TOOL_FEATURES = [
-  {
-    icon: LayoutDashboard,
-    title: "One order dashboard",
-    body: "Every order and shipment in a single workspace.",
-  },
-  {
-    icon: Gauge,
-    title: "Live production status",
-    body: "Track each item from queued to engraved to shipped.",
-  },
-  {
-    icon: Palette,
-    title: "Same-day reply",
-    body: "Quote requests and order questions get a reply the same business day.",
-  },
-  {
-    icon: PackageCheck,
-    title: "Blind-ship tracking",
-    body: "Hand tracking numbers to your buyers, branded as you.",
-  },
-];
+export default async function HomePage({ params }: PageProps<"/[lang]">) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
+  const t = dict.home;
+  const cutoff = dict.copy.orderCutoff;
 
-export default function HomePage() {
+  const steps = [
+    { n: "01", icon: Store, title: t.step1Title, body: t.step1Body },
+    { n: "02", icon: ShoppingBag, title: t.step2Title, body: t.step2Body },
+    { n: "03", icon: PenTool, title: t.step3Title, body: t.step3Body },
+    { n: "04", icon: PackageCheck, title: t.step4Title, body: t.step4Body },
+  ];
+
+  const toolFeatures = [
+    { icon: LayoutDashboard, title: t.tool1Title, body: t.tool1Body },
+    { icon: Gauge, title: t.tool2Title, body: t.tool2Body },
+    { icon: Palette, title: t.tool3Title, body: t.tool3Body },
+    { icon: PackageCheck, title: t.tool4Title, body: t.tool4Body },
+  ];
+
   const categories = getCategories();
   const featured = getFeaturedProducts(8);
   const productCount = getProductCount();
@@ -128,42 +101,39 @@ export default function HomePage() {
             <StaggerItem>
               <span className="eyebrow inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-3 py-1 text-brand-strong backdrop-blur-sm">
                 <MapPin className="size-3.5" />
-                Made in the USA · {TURNAROUND_SHORT}
+                {t.heroEyebrow} · {dict.copy.turnaroundShort}
               </span>
             </StaggerItem>
             <StaggerItem>
               <h1 className="mt-5 max-w-4xl text-display text-foreground">
-                Print under your brand.{" "}
-                <span className="block text-metallic">
-                  We make and ship it.
-                </span>
+                {t.heroTitle}{" "}
+                <span className="block text-metallic">{t.heroTitleAccent}</span>
               </h1>
             </StaggerItem>
             <StaggerItem>
               <p className="mx-auto mt-5 max-w-2xl text-lead text-muted-foreground">
-                You sell. We print, quality-check and blind-ship to your customer
-                under your label — fast production from our US print center.
+                {t.heroLead}
               </p>
             </StaggerItem>
 
             <StaggerItem>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                 <Link href="/sell" className={cn(buttonVariants({ variant: "brand", size: "lg" }))}>
-                  Apply to sell
+                  {t.applyToSell}
                   <ArrowRight className="size-4" />
                 </Link>
                 <Link
                   href="/categories"
                   className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
                 >
-                  View Catalog
+                  {t.viewCatalog}
                 </Link>
               </div>
             </StaggerItem>
 
             <StaggerItem>
               <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium text-muted-foreground">
-                {["White-label", TURNAROUND_SHORT, "No MOQ"].map((chip) => (
+                {[t.chipWhiteLabel, dict.copy.turnaroundShort, t.chipNoMoq].map((chip) => (
                   <li key={chip} className="flex items-center gap-1.5">
                     <BadgeCheck className="size-4 text-brand-strong" />
                     {chip}
@@ -175,21 +145,21 @@ export default function HomePage() {
             <StaggerItem>
               <dl className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-4">
                 <div>
-                  <dt className="sr-only">Products</dt>
+                  <dt className="sr-only">{t.statProductsLabel}</dt>
                   <dd className="font-heading text-2xl font-bold text-foreground">
                     <StatCounter value={productCount} suffix="+" />
                   </dd>
-                  <p className="text-xs text-muted-foreground">products to personalize</p>
+                  <p className="text-xs text-muted-foreground">{t.statProductsCaption}</p>
                 </div>
                 <div className="border-l border-border pl-8">
-                  <dt className="sr-only">Production</dt>
-                  <dd className="font-heading text-2xl font-bold text-foreground">USA</dd>
-                  <p className="text-xs text-muted-foreground">made to order</p>
+                  <dt className="sr-only">{t.statProductionLabel}</dt>
+                  <dd className="font-heading text-2xl font-bold text-foreground">{t.statProductionValue}</dd>
+                  <p className="text-xs text-muted-foreground">{t.statProductionCaption}</p>
                 </div>
                 <div className="border-l border-border pl-8">
-                  <dt className="sr-only">Shipping</dt>
-                  <dd className="font-heading text-2xl font-bold text-foreground">Blind</dd>
-                  <p className="text-xs text-muted-foreground">drop-ship under your brand</p>
+                  <dt className="sr-only">{t.statShippingLabel}</dt>
+                  <dd className="font-heading text-2xl font-bold text-foreground">{t.statShippingValue}</dd>
+                  <p className="text-xs text-muted-foreground">{t.statShippingCaption}</p>
                 </div>
               </dl>
             </StaggerItem>
@@ -204,12 +174,12 @@ export default function HomePage() {
       <section id="how" className="container-px scroll-mt-24 py-20 lg:py-28">
         <SectionHeader
           align="center"
-          eyebrow="How it works"
-          title="From your storefront to their doorstep"
-          description="A hands-off fulfillment loop. You own the customer and the brand; we own the engraving, production and shipping."
+          eyebrow={t.howEyebrow}
+          title={t.howTitle}
+          description={t.howDescription}
         />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {STEPS.map((s, i) => (
+          {steps.map((s, i) => (
             <Reveal key={s.n} delay={i * 0.08}>
               <div className="relative flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-card">
                 <div className="flex items-center justify-between">
@@ -235,7 +205,7 @@ export default function HomePage() {
             href="/how-it-works"
             className="inline-flex items-center gap-1 text-sm font-semibold text-brand-strong transition-colors hover:text-rust-bright"
           >
-            See how it works
+            {t.seeHowItWorks}
             <ArrowRight className="size-4" />
           </Link>
         </div>
@@ -245,15 +215,15 @@ export default function HomePage() {
       <section className="border-y border-border bg-secondary/30 py-20 lg:py-28">
         <div className="container-px">
           <SectionHeader
-            eyebrow="Why FomaPrint"
-            title="Built for sellers who want margin and control."
-            description="Sell personalized goods at your own price without owning a laser, holding stock or revealing a supplier."
+            eyebrow={t.whyEyebrow}
+            title={t.whyTitle}
+            description={t.whyDescription}
             action={
               <Link
                 href="/sell"
                 className="inline-flex items-center gap-1 text-sm font-semibold text-brand-strong transition-colors hover:text-rust-bright"
               >
-                Apply to sell
+                {t.applyToSell}
                 <ArrowRight className="size-4" />
               </Link>
             }
@@ -263,31 +233,31 @@ export default function HomePage() {
             <BentoCard
               tone="ink"
               icon={<Truck className="size-5" />}
-              eyebrow="Truly white-label"
-              title="We ship under your brand — never ours"
-              description="Orders go straight to your customer in unbranded packaging, with no FomaPrint invoices, logos or marketing inserts. Your store stays the only name they see."
+              eyebrow={t.whiteLabelEyebrow}
+              title={t.whiteLabelTitle}
+              description={t.whiteLabelBody}
               className="sm:col-span-2 lg:col-span-2"
             />
             <BentoCard
               tone="brand"
               icon={<TrendingUp className="size-5" />}
-              title="High profit margin"
-              description="Buy at wholesale and set your own retail price — a healthy margin on every personalized order."
+              title={t.marginTitle}
+              description={t.marginBody}
             />
             <BentoCard
               icon={<MapPin className="size-5" />}
-              title="Made in the USA"
-              description="Produced to order in our American studio for fast, reliable turnaround."
+              title={t.madeInUsaTitle}
+              description={t.madeInUsaBody}
             />
             <BentoCard
               icon={<Zap className="size-5" />}
-              title={TURNAROUND_SHORT}
-              description={`Place an order before ${ORDER_CUTOFF} and we print and ship it the same day from our US print center — your customers aren't left waiting.`}
+              title={dict.copy.turnaroundShort}
+              description={t.sameDayBody.replace("{cutoff}", cutoff)}
             />
             <BentoCard
               icon={<Boxes className="size-5" />}
-              title="No minimums"
-              description="Start with a single unit and scale to bulk for tiered wholesale pricing."
+              title={t.noMinimumsTitle}
+              description={t.noMinimumsBody}
             />
           </BentoGrid>
         </div>
@@ -296,20 +266,20 @@ export default function HomePage() {
       {/* -------------------------- Catalog showcase -------------------- */}
       <section className="container-px py-20 lg:py-28">
         <SectionHeader
-          eyebrow="The catalog"
+          eyebrow={t.catalogEyebrow}
           title={
             <>
-              <StatCounter value={productCount} suffix="+" /> products ready to
-              personalize
+              <StatCounter value={productCount} suffix="+" />{" "}
+              {t.catalogTitleSuffix}
             </>
           }
-          description="Drinkware, gifts, frames and office goods — every item engravable and blind-shipped under your brand."
+          description={t.catalogDescription}
           action={
             <Link
               href="/categories"
               className="inline-flex items-center gap-1 text-sm font-semibold text-brand-strong transition-colors hover:text-rust-bright"
             >
-              All categories
+              {t.allCategories}
               <ArrowRight className="size-4" />
             </Link>
           }
@@ -327,10 +297,10 @@ export default function HomePage() {
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="block font-heading text-base font-semibold text-foreground">
-                    {c.name}
+                    {categoryName(c.name, lang)}
                   </span>
                   <span className="block text-sm text-muted-foreground">
-                    {c.productCount.toLocaleString()} products
+                    {c.productCount.toLocaleString(lang)} {dict.common.products}
                   </span>
                 </span>
                 <ArrowRight className="size-4 shrink-0 text-brand-strong transition-transform group-hover:translate-x-0.5" />
@@ -347,7 +317,7 @@ export default function HomePage() {
             className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
           >
             <Layers className="size-4" />
-            Browse the full catalog
+            {t.browseFullCatalog}
           </Link>
         </div>
       </section>
@@ -357,12 +327,12 @@ export default function HomePage() {
         <div className="container-px grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <SectionHeader
-              eyebrow="Seller tools"
-              title="A workspace for your whole operation"
-              description="Route orders, reply same-day to your buyers and track production from one dashboard. Connected to our fulfillment platform — live for every seller account."
+              eyebrow={t.toolsEyebrow}
+              title={t.toolsTitle}
+              description={t.toolsDescription}
             />
             <ul className="mt-8 grid gap-5 sm:grid-cols-2">
-              {TOOL_FEATURES.map((f) => (
+              {toolFeatures.map((f) => (
                 <li key={f.title} className="flex items-start gap-3">
                   <span className="mt-0.5 grid size-9 shrink-0 place-items-center rounded-lg bg-background text-brand-strong ring-1 ring-border">
                     <f.icon className="size-4" />
@@ -380,7 +350,7 @@ export default function HomePage() {
             </ul>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/sell" className={cn(buttonVariants({ size: "lg" }))}>
-                Apply to sell
+                {t.applyToSell}
                 <ArrowRight className="size-4" />
               </Link>
             </div>
@@ -398,7 +368,7 @@ export default function HomePage() {
                   <span className="size-2.5 rounded-full bg-brand/50" />
                   <span className="size-2.5 rounded-full bg-evergreen/50" />
                   <span className="ml-2 font-heading text-sm font-semibold text-foreground">
-                    Seller Portal
+                    {t.mockPortal}
                   </span>
                 </div>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-evergreen/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-evergreen">
@@ -406,15 +376,15 @@ export default function HomePage() {
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-evergreen opacity-60 motion-reduce:hidden" />
                     <span className="relative inline-flex size-1.5 rounded-full bg-evergreen" />
                   </span>
-                  Live
+                  {t.mockLive}
                 </span>
               </div>
 
               <div className="mt-4 grid grid-cols-3 gap-3">
                 {[
-                  { k: "Orders today", v: "24" },
-                  { k: "In production", v: "11" },
-                  { k: "Shipped", v: "318" },
+                  { k: t.mockOrdersToday, v: "24" },
+                  { k: t.mockInProduction, v: "11" },
+                  { k: t.mockShipped, v: "318" },
                 ].map((s) => (
                   <div key={s.k} className="rounded-xl bg-secondary/60 p-3">
                     <div className="font-heading text-xl font-bold text-foreground">
@@ -427,9 +397,9 @@ export default function HomePage() {
 
               <div className="mt-4 space-y-2.5">
                 {[
-                  { id: "#FP-2041", s: "Engraving", tone: "bg-brand/15 text-brand-strong" },
-                  { id: "#FP-2040", s: "Reply sent", tone: "bg-secondary text-muted-foreground" },
-                  { id: "#FP-2039", s: "Shipped", tone: "bg-evergreen/15 text-evergreen" },
+                  { id: "#FP-2041", s: t.mockStatusEngraving, tone: "bg-brand/15 text-brand-strong" },
+                  { id: "#FP-2040", s: t.mockStatusReplied, tone: "bg-secondary text-muted-foreground" },
+                  { id: "#FP-2039", s: t.mockStatusShipped, tone: "bg-evergreen/15 text-evergreen" },
                 ].map((r) => (
                   <div
                     key={r.id}
@@ -454,17 +424,17 @@ export default function HomePage() {
       <section className="container-px py-20 lg:py-28">
         <SectionHeader
           align="center"
-          eyebrow="Trusted by resellers"
-          title="Built to make you look good"
-          description="Sell with confidence on a partner that ships on time, on brand and on quality."
+          eyebrow={t.proofEyebrow}
+          title={t.proofTitle}
+          description={t.proofDescription}
         />
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { counter: true, v: productCount, suffix: "+", display: "", label: "Products to sell" },
-            { counter: true, v: categories.length, suffix: "", display: "", label: "Product categories" },
-            { counter: false, v: 0, suffix: "", display: "USA", label: "Made to order" },
-            { counter: false, v: 0, suffix: "", display: "Same day", label: "Printing & shipping" },
+            { counter: true, v: productCount, suffix: "+", display: "", label: t.proofProducts },
+            { counter: true, v: categories.length, suffix: "", display: "", label: t.proofCategories },
+            { counter: false, v: 0, suffix: "", display: t.statProductionValue, label: t.proofMadeToOrder },
+            { counter: false, v: 0, suffix: "", display: t.proofSameDay, label: t.proofPrintingShipping },
           ].map((s, i) => (
             <Reveal key={s.label} delay={i * 0.06}>
               <div className="rounded-2xl border border-border bg-card p-6 text-center shadow-card">
@@ -508,42 +478,40 @@ export default function HomePage() {
 
           <div className="relative mx-auto max-w-2xl text-center">
             <span className="text-xs font-semibold uppercase tracking-[0.18em] text-brand">
-              Start today
+              {t.ctaEyebrow}
             </span>
             <h2 className="mt-3 text-h2 text-ink-foreground">
-              Start dropshipping under your brand
+              {t.ctaTitle}
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lead text-ink-muted">
-              Apply to become a reseller or send us a quote. We&apos;ll reply
-              the same business day with wholesale pricing — then ship same-day
-              on orders placed before 2pm ET.
+              {t.ctaBody.replace("{cutoff}", cutoff)}
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link href="/sell" className={cn(buttonVariants({ variant: "brand", size: "lg" }))}>
-                Apply to sell
+                {t.applyToSell}
                 <ArrowRight className="size-4" />
               </Link>
               <Link
                 href="/quote"
                 className="inline-flex h-11 items-center justify-center gap-2 rounded-lg border border-white/25 px-6 text-sm font-medium text-ink-foreground transition-colors hover:bg-white/10"
               >
-                Request a quote
+                {t.requestQuote}
               </Link>
             </div>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-ink-muted">
               <span className="flex items-center gap-1.5">
                 <ShieldCheck className="size-3.5 text-brand" />
-                No account required to quote
+                {t.ctaNoAccount}
               </span>
               <span className="flex items-center gap-1.5">
                 <Clock className="size-3.5 text-brand" />
-                One-business-day reply
+                {t.ctaOneDayReply}
               </span>
               <span className="flex items-center gap-1.5">
                 <MapPin className="size-3.5 text-brand" />
-                {site.madeIn}
+                {dict.site.madeIn}
               </span>
             </div>
           </div>
