@@ -1,25 +1,28 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/components/locale-link";
 import { FileText } from "lucide-react";
 import { useQuote } from "@/components/quote-provider";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useDict } from "@/components/i18n-provider";
 
 /** Header link to the request-for-quote, with a live line-count badge. */
 export function QuoteIndicator({ className }: { className?: string }) {
   const { count, hydrated } = useQuote();
+  const dict = useDict();
   const show = hydrated && count > 0;
+  const label = show
+    ? `${dict.quote.metaTitle} — ${count} ${
+        count === 1 ? dict.quoteWidget.itemOne : dict.quoteWidget.itemMany
+      }`
+    : dict.quote.metaTitle;
 
   return (
     <Link
       href="/quote"
-      aria-label={
-        show ? `Request a quote — ${count} item${count === 1 ? "" : "s"}` : "Request a quote"
-      }
-      title={
-        show ? `Request a quote — ${count} item${count === 1 ? "" : "s"}` : "Request a quote"
-      }
+      aria-label={label}
+      title={label}
       className={cn(buttonVariants({ variant: "ghost", size: "icon-sm" }), "relative", className)}
     >
       <FileText className="size-4" />

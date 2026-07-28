@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useCallback, useState } from "react";
 import { cn } from "@/lib/utils";
+import { useDict } from "@/components/i18n-provider";
 
 interface ProductGalleryProps {
   images: string[];
@@ -21,6 +22,7 @@ interface ProductGalleryProps {
  * handed.
  */
 export function ProductGallery({ images, alt }: ProductGalleryProps) {
+  const dict = useDict();
   const [active, setActive] = useState(0);
   const count = images.length;
 
@@ -70,7 +72,11 @@ export function ProductGallery({ images, alt }: ProductGalleryProps) {
           key={images[activeIndex]}
           src={images[activeIndex]}
           alt={
-            count > 1 ? `${alt} — view ${activeIndex + 1} of ${count}` : alt
+            count > 1
+              ? `${alt} — ${dict.product.viewOf
+                  .replace("{index}", String(activeIndex + 1))
+                  .replace("{count}", String(count))}`
+              : alt
           }
           fill
           priority={activeIndex === 0}
@@ -98,7 +104,9 @@ export function ProductGallery({ images, alt }: ProductGalleryProps) {
               key={`${src}-${i}`}
               type="button"
               onClick={() => setActive(i)}
-              aria-label={`Show image ${i + 1} of ${count}`}
+              aria-label={dict.product.showImage
+                .replace("{index}", String(i + 1))
+                .replace("{count}", String(count))}
               aria-pressed={i === activeIndex}
               className={cn(
                 "relative aspect-square overflow-hidden rounded-xl border bg-white transition",

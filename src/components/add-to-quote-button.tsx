@@ -1,11 +1,14 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/components/locale-link";
 import { toast } from "sonner";
 import { Check, Plus, FileText } from "lucide-react";
 import { useQuote, type QuoteItem } from "@/components/quote-provider";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
+import { useDict, useLocale } from "@/components/i18n-provider";
+import { localizedPath } from "@/lib/i18n";
 
 type AddItem = Omit<QuoteItem, "quantity">;
 
@@ -24,6 +27,10 @@ export function AddToQuoteButton({
   className?: string;
 }) {
   const { has, addItem, removeItem, hydrated } = useQuote();
+  const dict = useDict();
+  const locale = useLocale();
+  const router = useRouter();
+  const t = dict.quoteWidget;
   const inQuote = has(item.id);
 
   if (variant === "icon") {
@@ -31,16 +38,23 @@ export function AddToQuoteButton({
       <button
         type="button"
         aria-pressed={inQuote}
-        aria-label={inQuote ? `Remove ${item.name} from quote` : `Add ${item.name} to quote`}
-        title={inQuote ? "In your quote — click to remove" : "Add to quote"}
+        aria-label={
+          inQuote
+            ? t.removeAria.replace("{name}", item.name)
+            : t.addAria.replace("{name}", item.name)
+        }
+        title={inQuote ? t.inQuoteTitle : t.add}
         onClick={() => {
           if (inQuote) {
             removeItem(item.id);
-            toast("Removed from your quote");
+            toast(t.removed);
           } else {
             addItem(item);
-            toast.success("Added to your quote", {
-              action: { label: "View", onClick: () => location.assign("/quote") },
+            toast.success(t.added, {
+              action: {
+                label: t.view,
+                onClick: () => router.push(localizedPath("/quote", locale)),
+              },
             });
           }
         }}
@@ -65,7 +79,7 @@ export function AddToQuoteButton({
           className={cn(buttonVariants({ variant: "brand", size: "lg" }), "flex-1")}
         >
           <FileText className="size-4" />
-          View quote
+          {t.viewQuote}
         </Link>
         <Button
           type="button"
@@ -73,10 +87,10 @@ export function AddToQuoteButton({
           size="lg"
           onClick={() => {
             removeItem(item.id);
-            toast("Removed from your quote");
+            toast(t.removed);
           }}
         >
-          Remove
+          {t.remove}
         </Button>
       </div>
     );
@@ -91,13 +105,16 @@ export function AddToQuoteButton({
       className={cn("flex-1", className)}
       onClick={() => {
         addItem(item);
-        toast.success("Added to your quote", {
-          action: { label: "View quote", onClick: () => location.assign("/quote") },
+        toast.success(t.added, {
+          action: {
+            label: t.viewQuote,
+            onClick: () => router.push(localizedPath("/quote", locale)),
+          },
         });
       }}
     >
       <Plus className="size-4" />
-      Add to quote
+      {t.add}
     </Button>
   );
 }

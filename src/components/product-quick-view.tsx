@@ -1,11 +1,12 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/components/locale-link";
 import { Dialog } from "@base-ui/react/dialog";
 import { X, ArrowRight } from "lucide-react";
 import { ProductGallery } from "@/components/product-gallery";
 import { AddToQuoteButton } from "@/components/add-to-quote-button";
 import { cloudinary } from "@/lib/format";
+import { useDict } from "@/components/i18n-provider";
 import type { Product } from "@/data/types";
 
 /**
@@ -22,6 +23,7 @@ export function ProductQuickView({
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }) {
+  const dict = useDict();
   const images =
     product.images && product.images.length > 0
       ? product.images
@@ -37,7 +39,7 @@ export function ProductQuickView({
           className="fixed left-1/2 top-1/2 z-50 grid max-h-[calc(100vh-2rem)] w-[min(100vw-2rem,960px)] -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-3xl border border-border bg-background shadow-2xl outline-none transition data-[open]:opacity-100 data-[open]:scale-100 data-[closed]:opacity-0 data-[closed]:scale-95 lg:grid-cols-[5fr_4fr]"
         >
           <Dialog.Close
-            aria-label="Close quick view"
+            aria-label={dict.product.closeQuickView}
             className="absolute right-4 top-4 z-10 rounded-full bg-background/85 p-2 text-muted-foreground shadow-sm backdrop-blur transition hover:bg-secondary hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           >
             <X className="size-4" />
@@ -86,7 +88,7 @@ export function ProductQuickView({
                 onClick={() => onOpenChange(false)}
                 className="inline-flex items-center justify-center gap-1.5 rounded-xl py-2 text-sm font-medium text-brand-strong transition-colors hover:text-foreground"
               >
-                View full details
+                {dict.product.viewFullDetails}
                 <ArrowRight className="size-3.5" />
               </Link>
             </div>

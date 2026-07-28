@@ -2,11 +2,13 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
+import { Link } from "@/components/locale-link";
 import Image from "next/image";
 import { Search, X, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { formatPrice } from "@/lib/format";
+import { useDict, useLocale } from "@/components/i18n-provider";
+import { localizedPath } from "@/lib/i18n";
 import type { SearchResult } from "@/data/types";
 
 export function SearchBox({
@@ -19,6 +21,9 @@ export function SearchBox({
   autoFocus?: boolean;
 }) {
   const router = useRouter();
+  const dict = useDict();
+  const locale = useLocale();
+  const t = dict.search;
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -77,7 +82,9 @@ export function SearchBox({
     if (!term) return;
     setOpen(false);
     onNavigate?.();
-    router.push(`/search?q=${encodeURIComponent(term)}`);
+    router.push(
+      `${localizedPath("/search", locale)}?q=${encodeURIComponent(term)}`,
+    );
   }
 
   function handleNavigate() {
@@ -97,7 +104,7 @@ export function SearchBox({
         }}
       >
         <label htmlFor={inputId} className="sr-only">
-          Search products
+          {t.ariaLabel}
         </label>
         <Search
           className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
@@ -120,7 +127,7 @@ export function SearchBox({
           aria-expanded={showList && results.length > 0}
           aria-controls={listboxId}
           aria-autocomplete="list"
-          placeholder="Search engraved gifts…"
+          placeholder={t.boxPlaceholder}
           className="h-11 w-full rounded-full border border-input bg-background pl-9 pr-9 text-sm outline-none transition-colors placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/40 [&::-webkit-search-cancel-button]:appearance-none"
         />
         {loading ? (
@@ -130,7 +137,7 @@ export function SearchBox({
             type="button"
             onClick={() => setQuery("")}
             className="absolute right-2.5 top-1/2 -translate-y-1/2 rounded-full p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-            aria-label="Clear search"
+            aria-label={t.clear}
           >
             <X className="size-4" />
           </button>
@@ -179,14 +186,16 @@ export function SearchBox({
                 onClick={goToSearch}
                 className="mt-0.5 w-full rounded-lg px-3 py-2 text-left text-sm font-medium text-brand-strong outline-none transition-colors hover:bg-muted focus-visible:bg-muted"
               >
-                See all results for “{query.trim()}”
+                {t.seeAllFor} “{query.trim()}”
               </button>
             </>
           ) : loading ? (
-            <p className="px-3 py-3 text-sm text-muted-foreground">Searching…</p>
+            <p className="px-3 py-3 text-sm text-muted-foreground">
+              {t.searching}
+            </p>
           ) : (
             <p className="px-3 py-3 text-sm text-muted-foreground">
-              No matches for “{query.trim()}”.
+              {t.noMatches} “{query.trim()}”.
             </p>
           )}
         </div>

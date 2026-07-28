@@ -2,7 +2,7 @@
 
 import type { CSSProperties, KeyboardEvent, ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import { Link } from "@/components/locale-link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
