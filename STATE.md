@@ -28,3 +28,13 @@ _Son güncelleme: 2026-07-27 (Claude) — son iş: 21 Tem SEO/GSC düzeltmesi_
 
 ## Sırada / açık işler
 - LZB ürünü Shopify tarafında DRAFT, fiyat onayı bekliyor (dağıtım boru hattı: FomaHub master → fomaprint + Shopify, ItemAsset kanal-özel görsel tablosu kuruldu).
+
+## Çift dillilik (28 Tem 2026 — CANLI)
+- Site artık İngilizce + Türkçe. İngilizce varsayılan ve **çıplak URL'lerde kalır** (`/pricing`); Türkçe `/tr` önekiyle (`/tr/pricing`). `/en/...` çağrıları çıplak sürüme 308 ile döner — mevcut Google indeksi bozulmadı.
+- Rota ağacı `src/app/[lang]/...`; `src/proxy.ts` (Next 16'da middleware'in yeni adı) çıplak yolları dahili olarak `/en/...`'e rewrite eder.
+- Metinler: `src/dictionaries/en.json` + `tr.json`. **Bileşene metin yazılmaz.** `en.json` hem tipi hem çalışma zamanı yedeğini verir (çevrilmemiş anahtar İngilizce basar, boş kalmaz).
+- Katalog verisi: `src/data/catalog-tr.json` (7 kategori + 54 alt kategori + 847 ürün adı + blurb'ler). `products.json` İNGİLİZCE KALIR — tedarikçi feed'i ve SKU sözleşmesi.
+- Ürün açıklamaları şablondan üretilir; şablon sözlükte (`src/lib/product-copy.ts`), böylece feed değişince çeviri bayatlamaz.
+- Dil seçici header'da (globe + EN/TR), gerçek `<a>` linkleri; hreflang + canonical + çift dilli sitemap (1838 URL) kuruldu.
+- Bilerek İngilizce: şifreli `/catalog` partner fiyat listesi (Printify/partner başvurusu için İngilizce belge) ve `/styleguide`. Hukuki sayfalar çevrildi ama TR sürümde "uyuşmazlıkta İngilizce geçerlidir" notu var.
+- Çeviri boru hattı: `.scrape/i18n/` (gitignore'lu) — `dump-catalog.mts`, `translate.py` (katalog), `translate-dict.py` (sözlük), `UI-GLOSSARY.md`. DERS: Codex alt süreçte TTY olmayınca stdin bekleyip kilitleniyor → `stdin=DEVNULL` şart.
