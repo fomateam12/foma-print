@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
+import { Link } from "@/components/locale-link";
 import Image from "next/image";
 import { Search, X, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";

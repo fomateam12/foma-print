@@ -1,28 +1,37 @@
-import Link from "next/link";
 import { Mail, MapPin, ArrowRight } from "lucide-react";
+import { Link } from "@/components/locale-link";
 import { Logo } from "@/components/logo";
 import { buttonVariants } from "@/components/ui/button";
 import { getCategories } from "@/data/catalog";
 import { cn } from "@/lib/utils";
 import { site } from "@/lib/site";
+import type { Dictionary } from "@/lib/dictionaries";
+import type { Locale } from "@/lib/i18n";
+import { categoryName } from "@/lib/catalog-i18n";
 
-const PLATFORM_LINKS = [
-  { label: "How it works", href: "/#how" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Apply to sell", href: "/sell" },
-  { label: "Request a quote", href: "/quote" },
-];
-
-const COMPANY_LINKS = [
-  { label: "About FomaPrint", href: "/about" },
-  { label: "Contact", href: "/contact" },
-  { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms of Service", href: "/terms" },
-];
-
-export function SiteFooter() {
+export function SiteFooter({
+  locale,
+  dict,
+}: {
+  locale: Locale;
+  dict: Dictionary;
+}) {
   const categories = getCategories();
   const year = new Date().getFullYear();
+
+  const platformLinks = [
+    { label: dict.footer.howItWorks, href: "/#how" },
+    { label: dict.footer.pricing, href: "/pricing" },
+    { label: dict.footer.applyToSell, href: "/sell" },
+    { label: dict.footer.requestQuote, href: "/quote" },
+  ];
+
+  const companyLinks = [
+    { label: dict.footer.about, href: "/about" },
+    { label: dict.footer.contact, href: "/contact" },
+    { label: dict.footer.privacyPolicy, href: "/privacy" },
+    { label: dict.footer.termsOfService, href: "/terms" },
+  ];
 
   return (
     <footer className="mt-24 border-t border-border bg-secondary/40">
@@ -33,7 +42,7 @@ export function SiteFooter() {
           <div className="space-y-5">
             <Logo />
             <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
-              {site.description}
+              {dict.site.description}
             </p>
             <ul className="space-y-2.5 text-sm text-muted-foreground">
               <li>
@@ -70,7 +79,7 @@ export function SiteFooter() {
           {/* Catalog */}
           <div>
             <h2 className="font-heading text-sm font-semibold text-foreground">
-              Catalog
+              {dict.footer.catalog}
             </h2>
             <ul className="mt-4 space-y-2.5 text-sm">
               {categories.map((c) => (
@@ -79,7 +88,7 @@ export function SiteFooter() {
                     href={`/category/${c.slug}`}
                     className="text-muted-foreground transition-colors hover:text-foreground"
                   >
-                    {c.name}
+                    {categoryName(c.name, locale)}
                   </Link>
                 </li>
               ))}
@@ -88,7 +97,7 @@ export function SiteFooter() {
                   href="/categories"
                   className="font-medium text-brand-strong hover:underline"
                 >
-                  All categories
+                  {dict.footer.allCategories}
                 </Link>
               </li>
             </ul>
@@ -97,10 +106,10 @@ export function SiteFooter() {
           {/* Platform */}
           <div>
             <h2 className="font-heading text-sm font-semibold text-foreground">
-              Platform
+              {dict.footer.platform}
             </h2>
             <ul className="mt-4 space-y-2.5 text-sm">
-              {PLATFORM_LINKS.map((l) => (
+              {platformLinks.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
@@ -116,10 +125,10 @@ export function SiteFooter() {
           {/* Company + CTA */}
           <div>
             <h2 className="font-heading text-sm font-semibold text-foreground">
-              Company
+              {dict.footer.company}
             </h2>
             <ul className="mt-4 space-y-2.5 text-sm">
-              {COMPANY_LINKS.map((l) => (
+              {companyLinks.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
@@ -134,7 +143,7 @@ export function SiteFooter() {
               href="/sell"
               className={cn(buttonVariants({ variant: "brand", size: "sm" }), "mt-5")}
             >
-              Apply to sell
+              {dict.footer.applyToSell}
               <ArrowRight className="size-4" />
             </Link>
           </div>
@@ -144,15 +153,15 @@ export function SiteFooter() {
       <div className="border-t border-border">
         <div className="container-px flex flex-col items-center justify-between gap-3 py-5 text-xs text-muted-foreground sm:flex-row">
           <p>
-            © {year} {site.legalName} · Est. {site.foundedYear} ·{" "}
-            {site.location} · {site.madeIn}
+            © {year} {site.legalName} · {dict.footer.established}{" "}
+            {site.foundedYear} · {site.location} · {dict.site.madeIn}
           </p>
           <div className="flex items-center gap-5">
             <Link href="/privacy" className="hover:text-foreground">
-              Privacy
+              {dict.footer.privacy}
             </Link>
             <Link href="/terms" className="hover:text-foreground">
-              Terms
+              {dict.footer.terms}
             </Link>
           </div>
         </div>

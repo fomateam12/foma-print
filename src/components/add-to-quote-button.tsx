@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/components/locale-link";
 import { toast } from "sonner";
 import { Check, Plus, FileText } from "lucide-react";
 import { useQuote, type QuoteItem } from "@/components/quote-provider";

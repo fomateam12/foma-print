@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/components/locale-link";
 import { FileText } from "lucide-react";
 import { useQuote } from "@/components/quote-provider";
 import { buttonVariants } from "@/components/ui/button";

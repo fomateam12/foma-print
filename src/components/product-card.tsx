@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/components/locale-link";
 import Image from "next/image";
 import { useState, type ReactNode } from "react";
 import { Eye } from "lucide-react";

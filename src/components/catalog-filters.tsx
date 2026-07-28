@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/components/locale-link";
 import { X } from "lucide-react";
 import { FilterChip } from "@/components/filter-chip";
 import type {

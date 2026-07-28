@@ -1,0 +1,61 @@
+{
+  "site": {
+    "tagline": "Satıcılar için talebe göre baskı ve lazer kazıma",
+    "description": "FomaPrint, online satıcılar için ABD merkezli talebe göre baskı ve lazer kazıma iş ortağıdır. Siz satarsınız — biz termos, hediyelik ve dekor ürünlerini sizin markanızla kişiselleştirir, üretir ve gizli kargo (blind drop-ship) ile müşterinize göndeririz. FOMA FAMILY LLC tarafından ABD'de siparişe özel üretilir.",
+    "positioning": "Siz satın. Kazımasını, üretimini ve kargosunu biz yapalım — sizin markanızla.",
+    "madeIn": "ABD'de siparişe özel üretim",
+    "keywords": [
+      "satıcılar için talebe göre baskı",
+      "toptan lazer kazıma",
+      "beyaz etiket kişiselleştirme",
+      "ABD'den gizli kargo",
+      "Etsy tedarik ortağı",
+      "toptan özel termos",
+      "toplu kazımalı bardak",
+      "POD tedarikçisi",
+      "ABD üretimi talebe göre baskı",
+      "FomaPrint"
+    ]
+  },
+  "common": {
+    "skipToContent": "İçeriğe geç",
+    "language": "Dil",
+    "changeLanguage": "Dili değiştir",
+    "items": "ürün",
+    "products": "ürün"
+  },
+  "header": {
+    "announcement": "Toptan talebe göre baskı ve lazer kazıma · ABD'den gizli kargo",
+    "announcementExtra": "Aynı gün baskı · Aynı gün kargo · Aynı gün yanıt",
+    "openMenu": "Menüyü aç",
+    "siteNavigation": "Site menüsü",
+    "howItWorks": "Nasıl çalışır",
+    "catalog": "Katalog",
+    "shipping": "Kargo",
+    "faq": "SSS",
+    "requestQuote": "Teklif alın",
+    "applyToSell": "Satıcı başvurusu",
+    "fullCatalog": "Tüm katalog",
+    "productsReady": "Kişiselleştirmeye hazır {count}+ ürün",
+    "megaMenuBlurb": "Termoslar, hediyelikler, çerçeveler ve ofis ürünleri — sizin markanızla kazınır ve gizli kargoyla gönderilir.",
+    "browseEverything": "Hepsine göz atın",
+    "shopAll": "Tüm {category} ürünleri"
+  },
+  "footer": {
+    "catalog": "Katalog",
+    "allCategories": "Tüm kategoriler",
+    "platform": "Platform",
+    "howItWorks": "Nasıl çalışır",
+    "pricing": "Fiyatlandırma",
+    "applyToSell": "Satıcı başvurusu",
+    "requestQuote": "Teklif alın",
+    "company": "Şirket",
+    "about": "FomaPrint hakkında",
+    "contact": "İletişim",
+    "privacyPolicy": "Gizlilik Politikası",
+    "termsOfService": "Kullanım Şartları",
+    "privacy": "Gizlilik",
+    "terms": "Şartlar",
+    "established": "Kuruluş"
+  }
+}

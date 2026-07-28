@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import { Link } from "@/components/locale-link";
 import { ArrowRight } from "lucide-react";
 import { Marquee } from "@/components/marquee";
 import { ProductImage } from "@/components/product-image";

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import { Link } from "@/components/locale-link";
 import {
   Menu,
   ChevronRight,
@@ -30,6 +30,9 @@ import { QuoteIndicator } from "@/components/quote-indicator";
 import { Logo } from "@/components/logo";
 import { ProductImage } from "@/components/product-image";
 import { CategoryIcon } from "@/components/category-icon";
+import { LanguageSwitcher } from "@/components/language-switcher";
+import { useI18n } from "@/components/i18n-provider";
+import { categoryName, subcategoryName } from "@/lib/catalog-i18n";
 import { cn } from "@/lib/utils";
 import type { IconKey } from "@/data/types";
 
@@ -45,11 +48,6 @@ export interface NavCategory {
 
 // Header nav: How It Works · Catalog · Shipping · FAQ (+ Apply to sell CTA).
 // Catalog is the mega-menu trigger rendered between item 0 and items 1..n.
-const NAV_LINKS = [
-  { label: "How it works", href: "/how-it-works" },
-  { label: "Shipping", href: "/shipping" },
-  { label: "FAQ", href: "/faq" },
-];
 
 export function HeaderNav({
   nav,
@@ -58,6 +56,12 @@ export function HeaderNav({
   nav: NavCategory[];
   totalProducts: number;
 }) {
+  const { locale, dict } = useI18n();
+  const navLinks = [
+    { label: dict.header.howItWorks, href: "/how-it-works" },
+    { label: dict.header.shipping, href: "/shipping" },
+    { label: dict.header.faq, href: "/faq" },
+  ];
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -75,10 +79,10 @@ export function HeaderNav({
         <div className="container-px flex h-9 items-center justify-center gap-2 text-center text-[0.78rem] font-medium">
           <Sparkles className="size-3.5 shrink-0 text-brand" aria-hidden="true" />
           <span className="min-w-0 truncate">
-            Wholesale POD &amp; laser engraving · Blind drop-ship from the USA
+            {dict.header.announcement}
             <span className="hidden md:inline">
               {" "}
-              · Same-day printing · Same-day shipping · Same-day reply
+              · {dict.header.announcementExtra}
             </span>
           </span>
         </div>
@@ -100,7 +104,7 @@ export function HeaderNav({
                 <Button
                   variant="ghost"
                   size="icon"
-                  aria-label="Open menu"
+                  aria-label={dict.header.openMenu}
                   className="lg:hidden"
                 />
               }
@@ -109,7 +113,7 @@ export function HeaderNav({
             </SheetTrigger>
             <SheetContent side="left" className="w-[88vw] max-w-sm gap-0 p-0">
               <SheetHeader className="border-b border-border p-4">
-                <SheetTitle className="sr-only">Site navigation</SheetTitle>
+                <SheetTitle className="sr-only">{dict.header.siteNavigation}</SheetTitle>
                 <Logo onClick={() => setMobileOpen(false)} />
               </SheetHeader>
 
@@ -119,7 +123,7 @@ export function HeaderNav({
 
               <nav className="flex-1 overflow-y-auto px-2 pb-4">
                 <p className="px-3 pb-1 pt-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-                  Catalog
+                  {dict.header.catalog}
                 </p>
                 {nav.map((cat) => (
                   <details key={cat.slug} className="group border-b border-border/60">
@@ -139,7 +143,7 @@ export function HeaderNav({
                         onClick={() => setMobileOpen(false)}
                         className="block rounded-md py-2 pl-10 pr-3 text-sm font-medium text-brand-strong hover:bg-muted"
                       >
-                        Shop all {cat.name}
+                        {dict.header.shopAll.replace("{category}", categoryName(cat.name, locale))}
                       </Link>
                       {cat.subcategories.map((sc) => (
                         <Link
@@ -148,7 +152,7 @@ export function HeaderNav({
                           onClick={() => setMobileOpen(false)}
                           className="block rounded-md py-2 pl-10 pr-3 text-sm text-muted-foreground hover:bg-muted hover:text-foreground"
                         >
-                          {sc.name}
+                          {subcategoryName(sc.name, locale)}
                         </Link>
                       ))}
                     </div>
@@ -156,7 +160,7 @@ export function HeaderNav({
                 ))}
 
                 <div className="mt-3 flex flex-col gap-1 px-1">
-                  {NAV_LINKS.map((l) => (
+                  {navLinks.map((l) => (
                     <Link
                       key={l.href}
                       href={l.href}
@@ -172,8 +176,12 @@ export function HeaderNav({
                     className="flex items-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium text-foreground hover:bg-muted"
                   >
                     <FileText className="size-4 text-brand-strong" />
-                    Request a quote
+                    {dict.header.requestQuote}
                   </Link>
+                </div>
+
+                <div className="mt-4 px-4 sm:hidden">
+                  <LanguageSwitcher />
                 </div>
 
                 <div className="mt-4 flex flex-col gap-2 px-1">
@@ -182,7 +190,7 @@ export function HeaderNav({
                     onClick={() => setMobileOpen(false)}
                     className={cn(buttonVariants({ variant: "brand", size: "lg" }))}
                   >
-                    Apply to sell
+                    {dict.header.applyToSell}
                   </Link>
                 </div>
               </nav>
@@ -199,11 +207,11 @@ export function HeaderNav({
                   render={<Link href="/how-it-works" />}
                   className="h-9 px-2.5 font-medium"
                 >
-                  How it works
+                  {dict.header.howItWorks}
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Catalog</NavigationMenuTrigger>
+                <NavigationMenuTrigger>{dict.header.catalog}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <div className="grid w-[760px] max-w-[92vw] grid-cols-[1fr_1.7fr] gap-4 p-4">
                     <Link
@@ -212,19 +220,20 @@ export function HeaderNav({
                     >
                       <div className="space-y-2">
                         <span className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-strong">
-                          Full catalog
+                          {dict.header.fullCatalog}
                         </span>
                         <h3 className="font-heading text-lg font-semibold text-foreground">
-                          {totalProducts.toLocaleString()}+ products ready to
-                          personalize
+                          {dict.header.productsReady.replace(
+                            "{count}",
+                            totalProducts.toLocaleString(locale),
+                          )}
                         </h3>
                         <p className="text-xs leading-relaxed text-muted-foreground">
-                          Drinkware, gifts, frames and office goods — engraved
-                          and blind-shipped under your brand.
+                          {dict.header.megaMenuBlurb}
                         </p>
                       </div>
                       <span className="inline-flex items-center gap-1 text-sm font-semibold text-brand-strong">
-                        Browse everything
+                        {dict.header.browseEverything}
                         <ArrowRight className="size-4 transition-transform group-hover/promo:translate-x-0.5" />
                       </span>
                     </Link>
@@ -248,10 +257,11 @@ export function HeaderNav({
                             />
                             <span className="min-w-0">
                               <span className="block truncate text-sm font-medium text-foreground">
-                                {cat.name}
+                                {categoryName(cat.name, locale)}
                               </span>
                               <span className="block text-xs text-muted-foreground">
-                                {cat.productCount.toLocaleString()} items
+                                {cat.productCount.toLocaleString(locale)}{" "}
+                                {dict.common.items}
                               </span>
                             </span>
                           </NavigationMenuLink>
@@ -267,7 +277,7 @@ export function HeaderNav({
                                     }
                                     className="block truncate rounded px-2 py-1 text-xs text-muted-foreground hover:text-brand-strong"
                                   >
-                                    {sc.name}
+                                    {subcategoryName(sc.name, locale)}
                                   </NavigationMenuLink>
                                 </li>
                               ))}
@@ -280,7 +290,7 @@ export function HeaderNav({
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              {NAV_LINKS.slice(1).map((l) => (
+              {navLinks.slice(1).map((l) => (
                 <NavigationMenuItem key={l.href}>
                   <NavigationMenuLink
                     render={<Link href={l.href} />}
@@ -297,6 +307,8 @@ export function HeaderNav({
           <div className="ml-auto flex items-center gap-2">
             <SearchBox className="hidden w-44 md:block lg:w-56 xl:w-64" />
 
+            <LanguageSwitcher className="hidden sm:flex" />
+
             <QuoteIndicator />
 
             <Link
@@ -306,7 +318,7 @@ export function HeaderNav({
                 "hidden sm:inline-flex",
               )}
             >
-              Apply to sell
+              {dict.header.applyToSell}
             </Link>
           </div>
         </div>

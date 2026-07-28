@@ -1,0 +1,61 @@
+{
+  "site": {
+    "tagline": "Print-on-demand & laser engraving for resellers",
+    "description": "FomaPrint is a U.S. print-on-demand and laser-engraving partner for online resellers. You sell — we personalize, produce and blind-ship drinkware, gifts and décor under your brand. Made to order in the USA by FOMA FAMILY LLC.",
+    "positioning": "You sell it. We engrave, make and ship it — under your brand.",
+    "madeIn": "Made to order in the USA",
+    "keywords": [
+      "print on demand for resellers",
+      "wholesale laser engraving",
+      "white label personalization",
+      "blind drop shipping USA",
+      "Etsy fulfillment partner",
+      "custom drinkware wholesale",
+      "engraved tumblers bulk",
+      "POD supplier",
+      "made in USA print on demand",
+      "FomaPrint"
+    ]
+  },
+  "common": {
+    "skipToContent": "Skip to content",
+    "language": "Language",
+    "changeLanguage": "Change language",
+    "items": "items",
+    "products": "products"
+  },
+  "header": {
+    "announcement": "Wholesale POD & laser engraving · Blind drop-ship from the USA",
+    "announcementExtra": "Same-day printing · Same-day shipping · Same-day reply",
+    "openMenu": "Open menu",
+    "siteNavigation": "Site navigation",
+    "howItWorks": "How it works",
+    "catalog": "Catalog",
+    "shipping": "Shipping",
+    "faq": "FAQ",
+    "requestQuote": "Request a quote",
+    "applyToSell": "Apply to sell",
+    "fullCatalog": "Full catalog",
+    "productsReady": "{count}+ products ready to personalize",
+    "megaMenuBlurb": "Drinkware, gifts, frames and office goods — engraved and blind-shipped under your brand.",
+    "browseEverything": "Browse everything",
+    "shopAll": "Shop all {category}"
+  },
+  "footer": {
+    "catalog": "Catalog",
+    "allCategories": "All categories",
+    "platform": "Platform",
+    "howItWorks": "How it works",
+    "pricing": "Pricing",
+    "applyToSell": "Apply to sell",
+    "requestQuote": "Request a quote",
+    "company": "Company",
+    "about": "About FomaPrint",
+    "contact": "Contact",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "established": "Est."
+  }
+}

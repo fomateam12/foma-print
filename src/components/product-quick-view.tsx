@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/components/locale-link";
 import { Dialog } from "@base-ui/react/dialog";
 import { X, ArrowRight } from "lucide-react";
 import { ProductGallery } from "@/components/product-gallery";
