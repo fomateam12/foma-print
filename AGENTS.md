@@ -114,7 +114,19 @@ another on a build-config tweak) use `git worktree add ../foma-design-<purpose>
 
 ## Project context the loop must keep in mind
 
-- Customer-facing copy is English; agent-to-operator chat is Turkish.
+- The site is bilingual (28 Jul 2026). English is the default locale and keeps
+  the bare URLs (`/pricing`); Turkish is served under `/tr`. Customer-facing
+  strings live in `src/dictionaries/{en,tr}.json` — never hardcode copy in a
+  component. `en.json` types the dictionary and is the runtime fallback, so a
+  key may ship in English before its translation lands. Catalog data
+  (categories, subcategories, 847 product names) is translated in
+  `src/data/catalog-tr.json`, keyed by SKU / English string;
+  `src/data/products.json` stays untouched English — it is the supplier feed
+  and the SKU contract. Agent-to-operator chat is Turkish.
+- Exceptions kept in English on purpose: the gated `/catalog` partner price
+  list (it exists as an English artifact for partner/Printify applications) and
+  `/styleguide` (internal). Legal pages are translated but render a notice that
+  the English version prevails.
 - Next.js 16: read `node_modules/next/dist/docs/` before writing new
   Next-specific code (see `nextjs-agent-rules` above).
 - Image origin is **Cloudflare R2** (`pub-7dbfe9f161d34085b011aea74e8f75ac.r2.dev`).
@@ -139,7 +151,7 @@ yazmadan önce node_modules/next/dist/docs/ oku) + Tailwind.
 Şu an redesign/b2b-unify dalındayız.
 
 ## Kurallar
-- Tüm müşteriye dönük metin İNGİLİZCE.
+- Müşteriye dönük metin İngilizce + Türkçe (28 Tem 2026'dan beri iki dilli); yeni metin doğrudan bileşene YAZILMAZ, `src/dictionaries/{en,tr}.json` içine girer.
 - Mevcut tasarım dilini/komponent yapısını bozma.
 - Küçük commit'lerle ilerle; her tamamlanan maddeden sonra commit at.
 - Emin olmadığın mimari kararı YAPMA — AGENTS.md'ye not düş, sabaha bırak.

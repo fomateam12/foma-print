@@ -363,7 +363,9 @@
     "sizeSentence": "Size: {size}. ",
     "longDescriptionTemplate": "The {name} is part of our {collection} collection and is precision laser-engraved to order in the USA. Customize it with a name, date, monogram, or your company logo for a sharp, permanent mark that won't fade or peel — ideal for gifts, weddings, corporate orders and milestone awards. {size}Personalization is included; volume and corporate pricing available on request.",
     "closeQuickView": "Close quick view",
-    "viewFullDetails": "View full details"
+    "viewFullDetails": "View full details",
+    "viewOf": "view {index} of {count}",
+    "showImage": "Show image {index} of {count}"
   },
   "search": {
     "metaTitle": "Search",
