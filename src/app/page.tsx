@@ -105,13 +105,14 @@ export default function HomePage() {
     <>
       {/* ----------------------------- Hero ----------------------------- */}
       <section className="relative overflow-hidden border-b border-border">
-        {/* Sunlit workbench photograph as the hero banner. The scene keeps its
-            center clear (plaster wall + bench), so the headline sits on quiet
-            image area; a cream veil tops it up for AA contrast, heavier at the
-            top and bottom where the chip and stat strip land. */}
+        {/* Sunlit studio-table photograph as the hero banner: engraved tumblers,
+            journal, board and keychain sit at the left and right edges. The scene
+            keeps its center clear (plaster wall + empty table), so the headline
+            sits on quiet image area; a cream veil tops it up for AA contrast,
+            heavier at the top and bottom where the chip and stat strip land. */}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
           <Image
-            src="/banners/hero-workbench.jpg"
+            src="/banners/hero-studio-table.jpg"
             alt=""
             fill
             priority
