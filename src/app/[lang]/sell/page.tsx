@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Link } from "@/components/locale-link";
 import {
   ArrowRight,
@@ -23,77 +24,55 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { getCategories, getProductCount } from "@/data/catalog";
 import { site } from "@/lib/site";
-import { ORDER_CUTOFF, TURNAROUND_SHORT } from "@/lib/site-copy";
+import { getDictionary } from "@/lib/dictionaries";
+import { isLocale } from "@/lib/i18n";
+import { alternatesFor } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Become a Reseller",
-  description:
-    "Apply to become a FomaPrint reseller. Get wholesale pricing on thousands of personalized, laser-engraved products with fast U.S. production and blind drop-shipping under your brand.",
-  alternates: { canonical: "/sell" },
-  openGraph: {
-    title: "Become a reseller · FomaPrint",
-    description:
-      "Wholesale pricing on thousands of personalized products with fast U.S. production and blind drop-shipping under your brand.",
-  },
-};
+export async function generateMetadata({
+  params,
+}: PageProps<"/[lang]/sell">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const t = (await getDictionary(lang)).sell;
 
-const BENEFITS = [
-  {
-    icon: Tags,
-    title: "Wholesale pricing",
-    body: "Tiered reseller discounts that scale with your volume — protect your margins on every order.",
-  },
-  {
-    icon: PackageCheck,
-    title: "Thousands of SKUs",
-    body: "A full catalog of engravable drinkware, gifts, frames and office goods — ready to list today.",
-  },
-  {
-    icon: Rocket,
-    title: TURNAROUND_SHORT,
-    body: `Made to order in our American studio — we print and ship most orders the same day on orders placed before ${ORDER_CUTOFF}, even on bulk runs.`,
-  },
-  {
-    icon: Truck,
-    title: "Blind drop-shipping",
-    body: "We ship straight to your customer in unbranded packaging — your store is the only name they see.",
-  },
-  {
-    icon: Headset,
-    title: "Dedicated support",
-    body: "A real person to help with rush orders, large projects and same-day questions when you need it.",
-  },
-  {
-    icon: DollarSign,
-    title: "No minimums",
-    body: "Test the catalog one order at a time, then unlock deeper pricing as you grow.",
-  },
-];
+  return {
+    title: t.metaTitle,
+    description: t.metaDescription,
+    alternates: alternatesFor("/sell", lang),
+    openGraph: {
+      title: `${t.metaTitle} · ${site.name}`,
+      description: t.ogDescription,
+    },
+  };
+}
 
-const APPLY_STEPS = [
-  {
-    n: "01",
-    icon: Send,
-    title: "Apply in minutes",
-    body: "Tell us about your shop and the products you'd like to sell.",
-  },
-  {
-    n: "02",
-    icon: Tags,
-    title: "Get wholesale pricing",
-    body: "We review and reply the same business day with tiered reseller rates.",
-  },
-  {
-    n: "03",
-    icon: Store,
-    title: "List & start selling",
-    body: "Add products under your brand — we engrave and blind-ship every order.",
-  },
-];
+export default async function SellPage({ params }: PageProps<"/[lang]/sell">) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
+  const t = dict.sell;
 
-export default function SellPage() {
   const productCount = getProductCount();
   const categoryCount = getCategories().length;
+
+  const benefits = [
+    { icon: Tags, title: t.benefit1Title, body: t.benefit1Body },
+    { icon: PackageCheck, title: t.benefit2Title, body: t.benefit2Body },
+    {
+      icon: Rocket,
+      title: dict.copy.turnaroundShort,
+      body: t.benefit3Body.replace("{cutoff}", dict.copy.orderCutoff),
+    },
+    { icon: Truck, title: t.benefit4Title, body: t.benefit4Body },
+    { icon: Headset, title: t.benefit5Title, body: t.benefit5Body },
+    { icon: DollarSign, title: t.benefit6Title, body: t.benefit6Body },
+  ];
+
+  const applySteps = [
+    { n: "01", icon: Send, title: t.applyStep1Title, body: t.applyStep1Body },
+    { n: "02", icon: Tags, title: t.applyStep2Title, body: t.applyStep2Body },
+    { n: "03", icon: Store, title: t.applyStep3Title, body: t.applyStep3Body },
+  ];
 
   return (
     <div>
@@ -109,25 +88,26 @@ export default function SellPage() {
 
         <div className="container-px py-12 lg:py-20">
           <Breadcrumbs
-            items={[{ label: "Home", href: "/" }, { label: "Become a Reseller" }]}
+            items={[
+              { label: dict.common.home, href: "/" },
+              { label: t.metaTitle },
+            ]}
           />
 
           <Reveal className="mt-8 max-w-3xl">
             <span className="eyebrow inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-3 py-1 text-brand-strong backdrop-blur-sm">
               <Store className="size-3.5" />
-              Wholesale &amp; resellers
+              {t.eyebrow}
             </span>
             <h1 className="mt-5 text-display text-foreground">
-              Add personalized products to your store — we&apos;ll{" "}
-              <span className="text-metallic">make and ship</span>{" "}
-              them.
+              {t.headingBefore}
+              <span className="text-metallic">{t.headingAccent}</span>
+              {t.headingAfter}
             </h1>
             <p className="mt-5 max-w-2xl text-lead text-muted-foreground">
-              Partner with {site.legalName} and sell over{" "}
-              {productCount.toLocaleString()} laser-engravable products — from
-              premium drinkware to custom frames — with wholesale pricing,
-              made-to-order U.S. production and blind drop-shipping under your
-              brand.
+              {t.lead
+                .replace("{legal}", site.legalName)
+                .replace("{count}", productCount.toLocaleString(lang))}
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -135,45 +115,51 @@ export default function SellPage() {
                 href="#apply"
                 className={cn(buttonVariants({ variant: "brand", size: "lg" }))}
               >
-                Apply to sell
+                {dict.header.applyToSell}
                 <ArrowRight className="size-4" />
               </Link>
               <Link
                 href="/quote"
                 className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
               >
-                Request a quote
+                {dict.quote.metaTitle}
               </Link>
             </div>
 
             <dl className="mt-10 flex flex-wrap gap-x-8 gap-y-4">
               <div>
-                <dt className="sr-only">Products</dt>
+                <dt className="sr-only">{t.statProducts}</dt>
                 <dd className="font-heading text-2xl font-bold text-foreground">
                   <StatCounter value={productCount} suffix="+" />
                 </dd>
-                <p className="text-xs text-muted-foreground">products to sell</p>
+                <p className="text-xs text-muted-foreground">{t.statProducts}</p>
               </div>
               <div className="border-l border-border pl-8">
-                <dt className="sr-only">Categories</dt>
+                <dt className="sr-only">{t.statCategories}</dt>
                 <dd className="font-heading text-2xl font-bold text-foreground">
                   <StatCounter value={categoryCount} />
                 </dd>
-                <p className="text-xs text-muted-foreground">product categories</p>
+                <p className="text-xs text-muted-foreground">
+                  {t.statCategories}
+                </p>
               </div>
               <div className="border-l border-border pl-8">
-                <dt className="sr-only">Production</dt>
+                <dt className="sr-only">{dict.home.statProductionLabel}</dt>
                 <dd className="font-heading text-2xl font-bold text-foreground">
-                  USA
+                  {dict.home.statProductionValue}
                 </dd>
-                <p className="text-xs text-muted-foreground">made to order</p>
+                <p className="text-xs text-muted-foreground">
+                  {dict.home.statProductionCaption}
+                </p>
               </div>
               <div className="border-l border-border pl-8">
-                <dt className="sr-only">Pricing turnaround</dt>
+                <dt className="sr-only">{t.statPricingReply}</dt>
                 <dd className="font-heading text-2xl font-bold text-foreground">
-                  Same-day
+                  {dict.home.proofSameDay}
                 </dd>
-                <p className="text-xs text-muted-foreground">pricing reply</p>
+                <p className="text-xs text-muted-foreground">
+                  {t.statPricingReply}
+                </p>
               </div>
             </dl>
           </Reveal>
@@ -183,12 +169,12 @@ export default function SellPage() {
       {/* ---------------------------- Benefits --------------------------- */}
       <section className="container-px py-16 lg:py-24">
         <SectionHeader
-          eyebrow="Why resellers choose us"
-          title="A production partner built for your margins"
-          description="Everything you need to sell personalized goods without owning a laser, holding stock or revealing a supplier."
+          eyebrow={t.benefitsEyebrow}
+          title={t.benefitsTitle}
+          description={t.benefitsDescription}
         />
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {BENEFITS.map((b, i) => (
+          {benefits.map((b, i) => (
             <Reveal key={b.title} delay={i * 0.06}>
               <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-card transition-all duration-300 ease-premium hover:-translate-y-0.5 hover:shadow-lg">
                 <span className="grid size-11 place-items-center rounded-xl bg-brand-muted text-brand-strong">
@@ -211,12 +197,12 @@ export default function SellPage() {
         <div className="container-px">
           <SectionHeader
             align="center"
-            eyebrow="Getting started"
-            title="From application to first order"
-            description="No storefront fees and no inventory to buy. Apply, get your pricing and start listing."
+            eyebrow={t.startEyebrow}
+            title={t.startTitle}
+            description={t.startDescription}
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
-            {APPLY_STEPS.map((s, i) => (
+            {applySteps.map((s, i) => (
               <Reveal key={s.n} delay={i * 0.08}>
                 <div className="relative flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-card">
                   <div className="flex items-center justify-between">
@@ -244,22 +230,18 @@ export default function SellPage() {
       <section id="apply" className="scroll-mt-24 border-b border-border">
         <div className="container-px grid gap-12 py-16 lg:grid-cols-[1fr_1.1fr] lg:gap-16 lg:py-24">
           <div className="lg:sticky lg:top-24 lg:self-start">
-            <span className="eyebrow text-brand-strong">Apply now</span>
-            <h2 className="mt-3 text-h2 text-foreground">
-              Apply for a reseller account
-            </h2>
+            <span className="eyebrow text-brand-strong">{t.applyEyebrow}</span>
+            <h2 className="mt-3 text-h2 text-foreground">{t.applyTitle}</h2>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              Tell us a little about your business and we&apos;ll review your
-              application and follow up the same business day with pricing and
-              next steps.
+              {t.applyBody}
             </p>
 
             <ul className="mt-7 space-y-3">
               {[
-                { icon: Clock, label: "Same-day printing, shipping & reply" },
-                { icon: Truck, label: "Blind drop-ship from the USA" },
-                { icon: ShieldCheck, label: "Files printed as submitted — accuracy is yours" },
-                { icon: MapPin, label: "Made to order in the USA" },
+                { icon: Clock, label: t.assurance1 },
+                { icon: Truck, label: t.assurance2 },
+                { icon: ShieldCheck, label: t.assurance3 },
+                { icon: MapPin, label: t.assurance4 },
               ].map((item) => (
                 <li
                   key={item.label}
@@ -274,14 +256,14 @@ export default function SellPage() {
             </ul>
 
             <div className="mt-7 rounded-2xl border border-border bg-secondary/40 p-5 text-sm leading-relaxed text-muted-foreground">
-              Questions before applying? Email{" "}
+              {t.questionsBefore}
               <a
                 href={`mailto:${site.email}`}
                 className="font-medium text-brand-strong hover:underline"
               >
                 {site.email}
               </a>
-              .
+              {t.questionsAfter}
             </div>
           </div>
 

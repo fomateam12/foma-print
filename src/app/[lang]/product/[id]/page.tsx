@@ -27,7 +27,16 @@ import {
   getRelatedProducts,
 } from "@/data/catalog";
 import { site } from "@/lib/site";
-import { DISPATCH_NOTE } from "@/lib/site-copy";
+import { getDictionary } from "@/lib/dictionaries";
+import { LOCALES, isLocale } from "@/lib/i18n";
+import {
+  categoryName,
+  productName,
+  sizeLabel,
+  subcategoryName,
+} from "@/lib/catalog-i18n";
+import { productCopy } from "@/lib/product-copy";
+import { alternatesFor } from "@/lib/seo";
 
 /**
  * ISR window. Catalog data is updated occasionally (supplier scrape, manual
@@ -43,14 +52,14 @@ export const revalidate = 86400;
  * are generated on demand via ISR. This shaves a couple of minutes off CI
  * (805 pages × prerender ≈ 3 minutes cold-build cost) and lets new SKUs go
  * live without a full rebuild. The slice is deterministic (catalog order),
- * so consecutive deploys hit the same prebuilt set + edge cache.
+ * so consecutive deploys hit the same prebuilt set + edge cache. The slice is
+ * per locale, so both languages get the same prebuilt SKUs.
  */
 const PREBUILT_PRODUCT_COUNT = 120;
 
 export function generateStaticParams() {
-  return getAllProducts()
-    .slice(0, PREBUILT_PRODUCT_COUNT)
-    .map((p) => ({ id: p.id }));
+  const ids = getAllProducts().slice(0, PREBUILT_PRODUCT_COUNT);
+  return LOCALES.flatMap((lang) => ids.map((p) => ({ lang, id: p.id })));
 }
 
 /** Allow on-demand rendering of product IDs that weren't pre-built. */
@@ -58,41 +67,58 @@ export const dynamicParams = true;
 
 export async function generateMetadata({
   params,
-}: {
-  params: Promise<{ id: string }>;
-}): Promise<Metadata> {
-  const { id } = await params;
+}: PageProps<"/[lang]/product/[id]">): Promise<Metadata> {
+  const { lang, id } = await params;
+  if (!isLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
+
   const product = getProduct(id);
-  if (!product) return { title: "Product not found" };
+  if (!product) return { title: dict.product.notFound };
+
+  const name = productName(product.sku, product.name, lang);
+  const { description } = productCopy(product, name, dict, lang);
   const ogImage = cloudinary(product.image, { width: 1200 });
+
   return {
-    title: product.name,
-    description: product.description,
-    alternates: { canonical: `/product/${product.id}` },
+    title: name,
+    description,
+    alternates: alternatesFor(`/product/${product.id}`, lang),
     openGraph: {
-      title: `${product.name} · FomaPrint`,
-      description: product.description,
-      images: [{ url: ogImage, width: 1200, height: 1200, alt: product.name }],
+      title: `${name} · FomaPrint`,
+      description,
+      images: [{ url: ogImage, width: 1200, height: 1200, alt: name }],
     },
   };
 }
 
 export default async function ProductPage({
   params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
-  const { id } = await params;
+}: PageProps<"/[lang]/product/[id]">) {
+  const { lang, id } = await params;
+  if (!isLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
+  const t = dict.product;
+
   const product = getProduct(id);
   if (!product) notFound();
   const related = getRelatedProducts(product, 8);
 
+  const name = productName(product.sku, product.name, lang);
+  const subName = subcategoryName(product.subcategoryName, lang);
+  const size = sizeLabel(product.size ?? "", lang);
+  const { description, longDescription, personalization } = productCopy(
+    product,
+    name,
+    dict,
+    lang,
+  );
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: product.name,
+    name,
     image: cloudinary(product.imageFull, { width: 1200 }),
-    description: product.description,
+    description,
     sku: product.sku,
     brand: { "@type": "Brand", name: site.name },
     offers: {
@@ -116,14 +142,17 @@ export default async function ProductPage({
 
       <Breadcrumbs
         items={[
-          { label: "Home", href: "/" },
-          { label: "Categories", href: "/categories" },
-          { label: product.categoryName, href: `/category/${product.categorySlug}` },
+          { label: dict.common.home, href: "/" },
+          { label: dict.categories.breadcrumb, href: "/categories" },
           {
-            label: product.subcategoryName,
+            label: categoryName(product.categoryName, lang),
+            href: `/category/${product.categorySlug}`,
+          },
+          {
+            label: subName,
             href: `/category/${product.categorySlug}/${product.subcategorySlug}`,
           },
-          { label: product.name },
+          { label: name },
         ]}
         className="mb-6"
       />
@@ -139,7 +168,7 @@ export default async function ProductPage({
                 ? product.images
                 : [cloudinary(product.imageFull, { width: 900 })]
             }
-            alt={product.name}
+            alt={name}
           />
         </div>
 
@@ -149,10 +178,10 @@ export default async function ProductPage({
             href={`/category/${product.categorySlug}/${product.subcategorySlug}`}
             className="text-sm font-medium text-brand-strong hover:underline"
           >
-            {product.subcategoryName}
+            {subName}
           </Link>
           <h1 className="mt-2 font-heading text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            {product.name}
+            {name}
           </h1>
 
           <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
@@ -163,16 +192,15 @@ export default async function ProductPage({
 
           <div className="mt-5 rounded-2xl border border-border bg-secondary/40 p-4">
             <p className="font-heading text-lg font-semibold text-foreground">
-              Wholesale pricing on request
+              {dict.category.wholesaleOnRequest}
             </p>
             <p className="mt-1 text-sm text-muted-foreground">
-              Tiered reseller pricing with personalization included — add this
-              item to a quote and we&apos;ll send rates the same business day.
+              {t.pricingNote}
             </p>
           </div>
 
           <p className="mt-5 leading-relaxed text-muted-foreground">
-            {product.longDescription}
+            {longDescription}
           </p>
 
           {/* Specifications — surfaced as a compact chip grid so wholesale
@@ -189,14 +217,14 @@ export default async function ProductPage({
               {product.size ? (
                 <div className="flex items-center gap-2 rounded-xl border border-border bg-background/60 px-3 py-2 text-sm">
                   <Ruler className="size-4 shrink-0 text-brand-strong" />
-                  <dt className="font-medium text-foreground">Size</dt>
-                  <dd className="text-muted-foreground">{product.size}</dd>
+                  <dt className="font-medium text-foreground">{t.size}</dt>
+                  <dd className="text-muted-foreground">{size}</dd>
                 </div>
               ) : null}
               {product.weightLb ? (
                 <div className="flex items-center gap-2 rounded-xl border border-border bg-background/60 px-3 py-2 text-sm">
                   <Package className="size-4 shrink-0 text-brand-strong" />
-                  <dt className="font-medium text-foreground">Weight</dt>
+                  <dt className="font-medium text-foreground">{t.weight}</dt>
                   <dd className="text-muted-foreground">
                     {formatWeight(product.weightLb)}
                   </dd>
@@ -205,7 +233,9 @@ export default async function ProductPage({
               {product.dimensions ? (
                 <div className="flex items-center gap-2 rounded-xl border border-border bg-background/60 px-3 py-2 text-sm">
                   <Box className="size-4 shrink-0 text-brand-strong" />
-                  <dt className="font-medium text-foreground">Dimensions</dt>
+                  <dt className="font-medium text-foreground">
+                    {t.dimensions}
+                  </dt>
                   <dd className="text-muted-foreground">{product.dimensions}</dd>
                 </div>
               ) : null}
@@ -213,7 +243,7 @@ export default async function ProductPage({
                 <div className="flex items-center gap-2 rounded-xl border border-border bg-background/60 px-3 py-2 text-sm">
                   <Scan className="size-4 shrink-0 text-brand-strong" />
                   <dt className="font-medium text-foreground">
-                    Engraving area
+                    {t.engravingArea}
                   </dt>
                   <dd className="text-muted-foreground">
                     {product.engravingArea}
@@ -226,10 +256,10 @@ export default async function ProductPage({
           {/* Personalization */}
           <div className="mt-7 rounded-2xl border border-border bg-secondary/40 p-5">
             <h2 className="font-heading text-sm font-semibold text-foreground">
-              What you can personalize
+              {t.personalizationTitle}
             </h2>
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-              {product.personalization.map((opt) => (
+              {personalization.map((opt) => (
                 <li key={opt.id} className="flex items-start gap-2">
                   <Check className="mt-0.5 size-4 shrink-0 text-evergreen" />
                   <span>
@@ -254,7 +284,7 @@ export default async function ProductPage({
               item={{
                 id: product.id,
                 sku: product.sku,
-                name: product.name,
+                name,
                 image: product.image,
               }}
               variant="full"
@@ -269,11 +299,13 @@ export default async function ProductPage({
                 )}
               >
                 <FileText className="size-4" />
-                Request a quote
+                {dict.quote.metaTitle}
               </Link>
               <a
                 href={`mailto:${site.email}?subject=${encodeURIComponent(
-                  `Question about ${product.name} (${product.sku})`,
+                  t.mailSubject
+                    .replace("{name}", name)
+                    .replace("{sku}", product.sku),
                 )}`}
                 className={cn(
                   buttonVariants({ variant: "outline", size: "lg" }),
@@ -281,7 +313,7 @@ export default async function ProductPage({
                 )}
               >
                 <Mail className="size-4" />
-                Ask a question
+                {t.askQuestion}
               </a>
             </div>
           </div>
@@ -291,19 +323,23 @@ export default async function ProductPage({
             <div className="flex items-start gap-2.5">
               <ShieldCheck className="mt-0.5 size-5 text-brand-strong" />
               <p className="text-xs leading-relaxed text-muted-foreground">
-                Same-day reply on every quote request
+                {t.trustReply}
               </p>
             </div>
             <div className="flex items-start gap-2.5">
               <Truck className="mt-0.5 size-5 text-brand-strong" />
               <p className="text-xs leading-relaxed text-muted-foreground">
-                Made to order · {DISPATCH_NOTE}
+                {t.trustMadeToOrder} ·{" "}
+                {dict.copy.dispatchNote.replace(
+                  "{cutoff}",
+                  dict.copy.orderCutoff,
+                )}
               </p>
             </div>
             <div className="flex items-start gap-2.5">
               <Tags className="mt-0.5 size-5 text-brand-strong" />
               <p className="text-xs leading-relaxed text-muted-foreground">
-                Bulk & corporate pricing available
+                {t.trustBulk}
               </p>
             </div>
           </div>
@@ -315,17 +351,17 @@ export default async function ProductPage({
         <section className="mt-16">
           <div className="flex items-end justify-between gap-4">
             <h2 className="font-heading text-2xl font-bold tracking-tight text-foreground">
-              You may also like
+              {t.related}
             </h2>
             <Link
               href={`/category/${product.categorySlug}/${product.subcategorySlug}`}
               className="hidden shrink-0 items-center gap-1 text-sm font-semibold text-brand-strong transition-colors hover:text-rust-bright sm:inline-flex"
             >
-              More {product.subcategoryName}
+              {t.moreIn.replace("{collection}", subName)}
               <ArrowRight className="size-4" />
             </Link>
           </div>
-          <ProductGrid products={related} className="mt-6" />
+          <ProductGrid locale={lang} products={related} className="mt-6" />
         </section>
       ) : null}
     </div>

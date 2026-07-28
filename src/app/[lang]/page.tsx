@@ -309,7 +309,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
           ))}
         </div>
 
-        <ProductGrid products={featured} className="mt-10" priorityCount={4} />
+        <ProductGrid locale={lang} products={featured} className="mt-10" priorityCount={4} />
 
         <div className="mt-10 text-center">
           <Link

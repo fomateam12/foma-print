@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Link } from "@/components/locale-link";
 import {
   ArrowRight,
@@ -18,47 +19,47 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { getProductCount } from "@/data/catalog";
 import { site } from "@/lib/site";
+import { getDictionary } from "@/lib/dictionaries";
+import { isLocale } from "@/lib/i18n";
+import { alternatesFor } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About",
-  description: `About ${site.legalName} — the U.S. print-on-demand and laser-engraving partner behind ${site.name}. You sell it; we personalize, produce and blind-ship it under your brand.`,
-  alternates: { canonical: "/about" },
-  openGraph: {
-    title: `About · ${site.name}`,
-    description: `The production partner behind your store — made to order in the USA by ${site.legalName}.`,
-  },
-};
+export async function generateMetadata({
+  params,
+}: PageProps<"/[lang]/about">): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const t = (await getDictionary(lang)).about;
 
-const VALUES = [
-  {
-    icon: Palette,
-    title: "Craftsmanship first",
-    body: "Every piece is laser-engraved with precision for a crisp, permanent finish — the quality your customers expect from your brand.",
-  },
-  {
-    icon: PackageCheck,
-    title: "Your brand, front and center",
-    body: "We blind drop-ship from the USA. No FomaPrint logos, no pricing on the slip — only your store reaches your buyer.",
-  },
-  {
-    icon: Factory,
-    title: "Made in the USA",
-    body: "Produced to order in our American studio, so quality, turnaround and capacity stay in our control — and yours.",
-  },
-  {
-    icon: Gauge,
-    title: "Built to scale",
-    body: "From your first order to thousands a month, our production and your seller portal grow with your store.",
-  },
-];
+  return {
+    title: t.metaTitle,
+    description: t.metaDescription,
+    alternates: alternatesFor("/about", lang),
+    openGraph: {
+      title: `${t.metaTitle} · ${site.name}`,
+      description: t.ogDescription,
+    },
+  };
+}
 
-export default function AboutPage() {
+export default async function AboutPage({ params }: PageProps<"/[lang]/about">) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
+  const t = dict.about;
+
   const productCount = getProductCount();
 
-  const STATS = [
-    { value: productCount, suffix: "+", label: "products to private-label" },
-    { value: 100, suffix: "%", label: "blind drop-shipped" },
-    { value: 5, suffix: "+ years", label: "in personalized gifts" },
+  const values = [
+    { icon: Palette, title: t.value1Title, body: t.value1Body },
+    { icon: PackageCheck, title: t.value2Title, body: t.value2Body },
+    { icon: Factory, title: t.value3Title, body: t.value3Body },
+    { icon: Gauge, title: t.value4Title, body: t.value4Body },
+  ];
+
+  const stats = [
+    { value: productCount, suffix: "+", label: t.stat1 },
+    { value: 100, suffix: "%", label: t.stat2 },
+    { value: 5, suffix: t.stat3Suffix, label: t.stat3 },
   ];
 
   return (
@@ -73,22 +74,24 @@ export default function AboutPage() {
         </div>
         <div className="container-px py-12 lg:py-16">
           <Breadcrumbs
-            items={[{ label: "Home", href: "/" }, { label: "About" }]}
+            items={[
+              { label: dict.common.home, href: "/" },
+              { label: t.metaTitle },
+            ]}
           />
           <Reveal className="mt-8 max-w-3xl">
             <span className="eyebrow inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-3 py-1 text-brand-strong backdrop-blur-sm">
               <Sparkles className="size-3.5" />
-              Our story
+              {t.eyebrow}
             </span>
             <h1 className="mt-5 text-display text-foreground">
-              The production partner{" "}
-              <span className="text-metallic">behind your store</span>
+              {t.headingBefore}
+              <span className="text-metallic">{t.headingAccent}</span>
             </h1>
             <p className="mt-5 max-w-2xl text-lead text-muted-foreground">
-              {site.name} is the print-on-demand and laser-engraving arm of{" "}
-              {site.legalName}. Resellers list our products under their own brand;
-              we personalize, produce and blind-ship every order from the USA — so
-              you can sell without holding inventory or running a workshop.
+              {t.lead
+                .replace("{brand}", site.name)
+                .replace("{legal}", site.legalName)}
             </p>
           </Reveal>
         </div>
@@ -97,7 +100,7 @@ export default function AboutPage() {
       {/* Stats */}
       <section className="container-px py-12">
         <div className="grid gap-4 sm:grid-cols-3">
-          {STATS.map((s, i) => (
+          {stats.map((s, i) => (
             <Reveal key={s.label} delay={Math.min(i * 0.06, 0.18)}>
               <div className="rounded-2xl border border-border bg-card p-6 text-center shadow-card">
                 <div className="font-heading text-3xl font-bold text-foreground">
@@ -117,34 +120,24 @@ export default function AboutPage() {
         <div className="grid gap-10 rounded-3xl border border-border bg-secondary/30 p-8 lg:grid-cols-2 lg:p-12">
           <div>
             <SectionHeader
-              eyebrow="Why we built it"
-              title={`Why we started ${site.name}`}
+              eyebrow={t.missionEyebrow}
+              title={t.missionTitle.replace("{brand}", site.name)}
             />
             <p className="mt-5 leading-relaxed text-muted-foreground">
-              FomaPrint is the fulfillment arm of {site.legalName}, a
-              Georgia-based company founded in 2021. We started on the retail
-              side — selling personalized engraved gifts to shoppers on Amazon
-              under our Foma Family brand — and spent years engraving, packing
-              and shipping one-at-a-time orders with our own machines.
+              {t.missionP1.replace("{legal}", site.legalName)}
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              Along the way we kept meeting small online sellers — Etsy shops,
-              boutique brands, corporate-gift resellers — with great products to
-              sell and nowhere dependable to make them. Sourcing, engraving,
-              packing and shipping were eating the hours that should have gone
-              into growing their store.
+              {t.missionP2}
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              So we became the part nobody sees. Today {site.legalName} runs a
-              U.S. studio and a catalog of over {productCount.toLocaleString()}{" "}
-              personalizable products — drinkware, gifts, frames and office goods —
-              all ready to engrave to order and blind-ship under your brand,
-              with same-day printing and shipping on orders placed before 2pm ET
-              and a same-day reply on every quote request.
+              {t.missionP3
+                .replace("{legal}", site.legalName)
+                .replace("{count}", productCount.toLocaleString(lang))
+                .replace("{cutoff}", dict.copy.orderCutoff)}
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {VALUES.map((v, i) => (
+            {values.map((v, i) => (
               <Reveal key={v.title} delay={Math.min(i * 0.05, 0.2)}>
                 <div className="h-full rounded-2xl border border-border bg-background p-5 shadow-card">
                   <span className="grid size-10 place-items-center rounded-lg bg-brand-muted text-brand-strong">
@@ -167,14 +160,10 @@ export default function AboutPage() {
       <section className="container-px py-12">
         <Reveal className="flex flex-col items-start gap-6 rounded-3xl border border-border bg-card p-8 shadow-card sm:flex-row sm:items-center sm:justify-between lg:p-10">
           <div className="max-w-xl">
-            <span className="eyebrow text-brand-strong">Seller Portal</span>
-            <h2 className="mt-2 text-h3 text-foreground">
-              One workspace for orders &amp; shipping
-            </h2>
+            <span className="eyebrow text-brand-strong">{t.portalEyebrow}</span>
+            <h2 className="mt-2 text-h3 text-foreground">{t.portalTitle}</h2>
             <p className="mt-3 leading-relaxed text-muted-foreground">
-              Behind the catalog sits our seller portal — the workspace that
-              routes your orders, tracks production and hands you blind tracking
-              numbers. Seller accounts are open now — apply to get started.
+              {t.portalBody}
             </p>
           </div>
           <div className="flex shrink-0 flex-wrap gap-3">
@@ -182,7 +171,7 @@ export default function AboutPage() {
               href="/sell"
               className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
             >
-              Apply to sell
+              {dict.header.applyToSell}
             </Link>
           </div>
         </Reveal>
@@ -198,19 +187,16 @@ export default function AboutPage() {
             <div className="absolute -right-16 top-0 h-72 w-72 rounded-full bg-brand/20 blur-3xl" />
           </div>
           <div className="relative z-10 max-w-2xl">
-            <h2 className="text-h2 text-ink-foreground">
-              Ready to sell under your brand?
-            </h2>
+            <h2 className="text-h2 text-ink-foreground">{t.ctaTitle}</h2>
             <p className="mt-4 text-lead text-ink-muted">
-              Browse the catalog or apply to sell — same-day reply on quotes,
-              same-day printing and shipping on orders placed before 2pm ET.
+              {t.ctaBody.replace("{cutoff}", dict.copy.orderCutoff)}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href="/sell"
                 className={cn(buttonVariants({ variant: "brand", size: "lg" }))}
               >
-                Apply to sell
+                {dict.header.applyToSell}
                 <ArrowRight className="size-4" />
               </Link>
               <Link
@@ -221,7 +207,7 @@ export default function AboutPage() {
                 )}
               >
                 <Truck className="size-4" />
-                Browse the catalog
+                {t.ctaBrowse}
               </Link>
             </div>
           </div>

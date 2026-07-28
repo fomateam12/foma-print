@@ -1,4 +1,7 @@
+"use client";
+
 import { Link } from "@/components/locale-link";
+import { useDict } from "@/components/i18n-provider";
 import { cn } from "@/lib/utils";
 
 /**
@@ -15,12 +18,13 @@ export function Logo({
   onClick?: () => void;
   tone?: "default" | "inverted";
 }) {
+  const dict = useDict();
   const inverted = tone === "inverted";
   return (
     <Link
       href="/"
       onClick={onClick}
-      aria-label="FomaPrint — home"
+      aria-label={dict.common.logoAria}
       className={cn(
         "group inline-flex items-center gap-2.5 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
         className,

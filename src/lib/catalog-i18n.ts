@@ -22,6 +22,7 @@ const TABLES: Record<
     subcategories: Record<string, string>;
     sizes: Record<string, string>;
     products: Record<string, string>;
+    blurbs: Record<string, string>;
   }
 > = { tr };
 
@@ -37,6 +38,15 @@ export function subcategoryName(englishName: string, locale: Locale): string {
   return table(locale)?.subcategories[englishName] ?? englishName;
 }
 
+/** Category blurbs are keyed by the category's English name. */
+export function categoryBlurb(
+  englishCategoryName: string,
+  englishBlurb: string,
+  locale: Locale,
+): string {
+  return table(locale)?.blurbs[englishCategoryName] ?? englishBlurb;
+}
+
 export function sizeLabel(englishSize: string, locale: Locale): string {
   if (!englishSize) return englishSize;
   return table(locale)?.sizes[englishSize] ?? englishSize;
@@ -49,4 +59,31 @@ export function productName(
   locale: Locale,
 ): string {
   return table(locale)?.products[sku.toUpperCase()] ?? englishName;
+}
+
+/**
+ * Localized copy of a product for rendering.
+ *
+ * Called on the server so `catalog-tr.json` (847 names) never reaches the
+ * client bundle; the card components receive already-translated products.
+ * The SKU and every id/slug are untouched — those are the contract the rest
+ * of the FOMA stack matches on.
+ */
+export function localizeProduct<
+  T extends {
+    sku: string;
+    name: string;
+    subcategoryName?: string;
+    size?: string | null;
+  },
+>(product: T, locale: Locale): T {
+  if (locale === DEFAULT_LOCALE) return product;
+  return {
+    ...product,
+    name: productName(product.sku, product.name, locale),
+    ...(product.subcategoryName
+      ? { subcategoryName: subcategoryName(product.subcategoryName, locale) }
+      : {}),
+    ...(product.size ? { size: sizeLabel(product.size, locale) } : {}),
+  };
 }

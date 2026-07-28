@@ -15,36 +15,49 @@ import {
   getProductsByCategory,
 } from "@/data/catalog";
 import { CATEGORY_BANNERS } from "@/lib/category-banners";
+import { getDictionary } from "@/lib/dictionaries";
+import { LOCALES, isLocale } from "@/lib/i18n";
+import { categoryBlurb, categoryName, subcategoryName } from "@/lib/catalog-i18n";
+import { alternatesFor } from "@/lib/seo";
 
 export function generateStaticParams() {
-  return getCategories().map((c) => ({ slug: c.slug }));
+  return LOCALES.flatMap((lang) =>
+    getCategories().map((c) => ({ lang, slug: c.slug })),
+  );
 }
 
 export async function generateMetadata({
   params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
-  const { slug } = await params;
+}: PageProps<"/[lang]/category/[slug]">): Promise<Metadata> {
+  const { lang, slug } = await params;
+  if (!isLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
   const category = getCategory(slug);
-  if (!category) return { title: "Category not found" };
+  if (!category) return { title: dict.category.notFound };
+
+  const name = categoryName(category.name, lang);
+  const blurb = categoryBlurb(category.name, category.blurb, lang);
+
   return {
-    title: category.name,
-    description: category.blurb,
-    alternates: { canonical: `/category/${category.slug}` },
-    openGraph: { title: `${category.name} · FomaPrint`, description: category.blurb },
+    title: name,
+    description: blurb,
+    alternates: alternatesFor(`/category/${category.slug}`, lang),
+    openGraph: { title: `${name} · FomaPrint`, description: blurb },
   };
 }
 
 export default async function CategoryPage({
   params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
+}: PageProps<"/[lang]/category/[slug]">) {
+  const { lang, slug } = await params;
+  if (!isLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
+  const t = dict.category;
+
   const category = getCategory(slug);
   if (!category) notFound();
 
+  const name = categoryName(category.name, lang);
   const all = getProductsByCategory(category.slug);
   const popular = all.slice(0, 8);
   const banner = CATEGORY_BANNERS[category.slug];
@@ -80,9 +93,9 @@ export default async function CategoryPage({
         <div className="container-px py-10 lg:py-14">
           <Breadcrumbs
             items={[
-              { label: "Home", href: "/" },
-              { label: "Categories", href: "/categories" },
-              { label: category.name },
+              { label: dict.common.home, href: "/" },
+              { label: dict.categories.breadcrumb, href: "/categories" },
+              { label: name },
             ]}
           />
           <div className="mt-6 flex items-start gap-4">
@@ -90,16 +103,17 @@ export default async function CategoryPage({
               <CategoryIcon icon={category.icon} className="size-7" />
             </span>
             <div className="max-w-2xl">
-              <span className="eyebrow text-brand-strong">Category</span>
-              <h1 className="mt-2 text-h2 text-foreground">{category.name}</h1>
+              <span className="eyebrow text-brand-strong">{t.eyebrow}</span>
+              <h1 className="mt-2 text-h2 text-foreground">{name}</h1>
               <p className="mt-3 text-lead text-muted-foreground">
-                {category.blurb}
+                {categoryBlurb(category.name, category.blurb, lang)}
               </p>
               <p className="mt-3 inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-3 py-1 text-xs font-medium text-muted-foreground">
                 <Tags className="size-3.5 text-brand-strong" />
-                {category.productCount.toLocaleString()} products ·{" "}
-                {category.subcategories.length} collections · Wholesale pricing on
-                request
+                {category.productCount.toLocaleString(lang)}{" "}
+                {dict.categories.statProducts} ·{" "}
+                {category.subcategories.length}{" "}
+                {dict.categories.statCollections} · {t.wholesaleOnRequest}
               </p>
             </div>
           </div>
@@ -129,7 +143,7 @@ export default async function CategoryPage({
             taxonomy explicit instead. */}
         <section>
           <h2 className="font-heading text-xl font-semibold text-foreground">
-            Browse {category.name}
+            {t.browse.replace("{category}", name)}
           </h2>
           <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
             {category.subcategories.map((sc, i) => {
@@ -137,6 +151,7 @@ export default async function CategoryPage({
                 category.slug,
                 sc.slug,
               )[0];
+              const scName = subcategoryName(sc.name, lang);
               return (
                 <Reveal key={sc.slug} delay={Math.min(i * 0.04, 0.24)}>
                   <Link
@@ -145,7 +160,7 @@ export default async function CategoryPage({
                   >
                     <ProductImage
                       src={thumb?.image ?? ""}
-                      alt={sc.name}
+                      alt={scName}
                       seed={sc.slug}
                       icon={category.icon}
                       width={400}
@@ -156,10 +171,10 @@ export default async function CategoryPage({
                     />
                     <div className="flex flex-1 flex-col gap-0.5 p-3.5">
                       <h3 className="line-clamp-2 text-sm font-medium text-foreground group-hover:text-brand-strong">
-                        {sc.name}
+                        {scName}
                       </h3>
                       <span className="mt-auto pt-1 text-xs text-muted-foreground">
-                        {sc.productCount} products
+                        {sc.productCount} {dict.categories.statProducts}
                       </span>
                     </div>
                   </Link>
@@ -173,17 +188,17 @@ export default async function CategoryPage({
           <section className="mt-16">
             <div className="flex items-end justify-between gap-4">
               <h2 className="font-heading text-xl font-semibold text-foreground">
-                Popular in {category.name}
+                {t.popularIn.replace("{category}", name)}
               </h2>
               <Link
                 href={`/category/${category.slug}/${category.subcategories[0]?.slug ?? ""}`}
                 className="hidden shrink-0 items-center gap-1 text-sm font-semibold text-brand-strong transition-colors hover:text-rust-bright sm:inline-flex"
               >
-                Shop the collection
+                {t.shopCollection}
                 <ArrowRight className="size-4" />
               </Link>
             </div>
-            <ProductGrid products={popular} className="mt-6" />
+            <ProductGrid locale={lang} products={popular} className="mt-6" />
           </section>
         ) : null}
       </div>

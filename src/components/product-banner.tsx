@@ -5,6 +5,7 @@ import { Link } from "@/components/locale-link";
 import { ArrowRight } from "lucide-react";
 import { Marquee } from "@/components/marquee";
 import { ProductImage } from "@/components/product-image";
+import { useDict } from "@/components/i18n-provider";
 import type { IconKey } from "@/data/types";
 
 /**
@@ -38,6 +39,7 @@ const SLUG_ICON: Record<string, IconKey> = {
 const VISIBLE = 12;
 
 export function ProductBanner({ products }: { products: BannerProduct[] }) {
+  const dict = useDict();
   // First paint uses a deterministic slice so SSR and the initial client render
   // match (no hydration mismatch); after mount we shuffle the full pool and take
   // a fresh subset, which rotates the lineup per visit.
@@ -68,19 +70,19 @@ export function ProductBanner({ products }: { products: BannerProduct[] }) {
     >
       <div className="container-px flex items-end justify-between gap-4">
         <div>
-          <span className="eyebrow text-brand-strong">Products to sell</span>
+          <span className="eyebrow text-brand-strong">{dict.banner.eyebrow}</span>
           <h2
             id="banner-heading"
             className="mt-1.5 font-heading text-xl font-semibold tracking-tight text-foreground sm:text-2xl"
           >
-            High-margin inventory, ready to dropship
+            {dict.banner.title}
           </h2>
         </div>
         <Link
           href="/categories"
           className="hidden shrink-0 items-center gap-1 text-sm font-semibold text-brand-strong transition-colors hover:text-rust-bright sm:inline-flex"
         >
-          All products
+          {dict.banner.allProducts}
           <ArrowRight className="size-4" />
         </Link>
       </div>
@@ -106,7 +108,7 @@ export function ProductBanner({ products }: { products: BannerProduct[] }) {
               {p.name}
             </p>
             <p className="mt-0.5 text-sm font-semibold text-brand-strong">
-              Request pricing
+              {dict.product.requestPricing}
             </p>
           </Link>
         ))}

@@ -1,6 +1,9 @@
+"use client";
+
 import { Link } from "@/components/locale-link";
 import { ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useDict } from "@/components/i18n-provider";
 
 export interface Crumb {
   label: string;
@@ -14,8 +17,10 @@ export function Breadcrumbs({
   items: Crumb[];
   className?: string;
 }) {
+  const dict = useDict();
+
   return (
-    <nav aria-label="Breadcrumb" className={cn("text-sm", className)}>
+    <nav aria-label={dict.common.breadcrumb} className={cn("text-sm", className)}>
       <ol className="flex flex-wrap items-center gap-1.5 text-muted-foreground">
         {items.map((item, i) => {
           const last = i === items.length - 1;

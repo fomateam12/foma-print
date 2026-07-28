@@ -7,6 +7,7 @@ import { Eye } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ProductImage } from "@/components/product-image";
 import { ProductQuickView } from "@/components/product-quick-view";
+import { useDict } from "@/components/i18n-provider";
 import type { IconKey, Product } from "@/data/types";
 
 /** Client-safe category-slug → fallback icon map (mirrors catalog.ts). */
@@ -32,6 +33,7 @@ export function ProductCard({
   /** Optional overlay action (e.g. an Add-to-quote button). */
   action?: ReactNode;
 }) {
+  const dict = useDict();
   const icon = SLUG_ICON[product.categorySlug] ?? "gift";
   const [quickOpen, setQuickOpen] = useState(false);
 
@@ -97,7 +99,7 @@ export function ProductCard({
               {product.sku}
             </span>
             <span className="text-xs font-medium text-brand-strong">
-              Request pricing
+              {dict.product.requestPricing}
             </span>
           </div>
         </div>
@@ -113,7 +115,7 @@ export function ProductCard({
           e.stopPropagation();
           setQuickOpen(true);
         }}
-        aria-label={`Quick view: ${product.name}`}
+        aria-label={`${dict.product.quickView}: ${product.name}`}
         className={cn(
           "absolute left-3 top-3 z-10 inline-flex items-center gap-1.5",
           "rounded-full bg-white/95 px-3 py-1.5 text-xs font-medium text-foreground",
@@ -124,7 +126,7 @@ export function ProductCard({
         )}
       >
         <Eye className="size-3.5" />
-        Quick view
+        {dict.product.quickView}
       </button>
 
       {action ? (
