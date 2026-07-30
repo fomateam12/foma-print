@@ -2393,6 +2393,12 @@ function stripBrandSlug(slug: string): string {
 }
 
 const NAME_OVERRIDES: Record<string, string> = {
+  // Master urun tablosundan (FOMA-ANA-URUN-TABLOSU.xlsx, SKU ile eslesme).
+  // products.json tedarikci beslemesidir ve .scrape/scrape.py onu yeniden yazar;
+  // master kaynakli adlar bu yuzden burada, SKU anahtariyla duruyor.
+  GFT048: "Solid Maple Clothes Hanger",
+  PCG213: "20 oz. Beer Mug with Handle & Round Engraving Area",
+  PCG350: "10 oz. Clear Footed Coffee Mug",
   GFT185: "Light Brown Leatherette Portfolio with Notepad",
   GFT186: "Dark Brown Leatherette Portfolio with Notepad",
   GFT212: "Light Brown Leatherette Small Portfolio with Notepad",
