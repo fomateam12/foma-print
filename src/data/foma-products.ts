@@ -496,7 +496,7 @@ export const fomaProducts: Product[] = [
   },
   {
     id: "foma-charcuterie-marble",
-    name: "Marble Charcuterie Board – 11 Piece Set",
+    name: "Marble Charcuterie Board - 11 Piece Set",
     sku: "FM-CHAR-MARB-11",
     size: "16.25 × 12 × 0.5 in · 11-piece set",
     // Wholesale reference price from the MakerFlo single-unit listing; hidden
@@ -552,7 +552,7 @@ export const fomaProducts: Product[] = [
   },
   {
     id: "foma-serving-board-marble",
-    name: "Marble Serving Board Set – 5 Piece Set with Handle",
+    name: "Marble Serving Board Set - 5 Piece Set with Handle",
     sku: "FM-SERV-MARB-5",
     size: "15.5 × 9 × 0.5 in · 5-piece set",
     // Wholesale reference price from the MakerFlo single-unit listing; hidden
@@ -611,7 +611,7 @@ export const fomaProducts: Product[] = [
   },
   {
     id: "foma-bbq-grill-set-11pc",
-    name: "BBQ Grill Set with Case – 11 Piece Set",
+    name: "BBQ Grill Set with Case",
     sku: "FM-BBQ-11",
     size: "18 × 6.25 × 3 in · 11-piece set",
     // Wholesale reference price from the MakerFlo single-unit listing; hidden
