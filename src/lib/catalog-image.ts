@@ -11,6 +11,17 @@ import { cloudinary } from "@/lib/format";
  */
 const R2_PUBLIC_BASE = "https://pub-7dbfe9f161d34085b011aea74e8f75ac.r2.dev";
 
+/**
+ * The same reference as a plain absolute URL, with no optimizer in front of
+ * it. Consumers outside this site (FomaFlow's Studio pulls galleries by SKU
+ * over `/api/product-by-sku`) cannot resolve a relative `/_next/image` path,
+ * and they want the original file anyway — the listing images they build from
+ * it get resized downstream.
+ */
+export function catalogImageAbsoluteUrl(src: string): string {
+  return src.startsWith("/products/") ? `${R2_PUBLIC_BASE}${src}` : src;
+}
+
 export function catalogImageUrl(src: string, width = 400): string {
   if (src.startsWith("/products/")) {
     // R2 serves originals (multi-MB) — route through the Vercel optimizer
