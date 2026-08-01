@@ -129,6 +129,17 @@ const nextConfig: NextConfig = {
       // point into it: the original Drinkware tile, the three short-lived
       // Drinkware tiles from the first split, and the category root. Each
       // maps STRAIGHT to its final destination — no redirect chains.
+      // Supplier typo "30 oz. Tumbers" corrected, which moves the slug too.
+      {
+        source: "/category/drinkware/30-oz-tumbers",
+        destination: "/category/drinkware/30-oz-tumblers",
+        permanent: true,
+      },
+      {
+        source: "/tr/category/drinkware/30-oz-tumbers",
+        destination: "/tr/category/drinkware/30-oz-tumblers",
+        permanent: true,
+      },
       ...[
         ["leatherette-wrapped-tumblers", "clear-lid"],
         ["leatherette-tumbler-with-clear-lid", "clear-lid"],
