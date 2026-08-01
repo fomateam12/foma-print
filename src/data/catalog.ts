@@ -2436,6 +2436,10 @@ const NAME_OVERRIDES: Record<string, string> = {
   // Master urun tablosundan (FOMA-ANA-URUN-TABLOSU.xlsx, SKU ile eslesme).
   // products.json tedarikci beslemesidir ve .scrape/scrape.py onu yeniden yazar;
   // master kaynakli adlar bu yuzden burada, SKU anahtariyla duruyor.
+  // The supplier feed itself carries a truncated word at the end of this one
+  // name ("...with Clear Lid bler"); every sibling SKU in the line is clean.
+  // Fixed here, not in products.json, because scrape.py rewrites that file.
+  LTM5202: "Dark Brown Leatherette Wrapped Tumbler with Clear Lid",
   PCG213: "20 oz. Beer Mug with Handle & Round Engraving Area",
   PCG350: "10 oz. Clear Footed Coffee Mug",
   GFT185: "Light Brown Leatherette Portfolio with Notepad",
