@@ -162,19 +162,19 @@ const SUB_OVERRIDES: Record<string, SubAssignment> = {
   // category nav automatically (productCount > 0 filter in toCategory).
   // LTM5210/5212 and LTM833/834 are currently in the hidden-SKU list; they are
   // assigned here too so a future restore lands in the right tile.
-  LTM5201: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5202: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5203: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5204: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5205: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5206: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5207: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5208: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5209: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5210: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5211: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5212: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5213: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5201: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5202: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5203: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5204: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5205: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5206: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5207: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5208: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5209: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5210: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5211: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5212: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5213: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
   LTM5251: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
   LTM5252: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
   LTM5253: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
@@ -1810,7 +1810,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   // subcategory's median pending exact JDS pricing (hidden behind Add to quote).
   {
     id: "ltm7230",
-    name: "Black/Bright Gold Ion 20 oz Tumbler",
+    name: "20 oz. Black/Bright Gold Ion Tumbler",
     sku: "LTM7230",
     size: "20 oz.",
     price: 29,
@@ -1825,7 +1825,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "ltm7231",
-    name: "Red/Bright Gold Ion 20 oz Tumbler",
+    name: "20 oz. Red/Bright Gold Ion Tumbler",
     sku: "LTM7231",
     size: "20 oz.",
     price: 29,
@@ -1840,7 +1840,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "ltm7232",
-    name: "Purple/Bright Gold Ion 20 oz Tumbler",
+    name: "20 oz. Purple/Bright Gold Ion Tumbler",
     sku: "LTM7232",
     size: "20 oz.",
     price: 29,
@@ -1855,7 +1855,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "ltm7233",
-    name: "Navy/Bright Gold Ion 20 oz Tumbler",
+    name: "20 oz. Navy/Bright Gold Ion Tumbler",
     sku: "LTM7233",
     size: "20 oz.",
     price: 29,
@@ -1870,7 +1870,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "ltm7234",
-    name: "Maroon/Bright Gold Ion 20 oz Tumbler",
+    name: "20 oz. Maroon/Bright Gold Ion Tumbler",
     sku: "LTM7234",
     size: "20 oz.",
     price: 29,
@@ -1885,7 +1885,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "ltm7235",
-    name: "Green/Bright Gold Ion 20 oz Tumbler",
+    name: "20 oz. Green/Bright Gold Ion Tumbler",
     sku: "LTM7235",
     size: "20 oz.",
     price: 29,
@@ -2363,7 +2363,7 @@ const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
   // request) — see PROMOTED_CATS. The names stay short because the
   // category heading and breadcrumb already say "Leatherette Tumblers".
   "leatherette-tumblers": [
-    { subId: "127", slug: "clear-lid", name: "Leatherette Tumbler with Clear Lid", count: 0 },
+    { subId: "127", slug: "clear-lid", name: "20 oz. Leatherette Grip Tumbler with Standard Lid", count: 0 },
     { subId: "128", slug: "slider-lid", name: "20 oz. Black Leatherette Tumbler with Slider Lid", count: 0 },
     // Heading spelled out in full (user request) even though the other two
     // stay short — it is the JDS line name buyers search for. The slug
@@ -2452,19 +2452,19 @@ const NAME_OVERRIDES: Record<string, string> = {
   // the supplier's own name ("...with Clear Lid bler"); that fix is folded
   // in here. LTM5210/5212 are currently hidden but are listed so a future
   // restore does not reintroduce "Wrapped".
-  LTM5201: "Light Brown Leatherette Tumbler with Clear Lid",
-  LTM5202: "Dark Brown Leatherette Tumbler with Clear Lid",
-  LTM5203: "Black/Silver Leatherette Tumbler with Clear Lid",
-  LTM5204: "Rawhide Leatherette Tumbler with Clear Lid",
-  LTM5205: "Gray Leatherette Tumbler with Clear Lid",
-  LTM5206: "Blue/Silver Leatherette Tumbler with Clear Lid",
-  LTM5207: "Pink Leatherette Tumbler with Clear Lid",
-  LTM5208: "Rustic/Silver Leatherette Tumbler with Clear Lid",
-  LTM5209: "Teal Leatherette Tumbler with Clear Lid",
-  LTM5210: "Bamboo Leatherette Tumbler with Clear Lid",
-  LTM5211: "Red Leatherette Tumbler with Clear Lid",
-  LTM5212: "White Leatherette Tumbler with Clear Lid",
-  LTM5213: "Purple Leatherette Tumbler with Clear Lid",
+  LTM5201: "20 oz. Light Brown Leatherette Grip Tumbler with Standard Lid",
+  LTM5202: "20 oz. Dark Brown Leatherette Grip Tumbler with Standard Lid",
+  LTM5203: "20 oz. Black/Silver Leatherette Grip Tumbler with Standard Lid",
+  LTM5204: "20 oz. Rawhide Leatherette Grip Tumbler with Standard Lid",
+  LTM5205: "20 oz. Gray Leatherette Grip Tumbler with Standard Lid",
+  LTM5206: "20 oz. Blue/Silver Leatherette Grip Tumbler with Standard Lid",
+  LTM5207: "20 oz. Pink Leatherette Grip Tumbler with Standard Lid",
+  LTM5208: "20 oz. Rustic/Silver Leatherette Grip Tumbler with Standard Lid",
+  LTM5209: "20 oz. Teal Leatherette Grip Tumbler with Standard Lid",
+  LTM5210: "20 oz. Bamboo Leatherette Grip Tumbler with Standard Lid",
+  LTM5211: "20 oz. Red Leatherette Grip Tumbler with Standard Lid",
+  LTM5212: "20 oz. White Leatherette Grip Tumbler with Standard Lid",
+  LTM5213: "20 oz. Purple Leatherette Grip Tumbler with Standard Lid",
   LTM5251: "Black with Black/Silver Leatherette 20 oz. with Slider Lid",
   LTM5252: "Black with Rawhide Leatherette 20 oz. with Slider Lid",
   LTM5253: "Black with Gray Leatherette 20 oz. with Slider Lid",
