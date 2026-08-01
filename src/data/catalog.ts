@@ -1900,7 +1900,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "ltm7278",
-    name: "Orange/Ghost Black 20 oz Tumbler",
+    name: "20 oz. Orange/Ghost Black Tumbler",
     sku: "LTM7278",
     size: "20 oz.",
     price: 29,
@@ -1915,7 +1915,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "ltm7279",
-    name: "Yellow/Ghost Black 20 oz Tumbler",
+    name: "20 oz. Yellow/Ghost Black Tumbler",
     sku: "LTM7279",
     size: "20 oz.",
     price: 29,
@@ -1930,7 +1930,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "ltm7375",
-    name: "Black 32 oz Travel Mug",
+    name: "32 oz. Black Travel Mug",
     sku: "LTM7375",
     size: "32 oz.",
     price: 41.25,
@@ -1945,7 +1945,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "ltm7376",
-    name: "White 32 oz Travel Mug",
+    name: "32 oz. White Travel Mug",
     sku: "LTM7376",
     size: "32 oz.",
     price: 41.25,
@@ -1960,7 +1960,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "ltm7377",
-    name: "Navy Blue 32 oz Travel Mug",
+    name: "32 oz. Navy Blue Travel Mug",
     sku: "LTM7377",
     size: "32 oz.",
     price: 41.25,
@@ -1975,7 +1975,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "ltm7378",
-    name: "Red 32 oz Travel Mug",
+    name: "32 oz. Red Travel Mug",
     sku: "LTM7378",
     size: "32 oz.",
     price: 41.25,
@@ -1990,7 +1990,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "ltm7379",
-    name: "Royal Blue 32 oz Travel Mug",
+    name: "32 oz. Royal Blue Travel Mug",
     sku: "LTM7379",
     size: "32 oz.",
     price: 41.25,
@@ -2097,7 +2097,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "stm622",
-    name: "White 20 oz Polar Camel Vacuum Insulated Tumbler w/Lid",
+    name: "20 oz. White Vacuum Insulated Tumbler w/Lid",
     sku: "STM622",
     size: "3 1/2\" x 6 7/8\"",
     price: 9.35,
@@ -2112,7 +2112,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "stm631",
-    name: "Brushed Silver 30 oz Polar Camel Vacuum Insulated Tumbler w/Lid",
+    name: "30 oz. Brushed Silver Vacuum Insulated Tumbler w/Lid",
     sku: "STM631",
     size: "4\" x 7 1/2\"",
     price: 9.4,
@@ -2127,7 +2127,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "stm632",
-    name: "White 30 oz Polar Camel Vacuum Insulated Tumbler w/Lid",
+    name: "30 oz. White Vacuum Insulated Tumbler w/Lid",
     sku: "STM632",
     size: "4\" x 7 1/2\"",
     price: 10.45,
@@ -2465,12 +2465,12 @@ const NAME_OVERRIDES: Record<string, string> = {
   LTM5211: "20 oz. Red Leatherette Grip Tumbler with Standard Lid",
   LTM5212: "20 oz. White Leatherette Grip Tumbler with Standard Lid",
   LTM5213: "20 oz. Purple Leatherette Grip Tumbler with Standard Lid",
-  LTM5251: "Black with Black/Silver Leatherette 20 oz. with Slider Lid",
-  LTM5252: "Black with Rawhide Leatherette 20 oz. with Slider Lid",
-  LTM5253: "Black with Gray Leatherette 20 oz. with Slider Lid",
-  LTM5254: "Black with Rustic Leatherette 20 oz. with Slider Lid",
-  LTM5255: "Black with Bamboo Leatherette 20 oz. with Slider Lid",
-  LTM5256: "Black with White Leatherette 20 oz. with Slider Lid",
+  LTM5251: "20 oz. Black with Black/Silver Leatherette Tumbler with Slider Lid",
+  LTM5252: "20 oz. Black with Rawhide Leatherette Tumbler with Slider Lid",
+  LTM5253: "20 oz. Black with Gray Leatherette Tumbler with Slider Lid",
+  LTM5254: "20 oz. Black with Rustic Leatherette Tumbler with Slider Lid",
+  LTM5255: "20 oz. Black with Bamboo Leatherette Tumbler with Slider Lid",
+  LTM5256: "20 oz. Black with White Leatherette Tumbler with Slider Lid",
   // The 6 sport tumblers, taken verbatim from the JDS master catalog's
   // SHORT DESCRIPTION (user request) minus the "Polar Camel" brand we never
   // print. The stray "Leather" on Softball and Soccer is JDS's own
