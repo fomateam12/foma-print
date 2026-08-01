@@ -162,31 +162,31 @@ const SUB_OVERRIDES: Record<string, SubAssignment> = {
   // category nav automatically (productCount > 0 filter in toCategory).
   // LTM5210/5212 and LTM833/834 are currently in the hidden-SKU list; they are
   // assigned here too so a future restore lands in the right tile.
-  LTM5201: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5202: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5203: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5204: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5205: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5206: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5207: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5208: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5209: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5210: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5211: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5212: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5213: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
-  LTM5251: { subId: "128", subSlug: "leatherette-tumbler-with-slider-lid", subName: "Leatherette Tumbler with Slider Lid" },
-  LTM5252: { subId: "128", subSlug: "leatherette-tumbler-with-slider-lid", subName: "Leatherette Tumbler with Slider Lid" },
-  LTM5253: { subId: "128", subSlug: "leatherette-tumbler-with-slider-lid", subName: "Leatherette Tumbler with Slider Lid" },
-  LTM5254: { subId: "128", subSlug: "leatherette-tumbler-with-slider-lid", subName: "Leatherette Tumbler with Slider Lid" },
-  LTM5255: { subId: "128", subSlug: "leatherette-tumbler-with-slider-lid", subName: "Leatherette Tumbler with Slider Lid" },
-  LTM5256: { subId: "128", subSlug: "leatherette-tumbler-with-slider-lid", subName: "Leatherette Tumbler with Slider Lid" },
-  LTM832: { subId: "129", subSlug: "sport-tumblers", subName: "Sport Tumblers" },
-  LTM833: { subId: "129", subSlug: "sport-tumblers", subName: "Sport Tumblers" },
-  LTM834: { subId: "129", subSlug: "sport-tumblers", subName: "Sport Tumblers" },
-  LTM835: { subId: "129", subSlug: "sport-tumblers", subName: "Sport Tumblers" },
-  LTM836: { subId: "129", subSlug: "sport-tumblers", subName: "Sport Tumblers" },
-  LTM837: { subId: "129", subSlug: "sport-tumblers", subName: "Sport Tumblers" },
+  LTM5201: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
+  LTM5202: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
+  LTM5203: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
+  LTM5204: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
+  LTM5205: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
+  LTM5206: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
+  LTM5207: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
+  LTM5208: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
+  LTM5209: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
+  LTM5210: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
+  LTM5211: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
+  LTM5212: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
+  LTM5213: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
+  LTM5251: { subId: "128", subSlug: "slider-lid", subName: "Slider Lid" },
+  LTM5252: { subId: "128", subSlug: "slider-lid", subName: "Slider Lid" },
+  LTM5253: { subId: "128", subSlug: "slider-lid", subName: "Slider Lid" },
+  LTM5254: { subId: "128", subSlug: "slider-lid", subName: "Slider Lid" },
+  LTM5255: { subId: "128", subSlug: "slider-lid", subName: "Slider Lid" },
+  LTM5256: { subId: "128", subSlug: "slider-lid", subName: "Slider Lid" },
+  LTM832: { subId: "129", subSlug: "sport", subName: "Sport" },
+  LTM833: { subId: "129", subSlug: "sport", subName: "Sport" },
+  LTM834: { subId: "129", subSlug: "sport", subName: "Sport" },
+  LTM835: { subId: "129", subSlug: "sport", subName: "Sport" },
+  LTM836: { subId: "129", subSlug: "sport", subName: "Sport" },
+  LTM837: { subId: "129", subSlug: "sport", subName: "Sport" },
   LLF157: { subId: "104", subSlug: "photo-frames-medium", subName: "Medium Photo Frames (5x7)" },
   // Wallets split into 3 type subcategories (Strap / Bifold+FlipID / Bifold).
   GFT1285: { subId: "107", subSlug: "wallets-bifold-flip-id", subName: "Leatherette Bifold Wallet with Flip ID" },
@@ -2353,12 +2353,14 @@ const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
     // each product's own (still-distinct) subcategoryName via
     // buildTypeFacets/filterByType in product-taxonomy.ts.
     { subId: "121", slug: "20-oz-tumblers-all", name: "20 oz. Tumblers", count: 0 },
-    // Leatherette Wrapped Tumblers split into 3 tiles (user request) —
-    // see the matching SUB_OVERRIDES block. Unlike the 20 oz. case these
-    // stay THREE separate subcategory pages, not one page with type chips.
-    { subId: "127", slug: "leatherette-tumbler-with-clear-lid", name: "Leatherette Tumbler with Clear Lid", count: 0 },
-    { subId: "128", slug: "leatherette-tumbler-with-slider-lid", name: "Leatherette Tumbler with Slider Lid", count: 0 },
-    { subId: "129", slug: "sport-tumblers", name: "Sport Tumblers", count: 0 },
+  ],
+  // Promoted out of Drinkware into its own storefront category (user
+  // request) — see PROMOTED_CATS. The names stay short because the
+  // category heading and breadcrumb already say "Leatherette Tumblers".
+  "leatherette-tumblers": [
+    { subId: "127", slug: "clear-lid", name: "Clear Lid", count: 0 },
+    { subId: "128", slug: "slider-lid", name: "Slider Lid", count: 0 },
+    { subId: "129", slug: "sport", name: "Sport", count: 0 },
   ],
   "travel-accessories": [
     { subId: "96", slug: "passport-holders", name: "Passport Holders", count: 0 },
@@ -2517,6 +2519,29 @@ function giftsCategoryFor(subSlug: string) {
   return GIFTS_SPLIT[subSlug] ?? GIFTS_CATS.personal;
 }
 
+/* ------------------------------------------------------------------ */
+/* PROMOTED_CATEGORIES — storefront categories that exist only here,   */
+/* built out of subcategories lifted from wherever the feed filed them.*/
+/*                                                                     */
+/* "Leatherette Tumblers" (user request): the leatherette-wrapped line */
+/* is a product family in its own right, so it gets a top-level tile   */
+/* with Clear Lid / Slider Lid / Sport underneath instead of sitting   */
+/* three-deep inside Drinkware — which the two-level                   */
+/* /category/[slug]/[subSlug] route cannot express anyway. These SKUs  */
+/* leave Drinkware; that is the intended trade.                        */
+/* ------------------------------------------------------------------ */
+const PROMOTED_CATS = {
+  leatheretteTumblers: { id: "14", slug: "leatherette-tumblers", name: "Leatherette Tumblers" },
+} as const;
+
+/* Subcategory slug -> the category that owns it, overriding whatever the
+   feed (or the polar-camel merge) would otherwise assign. */
+const CATEGORY_BY_SUBSLUG: Record<string, { id: string; slug: string; name: string }> = {
+  "clear-lid": PROMOTED_CATS.leatheretteTumblers,
+  "slider-lid": PROMOTED_CATS.leatheretteTumblers,
+  sport: PROMOTED_CATS.leatheretteTumblers,
+};
+
 function normalizeCatalog(): { products: RawProduct[]; categories: RawCategory[] } {
   const subSlugBySubId = new Map<string, string>();
   const categories: RawCategory[] = [];
@@ -2565,7 +2590,7 @@ function normalizeCatalog(): { products: RawProduct[]; categories: RawCategory[]
   // routes to via GIFTS_SPLIT/MERGE_TARGET — without this, the category
   // object never exists by the time the loop below runs and the whole
   // tile silently vanishes (same class of bug as the polar-camel merge).
-  for (const t of Object.values(GIFTS_CATS)) {
+  for (const t of [...Object.values(GIFTS_CATS), ...Object.values(PROMOTED_CATS)]) {
     if (ADDED_SUBCATEGORIES[t.slug] && !categories.some((c) => c.slug === t.slug)) {
       categories.push({ id: t.id, slug: t.slug, name: t.name, subcategories: [] });
     }
@@ -2604,6 +2629,13 @@ function normalizeCatalog(): { products: RawProduct[]; categories: RawCategory[]
       categorySlug = t.slug;
       categoryName = t.name;
     }
+    // Promotion wins over both the feed and the polar-camel merge above.
+    const promoted = CATEGORY_BY_SUBSLUG[subSlug];
+    if (promoted) {
+      categoryId = promoted.id;
+      categorySlug = promoted.slug;
+      categoryName = promoted.name;
+    }
     return {
       ...p,
       name: NAME_OVERRIDES[p.sku.toUpperCase()] ?? stripBrand(p.name),
@@ -2630,6 +2662,7 @@ const CATEGORY_ICONS: Record<string, IconKey> = {
   "travel-accessories": "luggage",
   "personal-accessories": "wallet",
   drinkware: "coffee",
+  "leatherette-tumblers": "coffee",
   "frames-and-decor": "frame",
   "office-tech": "notebook",
   "gift-sets": "gift",
@@ -2644,6 +2677,8 @@ const CATEGORY_BLURBS: Record<string, string> = {
     "Wallets, money clips, checkbook covers and valet trays — everyday carry, engraved to order.",
   drinkware:
     "Insulated tumblers, water bottles, mugs, coasters and glassware ready for crisp, permanent engraving.",
+  "leatherette-tumblers":
+    "Leatherette-wrapped insulated tumblers — clear lid, slider lid and sport styles, engraved to a crisp contrast.",
   "frames-and-decor":
     "Photo frames, slate signage and ornaments that turn moments into heirlooms.",
   "office-tech":
@@ -2873,6 +2908,11 @@ function enrich(p: Product): Product {
 const allProducts: Product[] = [...jdsProducts, ...fomaProducts]
   .map(enrich)
   .map((p) => {
+    // fomaProducts bypass normalizeCatalog, so the same two remaps run here.
+    const promoted = CATEGORY_BY_SUBSLUG[p.subcategorySlug];
+    if (promoted) {
+      return { ...p, categoryId: promoted.id, categorySlug: promoted.slug, categoryName: promoted.name };
+    }
     if (p.categorySlug !== GIFTS_SOURCE_SLUG) return p;
     const t = giftsCategoryFor(p.subcategorySlug);
     return { ...p, categoryId: t.id, categorySlug: t.slug, categoryName: t.name };

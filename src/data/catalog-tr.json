@@ -6,7 +6,8 @@
   "Drinkware": "İçecek Gereçleri",
   "Frames & Decor": "Çerçeveler ve Dekorasyon",
   "Office, Tech": "Ofis, Teknoloji",
-  "Gift Sets": "Hediye Setleri"
+  "Gift Sets": "Hediye Setleri",
+  "Leatherette Tumblers": "Suni Deri Termos Bardaklar"
  },
  "subcategories": {
   "20 oz. Tumblers": "20 oz. Termos Bardaklar",
@@ -16,6 +17,7 @@
   "Bamboo, Cork & Slate Coasters": "Bambu, Mantar ve Arduvaz Bardak Altlıkları",
   "Bar Gift Sets": "Bar Hediye Setleri",
   "Beverage Holders": "İçecek Tutucuları",
+  "Clear Lid": "Şeffaf Kapaklı",
   "Bottle Openers": "Şişe Açacakları",
   "Business Card Holders/Desk Wedges": "Kartvizitlikler/Masa Kartlıkları",
   "Checkbook Covers": "Çek Defteri Kılıfları",
@@ -38,8 +40,6 @@
   "Leatherette Mug Sleeve & Beverage Holder": "Suni Deri Kupa Kılıfı ve İçecek Tutucusu",
   "Leatherette Portfolio with Notepad": "Not Defterli Suni Deri Evrak Çantası",
   "Leatherette Portfolio with Zipper": "Fermuarlı Suni Deri Evrak Çantası",
-  "Leatherette Tumbler with Clear Lid": "Şeffaf Kapaklı Suni Deri Termos Bardak",
-  "Leatherette Tumbler with Slider Lid": "Sürgülü Kapaklı Suni Deri Termos Bardak",
   "Leatherette Wallet with Strap": "Askılı Suni Deri Cüzdan",
   "Leatherette Wrapped Tumblers": "Suni Deri Kaplı Termos Bardaklar",
   "Leatherette and Cork Portfolios": "Suni Deri ve Mantar Evrak Çantaları",
@@ -53,13 +53,14 @@
   "Pints": "Pint Bardakları",
   "Pocket Knives": "Cep Çakıları",
   "Power Banks, Charging Matts": "Taşınabilir Şarj Cihazları, Şarj Matları",
+  "Slider Lid": "Sürgülü Kapaklı",
+  "Sport": "Spor",
   "Sippy Cups": "Damlatmaz Bardaklar",
   "Skinny Tumblers": "İnce Termos Bardaklar",
   "Slate Decor": "Arduvaz Dekor Ürünleri",
   "Small Photo Frames (4x6)": "Küçük Fotoğraf Çerçeveleri (4x6)",
   "Solid Wood Photo Frames": "Masif Ahşap Fotoğraf Çerçeveleri",
   "Spiral Notebooks": "Spiralli Defterler",
-  "Sport Tumblers": "Spor Termos Bardaklar",
   "Square and Round Laserable Ceramic Mugs": "Kare ve Yuvarlak Lazerle Kazınabilir Seramik Kupalar",
   "Stemless/Wine Chillers": "Ayaksız Şarap Kadehleri/Şarap Soğutucuları",
   "Travel & Barrel Mugs, Beverage Holders": "Seyahat ve Fıçı Kupaları, İçecek Tutucular",
@@ -924,6 +925,7 @@
   "Drinkware": "Net ve kalıcı kazıma için hazır yalıtımlı termos bardaklar, suluklar, kupalar, bardak altlıkları ve cam ürünler.",
   "Frames & Decor": "Anları yadigârlara dönüştüren fotoğraf çerçeveleri, arduvaz tabelalar ve süsler.",
   "Office, Tech": "Ekipler ve hediye amaçlı kazınmış defterler, evrak çantaları ve masa aksesuarları.",
-  "Gift Sets": "Kişiselleştirilmeye ve hediye edilmeye hazır kart ve zar setleri, viski taşı setleri, şarap kutuları ve poker/bira setleri."
+  "Gift Sets": "Kişiselleştirilmeye ve hediye edilmeye hazır kart ve zar setleri, viski taşı setleri, şarap kutuları ve poker/bira setleri.",
+  "Leatherette Tumblers": "Suni deri kaplı yalıtımlı termos bardaklar — şeffaf kapaklı, sürgülü kapaklı ve spor modelleri, net kontrastla kazınır."
  }
 }
