@@ -15,6 +15,7 @@ import {
   getProductsByCategory,
 } from "@/data/catalog";
 import { CATEGORY_BANNERS } from "@/lib/category-banners";
+import { CATEGORY_CROSS_LINKS } from "@/lib/category-cross-links";
 import { getDictionary } from "@/lib/dictionaries";
 import { LOCALES, isLocale } from "@/lib/i18n";
 import { categoryBlurb, categoryName, subcategoryName } from "@/lib/catalog-i18n";
@@ -61,6 +62,14 @@ export default async function CategoryPage({
   const all = getProductsByCategory(category.slug);
   const popular = all.slice(0, 8);
   const banner = CATEGORY_BANNERS[category.slug];
+  // Families promoted out of this category still get a tile pointing at
+  // their new home, so browsing the old category never dead-ends.
+  const crossLinks = (CATEGORY_CROSS_LINKS[category.slug] ?? []).flatMap(
+    (slug) => {
+      const c = getCategory(slug);
+      return c && c.productCount > 0 ? [c] : [];
+    },
+  );
 
   return (
     <div>
@@ -175,6 +184,45 @@ export default async function CategoryPage({
                       </h3>
                       <span className="mt-auto pt-1 text-xs text-muted-foreground">
                         {sc.productCount} {dict.categories.statProducts}
+                      </span>
+                    </div>
+                  </Link>
+                </Reveal>
+              );
+            })}
+
+            {crossLinks.map((c, i) => {
+              const cName = categoryName(c.name, lang);
+              const thumb = getProductsByCategory(c.slug)[0];
+              return (
+                <Reveal
+                  key={`x-${c.slug}`}
+                  delay={Math.min((category.subcategories.length + i) * 0.04, 0.24)}
+                >
+                  <Link
+                    href={`/category/${c.slug}`}
+                    className="group flex h-full flex-col overflow-hidden rounded-2xl border border-dashed border-brand-strong/40 bg-brand-muted/30 transition-all duration-300 ease-premium hover:-translate-y-0.5 hover:border-brand-strong/70 hover:shadow-lg"
+                  >
+                    <ProductImage
+                      src={thumb?.image ?? ""}
+                      alt={cName}
+                      seed={c.slug}
+                      icon={c.icon}
+                      width={400}
+                      sizes="(max-width: 640px) 50vw, 25vw"
+                      className="aspect-square border-b border-dashed border-brand-strong/30"
+                      imgClassName="p-3 group-hover:scale-105"
+                    />
+                    <div className="flex flex-1 flex-col gap-0.5 p-3.5">
+                      <span className="eyebrow text-brand-strong">
+                        {t.alsoIn}
+                      </span>
+                      <h3 className="mt-1 line-clamp-2 inline-flex items-center gap-1 text-sm font-medium text-foreground group-hover:text-brand-strong">
+                        {cName}
+                        <ArrowRight className="size-3.5 shrink-0 transition-transform group-hover:translate-x-0.5" />
+                      </h3>
+                      <span className="mt-auto pt-1 text-xs text-muted-foreground">
+                        {c.productCount} {dict.categories.statProducts}
                       </span>
                     </div>
                   </Link>
