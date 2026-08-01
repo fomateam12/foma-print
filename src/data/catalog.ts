@@ -162,25 +162,25 @@ const SUB_OVERRIDES: Record<string, SubAssignment> = {
   // category nav automatically (productCount > 0 filter in toCategory).
   // LTM5210/5212 and LTM833/834 are currently in the hidden-SKU list; they are
   // assigned here too so a future restore lands in the right tile.
-  LTM5201: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
-  LTM5202: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
-  LTM5203: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
-  LTM5204: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
-  LTM5205: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
-  LTM5206: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
-  LTM5207: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
-  LTM5208: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
-  LTM5209: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
-  LTM5210: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
-  LTM5211: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
-  LTM5212: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
-  LTM5213: { subId: "127", subSlug: "clear-lid", subName: "Clear Lid" },
-  LTM5251: { subId: "128", subSlug: "slider-lid", subName: "Slider Lid" },
-  LTM5252: { subId: "128", subSlug: "slider-lid", subName: "Slider Lid" },
-  LTM5253: { subId: "128", subSlug: "slider-lid", subName: "Slider Lid" },
-  LTM5254: { subId: "128", subSlug: "slider-lid", subName: "Slider Lid" },
-  LTM5255: { subId: "128", subSlug: "slider-lid", subName: "Slider Lid" },
-  LTM5256: { subId: "128", subSlug: "slider-lid", subName: "Slider Lid" },
+  LTM5201: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5202: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5203: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5204: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5205: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5206: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5207: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5208: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5209: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5210: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5211: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5212: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5213: { subId: "127", subSlug: "clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5251: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
+  LTM5252: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
+  LTM5253: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
+  LTM5254: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
+  LTM5255: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
+  LTM5256: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
   LTM832: { subId: "129", subSlug: "sport", subName: "20 oz. Sport Tumbler with Slider Lid" },
   LTM833: { subId: "129", subSlug: "sport", subName: "20 oz. Sport Tumbler with Slider Lid" },
   LTM834: { subId: "129", subSlug: "sport", subName: "20 oz. Sport Tumbler with Slider Lid" },
@@ -2363,8 +2363,8 @@ const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
   // request) — see PROMOTED_CATS. The names stay short because the
   // category heading and breadcrumb already say "Leatherette Tumblers".
   "leatherette-tumblers": [
-    { subId: "127", slug: "clear-lid", name: "Clear Lid", count: 0 },
-    { subId: "128", slug: "slider-lid", name: "Slider Lid", count: 0 },
+    { subId: "127", slug: "clear-lid", name: "Leatherette Tumbler with Clear Lid", count: 0 },
+    { subId: "128", slug: "slider-lid", name: "20 oz. Black Leatherette Tumbler with Slider Lid", count: 0 },
     // Heading spelled out in full (user request) even though the other two
     // stay short — it is the JDS line name buyers search for. The slug
     // stays "sport" so the URL shipped earlier today keeps working.
