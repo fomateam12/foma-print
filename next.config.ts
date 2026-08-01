@@ -124,6 +124,20 @@ const nextConfig: NextConfig = {
         destination: "/category/personal-accessories",
         permanent: true,
       },
+      // "Leatherette Wrapped Tumblers" split into Clear Lid / Slider Lid /
+      // Sport tiles. The old tile is empty and no longer routes, so its URL
+      // (indexed + linked from older category pages) points at the largest
+      // successor.
+      {
+        source: "/category/drinkware/leatherette-wrapped-tumblers",
+        destination: "/category/drinkware/leatherette-tumbler-with-clear-lid",
+        permanent: true,
+      },
+      {
+        source: "/tr/category/drinkware/leatherette-wrapped-tumblers",
+        destination: "/tr/category/drinkware/leatherette-tumbler-with-clear-lid",
+        permanent: true,
+      },
     ];
   },
 };

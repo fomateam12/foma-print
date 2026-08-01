@@ -153,6 +153,40 @@ const SUB_OVERRIDES: Record<string, SubAssignment> = {
   LTM830: { subId: "121", subSlug: "20-oz-tumblers-all", subName: "Golf Tumbler" },
   LTM831: { subId: "121", subSlug: "20-oz-tumblers-all", subName: "Golf Tumbler" },
   LTM838: { subId: "121", subSlug: "20-oz-tumblers-all", subName: "Golf Tumbler" },
+  // Leatherette Wrapped Tumblers split into 3 type subcategories (user
+  // request): Clear Lid / Slider Lid / Sport. The supplier lumps all 25 SKUs
+  // into one subId 22 tile; the buyer shops these as three different products
+  // (a plain wrapped tumbler, a two-tone black slider-lid 20 oz, and a
+  // sport-ball novelty). Every SKU of subId 22 is re-homed below, so the old
+  // "Leatherette Wrapped Tumblers" tile ends up empty and is dropped from the
+  // category nav automatically (productCount > 0 filter in toCategory).
+  // LTM5210/5212 and LTM833/834 are currently in the hidden-SKU list; they are
+  // assigned here too so a future restore lands in the right tile.
+  LTM5201: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5202: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5203: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5204: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5205: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5206: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5207: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5208: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5209: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5210: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5211: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5212: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5213: { subId: "127", subSlug: "leatherette-tumbler-with-clear-lid", subName: "Leatherette Tumbler with Clear Lid" },
+  LTM5251: { subId: "128", subSlug: "leatherette-tumbler-with-slider-lid", subName: "Leatherette Tumbler with Slider Lid" },
+  LTM5252: { subId: "128", subSlug: "leatherette-tumbler-with-slider-lid", subName: "Leatherette Tumbler with Slider Lid" },
+  LTM5253: { subId: "128", subSlug: "leatherette-tumbler-with-slider-lid", subName: "Leatherette Tumbler with Slider Lid" },
+  LTM5254: { subId: "128", subSlug: "leatherette-tumbler-with-slider-lid", subName: "Leatherette Tumbler with Slider Lid" },
+  LTM5255: { subId: "128", subSlug: "leatherette-tumbler-with-slider-lid", subName: "Leatherette Tumbler with Slider Lid" },
+  LTM5256: { subId: "128", subSlug: "leatherette-tumbler-with-slider-lid", subName: "Leatherette Tumbler with Slider Lid" },
+  LTM832: { subId: "129", subSlug: "sport-tumblers", subName: "Sport Tumblers" },
+  LTM833: { subId: "129", subSlug: "sport-tumblers", subName: "Sport Tumblers" },
+  LTM834: { subId: "129", subSlug: "sport-tumblers", subName: "Sport Tumblers" },
+  LTM835: { subId: "129", subSlug: "sport-tumblers", subName: "Sport Tumblers" },
+  LTM836: { subId: "129", subSlug: "sport-tumblers", subName: "Sport Tumblers" },
+  LTM837: { subId: "129", subSlug: "sport-tumblers", subName: "Sport Tumblers" },
   LLF157: { subId: "104", subSlug: "photo-frames-medium", subName: "Medium Photo Frames (5x7)" },
   // Wallets split into 3 type subcategories (Strap / Bifold+FlipID / Bifold).
   GFT1285: { subId: "107", subSlug: "wallets-bifold-flip-id", subName: "Leatherette Bifold Wallet with Flip ID" },
@@ -2319,6 +2353,12 @@ const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
     // each product's own (still-distinct) subcategoryName via
     // buildTypeFacets/filterByType in product-taxonomy.ts.
     { subId: "121", slug: "20-oz-tumblers-all", name: "20 oz. Tumblers", count: 0 },
+    // Leatherette Wrapped Tumblers split into 3 tiles (user request) —
+    // see the matching SUB_OVERRIDES block. Unlike the 20 oz. case these
+    // stay THREE separate subcategory pages, not one page with type chips.
+    { subId: "127", slug: "leatherette-tumbler-with-clear-lid", name: "Leatherette Tumbler with Clear Lid", count: 0 },
+    { subId: "128", slug: "leatherette-tumbler-with-slider-lid", name: "Leatherette Tumbler with Slider Lid", count: 0 },
+    { subId: "129", slug: "sport-tumblers", name: "Sport Tumblers", count: 0 },
   ],
   "travel-accessories": [
     { subId: "96", slug: "passport-holders", name: "Passport Holders", count: 0 },
@@ -2396,6 +2436,10 @@ const NAME_OVERRIDES: Record<string, string> = {
   // Master urun tablosundan (FOMA-ANA-URUN-TABLOSU.xlsx, SKU ile eslesme).
   // products.json tedarikci beslemesidir ve .scrape/scrape.py onu yeniden yazar;
   // master kaynakli adlar bu yuzden burada, SKU anahtariyla duruyor.
+  // The supplier feed itself carries a truncated word at the end of this one
+  // name ("...with Clear Lid bler"); every sibling SKU in the line is clean.
+  // Fixed here, not in products.json, because scrape.py rewrites that file.
+  LTM5202: "Dark Brown Leatherette Wrapped Tumbler with Clear Lid",
   PCG213: "20 oz. Beer Mug with Handle & Round Engraving Area",
   PCG350: "10 oz. Clear Footed Coffee Mug",
   GFT185: "Light Brown Leatherette Portfolio with Notepad",
