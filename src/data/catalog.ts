@@ -590,7 +590,13 @@ const REMOVED_SKUS = new Set<string>([
   "LTM7268", "LTM7269", "LTM7319", "LTM7352", "LTM7353", "LTM7354",
   "LTM7355", "LTM7356", "LTM7357", "LTM7358", "LTM7359", "LTM7360",
   "LTM7361", "LTM7362", "LTM7363", "LTM7364", "LTM7365", "LTM7366",
-  "LTM7367", "LTM7368", "LTM7369", "LTM768", "LTM833", "LTM834",
+  // LTM833 (Football Sport Tumbler) restored to Leatherette Tumblers >
+  // Sport (user request). Same over-aggressive min-3 image gate as the
+  // LTM7002-7018 line above: it has a colored PNG + BLANK template and no
+  // third variant, which is all this product line ever ships. Both images
+  // verified 200 image/png on R2. LTM834 (Basketball) is in the identical
+  // situation and stays hidden — not asked for.
+  "LTM7367", "LTM7368", "LTM7369", "LTM768", "LTM834",
   "MRT01", "PDL101", "PDL150",
   "PTF135", "PTF1811", "PTF246", "PTF2810", "PTF457", "PTF4810", "BPN101", "BPN102", "BPN103", "BPN104", "BPN105",
   "BR1001", "BR1002", "BR1003", "BR1004", "BR1251", "BR1252",
@@ -2542,13 +2548,28 @@ const CATEGORY_BY_SUBSLUG: Record<string, { id: string; slug: string; name: stri
   sport: PROMOTED_CATS.leatheretteTumblers,
 };
 
+/* ------------------------------------------------------------------ */
+/* SUBCATEGORY_RENAMES — typos in the supplier's own subcategory names. */
+/* Keyed by the post-stripBrand name, and applied to BOTH the category  */
+/* tile and every product's eyebrow, so the two can never disagree.     */
+/* Overriding the slug as well changes the URL, so each entry needs a   */
+/* redirect from the old slug in next.config.ts.                        */
+/* ------------------------------------------------------------------ */
+const SUBCATEGORY_RENAMES: Record<string, { slug: string; name: string }> = {
+  // Feed ships "Tumbers" — the only misspelling in the taxonomy.
+  "30 oz. Tumbers": { slug: "30-oz-tumblers", name: "30 oz. Tumblers" },
+};
+const renameSubName = (name: string) => SUBCATEGORY_RENAMES[name]?.name ?? name;
+
 function normalizeCatalog(): { products: RawProduct[]; categories: RawCategory[] } {
   const subSlugBySubId = new Map<string, string>();
   const categories: RawCategory[] = [];
   let target: RawCategory | undefined;
 
   const addSub = (cat: RawCategory, sc: RawCategory["subcategories"][number]) => {
-    let slug = stripBrandSlug(sc.slug);
+    const cleaned = stripBrand(sc.name);
+    const renamed = SUBCATEGORY_RENAMES[cleaned];
+    let slug = renamed?.slug ?? stripBrandSlug(sc.slug);
     const taken = new Set(cat.subcategories.map((s) => s.slug));
     if (taken.has(slug)) {
       let i = 2;
@@ -2556,7 +2577,7 @@ function normalizeCatalog(): { products: RawProduct[]; categories: RawCategory[]
       slug = `${slug}-${i}`;
     }
     subSlugBySubId.set(sc.subId, slug);
-    cat.subcategories.push({ ...sc, slug, name: stripBrand(sc.name) });
+    cat.subcategories.push({ ...sc, slug, name: renamed?.name ?? cleaned });
   };
 
   for (const c of data.categories) {
@@ -2644,7 +2665,7 @@ function normalizeCatalog(): { products: RawProduct[]; categories: RawCategory[]
       categoryName,
       subId: effectiveSubId,
       subSlug,
-      subName: stripBrand(override?.subName ?? p.subName),
+      subName: renameSubName(stripBrand(override?.subName ?? p.subName)),
     };
   });
 
