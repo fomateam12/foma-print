@@ -240,7 +240,8 @@
     "consentBefore": "Satıcı fiyatları hakkında benimle iletişime geçilmesini kabul ediyorum:",
     "consentAfter": ". *",
     "submitting": "Gönderiliyor…",
-    "submit": "Satıcı başvurusunu gönder"
+    "submit": "Satıcı başvurusunu gönder",
+    "phoneCountryCode": "Telefon ülke kodu"
   },
   "howItWorks": {
     "metaTitle": "Nasıl çalışır?",
