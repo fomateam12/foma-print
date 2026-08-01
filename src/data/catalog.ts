@@ -181,12 +181,12 @@ const SUB_OVERRIDES: Record<string, SubAssignment> = {
   LTM5254: { subId: "128", subSlug: "slider-lid", subName: "Slider Lid" },
   LTM5255: { subId: "128", subSlug: "slider-lid", subName: "Slider Lid" },
   LTM5256: { subId: "128", subSlug: "slider-lid", subName: "Slider Lid" },
-  LTM832: { subId: "129", subSlug: "sport", subName: "Sport" },
-  LTM833: { subId: "129", subSlug: "sport", subName: "Sport" },
-  LTM834: { subId: "129", subSlug: "sport", subName: "Sport" },
-  LTM835: { subId: "129", subSlug: "sport", subName: "Sport" },
-  LTM836: { subId: "129", subSlug: "sport", subName: "Sport" },
-  LTM837: { subId: "129", subSlug: "sport", subName: "Sport" },
+  LTM832: { subId: "129", subSlug: "sport", subName: "20 oz. Sport Tumbler with Slider Lid" },
+  LTM833: { subId: "129", subSlug: "sport", subName: "20 oz. Sport Tumbler with Slider Lid" },
+  LTM834: { subId: "129", subSlug: "sport", subName: "20 oz. Sport Tumbler with Slider Lid" },
+  LTM835: { subId: "129", subSlug: "sport", subName: "20 oz. Sport Tumbler with Slider Lid" },
+  LTM836: { subId: "129", subSlug: "sport", subName: "20 oz. Sport Tumbler with Slider Lid" },
+  LTM837: { subId: "129", subSlug: "sport", subName: "20 oz. Sport Tumbler with Slider Lid" },
   LLF157: { subId: "104", subSlug: "photo-frames-medium", subName: "Medium Photo Frames (5x7)" },
   // Wallets split into 3 type subcategories (Strap / Bifold+FlipID / Bifold).
   GFT1285: { subId: "107", subSlug: "wallets-bifold-flip-id", subName: "Leatherette Bifold Wallet with Flip ID" },
@@ -590,13 +590,12 @@ const REMOVED_SKUS = new Set<string>([
   "LTM7268", "LTM7269", "LTM7319", "LTM7352", "LTM7353", "LTM7354",
   "LTM7355", "LTM7356", "LTM7357", "LTM7358", "LTM7359", "LTM7360",
   "LTM7361", "LTM7362", "LTM7363", "LTM7364", "LTM7365", "LTM7366",
-  // LTM833 (Football Sport Tumbler) restored to Leatherette Tumblers >
-  // Sport (user request). Same over-aggressive min-3 image gate as the
-  // LTM7002-7018 line above: it has a colored PNG + BLANK template and no
-  // third variant, which is all this product line ever ships. Both images
-  // verified 200 image/png on R2. LTM834 (Basketball) is in the identical
-  // situation and stays hidden — not asked for.
-  "LTM7367", "LTM7368", "LTM7369", "LTM768", "LTM834",
+  // LTM833 (Football) and LTM834 (Basketball) restored to Leatherette
+  // Tumblers > Sport (user request), completing the 6-SKU line. Same
+  // over-aggressive min-3 image gate as the LTM7002-7018 line above: a
+  // colored PNG + BLANK template and no third variant is all this line
+  // ever ships. All four images verified 200 image/png on R2.
+  "LTM7367", "LTM7368", "LTM7369", "LTM768",
   "MRT01", "PDL101", "PDL150",
   "PTF135", "PTF1811", "PTF246", "PTF2810", "PTF457", "PTF4810", "BPN101", "BPN102", "BPN103", "BPN104", "BPN105",
   "BR1001", "BR1002", "BR1003", "BR1004", "BR1251", "BR1252",
@@ -2366,7 +2365,10 @@ const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
   "leatherette-tumblers": [
     { subId: "127", slug: "clear-lid", name: "Clear Lid", count: 0 },
     { subId: "128", slug: "slider-lid", name: "Slider Lid", count: 0 },
-    { subId: "129", slug: "sport", name: "Sport", count: 0 },
+    // Heading spelled out in full (user request) even though the other two
+    // stay short — it is the JDS line name buyers search for. The slug
+    // stays "sport" so the URL shipped earlier today keeps working.
+    { subId: "129", slug: "sport", name: "20 oz. Sport Tumbler with Slider Lid", count: 0 },
   ],
   "travel-accessories": [
     { subId: "96", slug: "passport-holders", name: "Passport Holders", count: 0 },
@@ -2444,10 +2446,41 @@ const NAME_OVERRIDES: Record<string, string> = {
   // Master urun tablosundan (FOMA-ANA-URUN-TABLOSU.xlsx, SKU ile eslesme).
   // products.json tedarikci beslemesidir ve .scrape/scrape.py onu yeniden yazar;
   // master kaynakli adlar bu yuzden burada, SKU anahtariyla duruyor.
-  // The supplier feed itself carries a truncated word at the end of this one
-  // name ("...with Clear Lid bler"); every sibling SKU in the line is clean.
-  // Fixed here, not in products.json, because scrape.py rewrites that file.
-  LTM5202: "Dark Brown Leatherette Wrapped Tumbler with Clear Lid",
+  // The leatherette tumbler line, with "Wrapped" dropped from every name
+  // (user request) — the category already says Leatherette Tumblers, so the
+  // word only added length. LTM5202 also had a truncated word at the end of
+  // the supplier's own name ("...with Clear Lid bler"); that fix is folded
+  // in here. LTM5210/5212 are currently hidden but are listed so a future
+  // restore does not reintroduce "Wrapped".
+  LTM5201: "Light Brown Leatherette Tumbler with Clear Lid",
+  LTM5202: "Dark Brown Leatherette Tumbler with Clear Lid",
+  LTM5203: "Black/Silver Leatherette Tumbler with Clear Lid",
+  LTM5204: "Rawhide Leatherette Tumbler with Clear Lid",
+  LTM5205: "Gray Leatherette Tumbler with Clear Lid",
+  LTM5206: "Blue/Silver Leatherette Tumbler with Clear Lid",
+  LTM5207: "Pink Leatherette Tumbler with Clear Lid",
+  LTM5208: "Rustic/Silver Leatherette Tumbler with Clear Lid",
+  LTM5209: "Teal Leatherette Tumbler with Clear Lid",
+  LTM5210: "Bamboo Leatherette Tumbler with Clear Lid",
+  LTM5211: "Red Leatherette Tumbler with Clear Lid",
+  LTM5212: "White Leatherette Tumbler with Clear Lid",
+  LTM5213: "Purple Leatherette Tumbler with Clear Lid",
+  LTM5251: "Black with Black/Silver Leatherette 20 oz. with Slider Lid",
+  LTM5252: "Black with Rawhide Leatherette 20 oz. with Slider Lid",
+  LTM5253: "Black with Gray Leatherette 20 oz. with Slider Lid",
+  LTM5254: "Black with Rustic Leatherette 20 oz. with Slider Lid",
+  LTM5255: "Black with Bamboo Leatherette 20 oz. with Slider Lid",
+  LTM5256: "Black with White Leatherette 20 oz. with Slider Lid",
+  // The 6 sport tumblers, taken verbatim from the JDS master catalog's
+  // SHORT DESCRIPTION (user request) minus the "Polar Camel" brand we never
+  // print. The stray "Leather" on Softball and Soccer is JDS's own
+  // inconsistency, kept so our names match theirs exactly.
+  LTM832: "20 oz. Baseball Tumbler with Slider Lid",
+  LTM833: "20 oz. Football Tumbler with Slider Lid",
+  LTM834: "20 oz. Basketball Tumbler with Slider Lid",
+  LTM835: "20 oz. Softball Leather Tumbler with Slider Lid",
+  LTM836: "20 oz. Soccer Leather Tumbler with Slider Lid",
+  LTM837: "20 oz. Volleyball Tumbler with Slider Lid",
   PCG213: "20 oz. Beer Mug with Handle & Round Engraving Area",
   PCG350: "10 oz. Clear Footed Coffee Mug",
   GFT185: "Light Brown Leatherette Portfolio with Notepad",
