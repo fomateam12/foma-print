@@ -2108,7 +2108,11 @@ const ADDED_PRODUCTS: RawProduct[] = [
     categoryName: "Polar Camel",
     subId: "121",
     subSlug: "20-oz-tumblers-all",
-    subName: "Ringneck Tumbler with Standard Lid",
+    // Not a Ringneck — it is a sublimatable vacuum insulated tumbler, and it
+    // only sat in that chip because the feed filed it there. Its two siblings
+    // STM631/632 carry their subcategory's own name rather than a type chip,
+    // so this one matches them.
+    subName: "20 oz. Tumblers",
   },
   {
     id: "stm631",
