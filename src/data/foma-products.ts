@@ -112,7 +112,7 @@ export const fomaProducts: Product[] = [
   },
   {
     id: "foma-tumbler-40oz-black",
-    name: "40oz Tumbler with Handle & Straw – Black",
+    name: "40 oz. Tumbler with Handle & Straw – Black",
     sku: "TM-FM-BLK",
     size: "40oz · 12 × 6 in",
     basePrice: 12.99,
@@ -144,7 +144,7 @@ export const fomaProducts: Product[] = [
   },
   {
     id: "foma-tumbler-40oz-white",
-    name: "40oz Tumbler with Handle & Straw – White",
+    name: "40 oz. Tumbler with Handle & Straw – White",
     sku: "TM-FM-WHT",
     size: "40oz · 12 × 6 in",
     basePrice: 12.99,
@@ -176,7 +176,7 @@ export const fomaProducts: Product[] = [
   },
   {
     id: "foma-tumbler-40oz-cream",
-    name: "40oz Tumbler with Handle & Straw – Cream",
+    name: "40 oz. Tumbler with Handle & Straw – Cream",
     sku: "TM-FM-CRM",
     size: "40oz · 12 × 6 in",
     basePrice: 12.99,
@@ -208,7 +208,7 @@ export const fomaProducts: Product[] = [
   },
   {
     id: "foma-tumbler-40oz-charcoal",
-    name: "40oz Tumbler with Handle & Straw – Charcoal",
+    name: "40 oz. Tumbler with Handle & Straw – Charcoal",
     sku: "TM-FM-CHA",
     size: "40oz · 12 × 6 in",
     basePrice: 12.99,
@@ -240,7 +240,7 @@ export const fomaProducts: Product[] = [
   },
   {
     id: "foma-tumbler-40oz-fog",
-    name: "40oz Tumbler with Handle & Straw – Fog",
+    name: "40 oz. Tumbler with Handle & Straw – Fog",
     sku: "TM-FM-FOG",
     size: "40oz · 12 × 6 in",
     basePrice: 12.99,
@@ -272,7 +272,7 @@ export const fomaProducts: Product[] = [
   },
   {
     id: "foma-tumbler-40oz-azure",
-    name: "40oz Tumbler with Handle & Straw – Azure",
+    name: "40 oz. Tumbler with Handle & Straw – Azure",
     sku: "TM-FM-AZR",
     size: "40oz · 12 × 6 in",
     basePrice: 12.99,
@@ -304,7 +304,7 @@ export const fomaProducts: Product[] = [
   },
   {
     id: "foma-tumbler-40oz-eucalyptus",
-    name: "40oz Tumbler with Handle & Straw – Eucalyptus",
+    name: "40 oz. Tumbler with Handle & Straw – Eucalyptus",
     sku: "TM-FM-EUC",
     size: "40oz · 12 × 6 in",
     basePrice: 12.99,
@@ -336,7 +336,7 @@ export const fomaProducts: Product[] = [
   },
   {
     id: "foma-tumbler-40oz-bay-leaf",
-    name: "40oz Tumbler with Handle & Straw – Bay Leaf",
+    name: "40 oz. Tumbler with Handle & Straw – Bay Leaf",
     sku: "TM-FM-BAY",
     size: "40oz · 12 × 6 in",
     basePrice: 12.99,
@@ -368,7 +368,7 @@ export const fomaProducts: Product[] = [
   },
   {
     id: "foma-tumbler-40oz-lilac",
-    name: "40oz Tumbler with Handle & Straw – Lilac",
+    name: "40 oz. Tumbler with Handle & Straw – Lilac",
     sku: "TM-FM-LIL",
     size: "40oz · 12 × 6 in",
     basePrice: 12.99,
@@ -400,7 +400,7 @@ export const fomaProducts: Product[] = [
   },
   {
     id: "foma-tumbler-40oz-hot-pink",
-    name: "40oz Tumbler with Handle & Straw – Hot Pink",
+    name: "40 oz. Tumbler with Handle & Straw – Hot Pink",
     sku: "TM-FM-HPK",
     size: "40oz · 12 × 6 in",
     basePrice: 12.99,
@@ -432,7 +432,7 @@ export const fomaProducts: Product[] = [
   },
   {
     id: "foma-tumbler-40oz-rose",
-    name: "40oz Tumbler with Handle & Straw – Rose",
+    name: "40 oz. Tumbler with Handle & Straw – Rose",
     sku: "TM-FM-ROS",
     size: "40oz · 12 × 6 in",
     basePrice: 12.99,
@@ -464,7 +464,7 @@ export const fomaProducts: Product[] = [
   },
   {
     id: "foma-tumbler-40oz-forest",
-    name: "40oz Tumbler with Handle & Straw – Forest",
+    name: "40 oz. Tumbler with Handle & Straw – Forest",
     sku: "TM-FM-FRS",
     size: "40oz · 12 × 6 in",
     basePrice: 12.99,
