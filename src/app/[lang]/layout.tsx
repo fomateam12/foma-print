@@ -11,6 +11,7 @@ import { site } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
 import { LOCALES, LOCALE_OG, isLocale, localizedPath } from "@/lib/i18n";
 import { alternatesFor } from "@/lib/seo";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -134,6 +135,7 @@ export default async function RootLayout({
           </QuoteProvider>
         </I18nProvider>
         <Toaster position="top-center" theme="light" richColors closeButton />
+        <Analytics />
       </body>
     </html>
   );
