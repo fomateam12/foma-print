@@ -124,20 +124,28 @@ const nextConfig: NextConfig = {
         destination: "/category/personal-accessories",
         permanent: true,
       },
-      // "Leatherette Wrapped Tumblers" split into Clear Lid / Slider Lid /
-      // Sport tiles. The old tile is empty and no longer routes, so its URL
-      // (indexed + linked from older category pages) points at the largest
-      // successor.
-      {
-        source: "/category/drinkware/leatherette-wrapped-tumblers",
-        destination: "/category/drinkware/leatherette-tumbler-with-clear-lid",
-        permanent: true,
-      },
-      {
-        source: "/tr/category/drinkware/leatherette-wrapped-tumblers",
-        destination: "/tr/category/drinkware/leatherette-tumbler-with-clear-lid",
-        permanent: true,
-      },
+      // "Leatherette Wrapped Tumblers" became its own storefront category
+      // with Clear Lid / Slider Lid / Sport underneath. Three URL shapes now
+      // point into it: the original Drinkware tile, the three short-lived
+      // Drinkware tiles from the first split, and the category root. Each
+      // maps STRAIGHT to its final destination — no redirect chains.
+      ...[
+        ["leatherette-wrapped-tumblers", "clear-lid"],
+        ["leatherette-tumbler-with-clear-lid", "clear-lid"],
+        ["leatherette-tumbler-with-slider-lid", "slider-lid"],
+        ["sport-tumblers", "sport"],
+      ].flatMap(([from, to]) => [
+        {
+          source: `/category/drinkware/${from}`,
+          destination: `/category/leatherette-tumblers/${to}`,
+          permanent: true,
+        },
+        {
+          source: `/tr/category/drinkware/${from}`,
+          destination: `/tr/category/leatherette-tumblers/${to}`,
+          permanent: true,
+        },
+      ]),
     ];
   },
 };
