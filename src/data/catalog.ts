@@ -1810,7 +1810,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   // subcategory's median pending exact JDS pricing (hidden behind Add to quote).
   {
     id: "ltm7230",
-    name: "Black/Bright Gold Ion 20 oz Tumbler",
+    name: "20 oz. Black/Bright Gold Ion Tumbler",
     sku: "LTM7230",
     size: "20 oz.",
     price: 29,
@@ -1825,7 +1825,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "ltm7231",
-    name: "Red/Bright Gold Ion 20 oz Tumbler",
+    name: "20 oz. Red/Bright Gold Ion Tumbler",
     sku: "LTM7231",
     size: "20 oz.",
     price: 29,
@@ -1840,7 +1840,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "ltm7232",
-    name: "Purple/Bright Gold Ion 20 oz Tumbler",
+    name: "20 oz. Purple/Bright Gold Ion Tumbler",
     sku: "LTM7232",
     size: "20 oz.",
     price: 29,
@@ -1855,7 +1855,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "ltm7233",
-    name: "Navy/Bright Gold Ion 20 oz Tumbler",
+    name: "20 oz. Navy/Bright Gold Ion Tumbler",
     sku: "LTM7233",
     size: "20 oz.",
     price: 29,
@@ -1870,7 +1870,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "ltm7234",
-    name: "Maroon/Bright Gold Ion 20 oz Tumbler",
+    name: "20 oz. Maroon/Bright Gold Ion Tumbler",
     sku: "LTM7234",
     size: "20 oz.",
     price: 29,
@@ -1885,7 +1885,7 @@ const ADDED_PRODUCTS: RawProduct[] = [
   },
   {
     id: "ltm7235",
-    name: "Green/Bright Gold Ion 20 oz Tumbler",
+    name: "20 oz. Green/Bright Gold Ion Tumbler",
     sku: "LTM7235",
     size: "20 oz.",
     price: 29,
