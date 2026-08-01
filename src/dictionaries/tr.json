@@ -427,7 +427,8 @@
     "wholesaleOnRequest": "Toptan fiyatlar talep üzerine sunulur",
     "browse": "{category} ürünlerini inceleyin",
     "popularIn": "{category} kategorisinde popüler",
-    "shopCollection": "Koleksiyonu inceleyin"
+    "shopCollection": "Koleksiyonu inceleyin",
+    "alsoIn": "Katalogda ayrıca"
   },
   "product": {
     "requestPricing": "Fiyat isteyin",

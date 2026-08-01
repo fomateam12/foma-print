@@ -332,7 +332,8 @@
     "wholesaleOnRequest": "Wholesale pricing on request",
     "browse": "Browse {category}",
     "popularIn": "Popular in {category}",
-    "shopCollection": "Shop the collection"
+    "shopCollection": "Shop the collection",
+    "alsoIn": "Also in the catalog"
   },
   "product": {
     "requestPricing": "Request pricing",
