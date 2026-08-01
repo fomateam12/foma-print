@@ -141,8 +141,8 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       ...[
-        ["leatherette-wrapped-tumblers", "clear-lid"],
-        ["leatherette-tumbler-with-clear-lid", "clear-lid"],
+        ["leatherette-wrapped-tumblers", "standard-lid"],
+        ["leatherette-tumbler-with-clear-lid", "standard-lid"],
         ["leatherette-tumbler-with-slider-lid", "slider-lid"],
         ["sport-tumblers", "sport"],
       ].flatMap(([from, to]) => [
@@ -157,6 +157,19 @@ const nextConfig: NextConfig = {
           permanent: true,
         },
       ]),
+      // The collection is named "…with Standard Lid" after the JDS rename, so
+      // its slug followed. Both Drinkware entries above now point straight at
+      // the final slug, and this catches the short-lived clear-lid URL itself.
+      {
+        source: "/category/leatherette-tumblers/clear-lid",
+        destination: "/category/leatherette-tumblers/standard-lid",
+        permanent: true,
+      },
+      {
+        source: "/tr/category/leatherette-tumblers/clear-lid",
+        destination: "/tr/category/leatherette-tumblers/standard-lid",
+        permanent: true,
+      },
     ];
   },
 };

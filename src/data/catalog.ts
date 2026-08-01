@@ -162,19 +162,19 @@ const SUB_OVERRIDES: Record<string, SubAssignment> = {
   // category nav automatically (productCount > 0 filter in toCategory).
   // LTM5210/5212 and LTM833/834 are currently in the hidden-SKU list; they are
   // assigned here too so a future restore lands in the right tile.
-  LTM5201: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5202: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5203: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5204: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5205: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5206: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5207: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5208: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5209: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5210: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5211: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5212: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5213: { subId: "127", subSlug: "clear-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5201: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5202: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5203: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5204: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5205: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5206: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5207: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5208: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5209: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5210: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5211: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5212: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5213: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
   LTM5251: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
   LTM5252: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
   LTM5253: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
@@ -2367,7 +2367,7 @@ const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
   // request) — see PROMOTED_CATS. The names stay short because the
   // category heading and breadcrumb already say "Leatherette Tumblers".
   "leatherette-tumblers": [
-    { subId: "127", slug: "clear-lid", name: "20 oz. Leatherette Grip Tumbler with Standard Lid", count: 0 },
+    { subId: "127", slug: "standard-lid", name: "20 oz. Leatherette Grip Tumbler with Standard Lid", count: 0 },
     { subId: "128", slug: "slider-lid", name: "20 oz. Black Leatherette Tumbler with Slider Lid", count: 0 },
     // Heading spelled out in full (user request) even though the other two
     // stay short — it is the JDS line name buyers search for. The slug
@@ -2630,7 +2630,7 @@ const PROMOTED_CATS = {
 /* Subcategory slug -> the category that owns it, overriding whatever the
    feed (or the polar-camel merge) would otherwise assign. */
 const CATEGORY_BY_SUBSLUG: Record<string, { id: string; slug: string; name: string }> = {
-  "clear-lid": PROMOTED_CATS.leatheretteTumblers,
+  "standard-lid": PROMOTED_CATS.leatheretteTumblers,
   "slider-lid": PROMOTED_CATS.leatheretteTumblers,
   sport: PROMOTED_CATS.leatheretteTumblers,
 };
