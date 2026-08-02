@@ -2579,10 +2579,10 @@ const NAME_OVERRIDES: Record<string, string> = {
   /* iki kanal ayni SKU'da ayni adi gosterir. Renk basta degil sonda:  */
   /* aile adini tek basina yazmak 500+ urunu ayni ada dusuruyordu.     */
   /* ---------------------------------------------------------------- */
-  DS10: "Genuine Walnut Desk Wedge – 10 / Walnut",
-  DS12: "Genuine Walnut Desk Wedge – 12 / Walnut",
-  DS20: "Genuine Walnut Desk Wedge – 10 in with card holder / Walnut",
-  DS8: "Genuine Walnut Desk Wedge – 8 / Walnut",
+  DS10: "Genuine Walnut Desk Wedge – 10",
+  DS12: "Genuine Walnut Desk Wedge – 12",
+  DS20: "Genuine Walnut Desk Wedge – 10 in with card holder",
+  DS8: "Genuine Walnut Desk Wedge – 8",
   FSK615: "Leatherette Stainless Steel Flask – Light Brown",
   FSK616: "Leatherette Stainless Steel Flask – Dark Brown",
   FSK617A: "Leatherette Stainless Steel Flask – Black (Gold)",
