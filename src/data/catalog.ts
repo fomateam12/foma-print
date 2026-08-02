@@ -2579,10 +2579,10 @@ const NAME_OVERRIDES: Record<string, string> = {
   /* iki kanal ayni SKU'da ayni adi gosterir. Renk basta degil sonda:  */
   /* aile adini tek basina yazmak 500+ urunu ayni ada dusuruyordu.     */
   /* ---------------------------------------------------------------- */
-  DS10: "Genuine Walnut Desk Wedge – 10",
-  DS12: "Genuine Walnut Desk Wedge – 12",
-  DS20: "Genuine Walnut Desk Wedge – 10 in with card holder",
-  DS8: "Genuine Walnut Desk Wedge – 8",
+  DS10: "Genuine Desk Wedge – 10 / Walnut",
+  DS12: "Genuine Desk Wedge – 12 / Walnut",
+  DS20: "Genuine Desk Wedge – 10 in with card holder / Walnut",
+  DS8: "Genuine Desk Wedge – 8 / Walnut",
   FSK615: "Leatherette Stainless Steel Flask – Light Brown",
   FSK616: "Leatherette Stainless Steel Flask – Dark Brown",
   FSK617A: "Leatherette Stainless Steel Flask – Black (Gold)",
@@ -3046,8 +3046,8 @@ const NAME_OVERRIDES: Record<string, string> = {
   PCG212: "Beer Mug with Handle – 14 oz",
   PCG310: "19 oz. Wine Glass",
   PCG351: "Glass Coffee Mug",
-  RA210: "Genuine Walnut Desk Wedge – 10 / Red Alder",
-  RA28: "Genuine Walnut Desk Wedge – 8 / Red Alder",
+  RA210: "Genuine Desk Wedge – 10 / Red Alder",
+  RA28: "Genuine Desk Wedge – 8 / Red Alder",
   SLT087: "Acacia Wood/Slate Rectangle Cheese Set with Three Tools",
 };
 
