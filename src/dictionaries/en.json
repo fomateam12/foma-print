@@ -515,7 +515,8 @@
       "Etsy or Amazon": "Etsy or Amazon",
       "Referral / word of mouth": "Referral / word of mouth",
       "Trade show": "Trade show"
-    }
+    },
+    "phoneCountryCode": "Phone country code"
   },
   "errorPage": {
     "title": "Something went wrong",
