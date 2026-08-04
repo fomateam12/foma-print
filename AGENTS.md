@@ -98,6 +98,9 @@ sub-command. The repo already has:
 - `.scrape/r2-migration/migrate_to_r2.py` — idempotent Cloudinary → R2 copy
 - `.scrape/r2-migration/verify_migration.py` — manifest ↔ R2 parity report
 - `.scrape/build_product_shipping.py` — per-SKU shipping JSON generator
+- `.scrape/print-catalog-pdfs.mjs` — partner catalog → PDF per category +
+  combined (needs `npm run build && npm start` first; re-run after any
+  product or price change, then re-upload to R2 `catalog/`)
 - `.scrape/append_shipping_to_xlsx.py` — writes `fomaprint liste (N).xlsx`
 
 Invoke these by name in /loop prompts (`run verify_migration.py and

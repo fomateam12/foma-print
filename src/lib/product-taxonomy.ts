@@ -453,6 +453,38 @@ export function filterByType(products: Product[], allowed: readonly string[]): P
   return products.filter((p) => p.subcategoryName && set.has(slugifyLabel(p.subcategoryName)));
 }
 
+/**
+ * The same grouping buildTypeFacets counts, but carrying the products — for
+ * pages that show every type at once under its own heading instead of behind
+ * a chip. Groups follow the facet order (largest first); products with no
+ * `subcategoryName`, and single-product types, are NOT dropped — they fall
+ * into the trailing `rest` bucket so a grouped page can never lose a SKU.
+ */
+export function groupByType(
+  products: Product[],
+  { minCount = 2 }: { minCount?: number } = {},
+): { groups: { slug: string; name: string; items: Product[] }[]; rest: Product[] } {
+  const byType = new Map<string, { slug: string; name: string; items: Product[] }>();
+  const rest: Product[] = [];
+  for (const p of products) {
+    if (!p.subcategoryName) {
+      rest.push(p);
+      continue;
+    }
+    const slug = slugifyLabel(p.subcategoryName);
+    const prev = byType.get(slug);
+    if (prev) prev.items.push(p);
+    else byType.set(slug, { slug, name: p.subcategoryName, items: [p] });
+  }
+  const groups: { slug: string; name: string; items: Product[] }[] = [];
+  for (const g of byType.values()) {
+    if (g.items.length >= minCount) groups.push(g);
+    else rest.push(...g.items);
+  }
+  groups.sort((a, b) => b.items.length - a.items.length || a.name.localeCompare(b.name));
+  return { groups, rest };
+}
+
 /* ------------------------------------------------------------------ */
 /* Per-page facet selection                                            */
 /*                                                                     */

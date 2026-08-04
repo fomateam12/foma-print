@@ -18,7 +18,9 @@ import {
   filterBySizeTier,
   filterByType,
   filterByVolume,
+  groupByType,
 } from "@/lib/product-taxonomy";
+import { GROUPED_SUBCATEGORIES } from "@/lib/subcategory-groups";
 import { getDictionary } from "@/lib/dictionaries";
 import { LOCALES, isLocale } from "@/lib/i18n";
 import { categoryName, subcategoryName } from "@/lib/catalog-i18n";
@@ -116,6 +118,14 @@ export default async function SubcategoryPage({
       ? filterBySizeTier(all, activeSizes)
       : filterByVolume(all, activeSizes);
   const filtered = filterByType(sizeFiltered, activeTypes);
+
+  // Opted-in merged subcategories render one labelled block per product line
+  // while no type chip is selected; everything else keeps the flat grid.
+  const grouped =
+    GROUPED_SUBCATEGORIES.has(subcategory.slug) && activeTypes.length === 0
+      ? groupByType(filtered)
+      : null;
+  const typeGroups = grouped && grouped.groups.length >= 2 ? grouped : null;
 
   const basePath = `/category/${category.slug}/${subcategory.slug}`;
   // Build a query string carrying over the OTHER axis's current selection
@@ -262,7 +272,31 @@ export default async function SubcategoryPage({
               </span>
             </p>
           ) : null}
-          <ProductGrid locale={lang} products={filtered} className="mt-8" priorityCount={4} />
+          {/* Grouped layout: a merged subcategory that stands in for a level
+              of URL we do not have (Leatherette Tumblers → Standard Lid /
+              Slider Lid / Sport) shows every line at once under its own
+              heading. Picking a type chip narrows to one line, so the flat
+              grid takes over from there. */}
+          {typeGroups ? (
+            <div className="mt-8 space-y-12">
+              {typeGroups.groups.map((g) => (
+                <section key={g.slug}>
+                  <h2 className="border-b border-border pb-2 text-h4 text-foreground">
+                    {subcategoryName(g.name, lang)}{" "}
+                    <span className="text-base font-normal text-muted-foreground">
+                      ({g.items.length.toLocaleString(lang)})
+                    </span>
+                  </h2>
+                  <ProductGrid locale={lang} products={g.items} className="mt-6" />
+                </section>
+              ))}
+              {typeGroups.rest.length > 0 ? (
+                <ProductGrid locale={lang} products={typeGroups.rest} />
+              ) : null}
+            </div>
+          ) : (
+            <ProductGrid locale={lang} products={filtered} className="mt-8" priorityCount={4} />
+          )}
         </>
       ) : all.length > 0 ? (
         <div className="mt-8 rounded-2xl border border-dashed border-border bg-card/50 p-10 text-center">
