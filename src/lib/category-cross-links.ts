@@ -11,8 +11,7 @@
  * ignored by the caller, so removing a category never breaks a page.
  */
 export const CATEGORY_CROSS_LINKS: Record<string, readonly string[]> = {
-  // The leatherette tumbler line was promoted out of Drinkware into its own
-  // category; without this, 23 tumblers are invisible to anyone shopping
-  // Drinkware for a tumbler.
-  drinkware: ["leatherette-tumblers"],
+  // Empty since 3 Aug 2026: the leatherette tumbler line — the only entry —
+  // moved back INTO Drinkware as a subcategory, so the trail it patched no
+  // longer breaks. Add a row here the next time a family leaves a category.
 };

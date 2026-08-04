@@ -162,31 +162,31 @@ const SUB_OVERRIDES: Record<string, SubAssignment> = {
   // category nav automatically (productCount > 0 filter in toCategory).
   // LTM5210/5212 and LTM833/834 are currently in the hidden-SKU list; they are
   // assigned here too so a future restore lands in the right tile.
-  LTM5201: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5202: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5203: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5204: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5205: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5206: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5207: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5208: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5209: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5210: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5211: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5212: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5213: { subId: "127", subSlug: "standard-lid", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5251: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
-  LTM5252: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
-  LTM5253: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
-  LTM5254: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
-  LTM5255: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
-  LTM5256: { subId: "128", subSlug: "slider-lid", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
-  LTM832: { subId: "129", subSlug: "sport", subName: "20 oz. Sport Tumbler with Slider Lid" },
-  LTM833: { subId: "129", subSlug: "sport", subName: "20 oz. Sport Tumbler with Slider Lid" },
-  LTM834: { subId: "129", subSlug: "sport", subName: "20 oz. Sport Tumbler with Slider Lid" },
-  LTM835: { subId: "129", subSlug: "sport", subName: "20 oz. Sport Tumbler with Slider Lid" },
-  LTM836: { subId: "129", subSlug: "sport", subName: "20 oz. Sport Tumbler with Slider Lid" },
-  LTM837: { subId: "129", subSlug: "sport", subName: "20 oz. Sport Tumbler with Slider Lid" },
+  LTM5201: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5202: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5203: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5204: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5205: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5206: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5207: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5208: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5209: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5210: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5211: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5212: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5213: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5251: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
+  LTM5252: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
+  LTM5253: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
+  LTM5254: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
+  LTM5255: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
+  LTM5256: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
+  LTM832: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
+  LTM833: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
+  LTM834: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
+  LTM835: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
+  LTM836: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
+  LTM837: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
   LLF157: { subId: "104", subSlug: "photo-frames-medium", subName: "Medium Photo Frames (5x7)" },
   // Wallets split into 3 type subcategories (Strap / Bifold+FlipID / Bifold).
   GFT1285: { subId: "107", subSlug: "wallets-bifold-flip-id", subName: "Leatherette Bifold Wallet with Flip ID" },
@@ -2362,17 +2362,14 @@ const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
     // each product's own (still-distinct) subcategoryName via
     // buildTypeFacets/filterByType in product-taxonomy.ts.
     { subId: "121", slug: "20-oz-tumblers-all", name: "20 oz. Tumblers", count: 0 },
-  ],
-  // Promoted out of Drinkware into its own storefront category (user
-  // request) — see PROMOTED_CATS. The names stay short because the
-  // category heading and breadcrumb already say "Leatherette Tumblers".
-  "leatherette-tumblers": [
-    { subId: "127", slug: "standard-lid", name: "20 oz. Leatherette Grip Tumbler with Standard Lid", count: 0 },
-    { subId: "128", slug: "slider-lid", name: "20 oz. Black Leatherette Tumbler with Slider Lid", count: 0 },
-    // Heading spelled out in full (user request) even though the other two
-    // stay short — it is the JDS line name buyers search for. The slug
-    // stays "sport" so the URL shipped earlier today keeps working.
-    { subId: "129", slug: "sport", name: "20 oz. Sport Tumbler with Slider Lid", count: 0 },
+    // The leatherette-wrapped line came back INTO Drinkware as a single
+    // subcategory (user request, 3 Aug) after a spell as its own top-level
+    // category. Same merged-tile shape as 20 oz. Tumblers above: the three
+    // lid lines (Standard Lid / Slider Lid / Sport) keep their distinct
+    // subcategoryName per product, so the page groups them into labelled
+    // blocks and "Browse by type" chips instead of three separate tiles —
+    // which the two-level /category/[slug]/[subSlug] route cannot express.
+    { subId: "130", slug: "leatherette-tumblers", name: "Leatherette Tumblers", count: 0 },
   ],
   "travel-accessories": [
     { subId: "96", slug: "passport-holders", name: "Passport Holders", count: 0 },
@@ -3094,24 +3091,18 @@ function giftsCategoryFor(subSlug: string) {
 /* PROMOTED_CATEGORIES — storefront categories that exist only here,   */
 /* built out of subcategories lifted from wherever the feed filed them.*/
 /*                                                                     */
-/* "Leatherette Tumblers" (user request): the leatherette-wrapped line */
-/* is a product family in its own right, so it gets a top-level tile   */
-/* with Clear Lid / Slider Lid / Sport underneath instead of sitting   */
-/* three-deep inside Drinkware — which the two-level                   */
-/* /category/[slug]/[subSlug] route cannot express anyway. These SKUs  */
-/* leave Drinkware; that is the intended trade.                        */
+/* Currently EMPTY. "Leatherette Tumblers" was the only tenant (1 Aug); */
+/* on 3 Aug the user moved that line back under Drinkware as a single   */
+/* subcategory, so nothing is promoted any more. The hook stays because  */
+/* it is the one place a family can be lifted out of the feed's         */
+/* category — add an entry here plus its CATEGORY_BY_SUBSLUG rows and    */
+/* an ADDED_SUBCATEGORIES key to bring a top-level tile back.           */
 /* ------------------------------------------------------------------ */
-const PROMOTED_CATS = {
-  leatheretteTumblers: { id: "14", slug: "leatherette-tumblers", name: "Leatherette Tumblers" },
-} as const;
+const PROMOTED_CATS: Record<string, { id: string; slug: string; name: string }> = {};
 
 /* Subcategory slug -> the category that owns it, overriding whatever the
    feed (or the polar-camel merge) would otherwise assign. */
-const CATEGORY_BY_SUBSLUG: Record<string, { id: string; slug: string; name: string }> = {
-  "standard-lid": PROMOTED_CATS.leatheretteTumblers,
-  "slider-lid": PROMOTED_CATS.leatheretteTumblers,
-  sport: PROMOTED_CATS.leatheretteTumblers,
-};
+const CATEGORY_BY_SUBSLUG: Record<string, { id: string; slug: string; name: string }> = {};
 
 /* ------------------------------------------------------------------ */
 /* SUBCATEGORY_RENAMES — typos in the supplier's own subcategory names. */
@@ -3248,7 +3239,6 @@ const CATEGORY_ICONS: Record<string, IconKey> = {
   "travel-accessories": "luggage",
   "personal-accessories": "wallet",
   drinkware: "coffee",
-  "leatherette-tumblers": "coffee",
   "frames-and-decor": "frame",
   "office-tech": "notebook",
   "gift-sets": "gift",
@@ -3263,8 +3253,6 @@ const CATEGORY_BLURBS: Record<string, string> = {
     "Wallets, money clips, checkbook covers and valet trays — everyday carry, engraved to order.",
   drinkware:
     "Insulated tumblers, water bottles, mugs, coasters and glassware ready for crisp, permanent engraving.",
-  "leatherette-tumblers":
-    "Leatherette-wrapped insulated tumblers — clear lid, slider lid and sport styles, engraved to a crisp contrast.",
   "frames-and-decor":
     "Photo frames, slate signage and ornaments that turn moments into heirlooms.",
   "office-tech":

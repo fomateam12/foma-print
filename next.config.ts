@@ -124,11 +124,6 @@ const nextConfig: NextConfig = {
         destination: "/category/personal-accessories",
         permanent: true,
       },
-      // "Leatherette Wrapped Tumblers" became its own storefront category
-      // with Clear Lid / Slider Lid / Sport underneath. Three URL shapes now
-      // point into it: the original Drinkware tile, the three short-lived
-      // Drinkware tiles from the first split, and the category root. Each
-      // maps STRAIGHT to its final destination — no redirect chains.
       // Supplier typo "30 oz. Tumbers" corrected, which moves the slug too.
       {
         source: "/category/drinkware/30-oz-tumbers",
@@ -140,34 +135,49 @@ const nextConfig: NextConfig = {
         destination: "/tr/category/drinkware/30-oz-tumblers",
         permanent: true,
       },
+      // The leatherette tumbler line ended up as ONE Drinkware subcategory
+      // (user request, 3 Aug 2026) after two earlier shapes: four Drinkware
+      // tiles, then a top-level "Leatherette Tumblers" category with three
+      // lid collections under it. Every URL either shape ever served maps
+      // STRAIGHT to the single surviving page — no redirect chains. The
+      // three lid lines are still visible on it as labelled blocks.
       ...[
-        ["leatherette-wrapped-tumblers", "standard-lid"],
-        ["leatherette-tumbler-with-clear-lid", "standard-lid"],
-        ["leatherette-tumbler-with-slider-lid", "slider-lid"],
-        ["sport-tumblers", "sport"],
-      ].flatMap(([from, to]) => [
+        "leatherette-wrapped-tumblers",
+        "leatherette-tumbler-with-clear-lid",
+        "leatherette-tumbler-with-slider-lid",
+        "sport-tumblers",
+      ].flatMap((from) => [
         {
           source: `/category/drinkware/${from}`,
-          destination: `/category/leatherette-tumblers/${to}`,
+          destination: "/category/drinkware/leatherette-tumblers",
           permanent: true,
         },
         {
           source: `/tr/category/drinkware/${from}`,
-          destination: `/tr/category/leatherette-tumblers/${to}`,
+          destination: "/tr/category/drinkware/leatherette-tumblers",
           permanent: true,
         },
       ]),
-      // The collection is named "…with Standard Lid" after the JDS rename, so
-      // its slug followed. Both Drinkware entries above now point straight at
-      // the final slug, and this catches the short-lived clear-lid URL itself.
+      // The promoted category itself: its root, and every collection slug it
+      // ever carried (clear-lid, standard-lid, slider-lid, sport).
       {
-        source: "/category/leatherette-tumblers/clear-lid",
-        destination: "/category/leatherette-tumblers/standard-lid",
+        source: "/category/leatherette-tumblers",
+        destination: "/category/drinkware/leatherette-tumblers",
         permanent: true,
       },
       {
-        source: "/tr/category/leatherette-tumblers/clear-lid",
-        destination: "/tr/category/leatherette-tumblers/standard-lid",
+        source: "/category/leatherette-tumblers/:sub*",
+        destination: "/category/drinkware/leatherette-tumblers",
+        permanent: true,
+      },
+      {
+        source: "/tr/category/leatherette-tumblers",
+        destination: "/tr/category/drinkware/leatherette-tumblers",
+        permanent: true,
+      },
+      {
+        source: "/tr/category/leatherette-tumblers/:sub*",
+        destination: "/tr/category/drinkware/leatherette-tumblers",
         permanent: true,
       },
     ];

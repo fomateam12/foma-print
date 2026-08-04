@@ -6,11 +6,11 @@
   "Drinkware": "İçecek Gereçleri",
   "Frames & Decor": "Çerçeveler ve Dekorasyon",
   "Office, Tech": "Ofis, Teknoloji",
-  "Gift Sets": "Hediye Setleri",
-  "Leatherette Tumblers": "Suni Deri Termos Bardaklar"
+  "Gift Sets": "Hediye Setleri"
  },
  "subcategories": {
   "20 oz. Tumblers": "20 oz. Termos Bardaklar",
+  "Leatherette Tumblers": "Suni Deri Termos Bardaklar",
   "30 oz. Tumblers": "30 oz. Termos Bardaklar",
   "40 oz. Tumblers": "40 oz. Termos Bardaklar",
   "BBQ Sets and Utensils": "Barbekü Setleri ve Gereçleri",
@@ -929,7 +929,6 @@
   "Drinkware": "Net ve kalıcı kazıma için hazır yalıtımlı termos bardaklar, suluklar, kupalar, bardak altlıkları ve cam ürünler.",
   "Frames & Decor": "Anları yadigârlara dönüştüren fotoğraf çerçeveleri, arduvaz tabelalar ve süsler.",
   "Office, Tech": "Ekipler ve hediye amaçlı kazınmış defterler, evrak çantaları ve masa aksesuarları.",
-  "Gift Sets": "Kişiselleştirilmeye ve hediye edilmeye hazır kart ve zar setleri, viski taşı setleri, şarap kutuları ve poker/bira setleri.",
-  "Leatherette Tumblers": "Suni deri kaplı yalıtımlı termos bardaklar — şeffaf kapaklı, sürgülü kapaklı ve spor modelleri, net kontrastla kazınır."
+  "Gift Sets": "Kişiselleştirilmeye ve hediye edilmeye hazır kart ve zar setleri, viski taşı setleri, şarap kutuları ve poker/bira setleri."
  }
 }
