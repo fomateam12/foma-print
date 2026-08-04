@@ -94,6 +94,19 @@ export const resellerApplicationSchema = z.object({
   monthlyVolume: z.enum(MONTHLY_VOLUMES, {
     message: "Select an estimated volume.",
   }),
+  // Required on purpose, unlike `hearAboutUs` below. The comment there says a
+  // new field must be optional so a submission from a cached older form
+  // cannot 422. That rule is waived here: the site has taken 15–20 reseller
+  // applications in total, so the stale-tab-during-deploy window is not worth
+  // a tolerant-server / strict-client schema split. If submission volume ever
+  // grows, revisit — the split is the fix, not making these optional.
+  currentStatus: z.enum(CURRENT_STATUSES, {
+    message: "Tell us where you are today.",
+  }),
+  salesChannels: z
+    .array(z.enum(RESELLER_SALES_CHANNELS))
+    .min(1, "Select at least one — or 'Not selling yet'.")
+    .max(RESELLER_SALES_CHANNELS.length),
   products: z
     .string()
     .trim()
