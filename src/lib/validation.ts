@@ -39,6 +39,42 @@ export const HEAR_ABOUT_US = [
   "Other",
 ] as const;
 
+/**
+ * Lead-qualifying ladder, ordered hottest-to-coldest so the operator can
+ * read priority off the order alone. `Something else` rather than `Other`:
+ * `sellerForm.options` is a flat map keyed by the canonical string, so this
+ * cannot share the `Other` key that BUSINESS_TYPES and HEAR_ABOUT_US use.
+ */
+export const CURRENT_STATUSES = [
+  "Already selling print-on-demand products",
+  "Selling other products, want to add custom / engraved items",
+  "Store is open but not selling yet",
+  "Just getting started — no store yet",
+  "Something else",
+] as const;
+
+/**
+ * Sales channels for the reseller form. Deliberately NOT the shared
+ * SALES_CHANNELS below: this list adds `Not selling yet`, which the
+ * reseller form needs because its channel field is required — without it an
+ * applicant who sells nowhere would be forced to tick a channel they do not
+ * use. Adding the value to SALES_CHANNELS instead would put a new chip on
+ * the quote form, which this change has no business touching.
+ *
+ * Written as an explicit literal, not `[...SALES_CHANNELS, "…"] as const` —
+ * the spread form can widen to string[] and break z.enum.
+ */
+export const RESELLER_SALES_CHANNELS = [
+  "Etsy",
+  "Shopify",
+  "Amazon",
+  "eBay",
+  "Own website",
+  "In person / retail",
+  "Not selling yet",
+  "Other",
+] as const;
+
 export const resellerApplicationSchema = z.object({
   // `name` + `businessName` end up in the email subject line — reject CR/LF
   // to neutralise any chance of header injection if a downstream layer
