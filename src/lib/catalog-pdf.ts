@@ -1,21 +1,40 @@
+import { getCategories } from "@/data/catalog";
+
 /**
- * Downloadable partner-catalog PDFs, hosted on the public R2 bucket.
+ * Downloadable partner-catalog PDFs.
  *
  * Rendered from /catalog/print (combined) and /catalog/print/[slug] (one per
- * category) with headless Chrome, then uploaded to `catalog/` in the bucket —
- * see `.scrape/print-catalog-pdfs.mjs`. The bucket URL is the same public
- * r2.dev origin the product images use; it is hardcoded rather than read from
- * NEXT_PUBLIC_R2_BASE_URL because these links must keep working in a build
- * where that variable is unset (which is the case in production today).
+ * category) with headless Chrome — see `.scrape/print-catalog-pdfs.mjs` — then
+ * uploaded to `catalog/` in the PRIVATE `fomaprint-catalog` R2 bucket:
  *
- * Re-run the generator whenever products or prices change, or the links will
- * serve a stale price list.
+ *   npx wrangler r2 object put fomaprint-catalog/catalog/<file> \
+ *     --file=<path> --content-type=application/pdf --remote
+ *
+ * They must NOT go in the image bucket (`foma-design`): that one is published
+ * whole through its pub-*.r2.dev origin, so anything stored there is readable
+ * by anyone who can guess the name — and these files list every wholesale
+ * price. Downloads are served through /catalog/pdf/[slug], behind the same
+ * shared-password gate as the rest of /catalog.
+ *
+ * Re-run the generator and re-upload whenever products or prices change, or
+ * the links serve a stale price list.
  */
-const R2_PUBLIC_BASE = "https://pub-7dbfe9f161d34085b011aea74e8f75ac.r2.dev";
 
-export const FULL_CATALOG_PDF_URL = `${R2_PUBLIC_BASE}/catalog/FomaPrint-Catalog.pdf`;
-
-/** Per-category PDF for a storefront category slug. */
-export function categoryCatalogPdfUrl(slug: string): string {
-  return `${R2_PUBLIC_BASE}/catalog/FomaPrint-Catalog-${slug}.pdf`;
+/** Download path for a category slug, or "full" for the combined catalog. */
+export function catalogPdfPath(slug: string): string {
+  return `/catalog/pdf/${slug}`;
 }
+
+export const FULL_CATALOG_PDF_PATH = catalogPdfPath("full");
+
+/**
+ * slug -> object name, built from the categories this build actually has.
+ * The route resolves downloads through this map only, so a request can never
+ * name its own object key.
+ */
+export const CATALOG_PDF_FILES: Record<string, string> = {
+  full: "FomaPrint-Catalog.pdf",
+  ...Object.fromEntries(
+    getCategories().map((c) => [c.slug, `FomaPrint-Catalog-${c.slug}.pdf`]),
+  ),
+};
