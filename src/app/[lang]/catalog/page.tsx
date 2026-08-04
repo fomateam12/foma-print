@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Link } from "@/components/locale-link";
-import { ArrowRight, ClipboardList, PackageCheck, Scale, Truck } from "lucide-react";
+import { ArrowRight, ClipboardList, FileDown, PackageCheck, Scale, Truck } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import {
   getAllProducts,
@@ -8,6 +8,7 @@ import {
   getProductsByCategory,
 } from "@/data/catalog";
 import { catalogImageUrl } from "@/lib/catalog-image";
+import { categoryCatalogPdfUrl, FULL_CATALOG_PDF_URL } from "@/lib/catalog-pdf";
 import { ENGRAVING_FEES, inPartnerCatalog } from "@/lib/partner-prices";
 import { site } from "@/lib/site";
 
@@ -97,12 +98,12 @@ export default function CatalogIndexPage() {
               engraving adds ${ENGRAVING_FEES.back.toFixed(2)}. Products marked
               &quot;Quote&quot; are priced per order.{" "}
               <a
-                href="https://pub-7dbfe9f161d34085b011aea74e8f75ac.r2.dev/catalog/FomaPrint-Catalog.pdf"
+                href={FULL_CATALOG_PDF_URL}
                 className="font-medium text-brand-strong underline underline-offset-2"
               >
                 Download the full catalog (PDF)
-              </a>{" "}
-              or{" "}
+              </a>
+              , a single category&apos;s PDF from its card below, or{" "}
               <a
                 href="/FomaPrint-Price-List.xlsx"
                 className="font-medium text-brand-strong underline underline-offset-2"
@@ -143,10 +144,13 @@ export default function CatalogIndexPage() {
               const catProducts = getProductsByCategory(c.slug).filter(inPartnerCatalog);
               const preview = catProducts.slice(0, 3);
               return (
-                <Link
+                <div
                   key={c.slug}
+                  className="rounded-2xl border border-border bg-background/60 p-5 transition-colors focus-within:border-brand-strong/50 hover:border-brand-strong/50"
+                >
+                <Link
                   href={`/catalog/${c.slug}`}
-                  className="group rounded-2xl border border-border bg-background/60 p-5 transition-colors hover:border-brand-strong/50"
+                  className="group block"
                 >
                   <div className="flex items-center gap-2">
                     {preview.map((p) => (
@@ -175,6 +179,17 @@ export default function CatalogIndexPage() {
                     <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
                   </span>
                 </Link>
+                  {/* Per-category PDF (user request): a partner selling only
+                      one category downloads that category, not the combined
+                      catalog. Outside the Link — an anchor may not nest. */}
+                  <a
+                    href={categoryCatalogPdfUrl(c.slug)}
+                    className="mt-3 inline-flex items-center gap-1 text-sm text-muted-foreground underline underline-offset-2 transition-colors hover:text-brand-strong"
+                  >
+                    <FileDown className="size-4" />
+                    {c.name} price list (PDF)
+                  </a>
+                </div>
               );
             })}
           </div>

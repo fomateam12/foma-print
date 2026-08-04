@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Link } from "@/components/locale-link";
 import { notFound } from "next/navigation";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, FileDown } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import {
   getCategories,
@@ -9,6 +9,7 @@ import {
   getProductsBySubcategory,
 } from "@/data/catalog";
 import { catalogImageUrl } from "@/lib/catalog-image";
+import { categoryCatalogPdfUrl } from "@/lib/catalog-pdf";
 import { inPartnerCatalog } from "@/lib/partner-prices";
 import { site } from "@/lib/site";
 
@@ -67,6 +68,15 @@ export default async function CatalogCategoryPage({
             {category.subcategories.length} collections — pick a collection to
             see its full price list with photos, sizes and weights.
           </p>
+          {/* This category on its own, as a PDF (user request) — blank price,
+              engraving surcharge and engraved total for every product. */}
+          <a
+            href={categoryCatalogPdfUrl(category.slug)}
+            className="mt-5 inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-4 py-2 text-sm font-medium text-brand-strong transition-colors hover:border-brand-strong/50"
+          >
+            <FileDown className="size-4" />
+            Download the {category.name} price list (PDF)
+          </a>
         </div>
       </section>
 
