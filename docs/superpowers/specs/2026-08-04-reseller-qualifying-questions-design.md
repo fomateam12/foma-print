@@ -222,8 +222,29 @@ range: **`A:M` → `A:O`**.
 The array is currently 13 elements against a 13-column range; adding
 elements without widening the range would silently truncate them.
 
-The two new values are inserted **after `monthlyVolume`**, so the row
-becomes:
+> **Amended 2026-08-06.** This section originally placed the two new values
+> after `monthlyVolume`, which required a manual column insert in the sheet.
+> That shipped in PR #62 and was reversed in a follow-up: the operator does
+> not work from the sheet (the notification email carries everything), so
+> the manual step was not worth its cost or its failure mode. The values are
+> now **appended after `traceId`**. Columns A–M keep the exact meaning they
+> had before this change, historical rows stay readable, and no manual sheet
+> work is needed — older rows simply have N and O empty. New fields should
+> keep going on the end for the same reason. The subsection below is kept
+> for the record; **it no longer describes the code.**
+
+The row is:
+
+```
+A submittedAt   B name        C businessName  D email     E phone
+F website       G businessType  H monthlyVolume  I products
+J hearAboutUs   K hearAboutUsOther  L about   M traceId
+N currentStatus   O salesChannels      <- new, appended at the end
+```
+
+### Original placement (superseded)
+
+The two new values were inserted **after `monthlyVolume`**, making the row:
 
 ```
 A submittedAt   B name        C businessName  D email     E phone
@@ -235,7 +256,7 @@ K products      L hearAboutUs  M hearAboutUsOther  N about  O traceId
 `salesChannels` is written as a comma-joined string (`join(", ")`), since a
 cell holds one value.
 
-### Required manual step — insert the columns, then deploy
+### Required manual step — no longer applicable (superseded)
 
 Inserting columns mid-row shifts the meaning of every column to their
 right. The existing ~20 rows must shift to match, which Google Sheets does
