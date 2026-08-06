@@ -165,6 +165,8 @@ function internalHtml(data: ResellerApplicationInput, submittedAt: string): stri
       ${row("Website", data.website)}
       ${row("Business type", data.businessType)}
       ${row("Monthly volume", data.monthlyVolume)}
+      ${row("Status", data.currentStatus)}
+      ${row("Sells on", data.salesChannels?.join(", "))}
       ${row("Products", data.products)}
       ${row("Heard via", data.hearAboutUs)}
       ${row("Heard via (other)", data.hearAboutUsOther)}

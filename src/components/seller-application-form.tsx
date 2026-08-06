@@ -17,6 +17,8 @@ import {
   BUSINESS_TYPES,
   MONTHLY_VOLUMES,
   HEAR_ABOUT_US,
+  CURRENT_STATUSES,
+  RESELLER_SALES_CHANNELS,
   type ResellerApplicationInput,
 } from "@/lib/validation";
 import { PHONE_COUNTRIES, DEFAULT_PHONE_COUNTRY } from "@/data/phone-countries";
@@ -64,6 +66,8 @@ export function SellerApplicationForm() {
       website: "",
       businessType: undefined,
       monthlyVolume: undefined,
+      currentStatus: undefined,
+      salesChannels: [],
       products: "",
       about: "",
       hearAboutUs: undefined,
@@ -251,6 +255,53 @@ export function SellerApplicationForm() {
           </select>
           <ErrorText msg={errors.monthlyVolume?.message} />
         </div>
+      </div>
+
+      <div>
+        <Label htmlFor="se-status">{t.currentStatus}</Label>
+        <select
+          id="se-status"
+          className={cn(SELECT, "mt-1.5")}
+          defaultValue=""
+          aria-invalid={!!errors.currentStatus}
+          {...register("currentStatus")}
+        >
+          <option value="" disabled>
+            {t.selectPlaceholder}
+          </option>
+          {CURRENT_STATUSES.map((s) => (
+            <option key={s} value={s}>
+              {optionLabel(s)}
+            </option>
+          ))}
+        </select>
+        <ErrorText msg={errors.currentStatus?.message} />
+      </div>
+
+      <div>
+        {/* A <span>, not <Label htmlFor>: this heading covers eight
+            checkboxes, and a label can only point at one — clicking it
+            would silently toggle whichever chip it named. */}
+        <span className="text-sm font-medium text-foreground">
+          {t.salesChannels}
+        </span>
+        <div className="mt-2 flex flex-wrap gap-2">
+          {RESELLER_SALES_CHANNELS.map((c) => (
+            <label
+              key={c}
+              className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 text-sm text-muted-foreground transition-colors has-[:checked]:border-brand has-[:checked]:bg-brand-muted has-[:checked]:text-brand-strong"
+            >
+              <input
+                type="checkbox"
+                value={c}
+                className="size-3.5 rounded border-input accent-primary"
+                {...register("salesChannels")}
+              />
+              {optionLabel(c)}
+            </label>
+          ))}
+        </div>
+        <ErrorText msg={errors.salesChannels?.message} />
       </div>
 
       <div>
