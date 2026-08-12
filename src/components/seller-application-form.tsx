@@ -3,14 +3,18 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Loader2, Send, CheckCircle2 } from "lucide-react";
+import { Loader2, Send, CheckCircle2, ShieldAlert } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { TurnstileWidget } from "@/components/turnstile-widget";
+import {
+  TurnstileWidget,
+  TURNSTILE_ENABLED,
+} from "@/components/turnstile-widget";
 import { PhoneInput } from "@/components/phone-input";
 import { cn } from "@/lib/utils";
+import { site } from "@/lib/site";
 import { useDict } from "@/components/i18n-provider";
 import {
   resellerApplicationSchema,
@@ -30,6 +34,51 @@ const SELECT =
 function ErrorText({ msg }: { msg?: string }) {
   if (!msg) return null;
   return <p className="mt-1 text-xs text-destructive">{msg}</p>;
+}
+
+/**
+ * Where the bot challenge stands. `pending` is the ordinary opening state:
+ * the widget is loading or the visitor has not cleared it yet. `unavailable`
+ * means no token is coming — see the fallback notice below.
+ */
+type TurnstileState = "pending" | "ready" | "unavailable";
+
+/** Mail clients truncate very long URLs; keep the draft well inside that. */
+const MAILTO_MAX = 1500;
+
+/**
+ * The application as an email draft, for visitors whose browser cannot run
+ * the Cloudflare challenge. Field labels stay English because this lands in
+ * the same mailbox as the automated notification and is read alongside it.
+ */
+function fallbackMailto(
+  values: ResellerApplicationInput,
+  phone: string,
+  subject: string,
+): string {
+  const lines = [
+    ["Name", values.name],
+    ["Business", values.businessName],
+    ["Email", values.email],
+    ["Phone", phone],
+    ["Website", values.website],
+    ["Business type", values.businessType],
+    ["Monthly volume", values.monthlyVolume],
+    ["Current status", values.currentStatus],
+    ["Sells on", (values.salesChannels ?? []).join(", ")],
+    ["Products", values.products],
+    ["About", values.about],
+  ]
+    .filter(([, value]) => typeof value === "string" && value.trim() !== "")
+    .map(([label, value]) => `${label}: ${String(value).trim()}`)
+    .join("\n");
+
+  const body = lines.slice(0, MAILTO_MAX);
+  const title = values.businessName?.trim()
+    ? `${subject} — ${values.businessName.trim()}`
+    : subject;
+
+  return `mailto:${site.email}?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
 }
 
 export function SellerApplicationForm() {
@@ -55,6 +104,7 @@ export function SellerApplicationForm() {
     register,
     handleSubmit,
     watch,
+    getValues,
     formState: { errors, isSubmitting },
   } = useForm<ResellerApplicationInput>({
     resolver: zodResolver(resellerApplicationSchema),
@@ -80,20 +130,35 @@ export function SellerApplicationForm() {
   const hearAboutUs = watch("hearAboutUs");
 
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
-  const onTurnstileVerify = useCallback(
-    (token: string) => setTurnstileToken(token),
+  const [turnstileState, setTurnstileState] = useState<TurnstileState>(
+    TURNSTILE_ENABLED ? "pending" : "ready",
+  );
+  const onTurnstileVerify = useCallback((token: string) => {
+    setTurnstileToken(token);
+    // A late token overrides an earlier "unavailable": the challenge came
+    // through after all, so put the normal path back.
+    setTurnstileState("ready");
+  }, []);
+  // Expiry is routine — the widget refreshes itself. Drop the stale token
+  // but leave the state alone, or every five idle minutes would look broken.
+  const onTurnstileExpire = useCallback(() => setTurnstileToken(null), []);
+  const onTurnstileUnavailable = useCallback(
+    () => setTurnstileState("unavailable"),
     [],
   );
-  const onTurnstileExpire = useCallback(() => setTurnstileToken(null), []);
+
+  const phoneWithDialCode = (raw: string) => {
+    const country =
+      PHONE_COUNTRIES.find((c) => c.iso2 === phoneCountryIso2) ??
+      DEFAULT_PHONE_COUNTRY;
+    return `+${country.dialCode} ${raw}`.trim();
+  };
 
   async function onSubmit(values: ResellerApplicationInput) {
     setSubmitError(null);
     const started = mountedAt.current;
     const elapsedMs = started > 0 ? Date.now() - started : undefined;
-    const phoneCountry =
-      PHONE_COUNTRIES.find((c) => c.iso2 === phoneCountryIso2) ??
-      DEFAULT_PHONE_COUNTRY;
-    const phone = `+${phoneCountry.dialCode} ${values.phone}`.trim();
+    const phone = phoneWithDialCode(values.phone);
     try {
       const res = await fetch("/api/reseller-application", {
         method: "POST",
@@ -109,6 +174,13 @@ export function SellerApplicationForm() {
         ok?: boolean;
         error?: string;
       };
+      // 403 is the challenge gate and nothing else. Telling someone to
+      // "reload and try again" when their browser cannot reach Cloudflare
+      // sends them round the same loop, so show the way out instead.
+      if (res.status === 403) {
+        setTurnstileState("unavailable");
+        return;
+      }
       if (!res.ok || !data.ok) {
         throw new Error(data.error ?? t.errorGeneric);
       }
@@ -376,8 +448,43 @@ export function SellerApplicationForm() {
       <TurnstileWidget
         onVerify={onTurnstileVerify}
         onExpire={onTurnstileExpire}
+        onUnavailable={onTurnstileUnavailable}
         className="flex justify-start"
       />
+
+      {turnstileState === "unavailable" ? (
+        <div
+          role="alert"
+          className="rounded-lg border border-border bg-muted/40 px-3.5 py-3 text-sm"
+        >
+          <p className="flex items-center gap-2 font-medium text-foreground">
+            <ShieldAlert className="size-4 shrink-0" />
+            {t.verifyUnavailableTitle}
+          </p>
+          <p className="mt-1.5 leading-relaxed text-muted-foreground">
+            {t.verifyUnavailableBody}{" "}
+            <a
+              href={`mailto:${site.email}`}
+              className="font-medium text-brand-strong underline underline-offset-2"
+              onClick={(event) => {
+                // Fill the draft at click time, not at render: the visitor
+                // keeps typing after this notice appears, and the mail
+                // client should get whatever is on screen when they leave.
+                // Rewriting href here rather than navigating by hand keeps
+                // copy-link and middle-click working on the bare address.
+                const values = getValues();
+                event.currentTarget.href = fallbackMailto(
+                  values,
+                  phoneWithDialCode(values.phone),
+                  t.verifyMailSubject,
+                );
+              }}
+            >
+              {site.email}
+            </a>
+          </p>
+        </div>
+      ) : null}
 
       {submitError ? (
         <p
@@ -388,11 +495,25 @@ export function SellerApplicationForm() {
         </p>
       ) : null}
 
-      <Button type="submit" size="lg" disabled={isSubmitting} className="w-full sm:w-auto">
+      {/* Disabled only while the challenge is still resolving. Once it is
+          declared unavailable the button comes back: a late token may yet
+          arrive, and a permanently dead button is the very trap this
+          change exists to remove. */}
+      <Button
+        type="submit"
+        size="lg"
+        disabled={isSubmitting || turnstileState === "pending"}
+        className="w-full sm:w-auto"
+      >
         {isSubmitting ? (
           <>
             <Loader2 className="size-4 animate-spin" />
             {t.submitting}
+          </>
+        ) : turnstileState === "pending" ? (
+          <>
+            <Loader2 className="size-4 animate-spin" />
+            {t.verifying}
           </>
         ) : (
           <>

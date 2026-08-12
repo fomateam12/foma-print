@@ -255,6 +255,10 @@
     "consentAfter": ". *",
     "submitting": "Gönderiliyor…",
     "submit": "Satıcı başvurusunu gönder",
+    "verifying": "Tarayıcınız kontrol ediliyor…",
+    "verifyUnavailableTitle": "Güvenlik kontrolü çalıştırılamadı",
+    "verifyUnavailableBody": "Genellikle bir tarayıcı eklentisi, VPN veya ağ filtresi engelliyor. Hiçbir şeyi yeniden yazmayın — başvurunuzu doğrudan bize gönderin, aynı iş günü içinde işleme alalım:",
+    "verifyMailSubject": "Satıcı başvurusu",
     "phoneCountryCode": "Telefon ülke kodu"
   },
   "howItWorks": {
