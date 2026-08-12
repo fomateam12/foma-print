@@ -1,0 +1,650 @@
+[
+  {
+    "name": "12OZ WB",
+    "source": "SULUK",
+    "box_1_in": "8 × 3 × 3 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.5,
+    "engrave_mm": "60 × 50 mm"
+  },
+  {
+    "name": "20 oz leather tumbler",
+    "source": "G ÜRÜN",
+    "box_1_in": "7 × 3 × 3 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.875,
+    "engrave_mm": null
+  },
+  {
+    "name": "20 oz tumbler",
+    "source": "G ÜRÜN",
+    "box_1_in": "7 × 3 × 3 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.875,
+    "engrave_mm": null
+  },
+  {
+    "name": "20 oz tumbler with handle",
+    "source": "G ÜRÜN",
+    "box_1_in": "8 × 4 × 3 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 1.23,
+    "engrave_mm": null
+  },
+  {
+    "name": "20OZ TUMBLER",
+    "source": "SULUK",
+    "box_1_in": "8 × 4 × 4 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.9375,
+    "engrave_mm": "90 × 60 mm"
+  },
+  {
+    "name": "20OZ WB",
+    "source": "SULUK",
+    "box_1_in": "11 × 3 × 3 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.625,
+    "engrave_mm": "115 × 55 mm"
+  },
+  {
+    "name": "22 oz skinny tumbler",
+    "source": "G ÜRÜN",
+    "box_1_in": "9 × 3 × 3 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.75,
+    "engrave_mm": "55 × 125 mm"
+  },
+  {
+    "name": "30 oz tumbler",
+    "source": "G ÜRÜN",
+    "box_1_in": "8 × 4 × 4 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 1.1,
+    "engrave_mm": null
+  },
+  {
+    "name": "32OZ WB",
+    "source": "SULUK",
+    "box_1_in": "11 × 4 × 4 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 0.75,
+    "engrave_mm": "125 × 60 mm"
+  },
+  {
+    "name": "40OZ TUMBLER",
+    "source": "SULUK",
+    "box_1_in": "11 × 6 × 4 in",
+    "max_per_box": "20",
+    "unit_weight_lb": 1.0,
+    "engrave_mm": "110 × 70 mm"
+  },
+  {
+    "name": "40OZ WB",
+    "source": "SULUK",
+    "box_1_in": "12 × 5 × 5 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 0.875,
+    "engrave_mm": "135 × 66 mm"
+  },
+  {
+    "name": "Ammo can 30",
+    "source": "G ÜRÜN",
+    "box_1_in": "11 × 4 × 7 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 4.0,
+    "engrave_mm": null
+  },
+  {
+    "name": "Ammo can 50",
+    "source": "G ÜRÜN",
+    "box_1_in": "12 × 6 × 7 in",
+    "max_per_box": "8",
+    "unit_weight_lb": 5.8,
+    "engrave_mm": null
+  },
+  {
+    "name": "barbeque set 11 pcs",
+    "source": "G ÜRÜN",
+    "box_1_in": "18 × 13 × 3 in",
+    "max_per_box": "6",
+    "unit_weight_lb": 3.0,
+    "engrave_mm": null
+  },
+  {
+    "name": "BEER MUG 14OZ",
+    "source": "G ÜRÜN",
+    "box_1_in": "7 × 5 × 5 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 1.578,
+    "engrave_mm": "80 × 55 mm"
+  },
+  {
+    "name": "BEER MUG 25OZ",
+    "source": "G ÜRÜN",
+    "box_1_in": "10 × 7 × 5 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 2.5,
+    "engrave_mm": "85 × 75 mm"
+  },
+  {
+    "name": "BEER MUG ROUND",
+    "source": "G ÜRÜN",
+    "box_1_in": "7 × 5 × 5 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 1.4,
+    "engrave_mm": "40 × 45 mm"
+  },
+  {
+    "name": "Beverage Holder Leather",
+    "source": "G ÜRÜN",
+    "box_1_in": "4 × 2 × 1 in",
+    "max_per_box": "Sınırsız",
+    "unit_weight_lb": 0.1,
+    "engrave_mm": null
+  },
+  {
+    "name": "Bifold Wallet",
+    "source": "G ÜRÜN",
+    "box_1_in": "4 × 3 × 1 in",
+    "max_per_box": "Sınırsız",
+    "unit_weight_lb": 0.1,
+    "engrave_mm": null
+  },
+  {
+    "name": "big travel jewelry box",
+    "source": "G ÜRÜN",
+    "box_1_in": "7 × 4 × 2 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 0.25,
+    "engrave_mm": null
+  },
+  {
+    "name": "Cake Pan",
+    "source": "G ÜRÜN",
+    "box_1_in": "9 × 13 × 1 in",
+    "max_per_box": "4",
+    "unit_weight_lb": 1.5,
+    "engrave_mm": null
+  },
+  {
+    "name": "can cooler",
+    "source": "G ÜRÜN",
+    "box_1_in": "5 × 3 × 3 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.625,
+    "engrave_mm": "58 × 58 mm"
+  },
+  {
+    "name": "canvas portfolio 7-9",
+    "source": "G ÜRÜN",
+    "box_1_in": "7 × 9 × 1 in",
+    "max_per_box": "48",
+    "unit_weight_lb": 1.0,
+    "engrave_mm": null
+  },
+  {
+    "name": "canvas portfolio 9-12",
+    "source": "G ÜRÜN",
+    "box_1_in": "9 × 12 × 1 in",
+    "max_per_box": "20",
+    "unit_weight_lb": 1.7,
+    "engrave_mm": null
+  },
+  {
+    "name": "Champagne Flute",
+    "source": "G ÜRÜN",
+    "box_1_in": "12 × 6 × 5 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 0.5,
+    "engrave_mm": "50 × 35 mm"
+  },
+  {
+    "name": "charcuterie board 11 pcs marble wood",
+    "source": "G ÜRÜN",
+    "box_1_in": "18 × 13 × 3 in",
+    "max_per_box": "5",
+    "unit_weight_lb": null,
+    "engrave_mm": null
+  },
+  {
+    "name": "charcuterie board 19 pcs",
+    "source": "G ÜRÜN",
+    "box_1_in": "18 × 13 × 3 in",
+    "max_per_box": "5",
+    "unit_weight_lb": null,
+    "engrave_mm": null
+  },
+  {
+    "name": "Checkbook",
+    "source": "G ÜRÜN",
+    "box_1_in": "7 × 3 × 1 in",
+    "max_per_box": "Sınırsız",
+    "unit_weight_lb": 0.0625,
+    "engrave_mm": null
+  },
+  {
+    "name": "Clipboard",
+    "source": "G ÜRÜN",
+    "box_1_in": "9 × 12 × 1 in",
+    "max_per_box": "10",
+    "unit_weight_lb": 0.875,
+    "engrave_mm": null
+  },
+  {
+    "name": "Coaster",
+    "source": "G ÜRÜN",
+    "box_1_in": "4 × 3 × 3 in",
+    "max_per_box": "Sınırsız",
+    "unit_weight_lb": 0.625,
+    "engrave_mm": null
+  },
+  {
+    "name": "COFFEE MUG",
+    "source": "SULUK",
+    "box_1_in": "6 × 4 × 4 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 0.75,
+    "engrave_mm": "80 × 60 mm"
+  },
+  {
+    "name": "coffee mug",
+    "source": "G ÜRÜN",
+    "box_1_in": "6 × 4 × 4 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 1.0,
+    "engrave_mm": null
+  },
+  {
+    "name": "Coffee Mug Glass",
+    "source": "G ÜRÜN",
+    "box_1_in": "5 × 5 × 5 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 1.2,
+    "engrave_mm": "55 × 55 mm"
+  },
+  {
+    "name": "Cutting board 16*11",
+    "source": "G ÜRÜN",
+    "box_1_in": "18 × 13 × 3 in",
+    "max_per_box": "5",
+    "unit_weight_lb": 3.0,
+    "engrave_mm": null
+  },
+  {
+    "name": "Decanter + 4 Glasses",
+    "source": "G ÜRÜN",
+    "box_1_in": "14 × 9 × 4 in",
+    "max_per_box": "4",
+    "unit_weight_lb": 7.8,
+    "engrave_mm": null
+  },
+  {
+    "name": "Desk Name Wedge 10",
+    "source": "G ÜRÜN",
+    "box_1_in": "10 × 2 × 2 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.8125,
+    "engrave_mm": null
+  },
+  {
+    "name": "Desk Name Wedge 12",
+    "source": "G ÜRÜN",
+    "box_1_in": "12 × 2 × 2 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.9375,
+    "engrave_mm": null
+  },
+  {
+    "name": "Desk Name Wedge 8",
+    "source": "G ÜRÜN",
+    "box_1_in": "8 × 2 × 2 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.625,
+    "engrave_mm": null
+  },
+  {
+    "name": "Desk Organizer",
+    "source": "G ÜRÜN",
+    "box_1_in": "19 × 5 × 3 in",
+    "max_per_box": "20",
+    "unit_weight_lb": 0.25,
+    "engrave_mm": null
+  },
+  {
+    "name": "Dual Photo Frame 4*6",
+    "source": "G ÜRÜN",
+    "box_1_in": "12 × 7 × 1 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 1.4,
+    "engrave_mm": null
+  },
+  {
+    "name": "Dual Photo Frame 5*7",
+    "source": "G ÜRÜN",
+    "box_1_in": "13 × 8 × 1 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 1.8,
+    "engrave_mm": null
+  },
+  {
+    "name": "flask",
+    "source": "G ÜRÜN",
+    "box_1_in": "4 × 4 × 1 in",
+    "max_per_box": "Sınırsız",
+    "unit_weight_lb": 0.3125,
+    "engrave_mm": null
+  },
+  {
+    "name": "Jewelry Travel Box",
+    "source": "G ÜRÜN",
+    "box_1_in": "4 × 4 × 2 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 0.4375,
+    "engrave_mm": null
+  },
+  {
+    "name": "Journal",
+    "source": "G ÜRÜN",
+    "box_1_in": "5 × 8 × 1 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 1.0,
+    "engrave_mm": null
+  },
+  {
+    "name": "Latte Glass",
+    "source": "G ÜRÜN",
+    "box_1_in": "7 × 5 × 5 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 1.0,
+    "engrave_mm": "60 × 45 mm"
+  },
+  {
+    "name": "LazerMug 11 oz",
+    "source": "G ÜRÜN",
+    "box_1_in": "5 × 5 × 5 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.875,
+    "engrave_mm": null
+  },
+  {
+    "name": "LazerMug Bistro",
+    "source": "G ÜRÜN",
+    "box_1_in": "5 × 5 × 5 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 1.0,
+    "engrave_mm": null
+  },
+  {
+    "name": "Leather 20 oz Tumbler",
+    "source": "G ÜRÜN",
+    "box_1_in": "8 × 4 × 4 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.875,
+    "engrave_mm": null
+  },
+  {
+    "name": "Leather Business Card Holder",
+    "source": "G ÜRÜN",
+    "box_1_in": "4 × 3 × 1 in",
+    "max_per_box": "Sınırsız",
+    "unit_weight_lb": 0.25,
+    "engrave_mm": null
+  },
+  {
+    "name": "Leather Cord Case",
+    "source": "G ÜRÜN",
+    "box_1_in": "8 × 6 × 1 in",
+    "max_per_box": "36",
+    "unit_weight_lb": 0.6875,
+    "engrave_mm": null
+  },
+  {
+    "name": "Leather Photo Frame 4*6",
+    "source": "G ÜRÜN",
+    "box_1_in": "6 × 8 × 1 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 0.8125,
+    "engrave_mm": null
+  },
+  {
+    "name": "Leather Photo Frame 5*7",
+    "source": "G ÜRÜN",
+    "box_1_in": "7 × 9 × 1 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 1.0,
+    "engrave_mm": null
+  },
+  {
+    "name": "Luggage Tags",
+    "source": "G ÜRÜN",
+    "box_1_in": "4 × 3 × 1 in",
+    "max_per_box": "Sınırsız",
+    "unit_weight_lb": 0.625,
+    "engrave_mm": null
+  },
+  {
+    "name": "Mouse Pad",
+    "source": "G ÜRÜN",
+    "box_1_in": "9 × 10 × 1 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.5,
+    "engrave_mm": null
+  },
+  {
+    "name": "Passport Holder",
+    "source": "G ÜRÜN",
+    "box_1_in": "4 × 5 × 1 in",
+    "max_per_box": "30",
+    "unit_weight_lb": 0.1875,
+    "engrave_mm": null
+  },
+  {
+    "name": "pen",
+    "source": "G ÜRÜN",
+    "box_1_in": null,
+    "max_per_box": "Sınırsız",
+    "unit_weight_lb": 0.0625,
+    "engrave_mm": null
+  },
+  {
+    "name": "pen+ pen case",
+    "source": "G ÜRÜN",
+    "box_1_in": "7 × 2 × 1 in",
+    "max_per_box": "50",
+    "unit_weight_lb": 0.3125,
+    "engrave_mm": null
+  },
+  {
+    "name": "phone holder",
+    "source": "G ÜRÜN",
+    "box_1_in": "3 × 2 × 1 in",
+    "max_per_box": "Sınırsız",
+    "unit_weight_lb": 0.25,
+    "engrave_mm": null
+  },
+  {
+    "name": "pint glass",
+    "source": "G ÜRÜN",
+    "box_1_in": "7 × 5 × 5 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.5,
+    "engrave_mm": "60 × 50 mm"
+  },
+  {
+    "name": "Pizza BOARD",
+    "source": "G ÜRÜN",
+    "box_1_in": "15 × 11 × 1 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 1.3,
+    "engrave_mm": null
+  },
+  {
+    "name": "Pocket Mirror",
+    "source": "G ÜRÜN",
+    "box_1_in": "2 × 2 × 1 in",
+    "max_per_box": "Sınırsız",
+    "unit_weight_lb": 0.1,
+    "engrave_mm": null
+  },
+  {
+    "name": "Serving bowl with Lid 1 1/4",
+    "source": "G ÜRÜN",
+    "box_1_in": "6 × 6 × 4 in",
+    "max_per_box": "6",
+    "unit_weight_lb": 1.96,
+    "engrave_mm": null
+  },
+  {
+    "name": "Serving Bowl with Lid 3 3/4",
+    "source": "G ÜRÜN",
+    "box_1_in": "8 × 8 × 6 in",
+    "max_per_box": "4",
+    "unit_weight_lb": 3.3,
+    "engrave_mm": null
+  },
+  {
+    "name": "Skinny TM",
+    "source": "SULUK",
+    "box_1_in": "9 × 3 × 3 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.875,
+    "engrave_mm": "90 × 60 mm"
+  },
+  {
+    "name": "snap up tray 6-6",
+    "source": "G ÜRÜN",
+    "box_1_in": "9 × 9 × 1 in",
+    "max_per_box": "30",
+    "unit_weight_lb": 0.3125,
+    "engrave_mm": null
+  },
+  {
+    "name": "snap up tray 9-9",
+    "source": "G ÜRÜN",
+    "box_1_in": "12 × 12 × 1 in",
+    "max_per_box": "30",
+    "unit_weight_lb": 0.5625,
+    "engrave_mm": null
+  },
+  {
+    "name": "Stemless Wine Glass 15",
+    "source": "G ÜRÜN",
+    "box_1_in": "5 × 5 × 5 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 0.4688,
+    "engrave_mm": "50 × 50 mm"
+  },
+  {
+    "name": "Stemless Wine Glass 9",
+    "source": "G ÜRÜN",
+    "box_1_in": "5 × 5 × 5 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 0.375,
+    "engrave_mm": "50 × 50 mm"
+  },
+  {
+    "name": "water bottle 12",
+    "source": "G ÜRÜN",
+    "box_1_in": "8 × 3 × 3 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.5,
+    "engrave_mm": "65 × 55 mm"
+  },
+  {
+    "name": "water bottle 20",
+    "source": "G ÜRÜN",
+    "box_1_in": "11 × 3 × 3 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.625,
+    "engrave_mm": "115 × 55 mm"
+  },
+  {
+    "name": "water bottle 32",
+    "source": "G ÜRÜN",
+    "box_1_in": "13 × 4 × 4 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 0.75,
+    "engrave_mm": "125 × 60 mm"
+  },
+  {
+    "name": "water bottle 40",
+    "source": "G ÜRÜN",
+    "box_1_in": "14 × 4 × 4 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 0.875,
+    "engrave_mm": "135 × 65 mm"
+  },
+  {
+    "name": "whiskey glass",
+    "source": "G ÜRÜN",
+    "box_1_in": "5 × 5 × 5 in",
+    "max_per_box": "36",
+    "unit_weight_lb": 0.75,
+    "engrave_mm": "55 × 53 mm"
+  },
+  {
+    "name": "Wine glass 10.5 oz",
+    "source": "G ÜRÜN",
+    "box_1_in": "10 × 7 × 5 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 0.4062,
+    "engrave_mm": "50 × 55 mm"
+  },
+  {
+    "name": "Wine glass 19 oz",
+    "source": "G ÜRÜN",
+    "box_1_in": "12 × 6 × 5 in",
+    "max_per_box": "12",
+    "unit_weight_lb": 0.5625,
+    "engrave_mm": "55 × 55 mm"
+  },
+  {
+    "name": "WINE TUMBLER",
+    "source": "SULUK",
+    "box_1_in": "4 × 4 × 5 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.5,
+    "engrave_mm": "38.1 × 44.5 mm"
+  },
+  {
+    "name": "wine tumbler 12",
+    "source": "G ÜRÜN",
+    "box_1_in": "5 × 3 × 3 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.5,
+    "engrave_mm": null
+  },
+  {
+    "name": "wine tumbler 16",
+    "source": "G ÜRÜN",
+    "box_1_in": "6 × 3 × 3 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.75,
+    "engrave_mm": null
+  },
+  {
+    "name": "Wooden Photo Frame 4*6",
+    "source": "G ÜRÜN",
+    "box_1_in": "6 × 8 × 1 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 0.8125,
+    "engrave_mm": null
+  },
+  {
+    "name": "Wooden Photo Frame 5*7",
+    "source": "G ÜRÜN",
+    "box_1_in": "7 × 9 × 1 in",
+    "max_per_box": "24",
+    "unit_weight_lb": 1.0,
+    "engrave_mm": null
+  },
+  {
+    "name": "zipper portfolio",
+    "source": "G ÜRÜN",
+    "box_1_in": "9 × 12 × 1 in",
+    "max_per_box": "20",
+    "unit_weight_lb": 1.5,
+    "engrave_mm": null
+  }
+]
