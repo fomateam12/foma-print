@@ -106,6 +106,9 @@ export default async function ProductPage({
   const name = productName(product.sku, product.name, lang);
   const subName = subcategoryName(product.subcategoryName, lang);
   const size = sizeLabel(product.size ?? "", lang);
+  // Per-SKU master weight first; the packaging sheet's per-unit weight is the
+  // fallback for SKUs FOMA has never weighed individually.
+  const weightLb = product.weightLb ?? product.shippingWeightLb;
   const { description, longDescription, personalization } = productCopy(
     product,
     name,
@@ -208,9 +211,11 @@ export default async function ProductPage({
               engraving area without scrolling. Dimensions and engraving
               area come from the supplier's shipping master keyed by
               product type; `Weight` is the per-SKU item weight from the
-              FOMA master list. */}
+              FOMA master list — when FOMA has never weighed that SKU we
+              fall back to the per-unit weight on the packaging sheet
+              (`shippingWeightLb`) so the chip is filled rather than blank. */}
           {product.size ||
-          product.weightLb ||
+          weightLb ||
           product.dimensions ||
           product.engravingArea ? (
             <dl className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2">
@@ -221,12 +226,12 @@ export default async function ProductPage({
                   <dd className="text-muted-foreground">{size}</dd>
                 </div>
               ) : null}
-              {product.weightLb ? (
+              {weightLb ? (
                 <div className="flex items-center gap-2 rounded-xl border border-border bg-background/60 px-3 py-2 text-sm">
                   <Package className="size-4 shrink-0 text-brand-strong" />
                   <dt className="font-medium text-foreground">{t.weight}</dt>
                   <dd className="text-muted-foreground">
-                    {formatWeight(product.weightLb)}
+                    {formatWeight(weightLb)}
                   </dd>
                 </div>
               ) : null}
