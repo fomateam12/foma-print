@@ -77,6 +77,12 @@
     "engrave_mm": null,
     "fallback_weight_lb": null
   },
+  "FM-CHAR-BMB-1611": {
+    "type": "Cutting board 16*11",
+    "dim_in": null,
+    "engrave_mm": null,
+    "fallback_weight_lb": 3
+  },
   "FSK302": {
     "dim_in": "4.5 × 4 × 1 in",
     "engrave_mm": null,
@@ -4792,5 +4798,77 @@
     "engrave_mm": "135 × 85 mm",
     "fallback_weight_lb": null,
     "type": "Cutting Board"
+  },
+  "TM-FM-AZR": {
+    "type": "40OZ TUMBLER",
+    "dim_in": null,
+    "engrave_mm": null,
+    "fallback_weight_lb": 1
+  },
+  "TM-FM-BAY": {
+    "type": "40OZ TUMBLER",
+    "dim_in": null,
+    "engrave_mm": null,
+    "fallback_weight_lb": 1
+  },
+  "TM-FM-BLK": {
+    "type": "40OZ TUMBLER",
+    "dim_in": null,
+    "engrave_mm": null,
+    "fallback_weight_lb": 1
+  },
+  "TM-FM-CHA": {
+    "type": "40OZ TUMBLER",
+    "dim_in": null,
+    "engrave_mm": null,
+    "fallback_weight_lb": 1
+  },
+  "TM-FM-CRM": {
+    "type": "40OZ TUMBLER",
+    "dim_in": null,
+    "engrave_mm": null,
+    "fallback_weight_lb": 1
+  },
+  "TM-FM-EUC": {
+    "type": "40OZ TUMBLER",
+    "dim_in": null,
+    "engrave_mm": null,
+    "fallback_weight_lb": 1
+  },
+  "TM-FM-FOG": {
+    "type": "40OZ TUMBLER",
+    "dim_in": null,
+    "engrave_mm": null,
+    "fallback_weight_lb": 1
+  },
+  "TM-FM-FRS": {
+    "type": "40OZ TUMBLER",
+    "dim_in": null,
+    "engrave_mm": null,
+    "fallback_weight_lb": 1
+  },
+  "TM-FM-HPK": {
+    "type": "40OZ TUMBLER",
+    "dim_in": null,
+    "engrave_mm": null,
+    "fallback_weight_lb": 1
+  },
+  "TM-FM-LIL": {
+    "type": "40OZ TUMBLER",
+    "dim_in": null,
+    "engrave_mm": null,
+    "fallback_weight_lb": 1
+  },
+  "TM-FM-ROS": {
+    "type": "40OZ TUMBLER",
+    "dim_in": null,
+    "engrave_mm": null,
+    "fallback_weight_lb": 1
+  },
+  "TM-FM-WHT": {
+    "type": "40OZ TUMBLER",
+    "dim_in": null,
+    "engrave_mm": null,
+    "fallback_weight_lb": 1
   }
 }
