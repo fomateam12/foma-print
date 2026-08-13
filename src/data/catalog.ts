@@ -2350,6 +2350,81 @@ const ADDED_PRODUCTS: RawProduct[] = [
     subSlug: "crystal-ornaments",
     subName: "Crystal Ornaments",
   },
+  // Acacia cutting boards with drip ring + corner hole, two sizes (JDS
+  // master CSV, not in the scraped feed). Existing feed subcategory —
+  // GIFTS_SPLIT routes it to Kitchen & Bar. Supplier Cloudinary images,
+  // same origin as the feed (no R2 write access on this machine).
+  {
+    id: "gft2324",
+    name: "11 1/2\" x 8 3/4\" Acacia Cutting Board with Drip Ring and Corner Hole",
+    sku: "GFT2324",
+    size: "11 1/2\" x 8 3/4\" x 3/4\"",
+    price: 6.5,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1770159912/products/images/large/GFT2324--7916b56e.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1770159912/products/images/large/GFT2324--7916b56e.png",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "1",
+    subSlug: "cutting-boards-cake-pans-kitchen",
+    subName: "Cutting Boards, Cake Pans, Kitchen",
+  },
+  {
+    id: "gft2325",
+    name: "13 3/4\" x 9 3/4\" Acacia Cutting Board with Drip Ring and Corner Hole",
+    sku: "GFT2325",
+    size: "13 3/4\" x 9 3/4\" x 3/4\"",
+    price: 8.25,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1770159576/products/images/large/GFT2325--1e03ee26.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1770159576/products/images/large/GFT2325--1e03ee26.png",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "1",
+    subSlug: "cutting-boards-cake-pans-kitchen",
+    subName: "Cutting Boards, Cake Pans, Kitchen",
+  },
+  // Wood serving trays with 9" x 12" recessed center, alder + walnut (JDS
+  // master CSV, not in the scraped feed). Same subcategory as the other
+  // kitchen woodware (precedent: FOMA marble serving board lives here too).
+  {
+    id: "gft572",
+    name: "13 5/8\" x 10 5/8\" Alder Tray with 9\" x 12\" Recessed Center",
+    sku: "GFT572",
+    size: "13 5/8\" x 10 5/8\"",
+    price: 19,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1770668707/products/images/large/GFT572--47a1892c.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1770668707/products/images/large/GFT572--47a1892c.png",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "1",
+    subSlug: "cutting-boards-cake-pans-kitchen",
+    subName: "Cutting Boards, Cake Pans, Kitchen",
+  },
+  {
+    id: "gft573",
+    name: "13 5/8\" x 10 5/8\" Walnut Tray with 9\" x 12\" Recessed Center",
+    sku: "GFT573",
+    size: "13 5/8\" x 10 5/8\"",
+    price: 30.5,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1770668807/products/images/large/GFT573--10562de9.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1770668807/products/images/large/GFT573--10562de9.png",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "1",
+    subSlug: "cutting-boards-cake-pans-kitchen",
+    subName: "Cutting Boards, Cake Pans, Kitchen",
+  },
 ];
 
 /* New subcategories the additions introduce, keyed by the (post-merge)
