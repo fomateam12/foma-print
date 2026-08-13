@@ -500,6 +500,10 @@
     "consentAfter": ". *",
     "submitting": "Submitting…",
     "submit": "Submit reseller application",
+    "verifying": "Checking your browser…",
+    "verifyUnavailableTitle": "We couldn't run the security check",
+    "verifyUnavailableBody": "A browser extension, VPN or network filter is usually what blocks it. Don't retype anything — send your application straight to us and we'll process it the same business day:",
+    "verifyMailSubject": "Reseller application",
     "options": {
       "Retail store": "Retail store",
       "Online shop": "Online shop",

@@ -18,10 +18,36 @@ import { useEffect, useId, useRef } from "react";
  * step. The server-side verifier is the security boundary; client absence
  * just means the form will fail server validation, which is the right
  * fail-closed posture in production.
+ *
+ * `onUnavailable` exists because the most common real-world failure is
+ * silent. An ad blocker, privacy extension, VPN or corporate filter that
+ * blocks `challenges.cloudflare.com` stops the script from ever running,
+ * so no callback fires at all — not `error-callback`, not `onload`. The
+ * visitor sees an ordinary form, fills it in, and only learns something
+ * is wrong when the server answers 403. A reseller applicant hit exactly
+ * this on 11 Aug 2026 and emailed us instead; everyone who does not write
+ * in is simply lost. Hence the deadline: if no token has arrived by
+ * RESOLVE_TIMEOUT_MS, the caller is told so it can offer another route.
  */
 
 const SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 const SCRIPT_SRC = "https://challenges.cloudflare.com/turnstile/v0/api.js";
+
+/**
+ * Is the challenge configured at all? Callers gate their "waiting for
+ * verification" UI on this — without a site key no token will ever arrive
+ * and a form that waits for one would be permanently unsubmittable in
+ * local dev.
+ */
+export const TURNSTILE_ENABLED = Boolean(SITE_KEY);
+
+/**
+ * How long to wait for a token before declaring the challenge unreachable.
+ * Generous on purpose: Managed mode can show an interactive challenge, and
+ * a slow connection plus a puzzle takes real seconds. This deadline is for
+ * "the script never loaded", not for "the visitor is thinking".
+ */
+const RESOLVE_TIMEOUT_MS = 15_000;
 
 declare global {
   interface Window {
@@ -48,10 +74,14 @@ declare global {
 export function TurnstileWidget({
   onVerify,
   onExpire,
+  onUnavailable,
   className,
 }: {
   onVerify: (token: string) => void;
   onExpire?: () => void;
+  /** Fired once when no token can be obtained — blocked script, failed
+   *  challenge, or the deadline above elapsing with nothing delivered. */
+  onUnavailable?: () => void;
   className?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -60,17 +90,38 @@ export function TurnstileWidget({
 
   useEffect(() => {
     if (!SITE_KEY) return;
+
+    // Reported at most once per mount: a flapping challenge should not
+    // redraw the caller's fallback notice on every retry.
+    let unavailableReported = false;
+    const reportUnavailable = () => {
+      if (unavailableReported) return;
+      unavailableReported = true;
+      onUnavailable?.();
+    };
+
+    const deadline = window.setTimeout(reportUnavailable, RESOLVE_TIMEOUT_MS);
+
     const renderWidget = () => {
       if (!window.turnstile || !ref.current) return;
       if (widgetIdRef.current) return;
       widgetIdRef.current = window.turnstile.render(ref.current, {
         sitekey: SITE_KEY,
-        callback: onVerify,
+        callback: (token: string) => {
+          // A token arrived, so the challenge is reachable after all —
+          // stand the deadline down before handing the token over.
+          window.clearTimeout(deadline);
+          unavailableReported = true;
+          onVerify(token);
+        },
         "expired-callback": () => {
+          // Routine: tokens live ~5 minutes and the widget refreshes
+          // itself. Drop the stale token, keep the form as it was.
           onExpire?.();
         },
         "error-callback": () => {
           onExpire?.();
+          reportUnavailable();
         },
         theme: "auto",
         size: "flexible",
@@ -84,6 +135,7 @@ export function TurnstileWidget({
       window.onloadTurnstileCallback = renderWidget;
     }
     return () => {
+      window.clearTimeout(deadline);
       const id = widgetIdRef.current;
       if (id && window.turnstile) {
         try {
@@ -94,7 +146,7 @@ export function TurnstileWidget({
         widgetIdRef.current = null;
       }
     };
-  }, [onVerify, onExpire]);
+  }, [onVerify, onExpire, onUnavailable]);
 
   if (!SITE_KEY) return null;
 
@@ -105,6 +157,9 @@ export function TurnstileWidget({
         strategy="afterInteractive"
         async
         defer
+        // A blocked request rejects here in some browsers and silently
+        // does nothing in others; the deadline covers the silent case.
+        onError={() => onUnavailable?.()}
       />
       <div id={containerId} ref={ref} className={className} />
     </>
