@@ -68,7 +68,10 @@
   "Travel Jewelry Boxes": "Seyahat Takı Kutuları",
   "Water Bottles": "Suluklar",
   "Ringneck Tumbler with Standard Lid": "Standart Kapaklı Ringneck Termos Bardak",
-  "ION-Plated Ringneck Tumbler with Slider Lid": "Sürgülü Kapaklı İyon Kaplamalı Ringneck Termos Bardak"
+  "ION-Plated Ringneck Tumbler with Slider Lid": "Sürgülü Kapaklı İyon Kaplamalı Ringneck Termos Bardak",
+  "Scented Candles": "Kokulu Mumlar",
+  "Crystal Ornaments": "Kristal Yılbaşı Süsleri",
+  "Leatherette Sheet Stock": "Suni Deri Levhalar"
  },
  "sizes": {},
  "products": {
@@ -920,7 +923,23 @@
   "FM-DOPP-DL-BRN": "Çift Katmanlı PU Deri Kişisel Bakım Çantası - Kahverengi",
   "FM-RB-HEX": "Altıgen Ceviz Yüzük Kutusu",
   "FM-CHAR-BMB-1611": "Bambu Şarküteri Tahtası – 16 × 11 × 1 in",
-  "FM-DOPP-SL-BRN": "Tek Katmanlı PU Deri Kişisel Bakım Çantası - Kahverengi"
+  "FM-DOPP-SL-BRN": "Tek Katmanlı PU Deri Kişisel Bakım Çantası - Kahverengi",
+  "CDL1011": "Siyah Metal Kutuda Yıllanmış Meşe Kokulu Mum, 5.3 oz.",
+  "CDL1012": "Siyah Metal Kutuda Ferah Keten Kokulu Mum, 5.3 oz.",
+  "CDL1013": "Siyah Metal Kutuda Yabani Lavanta Kokulu Mum, 5.3 oz.",
+  "CDL1014": "Siyah Metal Kutuda Tropikal Gündoğumu Kokulu Mum, 5.3 oz.",
+  "CDL1015": "Siyah Metal Kutuda Balkabağı Bahçesi Kokulu Mum, 5.3 oz.",
+  "CDL1016": "Siyah Metal Kutuda Yılbaşı Ağacı Kokulu Mum, 5.3 oz.",
+  "CDL1017": "Siyah Metal Kutuda Sitronella Kokulu Mum, 5.3 oz.",
+  "CRY3617": "3\" Kristal Fasetli Oval Yılbaşı Süsü",
+  "CRY3618": "3\" Kristal Fasetli Yuvarlak Yılbaşı Süsü",
+  "GFT2324": "11 1/2\" x 8 3/4\" Akasya Kesme Tahtası – Damlama Kanallı, Köşe Delikli",
+  "GFT2325": "13 3/4\" x 9 3/4\" Akasya Kesme Tahtası – Damlama Kanallı, Köşe Delikli",
+  "GFT572": "13 5/8\" x 10 5/8\" Kızılağaç Tepsi – 9\" x 12\" Oyuk Merkezli",
+  "GFT573": "13 5/8\" x 10 5/8\" Ceviz Tepsi – 9\" x 12\" Oyuk Merkezli",
+  "LLS104": "12\" x 24\" Rawhide Lazerlenebilir Suni Deri Levha",
+  "LLS109": "12\" x 24\" Siyah/Gümüş Lazerlenebilir Suni Deri Levha",
+  "LLA204": "12\" x 18\" Rawhide Yapışkanlı Lazerlenebilir Suni Deri Levha"
  },
  "blurbs": {
   "Kitchen & Bar": "Ev sahipleri ve ev aşçıları için kazımalı kesme ve şarküteri tahtaları, cep mataraları, barbekü setleri ve bar aksesuarları.",

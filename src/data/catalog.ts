@@ -543,8 +543,7 @@ const REMOVED_SKUS = new Set<string>([
   "ADW10BK", "ADW8BK", "ADW8CL", "APF446B", "APF446GY",
   "APF457B", "APF457GY", "APF4810B", "APF4810GY", "BBQ01A", "BBQ02A",
   "BBQ03B", "BBQ11B", "BBQ12B", "BBQ13B", "BBQ14B", "BR2252",
-  "BR2253", "CDL1011", "CDL1012", "CDL1013", "CDL1014", "CDL1015",
-  "CDL1016", "CDL1017", "CDL1061", "CDL1062", "CDL1063", "CDL1064",
+  "BR2253", "CDL1061", "CDL1062", "CDL1063", "CDL1064",
   "CDL1065", "CDL1066", "CDL1067", "FNL01", "FSK633", "FSK634", "FSK655SETA",
   "FSK661SETA", "FSK671SET", "FSK675SET", "GFT008", "GFT010",
   "GFT024", "GFT048", "GFT049", "GFT1046", "GFT1047",
@@ -2313,6 +2312,174 @@ const ADDED_PRODUCTS: RawProduct[] = [
     subSlug: "spiral-notebooks",
     subName: "Spiral Notebooks",
   },
+  // Premier Crystal faceted ornaments (JDS master CSV, not in the scraped
+  // feed). Images served from JDS's own Cloudinary cloud — the same origin
+  // every feed product uses — because no R2 write access exists on this
+  // machine; re-host under products/{SKU}/ when keys are available.
+  {
+    id: "cry3617",
+    name: "3\" Crystal Faceted Oval Ornament",
+    sku: "CRY3617",
+    size: "2 1/8\" x 3\"",
+    price: 7.9,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1689954108/products/images/large/CRY3617--76fa03f8.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1689954108/products/images/large/CRY3617--76fa03f8.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "131",
+    subSlug: "crystal-ornaments",
+    subName: "Crystal Ornaments",
+  },
+  {
+    id: "cry3618",
+    name: "3\" Crystal Round Faceted Ornament",
+    sku: "CRY3618",
+    size: "3\" Diameter",
+    price: 7.9,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1689954215/products/images/large/CRY3618--6364984c.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1689954215/products/images/large/CRY3618--6364984c.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "131",
+    subSlug: "crystal-ornaments",
+    subName: "Crystal Ornaments",
+  },
+  // Acacia cutting boards with drip ring + corner hole, two sizes (JDS
+  // master CSV, not in the scraped feed). Existing feed subcategory —
+  // GIFTS_SPLIT routes it to Kitchen & Bar. Supplier Cloudinary images,
+  // same origin as the feed (no R2 write access on this machine).
+  {
+    id: "gft2324",
+    name: "11 1/2\" x 8 3/4\" Acacia Cutting Board with Drip Ring and Corner Hole",
+    sku: "GFT2324",
+    size: "11 1/2\" x 8 3/4\" x 3/4\"",
+    price: 6.5,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1770159912/products/images/large/GFT2324--7916b56e.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1770159912/products/images/large/GFT2324--7916b56e.png",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "1",
+    subSlug: "cutting-boards-cake-pans-kitchen",
+    subName: "Cutting Boards, Cake Pans, Kitchen",
+  },
+  {
+    id: "gft2325",
+    name: "13 3/4\" x 9 3/4\" Acacia Cutting Board with Drip Ring and Corner Hole",
+    sku: "GFT2325",
+    size: "13 3/4\" x 9 3/4\" x 3/4\"",
+    price: 8.25,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1770159576/products/images/large/GFT2325--1e03ee26.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1770159576/products/images/large/GFT2325--1e03ee26.png",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "1",
+    subSlug: "cutting-boards-cake-pans-kitchen",
+    subName: "Cutting Boards, Cake Pans, Kitchen",
+  },
+  // Wood serving trays with 9" x 12" recessed center, alder + walnut (JDS
+  // master CSV, not in the scraped feed). Same subcategory as the other
+  // kitchen woodware (precedent: FOMA marble serving board lives here too).
+  {
+    id: "gft572",
+    name: "13 5/8\" x 10 5/8\" Alder Tray with 9\" x 12\" Recessed Center",
+    sku: "GFT572",
+    size: "13 5/8\" x 10 5/8\"",
+    price: 19,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1770668707/products/images/large/GFT572--47a1892c.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1770668707/products/images/large/GFT572--47a1892c.png",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "1",
+    subSlug: "cutting-boards-cake-pans-kitchen",
+    subName: "Cutting Boards, Cake Pans, Kitchen",
+  },
+  {
+    id: "gft573",
+    name: "13 5/8\" x 10 5/8\" Walnut Tray with 9\" x 12\" Recessed Center",
+    sku: "GFT573",
+    size: "13 5/8\" x 10 5/8\"",
+    price: 30.5,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1770668807/products/images/large/GFT573--10562de9.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1770668807/products/images/large/GFT573--10562de9.png",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "1",
+    subSlug: "cutting-boards-cake-pans-kitchen",
+    subName: "Cutting Boards, Cake Pans, Kitchen",
+  },
+  // Laserable leatherette sheet stock (JDS master CSV, not in the scraped
+  // feed) — raw material for engravers, a family the feed doesn't carry at
+  // all, so it gets its own subcategory (GIFTS_SPLIT maps it to Personal
+  // Accessories). Supplier Cloudinary images, same origin as the feed.
+  {
+    id: "lls104",
+    name: "12\" x 24\" Rawhide Laserable Leatherette Sheet Stock",
+    sku: "LLS104",
+    size: "12\" x 24\" x 1.19mm",
+    price: 4.7,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1667537781/products/images/large/LLS104--29fc3d83.jpg",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1667537781/products/images/large/LLS104--29fc3d83.jpg",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "132",
+    subSlug: "leatherette-sheet-stock",
+    subName: "Leatherette Sheet Stock",
+  },
+  {
+    id: "lls109",
+    name: "12\" x 24\" Black/Silver Laserable Leatherette Sheet Stock",
+    sku: "LLS109",
+    size: "12\" x 24\" x 1.19mm",
+    price: 4.7,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1667537791/products/images/large/LLS109--d99f6a7c.jpg",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1667537791/products/images/large/LLS109--d99f6a7c.jpg",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "132",
+    subSlug: "leatherette-sheet-stock",
+    subName: "Leatherette Sheet Stock",
+  },
+  {
+    id: "lla204",
+    name: "12\" x 18\" Rawhide Laserable Leatherette Sheet Stock with Adhesive",
+    sku: "LLA204",
+    size: "12\" x 18\" x .8mm",
+    price: 6.2,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1667537473/products/images/large/LLA204--8f58cb9a.jpg",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1667537473/products/images/large/LLA204--8f58cb9a.jpg",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "132",
+    subSlug: "leatherette-sheet-stock",
+    subName: "Leatherette Sheet Stock",
+  },
 ];
 
 /* New subcategories the additions introduce, keyed by the (post-merge)
@@ -2337,12 +2504,14 @@ const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
     // GIFTS_SPLIT routes to Personal Accessories.
     { subId: "122", slug: "pocket-knives", name: "Pocket Knives", count: 0 },
     { subId: "123", slug: "lighters", name: "Lighters", count: 0 },
+    { subId: "132", slug: "leatherette-sheet-stock", name: "Leatherette Sheet Stock", count: 0 },
     { subId: "106", slug: "wallets-with-strap", name: "Leatherette Wallet with Strap", count: 0 },
     { subId: "107", slug: "wallets-bifold-flip-id", name: "Leatherette Bifold Wallet with Flip ID", count: 0 },
     { subId: "108", slug: "wallets-bifold", name: "Leatherette Bifold Wallet", count: 0 },
   ],
   "frames-and-decor": [
     { subId: "101", slug: "glass-frames-and-decor", name: "Glass Frames & Decor", count: 0 },
+    { subId: "131", slug: "crystal-ornaments", name: "Crystal Ornaments", count: 0 },
     { subId: "103", slug: "photo-frames-small", name: "Small Photo Frames (4x6)", count: 0 },
     { subId: "104", slug: "photo-frames-medium", name: "Medium Photo Frames (5x7)", count: 0 },
     { subId: "105", slug: "photo-frames-large", name: "Large Photo Frames (8x10)", count: 0 },
@@ -3082,6 +3251,9 @@ const GIFTS_SPLIT: Record<string, { id: string; slug: string; name: string }> = 
   // FOMA's own products from the dissolved "Best Sellers" category.
   "pocket-knives": GIFTS_CATS.personal,
   "lighters": GIFTS_CATS.personal,
+  // Laserable leatherette sheet stock (ADDED_PRODUCTS) — explicit mapping
+  // rather than relying on the unmapped-sub fallback.
+  "leatherette-sheet-stock": GIFTS_CATS.personal,
 };
 function giftsCategoryFor(subSlug: string) {
   return GIFTS_SPLIT[subSlug] ?? GIFTS_CATS.personal;
