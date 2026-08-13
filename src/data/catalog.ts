@@ -543,8 +543,7 @@ const REMOVED_SKUS = new Set<string>([
   "ADW10BK", "ADW8BK", "ADW8CL", "APF446B", "APF446GY",
   "APF457B", "APF457GY", "APF4810B", "APF4810GY", "BBQ01A", "BBQ02A",
   "BBQ03B", "BBQ11B", "BBQ12B", "BBQ13B", "BBQ14B", "BR2252",
-  "BR2253", "CDL1011", "CDL1012", "CDL1013", "CDL1014", "CDL1015",
-  "CDL1016", "CDL1017", "CDL1061", "CDL1062", "CDL1063", "CDL1064",
+  "BR2253", "CDL1061", "CDL1062", "CDL1063", "CDL1064",
   "CDL1065", "CDL1066", "CDL1067", "FNL01", "FSK633", "FSK634", "FSK655SETA",
   "FSK661SETA", "FSK671SET", "FSK675SET", "GFT008", "GFT010",
   "GFT024", "GFT048", "GFT049", "GFT1046", "GFT1047",
@@ -2313,6 +2312,44 @@ const ADDED_PRODUCTS: RawProduct[] = [
     subSlug: "spiral-notebooks",
     subName: "Spiral Notebooks",
   },
+  // Premier Crystal faceted ornaments (JDS master CSV, not in the scraped
+  // feed). Images served from JDS's own Cloudinary cloud — the same origin
+  // every feed product uses — because no R2 write access exists on this
+  // machine; re-host under products/{SKU}/ when keys are available.
+  {
+    id: "cry3617",
+    name: "3\" Crystal Faceted Oval Ornament",
+    sku: "CRY3617",
+    size: "2 1/8\" x 3\"",
+    price: 7.9,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1689954108/products/images/large/CRY3617--76fa03f8.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1689954108/products/images/large/CRY3617--76fa03f8.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "131",
+    subSlug: "crystal-ornaments",
+    subName: "Crystal Ornaments",
+  },
+  {
+    id: "cry3618",
+    name: "3\" Crystal Round Faceted Ornament",
+    sku: "CRY3618",
+    size: "3\" Diameter",
+    price: 7.9,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1689954215/products/images/large/CRY3618--6364984c.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1689954215/products/images/large/CRY3618--6364984c.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "131",
+    subSlug: "crystal-ornaments",
+    subName: "Crystal Ornaments",
+  },
 ];
 
 /* New subcategories the additions introduce, keyed by the (post-merge)
@@ -2343,6 +2380,7 @@ const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
   ],
   "frames-and-decor": [
     { subId: "101", slug: "glass-frames-and-decor", name: "Glass Frames & Decor", count: 0 },
+    { subId: "131", slug: "crystal-ornaments", name: "Crystal Ornaments", count: 0 },
     { subId: "103", slug: "photo-frames-small", name: "Small Photo Frames (4x6)", count: 0 },
     { subId: "104", slug: "photo-frames-medium", name: "Medium Photo Frames (5x7)", count: 0 },
     { subId: "105", slug: "photo-frames-large", name: "Large Photo Frames (8x10)", count: 0 },
