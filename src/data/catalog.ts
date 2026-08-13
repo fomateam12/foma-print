@@ -2425,6 +2425,61 @@ const ADDED_PRODUCTS: RawProduct[] = [
     subSlug: "cutting-boards-cake-pans-kitchen",
     subName: "Cutting Boards, Cake Pans, Kitchen",
   },
+  // Laserable leatherette sheet stock (JDS master CSV, not in the scraped
+  // feed) — raw material for engravers, a family the feed doesn't carry at
+  // all, so it gets its own subcategory (GIFTS_SPLIT maps it to Personal
+  // Accessories). Supplier Cloudinary images, same origin as the feed.
+  {
+    id: "lls104",
+    name: "12\" x 24\" Rawhide Laserable Leatherette Sheet Stock",
+    sku: "LLS104",
+    size: "12\" x 24\" x 1.19mm",
+    price: 4.7,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1667537781/products/images/large/LLS104--29fc3d83.jpg",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1667537781/products/images/large/LLS104--29fc3d83.jpg",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "132",
+    subSlug: "leatherette-sheet-stock",
+    subName: "Leatherette Sheet Stock",
+  },
+  {
+    id: "lls109",
+    name: "12\" x 24\" Black/Silver Laserable Leatherette Sheet Stock",
+    sku: "LLS109",
+    size: "12\" x 24\" x 1.19mm",
+    price: 4.7,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1667537791/products/images/large/LLS109--d99f6a7c.jpg",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1667537791/products/images/large/LLS109--d99f6a7c.jpg",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "132",
+    subSlug: "leatherette-sheet-stock",
+    subName: "Leatherette Sheet Stock",
+  },
+  {
+    id: "lla204",
+    name: "12\" x 18\" Rawhide Laserable Leatherette Sheet Stock with Adhesive",
+    sku: "LLA204",
+    size: "12\" x 18\" x .8mm",
+    price: 6.2,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1667537473/products/images/large/LLA204--8f58cb9a.jpg",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1667537473/products/images/large/LLA204--8f58cb9a.jpg",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "132",
+    subSlug: "leatherette-sheet-stock",
+    subName: "Leatherette Sheet Stock",
+  },
 ];
 
 /* New subcategories the additions introduce, keyed by the (post-merge)
@@ -2449,6 +2504,7 @@ const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
     // GIFTS_SPLIT routes to Personal Accessories.
     { subId: "122", slug: "pocket-knives", name: "Pocket Knives", count: 0 },
     { subId: "123", slug: "lighters", name: "Lighters", count: 0 },
+    { subId: "132", slug: "leatherette-sheet-stock", name: "Leatherette Sheet Stock", count: 0 },
     { subId: "106", slug: "wallets-with-strap", name: "Leatherette Wallet with Strap", count: 0 },
     { subId: "107", slug: "wallets-bifold-flip-id", name: "Leatherette Bifold Wallet with Flip ID", count: 0 },
     { subId: "108", slug: "wallets-bifold", name: "Leatherette Bifold Wallet", count: 0 },
@@ -3195,6 +3251,9 @@ const GIFTS_SPLIT: Record<string, { id: string; slug: string; name: string }> = 
   // FOMA's own products from the dissolved "Best Sellers" category.
   "pocket-knives": GIFTS_CATS.personal,
   "lighters": GIFTS_CATS.personal,
+  // Laserable leatherette sheet stock (ADDED_PRODUCTS) — explicit mapping
+  // rather than relying on the unmapped-sub fallback.
+  "leatherette-sheet-stock": GIFTS_CATS.personal,
 };
 function giftsCategoryFor(subSlug: string) {
   return GIFTS_SPLIT[subSlug] ?? GIFTS_CATS.personal;
