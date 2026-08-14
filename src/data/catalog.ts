@@ -543,8 +543,10 @@ const REMOVED_SKUS = new Set<string>([
   "ADW10BK", "ADW8BK", "ADW8CL", "APF446B", "APF446GY",
   "APF457B", "APF457GY", "APF4810B", "APF4810GY", "BBQ01A", "BBQ02A",
   "BBQ03B", "BBQ11B", "BBQ12B", "BBQ13B", "BBQ14B", "BR2252",
-  "BR2253", "CDL1011", "CDL1012", "CDL1013", "CDL1014", "CDL1015",
-  "CDL1016", "CDL1017", "CDL1061", "CDL1062", "CDL1063", "CDL1064",
+  // CDL1011-CDL1017 (5.3 oz. tin candles) are sold again as of 14 Aug 2026 —
+  // the line went live in FomaHub the same day (item 145, one product with a
+  // Scent axis). The 14 oz. glass-holder candles below stay out.
+  "BR2253", "CDL1061", "CDL1062", "CDL1063", "CDL1064",
   "CDL1065", "CDL1066", "CDL1067", "FNL01", "FSK633", "FSK634", "FSK655SETA",
   "FSK661SETA", "FSK671SET", "FSK675SET", "GFT008", "GFT010",
   "GFT024", "GFT048", "GFT049", "GFT1046", "GFT1047",
@@ -3046,6 +3048,15 @@ const NAME_OVERRIDES: Record<string, string> = {
   RA210: "Genuine Desk Wedge – 10 / Red Alder",
   RA28: "Genuine Desk Wedge – 8 / Red Alder",
   SLT087: "Acacia Wood/Slate Rectangle Cheese Set with Three Tools",
+  // Tin candles: the feed trails the size ("…, 5.3 oz."), the master table and
+  // order-press lead with it. Same shape as the rest of this map.
+  CDL1011: "5.3 oz. Weathered Oak Candle in a Black Metal Tin",
+  CDL1012: "5.3 oz. Crisp Linen Candle in a Black Metal Tin",
+  CDL1013: "5.3 oz. Wild Lavender Candle in a Black Metal Tin",
+  CDL1014: "5.3 oz. Tropical Sunrise Candle in a Black Metal Tin",
+  CDL1015: "5.3 oz. Pick of the Patch Candle in a Black Metal Tin",
+  CDL1016: "5.3 oz. Trim the Tree Candle in a Black Metal Tin",
+  CDL1017: "5.3 oz. Citronella Candle in a Black Metal Tin",
 };
 
 const GIFTS_SOURCE_SLUG = "gifts-and-promotions";
