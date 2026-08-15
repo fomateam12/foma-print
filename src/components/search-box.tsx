@@ -6,7 +6,6 @@ import { Link } from "@/components/locale-link";
 import Image from "next/image";
 import { Search, X, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { formatPrice } from "@/lib/format";
 import { useDict, useLocale } from "@/components/i18n-provider";
 import { localizedPath } from "@/lib/i18n";
 import type { SearchResult } from "@/data/types";
@@ -173,11 +172,12 @@ export function SearchBox({
                       />
                     ) : null}
                   </div>
+                  {/* No price here: the feed's price field is not a real
+                      price (see lib/partner-prices.ts) and the storefront is
+                      quote-based. Partner pricing lives on the gated
+                      /catalog pages, which read the Printify list instead. */}
                   <span className="line-clamp-1 flex-1 font-medium text-foreground">
                     {r.name}
-                  </span>
-                  <span className="shrink-0 text-xs text-muted-foreground">
-                    {formatPrice(r.basePrice)}
                   </span>
                 </Link>
               ))}
