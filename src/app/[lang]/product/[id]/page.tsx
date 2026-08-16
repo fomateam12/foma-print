@@ -172,6 +172,7 @@ export default async function ProductPage({
                 : [cloudinary(product.imageFull, { width: 900 })]
             }
             alt={name}
+            sku={product.sku}
           />
         </div>
 
