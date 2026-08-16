@@ -2,12 +2,21 @@
 
 import Image from "next/image";
 import { useCallback, useState } from "react";
+import { Archive, Download } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useDict } from "@/components/i18n-provider";
 
 interface ProductGalleryProps {
   images: string[];
   alt: string;
+  /**
+   * When set, a download row renders under the gallery pointing at
+   * /api/download-images — the route that serves the ORIGINAL files
+   * (right-click-save on the <Image> would only yield the optimizer's
+   * compressed derivative). Omitted in contexts where downloads don't
+   * belong (e.g. the quick-view dialog).
+   */
+  sku?: string;
 }
 
 /**
@@ -21,7 +30,7 @@ interface ProductGalleryProps {
  * — this component is unaware of the host and just renders whatever it's
  * handed.
  */
-export function ProductGallery({ images, alt }: ProductGalleryProps) {
+export function ProductGallery({ images, alt, sku }: ProductGalleryProps) {
   const dict = useDict();
   const [active, setActive] = useState(0);
   const count = images.length;
@@ -126,6 +135,34 @@ export function ProductGallery({ images, alt }: ProductGalleryProps) {
           ))}
         </div>
       )}
+
+      {sku ? (
+        <div className="mt-4 rounded-xl border border-border bg-secondary/40 px-4 py-3">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+            <a
+              href={`/api/download-images?sku=${encodeURIComponent(sku)}&i=${activeIndex}`}
+              download
+              className="inline-flex items-center gap-1.5 font-semibold text-brand-strong transition-colors hover:text-rust-bright"
+            >
+              <Download className="size-4" />
+              {dict.product.downloadImage}
+            </a>
+            {count > 1 ? (
+              <a
+                href={`/api/download-images?sku=${encodeURIComponent(sku)}`}
+                download
+                className="inline-flex items-center gap-1.5 font-semibold text-brand-strong transition-colors hover:text-rust-bright"
+              >
+                <Archive className="size-4" />
+                {dict.product.downloadAll.replace("{count}", String(count))}
+              </a>
+            ) : null}
+          </div>
+          <p className="mt-1 text-xs text-muted-foreground">
+            {dict.product.downloadNote}
+          </p>
+        </div>
+      ) : null}
     </div>
   );
 }
