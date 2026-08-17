@@ -857,6 +857,12 @@
     "fallback_weight_lb": 0.25,
     "type": "Beverage Holder"
   },
+  "GFT192": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "70 × 70 mm",
+    "fallback_weight_lb": null
+  },
   "GFT193": {
     "dim_in": "4 × 4 × 0.5 in",
     "engrave_mm": null,
