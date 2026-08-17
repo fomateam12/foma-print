@@ -115,6 +115,7 @@ export const fomaProducts: Product[] = [
     name: "40 oz. Tumbler with Handle & Straw – Black",
     sku: "TM-FM-BLK",
     size: "40oz · 12 × 6 in",
+    engravingArea: "70 × 100 mm",
     basePrice: 12.99,
     image: "/products/TM-FM-BLK/TM-FM-BLK_p.jpg",
     imageFull: "/products/TM-FM-BLK/TM-FM-BLK_p.jpg",
@@ -147,6 +148,7 @@ export const fomaProducts: Product[] = [
     name: "40 oz. Tumbler with Handle & Straw – White",
     sku: "TM-FM-WHT",
     size: "40oz · 12 × 6 in",
+    engravingArea: "70 × 100 mm",
     basePrice: 12.99,
     image: "/products/TM-FM-WHT/TM-FM-WHT_engraved.png",
     imageFull: "/products/TM-FM-WHT/TM-FM-WHT_engraved.png",
@@ -179,6 +181,7 @@ export const fomaProducts: Product[] = [
     name: "40 oz. Tumbler with Handle & Straw – Cream",
     sku: "TM-FM-CRM",
     size: "40oz · 12 × 6 in",
+    engravingArea: "70 × 100 mm",
     basePrice: 12.99,
     image: "/products/TM-FM-CRM/TM-FM-CRM_engraved.png",
     imageFull: "/products/TM-FM-CRM/TM-FM-CRM_engraved.png",
@@ -211,6 +214,7 @@ export const fomaProducts: Product[] = [
     name: "40 oz. Tumbler with Handle & Straw – Charcoal",
     sku: "TM-FM-CHA",
     size: "40oz · 12 × 6 in",
+    engravingArea: "70 × 100 mm",
     basePrice: 12.99,
     image: "/products/TM-FM-CHA/TM-FM-CHA_engraved.png",
     imageFull: "/products/TM-FM-CHA/TM-FM-CHA_engraved.png",
@@ -243,6 +247,7 @@ export const fomaProducts: Product[] = [
     name: "40 oz. Tumbler with Handle & Straw – Fog",
     sku: "TM-FM-FOG",
     size: "40oz · 12 × 6 in",
+    engravingArea: "70 × 100 mm",
     basePrice: 12.99,
     image: "/products/TM-FM-FOG/TM-FM-FOG_engraved.png",
     imageFull: "/products/TM-FM-FOG/TM-FM-FOG_engraved.png",
@@ -275,6 +280,7 @@ export const fomaProducts: Product[] = [
     name: "40 oz. Tumbler with Handle & Straw – Azure",
     sku: "TM-FM-AZR",
     size: "40oz · 12 × 6 in",
+    engravingArea: "70 × 100 mm",
     basePrice: 12.99,
     image: "/products/TM-FM-AZR/TM-FM-AZR_engraved.png",
     imageFull: "/products/TM-FM-AZR/TM-FM-AZR_engraved.png",
@@ -307,6 +313,7 @@ export const fomaProducts: Product[] = [
     name: "40 oz. Tumbler with Handle & Straw – Eucalyptus",
     sku: "TM-FM-EUC",
     size: "40oz · 12 × 6 in",
+    engravingArea: "70 × 100 mm",
     basePrice: 12.99,
     image: "/products/TM-FM-EUC/TM-FM-EUC_engraved.png",
     imageFull: "/products/TM-FM-EUC/TM-FM-EUC_engraved.png",
@@ -339,6 +346,7 @@ export const fomaProducts: Product[] = [
     name: "40 oz. Tumbler with Handle & Straw – Bay Leaf",
     sku: "TM-FM-BAY",
     size: "40oz · 12 × 6 in",
+    engravingArea: "70 × 100 mm",
     basePrice: 12.99,
     image: "/products/TM-FM-BAY/TM-FM-BAY_engraved.png",
     imageFull: "/products/TM-FM-BAY/TM-FM-BAY_engraved.png",
@@ -371,6 +379,7 @@ export const fomaProducts: Product[] = [
     name: "40 oz. Tumbler with Handle & Straw – Lilac",
     sku: "TM-FM-LIL",
     size: "40oz · 12 × 6 in",
+    engravingArea: "70 × 100 mm",
     basePrice: 12.99,
     image: "/products/TM-FM-LIL/TM-FM-LIL_engraved.png",
     imageFull: "/products/TM-FM-LIL/TM-FM-LIL_engraved.png",
@@ -403,6 +412,7 @@ export const fomaProducts: Product[] = [
     name: "40 oz. Tumbler with Handle & Straw – Hot Pink",
     sku: "TM-FM-HPK",
     size: "40oz · 12 × 6 in",
+    engravingArea: "70 × 100 mm",
     basePrice: 12.99,
     image: "/products/TM-FM-HPK/TM-FM-HPK_engraved.png",
     imageFull: "/products/TM-FM-HPK/TM-FM-HPK_engraved.png",
@@ -435,6 +445,7 @@ export const fomaProducts: Product[] = [
     name: "40 oz. Tumbler with Handle & Straw – Rose",
     sku: "TM-FM-ROS",
     size: "40oz · 12 × 6 in",
+    engravingArea: "70 × 100 mm",
     basePrice: 12.99,
     image: "/products/TM-FM-ROS/TM-FM-ROS_engraved.png",
     imageFull: "/products/TM-FM-ROS/TM-FM-ROS_engraved.png",
@@ -467,6 +478,7 @@ export const fomaProducts: Product[] = [
     name: "40 oz. Tumbler with Handle & Straw – Forest",
     sku: "TM-FM-FRS",
     size: "40oz · 12 × 6 in",
+    engravingArea: "70 × 100 mm",
     basePrice: 12.99,
     image: "/products/TM-FM-FRS/TM-FM-FRS_engraved.png",
     imageFull: "/products/TM-FM-FRS/TM-FM-FRS_engraved.png",
@@ -499,6 +511,7 @@ export const fomaProducts: Product[] = [
     name: "Marble Charcuterie Board - 11 Piece Set",
     sku: "FM-CHAR-MARB-11",
     size: "16.25 × 12 × 0.5 in · 11-piece set",
+    engravingArea: "225 × 75 mm",
     // Wholesale reference price from the MakerFlo single-unit listing; hidden
     // from buyers (B2B pricing is gated behind "Add to quote"). Confirm the
     // real wholesale number with the user before relying on it internally.
@@ -555,6 +568,7 @@ export const fomaProducts: Product[] = [
     name: "Marble Serving Board Set - 5 Piece Set with Handle",
     sku: "FM-SERV-MARB-5",
     size: "15.5 × 9 × 0.5 in · 5-piece set",
+    engravingArea: "100 × 300 mm",
     // Wholesale reference price from the MakerFlo single-unit listing; hidden
     // from buyers (B2B pricing is gated behind "Add to quote"). Confirm the
     // real wholesale number with the user before relying on it internally.
@@ -614,6 +628,7 @@ export const fomaProducts: Product[] = [
     name: "BBQ Grill Set with Case",
     sku: "FM-BBQ-11",
     size: "18 × 6.25 × 3 in · 11-piece set",
+    engravingArea: "145 × 100 mm",
     // Wholesale reference price from the MakerFlo single-unit listing; hidden
     // from buyers (B2B pricing is gated behind "Add to quote"). Confirm the
     // real wholesale number with the user before relying on it internally.
@@ -784,6 +799,7 @@ export const fomaProducts: Product[] = [
     name: "Bamboo Charcuterie Board – 16 × 11 × 1 in",
     sku: "FM-CHAR-BMB-1611",
     size: "16 × 11 × 1 in",
+    engravingArea: "100 × 100 mm",
     // FOMA's own Amazon listing retails at $23.95. basePrice here is a hidden
     // reference (B2B pricing is gated behind "Add to quote").
     basePrice: 23.95,

@@ -53,28 +53,34 @@
     "engrave_mm": null,
     "fallback_weight_lb": 1.5
   },
+  "DC301S": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "57 × 101 mm",
+    "fallback_weight_lb": null
+  },
   "DS10": {
     "type": "Desk Name Wedge 10",
     "dim_in": "10 × 2 × 2 in",
-    "engrave_mm": null,
+    "engrave_mm": "200 × 40 mm",
     "fallback_weight_lb": null
   },
   "DS12": {
     "type": "Desk Name Wedge 12",
     "dim_in": "12 × 2 × 2 in",
-    "engrave_mm": null,
+    "engrave_mm": "230 × 40 mm",
     "fallback_weight_lb": null
   },
   "DS20": {
     "type": "Desk Name Wedge 10",
     "dim_in": "10 × 2 × 2 in",
-    "engrave_mm": null,
+    "engrave_mm": "200 × 40 mm",
     "fallback_weight_lb": null
   },
   "DS8": {
     "type": "Desk Name Wedge 8",
     "dim_in": "8 × 2 × 2 in",
-    "engrave_mm": null,
+    "engrave_mm": "170 × 35 mm",
     "fallback_weight_lb": null
   },
   "FM-CHAR-BMB-1611": {
@@ -217,31 +223,31 @@
   },
   "FSK615": {
     "dim_in": "4.5 × 4 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "60 × 60 mm",
     "fallback_weight_lb": 0.5,
     "type": "Flask"
   },
   "FSK616": {
     "dim_in": "4.5 × 4 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "60 × 60 mm",
     "fallback_weight_lb": 0.5,
     "type": "Flask"
   },
   "FSK617A": {
     "dim_in": "4.5 × 4 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "60 × 60 mm",
     "fallback_weight_lb": 0.5,
     "type": "Flask"
   },
   "FSK618": {
     "dim_in": "4.5 × 4 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "60 × 60 mm",
     "fallback_weight_lb": 0.5,
     "type": "Flask"
   },
   "FSK619": {
     "dim_in": "4.5 × 4 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "60 × 60 mm",
     "fallback_weight_lb": 0.5,
     "type": "Flask"
   },
@@ -253,13 +259,13 @@
   },
   "FSK623": {
     "dim_in": "4.5 × 4 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "60 × 60 mm",
     "fallback_weight_lb": 0.5,
     "type": "Flask"
   },
   "FSK624": {
     "dim_in": "4.5 × 4 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "60 × 60 mm",
     "fallback_weight_lb": 0.5,
     "type": "Flask"
   },
@@ -271,7 +277,7 @@
   },
   "FSK627": {
     "dim_in": "4.5 × 4 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "60 × 60 mm",
     "fallback_weight_lb": 0.5,
     "type": "Flask"
   },
@@ -298,6 +304,180 @@
     "engrave_mm": "135 × 85 mm",
     "fallback_weight_lb": null,
     "type": "Cutting Board"
+  },
+  "GFT1001": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "35 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1002": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "35 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1003": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "35 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1004": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "35 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1005": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "35 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1006": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "35 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1007": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "35 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1008": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "35 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1009": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "35 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1010": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "35 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1012": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "35 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1031": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1032": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1033": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1034": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1035": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1036": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1037": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1038": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1039": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1040": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1041": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1042": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1043": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1195": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 85 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1196": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 85 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1197": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 85 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1198": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 85 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT1199": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "75 × 85 mm",
+    "fallback_weight_lb": null
   },
   "GFT1205": {
     "dim_in": "9 × 7 × 1 in",
@@ -397,55 +577,55 @@
   },
   "GFT1235": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
   "GFT1236": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
   "GFT1237": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
   "GFT1238": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
   "GFT1239": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
   "GFT1240": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
   "GFT1241": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
   "GFT1242": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
   "GFT1243": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
@@ -770,7 +950,7 @@
   "GFT2047": {
     "type": "snap up tray 6-6",
     "dim_in": "9 × 9 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "150 × 150 mm",
     "fallback_weight_lb": null
   },
   "GFT2048": {
@@ -860,13 +1040,13 @@
   "GFT2126": {
     "type": "snap up tray 9-9",
     "dim_in": "12 × 12 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "225 × 225 mm",
     "fallback_weight_lb": null
   },
   "GFT2127": {
     "type": "snap up tray 9-9",
     "dim_in": "12 × 12 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "225 × 225 mm",
     "fallback_weight_lb": null
   },
   "GFT213": {
@@ -934,6 +1114,30 @@
     "engrave_mm": "50 × 35 mm",
     "fallback_weight_lb": 0.25,
     "type": "Wallet"
+  },
+  "GFT2145": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "125 × 65 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT2146": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "125 × 65 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT2147": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "125 × 65 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT2148": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "125 × 65 mm",
+    "fallback_weight_lb": null
   },
   "GFT2235": {
     "dim_in": "15.5 × 12 × 1 in",
@@ -1325,6 +1529,24 @@
     "engrave_mm": null,
     "fallback_weight_lb": null
   },
+  "GFT2450": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "85 × 105 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT2451": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "85 × 105 mm",
+    "fallback_weight_lb": null
+  },
+  "GFT2452": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "85 × 105 mm",
+    "fallback_weight_lb": null
+  },
   "GFT245A": {
     "type": "Leather Business Card Holder",
     "dim_in": "4 × 3 × 1 in",
@@ -1427,6 +1649,12 @@
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
+  "GFT286": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "100 × 180 mm",
+    "fallback_weight_lb": null
+  },
   "GFT287A": {
     "dim_in": "15.5 × 12 × 1 in",
     "engrave_mm": "50 × 50 mm",
@@ -1462,6 +1690,12 @@
     "engrave_mm": "50 × 50 mm",
     "fallback_weight_lb": 0.75,
     "type": "Book/Bible Cover"
+  },
+  "GFT298": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "125 × 180 mm",
+    "fallback_weight_lb": null
   },
   "GFT302": {
     "dim_in": "15.5 × 12 × 1 in",
@@ -1576,6 +1810,12 @@
     "engrave_mm": "60 × 181 mm",
     "fallback_weight_lb": 0.912,
     "type": "Portfolio"
+  },
+  "GFT358": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "80 × 80 mm",
+    "fallback_weight_lb": null
   },
   "GFT359": {
     "dim_in": "9 × 7 × 1 in",
@@ -1763,6 +2003,12 @@
     "fallback_weight_lb": null,
     "type": "Cutting Board"
   },
+  "GFT533": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "100 × 25 mm",
+    "fallback_weight_lb": null
+  },
   "GFT604": {
     "type": "Luggage Tags",
     "dim_in": "4 × 3 × 1 in",
@@ -1849,43 +2095,43 @@
   },
   "GFT628": {
     "dim_in": "10 × 10 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "155 × 130 mm",
     "fallback_weight_lb": 0.5,
     "type": "Mouse Pad"
   },
   "GFT631": {
     "dim_in": "10 × 10 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "155 × 130 mm",
     "fallback_weight_lb": 0.5,
     "type": "Mouse Pad"
   },
   "GFT632": {
     "dim_in": "10 × 10 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "155 × 130 mm",
     "fallback_weight_lb": 0.5,
     "type": "Mouse Pad"
   },
   "GFT633": {
     "dim_in": "10 × 10 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "155 × 130 mm",
     "fallback_weight_lb": 0.5,
     "type": "Mouse Pad"
   },
   "GFT634": {
     "type": "Mouse Pad",
     "dim_in": "9 × 10 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "155 × 130 mm",
     "fallback_weight_lb": null
   },
   "GFT638": {
     "dim_in": "10 × 10 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "155 × 130 mm",
     "fallback_weight_lb": 0.5,
     "type": "Mouse Pad"
   },
   "GFT639": {
     "dim_in": "10 × 10 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "155 × 130 mm",
     "fallback_weight_lb": 0.5,
     "type": "Mouse Pad"
   },
@@ -2050,6 +2296,12 @@
     "engrave_mm": null,
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
+  },
+  "GFT726": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "125 × 45 mm",
+    "fallback_weight_lb": null
   },
   "GFT729": {
     "dim_in": "9 × 7 × 1 in",
@@ -2410,6 +2662,12 @@
     "engrave_mm": "30 × 50 mm",
     "fallback_weight_lb": 0.5,
     "type": "Passport"
+  },
+  "GFT941": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "70 × 70 mm",
+    "fallback_weight_lb": null
   },
   "GFT942": {
     "dim_in": "9 × 7 × 1 in",
@@ -2903,6 +3161,96 @@
     "fallback_weight_lb": 0.938,
     "type": "Travel Mug"
   },
+  "LLB101": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "63 × 70 mm",
+    "fallback_weight_lb": null
+  },
+  "LLB102": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "63 × 70 mm",
+    "fallback_weight_lb": null
+  },
+  "LLB103": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "63 × 70 mm",
+    "fallback_weight_lb": null
+  },
+  "LLB104": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "63 × 70 mm",
+    "fallback_weight_lb": null
+  },
+  "LLB105": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "63 × 70 mm",
+    "fallback_weight_lb": null
+  },
+  "LLB125": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "55 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "LLB126": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "55 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "LLB127": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "55 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "LLB128": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "55 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "LLB129": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "55 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "LLB149": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "63 × 70 mm",
+    "fallback_weight_lb": null
+  },
+  "LLB150": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "63 × 70 mm",
+    "fallback_weight_lb": null
+  },
+  "LLB151": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "63 × 70 mm",
+    "fallback_weight_lb": null
+  },
+  "LLB152": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "63 × 70 mm",
+    "fallback_weight_lb": null
+  },
+  "LLB153": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "63 × 70 mm",
+    "fallback_weight_lb": null
+  },
   "LLF1046": {
     "type": "Leather Photo Frame 4*6",
     "dim_in": "6 × 8 × 1 in",
@@ -2912,7 +3260,7 @@
   "LLF1057": {
     "type": "Leather Photo Frame 5*7",
     "dim_in": "7 × 9 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": 1
   },
   "LLF1246": {
@@ -2926,6 +3274,12 @@
     "dim_in": "7 × 9 × 1 in",
     "engrave_mm": null,
     "fallback_weight_lb": 1
+  },
+  "LLF12810": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "180 × 180 mm",
+    "fallback_weight_lb": null
   },
   "LLF146": {
     "type": "Leather Photo Frame 4*6",
@@ -2963,35 +3317,71 @@
     "engrave_mm": null,
     "fallback_weight_lb": 1
   },
+  "LLF16810": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "180 × 180 mm",
+    "fallback_weight_lb": null
+  },
+  "LLF1810": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "180 × 180 mm",
+    "fallback_weight_lb": null
+  },
   "LLF1846": {
     "type": "Leather Photo Frame 4*6",
     "dim_in": "6 × 8 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": 0.8125
+  },
+  "LLF18810": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "180 × 180 mm",
+    "fallback_weight_lb": null
   },
   "LLF1946": {
     "type": "Leather Photo Frame 4*6",
     "dim_in": "6 × 8 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": 0.8125
   },
   "LLF1957": {
     "type": "Leather Photo Frame 5*7",
     "dim_in": "7 × 9 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": 1
+  },
+  "LLF19810": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "180 × 180 mm",
+    "fallback_weight_lb": null
   },
   "LLF246": {
     "type": "Leather Photo Frame 4*6",
     "dim_in": "6 × 8 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": 0.8125
   },
   "LLF257": {
     "type": "Leather Photo Frame 5*7",
     "dim_in": "7 × 9 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": 1
+  },
+  "LLF2810": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "180 × 180 mm",
+    "fallback_weight_lb": null
+  },
+  "LLF3810A": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "180 × 180 mm",
+    "fallback_weight_lb": null
   },
   "LLF446": {
     "type": "Leather Photo Frame 4*6",
@@ -3005,6 +3395,12 @@
     "engrave_mm": null,
     "fallback_weight_lb": 1
   },
+  "LLF4810": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "180 × 180 mm",
+    "fallback_weight_lb": null
+  },
   "LLF546": {
     "type": "Leather Photo Frame 4*6",
     "dim_in": "6 × 8 × 1 in",
@@ -3017,6 +3413,12 @@
     "engrave_mm": null,
     "fallback_weight_lb": 1
   },
+  "LLF5810": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "180 × 180 mm",
+    "fallback_weight_lb": null
+  },
   "LLF946": {
     "type": "Leather Photo Frame 4*6",
     "dim_in": "6 × 8 × 1 in",
@@ -3028,6 +3430,12 @@
     "dim_in": "7 × 9 × 1 in",
     "engrave_mm": null,
     "fallback_weight_lb": 1
+  },
+  "LLF9810": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "180 × 180 mm",
+    "fallback_weight_lb": null
   },
   "LLW3210A": {
     "type": "Desk Name Wedge 10",
@@ -3545,6 +3953,42 @@
     "fallback_weight_lb": 0.938,
     "type": "20 oz Tumbler"
   },
+  "LTM7230": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "55 × 70 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM7231": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "55 × 70 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM7232": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "55 × 70 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM7233": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "55 × 70 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM7234": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "55 × 70 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM7235": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "55 × 70 mm",
+    "fallback_weight_lb": null
+  },
   "LTM7280": {
     "dim_in": "8 × 4 × 4 in",
     "engrave_mm": "90 × 60 mm",
@@ -4001,11 +4445,35 @@
     "fallback_weight_lb": 0.5,
     "type": "Stemless Tumbler"
   },
+  "LTM830": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "55 × 70 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM831": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "55 × 70 mm",
+    "fallback_weight_lb": null
+  },
   "LTM832": {
     "dim_in": "8 × 4 × 4 in",
     "engrave_mm": "90 × 60 mm",
     "fallback_weight_lb": 0.938,
     "type": "Sport Tumbler"
+  },
+  "LTM833": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "55 × 70 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM834": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "55 × 70 mm",
+    "fallback_weight_lb": null
   },
   "LTM835": {
     "dim_in": "8 × 4 × 4 in",
@@ -4024,6 +4492,12 @@
     "engrave_mm": "90 × 60 mm",
     "fallback_weight_lb": 0.938,
     "type": "Sport Tumbler"
+  },
+  "LTM838": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "55 × 70 mm",
+    "fallback_weight_lb": null
   },
   "LTM852": {
     "dim_in": "4.5 × 3.5 × 3.5 in",
@@ -4156,6 +4630,198 @@
     "engrave_mm": "38.1 × 44.5 mm",
     "fallback_weight_lb": 0.5,
     "type": "Wine Tumbler"
+  },
+  "LTM942": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "50 × 60 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM943": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "50 × 60 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM944": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "50 × 60 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM945": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "50 × 60 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM946": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "50 × 60 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM947": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "50 × 60 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM948": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "50 × 60 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM949": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "50 × 60 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM950": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "50 × 60 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM951": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "50 × 60 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM952": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "50 × 60 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM953": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "50 × 60 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM954": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "50 × 60 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM955": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "50 × 60 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM956": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "50 × 60 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM957": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "50 × 60 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM972": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "57 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM973": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "57 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM974": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "57 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM975": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "57 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM976": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "57 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM977": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "57 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM978": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "57 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM979": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "57 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM980": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "57 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM981": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "57 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM982": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "57 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM983": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "57 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM984": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "57 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM985": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "57 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM986": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "57 × 58 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM987": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "57 × 58 mm",
+    "fallback_weight_lb": null
   },
   "LWB052": {
     "dim_in": "8 × 3 × 3 in",
@@ -4601,6 +5267,18 @@
     "fallback_weight_lb": 0.875,
     "type": "40 oz Water Bottle"
   },
+  "PCG100": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "25 × 25 mm",
+    "fallback_weight_lb": null
+  },
+  "PCG101": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "25 × 25 mm",
+    "fallback_weight_lb": null
+  },
   "PCG105": {
     "type": "Stemless Wine Glass 9",
     "dim_in": "5 × 5 × 5 in",
@@ -4610,6 +5288,12 @@
   "PCG106": {
     "type": "Stemless Wine Glass 15",
     "dim_in": "5 × 5 × 5 in",
+    "engrave_mm": "50 × 50 mm",
+    "fallback_weight_lb": null
+  },
+  "PCG107": {
+    "type": "",
+    "dim_in": null,
     "engrave_mm": "50 × 50 mm",
     "fallback_weight_lb": null
   },
@@ -4665,6 +5349,12 @@
     "type": "BEER MUG 14OZ",
     "dim_in": "7 × 5 × 5 in",
     "engrave_mm": "80 × 55 mm",
+    "fallback_weight_lb": null
+  },
+  "PCG213": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "50 × 50 mm",
     "fallback_weight_lb": null
   },
   "PCG300": {
@@ -4784,13 +5474,13 @@
   "RA210": {
     "type": "Desk Name Wedge 10",
     "dim_in": "10 × 2 × 2 in",
-    "engrave_mm": null,
+    "engrave_mm": "200 × 40 mm",
     "fallback_weight_lb": null
   },
   "RA28": {
     "type": "Desk Name Wedge 8",
     "dim_in": "8 × 2 × 2 in",
-    "engrave_mm": null,
+    "engrave_mm": "170 × 35 mm",
     "fallback_weight_lb": null
   },
   "SLT087": {
