@@ -8,7 +8,7 @@
   "ADW10CL": {
     "type": "Desk Name Wedge 10",
     "dim_in": "10 × 2 × 2 in",
-    "engrave_mm": null,
+    "engrave_mm": "200 × 40 mm",
     "fallback_weight_lb": null
   },
   "ADW8BK": {
@@ -97,7 +97,7 @@
   },
   "FSK304": {
     "dim_in": "4.5 × 4 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "60 × 60 mm",
     "fallback_weight_lb": 0.5,
     "type": "Flask"
   },
@@ -115,7 +115,7 @@
   },
   "FSK310": {
     "dim_in": "4.5 × 4 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "60 × 60 mm",
     "fallback_weight_lb": 0.5,
     "type": "Flask"
   },
@@ -825,6 +825,12 @@
     "type": "Leather Business Card Holder",
     "dim_in": "4 × 3 × 1 in",
     "engrave_mm": null,
+    "fallback_weight_lb": null
+  },
+  "GFT185": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "60 × 181 mm",
     "fallback_weight_lb": null
   },
   "GFT186": {
@@ -1553,6 +1559,12 @@
     "engrave_mm": null,
     "fallback_weight_lb": null
   },
+  "GFT246A": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "60 × 181 mm",
+    "fallback_weight_lb": null
+  },
   "GFT248A": {
     "dim_in": "9 × 7 × 1 in",
     "engrave_mm": "50 × 35 mm",
@@ -1585,7 +1597,7 @@
   },
   "GFT260A": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
@@ -1621,13 +1633,13 @@
   },
   "GFT271": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
   "GFT272": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
@@ -1639,13 +1651,13 @@
   },
   "GFT283": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
   "GFT284": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
@@ -1939,13 +1951,13 @@
   },
   "GFT405": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
   "GFT409": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
@@ -2255,6 +2267,12 @@
     "engrave_mm": null,
     "fallback_weight_lb": null
   },
+  "GFT706": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "60 × 181 mm",
+    "fallback_weight_lb": null
+  },
   "GFT708": {
     "dim_in": "9 × 7 × 1 in",
     "engrave_mm": "50 × 35 mm",
@@ -2287,13 +2305,13 @@
   },
   "GFT720": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
   "GFT721": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
@@ -2395,13 +2413,13 @@
   },
   "GFT835": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
   "GFT836": {
     "dim_in": "4 × 4 × 0.5 in",
-    "engrave_mm": null,
+    "engrave_mm": "102 × 102 mm",
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
@@ -3266,13 +3284,13 @@
   "LLF1246": {
     "type": "Leather Photo Frame 4*6",
     "dim_in": "6 × 8 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": 0.8125
   },
   "LLF1257": {
     "type": "Leather Photo Frame 5*7",
     "dim_in": "7 × 9 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": 1
   },
   "LLF12810": {
@@ -3284,7 +3302,7 @@
   "LLF146": {
     "type": "Leather Photo Frame 4*6",
     "dim_in": "6 × 8 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": 0.8125
   },
   "LLF1546": {
@@ -3302,19 +3320,19 @@
   "LLF157": {
     "type": "Leather Photo Frame 5*7",
     "dim_in": "7 × 9 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": null
   },
   "LLF1646": {
     "type": "Leather Photo Frame 4*6",
     "dim_in": "6 × 8 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": 0.8125
   },
   "LLF1657": {
     "type": "Leather Photo Frame 5*7",
     "dim_in": "7 × 9 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": 1
   },
   "LLF16810": {
@@ -3386,13 +3404,13 @@
   "LLF446": {
     "type": "Leather Photo Frame 4*6",
     "dim_in": "6 × 8 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": 0.8125
   },
   "LLF457": {
     "type": "Leather Photo Frame 5*7",
     "dim_in": "7 × 9 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": 1
   },
   "LLF4810": {
@@ -3404,13 +3422,13 @@
   "LLF546": {
     "type": "Leather Photo Frame 4*6",
     "dim_in": "6 × 8 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": 0.8125
   },
   "LLF557": {
     "type": "Leather Photo Frame 5*7",
     "dim_in": "7 × 9 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": 1
   },
   "LLF5810": {
@@ -3422,13 +3440,13 @@
   "LLF946": {
     "type": "Leather Photo Frame 4*6",
     "dim_in": "6 × 8 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": 0.8125
   },
   "LLF957": {
     "type": "Leather Photo Frame 5*7",
     "dim_in": "7 × 9 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "180 × 180 mm",
     "fallback_weight_lb": 1
   },
   "LLF9810": {
@@ -3987,6 +4005,18 @@
     "type": "",
     "dim_in": null,
     "engrave_mm": "55 × 70 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM7278": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "90 × 60 mm",
+    "fallback_weight_lb": null
+  },
+  "LTM7279": {
+    "type": "",
+    "dim_in": null,
+    "engrave_mm": "90 × 60 mm",
     "fallback_weight_lb": null
   },
   "LTM7280": {
@@ -5390,37 +5420,37 @@
   "PNA210": {
     "type": "Desk Name Wedge 10",
     "dim_in": "10 × 2 × 2 in",
-    "engrave_mm": null,
+    "engrave_mm": "200 × 40 mm",
     "fallback_weight_lb": null
   },
   "PNA28": {
     "type": "Desk Name Wedge 8",
     "dim_in": "8 × 2 × 2 in",
-    "engrave_mm": null,
+    "engrave_mm": "170 × 35 mm",
     "fallback_weight_lb": null
   },
   "PNA410": {
     "type": "Desk Name Wedge 10",
     "dim_in": "10 × 2 × 2 in",
-    "engrave_mm": null,
+    "engrave_mm": "200 × 40 mm",
     "fallback_weight_lb": null
   },
   "PNA48": {
     "type": "Desk Name Wedge 8",
     "dim_in": "8 × 2 × 2 in",
-    "engrave_mm": null,
+    "engrave_mm": "170 × 35 mm",
     "fallback_weight_lb": null
   },
   "PNB210": {
     "type": "Desk Name Wedge 10",
     "dim_in": "10 × 2 × 2 in",
-    "engrave_mm": null,
+    "engrave_mm": "200 × 40 mm",
     "fallback_weight_lb": null
   },
   "PNB28": {
     "type": "Desk Name Wedge 8",
     "dim_in": "8 × 2 × 2 in",
-    "engrave_mm": null,
+    "engrave_mm": "170 × 35 mm",
     "fallback_weight_lb": null
   },
   "PTF146": {
@@ -5462,13 +5492,13 @@
   "PTF546": {
     "type": "Wooden Photo Frame 4*6",
     "dim_in": "6 × 8 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "114 × 203 mm",
     "fallback_weight_lb": null
   },
   "PTF557": {
     "type": "Wooden Photo Frame 5*7",
     "dim_in": "7 × 9 × 1 in",
-    "engrave_mm": null,
+    "engrave_mm": "113 × 230 mm",
     "fallback_weight_lb": null
   },
   "RA210": {
