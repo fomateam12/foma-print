@@ -25,7 +25,10 @@ import {
   faqJsonLd,
   itemListJsonLd,
 } from "@/lib/seo";
-import { editorialFor } from "@/data/category-editorial";
+import {
+  editorialFor,
+  editorialMetaDescription,
+} from "@/data/category-editorial";
 import { CategoryEditorial } from "@/components/category-editorial";
 import { JsonLd } from "@/components/json-ld";
 
@@ -46,12 +49,17 @@ export async function generateMetadata({
 
   const name = categoryName(category.name, lang);
   const blurb = categoryBlurb(category.name, category.blurb, lang);
+  // Prefer the hand-written opening over the one-line catalog blurb: it is
+  // specific to this category and reads as a snippet rather than a label.
+  const editorial = editorialFor(category.slug, lang);
+  const description =
+    (editorial && editorialMetaDescription(editorial)) ?? blurb;
 
   return {
     title: name,
-    description: blurb,
+    description,
     alternates: alternatesFor(`/category/${category.slug}`, lang),
-    openGraph: { title: `${name} · FomaPrint`, description: blurb },
+    openGraph: { title: `${name} · FomaPrint`, description },
   };
 }
 
