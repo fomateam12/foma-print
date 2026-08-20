@@ -27,7 +27,7 @@ _Son güncelleme: 2026-08-20 (Claude) — son iş: SEO içerik katmanı (editory
 - node/gh PATH dışında; npm `--use-system-ca` ister; curl `--ssl-no-revoke` ister.
 
 ## Sırada / açık işler
-- **SEO içerik katmanı** dalda hazır (`claude/seo-kategori-icerik`), merge bekliyor. Kapsam: mükerrer ürün başlıkları (128→0), 8 kategori + 17 koleksiyona elle yazılmış metin + SSS (EN/TR), `/guides` bölümü (5 yazı EN/TR), BreadcrumbList/ItemList/FAQPage/Article şemaları. Kalan: 42 koleksiyonun metni yazılmadı — karşılığı olmayan slug hiç blok basmaz, yani eksiklik görünmez ama sıralamaz.
+- **SEO içerik katmanı CANLIDA** (PR #75 + #76, 20 Ağu). Mükerrer ürün başlıkları 128→0; 8 kategori + **59/59 koleksiyona** elle yazılmış metin + SSS (EN/TR); `/guides` bölümü (5 yazı EN/TR); BreadcrumbList/ItemList/FAQPage/Article şemaları; koleksiyon meta açıklamaları üretilmiş cümle yerine editoryal metinden. Sitemap 2.648→2.660. Kalan iş kodda değil, dış otoritede (GBP, Bing, backlink) — operatörde.
 - LZB ürünü Shopify tarafında DRAFT, fiyat onayı bekliyor (dağıtım boru hattı: FomaHub master → fomaprint + Shopify, ItemAsset kanal-özel görsel tablosu kuruldu).
 
 ## Çift dillilik (28 Tem 2026 — CANLI)

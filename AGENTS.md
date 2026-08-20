@@ -317,3 +317,18 @@ yazmadan önce node_modules/next/dist/docs/ oku) + Tailwind.
   sahibi kim ise o commit'lesin.
 - Kalan iş: 42 koleksiyonun editoryal metni; dış otorite (GBP, Bing Webmaster,
   dizinler) operatör tarafında.
+
+## Gündüz durumu — 2026-08-20 (SEO, ikinci tur)
+
+- PR #75 ve #76 merge edildi, prod'da doğrulandı. Kapsam artık tam:
+  8 kategori + **59/59 koleksiyon** editoryal metin + SSS (EN/TR),
+  `/guides` (5 yazı EN/TR), mükerrer ürün başlıkları 128→0, sitemap 2.660 URL.
+- Ek olarak koleksiyon meta açıklamaları düzeltildi: 59×2 sayfa tek bir
+  üretilmiş cümleyi paylaşıyordu, artık editoryal metnin açılışı basılıyor.
+  `editorialMetaDescription`'ın ilk sürümü açılış cümlesi 155 karakteri
+  aştığında `undefined` dönüyordu ve üretilmiş cümle yerinde kalıyordu —
+  yerelde yakalandı, kelime sınırında kesme eklendi. **Ders: meta değişikliği
+  canlıya bakmadan "yapıldı" sayılmaz.**
+- Kod tarafında SEO işi bitti. Kalan tamamen dışarıda: Google Business Profile,
+  Bing Webmaster, Amazon/Etsy profil linkleri, LinkedIn. Ölçüm noktası
+  GSC > Pages "Crawled – currently not indexed" sayısı.
