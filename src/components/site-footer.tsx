@@ -24,6 +24,7 @@ export function SiteFooter({
     { label: dict.footer.pricing, href: "/pricing" },
     { label: dict.footer.applyToSell, href: "/sell" },
     { label: dict.footer.requestQuote, href: "/quote" },
+    { label: dict.footer.guides, href: "/guides" },
   ];
 
   const companyLinks = [
