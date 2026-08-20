@@ -1,6 +1,9 @@
 import type { Locale } from "@/lib/i18n";
 import { CATEGORY_COPY } from "@/data/editorial/categories";
 import { COLLECTION_COPY } from "@/data/editorial/collections";
+import { DRINKWARE_COLLECTION_COPY } from "@/data/editorial/collections-drinkware";
+import { OFFICE_PERSONAL_COLLECTION_COPY } from "@/data/editorial/collections-office-personal";
+import { HOME_GIFT_COLLECTION_COPY } from "@/data/editorial/collections-home-gift";
 
 export interface EditorialFaq {
   q: string;
@@ -37,6 +40,9 @@ export type EditorialEntry = Record<Locale, EditorialCopy>;
 export const CATEGORY_EDITORIAL: Record<string, EditorialEntry> = {
   ...CATEGORY_COPY,
   ...COLLECTION_COPY,
+  ...DRINKWARE_COLLECTION_COPY,
+  ...OFFICE_PERSONAL_COLLECTION_COPY,
+  ...HOME_GIFT_COLLECTION_COPY,
 };
 
 /** Look up copy for a category (`slug`) or a collection (`slug/subSlug`). */
@@ -45,4 +51,44 @@ export function editorialFor(
   locale: Locale,
 ): EditorialCopy | undefined {
   return CATEGORY_EDITORIAL[key]?.[locale];
+}
+
+/**
+ * Meta description for a page that has editorial copy.
+ *
+ * The collection pages all shared one generated sentence ("Shop N
+ * personalized X — laser-engraved to order …"), which differed only by a
+ * count and a noun across 118 pages. Where hand-written copy exists, its
+ * opening sentences are a far better snippet: they are specific, they read
+ * as prose, and they are already about the thing the searcher asked for.
+ *
+ * Prefers whole sentences under `limit`; when the opening sentence alone is
+ * longer than that (common — these are written as prose, not as snippets) it
+ * cuts on a word boundary rather than giving up and letting the generated
+ * line win.
+ */
+export function editorialMetaDescription(
+  copy: EditorialCopy,
+  limit = 165,
+): string | undefined {
+  const text = copy.intro[0]?.trim();
+  if (!text) return undefined;
+  if (text.length <= limit) return text;
+
+  // Whole sentences first — a snippet that ends on a full stop reads best.
+  const sentences = text.split(/(?<=[.!?])\s+/);
+  let out = "";
+  for (const sentence of sentences) {
+    const next = out ? `${out} ${sentence}` : sentence;
+    if (next.length > limit) break;
+    out = next;
+  }
+  if (out) return out;
+
+  // A single opening sentence longer than the limit (common — these are
+  // written as prose, not as snippets). Cut on a word boundary rather than
+  // returning nothing and falling back to the generated line.
+  const cut = text.slice(0, limit);
+  const lastSpace = cut.lastIndexOf(" ");
+  return `${cut.slice(0, lastSpace > 0 ? lastSpace : limit).replace(/[,;:—-]$/, "")}…`;
 }

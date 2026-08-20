@@ -25,7 +25,10 @@ import { getDictionary } from "@/lib/dictionaries";
 import { LOCALES, isLocale } from "@/lib/i18n";
 import { categoryName, subcategoryName } from "@/lib/catalog-i18n";
 import { alternatesFor, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
-import { editorialFor } from "@/data/category-editorial";
+import {
+  editorialFor,
+  editorialMetaDescription,
+} from "@/data/category-editorial";
 import { CategoryEditorial } from "@/components/category-editorial";
 import { JsonLd } from "@/components/json-ld";
 
@@ -59,9 +62,15 @@ export async function generateMetadata({
   const { category, subcategory } = found;
 
   const subName = subcategoryName(subcategory.name, lang);
-  const description = dict.subcategory.metaDescription
-    .replace("{count}", String(subcategory.productCount))
-    .replace("{collection}", subName.toLocaleLowerCase(lang));
+  // The generated "Shop N personalized X …" line was one sentence shared by
+  // every collection page. Where hand-written copy exists, its opening is the
+  // better snippet; the generated line stays as the fallback.
+  const editorial = editorialFor(`${category.slug}/${subcategory.slug}`, lang);
+  const description =
+    (editorial && editorialMetaDescription(editorial)) ??
+    dict.subcategory.metaDescription
+      .replace("{count}", String(subcategory.productCount))
+      .replace("{collection}", subName.toLocaleLowerCase(lang));
 
   return {
     title: `${subName} — ${categoryName(category.name, lang)}`,
