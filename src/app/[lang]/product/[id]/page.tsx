@@ -36,7 +36,9 @@ import {
   subcategoryName,
 } from "@/lib/catalog-i18n";
 import { productCopy } from "@/lib/product-copy";
-import { alternatesFor } from "@/lib/seo";
+import { alternatesFor, breadcrumbJsonLd } from "@/lib/seo";
+import { productSeoTitle } from "@/lib/product-title";
+import { JsonLd } from "@/components/json-ld";
 
 /**
  * ISR window. Catalog data is updated occasionally (supplier scrape, manual
@@ -78,13 +80,16 @@ export async function generateMetadata({
   const name = productName(product.sku, product.name, lang);
   const { description } = productCopy(product, name, dict, lang);
   const ogImage = cloudinary(product.image, { width: 1200 });
+  // Sizes share a name in the supplier feed — the title carries the size so
+  // sibling SKUs are not duplicate results. See lib/product-title.ts.
+  const seoTitle = productSeoTitle(product, name, lang);
 
   return {
-    title: name,
+    title: seoTitle,
     description,
     alternates: alternatesFor(`/product/${product.id}`, lang),
     openGraph: {
-      title: `${name} · FomaPrint`,
+      title: `${seoTitle} · FomaPrint`,
       description,
       images: [{ url: ogImage, width: 1200, height: 1200, alt: name }],
     },
@@ -133,15 +138,27 @@ export default async function ProductPage({
     },
   };
 
+  const crumbJsonLd = breadcrumbJsonLd(
+    [
+      { name: dict.common.home, path: "/" },
+      { name: dict.categories.breadcrumb, path: "/categories" },
+      {
+        name: categoryName(product.categoryName, lang),
+        path: `/category/${product.categorySlug}`,
+      },
+      {
+        name: subName,
+        path: `/category/${product.categorySlug}/${product.subcategorySlug}`,
+      },
+      { name },
+    ],
+    lang,
+  );
+
   return (
     <div className="container-px py-10 lg:py-14">
-      <script
-        type="application/ld+json"
-        // Escape `<` so catalog text can never break out of the script tag.
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
-        }}
-      />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={crumbJsonLd} />
 
       <Breadcrumbs
         items={[

@@ -61,6 +61,7 @@ export function HeaderNav({
     { label: dict.header.howItWorks, href: "/how-it-works" },
     { label: dict.header.shipping, href: "/shipping" },
     { label: dict.header.faq, href: "/faq" },
+    { label: dict.header.guides, href: "/guides" },
   ];
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);

@@ -295,3 +295,25 @@ yazmadan önce node_modules/next/dist/docs/ oku) + Tailwind.
     export + JSON parse logging gap'i fix'lendi (#33, #34); TODO debt 0.
 - **Failed ticks**: 0 · **Build green at every checkpoint**: ✓ · **Cron
   job `fcbfcbe7`**: CronDelete ile durduruldu, loop done.
+
+## Gündüz durumu — 2026-08-20 (SEO içerik katmanı)
+
+- Dal: `claude/seo-kategori-icerik`, tek commit `1f088ba`. Push/merge YAPILMADI —
+  gündüz deploy yasağı, operatör onayı bekliyor.
+- Teşhis: teknik SEO zaten temizdi (robots, 2.648 URL'lik sitemap, canonical,
+  head'de hreflang, Product şeması). Sorun içerikti: 2.492/2.648 URL şablon
+  üretimi ürün sayfası, canlı katalogda 128 SKU başka bir SKU'yla aynı
+  `<title>` taşıyordu ve sitede tek bir bilgi sayfası yoktu.
+- Yapılan: (1) `lib/product-title.ts` — başlığa ölçü, isim+ölçü ikizlerinde SKU;
+  128→0 doğrulandı. (2) `data/editorial/{categories,collections}.ts` — 8 kategori
+  + 17 koleksiyon, EN/TR elle yazılmış metin + SSS; karşılığı olmayan slug hiç
+  blok basmaz (şablon metin bilinçli olarak yok). (3) `/guides` — 5 yazı EN/TR,
+  Article + FAQPage şeması, sitemap + header + footer bağı.
+- Gate'ler: `tsc --noEmit` temiz, `npm run lint` 0 hata (4 mevcut uyarı),
+  `npm run build` yeşil (583 statik sayfa), yerel sunucuda iki dilde sayfa +
+  şema doğrulaması yapıldı.
+- Dikkat: `src/data/printify-prices.json` oturum sırasında dışarıdan değişti
+  (7 SKU'da blank 39.95→36.00). Commit'e KATILMADI, çalışma ağacında duruyor —
+  sahibi kim ise o commit'lesin.
+- Kalan iş: 42 koleksiyonun editoryal metni; dış otorite (GBP, Bing Webmaster,
+  dizinler) operatör tarafında.

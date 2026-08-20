@@ -2,7 +2,7 @@
 
 > **Bu dosya ne?** İnsan + yapay zekâ asistanları (Claude Code, ChatGPT) arasındaki ortak durum dosyası. Bir asistana iş verirken bu dosyayı ver; iş bitince güncellenip commit'lenir. "KİLİTLİ KARARLAR" tartışmaya kapalıdır.
 
-_Son güncelleme: 2026-07-27 (Claude) — son iş: 21 Tem SEO/GSC düzeltmesi_
+_Son güncelleme: 2026-08-20 (Claude) — son iş: SEO içerik katmanı (editoryal metin + /guides + mükerrer başlık)_
 
 ## Proje kimliği
 - Next.js vitrin sitesi, **CANLI**: www.fomaprint.com (Vercel, main → prod auto-deploy; rollback = git revert).
@@ -27,6 +27,7 @@ _Son güncelleme: 2026-07-27 (Claude) — son iş: 21 Tem SEO/GSC düzeltmesi_
 - node/gh PATH dışında; npm `--use-system-ca` ister; curl `--ssl-no-revoke` ister.
 
 ## Sırada / açık işler
+- **SEO içerik katmanı** dalda hazır (`claude/seo-kategori-icerik`), merge bekliyor. Kapsam: mükerrer ürün başlıkları (128→0), 8 kategori + 17 koleksiyona elle yazılmış metin + SSS (EN/TR), `/guides` bölümü (5 yazı EN/TR), BreadcrumbList/ItemList/FAQPage/Article şemaları. Kalan: 42 koleksiyonun metni yazılmadı — karşılığı olmayan slug hiç blok basmaz, yani eksiklik görünmez ama sıralamaz.
 - LZB ürünü Shopify tarafında DRAFT, fiyat onayı bekliyor (dağıtım boru hattı: FomaHub master → fomaprint + Shopify, ItemAsset kanal-özel görsel tablosu kuruldu).
 
 ## Çift dillilik (28 Tem 2026 — CANLI)

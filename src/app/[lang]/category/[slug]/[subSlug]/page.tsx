@@ -24,7 +24,10 @@ import { GROUPED_SUBCATEGORIES } from "@/lib/subcategory-groups";
 import { getDictionary } from "@/lib/dictionaries";
 import { LOCALES, isLocale } from "@/lib/i18n";
 import { categoryName, subcategoryName } from "@/lib/catalog-i18n";
-import { alternatesFor } from "@/lib/seo";
+import { alternatesFor, breadcrumbJsonLd, faqJsonLd } from "@/lib/seo";
+import { editorialFor } from "@/data/category-editorial";
+import { CategoryEditorial } from "@/components/category-editorial";
+import { JsonLd } from "@/components/json-ld";
 
 function asArray(v: string | string[] | undefined): string[] {
   if (Array.isArray(v)) return v;
@@ -128,6 +131,18 @@ export default async function SubcategoryPage({
   const typeGroups = grouped && grouped.groups.length >= 2 ? grouped : null;
 
   const basePath = `/category/${category.slug}/${subcategory.slug}`;
+  // Hand-written prose for this collection, when one has been written.
+  // See src/data/editorial/collections.ts — a missing entry renders nothing.
+  const editorial = editorialFor(`${category.slug}/${subcategory.slug}`, lang);
+  const crumbJsonLd = breadcrumbJsonLd(
+    [
+      { name: dict.common.home, path: "/" },
+      { name: dict.categories.breadcrumb, path: "/categories" },
+      { name: catName, path: `/category/${category.slug}` },
+      { name: subName },
+    ],
+    lang,
+  );
   // Build a query string carrying over the OTHER axis's current selection
   // (sizes when constructing a type-chip link, types when constructing a
   // size-chip link) so the two filters compose instead of clobbering
@@ -145,6 +160,11 @@ export default async function SubcategoryPage({
 
   return (
     <div className="container-px py-10 lg:py-14">
+      <JsonLd data={crumbJsonLd} />
+      {editorial && editorial.faqs.length > 0 ? (
+        <JsonLd data={faqJsonLd(editorial.faqs)} />
+      ) : null}
+
       <Breadcrumbs
         items={[
           { label: dict.common.home, href: "/" },
@@ -320,6 +340,10 @@ export default async function SubcategoryPage({
       ) : (
         <p className="mt-10 text-muted-foreground">{t.empty}</p>
       )}
+
+      {editorial ? (
+        <CategoryEditorial copy={editorial} name={subName} headings={t} />
+      ) : null}
     </div>
   );
 }
