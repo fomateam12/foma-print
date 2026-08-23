@@ -10,6 +10,7 @@
   "Patches": "Patchler"
  },
  "subcategories": {
+  "Wind Chimes": "Rüzgar Çanları",
   "20 oz. Tumblers": "20 oz. Termos Bardaklar",
   "Leatherette Tumblers": "Suni Deri Termos Bardaklar",
   "30 oz. Tumblers": "30 oz. Termos Bardaklar",
@@ -79,6 +80,12 @@
  },
  "sizes": {},
  "products": {
+  "WCH130": "Rüzgar Çanı – 30\" / Siyah",
+  "WCH131": "Rüzgar Çanı – 30\" / Bakır",
+  "WCH132": "Rüzgar Çanı – 30\" / Koyu Tavus Yeşili",
+  "WCH136": "Rüzgar Çanı – 36\" / Siyah",
+  "WCH137": "Rüzgar Çanı – 36\" / Bakır",
+  "WCH138": "Rüzgar Çanı – 36\" / Koyu Tavus Yeşili",
   "556": "Siyah Plakalı Siyah Piyano Cilalı Masa Kartlığı – 9 1/2\"",
   "GFT034": "Bambu Pizza Kesici",
   "GFT160": "Akçaağaç Kesme Tahtası",

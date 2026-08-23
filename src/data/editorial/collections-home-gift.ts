@@ -5,6 +5,59 @@ import type { EditorialEntry } from "@/data/category-editorial";
  * `collections.ts` for the rules these entries follow.
  */
 export const HOME_GIFT_COLLECTION_COPY: Record<string, EditorialEntry> = {
+  "frames-and-decor/wind-chimes": {
+    en: {
+      intro: [
+        "A wind chime is the rare personalized product that lives outdoors and is bought as a housewarming, memorial or anniversary gift rather than an impulse. The engraving surface is the flat aluminum sail hanging under the tubes: 4 inches on the 30\" chime, 5 1/4 inches on the 36\", and it takes laser engraving or UV print on both sides.",
+        "Two lengths and three powder-coated finishes — black, copper and dark peacock green — cover the whole line. The 30\" body carries five 7/8\" tubes, the 36\" carries six 1\" tubes and rings noticeably deeper, which is the difference buyers hear in a video.",
+      ],
+      highlights: [
+        "Housewarming and memorial gifts",
+        "Two-sided sail: engrave a name on one face, a date on the other",
+        "Outdoor-rated powder-coated aluminum",
+      ],
+      faqs: [
+        {
+          q: "Which part of a wind chime is engraved?",
+          a: "The sail — the flat disc that hangs below the tubes and catches the wind. It is 4\" across on the 30\" chime and 5 1/4\" on the 36\", and both faces can be decorated.",
+        },
+        {
+          q: "What is the difference between the 30\" and 36\" chime?",
+          a: "Tube count and tone. The 30\" has five 7/8\" tubes, the 36\" has six 1\" tubes and a deeper, fuller sound. The larger sail also gives more engraving room.",
+        },
+        {
+          q: "Can the sail be replaced if a laser file goes wrong?",
+          a: "Yes — the supplier sells the sail on its own for each length and finish, so a mis-engraved disc does not write off the whole chime.",
+        },
+      ],
+    },
+    tr: {
+      intro: [
+        "Rüzgar çanı, kişiselleştirilebilir ürünler içinde dışarıda yaşayan ve anlık dürtüyle değil; yeni ev, anma ya da yıl dönümü hediyesi olarak alınan ender üründür. Kazıma yüzeyi boruların altında sallanan düz alüminyum yelkendir: 30\" çanda 4 inç, 36\" çanda 5 1/4 inç; her iki yüzü de lazer kazıma veya UV baskı kabul eder.",
+        "İki boy ve üç toz boya rengi — siyah, bakır ve koyu tavus yeşili — hattın tamamını kapsar. 30\" gövdede beş adet 7/8\" boru, 36\" gövdede altı adet 1\" boru vardır; ikincisi belirgin biçimde daha kalın tınlar, videoda duyulan fark budur.",
+      ],
+      highlights: [
+        "Yeni ev ve anma hediyeleri",
+        "Çift yüzlü yelken: bir yüze isim, diğerine tarih",
+        "Dış mekâna uygun toz boyalı alüminyum",
+      ],
+      faqs: [
+        {
+          q: "Rüzgar çanının neresi kazınır?",
+          a: "Yelken — boruların altında asılı duran, rüzgarı tutan düz disk. 30\" çanda 4\", 36\" çanda 5 1/4\" çapındadır ve iki yüzü de işlenebilir.",
+        },
+        {
+          q: "30\" ile 36\" çan arasındaki fark ne?",
+          a: "Boru sayısı ve tını. 30\" beş adet 7/8\" boru taşır; 36\" altı adet 1\" boru taşır ve daha derin, daha dolu ses verir. Büyük yelken ayrıca daha çok kazıma alanı bırakır.",
+        },
+        {
+          q: "Lazer dosyası yanlış giderse yelken değiştirilebilir mi?",
+          a: "Evet — tedarikçi her boy ve renk için yelkeni tek başına satıyor; yanlış kazınan disk yüzünden çanın tamamı çöpe gitmiyor.",
+        },
+      ],
+    },
+  },
+
   "frames-and-decor/photo-frames-small": {
     en: {
       intro: [
