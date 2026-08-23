@@ -703,6 +703,118 @@ const REMOVED_SKUS = new Set<string>([
 ]);
 
 const ADDED_PRODUCTS: RawProduct[] = [
+  // Aluminum wind chimes, WCH130-132 (30") + WCH136-138 (36") — JDS master CSV
+  // + live API, not in the scraped feed. New "Wind Chimes" tile under Frames &
+  // Decor (home/outdoor decor, housewarming gift line); the laserable 4" /
+  // 5 1/4" sail is the engraving surface. subId 135 is the next free id above
+  // everything the file uses today (…130-134 patches, 121-124), which also
+  // leaves 136/137 free for the open PR #66 branch. Images are served from the
+  // supplier's Cloudinary (same as the CRY ornaments) — no R2 write path on
+  // this machine. Prices are JDS lessThanCasePrice, verified live 23 Aug 2026
+  // (the 2026-06 CSV still lists 131/132/137/138 as "Coming Soon" with a 0
+  // price; the API returns 18.85 / 27.45 and 2.6k-3.4k units available).
+  {
+    id: "wch130",
+    name: "30\" Black Powder Coated Aluminum Wind Chime",
+    sku: "WCH130",
+    size: "30\" length",
+    price: 18.85,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1752864911/products/images/large/WCH130--aaaf8549.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1752864911/products/images/large/WCH130--aaaf8549.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "135",
+    subSlug: "wind-chimes",
+    subName: "Wind Chimes",
+  },
+  {
+    id: "wch131",
+    name: "30\" Copper Powder Coated Aluminum Wind Chime",
+    sku: "WCH131",
+    size: "30\" length",
+    price: 18.85,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1780087737/products/images/large/WCH131--46278669.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1780087737/products/images/large/WCH131--46278669.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "135",
+    subSlug: "wind-chimes",
+    subName: "Wind Chimes",
+  },
+  {
+    id: "wch132",
+    name: "30\" Dark Peacock Green Powder Coated Aluminum Wind Chime",
+    sku: "WCH132",
+    size: "30\" length",
+    price: 18.85,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1779396987/products/images/large/WCH132--44471190.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1779396987/products/images/large/WCH132--44471190.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "135",
+    subSlug: "wind-chimes",
+    subName: "Wind Chimes",
+  },
+  {
+    id: "wch136",
+    name: "36\" Black Powder Coated Aluminum Wind Chime",
+    sku: "WCH136",
+    size: "36\" length",
+    price: 27.45,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1752864834/products/images/large/WCH136--9b4caebc.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1752864834/products/images/large/WCH136--9b4caebc.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "135",
+    subSlug: "wind-chimes",
+    subName: "Wind Chimes",
+  },
+  {
+    id: "wch137",
+    name: "36\" Copper Powder Coated Aluminum Wind Chime",
+    sku: "WCH137",
+    size: "36\" length",
+    price: 27.45,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1779397002/products/images/large/WCH137--1aa7f208.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1779397002/products/images/large/WCH137--1aa7f208.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "135",
+    subSlug: "wind-chimes",
+    subName: "Wind Chimes",
+  },
+  {
+    id: "wch138",
+    name: "36\" Dark Peacock Green Powder Coated Aluminum Wind Chime",
+    sku: "WCH138",
+    size: "36\" length",
+    price: 27.45,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1779397015/products/images/large/WCH138--9ebc35ac.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1779397015/products/images/large/WCH138--9ebc35ac.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "135",
+    subSlug: "wind-chimes",
+    subName: "Wind Chimes",
+  },
   // 3 Ring Binder with 1" Slant D Rings, Laserable Leatherette (JDS master
   // CSV, not in the scraped feed). Same family + subcategory as the
   // restored GFT1251-1254/1256/1257 colors. Self-hosted on R2.
@@ -8230,6 +8342,10 @@ const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
     { subId: "134", slug: "hex-patches", name: "Hex Patches", count: 0 },
   ],
   "frames-and-decor": [
+    // Aluminum wind chimes (WCH130-132 / WCH136-138), an ADDED_PRODUCTS line —
+    // the supplier feed has no wind chime anywhere, so this tile is the only
+    // thing that makes them reachable. 135 = next free subId.
+    { subId: "135", slug: "wind-chimes", name: "Wind Chimes", count: 0 },
     { subId: "101", slug: "glass-frames-and-decor", name: "Glass Frames & Decor", count: 0 },
     { subId: "103", slug: "photo-frames-small", name: "Small Photo Frames (4x6)", count: 0 },
     { subId: "104", slug: "photo-frames-medium", name: "Medium Photo Frames (5x7)", count: 0 },
