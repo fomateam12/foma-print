@@ -2,7 +2,7 @@
 
 > **Bu dosya ne?** İnsan + yapay zekâ asistanları (Claude Code, ChatGPT) arasındaki ortak durum dosyası. Bir asistana iş verirken bu dosyayı ver; iş bitince güncellenip commit'lenir. "KİLİTLİ KARARLAR" tartışmaya kapalıdır.
 
-_Son güncelleme: 2026-08-22 (Claude) — son iş: posta kodu + Google İşletme Profili kategori düzeltmesi_
+_Son güncelleme: 2026-08-23 (Claude) — son iş: Bing Webmaster + IndexNow_
 
 ## Proje kimliği
 - Next.js vitrin sitesi, **CANLI**: www.fomaprint.com (Vercel, main → prod auto-deploy; rollback = git revert).
@@ -28,6 +28,7 @@ _Son güncelleme: 2026-08-22 (Claude) — son iş: posta kodu + Google İşletme
 
 ## Sırada / açık işler
 - **SEO içerik katmanı CANLIDA** (PR #75 + #76, 20 Ağu). Mükerrer ürün başlıkları 128→0; 8 kategori + **59/59 koleksiyona** elle yazılmış metin + SSS (EN/TR); `/guides` bölümü (5 yazı EN/TR); BreadcrumbList/ItemList/FAQPage/Article şemaları; koleksiyon meta açıklamaları üretilmiş cümle yerine editoryal metinden. Sitemap 2.648→2.660. Kalan iş kodda değil, dış otoritede (GBP, Bing, backlink) — operatörde.
+- **Bing Webmaster + IndexNow** (23 Ağu): hesap `fomafamilyllc@gmail.com`, doğrulama meta etiketiyle (`msvalidate.01`, layout.tsx — SİLİNMEZ), sitemap gönderildi, IndexNow anahtarı `public/ce405bb903b43bd00bf791a416674a25.txt` (SİLİNMEZ) ve 2.660 URL gönderildi (HTTP 200). Gerekçe: ChatGPT/Copilot Bing indeksinden cevap üretiyor. ⛔ GSC otomatik aktarımı çalışmaz — Search Console farklı hesapta.
 - **Google İşletme Profili** (22 Ağu): kayıt zaten vardı ve doğrulanmıştı — `fomafamilyllc@gmail.com` hesabında, 9 yorum/5,0★, 303 etkileşim. Birincil kategori `Gift shop` → `Engraver` yapıldı (+3 ikincil), web adresi https'e çevrildi. ⛔ Açık: Services/Products/Service area/Posts boş; profil açıklaması tüketiciye yazılı ama site B2B — hangi siteye trafik göndereceği kararı bekliyor.
 - LZB ürünü Shopify tarafında DRAFT, fiyat onayı bekliyor (dağıtım boru hattı: FomaHub master → fomaprint + Shopify, ItemAsset kanal-özel görsel tablosu kuruldu).
 
