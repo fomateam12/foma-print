@@ -66,6 +66,19 @@ export async function generateMetadata({
       googleBot: { index: true, follow: true, "max-image-preview": "large" },
     },
     alternates: alternatesFor("/", lang),
+    /**
+     * Bing Webmaster Tools site ownership. Bing's Google Search Console
+     * import needs the GSC account (fomalaser1212@gmail.com); the Webmaster
+     * account is on fomafamilyllc@gmail.com, so the site is verified by this
+     * meta tag instead. Bing re-checks it periodically — removing the tag
+     * un-verifies the site, so it stays.
+     *
+     * This matters beyond Bing's own traffic: ChatGPT search and Microsoft
+     * Copilot answer from Bing's index.
+     */
+    verification: {
+      other: { "msvalidate.01": "54D6C69FD9E1F0814298AB37CBEFF775" },
+    },
     category: "business",
   };
 }
