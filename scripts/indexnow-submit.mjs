@@ -14,6 +14,17 @@
  *
  * Usage:  node scripts/indexnow-submit.mjs [--limit N] [--dry]
  *
+ * On a machine whose HTTPS traffic is intercepted (Avast Web Shield on the
+ * operator's box) node's fetch dies with ECONNRESET before it reaches the
+ * endpoint. Either point node at the system trust store
+ * (`NODE_EXTRA_CA_CERTS=<ca-bundle.pem>`) or POST the same JSON with curl,
+ * which uses the OS store:
+ *
+ *   curl --ssl-no-revoke -X POST https://api.indexnow.org/indexnow  *     -H "Content-Type: application/json; charset=utf-8" --data-binary @payload.json
+ *
+ * A fresh key file takes a few minutes to validate — until then the endpoint
+ * answers 403 `SiteVerificationNotCompleted`. That is a wait, not a failure.
+ *
  * Run it after a deploy that adds or meaningfully changes pages. Submitting
  * unchanged URLs repeatedly is pointless and the endpoint may rate-limit, so
  * this is a deliberate manual step rather than a build hook.
