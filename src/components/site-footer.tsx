@@ -57,7 +57,8 @@ export function SiteFooter({
               </li>
               <li className="flex items-center gap-2.5">
                 <MapPin className="size-4 text-brand-strong" />
-                {site.address.street}, {site.address.city}, {site.address.state}
+                {site.address.street}, {site.address.city}, {site.address.state}{" "}
+                {site.address.zip}
               </li>
             </ul>
             {site.social.length > 0 ? (

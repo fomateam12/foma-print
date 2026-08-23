@@ -78,66 +78,66 @@
     },
     "FM-BBQ-11": {
         "back": 2,
-        "blank": 39.95,
+        "blank": 36.0,
         "front": 4,
         "other": 1,
-        "total": 44.95
+        "total": 41.0
     },
     "FM-CHAR-MARB-11": {
         "back": 2,
-        "blank": 39.95,
+        "blank": 36.0,
         "front": 4,
         "other": 1,
-        "total": 44.95
+        "total": 41.0
     },
     "FM-CHAR-BMB-1611": {
         "back": 2,
-        "blank": 23.95,
+        "blank": 6.0,
         "front": 4,
         "other": 1,
-        "total": 28.95
+        "total": 11.0
     },
     "FM-DOPP-SL-BRN": {
         "back": 2,
-        "blank": 18.95,
+        "blank": 4.8,
         "front": 4,
         "other": 1,
-        "total": 23.95
+        "total": 9.8
     },
     "FM-DOPP-DL-BRN": {
         "back": 2,
-        "blank": 5.88,
+        "blank": 7.56,
         "front": 4,
         "other": 1,
-        "total": 10.88
+        "total": 12.56
     },
     "FM-KNIFE-TAC": {
         "back": 2,
-        "blank": 32.95,
+        "blank": 7.2,
         "front": 4,
         "other": 1,
-        "total": 37.95
+        "total": 12.2
     },
     "FM-LTR-MONO": {
         "back": 2,
-        "blank": 19,
+        "blank": 4.8,
         "front": 4,
         "other": 1,
-        "total": 24
+        "total": 9.8
     },
     "FM-RB-HEX": {
         "back": 2,
-        "blank": 14.95,
+        "blank": 3.72,
         "front": 4,
         "other": 1,
-        "total": 19.95
+        "total": 8.72
     },
     "FM-SERV-MARB-5": {
         "back": 2,
-        "blank": 19.95,
+        "blank": 18.0,
         "front": 4,
         "other": 1,
-        "total": 24.95
+        "total": 23.0
     },
     "FPG21113": {
         "back": 2,
@@ -5699,80 +5699,80 @@
     },
     "TM-FM-AZR": {
         "back": 2,
-        "blank": 12.99,
+        "blank": 8.5,
         "front": 4,
         "other": 1,
-        "total": 17.99
+        "total": 13.5
     },
     "TM-FM-BAY": {
         "back": 2,
-        "blank": 12.99,
+        "blank": 8.5,
         "front": 4,
         "other": 1,
-        "total": 17.99
+        "total": 13.5
     },
     "TM-FM-BLK": {
         "back": 2,
-        "blank": 12.99,
+        "blank": 8.5,
         "front": 4,
         "other": 1,
-        "total": 17.99
+        "total": 13.5
     },
     "TM-FM-CHA": {
         "back": 2,
-        "blank": 12.99,
+        "blank": 8.5,
         "front": 4,
         "other": 1,
-        "total": 17.99
+        "total": 13.5
     },
     "TM-FM-CRM": {
         "back": 2,
-        "blank": 12.99,
+        "blank": 8.5,
         "front": 4,
         "other": 1,
-        "total": 17.99
+        "total": 13.5
     },
     "TM-FM-EUC": {
         "back": 2,
-        "blank": 12.99,
+        "blank": 8.5,
         "front": 4,
         "other": 1,
-        "total": 17.99
+        "total": 13.5
     },
     "TM-FM-FOG": {
         "back": 2,
-        "blank": 12.99,
+        "blank": 8.5,
         "front": 4,
         "other": 1,
-        "total": 17.99
+        "total": 13.5
     },
     "TM-FM-HPK": {
         "back": 2,
-        "blank": 12.99,
+        "blank": 8.5,
         "front": 4,
         "other": 1,
-        "total": 17.99
+        "total": 13.5
     },
     "TM-FM-LIL": {
         "back": 2,
-        "blank": 12.99,
+        "blank": 8.5,
         "front": 4,
         "other": 1,
-        "total": 17.99
+        "total": 13.5
     },
     "TM-FM-ROS": {
         "back": 2,
-        "blank": 12.99,
+        "blank": 8.5,
         "front": 4,
         "other": 1,
-        "total": 17.99
+        "total": 13.5
     },
     "TM-FM-WHT": {
         "back": 2,
-        "blank": 12.99,
+        "blank": 8.5,
         "front": 4,
         "other": 1,
-        "total": 17.99
+        "total": 13.5
     },
     "WBX11": {
         "back": 2,
@@ -8685,5 +8685,12 @@
         "front": 4,
         "other": 1,
         "total": 10.35
+    },
+    "TM-FM-FRS": {
+        "back": 2,
+        "blank": 8.5,
+        "front": 4,
+        "other": 1,
+        "total": 13.5
     }
 }

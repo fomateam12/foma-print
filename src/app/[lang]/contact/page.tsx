@@ -171,7 +171,7 @@ export default async function ContactPage({
                 <dt className="text-muted-foreground">{t.address}</dt>
                 <dd className="font-medium text-foreground">
                   {site.address.street}, {site.address.city},{" "}
-                  {site.address.state}
+                  {site.address.state} {site.address.zip}
                 </dd>
               </div>
             </div>
