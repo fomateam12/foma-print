@@ -18,6 +18,7 @@ import rawData from "./products.json";
 import productImagesRaw from "./product-images.json";
 import productWeightsRaw from "./product-weights.json";
 import productShippingRaw from "./product-shipping.json";
+import engravingColorsRaw from "./engraving-colors.json";
 import { fomaProducts } from "./foma-products";
 import type {
   Category,
@@ -9421,6 +9422,24 @@ interface ShippingInfo {
   engrave_mm: string | null;
   fallback_weight_lb: number | null;
 }
+interface EngraveColorInfo {
+  hex: string;
+  tone: "light" | "dark";
+  source: string;
+  family: string;
+  color: string;
+  frost?: boolean;
+  opacity?: number;
+}
+// Engraved-area colour per SKU (material x coating group, measured from the
+// supplier's decorated/blank photo pairs). Regenerate with
+// scripts/engrave-color/ when SKUs are added; unknown SKUs simply get no chip.
+const engravingColorByUpper = new Map<string, EngraveColorInfo>(
+  Object.entries(engravingColorsRaw as Record<string, EngraveColorInfo>).map(
+    ([k, v]) => [k.toUpperCase(), v],
+  ),
+);
+
 const productShippingByUpper = new Map<string, ShippingInfo>(
   Object.entries(productShippingRaw as Record<string, ShippingInfo>).map(
     ([k, v]) => [k.toUpperCase(), v],
@@ -9493,6 +9512,15 @@ function enrich(p: Product): Product {
     }
     if (ship.type) {
       next = { ...next, shippingType: ship.type };
+    }
+  }
+
+  // Engrave colour is fixed by material + coating (never a customer option).
+  const engrave = engravingColorByUpper.get(upper);
+  if (engrave) {
+    next = { ...next, engraveColor: engrave.hex, engraveTone: engrave.tone };
+    if (engrave.frost) {
+      next = { ...next, engraveFrost: true, engraveOpacity: engrave.opacity };
     }
   }
   return next;

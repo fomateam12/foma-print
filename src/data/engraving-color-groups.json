@@ -1,0 +1,1722 @@
+[
+ {
+  "family": "acrylic",
+  "color": "Clear",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "aluminum",
+  "color": "Glossy Black",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 7,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "aluminum",
+  "color": "Black",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 3,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "aluminum",
+  "color": "Copper",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "aluminum",
+  "color": "Peacock Green",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "aluminum",
+  "color": "Red",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "aluminum",
+  "color": "Blue",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "brass",
+  "color": "Black",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "ceramic",
+  "color": "Black/White",
+  "hex": "#968F90",
+  "coating_hex": "#706E6C",
+  "skus": 2,
+  "measured": 2,
+  "L": 56.7,
+  "L_spread": 43.3
+ },
+ {
+  "family": "ceramic",
+  "color": "Red/White",
+  "hex": "#F0F0F2",
+  "coating_hex": "#B41D20",
+  "skus": 2,
+  "measured": 2,
+  "L": 94.8,
+  "L_spread": 5.1
+ },
+ {
+  "family": "ceramic",
+  "color": "Blue/White",
+  "hex": "#96A2CE",
+  "coating_hex": "#767095",
+  "skus": 2,
+  "measured": 2,
+  "L": 66.2,
+  "L_spread": 33.9
+ },
+ {
+  "family": "ceramic",
+  "color": "White/Black",
+  "hex": "#302D2B",
+  "coating_hex": "#E4E2DC",
+  "skus": 2,
+  "measured": 2,
+  "L": 18.5,
+  "L_spread": 5.8
+ },
+ {
+  "family": "ceramic",
+  "color": "Silver/Black",
+  "hex": "#232222",
+  "coating_hex": "#A4A19A",
+  "skus": 2,
+  "measured": 2,
+  "L": 13.3,
+  "L_spread": 8.8
+ },
+ {
+  "family": "ceramic",
+  "color": "White",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "ceramic",
+  "color": "Green/White",
+  "hex": "#018445",
+  "coating_hex": "#D8D1CC",
+  "skus": 1,
+  "measured": 1,
+  "L": 48.2,
+  "L_spread": null
+ },
+ {
+  "family": "ceramic",
+  "color": "Orange/White",
+  "hex": "#F15E27",
+  "coating_hex": "#E5D1CC",
+  "skus": 1,
+  "measured": 1,
+  "L": 58.8,
+  "L_spread": null
+ },
+ {
+  "family": "glass",
+  "color": "Clear",
+  "hex": "#C2C2C2",
+  "coating_hex": "#F6F6F4",
+  "skus": 25,
+  "measured": 1,
+  "L": 78.4,
+  "L_spread": null
+ },
+ {
+  "family": "glass",
+  "color": "Black/Clear",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 3,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "glass",
+  "color": "Clear/Black",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "lazerburst",
+  "color": "Black",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 4,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "lazerburst",
+  "color": "Blue",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Gray",
+  "hex": "#262626",
+  "coating_hex": "#887E7A",
+  "skus": 55,
+  "measured": 16,
+  "L": 15.1,
+  "L_spread": 27.2
+ },
+ {
+  "family": "leatherette",
+  "color": "Dark Brown",
+  "hex": "#2A2C2C",
+  "coating_hex": "#765140",
+  "skus": 53,
+  "measured": 18,
+  "L": 17.6,
+  "L_spread": 31.8
+ },
+ {
+  "family": "leatherette",
+  "color": "Light Brown",
+  "hex": "#2B2828",
+  "coating_hex": "#A38D6F",
+  "skus": 51,
+  "measured": 11,
+  "L": 16.1,
+  "L_spread": 19.2
+ },
+ {
+  "family": "leatherette",
+  "color": "Rawhide",
+  "hex": "#282626",
+  "coating_hex": "#A45532",
+  "skus": 50,
+  "measured": 20,
+  "L": 15.5,
+  "L_spread": 20.3
+ },
+ {
+  "family": "leatherette",
+  "color": "Black/Silver",
+  "hex": "#C1C0C2",
+  "coating_hex": "#262626",
+  "skus": 42,
+  "measured": 18,
+  "L": 77.8,
+  "L_spread": 15.7
+ },
+ {
+  "family": "leatherette",
+  "color": "Blue/Silver",
+  "hex": "#C3C3C0",
+  "coating_hex": "#263E66",
+  "skus": 40,
+  "measured": 22,
+  "L": 78.7,
+  "L_spread": 7.5
+ },
+ {
+  "family": "leatherette",
+  "color": "Black/Gold",
+  "hex": "#D6B27E",
+  "coating_hex": "#272525",
+  "skus": 36,
+  "measured": 17,
+  "L": 74.5,
+  "L_spread": 2.5
+ },
+ {
+  "family": "leatherette",
+  "color": "Red",
+  "hex": "#242626",
+  "coating_hex": "#B93632",
+  "skus": 35,
+  "measured": 14,
+  "L": 14.7,
+  "L_spread": 9.2
+ },
+ {
+  "family": "leatherette",
+  "color": "Teal",
+  "hex": "#232323",
+  "coating_hex": "#7BCBC6",
+  "skus": 34,
+  "measured": 13,
+  "L": 13.7,
+  "L_spread": 20.8
+ },
+ {
+  "family": "leatherette",
+  "color": "White",
+  "hex": "#1F2021",
+  "coating_hex": "#D9D8D2",
+  "skus": 32,
+  "measured": 7,
+  "L": 12.4,
+  "L_spread": 13.2
+ },
+ {
+  "family": "leatherette",
+  "color": "Rustic/Gold",
+  "hex": "#D0AE7C",
+  "coating_hex": "#76573E",
+  "skus": 31,
+  "measured": 14,
+  "L": 72.8,
+  "L_spread": 7.1
+ },
+ {
+  "family": "leatherette",
+  "color": "Pink",
+  "hex": "#242626",
+  "coating_hex": "#DE818F",
+  "skus": 31,
+  "measured": 9,
+  "L": 15.2,
+  "L_spread": 13.9
+ },
+ {
+  "family": "leatherette",
+  "color": "Purple",
+  "hex": "#282824",
+  "coating_hex": "#5D5F95",
+  "skus": 30,
+  "measured": 9,
+  "L": 16.0,
+  "L_spread": 26.5
+ },
+ {
+  "family": "leatherette",
+  "color": "Light Gray",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 17,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Orange",
+  "hex": "#252627",
+  "coating_hex": "#BB542D",
+  "skus": 15,
+  "measured": 1,
+  "L": 15.2,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Blush",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 15,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Light Green",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 14,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Football",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 13,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Brown",
+  "hex": "#433833",
+  "coating_hex": "#B65947",
+  "skus": 12,
+  "measured": 1,
+  "L": 24.6,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Medium Brown",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 12,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Light Tan",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 10,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Dark Gray",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 9,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Basketball",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 9,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Brown/Silver",
+  "hex": "#BBBABA",
+  "coating_hex": "#6C4D3A",
+  "skus": 7,
+  "measured": 1,
+  "L": 75.8,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Gray/Black",
+  "hex": "#24211C",
+  "coating_hex": "#827C78",
+  "skus": 5,
+  "measured": 4,
+  "L": 13.0,
+  "L_spread": 5.3
+ },
+ {
+  "family": "leatherette",
+  "color": "Teal/Black",
+  "hex": "#1F1E1E",
+  "coating_hex": "#8ACECC",
+  "skus": 4,
+  "measured": 4,
+  "L": 11.6,
+  "L_spread": 2.7
+ },
+ {
+  "family": "leatherette",
+  "color": "Gray/Silver",
+  "hex": "#434241",
+  "coating_hex": "#827670",
+  "skus": 3,
+  "measured": 1,
+  "L": 28.2,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Rawhide/Black",
+  "hex": "#2B1E18",
+  "coating_hex": "#99492D",
+  "skus": 3,
+  "measured": 1,
+  "L": 12.7,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Black/Gray",
+  "hex": "#C4C4C4",
+  "coating_hex": "#181818",
+  "skus": 3,
+  "measured": 3,
+  "L": 79.2,
+  "L_spread": 30.8
+ },
+ {
+  "family": "leatherette",
+  "color": "Square Black/Gold",
+  "hex": "#CAAE86",
+  "coating_hex": "#2A2929",
+  "skus": 3,
+  "measured": 1,
+  "L": 72.8,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Square Black/Silver",
+  "hex": "#BEBEBE",
+  "coating_hex": "#2A2829",
+  "skus": 3,
+  "measured": 1,
+  "L": 77.0,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Rawhide/Silver",
+  "hex": "#2A2C2A",
+  "coating_hex": "#A64827",
+  "skus": 2,
+  "measured": 1,
+  "L": 17.5,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Bamboo",
+  "hex": "#272727",
+  "coating_hex": "#C49563",
+  "skus": 2,
+  "measured": 1,
+  "L": 15.6,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "White/Black",
+  "hex": "#303232",
+  "coating_hex": "#98968F",
+  "skus": 2,
+  "measured": 2,
+  "L": 20.1,
+  "L_spread": 14.3
+ },
+ {
+  "family": "leatherette",
+  "color": "Rustic/Silver",
+  "hex": "#B8AEA8",
+  "coating_hex": "#675044",
+  "skus": 2,
+  "measured": 2,
+  "L": 70.5,
+  "L_spread": 29.4
+ },
+ {
+  "family": "leatherette",
+  "color": "Pink/Silver",
+  "hex": "#3D3837",
+  "coating_hex": "#DF7E8F",
+  "skus": 2,
+  "measured": 1,
+  "L": 23.8,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Teal/Silver",
+  "hex": "#313233",
+  "coating_hex": "#83C9C6",
+  "skus": 2,
+  "measured": 1,
+  "L": 20.8,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Square Blue/Silver",
+  "hex": "#BDBDBC",
+  "coating_hex": "#1B3461",
+  "skus": 2,
+  "measured": 1,
+  "L": 76.6,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Dark Brown/Black",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Rawhide/Gray",
+  "hex": "#1F2224",
+  "coating_hex": "#B76037",
+  "skus": 2,
+  "measured": 2,
+  "L": 13.3,
+  "L_spread": 0.8
+ },
+ {
+  "family": "leatherette",
+  "color": "Blue/Black",
+  "hex": "#CACAC6",
+  "coating_hex": "#3E486C",
+  "skus": 2,
+  "measured": 2,
+  "L": 81.2,
+  "L_spread": 1.2
+ },
+ {
+  "family": "leatherette",
+  "color": "Red/Black",
+  "hex": "#202424",
+  "coating_hex": "#BE322F",
+  "skus": 2,
+  "measured": 2,
+  "L": 13.8,
+  "L_spread": 0.3
+ },
+ {
+  "family": "leatherette",
+  "color": "Purple/Black",
+  "hex": "#1D1B1B",
+  "coating_hex": "#61609C",
+  "skus": 2,
+  "measured": 1,
+  "L": 9.9,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Black/Brown",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Rectangle Black/Silver",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Rectangle Black/Gold",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Rectangle Blue/Silver",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Rectangle Rustic/Gold",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Round Black/Silver",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Round Black/Gold",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Round Blue/Silver",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Round Rustic/Gold",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Hex Black/Silver",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Hex Black/Gold",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Hex Blue/Silver",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Hex Rustic/Gold",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Light Brown/Silver",
+  "hex": "#272829",
+  "coating_hex": "#B58C6B",
+  "skus": 1,
+  "measured": 1,
+  "L": 16.1,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Dark Brown/Silver",
+  "hex": "#684C3D",
+  "coating_hex": "#A6A4A1",
+  "skus": 1,
+  "measured": 1,
+  "L": 35.2,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Black/Rawhide",
+  "hex": "#332E2B",
+  "coating_hex": "#824C32",
+  "skus": 1,
+  "measured": 1,
+  "L": 19.5,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Black/Rustic",
+  "hex": "#AFABA8",
+  "coating_hex": "#351F13",
+  "skus": 1,
+  "measured": 1,
+  "L": 70.3,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Black/Bamboo",
+  "hex": "#222324",
+  "coating_hex": "#C28D54",
+  "skus": 1,
+  "measured": 1,
+  "L": 13.7,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Black/White",
+  "hex": "#202020",
+  "coating_hex": "#C8C4B5",
+  "skus": 1,
+  "measured": 1,
+  "L": 12.3,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Yellow",
+  "hex": "#0B0908",
+  "coating_hex": "#D3D726",
+  "skus": 1,
+  "measured": 1,
+  "L": 2.7,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Dark Brown/Black/Silver",
+  "hex": "#181B1D",
+  "coating_hex": "#8D644A",
+  "skus": 1,
+  "measured": 1,
+  "L": 9.5,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Black/Gold/Silver",
+  "hex": "#E3C089",
+  "coating_hex": "#242727",
+  "skus": 1,
+  "measured": 1,
+  "L": 79.5,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Rawhide/Black/Silver",
+  "hex": "#232526",
+  "coating_hex": "#AE663F",
+  "skus": 1,
+  "measured": 1,
+  "L": 14.7,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Gray/Black/Silver",
+  "hex": "#252525",
+  "coating_hex": "#959392",
+  "skus": 1,
+  "measured": 1,
+  "L": 14.7,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Brown/Gold/Silver",
+  "hex": "#DABA8A",
+  "coating_hex": "#4E3929",
+  "skus": 1,
+  "measured": 1,
+  "L": 77.2,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Rustic/Gray",
+  "hex": "#C6C8C9",
+  "coating_hex": "#503B32",
+  "skus": 1,
+  "measured": 1,
+  "L": 80.6,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Rustic/Black",
+  "hex": "#C5C8CA",
+  "coating_hex": "#4E392F",
+  "skus": 1,
+  "measured": 1,
+  "L": 80.5,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Brown/Gold",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Rawhide/Brown",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Oval Black/Silver",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Silver",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Oval Black/Gold",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Oval Blue/Silver",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Oval Rustic/Gold",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "leatherette",
+  "color": "Square Rustic/Gold",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "plastic",
+  "color": "Black",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "slate",
+  "color": "Charcoal Gray",
+  "hex": "#9C9A96",
+  "coating_hex": "#424243",
+  "skus": 19,
+  "measured": 4,
+  "L": 63.8,
+  "L_spread": 2.0
+ },
+ {
+  "family": "slate",
+  "color": "Charcoal Gray/Brown",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "slate",
+  "color": "Natural Wood",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Black",
+  "hex": "#BFBBBB",
+  "coating_hex": "#2C2C2B",
+  "skus": 36,
+  "measured": 33,
+  "L": 75.9,
+  "L_spread": 17.4
+ },
+ {
+  "family": "steel-powder",
+  "color": "White",
+  "hex": "#827376",
+  "coating_hex": "#DCDADA",
+  "skus": 36,
+  "measured": 32,
+  "L": 49.4,
+  "L_spread": 11.8
+ },
+ {
+  "family": "steel-powder",
+  "color": "Red",
+  "hex": "#C1C8C5",
+  "coating_hex": "#C32328",
+  "skus": 19,
+  "measured": 11,
+  "L": 80.6,
+  "L_spread": 5.2
+ },
+ {
+  "family": "steel-powder",
+  "color": "Purple",
+  "hex": "#D0CDC8",
+  "coating_hex": "#514287",
+  "skus": 18,
+  "measured": 17,
+  "L": 82.4,
+  "L_spread": 4.6
+ },
+ {
+  "family": "steel-powder",
+  "color": "Navy Blue",
+  "hex": "#D2D2CE",
+  "coating_hex": "#3A425D",
+  "skus": 18,
+  "measured": 16,
+  "L": 84.1,
+  "L_spread": 3.5
+ },
+ {
+  "family": "steel-powder",
+  "color": "Pink",
+  "hex": "#C7CCC9",
+  "coating_hex": "#F079AF",
+  "skus": 17,
+  "measured": 16,
+  "L": 81.9,
+  "L_spread": 8.4
+ },
+ {
+  "family": "steel-powder",
+  "color": "Teal",
+  "hex": "#908C8C",
+  "coating_hex": "#8FD2CB",
+  "skus": 17,
+  "measured": 17,
+  "L": 58.6,
+  "L_spread": 3.6
+ },
+ {
+  "family": "steel-powder",
+  "color": "Orange",
+  "hex": "#B6C6C8",
+  "coating_hex": "#F26928",
+  "skus": 17,
+  "measured": 16,
+  "L": 79.0,
+  "L_spread": 6.2
+ },
+ {
+  "family": "steel-powder",
+  "color": "Maroon",
+  "hex": "#CACDCB",
+  "coating_hex": "#852D31",
+  "skus": 17,
+  "measured": 15,
+  "L": 81.5,
+  "L_spread": 4.8
+ },
+ {
+  "family": "steel-powder",
+  "color": "Green",
+  "hex": "#D5D0D1",
+  "coating_hex": "#1A7A44",
+  "skus": 17,
+  "measured": 16,
+  "L": 83.9,
+  "L_spread": 3.3
+ },
+ {
+  "family": "steel-powder",
+  "color": "Yellow",
+  "hex": "#9E9FA9",
+  "coating_hex": "#FFD135",
+  "skus": 17,
+  "measured": 15,
+  "L": 65.5,
+  "L_spread": 10.4
+ },
+ {
+  "family": "steel-powder",
+  "color": "Light Blue",
+  "hex": "#8C8686",
+  "coating_hex": "#98D1DE",
+  "skus": 16,
+  "measured": 16,
+  "L": 56.4,
+  "L_spread": 5.9
+ },
+ {
+  "family": "steel-powder",
+  "color": "Dark Gray",
+  "hex": "#D4D2D2",
+  "coating_hex": "#7D7D7D",
+  "skus": 16,
+  "measured": 16,
+  "L": 84.6,
+  "L_spread": 3.3
+ },
+ {
+  "family": "steel-powder",
+  "color": "Coral",
+  "hex": "#C0D0D1",
+  "coating_hex": "#F37069",
+  "skus": 16,
+  "measured": 15,
+  "L": 81.8,
+  "L_spread": 8.2
+ },
+ {
+  "family": "steel-powder",
+  "color": "Light Purple",
+  "hex": "#CED4D1",
+  "coating_hex": "#DC8ABA",
+  "skus": 14,
+  "measured": 14,
+  "L": 84.4,
+  "L_spread": 10.5
+ },
+ {
+  "family": "steel-powder",
+  "color": "Royal Blue",
+  "hex": "#CFCECA",
+  "coating_hex": "#366A9A",
+  "skus": 13,
+  "measured": 12,
+  "L": 83.0,
+  "L_spread": 6.0
+ },
+ {
+  "family": "steel-powder",
+  "color": "Olive Green",
+  "hex": "#C8C8CC",
+  "coating_hex": "#606A46",
+  "skus": 8,
+  "measured": 8,
+  "L": 80.7,
+  "L_spread": 5.4
+ },
+ {
+  "family": "steel-powder",
+  "color": "Blue",
+  "hex": "#D0CDC6",
+  "coating_hex": "#3A6098",
+  "skus": 5,
+  "measured": 4,
+  "L": 82.6,
+  "L_spread": 1.0
+ },
+ {
+  "family": "steel-powder",
+  "color": "Black/Black",
+  "hex": "#B8B6B4",
+  "coating_hex": "#272626",
+  "skus": 2,
+  "measured": 2,
+  "L": 74.1,
+  "L_spread": 1.7
+ },
+ {
+  "family": "steel-powder",
+  "color": "Black/White",
+  "hex": "#929393",
+  "coating_hex": "#84827A",
+  "skus": 2,
+  "measured": 2,
+  "L": 57.8,
+  "L_spread": 42.2
+ },
+ {
+  "family": "steel-powder",
+  "color": "Bamboo",
+  "hex": "#3A2613",
+  "coating_hex": "#E0A762",
+  "skus": 1,
+  "measured": 1,
+  "L": 17.2,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Black/Silver",
+  "hex": "#BBBBBB",
+  "coating_hex": "#343434",
+  "skus": 1,
+  "measured": 1,
+  "L": 75.9,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Red/Silver",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Blue/Silver",
+  "hex": "#A9A9A8",
+  "coating_hex": "#5075A8",
+  "skus": 1,
+  "measured": 1,
+  "L": 69.2,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Pink/Silver",
+  "hex": "#898E8B",
+  "coating_hex": "#F280B2",
+  "skus": 1,
+  "measured": 1,
+  "L": 58.3,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Teal/Silver",
+  "hex": "#817E80",
+  "coating_hex": "#89D1CC",
+  "skus": 1,
+  "measured": 1,
+  "L": 53.1,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Light Blue/Silver",
+  "hex": "#848384",
+  "coating_hex": "#A0D1E2",
+  "skus": 1,
+  "measured": 1,
+  "L": 55.0,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Light Purple/Silver",
+  "hex": "#ECF0EE",
+  "coating_hex": "#DC88B9",
+  "skus": 1,
+  "measured": 1,
+  "L": 94.5,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Purple/Silver",
+  "hex": "#C2C3BD",
+  "coating_hex": "#4F458A",
+  "skus": 1,
+  "measured": 1,
+  "L": 78.6,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Dark Gray/Silver",
+  "hex": "#D1D1D1",
+  "coating_hex": "#828282",
+  "skus": 1,
+  "measured": 1,
+  "L": 83.8,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Navy Blue/Silver",
+  "hex": "#C5C6C5",
+  "coating_hex": "#494F67",
+  "skus": 1,
+  "measured": 1,
+  "L": 79.7,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Orange/Silver",
+  "hex": "#ACB0B4",
+  "coating_hex": "#F26B3A",
+  "skus": 1,
+  "measured": 1,
+  "L": 71.4,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Maroon/Silver",
+  "hex": "#C1CACA",
+  "coating_hex": "#943136",
+  "skus": 1,
+  "measured": 1,
+  "L": 80.6,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "White/Silver",
+  "hex": "#828282",
+  "coating_hex": "#D8D8D6",
+  "skus": 1,
+  "measured": 1,
+  "L": 54.4,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Green/Silver",
+  "hex": "#CECACC",
+  "coating_hex": "#368152",
+  "skus": 1,
+  "measured": 1,
+  "L": 81.8,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Coral/Silver",
+  "hex": "#C4D0D0",
+  "coating_hex": "#F2706B",
+  "skus": 1,
+  "measured": 1,
+  "L": 82.3,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Black/Rawhide",
+  "hex": "#2A2B2B",
+  "coating_hex": "#8B5233",
+  "skus": 1,
+  "measured": 1,
+  "L": 17.4,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Black/Gray",
+  "hex": "#292A2A",
+  "coating_hex": "#675C51",
+  "skus": 1,
+  "measured": 1,
+  "L": 17.0,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Black/Rustic/Silver",
+  "hex": "#C4C1BE",
+  "coating_hex": "#432D20",
+  "skus": 1,
+  "measured": 1,
+  "L": 78.1,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Black/Bamboo",
+  "hex": "#27292A",
+  "coating_hex": "#C79057",
+  "skus": 1,
+  "measured": 1,
+  "L": 16.4,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Black/Pink",
+  "hex": "#29221A",
+  "coating_hex": "#C56A77",
+  "skus": 1,
+  "measured": 1,
+  "L": 13.7,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Black/Teal",
+  "hex": "#221C1E",
+  "coating_hex": "#7DBCB5",
+  "skus": 1,
+  "measured": 1,
+  "L": 11.1,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Red/Black",
+  "hex": "#9BB2B7",
+  "coating_hex": "#B72626",
+  "skus": 1,
+  "measured": 1,
+  "L": 71.4,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Royal Blue/Black",
+  "hex": "#C5C0B2",
+  "coating_hex": "#215D91",
+  "skus": 1,
+  "measured": 1,
+  "L": 77.8,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Pink/Black",
+  "hex": "#BAC1BE",
+  "coating_hex": "#F067A5",
+  "skus": 1,
+  "measured": 1,
+  "L": 77.6,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "White/Black",
+  "hex": "#8A8A8A",
+  "coating_hex": "#D9D6D6",
+  "skus": 1,
+  "measured": 1,
+  "L": 57.5,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Olive Green/Black",
+  "hex": "#BCBCC0",
+  "coating_hex": "#55623B",
+  "skus": 1,
+  "measured": 1,
+  "L": 76.2,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Warm Sand",
+  "hex": "#0A0709",
+  "coating_hex": "#CABA9D",
+  "skus": 1,
+  "measured": 1,
+  "L": 2.2,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Moody Lilac",
+  "hex": "#2F2C2F",
+  "coating_hex": "#B091A8",
+  "skus": 1,
+  "measured": 1,
+  "L": 18.5,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Summer Sage",
+  "hex": "#2B2829",
+  "coating_hex": "#859A70",
+  "skus": 1,
+  "measured": 1,
+  "L": 16.3,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Blush",
+  "hex": "#343636",
+  "coating_hex": "#DCB8B5",
+  "skus": 1,
+  "measured": 1,
+  "L": 22.4,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Warm Sand/Ghost Black",
+  "hex": "#444343",
+  "coating_hex": "#D5C2A5",
+  "skus": 1,
+  "measured": 1,
+  "L": 28.4,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Moody Lilac/Ghost Black",
+  "hex": "#373A37",
+  "coating_hex": "#B297AC",
+  "skus": 1,
+  "measured": 1,
+  "L": 23.9,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Summer Sage/Ghost Black",
+  "hex": "#3E393E",
+  "coating_hex": "#95A87F",
+  "skus": 1,
+  "measured": 1,
+  "L": 24.6,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Blush/Ghost Black",
+  "hex": "#3A3D3D",
+  "coating_hex": "#E4BCBA",
+  "skus": 1,
+  "measured": 1,
+  "L": 25.5,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Multi Brown",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Silver",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Brown",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Navy Blue/White",
+  "hex": "#FFFFFF",
+  "coating_hex": "#253D61",
+  "skus": 1,
+  "measured": 1,
+  "L": 100.0,
+  "L_spread": null
+ },
+ {
+  "family": "steel-powder",
+  "color": "Brushed Silver",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "wood",
+  "color": "Multi Brown",
+  "hex": "#6C4A23",
+  "coating_hex": "#DDB46A",
+  "skus": 5,
+  "measured": 4,
+  "L": 34.5,
+  "L_spread": 3.8
+ },
+ {
+  "family": "wood",
+  "color": "Brown",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 5,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "wood",
+  "color": "Rosewood",
+  "hex": "#C2AB70",
+  "coating_hex": "#40130F",
+  "skus": 5,
+  "measured": 1,
+  "L": 70.6,
+  "L_spread": null
+ },
+ {
+  "family": "wood",
+  "color": "Bamboo",
+  "hex": "#FFFFFF",
+  "coating_hex": "#F8D697",
+  "skus": 4,
+  "measured": 1,
+  "L": 100.0,
+  "L_spread": null
+ },
+ {
+  "family": "wood",
+  "color": "Walnut",
+  "hex": "#361E12",
+  "coating_hex": "#6A462C",
+  "skus": 4,
+  "measured": 2,
+  "L": 14.2,
+  "L_spread": 0.6
+ },
+ {
+  "family": "wood",
+  "color": "Black",
+  "hex": "#EAC689",
+  "coating_hex": "#131212",
+  "skus": 3,
+  "measured": 2,
+  "L": 81.7,
+  "L_spread": 0.5
+ },
+ {
+  "family": "wood",
+  "color": "Light Brown",
+  "hex": "#553B2A",
+  "coating_hex": "#F0CEAE",
+  "skus": 2,
+  "measured": 2,
+  "L": 27.6,
+  "L_spread": 3.5
+ },
+ {
+  "family": "wood",
+  "color": "Red Alder",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 2,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ },
+ {
+  "family": "wood",
+  "color": "Black/Gold",
+  "hex": null,
+  "coating_hex": null,
+  "skus": 1,
+  "measured": 0,
+  "L": null,
+  "L_spread": null
+ }
+]
