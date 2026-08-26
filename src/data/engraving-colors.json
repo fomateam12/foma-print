@@ -1,0 +1,8824 @@
+{
+ "556": {
+  "color": "Black/Gold",
+  "family": "wood",
+  "hex": "#6C4A23",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "ADW10CL": {
+  "color": "Clear",
+  "family": "acrylic",
+  "hex": "#EAEAEB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "BRS125": {
+  "color": "Black",
+  "family": "lazerburst",
+  "hex": "#F2F2F2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "CDL1011": {
+  "color": "Glossy Black",
+  "family": "aluminum",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "CDL1012": {
+  "color": "Glossy Black",
+  "family": "aluminum",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "CDL1013": {
+  "color": "Glossy Black",
+  "family": "aluminum",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "CDL1014": {
+  "color": "Glossy Black",
+  "family": "aluminum",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "CDL1015": {
+  "color": "Glossy Black",
+  "family": "aluminum",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "CDL1016": {
+  "color": "Glossy Black",
+  "family": "aluminum",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "CDL1017": {
+  "color": "Glossy Black",
+  "family": "aluminum",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "CGS101": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "CST01": {
+  "color": "Bamboo",
+  "family": "wood",
+  "hex": "#6C4A23",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "DC301S": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "DS10": {
+  "color": "Walnut",
+  "family": "wood",
+  "hex": "#361E12",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "DS12": {
+  "color": "Walnut",
+  "family": "wood",
+  "hex": "#372014",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "DS20": {
+  "color": "Walnut",
+  "family": "wood",
+  "hex": "#361E12",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "DS8": {
+  "color": "Walnut",
+  "family": "wood",
+  "hex": "#361D11",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "FC11": {
+  "color": "Clear/Black",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "FM-BBQ-11": {
+  "color": "Multi Brown",
+  "family": "wood",
+  "hex": "#6C4A23",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "FM-CHAR-BMB-1611": {
+  "color": "Bamboo",
+  "family": "steel-powder",
+  "hex": "#3A2613",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "FM-CHAR-MARB-11": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "FM-DOPP-DL-BRN": {
+  "color": "Brown",
+  "family": "leatherette",
+  "hex": "#433833",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "FM-DOPP-SL-BRN": {
+  "color": "Brown",
+  "family": "leatherette",
+  "hex": "#433833",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "FM-KNIFE-TAC": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#BFBBBB",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "FM-LTR-MONO": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#BFBBBB",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "FM-RB-HEX": {
+  "color": "Walnut",
+  "family": "wood",
+  "hex": "#361E12",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "FM-SERV-MARB-5": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "FPG21113": {
+  "color": "Black/Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "FPG2810": {
+  "color": "Black/Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "FPG2912": {
+  "color": "Black/Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "FSK304": {
+  "color": "Rawhide/Black",
+  "family": "leatherette",
+  "hex": "#2B1E18",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "FSK310": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "FSK615": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#252525",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "FSK616": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#160E0B",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "FSK617A": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#DBBB8A",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "FSK618": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "FSK619": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#282623",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "FSK623": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#BBBBBB",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "FSK624": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AF7F",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "FSK627": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C0BFBD",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GDW8J": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT034": {
+  "color": "Bamboo",
+  "family": "steel-powder",
+  "hex": "#3A2613",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT045": {
+  "color": "Brown",
+  "family": "steel-powder",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "GFT1001": {
+  "color": "Brown/Silver",
+  "family": "leatherette",
+  "hex": "#BBBABA",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT1002": {
+  "color": "Brown/Silver",
+  "family": "leatherette",
+  "hex": "#BBBABA",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT1003": {
+  "color": "Rawhide/Silver",
+  "family": "leatherette",
+  "hex": "#2A2C2A",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT1004": {
+  "color": "Gray/Silver",
+  "family": "leatherette",
+  "hex": "#434241",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT1005": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT1006": {
+  "color": "Brown/Silver",
+  "family": "leatherette",
+  "hex": "#BBBABA",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT1007": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT1008": {
+  "color": "Bamboo",
+  "family": "leatherette",
+  "hex": "#272727",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT1009": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT1010": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT1012": {
+  "color": "Orange",
+  "family": "leatherette",
+  "hex": "#252627",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT1031": {
+  "color": "Brown/Silver",
+  "family": "leatherette",
+  "hex": "#BBBABA",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT1032": {
+  "color": "Brown/Silver",
+  "family": "leatherette",
+  "hex": "#BBBABA",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT1033": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT1034": {
+  "color": "Brown/Silver",
+  "family": "leatherette",
+  "hex": "#BBBABA",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT1035": {
+  "color": "Gray/Silver",
+  "family": "leatherette",
+  "hex": "#434241",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT1036": {
+  "color": "Pink/Silver",
+  "family": "leatherette",
+  "hex": "#3D3837",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT1037": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT1038": {
+  "color": "Brown/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "rule",
+  "tone": "light"
+ },
+ "GFT1039": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT1040": {
+  "color": "Teal/Silver",
+  "family": "leatherette",
+  "hex": "#313233",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT1041": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT1042": {
+  "color": "Football",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "GFT1043": {
+  "color": "Orange",
+  "family": "leatherette",
+  "hex": "#252627",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT1136C": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#483D3A",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1137C": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#1F2121",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1138C": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D5AF76",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT1139C": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282727",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1145C": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#1C1718",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1148C": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#202424",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1170": {
+  "color": "Black/Brown",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "GFT1171": {
+  "color": "Rawhide/Brown",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "GFT1172": {
+  "color": "Black/Brown",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "GFT1195": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT1196": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT1197": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT1198": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT1199": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT1205": {
+  "color": "Gray/Black",
+  "family": "leatherette",
+  "hex": "#040304",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1206": {
+  "color": "Black/Gray",
+  "family": "leatherette",
+  "hex": "#C9C9C9",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT1207": {
+  "color": "Rawhide/Gray",
+  "family": "leatherette",
+  "hex": "#1B2124",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1208": {
+  "color": "Teal/Black",
+  "family": "leatherette",
+  "hex": "#191415",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1209": {
+  "color": "Blue/Black",
+  "family": "leatherette",
+  "hex": "#CECEC8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT1210": {
+  "color": "Red/Black",
+  "family": "leatherette",
+  "hex": "#222525",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1211": {
+  "color": "Rustic/Gray",
+  "family": "leatherette",
+  "hex": "#C6C8C9",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT1215": {
+  "color": "Gray/Black",
+  "family": "leatherette",
+  "hex": "#212121",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1216": {
+  "color": "Black/Gray",
+  "family": "leatherette",
+  "hex": "#C4C4C4",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT1217": {
+  "color": "Rawhide/Gray",
+  "family": "leatherette",
+  "hex": "#232425",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1218": {
+  "color": "Teal/Black",
+  "family": "leatherette",
+  "hex": "#242424",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1219": {
+  "color": "Blue/Black",
+  "family": "leatherette",
+  "hex": "#C7C7C4",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT1220": {
+  "color": "Red/Black",
+  "family": "leatherette",
+  "hex": "#1F2324",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1221": {
+  "color": "Rustic/Black",
+  "family": "leatherette",
+  "hex": "#C5C8CA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT1222": {
+  "color": "White/Black",
+  "family": "leatherette",
+  "hex": "#515150",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1235": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#242424",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1236": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#231F20",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1237": {
+  "color": "Square Black/Gold",
+  "family": "leatherette",
+  "hex": "#CAAE86",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT1238": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1239": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1240": {
+  "color": "Square Black/Silver",
+  "family": "leatherette",
+  "hex": "#BEBEBE",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT1241": {
+  "color": "Square Blue/Silver",
+  "family": "leatherette",
+  "hex": "#BDBDBC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT1242": {
+  "color": "Bamboo",
+  "family": "leatherette",
+  "hex": "#272727",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1243": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#222525",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1251": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT1252": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#242525",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1253": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1254": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C3",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT1255": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT1256": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#BCBCBB",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT1257": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#242627",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1258": {
+  "color": "Purple/Black",
+  "family": "leatherette",
+  "hex": "#1D1B1B",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT1265": {
+  "color": "Black/White",
+  "family": "steel-powder",
+  "hex": "#929393",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT1268": {
+  "color": "Navy Blue/White",
+  "family": "steel-powder",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "GFT1285": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#282828",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1286": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#272828",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1287": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#DBBA87",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT1288": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#28292A",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1289": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#252525",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT1290": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#BDBDBD",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT1291": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D6B480",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT1360": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT160": {
+  "color": "Light Brown",
+  "family": "wood",
+  "hex": "#6A3E1D",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT172": {
+  "color": "Bamboo",
+  "family": "wood",
+  "hex": "#6C4A23",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "GFT185": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT186": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#262627",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT189": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#1E1F1F",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT190": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT191": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT192": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#252626",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2035": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D9B47E",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT2036": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#323532",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2037": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#212121",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2038": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C4C5C5",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT2039": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C4C4BD",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT2040": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#162324",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2041": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2C2D2D",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2042": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#131F1A",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2043": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#CDAA77",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT2044": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#252021",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2046": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#17191A",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2047": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#23241D",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2115": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B179",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT2116": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#272B2D",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2117": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#242525",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2118": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C2C2C2",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT2119": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#CACAC0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT2120": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#272D2D",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2121": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2B2C2C",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2122": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#1E2623",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2123": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AC77",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT2124": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#282324",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2126": {
+  "color": "White/Black",
+  "family": "leatherette",
+  "hex": "#101315",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2127": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2135": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT2136": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT2137": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT2138": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT2139": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#2A2A2A",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2140": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT2141": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT2142": {
+  "color": "Rustic/Silver",
+  "family": "leatherette",
+  "hex": "#B8AEA8",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT2143": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT2144": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT2145": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT2146": {
+  "color": "Blush",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "GFT2147": {
+  "color": "Light Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "GFT2148": {
+  "color": "Light Green",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "GFT215": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#74553D",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT220": {
+  "color": "Bamboo",
+  "family": "wood",
+  "hex": "#6C4A23",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "GFT2235": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#262727",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2236": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2237": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D2A96A",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT2238": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#78432D",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2239": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT2241": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#252626",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2242": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT2243": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#CDA770",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT2245": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2246": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#BBBBB9",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT2249": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT2251": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#2A2A26",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2300": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT2301": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#212324",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2302": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#1D1D1D",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2303": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#DBDCDC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT2304": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#222322",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2305": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#212020",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2306": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3BF",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT2308": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#162122",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2341": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT2342": {
+  "color": "Blush",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "GFT2343": {
+  "color": "Light Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "GFT2344": {
+  "color": "Light Green",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "GFT2400": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT2401": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT2402": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#424045",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2403": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#BAC1CF",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT2404": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#1B171C",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2405": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#28282C",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2406": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT2407": {
+  "color": "Rustic/Silver",
+  "family": "leatherette",
+  "hex": "#B8AEA8",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT2408": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#361B1D",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2409": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#151516",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2410": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#2E2B2B",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT2450": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT2451": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT2452": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT246A": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT248A": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#E1C494",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT249A": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D1AD79",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT255A": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D0AD77",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT260A": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#DEC59A",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT267": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT269": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT270": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#250200",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT271": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#280000",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT272": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#1D0000",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT276": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT281": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT282": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT283": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT284": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT286": {
+  "color": "Dark Brown/Black",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "GFT287A": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B47E",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT288": {
+  "color": "Rawhide/Black",
+  "family": "leatherette",
+  "hex": "#2B1E18",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT292": {
+  "color": "Teal/Black",
+  "family": "leatherette",
+  "hex": "#1D1D1B",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT293": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#B5B7B7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT296": {
+  "color": "Dark Brown/Black",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "GFT297A": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D9B47C",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT298": {
+  "color": "Rawhide/Black",
+  "family": "leatherette",
+  "hex": "#2B1E18",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT302": {
+  "color": "Teal/Black",
+  "family": "leatherette",
+  "hex": "#212022",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT303": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C6C5C0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT321": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B221A",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT322": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT323A": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#DCBA85",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT324": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#2D150D",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT325": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#1C1815",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT329": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1BEB7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT346": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT349": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT350": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT351": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#1A100C",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT352A": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT353": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#29130C",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT354": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT358": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT373": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#312F2C",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT374": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT377": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT392": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT395": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT405": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT409": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT413": {
+  "color": "Gray/Black",
+  "family": "leatherette",
+  "hex": "#24211C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT414": {
+  "color": "Gray/Black",
+  "family": "leatherette",
+  "hex": "#24211C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT439": {
+  "color": "Multi Brown",
+  "family": "wood",
+  "hex": "#6F4B25",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT441": {
+  "color": "Multi Brown",
+  "family": "wood",
+  "hex": "#694821",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT442": {
+  "color": "Multi Brown",
+  "family": "wood",
+  "hex": "#7D5429",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT443": {
+  "color": "Multi Brown",
+  "family": "wood",
+  "hex": "#5D3E1C",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT485": {
+  "color": "Multi Brown",
+  "family": "wood",
+  "hex": "#6C4A23",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT533": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT607": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT612": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT614": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT615": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1BEB7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT628": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#BEBEBD",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT631": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2B2B2C",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT632": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D3B280",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT633": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#2B2B2B",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT634": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT638": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C0C0C1",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT639": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D2B283",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT641": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2C2C2C",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT642": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#272828",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT643": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D2AF78",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT644": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282829",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT645": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#292929",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT648": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242726",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT649": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#BEBEBE",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT650": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D1AF7E",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT651": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2C2C2C",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT652": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2C2C2D",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT653": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D2AF7A",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT654": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#292B2C",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT655": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#272727",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT658": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#272828",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT659": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C2C2C2",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT660": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D8BA8C",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT706": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT708": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D3B17E",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT709": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#C6A270",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT715": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#CFAC7A",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT720": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#CDAC7B",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT721": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D4B484",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT726": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT729": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT766": {
+  "color": "Dark Brown/Black/Silver",
+  "family": "leatherette",
+  "hex": "#181B1D",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT767": {
+  "color": "Black/Gold/Silver",
+  "family": "leatherette",
+  "hex": "#E3C089",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT768": {
+  "color": "Rawhide/Black/Silver",
+  "family": "leatherette",
+  "hex": "#232526",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT769": {
+  "color": "Gray/Black/Silver",
+  "family": "leatherette",
+  "hex": "#252525",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT773": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#CDCDCD",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT774": {
+  "color": "Brown/Gold/Silver",
+  "family": "leatherette",
+  "hex": "#DABA8A",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT803": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232325",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT805": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#222021",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT807": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#211E1F",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT808": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT809": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#2D2C2C",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT810": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#001C1B",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT833": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#CFCFCD",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT835": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C8C8C7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT836": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#BEBEBD",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT837": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#D0D0CD",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT838": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#F9F9E8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT839": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "GFT841": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3BF",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT842": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#BEBEBA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT843": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#BFBFBD",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT903": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#262727",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT905": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#252626",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT908": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#212625",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT909": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "GFT916": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#212626",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT919": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C4C4C0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "GFT920": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#252626",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT931": {
+  "color": "Purple/Black",
+  "family": "leatherette",
+  "hex": "#1D1B1B",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT936": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#23231F",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT941": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#252524",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "GFT951": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#31302C",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LBH22": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#BFBFBF",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH23": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#C1C9C9",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH24": {
+  "color": "Royal Blue",
+  "family": "steel-powder",
+  "hex": "#CCCBC9",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH25": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#D4DCDA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH26": {
+  "color": "Teal",
+  "family": "steel-powder",
+  "hex": "#858082",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH27": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#8A8888",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH28": {
+  "color": "Light Purple",
+  "family": "steel-powder",
+  "hex": "#D1D6D4",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH29": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#C0C2BB",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH30": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#E0E0E0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH31": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#C7C7C7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH32": {
+  "color": "Orange",
+  "family": "steel-powder",
+  "hex": "#9D9FA0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH33": {
+  "color": "Maroon",
+  "family": "steel-powder",
+  "hex": "#C2CBCB",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH34": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#7D7D7D",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH35": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#CBC9CA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH36": {
+  "color": "Yellow",
+  "family": "steel-powder",
+  "hex": "#A0A2AA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH37": {
+  "color": "Coral",
+  "family": "steel-powder",
+  "hex": "#D5DCDC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH38": {
+  "color": "Olive Green",
+  "family": "steel-powder",
+  "hex": "#CCCBCC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH52": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#CCCDCC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH53": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#BAC2C3",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH54": {
+  "color": "Royal Blue",
+  "family": "steel-powder",
+  "hex": "#D5D2CC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH55": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#E0E7E4",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH56": {
+  "color": "Teal",
+  "family": "steel-powder",
+  "hex": "#868484",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH57": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#726E6E",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LBH58": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#E5E9E6",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH59": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#C7C8C2",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH60": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#D4D4D4",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH61": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#CECECA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH62": {
+  "color": "Orange",
+  "family": "steel-powder",
+  "hex": "#C8D2D8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH63": {
+  "color": "Maroon",
+  "family": "steel-powder",
+  "hex": "#D2D5D5",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH64": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#929292",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH65": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#D5D3D4",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH66": {
+  "color": "Yellow",
+  "family": "steel-powder",
+  "hex": "#A1A4B3",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH67": {
+  "color": "Coral",
+  "family": "steel-powder",
+  "hex": "#CAD3D4",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LBH68": {
+  "color": "Olive Green",
+  "family": "steel-powder",
+  "hex": "#C5C4C6",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM102": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#D2D2D2",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM103": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#D9DEDF",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM104": {
+  "color": "Royal Blue",
+  "family": "steel-powder",
+  "hex": "#D2D3D0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM105": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#C7CCCA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM106": {
+  "color": "Teal",
+  "family": "steel-powder",
+  "hex": "#828181",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM107": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#858282",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM108": {
+  "color": "Light Purple",
+  "family": "steel-powder",
+  "hex": "#CFD6D2",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM109": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#DCDCD9",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM110": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#D4D4D4",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM111": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#D4D4D3",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM112": {
+  "color": "Orange",
+  "family": "steel-powder",
+  "hex": "#C2CBD0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM113": {
+  "color": "Maroon",
+  "family": "steel-powder",
+  "hex": "#CFD1D2",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM114": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#7E7E7E",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM115": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#D6D3D4",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM116": {
+  "color": "Yellow",
+  "family": "steel-powder",
+  "hex": "#80828C",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM117": {
+  "color": "Coral",
+  "family": "steel-powder",
+  "hex": "#CED1D1",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM202": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#BBBBBB",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM203": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#B6B6B6",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM204": {
+  "color": "Royal Blue",
+  "family": "steel-powder",
+  "hex": "#B3B1AF",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM205": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#C3C7C5",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM206": {
+  "color": "Teal",
+  "family": "steel-powder",
+  "hex": "#8F8C8C",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM207": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#82807F",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM208": {
+  "color": "Light Purple",
+  "family": "steel-powder",
+  "hex": "#CED2D0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM209": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#B0B0AC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM210": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#CBCBCB",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM211": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#BFBFBC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM212": {
+  "color": "Orange",
+  "family": "steel-powder",
+  "hex": "#A3A8AA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM213": {
+  "color": "Maroon",
+  "family": "steel-powder",
+  "hex": "#CACDCB",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LCM214": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#888888",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM215": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#B8B6B7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM216": {
+  "color": "Yellow",
+  "family": "steel-powder",
+  "hex": "#93959C",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LCM217": {
+  "color": "Coral",
+  "family": "steel-powder",
+  "hex": "#C0D0D1",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LG5011": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LG5272": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LLB101": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLB102": {
+  "color": "Medium Brown",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "LLB103": {
+  "color": "Blush",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "LLB104": {
+  "color": "Light Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "LLB105": {
+  "color": "Light Green",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "LLB125": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLB126": {
+  "color": "Medium Brown",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "LLB127": {
+  "color": "Blush",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "LLB128": {
+  "color": "Light Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "LLB129": {
+  "color": "Light Green",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "LLB149": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLB150": {
+  "color": "Medium Brown",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "LLB151": {
+  "color": "Blush",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "LLB152": {
+  "color": "Light Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "LLB153": {
+  "color": "Light Green",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "LLF1057": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LLF1246": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LLF1257": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LLF12810": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LLF146": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF157": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF1646": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF1657": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF16810": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF1810": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF1846": {
+  "color": "Brown",
+  "family": "leatherette",
+  "hex": "#433833",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF18810": {
+  "color": "Brown",
+  "family": "leatherette",
+  "hex": "#433833",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF1946": {
+  "color": "Orange",
+  "family": "leatherette",
+  "hex": "#252627",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF1957": {
+  "color": "Orange",
+  "family": "leatherette",
+  "hex": "#252627",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF19810": {
+  "color": "Orange",
+  "family": "leatherette",
+  "hex": "#252627",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF246": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF257": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF2810": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF346A": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LLF357A": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LLF3810A": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LLF446": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF457": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF4810": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF546": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF557": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF5810": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LLF946": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LLF957": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LLF9810": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LMG21": {
+  "color": "Black/White",
+  "family": "ceramic",
+  "hex": "#968F90",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LMG22": {
+  "color": "Red/White",
+  "family": "ceramic",
+  "hex": "#E0E2E5",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LMG23": {
+  "color": "Blue/White",
+  "family": "ceramic",
+  "hex": "#96A2CE",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LMG24": {
+  "color": "Green/White",
+  "family": "ceramic",
+  "hex": "#018445",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LMG25": {
+  "color": "Orange/White",
+  "family": "ceramic",
+  "hex": "#F15E27",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LMG31": {
+  "color": "White/Black",
+  "family": "ceramic",
+  "hex": "#3A3A39",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LMG32": {
+  "color": "Silver/Black",
+  "family": "ceramic",
+  "hex": "#353535",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LMG61": {
+  "color": "Black/White",
+  "family": "ceramic",
+  "hex": "#968F90",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LMG62": {
+  "color": "Red/White",
+  "family": "ceramic",
+  "hex": "#F0F0F2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LMG63": {
+  "color": "Blue/White",
+  "family": "ceramic",
+  "hex": "#96A2CE",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LMG67": {
+  "color": "White/Black",
+  "family": "ceramic",
+  "hex": "#25201D",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LMG68": {
+  "color": "Silver/Black",
+  "family": "ceramic",
+  "hex": "#110F0F",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LSC101": {
+  "color": "Black/Black",
+  "family": "steel-powder",
+  "hex": "#BABBBB",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LSC102": {
+  "color": "Red/Black",
+  "family": "steel-powder",
+  "hex": "#9BB2B7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LSC103": {
+  "color": "Royal Blue/Black",
+  "family": "steel-powder",
+  "hex": "#C5C0B2",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LSC104": {
+  "color": "Pink/Black",
+  "family": "steel-powder",
+  "hex": "#BAC1BE",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LSC105": {
+  "color": "Teal",
+  "family": "steel-powder",
+  "hex": "#928C8C",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LSC106": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#93908E",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LSC107": {
+  "color": "White/Black",
+  "family": "steel-powder",
+  "hex": "#8A8A8A",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LSC108": {
+  "color": "Olive Green/Black",
+  "family": "steel-powder",
+  "hex": "#BCBCC0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM033": {
+  "color": "Multi Brown",
+  "family": "steel-powder",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "LTM071": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#BFBBBB",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM072": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#C1C8C5",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM073": {
+  "color": "Blue",
+  "family": "steel-powder",
+  "hex": "#D0CDC6",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM076": {
+  "color": "Silver",
+  "family": "steel-powder",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "LTM5201": {
+  "color": "Light Brown/Silver",
+  "family": "leatherette",
+  "hex": "#272829",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM5202": {
+  "color": "Dark Brown/Silver",
+  "family": "leatherette",
+  "hex": "#684C3D",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM5203": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#A4A3A3",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM5204": {
+  "color": "Rawhide/Silver",
+  "family": "leatherette",
+  "hex": "#2A2C2A",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM5205": {
+  "color": "Gray/Silver",
+  "family": "leatherette",
+  "hex": "#434241",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM5206": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C0C0C0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM5207": {
+  "color": "Pink/Silver",
+  "family": "leatherette",
+  "hex": "#3D3837",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM5208": {
+  "color": "Brown/Silver",
+  "family": "leatherette",
+  "hex": "#BBBABA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM5209": {
+  "color": "Teal/Silver",
+  "family": "leatherette",
+  "hex": "#313233",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM5211": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#1F2626",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM5213": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#242521",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM5251": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#AAA49B",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM5252": {
+  "color": "Black/Rawhide",
+  "family": "leatherette",
+  "hex": "#332E2B",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM5253": {
+  "color": "Black/Gray",
+  "family": "leatherette",
+  "hex": "#C4C4C4",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM5254": {
+  "color": "Black/Rustic",
+  "family": "leatherette",
+  "hex": "#AFABA8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM5255": {
+  "color": "Black/Bamboo",
+  "family": "leatherette",
+  "hex": "#222324",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM5256": {
+  "color": "Black/White",
+  "family": "leatherette",
+  "hex": "#202020",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7002": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#C9C9C9",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7003": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#BFCACD",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7004": {
+  "color": "Royal Blue",
+  "family": "steel-powder",
+  "hex": "#C8C7C3",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7005": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#BECBC5",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7006": {
+  "color": "Teal",
+  "family": "steel-powder",
+  "hex": "#8B8687",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7007": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#908D8D",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7008": {
+  "color": "Light Purple",
+  "family": "steel-powder",
+  "hex": "#C3CDC6",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7009": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#C9CAC5",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7010": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#CBCCCB",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7011": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#CECEC9",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7012": {
+  "color": "Orange",
+  "family": "steel-powder",
+  "hex": "#B5C7CE",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7013": {
+  "color": "Maroon",
+  "family": "steel-powder",
+  "hex": "#C2CDCE",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7014": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#8A8A8A",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7015": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#D2C8D0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7016": {
+  "color": "Yellow",
+  "family": "steel-powder",
+  "hex": "#B1B5BD",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7017": {
+  "color": "Coral",
+  "family": "steel-powder",
+  "hex": "#C0C9CB",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7018": {
+  "color": "Olive Green",
+  "family": "steel-powder",
+  "hex": "#C5C5C6",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7030": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#BFBBBB",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7031": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#827376",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7050": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#BC8360",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7051": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#986A4F",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7065": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#B18852",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7066": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#42616A",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7202": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#CBC7C4",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7203": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#C7C3C0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7204": {
+  "color": "Blue",
+  "family": "steel-powder",
+  "hex": "#D2D0CA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7205": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#CBCDC8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7206": {
+  "color": "Teal",
+  "family": "steel-powder",
+  "hex": "#898587",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7207": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#8F888D",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7208": {
+  "color": "Light Purple",
+  "family": "steel-powder",
+  "hex": "#C9CAC6",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7209": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#D0CCC8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7210": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#D5D2CF",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7211": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#D4D2CF",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7212": {
+  "color": "Orange",
+  "family": "steel-powder",
+  "hex": "#C5CECE",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7213": {
+  "color": "Maroon",
+  "family": "steel-powder",
+  "hex": "#D3D2CF",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7214": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#797979",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7215": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#D9D0D0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7216": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#CDCAC7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7217": {
+  "color": "Yellow",
+  "family": "steel-powder",
+  "hex": "#9E9FA2",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7218": {
+  "color": "Coral",
+  "family": "steel-powder",
+  "hex": "#DCE4E5",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7230": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#BFBBBB",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7231": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#C1C8C5",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7232": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#D0CDC8",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7233": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#D2D2CE",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7234": {
+  "color": "Maroon",
+  "family": "steel-powder",
+  "hex": "#CACDCB",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7235": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#D5D0D1",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7278": {
+  "color": "Orange",
+  "family": "steel-powder",
+  "hex": "#B6C6C8",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7279": {
+  "color": "Yellow",
+  "family": "steel-powder",
+  "hex": "#9E9FA9",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7280": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#BFBBBB",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7281": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#3F3D3D",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7282": {
+  "color": "Warm Sand",
+  "family": "steel-powder",
+  "hex": "#0A0709",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7283": {
+  "color": "Moody Lilac",
+  "family": "steel-powder",
+  "hex": "#2F2C2F",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7284": {
+  "color": "Summer Sage",
+  "family": "steel-powder",
+  "hex": "#2B2829",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7285": {
+  "color": "Blush",
+  "family": "steel-powder",
+  "hex": "#343636",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7290": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#B7815F",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7291": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#8D654D",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7295": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#C39877",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7296": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#4B6278",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7302": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#CECCC9",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7303": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#CAC8C5",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7304": {
+  "color": "Blue",
+  "family": "steel-powder",
+  "hex": "#D2CFC7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7305": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#C5C7C2",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7306": {
+  "color": "Teal",
+  "family": "steel-powder",
+  "hex": "#888688",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7307": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#838082",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7308": {
+  "color": "Light Purple",
+  "family": "steel-powder",
+  "hex": "#85928E",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7309": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#CECAC7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7310": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#D3D2CE",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7311": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#D2CFCC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7312": {
+  "color": "Orange",
+  "family": "steel-powder",
+  "hex": "#C2C7C6",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7313": {
+  "color": "Maroon",
+  "family": "steel-powder",
+  "hex": "#CACDCB",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7314": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#787878",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7315": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#CAC5C3",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7316": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#CBCAC7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7317": {
+  "color": "Yellow",
+  "family": "steel-powder",
+  "hex": "#9D9EA4",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7318": {
+  "color": "Coral",
+  "family": "steel-powder",
+  "hex": "#C9DEE3",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7375": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#BFBBBB",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7376": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#827376",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7377": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#D2D2CE",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7378": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#C1C8C5",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7379": {
+  "color": "Royal Blue",
+  "family": "steel-powder",
+  "hex": "#CFCECA",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7401": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#ABACAC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7402": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#B0B2B7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7403": {
+  "color": "Royal Blue",
+  "family": "steel-powder",
+  "hex": "#ABA89E",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7404": {
+  "color": "Teal",
+  "family": "steel-powder",
+  "hex": "#9C8D8F",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7405": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#BEBDBE",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7406": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#D2D2D0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7407": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#929292",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7408": {
+  "color": "Olive Green",
+  "family": "steel-powder",
+  "hex": "#A5A5A6",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7409": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#8A9D95",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7410": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#A32136",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7411": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#CDCCCA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7412": {
+  "color": "Orange",
+  "family": "steel-powder",
+  "hex": "#A1AAB0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7413": {
+  "color": "Maroon",
+  "family": "steel-powder",
+  "hex": "#AEACAC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7414": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#C5D4D2",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7415": {
+  "color": "Yellow",
+  "family": "steel-powder",
+  "hex": "#9E9FA9",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7416": {
+  "color": "Coral",
+  "family": "steel-powder",
+  "hex": "#A0AFAC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7430": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#BFBBBB",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7431": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#424041",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7432": {
+  "color": "Warm Sand/Ghost Black",
+  "family": "steel-powder",
+  "hex": "#444343",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7433": {
+  "color": "Moody Lilac/Ghost Black",
+  "family": "steel-powder",
+  "hex": "#373A37",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7434": {
+  "color": "Summer Sage/Ghost Black",
+  "family": "steel-powder",
+  "hex": "#3E393E",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7435": {
+  "color": "Blush/Ghost Black",
+  "family": "steel-powder",
+  "hex": "#3A3D3D",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7451": {
+  "color": "Black/Black",
+  "family": "steel-powder",
+  "hex": "#B5B1AC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7452": {
+  "color": "Black/Rawhide",
+  "family": "steel-powder",
+  "hex": "#2A2B2B",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7453": {
+  "color": "Black/Gray",
+  "family": "steel-powder",
+  "hex": "#292A2A",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7454": {
+  "color": "Black/Rustic/Silver",
+  "family": "steel-powder",
+  "hex": "#C4C1BE",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7455": {
+  "color": "Black/Bamboo",
+  "family": "steel-powder",
+  "hex": "#27292A",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7456": {
+  "color": "Black/White",
+  "family": "steel-powder",
+  "hex": "#929393",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM7457": {
+  "color": "Black/Pink",
+  "family": "steel-powder",
+  "hex": "#29221A",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7458": {
+  "color": "Black/Teal",
+  "family": "steel-powder",
+  "hex": "#221C1E",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7470": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#B0805D",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7471": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#94674A",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM7485": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#75909A",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM7486": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#545C69",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM752": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#C5C5C5",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM753": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#AFB3B5",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM754": {
+  "color": "Royal Blue",
+  "family": "steel-powder",
+  "hex": "#BDBCBB",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM755": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#E9EFED",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM756": {
+  "color": "Teal",
+  "family": "steel-powder",
+  "hex": "#9B9899",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM758": {
+  "color": "Light Purple",
+  "family": "steel-powder",
+  "hex": "#EBEEEC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM759": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#C7C7C5",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM760": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#D1D1D1",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM761": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#C9C9C8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM762": {
+  "color": "Orange",
+  "family": "steel-powder",
+  "hex": "#CACED1",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM763": {
+  "color": "Maroon",
+  "family": "steel-powder",
+  "hex": "#B6BABA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM764": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#737373",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM765": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#C0BFC0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM766": {
+  "color": "Yellow",
+  "family": "steel-powder",
+  "hex": "#9D9EA7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM767": {
+  "color": "Coral",
+  "family": "steel-powder",
+  "hex": "#CAD3D3",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM802": {
+  "color": "Black/Silver",
+  "family": "steel-powder",
+  "hex": "#BBBBBB",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM803": {
+  "color": "Red/Silver",
+  "family": "steel-powder",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "LTM804": {
+  "color": "Blue/Silver",
+  "family": "steel-powder",
+  "hex": "#A9A9A8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM805": {
+  "color": "Pink/Silver",
+  "family": "steel-powder",
+  "hex": "#898E8B",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM806": {
+  "color": "Teal/Silver",
+  "family": "steel-powder",
+  "hex": "#817E80",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM807": {
+  "color": "Light Blue/Silver",
+  "family": "steel-powder",
+  "hex": "#848384",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM808": {
+  "color": "Light Purple/Silver",
+  "family": "steel-powder",
+  "hex": "#ECF0EE",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM809": {
+  "color": "Purple/Silver",
+  "family": "steel-powder",
+  "hex": "#C2C3BD",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM810": {
+  "color": "Dark Gray/Silver",
+  "family": "steel-powder",
+  "hex": "#D1D1D1",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM811": {
+  "color": "Navy Blue/Silver",
+  "family": "steel-powder",
+  "hex": "#C5C6C5",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM812": {
+  "color": "Orange/Silver",
+  "family": "steel-powder",
+  "hex": "#ACB0B4",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM813": {
+  "color": "Maroon/Silver",
+  "family": "steel-powder",
+  "hex": "#C1CACA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM814": {
+  "color": "White/Silver",
+  "family": "steel-powder",
+  "hex": "#828282",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM815": {
+  "color": "Green/Silver",
+  "family": "steel-powder",
+  "hex": "#CECACC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM817": {
+  "color": "Coral/Silver",
+  "family": "steel-powder",
+  "hex": "#C4D0D0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM830": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#827376",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM831": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#C7CCC9",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM832": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1D1F1F",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM833": {
+  "color": "Brown",
+  "family": "leatherette",
+  "hex": "#433833",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "LTM834": {
+  "color": "Orange",
+  "family": "leatherette",
+  "hex": "#252627",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM835": {
+  "color": "Yellow",
+  "family": "leatherette",
+  "hex": "#0B0908",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM836": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM837": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2121",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM838": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#8A8A8A",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM852": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#CAC6C3",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM853": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#CDC9C6",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM854": {
+  "color": "Blue",
+  "family": "steel-powder",
+  "hex": "#CFCBC6",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM855": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#969B9A",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM856": {
+  "color": "Teal",
+  "family": "steel-powder",
+  "hex": "#979696",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM857": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#7B7B7C",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM858": {
+  "color": "Light Purple",
+  "family": "steel-powder",
+  "hex": "#939997",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM859": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#CFCDC7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM860": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#DAD2C9",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM861": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#DAD1C7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM862": {
+  "color": "Orange",
+  "family": "steel-powder",
+  "hex": "#D3CFC7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM863": {
+  "color": "Maroon",
+  "family": "steel-powder",
+  "hex": "#CFCECB",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM864": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#8F8986",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM865": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#DCD0C8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM866": {
+  "color": "Yellow",
+  "family": "steel-powder",
+  "hex": "#9E9FA9",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM867": {
+  "color": "Coral",
+  "family": "steel-powder",
+  "hex": "#C0D0D1",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM870": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#BFBBBB",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM871": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#474545",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM880": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#B88260",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM881": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#9C6748",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM890": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#629873",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM891": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#604B6A",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LTM942": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#DCDCDC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM943": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#C1C8C5",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM944": {
+  "color": "Royal Blue",
+  "family": "steel-powder",
+  "hex": "#D4D3D1",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM945": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#C7D6CF",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM946": {
+  "color": "Teal",
+  "family": "steel-powder",
+  "hex": "#928F8F",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM947": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#8F8D8D",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM948": {
+  "color": "Light Purple",
+  "family": "steel-powder",
+  "hex": "#EAF1EC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM949": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#D8D8D5",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM950": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#DADADA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM951": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#D9D9D8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM952": {
+  "color": "Orange",
+  "family": "steel-powder",
+  "hex": "#A9AEB1",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM953": {
+  "color": "Maroon",
+  "family": "steel-powder",
+  "hex": "#BCC1C1",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM954": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#737373",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM955": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#D7D6D7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM956": {
+  "color": "Yellow",
+  "family": "steel-powder",
+  "hex": "#ABAEB7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM957": {
+  "color": "Coral",
+  "family": "steel-powder",
+  "hex": "#BEC2C3",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM972": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#E8E8E8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM973": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#C1C8C5",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LTM974": {
+  "color": "Royal Blue",
+  "family": "steel-powder",
+  "hex": "#DFDFDE",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM975": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#B0B3B1",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM976": {
+  "color": "Teal",
+  "family": "steel-powder",
+  "hex": "#908E8E",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM977": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#928F8E",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM978": {
+  "color": "Light Purple",
+  "family": "steel-powder",
+  "hex": "#DAE3DD",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM979": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#D1D3CA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM980": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#E8E8E8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM981": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#E7E7E6",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM982": {
+  "color": "Orange",
+  "family": "steel-powder",
+  "hex": "#B1B7BA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM983": {
+  "color": "Maroon",
+  "family": "steel-powder",
+  "hex": "#B8C0C1",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM984": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#8A8A8A",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM985": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#DCD8DA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM986": {
+  "color": "Yellow",
+  "family": "steel-powder",
+  "hex": "#9A9CAB",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LTM987": {
+  "color": "Coral",
+  "family": "steel-powder",
+  "hex": "#BED0D4",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB052": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#DEDDDA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB053": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#DCDEDC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB054": {
+  "color": "Royal Blue",
+  "family": "steel-powder",
+  "hex": "#DFDDD8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB055": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#D2E2D8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB056": {
+  "color": "Teal",
+  "family": "steel-powder",
+  "hex": "#A19D9C",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB057": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#969290",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB058": {
+  "color": "Light Purple",
+  "family": "steel-powder",
+  "hex": "#DBE1D9",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB059": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#E4E3D9",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB060": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#DEDDDA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB061": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#DAD8D5",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB062": {
+  "color": "Orange",
+  "family": "steel-powder",
+  "hex": "#D4DCDD",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB063": {
+  "color": "Maroon",
+  "family": "steel-powder",
+  "hex": "#DBE2E2",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB064": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#858583",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB065": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#DFD9DB",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB066": {
+  "color": "Yellow",
+  "family": "steel-powder",
+  "hex": "#A8A8A9",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB067": {
+  "color": "Coral",
+  "family": "steel-powder",
+  "hex": "#BDC2C1",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB068": {
+  "color": "Olive Green",
+  "family": "steel-powder",
+  "hex": "#DDDBDB",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB102": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#D5D5D5",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB103": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#C1C8C5",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LWB104": {
+  "color": "Royal Blue",
+  "family": "steel-powder",
+  "hex": "#DBDAD8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB105": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#C8D5CF",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB106": {
+  "color": "Teal",
+  "family": "steel-powder",
+  "hex": "#7A7778",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB107": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#878585",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB108": {
+  "color": "Light Purple",
+  "family": "steel-powder",
+  "hex": "#B0BDB6",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB109": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#DADBD6",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB110": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#D9D9D8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB111": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#DBDBDA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB112": {
+  "color": "Orange",
+  "family": "steel-powder",
+  "hex": "#B4C6D3",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB113": {
+  "color": "Maroon",
+  "family": "steel-powder",
+  "hex": "#DBDDDD",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB114": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#9C9C9C",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB115": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#D9D7D8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB116": {
+  "color": "Yellow",
+  "family": "steel-powder",
+  "hex": "#A1A4B0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB117": {
+  "color": "Coral",
+  "family": "steel-powder",
+  "hex": "#ABC4C9",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB118": {
+  "color": "Olive Green",
+  "family": "steel-powder",
+  "hex": "#D0D0D2",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB202": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#D2D2D2",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB203": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#C1C8C5",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LWB204": {
+  "color": "Blue",
+  "family": "steel-powder",
+  "hex": "#CEC9C2",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB205": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#B4BFBA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB206": {
+  "color": "Teal",
+  "family": "steel-powder",
+  "hex": "#908C8D",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB207": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#868585",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB208": {
+  "color": "Light Purple",
+  "family": "steel-powder",
+  "hex": "#A1AEA8",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB209": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#D0D1C3",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB210": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#D2D2D2",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB211": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#C1C1BE",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB212": {
+  "color": "Orange",
+  "family": "steel-powder",
+  "hex": "#B1BDC5",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB213": {
+  "color": "Maroon",
+  "family": "steel-powder",
+  "hex": "#CCCFCF",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB214": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#9C9B9C",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB215": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#D0CCCF",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB216": {
+  "color": "Yellow",
+  "family": "steel-powder",
+  "hex": "#B0B2BF",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB217": {
+  "color": "Coral",
+  "family": "steel-powder",
+  "hex": "#A3B6B7",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB218": {
+  "color": "Olive Green",
+  "family": "steel-powder",
+  "hex": "#C4C4CD",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB230": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#BFBBBB",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LWB231": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#827376",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LWB240": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#B38466",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB241": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#996D54",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB250": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#6EA67E",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB251": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#754C4A",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "LWB302": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#D6D7D6",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB303": {
+  "color": "Red",
+  "family": "steel-powder",
+  "hex": "#C1C8C5",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "LWB304": {
+  "color": "Royal Blue",
+  "family": "steel-powder",
+  "hex": "#CAC5BF",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB305": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#D3D8D5",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB306": {
+  "color": "Teal",
+  "family": "steel-powder",
+  "hex": "#949293",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB307": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#938E8D",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB308": {
+  "color": "Light Purple",
+  "family": "steel-powder",
+  "hex": "#DFE3E0",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB309": {
+  "color": "Purple",
+  "family": "steel-powder",
+  "hex": "#D5D5CC",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB310": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#D3D3D3",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB311": {
+  "color": "Navy Blue",
+  "family": "steel-powder",
+  "hex": "#D2D2CF",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB312": {
+  "color": "Orange",
+  "family": "steel-powder",
+  "hex": "#B7C2CA",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB313": {
+  "color": "Maroon",
+  "family": "steel-powder",
+  "hex": "#C2CCCB",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB314": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#909090",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB315": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#D5CFD3",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB316": {
+  "color": "Yellow",
+  "family": "steel-powder",
+  "hex": "#8B8D91",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB317": {
+  "color": "Coral",
+  "family": "steel-powder",
+  "hex": "#D1DFE2",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWB318": {
+  "color": "Olive Green",
+  "family": "steel-powder",
+  "hex": "#CCCBD2",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "LWBL1": {
+  "color": "Black",
+  "family": "plastic",
+  "hex": "#E6E6E6",
+  "source": "rule",
+  "tone": "light"
+ },
+ "LWBL2": {
+  "color": "Black",
+  "family": "plastic",
+  "hex": "#E6E6E6",
+  "source": "rule",
+  "tone": "light"
+ },
+ "LZB200": {
+  "color": "Black",
+  "family": "lazerburst",
+  "hex": "#F2F2F2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "LZB201": {
+  "color": "Blue",
+  "family": "lazerburst",
+  "hex": "#F2F2F2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "LZB250": {
+  "color": "Black",
+  "family": "lazerburst",
+  "hex": "#F2F2F2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "LZB251": {
+  "color": "Blue",
+  "family": "lazerburst",
+  "hex": "#F2F2F2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "NP8": {
+  "color": "Black",
+  "family": "brass",
+  "hex": "#C9A46A",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PCG100": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EBEBEB",
+  "opacity": 0.55,
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "PCG101": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PCG105": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PCG106": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PCG107": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PCG115": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PCG116": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#ECECEC",
+  "opacity": 0.55,
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "PCG117": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PCG118": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PCG125": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#E8EAEC",
+  "opacity": 0.55,
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "PCG200": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEBEA",
+  "opacity": 0.55,
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "PCG205": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "PCG211": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#E2E2E2",
+  "opacity": 0.55,
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "PCG212": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#E2E2E2",
+  "opacity": 0.55,
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "PCG213": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#D3D3D3",
+  "opacity": 0.55,
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "PCG300": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EBEBEB",
+  "opacity": 0.55,
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "PCG305": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PCG310": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PCG350": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PCG351": {
+  "color": "Clear",
+  "family": "glass",
+  "frost": true,
+  "hex": "#EAEAEB",
+  "opacity": 0.55,
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PKR303": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PKR305": {
+  "color": "Gray/Black",
+  "family": "leatherette",
+  "hex": "#24211C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PKR309": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PKR310": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PNA210": {
+  "color": "Rosewood",
+  "family": "wood",
+  "hex": "#C2AB70",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PNA28": {
+  "color": "Rosewood",
+  "family": "wood",
+  "hex": "#C2AB70",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "PNA410": {
+  "color": "Rosewood",
+  "family": "wood",
+  "hex": "#C2AB70",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PNA48": {
+  "color": "Rosewood",
+  "family": "wood",
+  "hex": "#C2AB70",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PNB210": {
+  "color": "Black",
+  "family": "wood",
+  "hex": "#E8C589",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "PNB28": {
+  "color": "Black",
+  "family": "wood",
+  "hex": "#EDC789",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "PTF146": {
+  "color": "Brown",
+  "family": "wood",
+  "hex": "#6C4A23",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTF157": {
+  "color": "Brown",
+  "family": "wood",
+  "hex": "#6C4A23",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTF546": {
+  "color": "Light Brown",
+  "family": "wood",
+  "hex": "#403837",
+  "source": "sku-measured",
+  "tone": "dark"
+ },
+ "PTF557": {
+  "color": "Brown",
+  "family": "wood",
+  "hex": "#6C4A23",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTF646D": {
+  "color": "Brown",
+  "family": "wood",
+  "hex": "#6C4A23",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTF657D": {
+  "color": "Brown",
+  "family": "wood",
+  "hex": "#6C4A23",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH101": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH102": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH103": {
+  "color": "Rectangle Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH104": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH105": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH106": {
+  "color": "Rectangle Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH107": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH108": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH109": {
+  "color": "Rectangle Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH110": {
+  "color": "Rectangle Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH111": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH113": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH114": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH115": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH116": {
+  "color": "Orange",
+  "family": "leatherette",
+  "hex": "#252627",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH131": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH132": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH133": {
+  "color": "Hex Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH134": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH135": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH136": {
+  "color": "Hex Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH137": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH138": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH139": {
+  "color": "Hex Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH140": {
+  "color": "Hex Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH141": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH143": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH144": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH145": {
+  "color": "Brown",
+  "family": "leatherette",
+  "hex": "#433833",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH146": {
+  "color": "Orange",
+  "family": "leatherette",
+  "hex": "#252627",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH171": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH172": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH173": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH174": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH175": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH176": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH177": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH178": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH179": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH180": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH181": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH183": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH184": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH185": {
+  "color": "Football",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH186": {
+  "color": "Football",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH187": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH188": {
+  "color": "Medium Brown",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH189": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH190": {
+  "color": "Blush",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH191": {
+  "color": "Light Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH192": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH193": {
+  "color": "Dark Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH194": {
+  "color": "Light Tan",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH195": {
+  "color": "Light Green",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH201": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH202": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH203": {
+  "color": "Rectangle Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH204": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH205": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH206": {
+  "color": "Rectangle Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH207": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH208": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH209": {
+  "color": "Rectangle Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH210": {
+  "color": "Rectangle Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH211": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH213": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH214": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH215": {
+  "color": "Brown",
+  "family": "leatherette",
+  "hex": "#433833",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH216": {
+  "color": "Orange",
+  "family": "leatherette",
+  "hex": "#252627",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH231": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH232": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH233": {
+  "color": "Hex Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH234": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH235": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH236": {
+  "color": "Hex Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH237": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH238": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH239": {
+  "color": "Hex Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH240": {
+  "color": "Hex Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH241": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH243": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH244": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH245": {
+  "color": "Football",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH246": {
+  "color": "Orange",
+  "family": "leatherette",
+  "hex": "#252627",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH271": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH272": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH273": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH274": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH275": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH276": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH277": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH278": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH279": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH280": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH281": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH283": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH284": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH285": {
+  "color": "Football",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH286": {
+  "color": "Basketball",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH287": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH288": {
+  "color": "Medium Brown",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH289": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH290": {
+  "color": "Blush",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH291": {
+  "color": "Light Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH292": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH293": {
+  "color": "Dark Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH294": {
+  "color": "Light Tan",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH295": {
+  "color": "Light Green",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH301": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH302": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH303": {
+  "color": "Round Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH304": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH305": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH306": {
+  "color": "Round Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH307": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH308": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH309": {
+  "color": "Round Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH310": {
+  "color": "Round Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH311": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH313": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH314": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH315": {
+  "color": "Brown",
+  "family": "leatherette",
+  "hex": "#433833",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH316": {
+  "color": "Brown",
+  "family": "leatherette",
+  "hex": "#433833",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH351": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH352": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH353": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH354": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH355": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH356": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH357": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH358": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH359": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH360": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH361": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH363": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH364": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH365": {
+  "color": "Football",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH366": {
+  "color": "Basketball",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH367": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH368": {
+  "color": "Medium Brown",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH369": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH370": {
+  "color": "Blush",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH371": {
+  "color": "Light Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH372": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH373": {
+  "color": "Dark Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH374": {
+  "color": "Light Tan",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH375": {
+  "color": "Light Green",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH401": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH402": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH403": {
+  "color": "Round Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH404": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH405": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH406": {
+  "color": "Round Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH407": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH408": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH409": {
+  "color": "Round Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH410": {
+  "color": "Round Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH411": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH413": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH414": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH415": {
+  "color": "Brown",
+  "family": "leatherette",
+  "hex": "#433833",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH416": {
+  "color": "Orange",
+  "family": "leatherette",
+  "hex": "#252627",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH451": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH452": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH453": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH454": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH455": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH456": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH457": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH458": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH459": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH460": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH461": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH463": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH464": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH465": {
+  "color": "Football",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH466": {
+  "color": "Basketball",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH467": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH468": {
+  "color": "Medium Brown",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH469": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH470": {
+  "color": "Blush",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH471": {
+  "color": "Light Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH472": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH473": {
+  "color": "Dark Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH474": {
+  "color": "Light Tan",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH475": {
+  "color": "Light Green",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH501": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH502": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH503": {
+  "color": "Oval Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH504": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH505": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH506": {
+  "color": "Oval Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH507": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH508": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH509": {
+  "color": "Oval Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH510": {
+  "color": "Oval Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH511": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH513": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH514": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH515": {
+  "color": "Brown",
+  "family": "leatherette",
+  "hex": "#433833",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH516": {
+  "color": "Orange",
+  "family": "leatherette",
+  "hex": "#252627",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH551": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH552": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH553": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH554": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH555": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH556": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH557": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH558": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH559": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH560": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH561": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH563": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH564": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH565": {
+  "color": "Football",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH566": {
+  "color": "Basketball",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH567": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH568": {
+  "color": "Medium Brown",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH569": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH570": {
+  "color": "Blush",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH571": {
+  "color": "Light Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH572": {
+  "color": "Light Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH573": {
+  "color": "Dark Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH574": {
+  "color": "Light Tan",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH575": {
+  "color": "Light Green",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH601": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH602": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH603": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH604": {
+  "color": "Silver",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH605": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH606": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH607": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH608": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH609": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH610": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH611": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH613": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH614": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH615": {
+  "color": "Brown",
+  "family": "leatherette",
+  "hex": "#433833",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH616": {
+  "color": "Orange",
+  "family": "leatherette",
+  "hex": "#252627",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH651": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH652": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH653": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH654": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH655": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH656": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH657": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH658": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH659": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH660": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH661": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH663": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH664": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH665": {
+  "color": "Football",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH666": {
+  "color": "Basketball",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH667": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH668": {
+  "color": "Medium Brown",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH669": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH670": {
+  "color": "Blush",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH671": {
+  "color": "Light Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH672": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH673": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH674": {
+  "color": "Light Tan",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH675": {
+  "color": "Light Green",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH701": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH702": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH703": {
+  "color": "Square Black/Silver",
+  "family": "leatherette",
+  "hex": "#BEBEBE",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH704": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH705": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH706": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH707": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH708": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH709": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH710": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH711": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH713": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH714": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH715": {
+  "color": "Brown",
+  "family": "leatherette",
+  "hex": "#433833",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH716": {
+  "color": "Orange",
+  "family": "leatherette",
+  "hex": "#252627",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH751": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH752": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH753": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH754": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH755": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH756": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH757": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH758": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH759": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH760": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH761": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH763": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH764": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH765": {
+  "color": "Football",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH766": {
+  "color": "Basketball",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH767": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH768": {
+  "color": "Medium Brown",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH769": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH770": {
+  "color": "Blush",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH771": {
+  "color": "Light Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH772": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH773": {
+  "color": "Dark Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH774": {
+  "color": "Light Tan",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH775": {
+  "color": "Light Green",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH801": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH802": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH803": {
+  "color": "Square Black/Silver",
+  "family": "leatherette",
+  "hex": "#BEBEBE",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH804": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH805": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH806": {
+  "color": "Square Black/Gold",
+  "family": "leatherette",
+  "hex": "#CAAE86",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH807": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH808": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH809": {
+  "color": "Square Blue/Silver",
+  "family": "leatherette",
+  "hex": "#BDBDBC",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH810": {
+  "color": "Square Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PTH811": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH813": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH814": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH815": {
+  "color": "Brown",
+  "family": "leatherette",
+  "hex": "#433833",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH816": {
+  "color": "Orange",
+  "family": "leatherette",
+  "hex": "#252627",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH851": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH852": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH853": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH854": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH855": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH856": {
+  "color": "Square Black/Gold",
+  "family": "leatherette",
+  "hex": "#CAAE86",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH857": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH858": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH859": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH860": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH861": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH863": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH864": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH865": {
+  "color": "Football",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH866": {
+  "color": "Basketball",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH867": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH868": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH869": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH870": {
+  "color": "Blush",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH871": {
+  "color": "Light Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH872": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH873": {
+  "color": "Dark Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH874": {
+  "color": "Light Tan",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH875": {
+  "color": "Light Green",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH901": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH902": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH903": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH904": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH905": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH906": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH907": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH908": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH909": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH910": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH911": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH913": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH914": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH915": {
+  "color": "Football",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH916": {
+  "color": "Basketball",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH917": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH918": {
+  "color": "Medium Brown",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH919": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH920": {
+  "color": "Blush",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH921": {
+  "color": "Light Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH922": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH923": {
+  "color": "Dark Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH924": {
+  "color": "Light Tan",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH925": {
+  "color": "Light Green",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH951": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH952": {
+  "color": "Rawhide",
+  "family": "leatherette",
+  "hex": "#282626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH953": {
+  "color": "Black/Silver",
+  "family": "leatherette",
+  "hex": "#C1C0C2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH954": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH955": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH956": {
+  "color": "Black/Gold",
+  "family": "leatherette",
+  "hex": "#D6B27E",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH957": {
+  "color": "Pink",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH958": {
+  "color": "Teal",
+  "family": "leatherette",
+  "hex": "#232323",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH959": {
+  "color": "Blue/Silver",
+  "family": "leatherette",
+  "hex": "#C3C3C0",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH960": {
+  "color": "Rustic/Gold",
+  "family": "leatherette",
+  "hex": "#D0AE7C",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "PTH961": {
+  "color": "Red",
+  "family": "leatherette",
+  "hex": "#242626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH963": {
+  "color": "White",
+  "family": "leatherette",
+  "hex": "#1F2021",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH964": {
+  "color": "Purple",
+  "family": "leatherette",
+  "hex": "#282824",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH965": {
+  "color": "Football",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH966": {
+  "color": "Basketball",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH967": {
+  "color": "Light Brown",
+  "family": "leatherette",
+  "hex": "#2B2828",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH968": {
+  "color": "Medium Brown",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH969": {
+  "color": "Dark Brown",
+  "family": "leatherette",
+  "hex": "#2A2C2C",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH970": {
+  "color": "Blush",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH971": {
+  "color": "Light Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH972": {
+  "color": "Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "group-median",
+  "tone": "dark"
+ },
+ "PTH973": {
+  "color": "Dark Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH974": {
+  "color": "Light Tan",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PTH975": {
+  "color": "Light Gray",
+  "family": "leatherette",
+  "hex": "#262626",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "PWR801C": {
+  "color": "Black",
+  "family": "aluminum",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PWR802C": {
+  "color": "Red",
+  "family": "aluminum",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "PWR803C": {
+  "color": "Blue",
+  "family": "aluminum",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "RA210": {
+  "color": "Red Alder",
+  "family": "wood",
+  "hex": "#6C4A23",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "RA28": {
+  "color": "Red Alder",
+  "family": "wood",
+  "hex": "#6C4A23",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "SLT003": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "SLT004": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "SLT010": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "SLT011": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "SLT020": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "SLT021": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "SLT030": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "SLT031": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "SLT040": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "SLT041": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "SLT042": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "SLT050": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "SLT051": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "SLT060": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9E9D9A",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "SLT061": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#999894",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "SLT062": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9F9E99",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "SLT071": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#92918C",
+  "source": "sku-measured",
+  "tone": "light"
+ },
+ "SLT085": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "SLT086": {
+  "color": "Charcoal Gray",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "SLT087": {
+  "color": "Charcoal Gray/Brown",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "rule",
+  "tone": "light"
+ },
+ "SM11W": {
+  "color": "White",
+  "family": "ceramic",
+  "hex": "#2B2B2B",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "SM15W": {
+  "color": "White",
+  "family": "ceramic",
+  "hex": "#2B2B2B",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "STM622": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#827376",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "STM631": {
+  "color": "Brushed Silver",
+  "family": "steel-powder",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "STM632": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#827376",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "TM-FM-AZR": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#8C8686",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "TM-FM-BAY": {
+  "color": "Olive Green",
+  "family": "steel-powder",
+  "hex": "#C8C8CC",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "TM-FM-BLK": {
+  "color": "Black",
+  "family": "steel-powder",
+  "hex": "#BFBBBB",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "TM-FM-CHA": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#D4D2D2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "TM-FM-CRM": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#827376",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "TM-FM-EUC": {
+  "color": "Light Blue",
+  "family": "steel-powder",
+  "hex": "#8C8686",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "TM-FM-FOG": {
+  "color": "Dark Gray",
+  "family": "steel-powder",
+  "hex": "#D4D2D2",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "TM-FM-FRS": {
+  "color": "Green",
+  "family": "steel-powder",
+  "hex": "#D5D0D1",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "TM-FM-HPK": {
+  "color": "Pink",
+  "family": "steel-powder",
+  "hex": "#C7CCC9",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "TM-FM-LIL": {
+  "color": "Light Purple",
+  "family": "steel-powder",
+  "hex": "#CED4D1",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "TM-FM-ROS": {
+  "color": "Coral",
+  "family": "steel-powder",
+  "hex": "#C0D0D1",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "TM-FM-WHT": {
+  "color": "White",
+  "family": "steel-powder",
+  "hex": "#827376",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "WBX11": {
+  "color": "Rosewood",
+  "family": "wood",
+  "hex": "#C2AB70",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "WBX21": {
+  "color": "Black",
+  "family": "wood",
+  "hex": "#EAC689",
+  "source": "group-median",
+  "tone": "light"
+ },
+ "WBX31": {
+  "color": "Bamboo",
+  "family": "wood",
+  "hex": "#6C4A23",
+  "source": "rule",
+  "tone": "dark"
+ },
+ "WCH130": {
+  "color": "Black",
+  "family": "aluminum",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "WCH131": {
+  "color": "Copper",
+  "family": "aluminum",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "WCH132": {
+  "color": "Peacock Green",
+  "family": "aluminum",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "WCH136": {
+  "color": "Black",
+  "family": "aluminum",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "WCH137": {
+  "color": "Copper",
+  "family": "aluminum",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "WCH138": {
+  "color": "Peacock Green",
+  "family": "aluminum",
+  "hex": "#BFBBBB",
+  "source": "rule",
+  "tone": "light"
+ },
+ "WS101": {
+  "color": "Natural Wood",
+  "family": "slate",
+  "hex": "#9C9A96",
+  "source": "rule",
+  "tone": "light"
+ },
+ "WS125": {
+  "color": "Black",
+  "family": "lazerburst",
+  "hex": "#F2F2F2",
+  "source": "rule",
+  "tone": "light"
+ }
+}

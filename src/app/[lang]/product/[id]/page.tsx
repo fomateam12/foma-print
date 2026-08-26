@@ -13,6 +13,7 @@ import {
   Package,
   Box,
   Scan,
+  Palette,
 } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProductGrid } from "@/components/product-grid";
@@ -235,7 +236,8 @@ export default async function ProductPage({
           {product.size ||
           weightLb ||
           product.dimensions ||
-          product.engravingArea ? (
+          product.engravingArea ||
+          product.engraveColor ? (
             <dl className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2">
               {product.size ? (
                 <div className="flex items-center gap-2 rounded-xl border border-border bg-background/60 px-3 py-2 text-sm">
@@ -270,6 +272,37 @@ export default async function ProductPage({
                   </dt>
                   <dd className="text-muted-foreground">
                     {product.engravingArea}
+                  </dd>
+                </div>
+              ) : null}
+              {/* Engrave colour is a fixed property of material + coating
+                  (black powder-coat reveals steel, black/gold leatherette
+                  reveals gold, glass frosts) — shown as information, never
+                  offered as a choice. Source: src/data/engraving-colors.json. */}
+              {product.engraveColor ? (
+                <div className="flex items-center gap-2 rounded-xl border border-border bg-background/60 px-3 py-2 text-sm">
+                  <Palette className="size-4 shrink-0 text-brand-strong" />
+                  <dt className="font-medium text-foreground">
+                    {t.engraveColor}
+                  </dt>
+                  <dd className="flex items-center gap-2 text-muted-foreground">
+                    <span
+                      aria-hidden="true"
+                      className="inline-block size-4 rounded-full border border-border"
+                      style={{
+                        backgroundColor: product.engraveColor,
+                        opacity: product.engraveFrost
+                          ? product.engraveOpacity ?? 0.55
+                          : 1,
+                      }}
+                    />
+                    <span>
+                      {product.engraveFrost
+                        ? t.engraveFrost
+                        : product.engraveTone === "dark"
+                          ? t.engraveToneDark
+                          : t.engraveToneLight}
+                    </span>
                   </dd>
                 </div>
               ) : null}

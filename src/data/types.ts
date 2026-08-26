@@ -60,6 +60,18 @@ export interface Product {
    *  rectangular ("63 × 55 mm"). Only populated when the supplier ships a
    *  value. */
   engravingArea?: string;
+  /** Colour the engraved area turns after lasering — a property of the
+   *  product's material + coating, NOT a customer choice (black powder-coat
+   *  reveals silver steel, black/gold leatherette reveals gold, glass
+   *  frosts). Measured from supplier decorated-vs-blank photo pairs; see
+   *  scripts/engrave-color/ and src/data/engraving-colors.json. */
+  engraveColor?: string;
+  /** "light" or "dark" relative to the coating — drives preview contrast. */
+  engraveTone?: "light" | "dark";
+  /** Glass / acrylic: the mark is a translucent frost layer, not paint.
+   *  Render `engraveColor` at `engraveOpacity` over the product photo. */
+  engraveFrost?: boolean;
+  engraveOpacity?: number;
   /** Bucket label that mapped this SKU to a shipping row. Useful for the
    *  spec-card label and for QA when reviewing the bucket join. */
   shippingType?: string;

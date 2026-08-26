@@ -349,6 +349,10 @@
     "weight": "Weight",
     "dimensions": "Dimensions",
     "engravingArea": "Engraving area",
+    "engraveColor": "Engraves in",
+    "engraveToneLight": "light mark",
+    "engraveToneDark": "dark mark",
+    "engraveFrost": "frosted (translucent)",
     "personalizationTitle": "What you can personalize",
     "fontStyle": "Font style",
     "fontOptions": [
