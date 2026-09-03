@@ -27,8 +27,10 @@ export function pricedSkuCount(): number {
   return partnerPrices.size;
 }
 
-/** Flat decoration fees, in USD — mirror the xlsx so copy stays in sync. */
-export const ENGRAVING_FEES = { front: 4, back: 2, handling: 1 } as const;
+/** Flat decoration fees, in USD — mirror the xlsx so copy stays in sync.
+ *  back was 2 until 2026-09-03; corrected to 3 to match the terms quoted
+ *  to resellers by email (operator decision, Eymen). */
+export const ENGRAVING_FEES = { front: 4, back: 3, handling: 1 } as const;
 
 /** SKUs the operator pulled from the partner catalog only (2026-07-05):
  *  the Brushed Silver / White 30 oz tumbler color cards stay on the
