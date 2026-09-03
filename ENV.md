@@ -23,9 +23,14 @@ and in `.env.local` for local dev. `.env*` is gitignored.
 | `GOOGLE_SHEETS_PRIVATE_KEY` | Reseller-application Sheets sync — service-account private key, `\n`-escaped |
 | `GOOGLE_SHEETS_SPREADSHEET_ID` | Reseller-application Sheets sync — target spreadsheet ID (from its URL) |
 | `GOOGLE_SHEETS_TAB_NAME` | Optional — sheet tab name, defaults to `Reseller Applications` |
+| `R2_ACCOUNT_ID` | Cloudflare account id — signs the private catalog-PDF reads |
+| `R2_ACCESS_KEY_ID` / `R2_SECRET_ACCESS_KEY` | R2 API token (Object **Read** on `fomaprint-catalog` is enough) |
+| `R2_CATALOG_BUCKET` | Optional — private PDF bucket, defaults to `fomaprint-catalog` |
 
 ## Notes
 - The codebase reads only the names above (verified via `grep process.env`).
+- Without the three `R2_*` values `/catalog/pdf/[slug]` fails shut (404) — the
+  PDFs are never served from a public origin as a fallback.
 - No Supabase keys (the project does not use Supabase).
 - Rotate any secret that was ever pasted into chat, a PR, or committed — assume
   it is public.
