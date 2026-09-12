@@ -1,4 +1,5 @@
 import { cloudinary } from "@/lib/format";
+import { site } from "@/lib/site";
 
 /**
  * Resolve a product image reference to a plain fetchable URL for contexts
@@ -19,7 +20,11 @@ const R2_PUBLIC_BASE = "https://pub-7dbfe9f161d34085b011aea74e8f75ac.r2.dev";
  * it get resized downstream.
  */
 export function catalogImageAbsoluteUrl(src: string): string {
-  return src.startsWith("/products/") ? `${R2_PUBLIC_BASE}${src}` : src;
+  if (src.startsWith("/products/")) return `${R2_PUBLIC_BASE}${src}`;
+  // Self-hosted files under public/ (e.g. /foma/{SKU}/...) — prefix the site
+  // origin so external consumers get a fetchable URL, not a relative path.
+  if (src.startsWith("/")) return `${site.url.replace(/\/$/, "")}${src}`;
+  return src;
 }
 
 export function catalogImageUrl(src: string, width = 400): string {
