@@ -59,13 +59,18 @@ export async function appendResellerApplicationRow(
     data.website ?? "",
     data.businessType,
     data.monthlyVolume,
-    data.currentStatus,
-    (data.salesChannels ?? []).join(", "),
     data.products,
     data.hearAboutUs ?? "",
     data.hearAboutUsOther ?? "",
     data.about ?? "",
     traceId ?? "",
+    // Appended after traceId rather than slotted in beside monthlyVolume, so
+    // columns A–M keep the exact meaning they had before these fields existed.
+    // The historical rows stay readable as-is and the sheet needs no manual
+    // column insert; older rows simply have N and O empty. Keep new fields at
+    // the end for the same reason.
+    data.currentStatus,
+    (data.salesChannels ?? []).join(", "),
   ];
 
   try {
