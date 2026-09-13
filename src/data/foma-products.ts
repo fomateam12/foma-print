@@ -852,6 +852,66 @@ export const fomaProducts: Product[] = [
     ],
   },
   {
+    id: "foma-charcuterie-board-drawers",
+    name: "Bamboo Charcuterie Board Set with Drawers – 14.25 × 14.25 × 1.5 in",
+    sku: "FM-CHAR-DRW-1425",
+    size: "14.25 × 14.25 × 1.5 in",
+    engravingArea: "100 × 100 mm",
+    // FOMA's own Amazon listing (ASIN B0GM2KCR5Z) retails at $34.95. basePrice
+    // here is a hidden reference (B2B pricing is gated behind "Add to quote").
+    basePrice: 34.95,
+    // Self-hosted under public/foma/ (no R2 write access on this machine);
+    // the next/image loader passes non-/products/ paths through untouched.
+    image: "/foma/FM-CHAR-DRW-1425/FM-CHAR-DRW-1425.jpg",
+    imageFull: "/foma/FM-CHAR-DRW-1425/FM-CHAR-DRW-1425.jpg",
+    images: [
+      "/foma/FM-CHAR-DRW-1425/FM-CHAR-DRW-1425.jpg",
+      "/foma/FM-CHAR-DRW-1425/FM-CHAR-DRW-1425_2.jpg",
+      "/foma/FM-CHAR-DRW-1425/FM-CHAR-DRW-1425_3.jpg",
+      "/foma/FM-CHAR-DRW-1425/FM-CHAR-DRW-1425_4.jpg",
+      "/foma/FM-CHAR-DRW-1425/FM-CHAR-DRW-1425_5.jpg",
+      "/foma/FM-CHAR-DRW-1425/FM-CHAR-DRW-1425_6.jpg",
+      "/foma/FM-CHAR-DRW-1425/FM-CHAR-DRW-1425_7.jpg",
+      "/foma/FM-CHAR-DRW-1425/FM-CHAR-DRW-1425_8.jpg",
+    ],
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subcategorySlug: "cutting-boards-cake-pans-kitchen",
+    subcategoryName: "Cutting Boards, Cake Pans, Kitchen",
+    dimensions: "14.25 × 14.25 × 1.5 in",
+    weightLb: 4,
+    description:
+      "Personalized bamboo charcuterie & cheese board set with two slide-out drawers and a four-piece cheese tool set — a 14.25 in square serving board laser-engraved to order. Ships next day.",
+    longDescription:
+      "A 14.25 × 14.25 × 1.5 in bamboo charcuterie board with two slide-out drawers that hold the included four-piece cheese tool set. The 9.5 × 9.5 in main serving surface is framed by a deep rim to keep cheese, charcuterie, fruit and snacks in place, and the smooth bamboo is laser-engraved to order with a family name, monogram, names & date or custom design — choose from the full design chart. Doubles as a cutting and serving board. A standout wedding, anniversary, housewarming, Valentine's Day, birthday or holiday gift for him or her. Ships next day.",
+    badges: ["New"],
+    leadTimeDays: 1,
+    personalization: [
+      {
+        id: "design",
+        label: "Engraving design",
+        type: "select",
+        required: true,
+        options: [
+          "Family name",
+          "Monogram / initial",
+          "Names & date",
+          "Custom logo or text",
+        ],
+      },
+      {
+        id: "engraving-text",
+        label: "Engraving text",
+        type: "text",
+        required: true,
+        placeholder: "Family name, names & date, or monogram",
+        maxLength: 40,
+        helpText: "The name, names+date or text we'll laser-engrave on the board.",
+      },
+    ],
+  },
+  {
     id: "foma-toiletry-bag-one-layer",
     name: "Single Layer PU Leather Toiletry Bag - Brown",
     sku: "FM-DOPP-SL-BRN",

@@ -163,31 +163,31 @@ const SUB_OVERRIDES: Record<string, SubAssignment> = {
   // category nav automatically (productCount > 0 filter in toCategory).
   // LTM5210/5212 and LTM833/834 are currently in the hidden-SKU list; they are
   // assigned here too so a future restore lands in the right tile.
-  LTM5201: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5202: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5203: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5204: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5205: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5206: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5207: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5208: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5209: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5210: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5211: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5212: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5213: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
-  LTM5251: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
-  LTM5252: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
-  LTM5253: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
-  LTM5254: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
-  LTM5255: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
-  LTM5256: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
-  LTM832: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
-  LTM833: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
-  LTM834: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
-  LTM835: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
-  LTM836: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
-  LTM837: { subId: "130", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
+  LTM5201: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5202: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5203: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5204: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5205: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5206: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5207: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5208: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5209: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5210: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5211: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5212: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5213: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Leatherette Grip Tumbler with Standard Lid" },
+  LTM5251: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
+  LTM5252: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
+  LTM5253: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
+  LTM5254: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
+  LTM5255: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
+  LTM5256: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Black Leatherette Tumbler with Slider Lid" },
+  LTM832: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
+  LTM833: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
+  LTM834: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
+  LTM835: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
+  LTM836: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
+  LTM837: { subId: "136", subSlug: "leatherette-tumblers", subName: "20 oz. Sport Tumbler with Slider Lid" },
   LLF157: { subId: "104", subSlug: "photo-frames-medium", subName: "Medium Photo Frames (5x7)" },
   // Wallets split into 3 type subcategories (Strap / Bifold+FlipID / Bifold).
   GFT1285: { subId: "107", subSlug: "wallets-bifold-flip-id", subName: "Leatherette Bifold Wallet with Flip ID" },
@@ -8374,7 +8374,11 @@ const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
     // subcategoryName per product, so the page groups them into labelled
     // blocks and "Browse by type" chips instead of three separate tiles —
     // which the two-level /category/[slug]/[subSlug] route cannot express.
-    { subId: "130", slug: "leatherette-tumblers", name: "Leatherette Tumblers", count: 0 },
+    // subId 136: this tile was born as 130 (3 Aug) and the patches split (16 Aug)
+    // reused 130-134 — subSlugBySubId is last-writer-wins, so every LTM SKU
+    // silently landed in drinkware/rectangle-patches and this tile vanished
+    // (0 products → dropped → /category/drinkware/leatherette-tumblers 404).
+    { subId: "136", slug: "leatherette-tumblers", name: "Leatherette Tumblers", count: 0 },
   ],
   "travel-accessories": [
     { subId: "96", slug: "passport-holders", name: "Passport Holders", count: 0 },
@@ -9190,6 +9194,22 @@ function normalizeCatalog(): { products: RawProduct[]; categories: RawCategory[]
   for (const t of [...Object.values(GIFTS_CATS), ...Object.values(PROMOTED_CATS)]) {
     if (ADDED_SUBCATEGORIES[t.slug] && !categories.some((c) => c.slug === t.slug)) {
       categories.push({ id: t.id, slug: t.slug, name: t.name, subcategories: [] });
+    }
+  }
+
+  // A subId is the key SUB_OVERRIDES routes products by (subSlugBySubId is
+  // last-writer-wins), so two ADDED_SUBCATEGORIES tiles sharing one id means
+  // one tile silently swallows the other's products. Fail the build instead.
+  const seenSubIds = new Map<string, string>();
+  for (const [catSlug, subs] of Object.entries(ADDED_SUBCATEGORIES)) {
+    for (const sc of subs) {
+      const prev = seenSubIds.get(sc.subId);
+      if (prev) {
+        throw new Error(
+          `ADDED_SUBCATEGORIES: subId ${sc.subId} used by both ${prev} and ${catSlug}/${sc.slug} — pick an unused id`,
+        );
+      }
+      seenSubIds.set(sc.subId, `${catSlug}/${sc.slug}`);
     }
   }
 
