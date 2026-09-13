@@ -9,7 +9,7 @@ import {
   getProductsBySubcategory,
 } from "@/data/catalog";
 import { catalogImageUrl } from "@/lib/catalog-image";
-import { categoryCatalogPdfUrl } from "@/lib/catalog-pdf";
+import { catalogPdfPath } from "@/lib/catalog-pdf";
 import { inPartnerCatalog } from "@/lib/partner-prices";
 import { site } from "@/lib/site";
 
@@ -71,7 +71,7 @@ export default async function CatalogCategoryPage({
           {/* This category on its own, as a PDF (user request) — blank price,
               engraving surcharge and engraved total for every product. */}
           <a
-            href={categoryCatalogPdfUrl(category.slug)}
+            href={catalogPdfPath(category.slug)}
             className="mt-5 inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-4 py-2 text-sm font-medium text-brand-strong transition-colors hover:border-brand-strong/50"
           >
             <FileDown className="size-4" />

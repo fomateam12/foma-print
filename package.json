@@ -16,6 +16,7 @@
     "@hookform/resolvers": "^5.4.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/blob": "^2.5.0",
+    "aws4fetch": "^1.0.20",
     "class-variance-authority": "^0.7.1",
     "cloudinary": "^2.10.0",
     "clsx": "^2.1.1",
