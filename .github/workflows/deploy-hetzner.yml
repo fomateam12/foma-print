@@ -1,0 +1,42 @@
+# Production deploy: every push to main rebuilds www.fomaprint.com on the
+# Hetzner host. The runner only opens an SSH session; the key is pinned on the
+# server to /usr/local/bin/fomaprint-deploy (deploy/hetzner/deploy.sh), which
+# pulls main, builds, health-checks and rolls back on failure. No checkout and
+# no third-party actions, so nothing from the repo runs with the key in reach.
+name: Deploy to Hetzner
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-hetzner
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Build and swap on the server
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          ssh -i ~/.ssh/deploy_key \
+            -o StrictHostKeyChecking=yes \
+            -o ServerAliveInterval=30 \
+            "root@$DEPLOY_HOST" "$GITHUB_SHA"
+
+      - name: Verify from outside
+        run: |
+          curl -fsS -o /dev/null -w "home %{http_code} in %{time_total}s\n" https://www.fomaprint.com/
