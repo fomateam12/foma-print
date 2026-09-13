@@ -19,7 +19,18 @@ import { CATEGORY_CROSS_LINKS } from "@/lib/category-cross-links";
 import { getDictionary } from "@/lib/dictionaries";
 import { LOCALES, isLocale } from "@/lib/i18n";
 import { categoryBlurb, categoryName, subcategoryName } from "@/lib/catalog-i18n";
-import { alternatesFor } from "@/lib/seo";
+import {
+  alternatesFor,
+  breadcrumbJsonLd,
+  faqJsonLd,
+  itemListJsonLd,
+} from "@/lib/seo";
+import {
+  editorialFor,
+  editorialMetaDescription,
+} from "@/data/category-editorial";
+import { CategoryEditorial } from "@/components/category-editorial";
+import { JsonLd } from "@/components/json-ld";
 
 export function generateStaticParams() {
   return LOCALES.flatMap((lang) =>
@@ -38,12 +49,17 @@ export async function generateMetadata({
 
   const name = categoryName(category.name, lang);
   const blurb = categoryBlurb(category.name, category.blurb, lang);
+  // Prefer the hand-written opening over the one-line catalog blurb: it is
+  // specific to this category and reads as a snippet rather than a label.
+  const editorial = editorialFor(category.slug, lang);
+  const description =
+    (editorial && editorialMetaDescription(editorial)) ?? blurb;
 
   return {
     title: name,
-    description: blurb,
+    description,
     alternates: alternatesFor(`/category/${category.slug}`, lang),
-    openGraph: { title: `${name} · FomaPrint`, description: blurb },
+    openGraph: { title: `${name} · FomaPrint`, description },
   };
 }
 
@@ -62,6 +78,24 @@ export default async function CategoryPage({
   const all = getProductsByCategory(category.slug);
   const popular = all.slice(0, 8);
   const banner = CATEGORY_BANNERS[category.slug];
+  // Hand-written prose for this category, when one has been written. See
+  // src/data/editorial/categories.ts — a missing entry renders nothing.
+  const editorial = editorialFor(category.slug, lang);
+  const crumbJsonLd = breadcrumbJsonLd(
+    [
+      { name: dict.common.home, path: "/" },
+      { name: dict.categories.breadcrumb, path: "/categories" },
+      { name },
+    ],
+    lang,
+  );
+  const listJsonLd = itemListJsonLd(
+    category.subcategories.map((sc) => ({
+      name: subcategoryName(sc.name, lang),
+      path: `/category/${category.slug}/${sc.slug}`,
+    })),
+    lang,
+  );
   // Families promoted out of this category still get a tile pointing at
   // their new home, so browsing the old category never dead-ends.
   const crossLinks = (CATEGORY_CROSS_LINKS[category.slug] ?? []).flatMap(
@@ -73,6 +107,12 @@ export default async function CategoryPage({
 
   return (
     <div>
+      <JsonLd data={crumbJsonLd} />
+      <JsonLd data={listJsonLd} />
+      {editorial && editorial.faqs.length > 0 ? (
+        <JsonLd data={faqJsonLd(editorial.faqs)} />
+      ) : null}
+
       {/* Header */}
       <section className="relative overflow-hidden border-b border-border">
         <div
@@ -248,6 +288,10 @@ export default async function CategoryPage({
             </div>
             <ProductGrid locale={lang} products={popular} className="mt-6" />
           </section>
+        ) : null}
+
+        {editorial ? (
+          <CategoryEditorial copy={editorial} name={name} headings={t} />
         ) : null}
       </div>
     </div>

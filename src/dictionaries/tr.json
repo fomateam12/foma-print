@@ -42,7 +42,8 @@
     "productsReady": "Kişiselleştirmeye hazır {count}+ ürün",
     "megaMenuBlurb": "Termoslar, hediyelikler, çerçeveler ve ofis ürünleri — sizin markanızla kazınır ve gizli kargoyla gönderilir.",
     "browseEverything": "Hepsine göz atın",
-    "shopAll": "Tüm {category} ürünleri"
+    "shopAll": "Tüm {category} ürünleri",
+    "guides": "Rehberler"
   },
   "footer": {
     "catalog": "Katalog",
@@ -59,7 +60,8 @@
     "termsOfService": "Kullanım Şartları",
     "privacy": "Gizlilik",
     "terms": "Şartlar",
-    "established": "Kuruluş"
+    "established": "Kuruluş",
+    "guides": "Rehberler"
   },
   "copy": {
     "orderCutoff": "14:00 (ET)",
@@ -447,7 +449,10 @@
     "browse": "{category} ürünlerini inceleyin",
     "popularIn": "{category} kategorisinde popüler",
     "shopCollection": "Koleksiyonu inceleyin",
-    "alsoIn": "Katalogda ayrıca"
+    "alsoIn": "Katalogda ayrıca",
+    "aboutHeading": "{category} hakkında",
+    "highlightsHeading": "Satıcılar bu ürünleri nerede kullanıyor",
+    "faqHeading": "{category} — sık sorulanlar"
   },
   "product": {
     "requestPricing": "Fiyat isteyin",
@@ -458,6 +463,10 @@
     "weight": "Ağırlık",
     "dimensions": "Ölçüler",
     "engravingArea": "Kazıma alanı",
+    "engraveColor": "Kazıma rengi",
+    "engraveToneLight": "açık iz",
+    "engraveToneDark": "koyu iz",
+    "engraveFrost": "buzlu (yarı saydam)",
     "personalizationTitle": "Kişiselleştirebileceğiniz alanlar",
     "fontStyle": "Yazı tipi",
     "askQuestion": "Soru sorun",
@@ -465,6 +474,9 @@
     "trustReply": "Her teklif talebine aynı gün yanıt",
     "trustMadeToOrder": "Sipariş üzerine üretilir",
     "trustBulk": "Toplu ve kurumsal fiyatlandırma",
+    "downloadImage": "Bu görseli indir",
+    "downloadAll": "Tümünü indir ({count}) — ZIP",
+    "downloadNote": "Yüksek çözünürlüklü orijinal dosyalar — ilanlarınızda ve pazarlamanızda serbestçe kullanabilirsiniz.",
     "related": "Bunları da beğenebilirsiniz",
     "moreIn": "Diğer {collection} ürünleri",
     "descriptionTemplate": "{name}{size}, lazer kazımayla kişiselleştirilmeye hazırdır. Net ve kalıcı bir görünüm için ad, tarih, monogram veya logo ekleyin.",
@@ -516,7 +528,10 @@
     "seeAll": "Tümünü görün",
     "empty": "Bu koleksiyonda henüz ürün yok.",
     "moreIn": "{category} kategorisindeki diğer ürünler",
-    "noMatchBefore": ""
+    "noMatchBefore": "",
+    "aboutHeading": "{category} hakkında",
+    "highlightsHeading": "Satıcılar bu ürünleri nerede kullanıyor",
+    "faqHeading": "{category} — sık sorulanlar"
   },
   "quoteWidget": {
     "add": "Teklife ekle",
@@ -747,5 +762,20 @@
     "shipWeight": "Kargo ağırlığı",
     "carton": "Koli",
     "pricedPerOrder": "Siparişe özel fiyatlandırılır (teklif)"
+  },
+  "guides": {
+    "eyebrow": "Rehberler",
+    "metaTitle": "Satıcılar için rehberler",
+    "metaDescription": "Talebe göre kazıma, özel hediye satışı, patch uygulaması ve gizli sevkiyat üzerine pratik rehberler — üretimi yürüten ekip tarafından yazıldı.",
+    "heading": "Satıcılar için rehberler",
+    "lede": "Üretim tarafı gerçekte nasıl işliyor — bitmiş ürünü satan kişi için yazıldı.",
+    "readingTime": "{minutes} dk okuma",
+    "backToGuides": "Tüm rehberler",
+    "moreGuides": "Diğer rehberler",
+    "ctaHeading": "Burada cevabı olmayan bir soru mu var?",
+    "ctaBody": "Ayrıntıyı gönder; satış cevabı değil, üretimden gerçek bir cevap al.",
+    "ctaButton": "Bize ulaş",
+    "faqHeading": "Sık sorulanlar",
+    "notFound": "Rehber bulunamadı"
   }
 }

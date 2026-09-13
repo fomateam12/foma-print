@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllProducts, getCategories } from "@/data/catalog";
+import { GUIDES } from "@/data/guides";
 import { site } from "@/lib/site";
 import { LOCALES, LOCALE_HREFLANG, localizedPath } from "@/lib/i18n";
 
@@ -36,7 +37,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/contact", changeFrequency: "yearly", priority: 0.5 },
     { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
     { path: "/terms", changeFrequency: "yearly", priority: 0.3 },
+    { path: "/guides", changeFrequency: "weekly", priority: 0.8 },
   ];
+
+  for (const g of GUIDES) {
+    entries.push({
+      path: `/guides/${g.slug}`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    });
+  }
 
   for (const c of getCategories()) {
     entries.push({

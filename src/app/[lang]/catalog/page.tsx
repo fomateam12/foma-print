@@ -8,7 +8,7 @@ import {
   getProductsByCategory,
 } from "@/data/catalog";
 import { catalogImageUrl } from "@/lib/catalog-image";
-import { categoryCatalogPdfUrl, FULL_CATALOG_PDF_URL } from "@/lib/catalog-pdf";
+import { catalogPdfPath, FULL_CATALOG_PDF_PATH } from "@/lib/catalog-pdf";
 import { ENGRAVING_FEES, inPartnerCatalog } from "@/lib/partner-prices";
 import { site } from "@/lib/site";
 
@@ -98,7 +98,7 @@ export default function CatalogIndexPage() {
               engraving adds ${ENGRAVING_FEES.back.toFixed(2)}. Products marked
               &quot;Quote&quot; are priced per order.{" "}
               <a
-                href={FULL_CATALOG_PDF_URL}
+                href={FULL_CATALOG_PDF_PATH}
                 className="font-medium text-brand-strong underline underline-offset-2"
               >
                 Download the full catalog (PDF)
@@ -183,7 +183,7 @@ export default function CatalogIndexPage() {
                       one category downloads that category, not the combined
                       catalog. Outside the Link — an anchor may not nest. */}
                   <a
-                    href={categoryCatalogPdfUrl(c.slug)}
+                    href={catalogPdfPath(c.slug)}
                     className="mt-3 inline-flex items-center gap-1 text-sm text-muted-foreground underline underline-offset-2 transition-colors hover:text-brand-strong"
                   >
                     <FileDown className="size-4" />

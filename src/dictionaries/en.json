@@ -42,7 +42,8 @@
     "productsReady": "{count}+ products ready to personalize",
     "megaMenuBlurb": "Drinkware, gifts, frames and office goods — engraved and blind-shipped under your brand.",
     "browseEverything": "Browse everything",
-    "shopAll": "Shop all {category}"
+    "shopAll": "Shop all {category}",
+    "guides": "Guides"
   },
   "footer": {
     "catalog": "Catalog",
@@ -59,7 +60,8 @@
     "termsOfService": "Terms of Service",
     "privacy": "Privacy",
     "terms": "Terms",
-    "established": "Est."
+    "established": "Est.",
+    "guides": "Guides"
   },
   "copy": {
     "orderCutoff": "2pm ET",
@@ -333,7 +335,10 @@
     "browse": "Browse {category}",
     "popularIn": "Popular in {category}",
     "shopCollection": "Shop the collection",
-    "alsoIn": "Also in the catalog"
+    "alsoIn": "Also in the catalog",
+    "aboutHeading": "About {category}",
+    "highlightsHeading": "What resellers use it for",
+    "faqHeading": "{category} — common questions"
   },
   "product": {
     "requestPricing": "Request pricing",
@@ -344,6 +349,10 @@
     "weight": "Weight",
     "dimensions": "Dimensions",
     "engravingArea": "Engraving area",
+    "engraveColor": "Engraves in",
+    "engraveToneLight": "light mark",
+    "engraveToneDark": "dark mark",
+    "engraveFrost": "frosted (translucent)",
     "personalizationTitle": "What you can personalize",
     "fontStyle": "Font style",
     "fontOptions": [
@@ -357,6 +366,9 @@
     "trustReply": "Same-day reply on every quote request",
     "trustMadeToOrder": "Made to order",
     "trustBulk": "Bulk & corporate pricing available",
+    "downloadImage": "Download this image",
+    "downloadAll": "Download all ({count}) as ZIP",
+    "downloadNote": "High-resolution originals — free to use in your listings and marketing.",
     "related": "You may also like",
     "moreIn": "More {collection}",
     "descriptionTemplate": "{name}{size}, ready to personalize with laser engraving — add a name, date, monogram or logo for a crisp, permanent finish.",
@@ -402,7 +414,10 @@
     "noMatchAfter": ".",
     "seeAll": "See all",
     "empty": "No products in this collection yet.",
-    "moreIn": "More in {category}"
+    "moreIn": "More in {category}",
+    "aboutHeading": "About {category}",
+    "highlightsHeading": "What resellers use it for",
+    "faqHeading": "{category} — common questions"
   },
   "quoteWidget": {
     "add": "Add to quote",
@@ -747,5 +762,20 @@
     "shipWeight": "Ship weight",
     "carton": "Carton",
     "pricedPerOrder": "Priced per order (quote)"
+  },
+  "guides": {
+    "eyebrow": "Guides",
+    "metaTitle": "Guides for resellers",
+    "metaDescription": "Practical guides to print-on-demand engraving, custom-gift selling, patch application and blind shipping — written by the people who run the production floor.",
+    "heading": "Guides for resellers",
+    "lede": "How the production side actually works, written for the people selling the finished product.",
+    "readingTime": "{minutes} min read",
+    "backToGuides": "All guides",
+    "moreGuides": "More guides",
+    "ctaHeading": "Questions this did not answer?",
+    "ctaBody": "Send the specifics and you get a real answer from the floor, not a sales reply.",
+    "ctaButton": "Contact us",
+    "faqHeading": "Common questions",
+    "notFound": "Guide not found"
   }
 }

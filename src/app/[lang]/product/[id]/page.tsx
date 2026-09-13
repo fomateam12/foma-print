@@ -13,6 +13,7 @@ import {
   Package,
   Box,
   Scan,
+  Palette,
 } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProductGrid } from "@/components/product-grid";
@@ -36,7 +37,9 @@ import {
   subcategoryName,
 } from "@/lib/catalog-i18n";
 import { productCopy } from "@/lib/product-copy";
-import { alternatesFor } from "@/lib/seo";
+import { alternatesFor, breadcrumbJsonLd } from "@/lib/seo";
+import { productSeoTitle } from "@/lib/product-title";
+import { JsonLd } from "@/components/json-ld";
 
 /**
  * ISR window. Catalog data is updated occasionally (supplier scrape, manual
@@ -78,13 +81,16 @@ export async function generateMetadata({
   const name = productName(product.sku, product.name, lang);
   const { description } = productCopy(product, name, dict, lang);
   const ogImage = cloudinary(product.image, { width: 1200 });
+  // Sizes share a name in the supplier feed — the title carries the size so
+  // sibling SKUs are not duplicate results. See lib/product-title.ts.
+  const seoTitle = productSeoTitle(product, name, lang);
 
   return {
-    title: name,
+    title: seoTitle,
     description,
     alternates: alternatesFor(`/product/${product.id}`, lang),
     openGraph: {
-      title: `${name} · FomaPrint`,
+      title: `${seoTitle} · FomaPrint`,
       description,
       images: [{ url: ogImage, width: 1200, height: 1200, alt: name }],
     },
@@ -133,15 +139,27 @@ export default async function ProductPage({
     },
   };
 
+  const crumbJsonLd = breadcrumbJsonLd(
+    [
+      { name: dict.common.home, path: "/" },
+      { name: dict.categories.breadcrumb, path: "/categories" },
+      {
+        name: categoryName(product.categoryName, lang),
+        path: `/category/${product.categorySlug}`,
+      },
+      {
+        name: subName,
+        path: `/category/${product.categorySlug}/${product.subcategorySlug}`,
+      },
+      { name },
+    ],
+    lang,
+  );
+
   return (
     <div className="container-px py-10 lg:py-14">
-      <script
-        type="application/ld+json"
-        // Escape `<` so catalog text can never break out of the script tag.
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
-        }}
-      />
+      <JsonLd data={jsonLd} />
+      <JsonLd data={crumbJsonLd} />
 
       <Breadcrumbs
         items={[
@@ -172,6 +190,7 @@ export default async function ProductPage({
                 : [cloudinary(product.imageFull, { width: 900 })]
             }
             alt={name}
+            sku={product.sku}
           />
         </div>
 
@@ -217,7 +236,8 @@ export default async function ProductPage({
           {product.size ||
           weightLb ||
           product.dimensions ||
-          product.engravingArea ? (
+          product.engravingArea ||
+          product.engraveColor ? (
             <dl className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2">
               {product.size ? (
                 <div className="flex items-center gap-2 rounded-xl border border-border bg-background/60 px-3 py-2 text-sm">
@@ -252,6 +272,37 @@ export default async function ProductPage({
                   </dt>
                   <dd className="text-muted-foreground">
                     {product.engravingArea}
+                  </dd>
+                </div>
+              ) : null}
+              {/* Engrave colour is a fixed property of material + coating
+                  (black powder-coat reveals steel, black/gold leatherette
+                  reveals gold, glass frosts) — shown as information, never
+                  offered as a choice. Source: src/data/engraving-colors.json. */}
+              {product.engraveColor ? (
+                <div className="flex items-center gap-2 rounded-xl border border-border bg-background/60 px-3 py-2 text-sm">
+                  <Palette className="size-4 shrink-0 text-brand-strong" />
+                  <dt className="font-medium text-foreground">
+                    {t.engraveColor}
+                  </dt>
+                  <dd className="flex items-center gap-2 text-muted-foreground">
+                    <span
+                      aria-hidden="true"
+                      className="inline-block size-4 rounded-full border border-border"
+                      style={{
+                        backgroundColor: product.engraveColor,
+                        opacity: product.engraveFrost
+                          ? product.engraveOpacity ?? 0.55
+                          : 1,
+                      }}
+                    />
+                    <span>
+                      {product.engraveFrost
+                        ? t.engraveFrost
+                        : product.engraveTone === "dark"
+                          ? t.engraveToneDark
+                          : t.engraveToneLight}
+                    </span>
                   </dd>
                 </div>
               ) : null}

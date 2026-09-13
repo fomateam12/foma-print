@@ -14,6 +14,10 @@ export const site = {
     street: "9370 Industrial Trce",
     city: "Alpharetta",
     state: "GA",
+    /** ZIP. Must match the Google Business Profile listing character for
+     *  character — Google reads the site and the profile as one entity only
+     *  when the name, address and phone agree exactly. */
+    zip: "30004",
     country: "US",
   },
   tagline: "Print-on-demand & laser engraving for resellers",
