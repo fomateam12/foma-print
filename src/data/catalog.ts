@@ -9564,6 +9564,21 @@ const allProducts: Product[] = [...jdsProducts, ...fomaProducts]
 
 const productById = new Map(allProducts.map((p) => [p.id, p]));
 
+/**
+ * Same products keyed by SKU. Reseller feed products use the SKU as their id,
+ * but FOMA's own products (foma-products.ts) carry a slug id and a distinct
+ * marketing SKU (e.g. id "foma-tumbler-40oz-lilac", sku "TM-FM-LIL"), so any
+ * caller that only holds the SKU — like the image-download route — needs this.
+ */
+const productBySku = new Map(
+  allProducts.filter((p) => (p.sku ?? "").trim() !== "").map((p) => [p.sku.toUpperCase(), p]),
+);
+
+/** Resolve a product by its supplier/marketing SKU (case-insensitive). */
+export function getProductBySku(sku: string): Product | undefined {
+  return productBySku.get(sku.trim().toUpperCase());
+}
+
 const productsByCategory = new Map<string, Product[]>();
 const productsBySub = new Map<string, Product[]>();
 for (const p of allProducts) {

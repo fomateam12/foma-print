@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { Zip, ZipPassThrough } from "fflate";
-import { getProduct } from "@/data/catalog";
+import { getProduct, getProductBySku } from "@/data/catalog";
 import { catalogImageAbsoluteUrl } from "@/lib/catalog-image";
 import { getTraceId, TRACE_HEADER } from "@/lib/trace";
 
@@ -97,7 +97,9 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
 
   const sku = (searchParams.get("sku") ?? "").trim();
-  const product = sku ? getProduct(sku) : undefined;
+  // Reseller SKUs equal their id; FOMA's own products carry a slug id and a
+  // separate marketing SKU, so the gallery's `sku=` must resolve both ways.
+  const product = sku ? getProduct(sku) ?? getProductBySku(sku) : undefined;
   if (!product) {
     return NextResponse.json(
       { error: "Unknown SKU. Pass ?sku=<catalog sku>." },
