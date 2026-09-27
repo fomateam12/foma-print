@@ -76,7 +76,9 @@
   "Oval Patches": "Oval Patchler",
   "Rectangle Patches": "Dikdörtgen Patchler",
   "Round Patches": "Yuvarlak Patchler",
-  "Square Patches": "Kare Patchler"
+  "Square Patches": "Kare Patchler",
+  "Crystal Ornaments": "Kristal Yılbaşı Süsleri",
+  "Leatherette Sheet Stock": "Suni Deri Levhalar"
  },
  "sizes": {},
  "products": {
@@ -1331,7 +1333,16 @@
   "PTH915": "3\" x 2\" Altıgen Suni Deri Patch, Kota Pro Yapışkanlı – Amerikan Futbolu",
   "PTH965": "3 1/2\" x 2 1/2\" Altıgen Suni Deri Patch, Kota Pro Yapışkanlı – Amerikan Futbolu",
   "PTH916": "3\" x 2\" Altıgen Suni Deri Patch, Kota Pro Yapışkanlı – Basketbol",
-  "PTH966": "3 1/2\" x 2 1/2\" Altıgen Suni Deri Patch, Kota Pro Yapışkanlı – Basketbol"
+  "PTH966": "3 1/2\" x 2 1/2\" Altıgen Suni Deri Patch, Kota Pro Yapışkanlı – Basketbol",
+  "CRY3617": "3\" Kristal Fasetli Oval Yılbaşı Süsü",
+  "CRY3618": "3\" Kristal Fasetli Yuvarlak Yılbaşı Süsü",
+  "GFT2324": "11 1/2\" x 8 3/4\" Akasya Kesme Tahtası – Damlama Kanallı, Köşe Delikli",
+  "GFT2325": "13 3/4\" x 9 3/4\" Akasya Kesme Tahtası – Damlama Kanallı, Köşe Delikli",
+  "GFT572": "13 5/8\" x 10 5/8\" Kızılağaç Tepsi – 9\" x 12\" Oyuk Merkezli",
+  "GFT573": "13 5/8\" x 10 5/8\" Ceviz Tepsi – 9\" x 12\" Oyuk Merkezli",
+  "LLS104": "12\" x 24\" Rawhide Lazerlenebilir Suni Deri Levha",
+  "LLS109": "12\" x 24\" Siyah/Gümüş Lazerlenebilir Suni Deri Levha",
+  "LLA204": "12\" x 18\" Rawhide Yapışkanlı Lazerlenebilir Suni Deri Levha"
  },
  "blurbs": {
   "Kitchen & Bar": "Ev sahipleri ve ev aşçıları için kazımalı kesme ve şarküteri tahtaları, cep mataraları, barbekü setleri ve bar aksesuarları.",
