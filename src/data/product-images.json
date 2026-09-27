@@ -225,6 +225,13 @@
   "/products/CH113/CH113_BLANK.png",
   "/products/CH113/CH113_OPEN_BLANK.png"
  ],
+ "DC301S": [
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1728935975/products/images/large/DC301S--8c249ee0.png",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1728935974/products/images/large/DC301S--cbfd3383.png",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1728938366/products/images/large/DC301S--0e5bfd9d.png",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1728935975/products/images/large/DC301S--6503041d.png",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1728935975/products/images/large/DC301S--53e511a6.png"
+ ],
  "DS10": [
   "/products/DS10/DS10_BLANK.png"
  ],

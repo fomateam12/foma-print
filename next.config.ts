@@ -60,8 +60,16 @@ const nextConfig: NextConfig = {
     // then re-encodes to AVIF / WebP and resizes per device — the
     // combination of `formats`, `qualities`, and the loader together
     // reproduce Cloudinary's `q_auto, f_auto` behavior.
-    loader: "custom",
-    loaderFile: "./src/lib/cloudinary-loader.ts",
+    // Vercel only: the custom loader hands absolute R2/Cloudinary URLs to
+    // Vercel's paid optimizer. Self-hosted, `next start` serves /_next/image
+    // itself — but ONLY when no custom loader is configured — so the loader
+    // stays off there and the /products rewrite below resolves curated paths.
+    ...(process.env.VERCEL
+      ? {
+          loader: "custom" as const,
+          loaderFile: "./src/lib/cloudinary-loader.ts",
+        }
+      : {}),
 
     // AVIF preferred (smaller for the same visual quality), WebP as the
     // fallback for browsers without AVIF support. Anything older falls
@@ -103,6 +111,18 @@ const nextConfig: NextConfig = {
   },
   async headers() {
     return [{ source: "/:path*", headers: SECURITY_HEADERS }];
+  },
+  async rewrites() {
+    // Self-hosted only: curated /products/{SKU}/{file} images live in R2,
+    // not in public/. Proxy them so direct hits and the built-in image
+    // optimizer's internal fetch both resolve. Must stay OFF on Vercel —
+    // its optimizer does not traverse rewrites (measured 26 Jun 2026) and
+    // the custom loader already emits absolute URLs there.
+    const r2 = process.env.NEXT_PUBLIC_R2_BASE_URL?.replace(/\/$/, "");
+    if (process.env.VERCEL || !r2) return [];
+    return [
+      { source: "/products/:path*", destination: `${r2}/products/:path*` },
+    ];
   },
   async redirects() {
     return [

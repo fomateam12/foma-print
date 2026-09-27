@@ -1,0 +1,7 @@
+# Cutover config: automatic HTTPS for the real hostnames.
+www.fomaprint.com {
+    reverse_proxy app:3000
+}
+fomaprint.com {
+    redir https://www.fomaprint.com{uri} permanent
+}

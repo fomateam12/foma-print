@@ -1,0 +1,30 @@
+# Pinned: Compose prefixes volume names with the project name, and the Let's
+# Encrypt certs live in fomaprint_caddy_data — a renamed directory must not
+# orphan them.
+name: fomaprint
+
+services:
+  app:
+    build: .
+    # Named so deploy/hetzner/deploy.sh can keep the serving image as
+    # :previous and swap back to it when the post-deploy health check fails.
+    image: fomaprint-app:latest
+    restart: unless-stopped
+    env_file: .env
+    expose:
+      - "3000"
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:

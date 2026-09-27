@@ -1,13 +1,51 @@
 # FomaPrint — Deploy & Cross-Machine Setup
 
-This repo deploys to Vercel. Pushing to GitHub triggers the build; production
-goes out from `main`, every other branch produces a preview URL.
+Production (www.fomaprint.com) runs on a Hetzner server since 2026-09-01.
+Pushing or merging to `main` deploys it automatically through
+`.github/workflows/deploy-hetzner.yml` — from any machine, no server access
+needed. Vercel still builds every push (`foma-design.vercel.app` plus branch
+previews), but the domain no longer points there.
+
+## Production — Hetzner
+
+| | |
+|---|---|
+| Host | Hetzner CPX11 `5.161.100.234` — Docker + Caddy (automatic Let's Encrypt) |
+| App dir | `/opt/fomaprint` — a git checkout of `main` plus the server-only `.env` |
+| Stack | `docker-compose.yml`: `app` (Next.js, `Dockerfile`) behind `caddy` (`Caddyfile`) |
+| Deploy script | `deploy/hetzner/deploy.sh`, installed as `/usr/local/bin/fomaprint-deploy` |
+| Logs | the Actions run, and `/var/log/fomaprint-deploy.log` on the host |
+| Secrets | `DEPLOY_SSH_KEY`, `DEPLOY_HOST`, `DEPLOY_KNOWN_HOSTS` (repo → Settings → Secrets → Actions) |
+
+What a push to `main` does:
+
+1. The **Deploy to Hetzner** workflow opens an SSH session with `DEPLOY_SSH_KEY`.
+   On the host that key is pinned as
+   `restrict,command="/usr/local/bin/fomaprint-deploy"`, so it can run the deploy
+   script and nothing else — no shell, no forwarding, no choice of branch.
+2. The script fetches `origin/main`, keeps the serving image as
+   `fomaprint-app:previous`, builds, and swaps the container.
+3. Health check through Caddy on the host: `/`, `/quote`, `/sitemap.xml`, the
+   first product page in the sitemap, and one `/_next/image` URL from that page.
+4. Any failed check puts the previous image back and turns the run red. A failed
+   build never swaps anything.
+
+Day-to-day:
+
+- **Redeploy without a commit:** Actions → Deploy to Hetzner → Run workflow.
+- **Undo a bad change:** `git revert` it on `main` and push; the revert deploys like any change.
+- **New env var:** add it to `/opt/fomaprint/.env` on the host *before* merging the
+  code that reads it (`NEXT_PUBLIC_*` are inlined at build time), and document it in `ENV.md`.
+- **Changed `deploy/hetzner/deploy.sh`?** Deploys do not update the host copy — reinstall:
+  `scp deploy/hetzner/deploy.sh fomaprint:/usr/local/bin/fomaprint-deploy`.
+- **Rotate the deploy key:** new ed25519 pair → replace the pinned line in
+  `/root/.ssh/authorized_keys` → update the `DEPLOY_SSH_KEY` secret.
 
 ## Branches at a glance
 
 | Branch | Purpose | Deploys to |
 |---|---|---|
-| `main` | Production | `foma-design.vercel.app` (and custom domain when wired) |
+| `main` | Production | www.fomaprint.com (Hetzner, via Actions) + `foma-design.vercel.app` |
 | `redesign/b2b-unify` | B2B unification work | Preview URL per push |
 | `gece/20260626` | Overnight image gallery + Cloudinary wiring | Preview URL per push |
 | `claude/*` | Experimental / archive | Preview URL per push |
@@ -77,9 +115,10 @@ local commit → git push origin <branch>
  (foma-design-xxx.vercel.app)         (foma-design.vercel.app)
 ```
 
-CI yaml is intentionally absent — Vercel's built-in pipeline runs
-`next build`. If you ever need cross-PR checks (typecheck, lint) outside
-of the deploy, add `.github/workflows/check.yml` and gate it there.
+This Vercel flow still runs, but since the domain moved it only feeds
+`foma-design.vercel.app` and previews — production is the Hetzner workflow
+above. If you ever need cross-PR checks (typecheck, lint) outside of the
+deploy, add `.github/workflows/check.yml` and gate it there.
 
 ## Image library — the big idea
 

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { Zip, ZipPassThrough } from "fflate";
-import { getProduct } from "@/data/catalog";
+import { getProduct, getProductBySku } from "@/data/catalog";
 import { catalogImageAbsoluteUrl } from "@/lib/catalog-image";
 import { getTraceId, TRACE_HEADER } from "@/lib/trace";
 
@@ -52,7 +52,16 @@ function downloadName(src: string, sku: string, index: number): string {
 function zipStream(
   files: { name: string; url: string }[],
 ): ReadableStream<Uint8Array> {
+  // Unread fetch bodies pin their sockets; a self-hosted `next start` runs
+  // for days, so leaked sockets pile up until the kernel's TCP memory limit
+  // throttles every connection (24 Sep: 584 leaked, homepage took 8 s).
+  let current: ReadableStreamDefaultReader<Uint8Array> | undefined;
+  let cancelled = false;
   return new ReadableStream<Uint8Array>({
+    cancel() {
+      cancelled = true;
+      void current?.cancel();
+    },
     async start(controller) {
       const zip = new Zip((err, chunk, final) => {
         if (err) {
@@ -64,11 +73,15 @@ function zipStream(
       });
       try {
         for (const file of files) {
+          if (cancelled) return;
           const res = await fetch(file.url);
-          if (!res.ok || !res.body) continue;
+          if (!res.ok || !res.body) {
+            await res.body?.cancel();
+            continue;
+          }
           const entry = new ZipPassThrough(file.name);
           zip.add(entry);
-          const reader = res.body.getReader();
+          const reader = (current = res.body.getReader());
           for (;;) {
             const { done, value } = await reader.read();
             if (done) break;
@@ -97,7 +110,9 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
 
   const sku = (searchParams.get("sku") ?? "").trim();
-  const product = sku ? getProduct(sku) : undefined;
+  // Reseller SKUs equal their id; FOMA's own products carry a slug id and a
+  // separate marketing SKU, so the gallery's `sku=` must resolve both ways.
+  const product = sku ? getProduct(sku) ?? getProductBySku(sku) : undefined;
   if (!product) {
     return NextResponse.json(
       { error: "Unknown SKU. Pass ?sku=<catalog sku>." },
@@ -130,6 +145,7 @@ export async function GET(request: Request) {
     }
     const upstream = await fetch(originalUrl(gallery[index]));
     if (!upstream.ok || !upstream.body) {
+      await upstream.body?.cancel();
       return NextResponse.json(
         { error: "Source image is unavailable right now." },
         { status: 502, headers: { [TRACE_HEADER]: traceId } },

@@ -2156,8 +2156,8 @@ const ADDED_PRODUCTS: RawProduct[] = [
     sku: "DC301S",
     size: "8 3/4\" (H) x 3 1/2\" x 3 1/2\"",
     price: 18.9,
-    image: "/products/DC301S/DC301S.jpg",
-    imageFull: "/products/DC301S/DC301S.jpg",
+    image: "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1728935975/products/images/large/DC301S--8c249ee0.png",
+    imageFull: "https://res.cloudinary.com/business-products/image/upload/q_auto/v1728935975/products/images/large/DC301S--8c249ee0.png",
     categoryId: "2",
     categorySlug: "polar-camel",
     categoryName: "Polar Camel",
@@ -9736,6 +9736,21 @@ const allProducts: Product[] = [...jdsProducts, ...fomaProducts]
   });
 
 const productById = new Map(allProducts.map((p) => [p.id, p]));
+
+/**
+ * Same products keyed by SKU. Reseller feed products use the SKU as their id,
+ * but FOMA's own products (foma-products.ts) carry a slug id and a distinct
+ * marketing SKU (e.g. id "foma-tumbler-40oz-lilac", sku "TM-FM-LIL"), so any
+ * caller that only holds the SKU — like the image-download route — needs this.
+ */
+const productBySku = new Map(
+  allProducts.filter((p) => (p.sku ?? "").trim() !== "").map((p) => [p.sku.toUpperCase(), p]),
+);
+
+/** Resolve a product by its supplier/marketing SKU (case-insensitive). */
+export function getProductBySku(sku: string): Product | undefined {
+  return productBySku.get(sku.trim().toUpperCase());
+}
 
 const productsByCategory = new Map<string, Product[]>();
 const productsBySub = new Map<string, Product[]>();
