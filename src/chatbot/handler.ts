@@ -10,7 +10,7 @@ import type { ChatConfig } from "./config";
 import type { DailyBudget } from "./budget";
 import { type ChatAction, type ChatModel, parseModelReply } from "./model";
 import { checkReply } from "./output-filter";
-import { chatRequestSchema, toModelMessages } from "./request";
+import { chatRequestSchema, toModelMessages, MAX_MESSAGE_CHARS } from "./request";
 import { issueSessionToken, verifySessionToken } from "./session-token";
 import { buildSystemPrompt } from "./system-prompt";
 
@@ -112,10 +112,16 @@ export async function handleChat(request: Request, deps: ChatDeps): Promise<Resp
     return fallback();
   }
 
-  const verdict = checkReply(reply.reply, deps.config.denylist);
+  // The client re-sends the full history on every turn and request.ts caps
+  // every message at MAX_MESSAGE_CHARS, so an over-length reply would be
+  // accepted here but rejected as a "message" on the next turn — a 422 the
+  // visitor can never recover from. Cap before the filter runs.
+  const cappedReply = reply.reply.slice(0, MAX_MESSAGE_CHARS);
+
+  const verdict = checkReply(cappedReply, deps.config.denylist);
   if (!verdict.ok) {
     log.warn({ traceId, event: "chat.filter_hit", rule: verdict.rule });
     return fallback();
   }
-  return respond(reply.reply, reply.action);
+  return respond(cappedReply, reply.action);
 }

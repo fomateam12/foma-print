@@ -3,6 +3,7 @@ import { handleChat, type ChatDeps } from "./handler";
 import { createDailyBudget } from "./budget";
 import { issueSessionToken } from "./session-token";
 import type { ChatModel } from "./model";
+import { MAX_MESSAGE_CHARS } from "./request";
 
 const SECRET = "s".repeat(32);
 let ipCounter = 0;
@@ -115,6 +116,16 @@ describe("handleChat", () => {
     const deps = makeDeps({}, '{"reply":"We print for Yemliha.","action":null}');
     const body = await (await handleChat(req(first), deps)).json();
     expect(body).toMatchObject({ reply: "FALLBACK", action: "contact", fallback: true });
+  });
+
+  it("caps an over-length reply so the client can re-send it as history", async () => {
+    // The client re-sends full history on every turn, and request.ts caps
+    // every message at MAX_MESSAGE_CHARS; an uncapped reply would 422
+    // forever on the next turn.
+    const longReply = "a".repeat(1500);
+    const deps = makeDeps({}, JSON.stringify({ reply: longReply, action: null }));
+    const body = await (await handleChat(req(first), deps)).json();
+    expect(body.reply.length).toBeLessThanOrEqual(MAX_MESSAGE_CHARS);
   });
 
   it("falls back on empty model content", async () => {
