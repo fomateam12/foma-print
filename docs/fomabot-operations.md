@@ -4,8 +4,8 @@
 
 | Var | Required | Notes |
 |---|---|---|
-| `CHAT_DEEPSEEK_API_KEY` | yes | Dedicated key, NOT the order-press SKU key. Unset = bot off (log `chat.api_key_missing`). |
-| `CHAT_SESSION_SECRET` | yes | 32+ random chars: `openssl rand -base64 48`. Short or unset = bot off. |
+| `CHAT_DEEPSEEK_API_KEY` | yes | Dedicated key, NOT the order-press SKU key. Unset = bot off (no log; `/api/chat/status` returns `enabled:false`). |
+| `CHAT_SESSION_SECRET` | yes | 32+ random chars: `openssl rand -base64 48`. Under 32 chars or unset = bot off (no log; `/api/chat/status` returns `enabled:false`). |
 | `CHAT_DENYLIST` | yes | Comma-separated store/supplier/tool/team names. Never commit. Empty or unset = bot disabled (log `chat.denylist_missing`). |
 | `CHAT_MODEL` | no | Default `deepseek-v4-pro` |
 | `CHAT_DAILY_TOKEN_BUDGET` | no | Default 2000000 |
