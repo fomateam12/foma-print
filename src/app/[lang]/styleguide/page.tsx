@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { FomaBotOrb, type OrbState, type OrbVariant } from "@/components/fomabot/orb";
 
 /**
  * Internal design-system reference (Phase 2 / Gate 2).
@@ -421,6 +422,27 @@ export default function StyleguidePage() {
           </div>
         </div>
       </Section>
+
+      {/* FOMABOT ORB */}
+      <section className="mt-16 border-t border-border pt-10">
+        <h2 className="text-2xl font-semibold text-foreground">FomaBot orb</h2>
+        <p className="mt-2 text-muted-foreground">Three candidate launchers × three states. Pick one; it becomes DEFAULT_ORB_VARIANT.</p>
+        <div className="mt-8 grid gap-10 sm:grid-cols-3">
+          {(["aurora", "pulse", "blob"] as OrbVariant[]).map((variant) => (
+            <div key={variant} className="rounded-2xl border border-border p-6">
+              <h3 className="font-medium capitalize">{variant}</h3>
+              <div className="mt-6 flex items-end gap-6">
+                {(["idle", "thinking", "replying"] as OrbState[]).map((state) => (
+                  <div key={state} className="flex flex-col items-center gap-2">
+                    <FomaBotOrb variant={variant} state={state} size={64} />
+                    <span className="text-xs text-muted-foreground">{state}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
