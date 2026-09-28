@@ -12,10 +12,10 @@ const denylist = parseDenylist(process.env.CHAT_DENYLIST);
 
 describe("knowledge pack", () => {
   it("has a denylist to check against", () => {
-    if (denylist.length === 0) {
-      console.warn("CHAT_DENYLIST is empty: only email/URL/credential rules were checked.");
-    }
-    expect(true).toBe(true);
+    expect(
+      denylist.length > 0,
+      "CHAT_DENYLIST is empty. Export CHAT_DENYLIST before running chat:check (see docs/fomabot-operations.md)."
+    ).toBe(true);
   });
 
   it.each([
