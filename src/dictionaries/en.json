@@ -780,6 +780,21 @@
   },
   "fomabot": {
     "fallback": "I'd rather have our team answer this one. Want me to connect you?",
-    "unavailable": "FomaBot is taking a break. Email us at info@fomaprint.com and we'll reply the same business day."
+    "unavailable": "FomaBot is taking a break. Email us at info@fomaprint.com and we'll reply the same business day.",
+    "name": "FomaBot",
+    "open": "Chat with FomaBot",
+    "close": "Close chat",
+    "greeting": "Hi! I'm FomaBot. Ask me about our products, white-label shipping, becoming a reseller or how the seller portal works.",
+    "placeholder": "Type your question…",
+    "send": "Send",
+    "thinking": "FomaBot is thinking…",
+    "privacyNote": "Please don't share personal information here. To reach us, use the buttons or email.",
+    "rateLimited": "You're sending messages quickly. Please wait a moment and try again.",
+    "verificationFailed": "We couldn't verify this chat. Please try again.",
+    "network": "Connection problem. Please try again.",
+    "limitReached": "This chat is getting long. For more help, email info@fomaprint.com.",
+    "actionQuote": "Request a quote",
+    "actionReseller": "Apply to sell",
+    "actionContact": "Email our team"
   }
 }

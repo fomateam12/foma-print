@@ -780,6 +780,21 @@
   },
   "fomabot": {
     "fallback": "Bu soruyu ekibimizin yanıtlaması daha doğru olur. Sizi ekibe bağlayayım mı?",
-    "unavailable": "FomaBot şu an mola veriyor. info@fomaprint.com adresine yazın, aynı iş günü dönelim."
+    "unavailable": "FomaBot şu an mola veriyor. info@fomaprint.com adresine yazın, aynı iş günü dönelim.",
+    "name": "FomaBot",
+    "open": "FomaBot ile sohbet et",
+    "close": "Sohbeti kapat",
+    "greeting": "Merhaba! Ben FomaBot. Ürünlerimiz, markasız gönderim, bayi olmak ya da satıcı panelinin nasıl çalıştığı hakkında sorabilirsiniz.",
+    "placeholder": "Sorunuzu yazın…",
+    "send": "Gönder",
+    "thinking": "FomaBot düşünüyor…",
+    "privacyNote": "Lütfen burada kişisel bilgi paylaşmayın. Bize ulaşmak için butonları ya da e-postayı kullanın.",
+    "rateLimited": "Çok hızlı mesaj gönderiyorsunuz. Biraz bekleyip tekrar deneyin.",
+    "verificationFailed": "Bu sohbeti doğrulayamadık. Lütfen tekrar deneyin.",
+    "network": "Bağlantı sorunu. Lütfen tekrar deneyin.",
+    "limitReached": "Sohbet uzadı. Daha fazla yardım için info@fomaprint.com adresine yazın.",
+    "actionQuote": "Teklif iste",
+    "actionReseller": "Bayi başvurusu",
+    "actionContact": "Ekibe e-posta gönder"
   }
 }
