@@ -1,23 +1,39 @@
 "use client";
 
-import { useEffect, useReducer, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, type Dispatch } from "react";
 import { motion } from "framer-motion";
 import { X, Send } from "lucide-react";
 import { useDict, useLocale } from "@/components/i18n-provider";
 import { TurnstileWidget, TURNSTILE_ENABLED } from "@/components/turnstile-widget";
 import { localizedPath } from "@/lib/i18n";
 import { site } from "@/lib/site";
-import { chatReducer, initialChatState, type ChatState } from "@/chatbot/client-state";
+import type { ChatEvent, ChatState } from "@/chatbot/client-state";
 import type { ChatAction } from "@/chatbot/model";
 import { MAX_CONVERSATION, MAX_MESSAGE_CHARS } from "@/chatbot/request";
 import { FomaBotOrb } from "./orb";
 
-export default function FomaBotPanel({ onClose }: { onClose: () => void }) {
+export default function FomaBotPanel({
+  onClose,
+  state,
+  dispatch,
+  draft,
+  setDraft,
+  turnstileToken,
+  setTurnstileToken,
+}: {
+  onClose: () => void;
+  // Lifted into FomaBot so closing (unmounting this lazy-loaded panel) or
+  // pressing Esc never wipes the conversation.
+  state: ChatState;
+  dispatch: Dispatch<ChatEvent>;
+  draft: string;
+  setDraft: (draft: string) => void;
+  turnstileToken: string | null;
+  setTurnstileToken: (token: string | null) => void;
+}) {
   const dict = useDict().fomabot;
   const lang = useLocale();
-  const [state, dispatch] = useReducer(chatReducer, initialChatState);
-  const [draft, setDraft] = useState("");
-  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [turnstileUnavailable, setTurnstileUnavailable] = useState(false);
   const listRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
@@ -25,11 +41,21 @@ export default function FomaBotPanel({ onClose }: { onClose: () => void }) {
   useEffect(() => {
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
   }, [state.messages.length, state.status]);
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [onClose]);
+
+  // A stable identity per callback: the effect in TurnstileWidget depends on
+  // these and tears the widget down + re-challenges on every change, so an
+  // inline arrow function here caused a re-render loop (findings #1, #3).
+  const onTurnstileVerify = useCallback(
+    (token: string) => {
+      setTurnstileToken(token);
+      // A late token overrides an earlier "unavailable": the challenge came
+      // through after all, so put the normal path back.
+      setTurnstileUnavailable(false);
+    },
+    [setTurnstileToken],
+  );
+  const onTurnstileExpire = useCallback(() => setTurnstileToken(null), [setTurnstileToken]);
+  const onTurnstileUnavailable = useCallback(() => setTurnstileUnavailable(true), []);
 
   const needsTurnstile = state.messages.length === 0 && TURNSTILE_ENABLED;
   const canSend =
@@ -43,6 +69,7 @@ export default function FomaBotPanel({ onClose }: { onClose: () => void }) {
     const content = draft.trim();
     setDraft("");
     const messages = [...state.messages.map(({ role, content }) => ({ role, content })), { role: "user" as const, content }];
+    const isFirstMessage = messages.length === 1;
     dispatch({ type: "send", content });
     try {
       const res = await fetch("/api/chat", {
@@ -51,17 +78,25 @@ export default function FomaBotPanel({ onClose }: { onClose: () => void }) {
         body: JSON.stringify({
           lang,
           messages,
-          cfTurnstileToken: messages.length === 1 ? turnstileToken ?? undefined : undefined,
+          cfTurnstileToken: isFirstMessage ? turnstileToken ?? undefined : undefined,
           sessionToken: state.sessionToken,
         }),
       });
+      // The token is single-use. Whatever the server did with it — accepted,
+      // rejected, or something else went wrong — resending it on a retry
+      // cannot work, so clear it after any response to the request that
+      // carried it, not only on a 403.
+      if (isFirstMessage) setTurnstileToken(null);
       const body = await res.json().catch(() => ({}));
       if (res.ok) {
-        dispatch({ type: "reply", reply: body.reply, action: body.action ?? null, sessionToken: body.sessionToken });
+        if (typeof body.reply === "string") {
+          dispatch({ type: "reply", reply: body.reply, action: body.action ?? null, sessionToken: body.sessionToken });
+        } else {
+          dispatch({ type: "error", error: "network" });
+        }
       } else {
         const map: Record<number, NonNullable<ChatState["error"]>> = { 429: "rate_limited", 403: "verification_failed", 503: "unavailable" };
         dispatch({ type: "error", error: map[res.status] ?? "network" });
-        if (res.status === 403) setTurnstileToken(null);
       }
     } catch {
       dispatch({ type: "error", error: "network" });
@@ -95,6 +130,11 @@ export default function FomaBotPanel({ onClose }: { onClose: () => void }) {
       // focus trap and no aria-modal (the spec's "focus-trapped" was dropped).
       role="dialog"
       aria-label={dict.name}
+      // Scoped to the dialog, not `window`: Esc anywhere on the page used to
+      // close (and, with state previously local to this component, wipe)
+      // the chat. Only close when focus is already inside the panel.
+      onKeyDown={(e) => e.key === "Escape" && onClose()}
+      data-floating
       initial={{ opacity: 0, y: 24, scale: 0.96 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: 24, scale: 0.96 }}
@@ -133,7 +173,19 @@ export default function FomaBotPanel({ onClose }: { onClose: () => void }) {
       </div>
 
       {needsTurnstile ? (
-        <TurnstileWidget className="px-4" onVerify={setTurnstileToken} onExpire={() => setTurnstileToken(null)} />
+        <>
+          <TurnstileWidget
+            className="px-4"
+            onVerify={onTurnstileVerify}
+            onExpire={onTurnstileExpire}
+            onUnavailable={onTurnstileUnavailable}
+          />
+          {turnstileUnavailable ? (
+            <p role="alert" className="px-4 text-xs text-destructive">
+              {dict.turnstileUnavailable}
+            </p>
+          ) : null}
+        </>
       ) : null}
 
       <form

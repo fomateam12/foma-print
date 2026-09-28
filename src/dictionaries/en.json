@@ -794,6 +794,7 @@
     "rateLimited": "You're sending messages quickly. Please wait a moment and try again.",
     "verificationFailed": "We couldn't verify this chat. Please try again.",
     "network": "Connection problem. Please try again.",
+    "turnstileUnavailable": "We couldn't load the security check. Please disable blockers for this site or email us at info@fomaprint.com.",
     "limitReached": "This chat is getting long. For more help, email info@fomaprint.com.",
     "actionQuote": "Request a quote",
     "actionReseller": "Apply to sell",

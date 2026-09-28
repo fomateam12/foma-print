@@ -794,6 +794,7 @@
     "rateLimited": "Çok hızlı mesaj gönderiyorsunuz. Biraz bekleyip tekrar deneyin.",
     "verificationFailed": "Bu sohbeti doğrulayamadık. Lütfen tekrar deneyin.",
     "network": "Bağlantı sorunu. Lütfen tekrar deneyin.",
+    "turnstileUnavailable": "Güvenlik doğrulaması yüklenemedi. Lütfen bu sitede engelleyicileri kapatın ya da info@fomaprint.com adresine yazın.",
     "limitReached": "Sohbet uzadı. Daha fazla yardım için info@fomaprint.com adresine yazın.",
     "actionQuote": "Teklif iste",
     "actionReseller": "Bayi başvurusu",
