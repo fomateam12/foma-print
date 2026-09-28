@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { handleChat, type ChatDeps } from "./handler";
 import { createDailyBudget } from "./budget";
 import { issueSessionToken } from "./session-token";
@@ -42,7 +42,20 @@ function req(body: unknown, headers: Record<string, string> = {}) {
 const first = { lang: "en", messages: [{ role: "user", content: "How does shipping work?" }], cfTurnstileToken: "t" };
 
 describe("handleChat", () => {
-  beforeEach(() => vi.clearAllMocks());
+  // The handler logs structured events on every branch; keep the test output
+  // quiet and give the leak-check test below something to inspect.
+  let consoleSpies: ReturnType<typeof vi.spyOn>[] = [];
+
+  beforeEach(() => {
+    vi.clearAllMocks();
+    consoleSpies = (["log", "warn", "error", "info", "debug"] as const).map((method) =>
+      vi.spyOn(console, method).mockImplementation(() => {}),
+    );
+  });
+
+  afterEach(() => {
+    for (const spy of consoleSpies) spy.mockRestore();
+  });
 
   it("answers a first message and issues a session token", async () => {
     const res = await handleChat(req(first), makeDeps());
@@ -142,5 +155,21 @@ describe("handleChat", () => {
     const deps = makeDeps({ budget });
     await handleChat(req(first), deps);
     expect(budget.canSpend(deps.now())).toBe(false);
+  });
+
+  it("never logs the user's message text or the raw client IP", async () => {
+    const ip = "203.0.113.77";
+    const leakedReply = "We print for Yemliha.";
+
+    await handleChat(req(first, { "x-forwarded-for": ip }), makeDeps());
+    await handleChat(req(first, { "x-forwarded-for": ip }), makeDeps({}, `{"reply":"${leakedReply}","action":null}`));
+
+    const logged = consoleSpies.flatMap((spy) => spy.mock.calls).flat().map((arg) => String(arg));
+    expect(logged.length).toBeGreaterThan(0);
+    for (const line of logged) {
+      expect(line).not.toContain("How does shipping work?");
+      expect(line).not.toContain(leakedReply);
+      expect(line).not.toContain(ip);
+    }
   });
 });

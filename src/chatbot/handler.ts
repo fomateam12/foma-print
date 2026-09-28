@@ -1,5 +1,5 @@
 import "server-only";
-import { createHash } from "node:crypto";
+import { createHmac } from "node:crypto";
 import { NextResponse } from "next/server";
 import type { Locale } from "@/lib/i18n";
 import { isSameOrigin } from "@/lib/security";
@@ -25,7 +25,10 @@ export interface ChatDeps {
 
 type ErrorCode = "forbidden" | "invalid" | "rate_limited" | "verification_failed" | "unavailable";
 
-const hashIp = (ip: string) => createHash("sha256").update(`fomabot:${ip}`).digest("hex").slice(0, 12);
+// Keyed with the session secret so the hash cannot be reversed by brute-forcing
+// the IPv4 space (an unkeyed sha256 over ~4 billion addresses is a lookup table).
+const hashIp = (secret: string, ip: string) =>
+  createHmac("sha256", secret).update(`fomabot:${ip}`).digest("hex").slice(0, 12);
 
 export async function handleChat(request: Request, deps: ChatDeps): Promise<Response> {
   const traceId = getTraceId(request);
@@ -39,7 +42,7 @@ export async function handleChat(request: Request, deps: ChatDeps): Promise<Resp
   }
 
   const ip = ipFromRequest(request);
-  const ipHash = hashIp(ip);
+  const ipHash = hashIp(deps.config.sessionSecret, ip);
   const now = deps.now();
   for (const [key, limit, windowMs] of [
     [`chat:min:${ip}`, 10, 60_000],
