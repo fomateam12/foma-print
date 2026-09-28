@@ -14,6 +14,8 @@
 
 After changing `.env` on the server, restart the app container so `getChatConfig()` re-reads it.
 
+`NEXT_PUBLIC_TURNSTILE_SITE_KEY` is a separate, **build-time** variable (read by `src/components/turnstile-widget.tsx`, baked into the client bundle — not part of the server `getChatConfig()` table above). It must be set wherever the app is *built* for production, not just in the runtime `.env`. Without it the widget never renders (`TURNSTILE_ENABLED` is false), so the panel never collects a token and every first message gets a 403 from the server's `TURNSTILE_SECRET_KEY` check, even though the server itself is configured correctly.
+
 ## DeepSeek account setup
 1. Create a separate API key named `fomabot`.
 2. Load a small prepaid balance ($20) and keep auto top-up OFF.
