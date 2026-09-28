@@ -60,6 +60,7 @@ export default async function PrivacyPage({
         <LegalSection heading={t.s3Heading} paragraphs={[t.s3P1]} />
         <LegalSection heading={t.s4Heading} paragraphs={[t.s4P1]} />
         <LegalSection heading={t.s5Heading} paragraphs={[t.s5P1]} />
+        <LegalSection heading={t.s7Heading} paragraphs={[t.s7P1]} />
         <LegalSection heading={t.s6Heading}>
           <p className="mt-3">
             {t.s6P1}{" "}
