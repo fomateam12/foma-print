@@ -27,6 +27,13 @@ describe("parseDenylist", () => {
       "velvet whiskey",
     ]);
   });
+
+  it("handles denylist entries with regex metacharacters", () => {
+    const d = parseDenylist("A+B Crafts (NY)");
+    expect(d).toEqual(["a+b crafts (ny)"]);
+    expect(checkReply("We love A+B Crafts (NY).", d)).toEqual({ ok: false, rule: "denylist" });
+    expect(checkReply("AB Crafts NY", d)).toEqual({ ok: true });
+  });
 });
 
 describe("checkReply", () => {
@@ -59,6 +66,9 @@ describe("checkReply", () => {
     expect(checkReply("Log in at https://app.fomahub.com/login", deny)).toEqual({ ok: false, rule: "foreign_url" });
     expect(checkReply("See fomahub.com for more", deny)).toEqual({ ok: false, rule: "foreign_url" });
     expect(checkReply("See fomaprint.com/guides", deny)).toEqual({ ok: true });
+    expect(checkReply("See ourpartner.shop", deny)).toEqual({ ok: false, rule: "foreign_url" });
+    expect(checkReply("Visit brand.co.uk", deny)).toEqual({ ok: false, rule: "foreign_url" });
+    expect(checkReply("Engrave names, e.g. initials, in the U.S. i.e. the USA.", deny)).toEqual({ ok: true });
   });
 
   it("blocks credential-looking content", () => {

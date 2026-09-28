@@ -47,7 +47,7 @@ function escapeRegExp(s: string): string {
 
 const EMAIL_RE = /[a-z0-9._%+-]+@[a-z0-9-]+(\.[a-z0-9-]+)+/gi;
 const URL_RE = /\bhttps?:\/\/([^\s/?#)]+)/gi;
-const BARE_DOMAIN_RE = /\b((?:[a-z0-9-]+\.)+(?:com|net|org|io|co|app|dev|ai|us|tr|xyz|info|biz))\b/gi;
+const BARE_DOMAIN_RE = /\b((?:[a-z0-9-]+\.)+[a-z]{2,24})\b/gi;
 const CREDENTIAL_RES = [
   /\bsk-[a-z0-9_-]{16,}/i,
   /\b(password|passwd|pwd|sifre|api[ _-]?key|secret|token)\s*[:=]/i,
