@@ -777,5 +777,9 @@
     "ctaButton": "Bize ulaş",
     "faqHeading": "Sık sorulanlar",
     "notFound": "Rehber bulunamadı"
+  },
+  "fomabot": {
+    "fallback": "Bu soruyu ekibimizin yanıtlaması daha doğru olur. Sizi ekibe bağlayayım mı?",
+    "unavailable": "FomaBot şu an mola veriyor. info@fomaprint.com adresine yazın, aynı iş günü dönelim."
   }
 }

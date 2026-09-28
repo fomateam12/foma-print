@@ -777,5 +777,9 @@
     "ctaButton": "Contact us",
     "faqHeading": "Common questions",
     "notFound": "Guide not found"
+  },
+  "fomabot": {
+    "fallback": "I'd rather have our team answer this one. Want me to connect you?",
+    "unavailable": "FomaBot is taking a break. Email us at info@fomaprint.com and we'll reply the same business day."
   }
 }
