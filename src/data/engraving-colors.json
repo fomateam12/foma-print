@@ -324,9 +324,9 @@
  "GFT1002": {
   "color": "Brown/Silver",
   "family": "leatherette",
-  "hex": "#BBBABA",
-  "source": "group-median",
-  "tone": "light"
+  "hex": "#2A2C2C",
+  "source": "owner-dark-brown-leather-2026-09-27",
+  "tone": "dark"
  },
  "GFT1003": {
   "color": "Rawhide/Silver",
@@ -401,9 +401,9 @@
  "GFT1032": {
   "color": "Brown/Silver",
   "family": "leatherette",
-  "hex": "#BBBABA",
-  "source": "group-median",
-  "tone": "light"
+  "hex": "#2A2C2C",
+  "source": "owner-dark-brown-leather-2026-09-27",
+  "tone": "dark"
  },
  "GFT1033": {
   "color": "Black/Gold",
@@ -1199,8 +1199,8 @@
  "GFT215": {
   "color": "Dark Brown",
   "family": "leatherette",
-  "hex": "#74553D",
-  "source": "sku-measured",
+  "hex": "#2A2C2C",
+  "source": "owner-dark-brown-leather-2026-09-27",
   "tone": "dark"
  },
  "GFT220": {
@@ -3303,8 +3303,8 @@
  "LTM5202": {
   "color": "Dark Brown/Silver",
   "family": "leatherette",
-  "hex": "#684C3D",
-  "source": "sku-measured",
+  "hex": "#2A2C2C",
+  "source": "owner-dark-brown-leather-2026-09-27",
   "tone": "dark"
  },
  "LTM5203": {
