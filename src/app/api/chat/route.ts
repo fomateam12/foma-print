@@ -5,6 +5,7 @@ import { createDeepSeekModel, type ChatModel } from "@/chatbot/model";
 import { createDailyBudget, type DailyBudget } from "@/chatbot/budget";
 import { verifyTurnstile } from "@/lib/turnstile";
 import { getDictionary } from "@/lib/dictionaries";
+import { catalogContext } from "@/chatbot/catalog-matches";
 
 export const runtime = "nodejs";
 
@@ -27,5 +28,6 @@ export async function POST(request: Request) {
     now: Date.now,
     verifyTurnstile,
     fallbackReply: async (lang) => (await getDictionary(lang)).fomabot.fallback,
+    catalogContext,
   });
 }

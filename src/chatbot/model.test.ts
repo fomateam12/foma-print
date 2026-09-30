@@ -38,6 +38,28 @@ describe("createDeepSeekModel", () => {
     expect(init.headers.authorization).toBe("Bearer k");
   });
 
+  it("replays assistant turns as JSON and appends context as a trailing system message", async () => {
+    const fetchImpl = fakeFetch(json(okBody('{"reply":"ok","action":null}')));
+    const model = createDeepSeekModel({ apiKey: "k", model: "m", fetchImpl });
+    await model.complete(
+      "SYS",
+      [
+        { role: "user", content: "q1" },
+        { role: "assistant", content: "a1" },
+        { role: "user", content: "q2" },
+      ],
+      "CTX",
+    );
+    const body = JSON.parse((fetchImpl as unknown as ReturnType<typeof vi.fn>).mock.calls[0][1].body);
+    expect(body.messages).toEqual([
+      { role: "system", content: "SYS" },
+      { role: "user", content: "q1" },
+      { role: "assistant", content: JSON.stringify({ reply: "a1", action: null }) },
+      { role: "user", content: "q2" },
+      { role: "system", content: "CTX" },
+    ]);
+  });
+
   it("retries once on 5xx, then succeeds", async () => {
     const fetchImpl = fakeFetch(json({}, 503), json(okBody("{}")));
     const model = createDeepSeekModel({ apiKey: "k", model: "m", fetchImpl });

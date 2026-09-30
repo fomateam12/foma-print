@@ -781,6 +781,9 @@
     "notFound": "Rehber bulunamadı"
   },
   "fomabot": {
+    "bubbleTitle": "Merhaba! Ben FomaBot 👋",
+    "bubbleBody": "Ürünler, kargo ya da bizimle satış hakkında sorunuz mu var? Bana sorun.",
+    "bubbleClose": "Kapat",
     "fallback": "Bu soruyu ekibimizin yanıtlaması daha doğru olur. Sizi ekibe bağlayayım mı?",
     "unavailable": "FomaBot şu an mola veriyor. info@fomaprint.com adresine yazın, aynı iş günü dönelim.",
     "name": "FomaBot",

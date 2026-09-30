@@ -21,6 +21,8 @@ export interface ChatDeps {
   now: () => number;
   verifyTurnstile: (token: string | undefined, o: { ip?: string; traceId?: string }) => Promise<{ ok: boolean }>;
   fallbackReply: (lang: Locale) => Promise<string>;
+  /** Public catalog matches for the visitor's last message, or null. */
+  catalogContext: (question: string) => string | null;
 }
 
 type ErrorCode = "forbidden" | "invalid" | "rate_limited" | "verification_failed" | "unavailable";
@@ -88,29 +90,37 @@ export async function handleChat(request: Request, deps: ChatDeps): Promise<Resp
     );
   const fallback = async () => respond(await deps.fallbackReply(lang), "contact", true);
 
-  let completion;
-  try {
-    completion = await deps.model.complete(buildSystemPrompt(lang), toModelMessages(messages));
-  } catch (err) {
-    log.error({ traceId, event: "chat.model_error", message: err instanceof Error ? err.message : String(err) });
-    return fallback();
-  }
-  deps.budget.record(completion.usage.input + completion.usage.output, now);
+  const system = buildSystemPrompt(lang);
+  const history = toModelMessages(messages);
+  const context = deps.catalogContext(messages[messages.length - 1].content) ?? undefined;
 
-  const reply = parseModelReply(completion.text);
-  log.info({
-    traceId,
-    event: "chat.request",
-    ipHash,
-    lang,
-    turns: messages.length,
-    inputTokens: completion.usage.input,
-    outputTokens: completion.usage.output,
-  });
-  if (!reply) {
-    log.warn({ traceId, event: "chat.empty_reply" });
-    return fallback();
+  // DeepSeek's JSON mode occasionally returns whitespace-only content (its
+  // docs say so). One quiet retry before the visitor sees the fallback.
+  let reply: ReturnType<typeof parseModelReply> = null;
+  for (let attempt = 1; attempt <= 2 && !reply; attempt++) {
+    let completion;
+    try {
+      completion = await deps.model.complete(system, history, context);
+    } catch (err) {
+      log.error({ traceId, event: "chat.model_error", message: err instanceof Error ? err.message : String(err) });
+      return fallback();
+    }
+    deps.budget.record(completion.usage.input + completion.usage.output, now);
+    reply = parseModelReply(completion.text);
+    log.info({
+      traceId,
+      event: "chat.request",
+      ipHash,
+      lang,
+      turns: messages.length,
+      attempt,
+      catalogMatches: context ? context.split("\n").length - 1 : 0,
+      inputTokens: completion.usage.input,
+      outputTokens: completion.usage.output,
+    });
+    if (!reply) log.warn({ traceId, event: "chat.empty_reply", attempt });
   }
+  if (!reply) return fallback();
 
   // The client re-sends the full history on every turn and request.ts caps
   // every message at MAX_MESSAGE_CHARS, so an over-length reply would be
