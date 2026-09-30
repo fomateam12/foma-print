@@ -1,8 +1,7 @@
 import "server-only";
 import { log } from "@/lib/log";
 import { checkReply, parseDenylist } from "./output-filter";
-import { KNOWLEDGE_EN } from "./knowledge/en";
-import { KNOWLEDGE_TR } from "./knowledge/tr";
+import { buildSystemPrompt } from "./system-prompt";
 
 export interface ChatConfig {
   apiKey: string;
@@ -38,7 +37,8 @@ export function readChatConfig(env: Record<string, string | undefined>): ChatCon
     return null;
   }
 
-  for (const [lang, pack] of [["en", KNOWLEDGE_EN], ["tr", KNOWLEDGE_TR]] as const) {
+  for (const lang of ["en", "tr"] as const) {
+    const pack = buildSystemPrompt(lang);
     const result = checkReply(pack, denylist);
     if (!result.ok) {
       log.error({ event: "chat.knowledge_unsafe", lang, rule: result.rule });

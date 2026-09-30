@@ -1,7 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { checkReply, parseDenylist } from "./output-filter";
-import { KNOWLEDGE_EN } from "./knowledge/en";
-import { KNOWLEDGE_TR } from "./knowledge/tr";
+import { buildSystemPrompt } from "./system-prompt";
 
 /**
  * `npm run chat:check`: run before committing a knowledge edit, with
@@ -19,9 +18,9 @@ describe("knowledge pack", () => {
   });
 
   it.each([
-    ["en", KNOWLEDGE_EN],
-    ["tr", KNOWLEDGE_TR],
-  ])("%s pack passes the output filter", (_lang, pack) => {
+    ["en", buildSystemPrompt("en")],
+    ["tr", buildSystemPrompt("tr")],
+  ])("%s system prompt (knowledge + site pages) passes the output filter", (_lang, pack) => {
     expect(checkReply(pack, denylist)).toEqual({ ok: true });
   });
 });
