@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { FomaBotOrb, type OrbState, type OrbVariant } from "@/components/fomabot/orb";
+import { FomaBotOrb, type OrbState } from "@/components/fomabot/orb";
 
 /**
  * Internal design-system reference (Phase 2 / Gate 2).
@@ -425,24 +425,18 @@ export default function StyleguidePage() {
 
       {/* FOMABOT ORB */}
       <section className="mt-16 border-t border-border pt-10">
-        <h2 className="text-2xl font-semibold text-foreground">FomaBot orb</h2>
-        <p className="mt-2 text-muted-foreground">Three candidate launchers × three states. Pick one; it becomes DEFAULT_ORB_VARIANT.</p>
-        <div className="mt-8 grid gap-10 sm:grid-cols-3">
-          {(["aurora", "pulse", "blob"] as OrbVariant[]).map((variant) => (
-            <div key={variant} className="rounded-2xl border border-border p-6">
-              <h3 className="font-medium capitalize">{variant}</h3>
-              <div className="mt-6 flex items-end gap-6">
-                {(["idle", "thinking", "replying"] as OrbState[]).map((state) => (
-                  <div key={state} className="flex flex-col items-center gap-2">
-                    <FomaBotOrb variant={variant} state={state} size={64} />
-                    <span className="text-xs text-muted-foreground">{state}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+  <h2 className="text-2xl font-semibold text-foreground">FomaBot</h2>
+  <p className="mt-2 text-muted-foreground">Mascot states as they appear on the launcher (76 px) and at a larger preview size.</p>
+  <div className="mt-8 flex flex-wrap items-end gap-10">
+    {(["idle", "thinking", "replying"] as OrbState[]).map((state) => (
+      <div key={state} className="flex flex-col items-center gap-3">
+        <FomaBotOrb state={state} size={160} />
+        <FomaBotOrb state={state} size={76} />
+        <span className="text-xs text-muted-foreground">{state}</span>
+      </div>
+    ))}
+  </div>
+</section>
     </div>
   );
 }

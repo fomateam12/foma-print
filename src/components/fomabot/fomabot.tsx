@@ -79,7 +79,7 @@ export function FomaBot() {
         aria-expanded={open}
         className="fixed right-4 bottom-4 z-50 rounded-full focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
       >
-        <FomaBotOrb state={launcherOrbState} size={60} />
+        <FomaBotOrb state={launcherOrbState} size={76} />
       </button>
     </>
   );

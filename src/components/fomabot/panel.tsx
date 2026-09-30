@@ -142,7 +142,7 @@ export default function FomaBotPanel({
       className="fixed right-4 bottom-24 z-50 flex h-[min(620px,calc(100dvh-8rem))] w-[min(380px,calc(100vw-2rem))] flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-2xl"
     >
       <header className="flex items-center gap-3 border-b border-border px-4 py-3">
-        <FomaBotOrb state={state.status === "sending" ? "thinking" : "idle"} size={32} />
+        <FomaBotOrb state={state.status === "sending" ? "thinking" : "idle"} size={40} />
         <span className="font-heading font-semibold">{dict.name}</span>
         <button type="button" onClick={onClose} aria-label={dict.close} className="ml-auto rounded-full p-1.5 hover:bg-muted">
           <X className="size-4" />
