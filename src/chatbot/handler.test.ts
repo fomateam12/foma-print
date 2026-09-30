@@ -22,6 +22,7 @@ function makeDeps(overrides: Partial<ChatDeps> = {}, modelText = '{"reply":"We b
     now: () => 1_700_000_000_000,
     verifyTurnstile: vi.fn().mockResolvedValue({ ok: true }),
     fallbackReply: async () => "FALLBACK",
+    catalogContext: () => null,
     ...overrides,
   };
 }
@@ -132,6 +133,26 @@ describe("handleChat", () => {
     const deps = makeDeps({}, "");
     const body = await (await handleChat(req(first), deps)).json();
     expect(body).toMatchObject({ reply: "FALLBACK", action: "contact", fallback: true });
+  });
+
+  it("retries once when the model returns empty content, then answers", async () => {
+    const complete = vi
+      .fn()
+      .mockResolvedValueOnce({ text: "   ", usage: { input: 900, output: 5 } })
+      .mockResolvedValueOnce({ text: '{"reply":"Second try.","action":null}', usage: { input: 900, output: 20 } });
+    const deps = makeDeps({ model: { complete } });
+    const body = await (await handleChat(req(first), deps)).json();
+    expect(complete).toHaveBeenCalledTimes(2);
+    expect(body).toMatchObject({ reply: "Second try.", action: null });
+    expect(body.fallback).toBeUndefined();
+  });
+
+  it("passes catalog matches for the last message to the model as context", async () => {
+    const catalogContext = vi.fn().mockReturnValue("CATALOG MATCHES: - Tumbler");
+    const deps = makeDeps({ catalogContext });
+    await handleChat(req(first), deps);
+    expect(catalogContext).toHaveBeenCalledWith("How does shipping work?");
+    expect((deps.model.complete as ReturnType<typeof vi.fn>).mock.calls[0][2]).toBe("CATALOG MATCHES: - Tumbler");
   });
 
   it("falls back when the model throws", async () => {

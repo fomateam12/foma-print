@@ -9,7 +9,12 @@ export interface ChatCompletion {
 }
 
 export interface ChatModel {
-  complete(system: string, messages: ChatMessage[]): Promise<ChatCompletion>;
+  /**
+   * `context` is optional per-request, server-built material (catalog
+   * matches). It goes after the conversation as a second system message so
+   * the long, stable system prompt stays a cacheable prefix.
+   */
+  complete(system: string, messages: ChatMessage[], context?: string): Promise<ChatCompletion>;
 }
 
 export class ModelError extends Error {
@@ -40,7 +45,20 @@ export function createDeepSeekModel(opts: {
   const timeoutMs = opts.timeoutMs ?? 15_000;
   const doFetch = opts.fetchImpl ?? fetch;
 
-  async function once(system: string, messages: ChatMessage[]): Promise<ChatCompletion> {
+  /**
+   * DeepSeek's JSON mode returns whitespace-only content on most follow-up
+   * turns when earlier assistant turns are plain text (measured: 5 of 6
+   * empty with plain history, 0 of 6 with JSON history). So every assistant
+   * turn is replayed in the same JSON shape the model is asked to produce.
+   */
+  const toWire = (messages: ChatMessage[]) =>
+    messages.map((m) =>
+      m.role === "assistant"
+        ? { role: "assistant", content: JSON.stringify({ reply: m.content, action: null }) }
+        : m,
+    );
+
+  async function once(system: string, messages: ChatMessage[], context?: string): Promise<ChatCompletion> {
     const res = await doFetch(`${baseUrl}/chat/completions`, {
       method: "POST",
       headers: { authorization: `Bearer ${opts.apiKey}`, "content-type": "application/json" },
@@ -50,7 +68,11 @@ export function createDeepSeekModel(opts: {
         max_tokens: 500,
         response_format: { type: "json_object" },
         thinking: { type: "disabled" },
-        messages: [{ role: "system", content: system }, ...messages],
+        messages: [
+          { role: "system", content: system },
+          ...toWire(messages),
+          ...(context ? [{ role: "system", content: context }] : []),
+        ],
       }),
       signal: AbortSignal.timeout(timeoutMs),
     });
@@ -69,13 +91,13 @@ export function createDeepSeekModel(opts: {
     !(err instanceof ModelError) || (err.status !== undefined && err.status >= 500);
 
   return {
-    async complete(system, messages) {
+    async complete(system, messages, context) {
       try {
-        return await once(system, messages);
+        return await once(system, messages, context);
       } catch (err) {
         if (!retryable(err)) throw err;
         try {
-          return await once(system, messages);
+          return await once(system, messages, context);
         } catch (second) {
           if (second instanceof ModelError) throw second;
           throw new ModelError(second instanceof Error ? second.message : String(second));
