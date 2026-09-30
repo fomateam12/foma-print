@@ -17,6 +17,8 @@ import { getDictionary } from "@/lib/dictionaries";
 import { isLocale } from "@/lib/i18n";
 import { alternatesFor } from "@/lib/seo";
 
+import { AskFomaBotCard } from "@/components/fomabot/ask-fomabot";
+
 export async function generateMetadata({
   params,
 }: PageProps<"/[lang]/faq">): Promise<Metadata> {
@@ -119,6 +121,12 @@ export default async function FaqPage({ params }: PageProps<"/[lang]/faq">) {
               </AccordionItem>
             ))}
           </Accordion>
+
+          <AskFomaBotCard
+            className="mt-8"
+            title={dict.fomabot.faqCardTitle}
+            body={dict.fomabot.faqCardBody}
+          />
 
           <div className="mt-10 flex justify-center">
             <Link

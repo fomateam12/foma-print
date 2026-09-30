@@ -31,6 +31,7 @@ import { Logo } from "@/components/logo";
 import { ProductImage } from "@/components/product-image";
 import { CategoryIcon } from "@/components/category-icon";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { AskFomaBotNav } from "@/components/fomabot/ask-fomabot";
 import { useI18n } from "@/components/i18n-provider";
 import { categoryName, subcategoryName } from "@/lib/catalog-i18n";
 import { cn } from "@/lib/utils";
@@ -309,6 +310,8 @@ export function HeaderNav({
             <SearchBox className="hidden w-44 md:block lg:w-56 xl:w-64" />
 
             <LanguageSwitcher className="hidden sm:flex" />
+
+            <AskFomaBotNav />
 
             <QuoteIndicator />
 
