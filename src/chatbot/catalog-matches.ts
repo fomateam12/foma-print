@@ -7,8 +7,8 @@ import { normalizeText } from "./output-filter";
  * Finds public catalog products that match a visitor's question, so FomaBot
  * can name real products and link them instead of saying "check the catalog".
  *
- * Only public fields leave this module: name, size, category and the product
- * URL. `basePrice` is the internal wholesale reference and never does, and
+ * Only public fields leave this module: name, size, category, engraving area
+ * and the product URL, all shown on the product page. `basePrice` is the internal wholesale reference and never does, and
  * neither does the SKU.
  */
 
@@ -17,6 +17,8 @@ export interface CatalogMatch {
   size: string | null;
   category: string;
   url: string;
+  /** Shown on the product page as "Engraving area" (mm). */
+  engravingArea: string | null;
 }
 
 // Words that carry no product meaning in a question (EN + TR).
@@ -107,6 +109,7 @@ export function findCatalogMatches(
       size: variants > 1 ? null : p.size,
       category: `${p.categoryName} › ${p.subcategoryName}`,
       url: `fomaprint.com/product/${p.id}`,
+      engravingArea: p.engravingArea ?? null,
     });
     if (matches.length >= limit) break;
   }
@@ -118,7 +121,9 @@ export function catalogContext(question: string): string | null {
   const matches = findCatalogMatches(question);
   if (matches.length === 0) return null;
   const lines = matches.map(
-    (m) => `- ${m.name}${m.size ? ` (${m.size})` : ""} | ${m.category} | ${m.url}`,
+    (m) =>
+      `- ${m.name}${m.size ? ` (${m.size})` : ""} | ${m.category}` +
+      `${m.engravingArea ? ` | engraving area ${m.engravingArea}` : ""} | ${m.url}`,
   );
   return (
     "CATALOG MATCHES (added by the website from the public catalog for the visitor's last message; " +

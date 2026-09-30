@@ -33,7 +33,7 @@ describe("findCatalogMatches (real catalog)", () => {
       if (p.sku && p.sku.length >= 5) expect(ctx).not.toContain(p.sku);
     }
     for (const x of findCatalogMatches("tumbler")) {
-      expect(Object.keys(x).sort()).toEqual(["category", "name", "size", "url"]);
+      expect(Object.keys(x).sort()).toEqual(["category", "engravingArea", "name", "size", "url"]);
       expect(x.url.startsWith("fomaprint.com/product/")).toBe(true);
     }
   });
