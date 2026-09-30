@@ -781,6 +781,9 @@
     "notFound": "Guide not found"
   },
   "fomabot": {
+    "bubbleTitle": "Hi! I'm FomaBot 👋",
+    "bubbleBody": "Questions about products, shipping or selling with us? Ask me anything.",
+    "bubbleClose": "Dismiss",
     "fallback": "I'd rather have our team answer this one. Want me to connect you?",
     "unavailable": "FomaBot is taking a break. Email us at info@fomaprint.com and we'll reply the same business day.",
     "name": "FomaBot",
