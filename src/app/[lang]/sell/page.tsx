@@ -28,6 +28,8 @@ import { getDictionary } from "@/lib/dictionaries";
 import { isLocale } from "@/lib/i18n";
 import { alternatesFor } from "@/lib/seo";
 
+import { AskFomaBotCard } from "@/components/fomabot/ask-fomabot";
+
 export async function generateMetadata({
   params,
 }: PageProps<"/[lang]/sell">): Promise<Metadata> {
@@ -265,6 +267,12 @@ export default async function SellPage({ params }: PageProps<"/[lang]/sell">) {
               </a>
               {t.questionsAfter}
             </div>
+
+            <AskFomaBotCard
+              className="mt-4"
+              title={dict.fomabot.sellCardTitle}
+              body={dict.fomabot.sellCardBody}
+            />
           </div>
 
           <div className="rounded-3xl border border-border bg-card p-6 shadow-soft sm:p-8">

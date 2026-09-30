@@ -19,6 +19,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProductGrid } from "@/components/product-grid";
 import { ProductGallery } from "@/components/product-gallery";
 import { AddToQuoteButton } from "@/components/add-to-quote-button";
+import { AskFomaBotCard } from "@/components/fomabot/ask-fomabot";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { cloudinary, formatWeight } from "@/lib/format";
@@ -372,6 +373,11 @@ export default async function ProductPage({
                 {t.askQuestion}
               </a>
             </div>
+            <AskFomaBotCard
+              title={dict.fomabot.productCardTitle}
+              body={dict.fomabot.productCardBody}
+              question={dict.fomabot.productCardQuestion.replace("{product}", name)}
+            />
           </div>
 
           {/* Trust */}

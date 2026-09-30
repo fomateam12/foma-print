@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, type Dispatch } from "react";
+import { useCallback, useEffect, useEffectEvent, useRef, useState, type Dispatch } from "react";
 import { motion } from "framer-motion";
 import { X, Send } from "lucide-react";
 import { useDict, useLocale } from "@/components/i18n-provider";
@@ -20,6 +20,8 @@ export default function FomaBotPanel({
   setDraft,
   turnstileToken,
   setTurnstileToken,
+  pendingQuestion,
+  setPendingQuestion,
 }: {
   onClose: () => void;
   // Lifted into FomaBot so closing (unmounting this lazy-loaded panel) or
@@ -30,6 +32,9 @@ export default function FomaBotPanel({
   setDraft: (draft: string) => void;
   turnstileToken: string | null;
   setTurnstileToken: (token: string | null) => void;
+  /** Question from an in-page button or a chip; sent as soon as sending is possible. */
+  pendingQuestion: string | null;
+  setPendingQuestion: (question: string | null) => void;
 }) {
   const dict = useDict().fomabot;
   const lang = useLocale();
@@ -58,16 +63,16 @@ export default function FomaBotPanel({
   const onTurnstileUnavailable = useCallback(() => setTurnstileUnavailable(true), []);
 
   const needsTurnstile = state.messages.length === 0 && TURNSTILE_ENABLED;
-  const canSend =
-    draft.trim().length > 0 &&
+  const ready =
     state.status !== "sending" &&
     state.messages.length < MAX_CONVERSATION &&
     (!needsTurnstile || turnstileToken !== null);
+  const canSend = ready && draft.trim().length > 0;
 
-  async function send() {
-    if (!canSend) return;
-    const content = draft.trim();
-    setDraft("");
+  async function send(text?: string) {
+    const content = (text ?? draft).trim();
+    if (!ready || !content) return;
+    if (text === undefined) setDraft("");
     const messages = [...state.messages.map(({ role, content }) => ({ role, content })), { role: "user" as const, content }];
     const isFirstMessage = messages.length === 1;
     dispatch({ type: "send", content });
@@ -102,6 +107,16 @@ export default function FomaBotPanel({
       dispatch({ type: "error", error: "network" });
     }
   }
+
+  // A queued question (in-page button, chip) goes out the moment the chat can
+  // send, which on a first message means after Turnstile hands over a token.
+  const sendPending = useEffectEvent((question: string) => {
+    setPendingQuestion(null);
+    void send(question);
+  });
+  useEffect(() => {
+    if (pendingQuestion && ready) sendPending(pendingQuestion);
+  }, [pendingQuestion, ready]);
 
   const errorText: Record<NonNullable<ChatState["error"]>, string> = {
     rate_limited: dict.rateLimited,
@@ -139,7 +154,8 @@ export default function FomaBotPanel({
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, y: 24, scale: 0.96 }}
       transition={{ type: "spring", stiffness: 320, damping: 28 }}
-      className="fixed right-4 bottom-28 z-50 flex h-[min(600px,calc(100dvh-9rem))] w-[min(380px,calc(100vw-2rem))] flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-2xl"
+      // Phones get the whole screen; a cramped overlay is where mobile chats die.
+      className="fixed right-4 bottom-28 z-50 flex h-[min(600px,calc(100dvh-9rem))] w-[min(380px,calc(100vw-2rem))] flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-2xl max-sm:inset-0 max-sm:h-dvh max-sm:w-full max-sm:rounded-none max-sm:border-0"
     >
       <header className="flex items-center gap-3 border-b border-border px-4 py-3">
         <FomaBotOrb state={state.status === "sending" ? "thinking" : "idle"} size={40} />
@@ -151,6 +167,20 @@ export default function FomaBotPanel({
 
       <div ref={listRef} className="flex-1 space-y-3 overflow-y-auto px-4 py-4" aria-live="polite">
         <p className="max-w-[85%] rounded-2xl rounded-tl-sm bg-muted px-3 py-2 text-sm">{dict.greeting}</p>
+        {state.messages.length === 0 && !pendingQuestion ? (
+          <div className="flex flex-col items-start gap-2 pt-1">
+            {dict.suggestions.map((q) => (
+              <button
+                key={q}
+                type="button"
+                onClick={() => setPendingQuestion(q)}
+                className="rounded-full border border-brand/30 bg-card px-3 py-1.5 text-left text-sm text-brand-strong transition hover:bg-brand-muted/60"
+              >
+                {q}
+              </button>
+            ))}
+          </div>
+        ) : null}
         {state.messages.map((m, i) => (
           <div key={i} className={m.role === "user" ? "flex justify-end" : ""}>
             <div
