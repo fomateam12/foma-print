@@ -7,6 +7,7 @@ import { QuoteProvider } from "@/components/quote-provider";
 import { I18nProvider } from "@/components/i18n-provider";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { FomaBot } from "@/components/fomabot/fomabot";
 import { site } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
 import { LOCALES, LOCALE_OG, isLocale, localizedPath } from "@/lib/i18n";
@@ -146,6 +147,7 @@ export default async function RootLayout({
               {children}
             </main>
             <SiteFooter locale={lang} dict={dict} />
+            <FomaBot />
           </QuoteProvider>
         </I18nProvider>
         <Toaster position="top-center" theme="light" richColors closeButton />

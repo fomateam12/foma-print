@@ -26,6 +26,13 @@ and in `.env.local` for local dev. `.env*` is gitignored.
 | `R2_ACCOUNT_ID` | Cloudflare account id — signs the private catalog-PDF reads |
 | `R2_ACCESS_KEY_ID` / `R2_SECRET_ACCESS_KEY` | R2 API token (Object **Read** on `fomaprint-catalog` is enough) |
 | `R2_CATALOG_BUCKET` | Optional — private PDF bucket, defaults to `fomaprint-catalog` |
+| `CHAT_DEEPSEEK_API_KEY` | FomaBot DeepSeek API key — see `docs/fomabot-operations.md` |
+| `CHAT_SESSION_SECRET` | FomaBot session token secret (32+ chars) — see `docs/fomabot-operations.md` |
+| `CHAT_DENYLIST` | FomaBot denylist (comma-separated names) — see `docs/fomabot-operations.md` |
+| `CHAT_MODEL` | Optional — FomaBot model choice, defaults to `deepseek-v4-pro` — see `docs/fomabot-operations.md` |
+| `CHAT_DAILY_TOKEN_BUDGET` | Optional — FomaBot token budget, defaults to 2000000 — see `docs/fomabot-operations.md` |
+| `CHAT_DEEPSEEK_BASE_URL` | Optional — FomaBot API endpoint, defaults to `https://api.deepseek.com` — see `docs/fomabot-operations.md` |
+| `TURNSTILE_SECRET_KEY` | Cloudflare Turnstile secret for bot verification (required in production) — see `docs/fomabot-operations.md` |
 
 ## Notes
 - The codebase reads only the names above (verified via `grep process.env`).

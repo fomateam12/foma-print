@@ -202,7 +202,7 @@
     "q4": "How do I pay?",
     "a4": "You load a prepaid balance (wallet) and orders draw from it — no subscription or monthly fee. Per-unit pricing is quote-based; we send rates when you apply.",
     "q5": "What about file requirements?",
-    "a5": "High-contrast black artwork on a transparent background (PNG, or vector SVG/PDF), sized to the product's engraving area. We send the full per-product spec sheet with your reseller welcome pack.",
+    "a5": "High-contrast black vector artwork (SVG or DXF) on a transparent background, sized to the product's engraving area. We send the full per-product spec sheet with your reseller welcome pack.",
     "q6": "Where do you ship from?",
     "a6": "Our US print center; made & shipped in the USA.",
     "q7": "Do you work with Amazon/Etsy/Shopify?",
@@ -638,7 +638,7 @@
   "privacy": {
     "metaTitle": "Privacy Policy",
     "metaDescription": "How FOMA FAMILY LLC collects, uses and protects your information at FomaPrint.",
-    "updated": "June 2026",
+    "updated": "September 2026",
     "intro": "{legal} (\"{brand}\", \"we\", \"us\") respects your privacy. This policy explains what information we collect when you use {brand}, how we use it, and the choices you have. By using our site or submitting a form, you agree to this policy.",
     "s1Heading": "Information we collect",
     "s1B1": "Contact details you provide through our custom order or reseller forms, such as your name, business name, email, phone number and website.",
@@ -655,6 +655,8 @@
     "s4P1": "We keep your information only as long as necessary to fulfill the purposes described here, including legal and accounting requirements. We use reasonable safeguards to protect your data, though no method of transmission over the internet is 100% secure.",
     "s5Heading": "Your choices",
     "s5P1": "You may request access to, correction of, or deletion of your personal information at any time by contacting us. You can also opt out of non-essential communications.",
+    "s7Heading": "FomaBot chat assistant",
+    "s7P1": "Messages you type into FomaBot, our website chat assistant, are sent to a third-party AI provider (DeepSeek), which processes and may store them in the People's Republic of China and may use them to improve its models. We do not send your name, email or other contact details to it. Please do not enter personal information in the chat; use our forms or email instead. We do not keep chat transcripts.",
     "s6Heading": "Contact us",
     "s6P1": "Questions about this policy? Email"
   },
@@ -777,5 +779,25 @@
     "ctaButton": "Contact us",
     "faqHeading": "Common questions",
     "notFound": "Guide not found"
+  },
+  "fomabot": {
+    "fallback": "I'd rather have our team answer this one. Want me to connect you?",
+    "unavailable": "FomaBot is taking a break. Email us at info@fomaprint.com and we'll reply the same business day.",
+    "name": "FomaBot",
+    "open": "Chat with FomaBot",
+    "close": "Close chat",
+    "greeting": "Hi! I'm FomaBot. Ask me about our products, white-label shipping, becoming a reseller or how the seller portal works.",
+    "placeholder": "Type your question…",
+    "send": "Send",
+    "thinking": "FomaBot is thinking…",
+    "privacyNote": "Please don't share personal information here. To reach us, use the buttons or email.",
+    "rateLimited": "You're sending messages quickly. Please wait a moment and try again.",
+    "verificationFailed": "We couldn't verify this chat. Please try again.",
+    "network": "Connection problem. Please try again.",
+    "turnstileUnavailable": "We couldn't load the security check. Please disable blockers for this site or email us at info@fomaprint.com.",
+    "limitReached": "This chat is getting long. For more help, email info@fomaprint.com.",
+    "actionQuote": "Request a quote",
+    "actionReseller": "Apply to sell",
+    "actionContact": "Email our team"
   }
 }

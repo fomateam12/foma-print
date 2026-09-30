@@ -316,7 +316,7 @@
     "q4": "Ödemeyi nasıl yapabilirim?",
     "a4": "Ön ödemeli bakiyenize para yüklersiniz ve sipariş tutarları bu bakiyeden düşülür. Abonelik veya aylık ücret yoktur. Birim fiyatlar teklife göre belirlenir; satıcı başvurunuzun ardından fiyatları size iletiriz.",
     "q5": "Dosya gereksinimleri nelerdir?",
-    "a5": "Şeffaf arka plan üzerinde yüksek kontrastlı siyah tasarım kullanın (PNG veya vektörel SVG/PDF) ve dosyayı ürünün kazıma alanına göre boyutlandırın. Ürüne özel tüm teknik özellikleri satıcı karşılama paketinizle birlikte göndeririz.",
+    "a5": "Şeffaf arka plan üzerinde yüksek kontrastlı siyah vektörel tasarım kullanın (SVG veya DXF) ve dosyayı ürünün kazıma alanına göre boyutlandırın. Ürüne özel tüm teknik özellikleri satıcı karşılama paketinizle birlikte göndeririz.",
     "q6": "Gönderimler nereden yapılıyor?",
     "a6": "Ürünler ABD’deki baskı merkezimizde hazırlanır ve ABD’den gönderilir.",
     "q7": "Amazon, Etsy ve Shopify ile çalışıyor musunuz?",
@@ -638,7 +638,7 @@
   "privacy": {
     "metaTitle": "Gizlilik Politikası",
     "metaDescription": "FOMA FAMILY LLC'nin FomaPrint'te bilgilerinizi nasıl topladığı, kullandığı ve koruduğu hakkında bilgi edinin.",
-    "updated": "Haziran 2026",
+    "updated": "Eylül 2026",
     "intro": "{legal} (\"{brand}\", \"biz\", \"bize\") gizliliğinize saygı duyar. Bu politika, {brand} hizmetini kullandığınızda hangi bilgileri topladığımızı, bunları nasıl kullandığımızı ve sahip olduğunuz seçenekleri açıklar. Sitemizi kullanarak veya bir form göndererek bu politikayı kabul etmiş olursunuz.",
     "s1Heading": "Topladığımız bilgiler",
     "s1B1": "Özel sipariş veya satıcı formlarımız aracılığıyla paylaştığınız adınız, işletme adınız, e-posta adresiniz, telefon numaranız ve web siteniz gibi iletişim bilgileri.",
@@ -655,6 +655,8 @@
     "s4P1": "Bilgilerinizi, yasal ve muhasebesel gereklilikler dahil olmak üzere burada açıklanan amaçları yerine getirmek için yalnızca gerekli olduğu süre boyunca saklarız. Verilerinizi korumak için makul güvenlik önlemleri uygularız; ancak internet üzerinden yapılan hiçbir veri aktarımı %100 güvenli değildir.",
     "s5Heading": "Tercihleriniz",
     "s5P1": "Bizimle iletişime geçerek kişisel bilgilerinize erişme, bu bilgileri düzeltme veya silme talebinde istediğiniz zaman bulunabilirsiniz. Ayrıca zorunlu olmayan iletişimleri almayı reddedebilirsiniz.",
+    "s7Heading": "FomaBot sohbet asistanı",
+    "s7P1": "Web sitemizdeki sohbet asistanı FomaBot'a yazdığınız mesajlar üçüncü taraf bir yapay zekâ sağlayıcısına (DeepSeek) gönderilir; sağlayıcı bunları Çin Halk Cumhuriyeti'nde işler, saklayabilir ve modellerini geliştirmek için kullanabilir. Adınızı, e-postanızı veya diğer iletişim bilgilerinizi bu sağlayıcıya göndermeyiz. Lütfen sohbete kişisel bilgi yazmayın; bunun yerine formlarımızı veya e-postayı kullanın. Sohbet kayıtlarını saklamayız.",
     "s6Heading": "Bize ulaşın",
     "s6P1": "Bu politika hakkında sorunuz mu var? E-posta:"
   },
@@ -777,5 +779,25 @@
     "ctaButton": "Bize ulaş",
     "faqHeading": "Sık sorulanlar",
     "notFound": "Rehber bulunamadı"
+  },
+  "fomabot": {
+    "fallback": "Bu soruyu ekibimizin yanıtlaması daha doğru olur. Sizi ekibe bağlayayım mı?",
+    "unavailable": "FomaBot şu an mola veriyor. info@fomaprint.com adresine yazın, aynı iş günü dönelim.",
+    "name": "FomaBot",
+    "open": "FomaBot ile sohbet et",
+    "close": "Sohbeti kapat",
+    "greeting": "Merhaba! Ben FomaBot. Ürünlerimiz, markasız gönderim, bayi olmak ya da satıcı panelinin nasıl çalıştığı hakkında sorabilirsiniz.",
+    "placeholder": "Sorunuzu yazın…",
+    "send": "Gönder",
+    "thinking": "FomaBot düşünüyor…",
+    "privacyNote": "Lütfen burada kişisel bilgi paylaşmayın. Bize ulaşmak için butonları ya da e-postayı kullanın.",
+    "rateLimited": "Çok hızlı mesaj gönderiyorsunuz. Biraz bekleyip tekrar deneyin.",
+    "verificationFailed": "Bu sohbeti doğrulayamadık. Lütfen tekrar deneyin.",
+    "network": "Bağlantı sorunu. Lütfen tekrar deneyin.",
+    "turnstileUnavailable": "Güvenlik doğrulaması yüklenemedi. Lütfen bu sitede engelleyicileri kapatın ya da info@fomaprint.com adresine yazın.",
+    "limitReached": "Sohbet uzadı. Daha fazla yardım için info@fomaprint.com adresine yazın.",
+    "actionQuote": "Teklif iste",
+    "actionReseller": "Bayi başvurusu",
+    "actionContact": "Ekibe e-posta gönder"
   }
 }
