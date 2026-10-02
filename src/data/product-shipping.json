@@ -629,6 +629,12 @@
     "fallback_weight_lb": 0.25,
     "type": "Coaster"
   },
+  "GFT1252": {
+    "type": "Binder",
+    "dim_in": null,
+    "engrave_mm": "90 × 90 mm center · 60 × 60 mm bottom right",
+    "fallback_weight_lb": null
+  },
   "GFT1285": {
     "dim_in": "9 × 7 × 1 in",
     "engrave_mm": "50 × 35 mm",
@@ -5596,5 +5602,23 @@
     "dim_in": null,
     "engrave_mm": null,
     "fallback_weight_lb": 1
+  },
+  "WBX11": {
+    "type": "Wine Box",
+    "dim_in": null,
+    "engrave_mm": "130 × 50 mm",
+    "fallback_weight_lb": null
+  },
+  "WBX21": {
+    "type": "Wine Box",
+    "dim_in": null,
+    "engrave_mm": "130 × 50 mm",
+    "fallback_weight_lb": null
+  },
+  "WBX31": {
+    "type": "Wine Box",
+    "dim_in": null,
+    "engrave_mm": "130 × 50 mm",
+    "fallback_weight_lb": null
   }
 }
