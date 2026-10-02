@@ -9018,6 +9018,13 @@
   "source": "group-median",
   "tone": "light"
  },
+ "WBX12": {
+  "color": "Rosewood",
+  "family": "wood",
+  "hex": "#C2AB70",
+  "source": "group-median",
+  "tone": "light"
+ },
  "WBX21": {
   "color": "Black",
   "family": "wood",
