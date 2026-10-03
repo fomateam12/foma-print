@@ -181,6 +181,12 @@
   "/products/BR2501/BR2501_POUCHBK.png",
   "/products/BR2501/BR2501_SIDE.png"
  ],
+ "BRS125": [
+  "/products/BRS125/BRS125.jpg",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1733847596/products/images/large/BRS125--f8848bf4.png",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1733847559/products/images/large/BRS125--86e03d1a.png",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1733847559/products/images/large/BRS125--32f5d825.png"
+ ],
  "CH103": [
   "/products/CH103/CH103.jpg",
   "/products/CH103/CH103_OPEN.png",
@@ -6667,5 +6673,24 @@
  ],
  "SLT086": [
   "/products/SLT086/SLT086.jpg"
+ ],
+ "WS101": [
+  "/products/WS101/WS101.jpg",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1732649488/products/images/large/WS101--4a0a1176.png",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1732649455/products/images/large/WS101--933b8c88.png",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1732645094/products/images/large/WS101--ae188698.png",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1732645094/products/images/large/WS101--dd6b12e7.png",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1732645086/products/images/large/WS101--4f3453af.png",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1732645086/products/images/large/WS101--df701fd7.png",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1732645087/products/images/large/WS101--e0d7ad86.png",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1732649677/products/images/large/WS101--8c3d6d18.png"
+ ],
+ "WS125": [
+  "/products/WS125/WS125.jpg",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1732650673/products/images/large/WS125--1064e983.png",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1732650672/products/images/large/WS125--301dc123.png",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1732637959/products/images/large/WS125--783f6b09.png",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1732650838/products/images/large/WS125--3abe1bbe.png",
+  "https://res.cloudinary.com/business-products/image/upload/q_auto/v1732650786/products/images/large/WS125--fbd3ea59.png"
  ]
 }
