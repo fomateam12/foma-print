@@ -13,6 +13,20 @@ services:
     env_file: .env
     expose:
       - "3000"
+    volumes:
+      # The image optimizer's disk cache. Inside the container it was wiped on
+      # every deploy, so after each merge every thumbnail had to be
+      # re-encoded on 2 vCPUs (measured: ~4 s per image for a cold category
+      # page vs ~0.07 s cached). A named volume keeps it across rebuilds.
+      # Force a full refresh with: docker volume rm fomaprint_image_cache
+      - image_cache:/app/.next/cache/images
+    sysctls:
+      # Cap the per-socket receive buffer for this container only. The host
+      # default autotunes up to 14.8 MB per socket against a 170 MB kernel
+      # TCP budget, so a dozen stalled upstream fetches (aborted downloads)
+      # pushed the whole box into "TCP: out of memory" and it started
+      # resetting connections site-wide. 1 MB still allows ~500 MB/s to R2.
+      net.ipv4.tcp_rmem: "4096 131072 1048576"
 
   caddy:
     image: caddy:2-alpine
@@ -28,3 +42,4 @@ services:
 volumes:
   caddy_data:
   caddy_config:
+  image_cache:

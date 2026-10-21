@@ -71,10 +71,21 @@ const nextConfig: NextConfig = {
         }
       : {}),
 
-    // AVIF preferred (smaller for the same visual quality), WebP as the
-    // fallback for browsers without AVIF support. Anything older falls
-    // back to the original format the loader returned.
-    formats: ["image/avif", "image/webp"],
+    // WebP only. Self-hosted, every first view of a thumbnail is encoded on
+    // the 2-vCPU Hetzner box, and sharp gets one thread per encode there.
+    // AVIF (effort 3) measured 2–3.5x slower than WebP for the 640/828 px
+    // grid thumbnails and up to 4x for the q95 detail hero, and a cold
+    // category page queued ~4 s per image. Past sharp's 7 s timeout Next
+    // even serves (and caches for hours) the multi-MB original instead.
+    // WebP is what the Next docs recommend for most sites; browsers without
+    // it get the source format.
+    formats: ["image/webp"],
+
+    // The optimizer cache lives on a named Docker volume now (see
+    // docker-compose.yml) so it survives deploys; cap it so it can't eat the
+    // host disk (default is half of whatever is free at startup). Least
+    // recently used entries are evicted first.
+    maximumDiskCacheSize: 2_000_000_000,
 
     // Required in Next.js 16 — the allowlist of `quality` values the
     // optimizer will honor. 75 is the default for thumbnails / grids,
