@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getProduct } from "@/data/catalog";
+import { getProduct, getProductBySku } from "@/data/catalog";
 import { catalogImageAbsoluteUrl } from "@/lib/catalog-image";
 import { getTraceId, TRACE_HEADER } from "@/lib/trace";
 
@@ -41,7 +41,9 @@ export function GET(request: Request) {
   const missing = [];
 
   for (const sku of skus) {
-    const product = getProduct(sku);
+    // Supplier SKUs double as the product id; FOMA's own products carry a slug
+    // id and a separate marketing SKU (TM-FM-LIL), so fall back to the SKU map.
+    const product = getProduct(sku) ?? getProductBySku(sku);
     if (!product) {
       // A SKU we don't carry is an answer, not an error — Studio shows it as
       // "no catalogue record" next to the ones that resolved.
