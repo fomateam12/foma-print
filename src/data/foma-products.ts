@@ -763,7 +763,7 @@ export const fomaProducts: Product[] = [
   },
   {
     id: "foma-cutting-board-bamboo",
-    name: "Bamboo Charcuterie Board – 16 × 11 × 1 in",
+    name: "Bamboo Cutting Board – 16 × 11 × 1 in",
     sku: "FM-CHAR-BMB-1611",
     size: "16 × 11 × 1 in",
     engravingArea: "100 × 100 mm",
