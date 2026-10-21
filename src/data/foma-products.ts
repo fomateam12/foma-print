@@ -821,7 +821,7 @@ export const fomaProducts: Product[] = [
   {
     id: "foma-charcuterie-board-drawers",
     name: "Bamboo Charcuterie Board Set with Drawers – 14.25 × 14.25 × 1.5 in",
-    sku: "FM-CHAR-DRW-1425",
+    sku: "BCHBF", // same code as FomaHub (item 90) so site orders resolve; was FM-CHAR-DRW-1425
     size: "14.25 × 14.25 × 1.5 in",
     engravingArea: "100 × 100 mm",
     // FOMA's own Amazon listing (ASIN B0GM2KCR5Z) retails at $34.95. basePrice
