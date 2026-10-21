@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
-import { Zip, ZipPassThrough } from "fflate";
 import { getProduct, getProductBySku } from "@/data/catalog";
 import { catalogImageAbsoluteUrl } from "@/lib/catalog-image";
 import { getTraceId, TRACE_HEADER } from "@/lib/trace";
+import { zipStream } from "@/lib/zip-stream";
 
 /**
  * High-resolution image download for resellers.
@@ -41,60 +41,6 @@ function downloadName(src: string, sku: string, index: number): string {
   // Cloudinary fallback names look like `SKU--hash.png`-less blobs — give
   // the buyer something recognizable instead.
   return `${sku}${index > 0 ? `_${index + 1}` : ""}.jpg`;
-}
-
-/**
- * Stream a ZIP of the given files without buffering it in memory. Entries
- * are stored, not deflated — JPEG/PNG don't compress further and store
- * keeps the function fast. Files that fail to fetch are skipped so one
- * missing variant doesn't sink the whole archive.
- */
-function zipStream(
-  files: { name: string; url: string }[],
-): ReadableStream<Uint8Array> {
-  // Unread fetch bodies pin their sockets; a self-hosted `next start` runs
-  // for days, so leaked sockets pile up until the kernel's TCP memory limit
-  // throttles every connection (24 Sep: 584 leaked, homepage took 8 s).
-  let current: ReadableStreamDefaultReader<Uint8Array> | undefined;
-  let cancelled = false;
-  return new ReadableStream<Uint8Array>({
-    cancel() {
-      cancelled = true;
-      void current?.cancel();
-    },
-    async start(controller) {
-      const zip = new Zip((err, chunk, final) => {
-        if (err) {
-          controller.error(err);
-          return;
-        }
-        controller.enqueue(chunk);
-        if (final) controller.close();
-      });
-      try {
-        for (const file of files) {
-          if (cancelled) return;
-          const res = await fetch(file.url);
-          if (!res.ok || !res.body) {
-            await res.body?.cancel();
-            continue;
-          }
-          const entry = new ZipPassThrough(file.name);
-          zip.add(entry);
-          const reader = (current = res.body.getReader());
-          for (;;) {
-            const { done, value } = await reader.read();
-            if (done) break;
-            entry.push(value);
-          }
-          entry.push(new Uint8Array(0), true);
-        }
-        zip.end();
-      } catch (e) {
-        controller.error(e);
-      }
-    },
-  });
 }
 
 const COMMON_HEADERS = {
@@ -143,7 +89,12 @@ export async function GET(request: Request) {
         { status: 400, headers: { [TRACE_HEADER]: traceId } },
       );
     }
-    const upstream = await fetch(originalUrl(gallery[index]));
+    // Tie the upstream fetch to the client connection: if the buyer cancels
+    // (or a phone drops off the network) the origin socket is torn down
+    // instead of sitting paused with a full receive queue — see zip-stream.ts.
+    const upstream = await fetch(originalUrl(gallery[index]), {
+      signal: request.signal,
+    });
     if (!upstream.ok || !upstream.body) {
       await upstream.body?.cancel();
       return NextResponse.json(
@@ -166,7 +117,7 @@ export async function GET(request: Request) {
     name: downloadName(src, product.sku, i),
     url: originalUrl(src),
   }));
-  return new Response(zipStream(files), {
+  return new Response(zipStream(files, request.signal), {
     headers: {
       ...COMMON_HEADERS,
       "content-type": "application/zip",

@@ -151,7 +151,9 @@ export default async function RootLayout({
           </QuoteProvider>
         </I18nProvider>
         <Toaster position="top-center" theme="light" richColors closeButton />
-        <Analytics />
+        {/* Vercel Web Analytics only exists on Vercel. Self-hosted, its
+            /_vercel/insights/script.js is a 404 that every page view paid for. */}
+        {process.env.VERCEL ? <Analytics /> : null}
       </body>
     </html>
   );
