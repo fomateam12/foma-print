@@ -87,6 +87,15 @@ const nextConfig: NextConfig = {
     // recently used entries are evicted first.
     maximumDiskCacheSize: 2_000_000_000,
 
+    // How long an optimized image counts as fresh (also the browser max-age).
+    // R2 sends no Cache-Control, so Next's 4 h default applied: every
+    // thumbnail went STALE four times a day and was re-fetched from R2 and
+    // re-encoded on 2 vCPUs, so first views kept costing ~2 s each. Replaced
+    // artwork gets a NEW file name (e.g. TM-FM-ROS_foma2.jpg), which busts
+    // this cache; an in-place overwrite on R2 would show the old image for
+    // up to 7 days. Warmed after each deploy by scripts/warm-image-cache.mjs.
+    minimumCacheTTL: 7 * 24 * 60 * 60,
+
     // Required in Next.js 16 — the allowlist of `quality` values the
     // optimizer will honor. 75 is the default for thumbnails / grids,
     // 85 for standard hero / gallery imagery, 95 for the product detail
