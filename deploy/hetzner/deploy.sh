@@ -93,9 +93,22 @@ wait_healthy() {  # give `next start` up to a minute to come up, then run the fu
   healthy "$1"
 }
 
+warm_image_cache() {
+  # Pre-encode the thumbnails shoppers will request (scripts/warm-image-cache.mjs).
+  # Detached so the deploy returns now; 9>&- so it doesn't inherit the deploy
+  # lock (a first run takes ~1–2 h). The next deploy recreates the container,
+  # which simply stops a run still in progress.
+  log "warming image cache in the background — see $WARM_LOG"
+  printf '[%s] %s\n' "$(date -u +%FT%TZ)" "warm start $SHA" >>"$WARM_LOG"
+  setsid nohup docker compose exec -T app node scripts/warm-image-cache.mjs \
+    </dev/null >>"$WARM_LOG" 2>&1 9>&- &
+}
+WARM_LOG=/var/log/fomaprint-image-warm.log
+
 if wait_healthy "$HEALTH_PATHS"; then
   log "deploy OK — $SHA is live"
   docker image prune -f >/dev/null
+  warm_image_cache
   exit 0
 fi
 

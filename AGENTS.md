@@ -332,3 +332,16 @@ yazmadan önce node_modules/next/dist/docs/ oku) + Tailwind.
 - Kod tarafında SEO işi bitti. Kalan tamamen dışarıda: Google Business Profile,
   Bing Webmaster, Amazon/Etsy profil linkleri, LinkedIn. Ölçüm noktası
   GSC > Pages "Crawled – currently not indexed" sayısı.
+
+## Gündüz durumu — 2026-10-23 (görsel önbelleği: 7 gün + deploy sonrası ısıtma)
+
+- Teşhis (canlı ölçüm, Eymen-Mac): PR #106'dan sonra TCP OOM 0, sıcak görsel p50 0,18 sn; ama R2
+  Cache-Control göndermediği için Next 16'nın 4 saatlik `minimumCacheTTL`'i geçerliydi — her görsel
+  günde 4 kez STALE olup R2'den yeniden çekilip kodlanıyordu, ilk görüntüleme ~2 sn (max 2,7 sn).
+- Yapılan: `minimumCacheTTL` 7 gün (operatör seçimi; görsel değişince yeni dosya adı kuralı sürüyor —
+  aynı adla R2 üzerine yazmak 7 güne kadar eski görsel gösterir). `scripts/warm-image-cache.mjs`
+  sitemap'i gezip her `<img>` için 3 ekran profilinde (1920@1, 1440@2, 390@3) tarayıcının seçeceği
+  srcset adayını ister; 1350 sayfa → 15.102 görsel. `deploy.sh` sağlık kontrolünden sonra bunu
+  konteynerde arka planda başlatır (log `/var/log/fomaprint-image-warm.log`, deploy kilidi devralınmaz).
+- Yan bulgu: FSK304 (Kitchen & Bar) görseli tedarikçi Cloudinary'de 404 — kırık; tam ısıtma
+  kaydı sitedeki tüm 404'leri adıyla listeler.
