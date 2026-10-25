@@ -25,7 +25,7 @@ import { zipStream } from "@/lib/zip-stream";
 
 /** Best-quality copy of a gallery reference, no optimizer in front. */
 function originalUrl(src: string): string {
-  if (src.startsWith("/products/")) return catalogImageAbsoluteUrl(src);
+  if (src.startsWith("/")) return catalogImageAbsoluteUrl(src);
   // Supplier Cloudinary URL — the feed bakes a small transform into the
   // path; swap it for quality-only so Cloudinary serves full resolution
   // in the original format (same rewrite trick as `cloudinary()` in
