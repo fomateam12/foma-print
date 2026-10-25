@@ -9691,6 +9691,11 @@ function enrich(p: Product): Product {
   let next = p;
   if (images && images.length > 0) next = { ...next, images };
 
+  // Use the badge-free LTM5203 photo on cards and in product metadata too.
+  if (upper === "LTM5203" && images?.[0]) {
+    next = { ...next, image: images[0], imageFull: images[0] };
+  }
+
   // Supplier-feed images for these SKUs are palette PNGs on a green matte
   // (renders green when transparency is dropped). Their card/hero image is
   // rebound to the white-background R2 copy; see the SLT restore commit.
