@@ -104,6 +104,8 @@ interface SubAssignment {
   subName: string;
 }
 const SUB_OVERRIDES: Record<string, SubAssignment> = {
+  // Whiskey stone set sits with the other bar gift sets (re-listed 28 Oct 2026).
+  GFT159: { subId: "110", subSlug: "bar-gift-sets", subName: "Whiskey Stone Set" },
   // 20 oz. Polar Camel Tumblers split into 5 type subcategories (user request).
   LTM7202: { subId: "121", subSlug: "20-oz-tumblers-all", subName: "Ringneck Tumbler with Standard Lid" },
   LTM7203: { subId: "121", subSlug: "20-oz-tumblers-all", subName: "Ringneck Tumbler with Standard Lid" },
@@ -559,7 +561,7 @@ const REMOVED_SKUS = new Set<string>([
   "GFT1190", "GFT1191", "GFT1244", "GFT1245", "GFT1246", "GFT1247",
   "GFT125", "GFT126", "GFT127", "GFT1304", "GFT1311",
   "GFT1312", "GFT1313", "GFT1315", "GFT1316", "GFT1317", "GFT1318",
-  "GFT159", "GFT169", "GFT170", "GFT171", "GFT173",
+  "GFT169", "GFT170", "GFT171", "GFT173",
   "GFT174", "GFT198", "GFT2023", "GFT2024",
   "GFT2032", "GFT2033", "GFT2048",
   "GFT2049", "GFT2071", "GFT2081", "GFT2091", "GFT2101", "GFT2102",
@@ -633,7 +635,7 @@ const REMOVED_SKUS = new Set<string>([
   "SLT075", "SLT076",
   "SLT077", "SLT078", "SLT079", "SLT080", "SLT081", "SLT088",
   "FSK101", "FSK102", "FSK103", "FSK104", "FSK111", "FSK303",
-  "FSK309", "FSK312", "FSK628", "FSK651SETA", "GFT014", "GFT015",
+  "FSK309", "FSK312", "FSK651SETA", "GFT014", "GFT015",
   "BR2251", "BR2501",
   // 2026-06-28 "foma excel en final.xlsx" SIL (x) pass: 79 still-live feed SKUs
   // marked for removal (flasks, leatherette bottle openers/coasters/mug sleeves/
@@ -642,7 +644,7 @@ const REMOVED_SKUS = new Set<string>([
   "FSK302", "FSK305", "FSK308", "FSK311", "FSK321",
   "FSK322", "FSK503", "FSK504", "FSK505", "FSK506", "FSK509",
   "FSK511", "FSK513", "FSK514", "FSK601", "FSK605", "FSK611",
-  "FSK622", "FSK626", "FSK629", "FSK630", "GFT1151", "GFT1152",
+  "FSK629", "GFT1151", "GFT1152",
   "GFT1153", "GFT1154", "GFT1155", "GFT1156", "GFT1157", "GFT1158",
   "GFT1159", "GFT1160", "GFT1161", "GFT1162", "GFT1163", "GFT1164",
   "GFT1266", "GFT1320", "GFT1321", "GFT1322", "GFT1323", "GFT1325",
@@ -704,6 +706,61 @@ const REMOVED_SKUS = new Set<string>([
 ]);
 
 const ADDED_PRODUCTS: RawProduct[] = [
+  // Sold to resellers in FomaHub's b2b package but missing from the site
+  // (customers asked, 28 Oct 2026). JDS SKUs the scraped feed doesn't carry;
+  // images are JDS's own photos of the exact SKU. price = FomaHub reseller
+  // price with one engraved side (JDS ten-case cost + $5.00 engraving).
+  {
+    id: "fsk631",
+    name: "White/Black 6 oz. Leatherette Flask",
+    sku: "FSK631",
+    size: "4 1/4\"",
+    price: 11.05,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1696449354/products/images/large/FSK631--d75e76a2.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1696449354/products/images/large/FSK631--d75e76a2.png",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "37",
+    subSlug: "flasks-flask-sets-and-accessories",
+    subName: "Flasks, Flask Sets and Accessories",
+  },
+  {
+    id: "fsk632",
+    name: "Purple/Black 6 oz. Leatherette Flask",
+    sku: "FSK632",
+    size: "4 1/4\"",
+    price: 11.05,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1696282167/products/images/large/FSK632--87e79963.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1696282167/products/images/large/FSK632--87e79963.png",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "37",
+    subSlug: "flasks-flask-sets-and-accessories",
+    subName: "Flasks, Flask Sets and Accessories",
+  },
+  {
+    id: "crib01",
+    name: "Wood Cribbage Game Gift Set",
+    sku: "CRIB01",
+    size: null,
+    price: 18.25,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1667526392/products/images/large/CRIB01--bc465a13.jpg",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1667526392/products/images/large/CRIB01--bc465a13.jpg",
+    categoryId: "1",
+    categorySlug: "gifts-and-promotions",
+    categoryName: "Gifts & Promotions",
+    subId: "110",
+    subSlug: "bar-gift-sets",
+    subName: "Cribbage Set",
+  },
   // Aluminum wind chimes, WCH130-132 (30") + WCH136-138 (36") — JDS master CSV
   // + live API, not in the scraped feed. New "Wind Chimes" tile under Frames &
   // Decor (home/outdoor decor, housewarming gift line); the laserable 4" /
@@ -8531,6 +8588,8 @@ const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
     // the supplier feed has no wind chime anywhere, so this tile is the only
     // thing that makes them reachable. 135 = next free subId.
     { subId: "135", slug: "wind-chimes", name: "Wind Chimes", count: 0 },
+    // FOMA's own knit Christmas stockings (foma-products.ts). 139 = next free subId.
+    { subId: "139", slug: "christmas-stockings", name: "Christmas Stockings", count: 0 },
     { subId: "101", slug: "glass-frames-and-decor", name: "Glass Frames & Decor", count: 0 },
     { subId: "137", slug: "crystal-ornaments", name: "Crystal Ornaments", count: 0 },
     { subId: "103", slug: "photo-frames-small", name: "Small Photo Frames (4x6)", count: 0 },
@@ -8784,6 +8843,12 @@ const NAME_OVERRIDES: Record<string, string> = {
   FSK623: "Leatherette Stainless Steel Flask – Black (Silver)",
   FSK624: "Leatherette Stainless Steel Flask – Rustic (Gold)",
   FSK627: "Leatherette Stainless Steel Flask – Blue (Silver)",
+  FSK622: "Leatherette Stainless Steel Flask – Pink",
+  FSK626: "Leatherette Stainless Steel Flask – Teal",
+  FSK628: "Leatherette Stainless Steel Flask – Bamboo",
+  FSK630: "Leatherette Stainless Steel Flask – Red",
+  FSK631: "Leatherette Stainless Steel Flask – White/Black",
+  FSK632: "Leatherette Stainless Steel Flask – Purple/Black",
   GFT1001: "Leatherette Cigar Case with Cutter – Light Brown",
   GFT1002: "Leatherette Cigar Case with Cutter – Dark Brown",
   GFT1003: "Leatherette Cigar Case with Cutter – Rawhide",
@@ -9574,6 +9639,17 @@ function buildDescriptions(p: RawProduct): {
 /* Build the catalog once at module load                               */
 /* ------------------------------------------------------------------ */
 
+// Reference price for feed SKUs re-listed on 28 Oct 2026: FomaHub reseller
+// price with one engraved side (JDS ten-case cost + $5.00 engraving), instead
+// of the scraped retail figure. Internal only, never shown as a price tag.
+const PRICE_OVERRIDES: Record<string, number> = {
+  GFT159: 14.8,
+  FSK622: 10.45,
+  FSK626: 10.45,
+  FSK628: 10.45,
+  FSK630: 10.45,
+};
+
 const jdsProducts: Product[] = normProducts.map((p) => {
   const rng = rngFor(p.sku);
   const leadTimeDays = intBetween(rng, 5, 14);
@@ -9588,7 +9664,7 @@ const jdsProducts: Product[] = normProducts.map((p) => {
     name: p.name,
     sku: p.sku,
     size: p.size,
-    basePrice: p.price ?? 0,
+    basePrice: PRICE_OVERRIDES[p.sku.toUpperCase()] ?? p.price ?? 0,
     image,
     imageFull: p.imageFull ?? image,
     categoryId: p.categoryId,
