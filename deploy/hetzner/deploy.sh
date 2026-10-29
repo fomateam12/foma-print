@@ -59,8 +59,8 @@ docker compose up -d
 docker compose exec -T caddy caddy reload --config /etc/caddy/Caddyfile \
   || log "WARNING: caddy reload failed — Caddy keeps its last good config"
 
-fetch() {  # $1 = path; body to stdout, fails unless HTTP 2xx, via Caddy on this host
-  curl -fsS --max-time 20 --resolve "$SITE:443:127.0.0.1" "https://$SITE$1"
+fetch() {  # $1 = path, $2 = timeout in s (default 20); body to stdout, fails unless HTTP 2xx, via Caddy on this host
+  curl -fsS --max-time "${2:-20}" --resolve "$SITE:443:127.0.0.1" "https://$SITE$1"
 }
 
 healthy() {  # $1 = space-separated paths that must answer 200
@@ -77,8 +77,12 @@ healthy() {  # $1 = space-separated paths that must answer 200
     return 1
   fi
   # The self-hosted image optimizer broke once at cutover (Vercel-only loader) — guard it.
+  # Its first request after a start is slow: with the persistent image_cache volume
+  # (~21k entries) it took 21 s on 28 Oct 2026 vs 0.4 s with an empty cache, which
+  # failed every deploy at 20 s. Warm requests answer in ~0.02 s, so 90 s only
+  # covers that cold scan.
   img=$(grep -oE '/_next/image\?url=[^" ]+' <<<"$body" | head -1 | sed 's/&amp;/\&/g' || true)
-  if [[ -z $img ]] || ! fetch "$img" >/dev/null; then
+  if [[ -z $img ]] || ! fetch "$img" 90 >/dev/null; then
     log "health: image optimizer ${img:-<no /_next/image on page>} failed"
     return 1
   fi
