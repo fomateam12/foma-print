@@ -777,6 +777,12 @@
     "ctaHeading": "Questions this did not answer?",
     "ctaBody": "Send the specifics and you get a real answer from the floor, not a sales reply.",
     "ctaButton": "Contact us",
+    "relatedHeading": "Products for this guide",
+    "relatedLede": "Engraved to order, no minimums, blind-shipped under your brand.",
+    "sellHeading": "Sell these under your own brand",
+    "sellBody": "No inventory, no minimum order and no FomaPrint branding in the box. Apply as a reseller and we send your wholesale pricing.",
+    "sellButton": "Apply to sell",
+    "quoteButton": "Request a bulk quote",
     "faqHeading": "Common questions",
     "notFound": "Guide not found"
   },

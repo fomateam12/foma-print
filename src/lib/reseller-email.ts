@@ -4,6 +4,7 @@ import { ORDER_CUTOFF } from "@/lib/site-copy";
 import type { ResellerApplicationInput } from "@/lib/validation";
 import { log } from "@/lib/log";
 import { nyTimestamp } from "@/lib/time";
+import { describeAttribution } from "@/lib/attribution";
 
 /**
  * Reseller-application email delivery via Resend.
@@ -170,6 +171,8 @@ function internalHtml(data: ResellerApplicationInput, submittedAt: string): stri
       ${row("Products", data.products)}
       ${row("Heard via", data.hearAboutUs)}
       ${row("Heard via (other)", data.hearAboutUsOther)}
+      ${row("Came from", describeAttribution(data.attribution))}
+      ${row("Referrer", data.attribution?.referrer)}
       ${row("About", data.about)}
       ${row("Submitted", submittedAt)}
     </table>

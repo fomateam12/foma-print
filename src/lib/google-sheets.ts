@@ -2,6 +2,7 @@
 import { JWT } from "google-auth-library";
 import type { ResellerApplicationInput } from "@/lib/validation";
 import { log } from "@/lib/log";
+import { describeAttribution } from "@/lib/attribution";
 
 /**
  * Forwards every reseller application to a Google Sheet as a supplementary,
@@ -71,6 +72,10 @@ export async function appendResellerApplicationRow(
     // the end for the same reason.
     data.currentStatus,
     (data.salesChannels ?? []).join(", "),
+    // P–Q: first-touch attribution (source · landing page, and the raw
+    // referrer). Same rule: appended, never inserted.
+    describeAttribution(data.attribution),
+    data.attribution?.referrer ?? "",
   ];
 
   try {
@@ -85,10 +90,10 @@ export async function appendResellerApplicationRow(
       return { ok: false, error: "Sheets auth returned no access token." };
     }
 
-    // A:O — 15 columns, matching the 15-element `row` array above. Widen this
+    // A:Q — 17 columns, matching the 17-element `row` array above. Widen this
     // whenever a value is added: the API silently drops values past the end of
     // the range, so a stale range loses data without erroring.
-    const range = encodeURIComponent(`${tabName}!A:O`);
+    const range = encodeURIComponent(`${tabName}!A:Q`);
     // RAW, not USER_ENTERED — a user-submitted "+"/"="/"@"-prefixed field
     // (e.g. a formatted phone number) would otherwise parse as a formula.
     const res = await fetch(

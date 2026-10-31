@@ -6,7 +6,9 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { GUIDES, getGuide } from "@/data/guides";
+import { GUIDES, GUIDE_RELATED, getGuide } from "@/data/guides";
+import { getCategory, getSubcategory } from "@/data/catalog";
+import { categoryName, subcategoryName } from "@/lib/catalog-i18n";
 import { site } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
 import { LOCALES, isLocale } from "@/lib/i18n";
@@ -59,6 +61,42 @@ export default async function GuidePage({
   if (!guide) notFound();
   const copy = guide.copy[lang];
   const others = GUIDES.filter((g) => g.slug !== guide.slug).slice(0, 3);
+
+  // Catalogue pages this guide sends readers to. A slug that has left the
+  // catalogue is dropped rather than rendered as a dead card.
+  type RelatedCard = {
+    href: string;
+    name: string;
+    parent: string | null;
+    count: number;
+  };
+  const related = (GUIDE_RELATED[guide.slug] ?? []).flatMap(
+    (path): RelatedCard[] => {
+      const [catSlug, subSlug] = path.split("/");
+      if (subSlug) {
+        const hit = getSubcategory(catSlug, subSlug);
+        if (!hit) return [];
+        return [
+          {
+            href: `/category/${catSlug}/${subSlug}`,
+            name: subcategoryName(hit.subcategory.name, lang),
+            parent: categoryName(hit.category.name, lang),
+            count: hit.subcategory.productCount,
+          },
+        ];
+      }
+      const category = getCategory(catSlug);
+      if (!category) return [];
+      return [
+        {
+          href: `/category/${catSlug}`,
+          name: categoryName(category.name, lang),
+          parent: null,
+          count: category.productCount,
+        },
+      ];
+    },
+  );
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -139,6 +177,37 @@ export default async function GuidePage({
           ))}
         </div>
 
+        {related.length > 0 ? (
+          <section className="mt-12 border-t border-border pt-10">
+            <h2 className="text-h3 text-foreground">{t.relatedHeading}</h2>
+            <p className="mt-2 text-muted-foreground">{t.relatedLede}</p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {related.map((r) => (
+                <Link
+                  key={r.href}
+                  href={r.href}
+                  className="group flex items-center justify-between gap-3 rounded-xl border border-border bg-card p-4 shadow-card transition-all duration-300 ease-premium hover:-translate-y-0.5 hover:shadow-lg"
+                >
+                  <span className="min-w-0">
+                    {r.parent ? (
+                      <span className="block text-xs text-muted-foreground">
+                        {r.parent}
+                      </span>
+                    ) : null}
+                    <span className="block font-heading text-base font-semibold text-foreground group-hover:text-brand-strong">
+                      {r.name}
+                    </span>
+                    <span className="block text-sm text-muted-foreground">
+                      {r.count} {dict.common.products}
+                    </span>
+                  </span>
+                  <ArrowRight className="size-4 shrink-0 text-brand-strong" />
+                </Link>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
         {copy.faqs && copy.faqs.length > 0 ? (
           <section className="mt-12 border-t border-border pt-10">
             <h2 className="text-h3 text-foreground">{t.faqHeading}</h2>
@@ -159,16 +228,33 @@ export default async function GuidePage({
 
         <section className="mt-12 rounded-2xl border border-border bg-card p-6 shadow-card sm:p-8">
           <h2 className="font-heading text-lg font-semibold text-foreground">
-            {t.ctaHeading}
+            {t.sellHeading}
           </h2>
-          <p className="mt-2 text-muted-foreground">{t.ctaBody}</p>
-          <Link
-            href="/contact"
-            className={cn(buttonVariants({ variant: "default" }), "mt-5")}
-          >
-            {t.ctaButton}
-            <ArrowRight className="size-4" />
-          </Link>
+          <p className="mt-2 text-muted-foreground">{t.sellBody}</p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <Link
+              href="/sell"
+              className={cn(buttonVariants({ variant: "default" }))}
+            >
+              {t.sellButton}
+              <ArrowRight className="size-4" />
+            </Link>
+            <Link
+              href="/quote"
+              className={cn(buttonVariants({ variant: "outline" }))}
+            >
+              {t.quoteButton}
+            </Link>
+          </div>
+          <p className="mt-6 border-t border-border pt-4 text-sm text-muted-foreground">
+            {t.ctaHeading}{" "}
+            <Link
+              href="/contact"
+              className="font-semibold text-brand-strong hover:text-rust-bright"
+            >
+              {t.ctaButton}
+            </Link>
+          </p>
         </section>
       </article>
 

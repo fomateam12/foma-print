@@ -777,6 +777,12 @@
     "ctaHeading": "Burada cevabı olmayan bir soru mu var?",
     "ctaBody": "Ayrıntıyı gönder; satış cevabı değil, üretimden gerçek bir cevap al.",
     "ctaButton": "Bize ulaş",
+    "relatedHeading": "Bu rehberin ürünleri",
+    "relatedLede": "Siparişe göre kazınır, alt limit yok, senin markanla gizli gönderilir.",
+    "sellHeading": "Bunları kendi markanla sat",
+    "sellBody": "Stok yok, alt limit yok, kolide FomaPrint markası yok. Satıcı olarak başvur, toptan fiyatlarını gönderelim.",
+    "sellButton": "Satıcı başvurusu yap",
+    "quoteButton": "Toplu teklif iste",
     "faqHeading": "Sık sorulanlar",
     "notFound": "Rehber bulunamadı"
   },

@@ -32,6 +32,7 @@ import {
   MONTHLY_VOLUMES,
   type QuoteFormInput,
 } from "@/lib/validation";
+import { readAttribution } from "@/lib/attribution";
 
 const FIELD = "h-11";
 const SELECT =
@@ -94,6 +95,7 @@ export function QuoteRequest() {
     const payload = {
       ...values,
       cfTurnstileToken: turnstileToken ?? undefined,
+      attribution: readAttribution(),
       items: items.map((i) => ({
         sku: i.sku,
         name: i.name,

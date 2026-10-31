@@ -1140,3 +1140,23 @@ export const GUIDES: Guide[] = [
 export function getGuide(slug: string): Guide | undefined {
   return GUIDES.find((g) => g.slug === slug);
 }
+
+/**
+ * Catalogue pages each guide points readers to — `category` or
+ * `category/subcategory` slugs. AI assistants and search send people to the
+ * guides (the patch guide alone carries most of Bing's AI citations), so a
+ * guide that ends without a way into the products loses the visitor. Slugs
+ * that no longer exist in the catalogue are skipped at render time.
+ */
+export const GUIDE_RELATED: Record<string, string[]> = {
+  "print-on-demand-laser-engraving": ["drinkware", "kitchen-and-bar", "personal-accessories", "office-tech"],
+  "start-personalized-gift-store-without-inventory": ["drinkware/20-oz-tumblers-all", "drinkware/40-oz-tumblers", "kitchen-and-bar/cutting-boards-cake-pans-kitchen", "gift-sets"],
+  "laser-engraving-vs-uv-printing": ["drinkware/20-oz-tumblers-all", "drinkware/water-bottles", "drinkware/mugs-travel-mugs", "drinkware/glassware"],
+  "how-to-apply-leatherette-patches": ["patches", "patches/rectangle-patches", "patches/round-patches", "patches/hex-patches"],
+  "blind-shipping-for-resellers": ["drinkware", "kitchen-and-bar", "office-tech", "frames-and-decor"],
+  "choose-laser-engraving-fulfillment-partner": ["drinkware", "kitchen-and-bar", "patches", "personal-accessories"],
+  "prepare-artwork-for-laser-engraving": ["drinkware/40-oz-tumblers", "kitchen-and-bar/cutting-boards-cake-pans-kitchen", "patches", "office-tech/leatherette-journals"],
+  "engraved-tumblers-for-resellers": ["drinkware/20-oz-tumblers-all", "drinkware/30-oz-tumblers", "drinkware/40-oz-tumblers", "drinkware/leatherette-tumblers"],
+  "bulk-personalized-corporate-gifts": ["drinkware", "office-tech/leatherette-journals", "personal-accessories", "gift-sets"],
+  "leatherette-vs-embroidered-vs-pvc-patches": ["patches", "patches/rectangle-patches", "patches/oval-patches", "patches/square-patches"],
+};
