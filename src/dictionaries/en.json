@@ -329,6 +329,7 @@
     "questionsAfter": "."
   },
   "category": {
+    "metaTitle": "Wholesale Custom {name} for Resellers",
     "notFound": "Category not found",
     "eyebrow": "Category",
     "wholesaleOnRequest": "Wholesale pricing on request",
@@ -399,6 +400,7 @@
     "searching": "Searching…"
   },
   "subcategory": {
+    "metaTitle": "Wholesale Custom {name} for Resellers",
     "notFound": "Not found",
     "metaDescription": "Shop {count} personalized {collection} — laser-engraved to order and blind drop-shipped by FomaPrint. Wholesale pricing for resellers.",
     "browseBySize": "Browse by size",

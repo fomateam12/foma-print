@@ -377,3 +377,16 @@ yazmadan önce node_modules/next/dist/docs/ oku) + Tailwind.
   harici referrer ve utm_* yazar. Satıcı başvurusu ve teklif formu bunu `attribution` olarak gönderir;
   e-postalarda "Came from"/"Referrer" satırları, Sheet'te P–Q sütunları (A:Q). Şema `.catch(undefined)` —
   bozuk kayıt başvuruyu asla 422'ye düşürmez (test: `lib/attribution.test.ts`).
+
+## Gündüz durumu — 2026-10-31 (Search Console bulgusu + kategori başlıkları)
+
+- GSC 3 ay: 488 tık / 3,38K gösterim; tıkların %93'ü marka ("fomaprint", "foma print"). Marka dışı
+  ilgili sorgu neredeyse yok ("print on demand laser engraving" 4 gösterim, poz 5,8). En çok gösterim
+  alan alakasız sorgular: "pint" (TR pints sayfası, 445), "foma ring" (başka marka, 318). Yani 5–20.
+  sırada büyütülecek ticari sorgu adayı yok; sorun sıralama değil görünürlük/otorite.
+- Dizin: 1,66K indeksli, 1.036 "Discovered – currently not indexed" (otorite/bağlantı eksikliği işareti).
+- 31 Eki: 5 yeni rehber için URL Inspection > Request indexing yapıldı (hepsi "Indexing requested").
+- Kategori + koleksiyon `<title>`'ları ne sattığını söyler hale getirildi:
+  "Wholesale Custom {name} for Resellers" / "Toptan Kişiye Özel {name} — Satıcılar İçin"
+  (sözlükte `category.metaTitle`, `subcategory.metaTitle`). H1 ve OG başlığı değişmedi. Marka dışı
+  gösterim olmadığı için kaybedilecek sıralama yok; 4–8 hafta sonra GSC'de marka dışı gösterim karşılaştır.
