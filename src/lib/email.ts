@@ -2,6 +2,7 @@ import nodemailer, { type Transporter } from "nodemailer";
 import { site } from "@/lib/site";
 import type { QuoteInput } from "@/lib/validation";
 import { log, maskPii } from "@/lib/log";
+import { describeAttribution } from "@/lib/attribution";
 
 /**
  * Lead delivery — free, self-hosted. No paid third-party sender.
@@ -326,6 +327,8 @@ export async function sendQuoteRequestEmails(
       ${row("Deadline", data.deadline)}
       ${row("Artwork", data.artworkUrl)}
       ${row("Notes", data.notes)}
+      ${row("Came from", describeAttribution(data.attribution))}
+      ${row("Referrer", data.attribution?.referrer)}
     </table>
     <p style="font-size:13px;color:#6b6257;margin:16px 0 6px;font-weight:600">Requested items (${
       data.items.length

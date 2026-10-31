@@ -367,3 +367,13 @@ yazmadan önce node_modules/next/dist/docs/ oku) + Tailwind.
   eski dosyayı görmeye devam eder ve `caddy reload` eski ayarı yükler. Caddyfile değişince deploy sonrası
   `cd /opt/fomaprint && docker compose up -d --force-recreate --no-deps caddy` gerekir (31 Eki'de böyle uygulandı).
 - `ai-referrals.sh` 31 Eki 06:31 UTC'de 4 sahte `utm_source=chatgpt.com` test isteğiyle doğrulandı (patch-pvc rehberi) — gerçek trafik değil.
+
+## Gündüz durumu — 2026-10-31 (rehberden müşteriye: ürün kartları, satıcı çağrısı, kaynak takibi)
+
+- Rehber sayfaları önceden yalnız `/contact`'a bağlanıyordu; AI'dan gelen okur ürüne/başvuruya yol bulamıyordu.
+  Artık her rehberin sonunda `GUIDE_RELATED` (`data/guides.ts`) ile 4 kategori/koleksiyon kartı ve
+  "Sell these under your own brand" kutusu (`/sell` + `/quote`, iletişim ikincil) var. EN+TR.
+- İlk temas kaynağı: `components/attribution-capture.tsx` ilk ziyarette localStorage'a (90 gün) giriş sayfası,
+  harici referrer ve utm_* yazar. Satıcı başvurusu ve teklif formu bunu `attribution` olarak gönderir;
+  e-postalarda "Came from"/"Referrer" satırları, Sheet'te P–Q sütunları (A:Q). Şema `.catch(undefined)` —
+  bozuk kayıt başvuruyu asla 422'ye düşürmez (test: `lib/attribution.test.ts`).

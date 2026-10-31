@@ -75,6 +75,23 @@ export const RESELLER_SALES_CHANNELS = [
   "Other",
 ] as const;
 
+/**
+ * First-touch attribution sent by lead forms (see `lib/attribution.ts`).
+ * Optional and loosely bounded: it is diagnostic data, and a malformed or
+ * missing record must never block a real lead.
+ */
+export const attributionSchema = z
+  .object({
+    landing: noBreaks(z.string().max(300)).optional(),
+    referrer: noBreaks(z.string().max(300)).optional(),
+    utmSource: noBreaks(z.string().max(300)).optional(),
+    utmMedium: noBreaks(z.string().max(300)).optional(),
+    utmCampaign: noBreaks(z.string().max(300)).optional(),
+    firstSeen: z.string().max(40).optional(),
+  })
+  .optional()
+  .catch(undefined);
+
 export const resellerApplicationSchema = z.object({
   // `name` + `businessName` end up in the email subject line — reject CR/LF
   // to neutralise any chance of header injection if a downstream layer
@@ -131,6 +148,7 @@ export const resellerApplicationSchema = z.object({
   // here so a missing token surfaces as a 403 from the handler with a clear
   // log line, not a Zod 422 noise event.
   cfTurnstileToken: z.string().optional(),
+  attribution: attributionSchema,
 });
 
 export type ResellerApplicationInput = z.infer<typeof resellerApplicationSchema>;
@@ -190,6 +208,7 @@ export const quoteFormSchema = z.object({
   company: z.string().optional(),
   // Cloudflare Turnstile token. See resellerApplicationSchema comment.
   cfTurnstileToken: z.string().optional(),
+  attribution: attributionSchema,
 });
 
 /** Full payload sent to the API: contact brief + the line items from the cart. */

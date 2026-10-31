@@ -26,6 +26,7 @@ import {
   type ResellerApplicationInput,
 } from "@/lib/validation";
 import { PHONE_COUNTRIES, DEFAULT_PHONE_COUNTRY } from "@/data/phone-countries";
+import { readAttribution } from "@/lib/attribution";
 
 const FIELD = "h-11";
 const SELECT =
@@ -168,6 +169,7 @@ export function SellerApplicationForm() {
           phone,
           elapsedMs,
           cfTurnstileToken: turnstileToken ?? undefined,
+          attribution: readAttribution(),
         }),
       });
       const data = (await res.json().catch(() => ({}))) as {
