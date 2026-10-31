@@ -345,3 +345,15 @@ yazmadan önce node_modules/next/dist/docs/ oku) + Tailwind.
   konteynerde arka planda başlatır (log `/var/log/fomaprint-image-warm.log`, deploy kilidi devralınmaz).
 - Yan bulgu: FSK304 (Kitchen & Bar) görseli tedarikçi Cloudinary'de 404 — kırık; tam ısıtma
   kaydı sitedeki tüm 404'leri adıyla listeler.
+
+## Gündüz durumu — 2026-10-31 (AI arama görünürlüğü: llms.txt + 4 rehber)
+
+- Bağlam: müşteriler ChatGPT aramasından gelmeye başladı (ChatGPT/Copilot Bing indeksinden besleniyor;
+  23 Ağu Bing Webmaster + IndexNow kurulumu, 20 Ağu rehber/editoryal katman).
+- `/llms.txt` eklendi (`src/app/llms.txt/route.ts`): site özeti, temel gerçekler, ana sayfalar, tüm rehberler,
+  8 kategori + alt kategoriler. Sitemap ile aynı veriden üretilir; `app/[lang]` dışında, yoksa `[lang]=llms.txt`
+  olarak 404 veriyordu. İçindeki her iddia sitede zaten yazılı olan metne dayanır.
+- `/guides`'a 4 yeni yazı EN+TR: üretim ortağı seçimi, kazıma için tasarım hazırlama (SVG/DXF, ~0,4 mm çizgi),
+  satıcılar için kazımalı bardaklar, toplu kurumsal hediyeler. Hepsi FAQPage şemalı.
+- Gate: lint 0 hata, build yeşil (613 sayfa), yerelde 8 yeni sayfa 200 + FAQPage, sitemap 2.738 URL.
+  `src/lib/warm-image-cache.test.ts` Windows'ta zaten main'de kırık (SyntaxError), bu PR'la ilgisiz.

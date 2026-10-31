@@ -558,6 +558,458 @@ export const GUIDES: Guide[] = [
       },
     },
   },
+  {
+    slug: "choose-laser-engraving-fulfillment-partner",
+    published: "2026-10-31",
+    minutes: 6,
+    copy: {
+      en: {
+        title: "How to choose a laser engraving fulfillment partner for Etsy, Amazon and Shopify",
+        description:
+          "A practical checklist for picking a print-on-demand engraving supplier: test orders, artwork checks, blind shipping, cutoffs, minimums and how payment works.",
+        lede: "Seven questions to ask before you route a single customer order to anyone.",
+        sections: [
+          {
+            heading: "Why the choice matters more than the price list",
+            paragraphs: [
+              "When you sell personalized products without your own laser, your fulfilment partner becomes part of your shop. Every late parcel, crooked name or supplier flyer in the box lands in your reviews, not theirs. A blank that is a dollar cheaper is worth nothing if one in twenty orders comes back.",
+              "The good news is that the differences between suppliers are easy to test before you commit. Most of what matters shows up in a single sample order and a few direct questions.",
+            ],
+          },
+          {
+            heading: "The checklist",
+            paragraphs: [
+              "Ask every candidate the same questions and keep the answers in one place. Vague answers are an answer too.",
+            ],
+            bullets: [
+              "Minimums: can you order one unit, or do you have to pre-buy stock? Made-to-order should mean exactly that.",
+              "Cutoff and dispatch: what time does an order have to arrive to ship the same day, and is transit time quoted separately?",
+              "Blind shipping: does the parcel carry your return address, and is anything with the supplier's name — inserts, invoices, packing slips — kept out of the box?",
+              "Artwork checks: will someone tell you before production when a file will not engrave well, or do you find out from the customer?",
+              "Engraving areas: do they publish the real engraving area for each product, so your listing mockups match what ships?",
+              "Payment: per-order card charges, an invoice, or a prepaid balance — and are there subscription or setup fees on top?",
+              "Where production happens: a U.S. workshop with stocked blanks behaves very differently at holiday peaks from an overseas factory.",
+            ],
+          },
+          {
+            heading: "Run one real test order",
+            paragraphs: [
+              "Send an order exactly the way a customer would: a real name, your actual font, a product you plan to list, shipped to your own address. Then check the engraving depth and alignment, how the item was protected, what was printed on the label and what was inside the box.",
+              "Time it too. The gap between the promised and the actual dispatch time on a quiet week tells you what to expect in December.",
+            ],
+          },
+          {
+            heading: "Red flags",
+            paragraphs: [
+              "A partner who charges extra to leave their own branding out of your parcels, who cannot say what the engraving area of a product is, or who promises a laser can reproduce a full-colour photo is telling you how the relationship will go. So is a supplier who answers every question with a sales call instead of a written answer.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            q: "Can I use a fulfillment partner for Etsy personalized listings?",
+            a: "Yes. Etsy allows production partners for items you design; you disclose the partner in your listing. You keep the listing and the customer, and the partner engraves and ships each order.",
+          },
+          {
+            q: "What should a sample order cost?",
+            a: "A sample should cost the same as a normal single order. With a made-to-order supplier there is no reason to charge a setup fee for one unit.",
+          },
+          {
+            q: "How does FomaPrint handle these points?",
+            a: "No minimums, same-day dispatch on orders before 2pm ET, blind shipping under your brand, artwork checked before production, and a prepaid wallet with no subscription. Production is in Alpharetta, Georgia.",
+          },
+        ],
+      },
+      tr: {
+        title: "Etsy, Amazon ve Shopify için lazer kazıma üretim ortağı nasıl seçilir",
+        description:
+          "Talebe göre kazıma tedarikçisi seçmek için pratik kontrol listesi: deneme siparişi, tasarım kontrolü, gizli sevkiyat, kesim saati, alt limit ve ödeme.",
+        lede: "Tek bir müşteri siparişini birine yönlendirmeden önce sorulacak yedi soru.",
+        sections: [
+          {
+            heading: "Seçim neden fiyat listesinden daha önemli",
+            paragraphs: [
+              "Kendi lazerin olmadan kişiselleştirilmiş ürün sattığında, üretim ortağın mağazanın bir parçası olur. Her geç kargo, kayık isim ya da kolideki tedarikçi broşürü onların değil senin yorumlarına düşer. Bir dolar daha ucuz boş ürün, yirmi siparişten biri geri dönüyorsa hiçbir şey ifade etmez.",
+              "İyi haber şu: tedarikçiler arasındaki farklar, bağlanmadan önce kolayca test edilebilir. Önemli olanın çoğu tek bir deneme siparişinde ve birkaç doğrudan soruda ortaya çıkar.",
+            ],
+          },
+          {
+            heading: "Kontrol listesi",
+            paragraphs: [
+              "Her adaya aynı soruları sor ve cevapları tek bir yerde tut. Belirsiz cevap da bir cevaptır.",
+            ],
+            bullets: [
+              "Alt limit: tek adet sipariş verebiliyor musun, yoksa önceden stok mu almak zorundasın? Siparişe göre üretim tam olarak bu demek olmalı.",
+              "Kesim saati ve sevk: siparişin aynı gün çıkması için saat kaça kadar gelmesi gerekiyor ve kargo süresi ayrıca mı belirtiliyor?",
+              "Gizli sevkiyat: kolide senin iade adresin mi var ve tedarikçinin adını taşıyan her şey — ekler, faturalar, irsaliyeler — koliden uzak tutuluyor mu?",
+              "Tasarım kontrolü: bir dosya iyi kazınmayacaksa üretimden önce biri sana söylüyor mu, yoksa bunu müşteriden mi öğreniyorsun?",
+              "Kazıma alanları: her ürünün gerçek kazıma alanını yayınlıyorlar mı, böylece ilan görsellerin gönderilenle örtüşsün?",
+              "Ödeme: sipariş başına kart, fatura ya da ön yüklemeli bakiye — üstüne abonelik ya da kurulum ücreti var mı?",
+              "Üretim nerede: stoklu boş ürünlerle çalışan bir ABD atölyesi, tatil yoğunluğunda yurt dışındaki bir fabrikadan çok farklı davranır.",
+            ],
+          },
+          {
+            heading: "Tek bir gerçek deneme siparişi ver",
+            paragraphs: [
+              "Siparişi tam bir müşteri gibi gönder: gerçek bir isim, kendi yazı tipin, ilanlamayı düşündüğün bir ürün, kendi adresine. Sonra kazıma derinliğini ve hizasını, ürünün nasıl korunduğunu, etikette ne yazdığını ve kolinin içinde ne olduğunu kontrol et.",
+              "Süreyi de ölç. Sakin bir haftada söz verilen ile gerçek sevk saati arasındaki fark, Aralık'ta ne bekleyeceğini söyler.",
+            ],
+          },
+          {
+            heading: "Kırmızı bayraklar",
+            paragraphs: [
+              "Kendi markasını senin kolinden çıkarmak için ek ücret isteyen, bir ürünün kazıma alanını söyleyemeyen ya da lazerin renkli fotoğraf basabileceğini vaat eden ortak, ilişkinin nasıl gideceğini sana anlatıyordur. Her soruya yazılı cevap yerine satış görüşmesiyle dönen tedarikçi de öyle.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            q: "Etsy'deki kişiselleştirilmiş ilanlar için üretim ortağı kullanabilir miyim?",
+            a: "Evet. Etsy, senin tasarladığın ürünler için üretim ortağına izin verir; ortağı ilanında belirtirsin. İlan ve müşteri sende kalır, ortak her siparişi kazıyıp gönderir.",
+          },
+          {
+            q: "Bir deneme siparişi ne kadar tutmalı?",
+            a: "Deneme siparişi normal tek bir siparişle aynı tutmalı. Siparişe göre üreten bir tedarikçinin tek adet için kurulum ücreti alması için bir sebep yok.",
+          },
+          {
+            q: "FomaPrint bu noktaları nasıl karşılıyor?",
+            a: "Alt limit yok, 14:00 ET öncesi siparişlerde aynı gün sevk, senin markanla gizli sevkiyat, üretim öncesi tasarım kontrolü ve aboneliksiz ön yüklemeli cüzdan. Üretim Alpharetta, Georgia'da.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "prepare-artwork-for-laser-engraving",
+    published: "2026-10-31",
+    minutes: 5,
+    copy: {
+      en: {
+        title: "How to prepare artwork for laser engraving (SVG and DXF)",
+        description:
+          "File format, colours, line thickness and sizing for laser engraving artwork — the checks that decide whether a design engraves cleanly or comes out broken.",
+        lede: "Most engraving problems are file problems. Here is how to avoid them.",
+        sections: [
+          {
+            heading: "Use vector files: SVG or DXF",
+            paragraphs: [
+              "A laser follows paths, so the cleanest results come from vector artwork. SVG and DXF keep every edge sharp at any size; a JPG or PNG has to be traced first, and tracing softens corners, loses thin details and invents bumps along curves.",
+              "Convert all text to outlines before exporting. A font that is installed on your computer may not exist on the production machine, and a missing font silently changes the design.",
+            ],
+          },
+          {
+            heading: "One colour, high contrast",
+            paragraphs: [
+              "Engraving is single-tone. Prepare artwork as solid black on a transparent background: black is what gets engraved, everything else is left alone. Remove gradients, drop shadows, glows and soft edges — they cannot be engraved, and the laser has to decide where they start and stop.",
+              "If a logo only exists in colour, redraw it as one-colour line art before sending it. That is a design decision, and it is better made by you than guessed in production.",
+            ],
+          },
+          {
+            heading: "Line thickness and small text",
+            paragraphs: [
+              "Thin lines are the most common cause of a disappointing result. Measured at the final engraved size, keep strokes at least about 0.4 mm thick. Hairline serifs, delicate script connectors and tiny ornaments that look fine on a screen can break up or disappear on a curved tumbler or textured leatherette.",
+              "Check the artwork at its real physical size, not zoomed in. If you have to squint at 100% on a ruler-scaled preview, it will be hard to read on the product.",
+            ],
+            bullets: [
+              "Expand strokes into filled shapes so the thickness is fixed.",
+              "Keep the gaps between letters open — touching letters merge when engraved.",
+              "Avoid text smaller than the product can resolve; script fonts need more size than block fonts.",
+            ],
+          },
+          {
+            heading: "Size the design to the engraving area",
+            paragraphs: [
+              "Every product has a fixed engraving area. Design to that box rather than to the product photo, and leave a small margin from the edges. A design that is scaled down to fit an area it was not drawn for loses its thin details first.",
+              "Personalized fields — names, dates, initials — need room for the longest likely value. Test your layout with a long name, not just a short one.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            q: "Can I send a PNG or JPG for laser engraving?",
+            a: "It can be traced, but tracing loses detail and sharpness. A clean SVG or DXF with text converted to outlines gives a reliably better result.",
+          },
+          {
+            q: "Can a laser engrave a photo?",
+            a: "Only as a one-tone halftone, and the result depends heavily on the material. For a true colour photo, UV printing is the right process.",
+          },
+          {
+            q: "What does FomaPrint require?",
+            a: "High-contrast black vector artwork (SVG or DXF) on a transparent background, sized to the product's engraving area. Resellers receive the per-product spec sheet with their welcome pack.",
+          },
+        ],
+      },
+      tr: {
+        title: "Lazer kazıma için tasarım dosyası nasıl hazırlanır (SVG ve DXF)",
+        description:
+          "Lazer kazıma tasarımında dosya formatı, renk, çizgi kalınlığı ve ölçü — bir tasarımın temiz mi yoksa kırık mı kazınacağına karar veren kontroller.",
+        lede: "Kazıma sorunlarının çoğu dosya sorunudur. Onlardan nasıl kaçınılacağı burada.",
+        sections: [
+          {
+            heading: "Vektör dosya kullan: SVG ya da DXF",
+            paragraphs: [
+              "Lazer yolları takip eder, bu yüzden en temiz sonuç vektör tasarımdan gelir. SVG ve DXF her kenarı her ölçüde keskin tutar; JPG ya da PNG önce vektöre çevrilmek zorundadır ve bu çevirme köşeleri yumuşatır, ince detayları kaybeder, eğrilerde tümsekler üretir.",
+              "Dışa aktarmadan önce tüm yazıları dış hatta (outline) çevir. Senin bilgisayarında yüklü olan bir yazı tipi üretim makinesinde olmayabilir ve eksik yazı tipi tasarımı sessizce değiştirir.",
+            ],
+          },
+          {
+            heading: "Tek renk, yüksek kontrast",
+            paragraphs: [
+              "Kazıma tek tonludur. Tasarımı şeffaf zemin üzerinde düz siyah olarak hazırla: siyah kazınır, geri kalan hiçbir şeye dokunulmaz. Degradeleri, gölgeleri, parlamaları ve yumuşak kenarları kaldır — bunlar kazınamaz ve lazerin nerede başlayıp bittiklerine karar vermesi gerekir.",
+              "Bir logo yalnızca renkli olarak varsa, göndermeden önce tek renk çizgi çizime dönüştür. Bu bir tasarım kararıdır ve üretimde tahmin edilmesindense senin tarafından verilmesi daha iyidir.",
+            ],
+          },
+          {
+            heading: "Çizgi kalınlığı ve küçük yazı",
+            paragraphs: [
+              "İnce çizgiler hayal kırıklığı yaratan sonucun en yaygın sebebidir. Son kazınmış ölçüde çizgileri en az yaklaşık 0,4 mm kalınlıkta tut. Ekranda iyi görünen kıl inceliğinde tırnaklar, narin el yazısı bağlantıları ve minik süslemeler kavisli bir bardakta ya da dokulu suni deride kopabilir veya kaybolabilir.",
+              "Tasarımı yakınlaştırarak değil, gerçek fiziksel ölçüsünde kontrol et. Cetvel ölçekli %100 önizlemede gözünü kısman gerekiyorsa, ürün üzerinde okunması zor olacaktır.",
+            ],
+            bullets: [
+              "Kalınlığın sabit kalması için çizgileri dolu şekillere genişlet (expand stroke).",
+              "Harfler arasındaki boşlukları açık tut — birbirine değen harfler kazınınca birleşir.",
+              "Ürünün çözebileceğinden küçük yazıdan kaçın; el yazısı fontlar blok fontlardan daha fazla ölçü ister.",
+            ],
+          },
+          {
+            heading: "Tasarımı kazıma alanına göre boyutlandır",
+            paragraphs: [
+              "Her ürünün sabit bir kazıma alanı vardır. Ürün fotoğrafına değil o kutuya göre tasarla ve kenarlardan küçük bir pay bırak. Çizilmediği bir alana sığdırmak için küçültülen tasarım önce ince detaylarını kaybeder.",
+              "Kişiselleştirme alanları — isimler, tarihler, baş harfler — muhtemel en uzun değere yer bırakmalı. Yerleşimini sadece kısa bir isimle değil, uzun bir isimle de dene.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            q: "Lazer kazıma için PNG ya da JPG gönderebilir miyim?",
+            a: "Vektöre çevrilebilir ama bu çevirme detay ve keskinlik kaybettirir. Yazıları dış hatta çevrilmiş temiz bir SVG ya da DXF her zaman daha iyi sonuç verir.",
+          },
+          {
+            q: "Lazer fotoğraf kazıyabilir mi?",
+            a: "Yalnızca tek tonlu yarım ton olarak ve sonuç büyük ölçüde malzemeye bağlıdır. Gerçek renkli fotoğraf için doğru yöntem UV baskıdır.",
+          },
+          {
+            q: "FomaPrint ne istiyor?",
+            a: "Şeffaf zemin üzerinde yüksek kontrastlı siyah vektör tasarım (SVG ya da DXF), ürünün kazıma alanına göre boyutlandırılmış. Satıcılar ürün bazlı teknik şartnameyi hoş geldin paketiyle alır.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "engraved-tumblers-for-resellers",
+    published: "2026-10-31",
+    minutes: 5,
+    copy: {
+      en: {
+        title: "Engraved tumblers for resellers: sizes, finishes and what sells",
+        description:
+          "How to build a personalized tumbler line without stock — 20, 30 and 40 oz sizes, powder-coated versus leatherette finishes, and the occasions that drive orders.",
+        lede: "Drinkware is the volume category for most personalized-gift shops. Here is how to choose what to list.",
+        sections: [
+          {
+            heading: "Why tumblers sell so well personalized",
+            paragraphs: [
+              "A tumbler is used every day, carried everywhere and easy to gift. Add a name, a monogram or a date and it stops being a commodity that can be price-compared against an identical listing — which is exactly where a small shop's margin comes from.",
+              "Because each unit is engraved to order, you can list many sizes and colours without owning any of them, and drop the ones that do not sell without writing off stock.",
+            ],
+          },
+          {
+            heading: "Choosing sizes",
+            paragraphs: [
+              "Different sizes serve different buyers, and most shops list a small spread rather than a single size.",
+            ],
+            bullets: [
+              "20 oz: the everyday size — fits cup holders and is the default for gift sets and bridal parties.",
+              "30 oz: a step up for long days, popular with coaches, nurses and commuters.",
+              "40 oz with handle: the trend size; buyers often choose it by colour as much as by function.",
+              "Skinny tumblers: slimmer profile and a taller engraving area that suits vertical names and script.",
+              "Wine tumblers, pints and pilsners: strong for weddings, groomsmen and bar gifts.",
+            ],
+          },
+          {
+            heading: "Powder-coated versus leatherette",
+            paragraphs: [
+              "On a powder-coated stainless tumbler the laser removes the coating and exposes the steel underneath, so the mark reads as bright silver against the body colour. It is cut into the surface, so it survives dishwashers and daily handling in a way vinyl and printed transfers do not.",
+              "Leatherette-wrapped tumblers engrave differently: the laser removes the top layer of the wrap and reveals a contrasting colour underneath. The result is warmer and more premium-looking, and it suits monograms and rustic designs.",
+            ],
+          },
+          {
+            heading: "The occasions that drive orders",
+            paragraphs: [
+              "Personalized tumblers sell on occasions more than on features, so build listings and photos around them: bridesmaid and groomsmen sets, teacher and nurse appreciation, team and coach gifts, Father's Day and Christmas, and corporate onboarding gifts. Seasonal peaks are predictable — list before them, not during.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            q: "Will an engraved name come off a tumbler in the dishwasher?",
+            a: "No. Laser engraving removes the coating rather than adding ink on top, so there is nothing to peel or fade.",
+          },
+          {
+            q: "Do I need to buy tumblers in bulk to sell them personalized?",
+            a: "Not with a print-on-demand engraving partner. Each order is engraved and shipped individually, so a single unit is a normal order.",
+          },
+        ],
+      },
+      tr: {
+        title: "Satıcılar için kazımalı termos bardaklar: ölçüler, kaplamalar ve ne satar",
+        description:
+          "Stoksuz kişiselleştirilmiş termos bardak serisi kurmak — 20, 30 ve 40 oz ölçüler, toz boya ile suni deri kaplama farkı ve siparişi getiren özel günler.",
+        lede: "Kişiselleştirilmiş hediye mağazalarının çoğunda hacmi bardaklar taşır. Neyin ilanlanacağı böyle seçilir.",
+        sections: [
+          {
+            heading: "Termos bardaklar kişiselleştirilince neden bu kadar iyi satar",
+            paragraphs: [
+              "Termos bardak her gün kullanılır, her yere taşınır ve hediye etmesi kolaydır. Bir isim, monogram ya da tarih eklendiğinde, birebir aynı bir ilanla fiyat karşılaştırması yapılabilen sıradan bir ürün olmaktan çıkar — küçük bir mağazanın marjı tam olarak buradan gelir.",
+              "Her ürün siparişe göre kazındığı için birçok ölçü ve rengi hiçbirine sahip olmadan ilanlayabilir, satmayanları stok zararı yazmadan kaldırabilirsin.",
+            ],
+          },
+          {
+            heading: "Ölçü seçimi",
+            paragraphs: [
+              "Farklı ölçüler farklı alıcılara hitap eder ve mağazaların çoğu tek bir ölçü yerine küçük bir yelpaze ilanlar.",
+            ],
+            bullets: [
+              "20 oz: günlük ölçü — araç bardaklığına sığar, hediye setleri ve nedime grupları için varsayılan seçimdir.",
+              "30 oz: uzun günler için bir üst ölçü; antrenörler, hemşireler ve işe gidip gelenler arasında popüler.",
+              "Saplı 40 oz: trend ölçü; alıcılar onu çoğu zaman işlevi kadar rengine göre de seçer.",
+              "Skinny bardaklar: daha ince gövde ve dikey isimlere ve el yazısına uyan daha uzun bir kazıma alanı.",
+              "Şarap bardakları, pint ve pilsner: düğünler, sağdıç hediyeleri ve bar hediyeleri için güçlü.",
+            ],
+          },
+          {
+            heading: "Toz boya kaplama mı, suni deri mi",
+            paragraphs: [
+              "Toz boyalı paslanmaz çelik bir bardakta lazer kaplamayı kaldırıp altındaki çeliği açığa çıkarır; işaret gövde rengine karşı parlak gümüş olarak okunur. Yüzeyin içine işlendiği için vinil ve baskı transferlerinin dayanamadığı bulaşık makinesine ve günlük kullanıma dayanır.",
+              "Suni deri kaplı bardaklar farklı kazınır: lazer kaplamanın üst katmanını kaldırır ve altındaki kontrast rengi ortaya çıkarır. Sonuç daha sıcak ve daha premium görünür; monogramlara ve rustik tasarımlara uyar.",
+            ],
+          },
+          {
+            heading: "Siparişi getiren özel günler",
+            paragraphs: [
+              "Kişiselleştirilmiş bardaklar özelliklerden çok özel günlerle satar; ilanları ve fotoğrafları bunların etrafında kur: nedime ve sağdıç setleri, öğretmen ve hemşire teşekkürleri, takım ve antrenör hediyeleri, Babalar Günü ve Noel, kurumsal işe başlama hediyeleri. Sezon zirveleri önceden bellidir — onların sırasında değil, öncesinde ilanla.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            q: "Kazınmış isim bulaşık makinesinde bardaktan çıkar mı?",
+            a: "Hayır. Lazer kazıma üstüne mürekkep eklemez, kaplamayı kaldırır; soyulacak ya da solacak bir şey yoktur.",
+          },
+          {
+            q: "Kişiselleştirilmiş satmak için bardakları toplu almam gerekir mi?",
+            a: "Talebe göre kazıma ortağıyla gerekmez. Her sipariş tek tek kazınıp gönderilir, yani tek adet normal bir sipariştir.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "bulk-personalized-corporate-gifts",
+    published: "2026-10-31",
+    minutes: 5,
+    copy: {
+      en: {
+        title: "Bulk personalized corporate gifts: how to run an order with a different name on every item",
+        description:
+          "How to plan a bulk engraved gift order for a team, client list or event — name lists, logos, proofing, timelines and shipping to one address or many.",
+        lede: "Fifty gifts with fifty different names is a data job before it is a production job.",
+        sections: [
+          {
+            heading: "Start with the list, not the product",
+            paragraphs: [
+              "The thing that goes wrong in bulk personalized orders is rarely the engraving. It is the list: a misspelled surname, a nickname instead of a legal name, a duplicate row, a missing title. Collect names in a spreadsheet with one row per item and one column per engraved field, and have the client approve that sheet before anything else happens.",
+              "Decide early how long values are handled. A layout that fits \"Ana Lee\" has to fit \"Christopher Montgomery\" too, so test the design with the longest name on the list.",
+            ],
+          },
+          {
+            heading: "Logos and brand rules",
+            paragraphs: [
+              "Corporate gifts usually combine a company logo with an individual name. The logo needs to exist as one-colour vector artwork; ask the client's marketing team for an SVG or DXF rather than tracing a website image. Check whether their brand guidelines allow a single-colour version and a minimum size.",
+            ],
+          },
+          {
+            heading: "Proofing and timelines",
+            paragraphs: [
+              "Approve a layout once, then let the data fill it. Proofing every item individually does not scale past a few dozen; proofing the template with the longest and shortest names, plus the approved list, catches nearly every error.",
+              "Work backwards from the event date. Leave time for list collection and approval, production, transit and a margin for a reprint. Holiday and year-end orders need the most margin, because everyone else is ordering too.",
+            ],
+            bullets: [
+              "Lock the list and the layout before production starts.",
+              "Mix products freely — a tumbler, a journal and a keychain can share one design system.",
+              "Decide whether gifts ship to one office or straight to each recipient's address.",
+            ],
+          },
+          {
+            heading: "Why made-to-order helps",
+            paragraphs: [
+              "Because each item is engraved individually from stocked blanks, a bulk order does not need a setup fee per name, and late additions — a new hire, a forgotten client — can be produced as single units afterwards in the same style.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            q: "Can every item in a bulk order have a different name?",
+            a: "Yes. Each unit is engraved individually, so per-item names, dates or initials are normal for a bulk order.",
+          },
+          {
+            q: "How do I request a bulk or corporate quote from FomaPrint?",
+            a: "Use the quote form with the products, quantities and deadline. Volume pricing is a discount, not a minimum — single units are also fine.",
+          },
+        ],
+      },
+      tr: {
+        title: "Toplu kişiselleştirilmiş kurumsal hediyeler: her üründe farklı isim olan sipariş nasıl yürütülür",
+        description:
+          "Bir ekip, müşteri listesi ya da etkinlik için toplu kazımalı hediye siparişi planlamak — isim listeleri, logolar, onay, zamanlama ve tek ya da çok adrese gönderim.",
+        lede: "Elli farklı isimli elli hediye, üretim işinden önce bir veri işidir.",
+        sections: [
+          {
+            heading: "Ürünle değil listeyle başla",
+            paragraphs: [
+              "Toplu kişiselleştirilmiş siparişlerde ters giden şey nadiren kazımadır. Liste ters gider: yanlış yazılmış bir soyadı, resmi isim yerine takma ad, mükerrer bir satır, eksik bir unvan. İsimleri her ürün için bir satır ve her kazınacak alan için bir sütun olan bir tabloda topla ve başka hiçbir şey olmadan önce müşteriye o tabloyu onaylat.",
+              "Uzun değerlerin nasıl ele alınacağına erkenden karar ver. \"Ana Lee\"ye uyan bir yerleşim \"Christopher Montgomery\"ye de uymalı; tasarımı listedeki en uzun isimle dene.",
+            ],
+          },
+          {
+            heading: "Logolar ve marka kuralları",
+            paragraphs: [
+              "Kurumsal hediyeler genellikle şirket logosunu kişisel bir isimle birleştirir. Logonun tek renk vektör tasarım olarak var olması gerekir; web sitesindeki bir görseli vektöre çevirmek yerine müşterinin pazarlama ekibinden SVG ya da DXF iste. Marka kılavuzlarının tek renkli kullanıma ve bir minimum ölçüye izin verip vermediğini kontrol et.",
+            ],
+          },
+          {
+            heading: "Onay ve zamanlama",
+            paragraphs: [
+              "Yerleşimi bir kez onayla, sonra veri onu doldursun. Her ürünü tek tek onaylatmak birkaç düzinenin ötesinde ölçeklenmez; şablonu en uzun ve en kısa isimle, artı onaylı listeyle onaylatmak hataların neredeyse tamamını yakalar.",
+              "Etkinlik tarihinden geriye doğru çalış. Liste toplama ve onay, üretim, kargo ve olası bir yeniden üretim için pay bırak. Tatil ve yıl sonu siparişleri en çok payı ister, çünkü herkes aynı anda sipariş veriyordur.",
+            ],
+            bullets: [
+              "Üretim başlamadan listeyi ve yerleşimi kilitle.",
+              "Ürünleri serbestçe karıştır — bir bardak, bir defter ve bir anahtarlık tek bir tasarım sistemini paylaşabilir.",
+              "Hediyelerin tek bir ofise mi yoksa doğrudan her alıcının adresine mi gideceğine karar ver.",
+            ],
+          },
+          {
+            heading: "Siparişe göre üretim neden yardımcı olur",
+            paragraphs: [
+              "Her ürün stoklu boş ürünlerden tek tek kazındığı için toplu siparişte isim başına kurulum ücreti gerekmez; sonradan eklenenler — yeni bir çalışan, unutulmuş bir müşteri — aynı stilde tek adet olarak sonradan üretilebilir.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            q: "Toplu siparişte her üründe farklı isim olabilir mi?",
+            a: "Evet. Her ürün tek tek kazınır; ürün başına isim, tarih ya da baş harf toplu siparişte normaldir.",
+          },
+          {
+            q: "FomaPrint'ten toplu ya da kurumsal teklif nasıl istenir?",
+            a: "Ürünler, adetler ve teslim tarihiyle teklif formunu kullan. Hacim fiyatı bir alt limit değil indirimdir — tek adet de olur.",
+          },
+        ],
+      },
+    },
+  },
 ];
 
 export function getGuide(slug: string): Guide | undefined {
