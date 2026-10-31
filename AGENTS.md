@@ -363,3 +363,7 @@ yazmadan önce node_modules/next/dist/docs/ oku) + Tailwind.
   Caddy access log açıldı (`/data/access.log`, 50 MiB × 10, 90 gün); AI kaynaklı ziyaret özeti:
   sunucuda `bash /opt/fomaprint/scripts/ai-referrals.sh [gün]`. Önceden sunucuda hiç ziyaret kaydı yoktu
   (Vercel Analytics self-host'ta çalışmıyor), yani eski ChatGPT ziyaretleri geriye dönük ölçülemez.
+- ⚠️ Caddyfile tek dosya bind-mount: deploy'daki `git reset --hard` dosyayı yeni inode ile yazar, kapsayıcı
+  eski dosyayı görmeye devam eder ve `caddy reload` eski ayarı yükler. Caddyfile değişince deploy sonrası
+  `cd /opt/fomaprint && docker compose up -d --force-recreate --no-deps caddy` gerekir (31 Eki'de böyle uygulandı).
+- `ai-referrals.sh` 31 Eki 06:31 UTC'de 4 sahte `utm_source=chatgpt.com` test isteğiyle doğrulandı (patch-pvc rehberi) — gerçek trafik değil.
