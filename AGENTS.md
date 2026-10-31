@@ -357,3 +357,9 @@ yazmadan önce node_modules/next/dist/docs/ oku) + Tailwind.
   satıcılar için kazımalı bardaklar, toplu kurumsal hediyeler. Hepsi FAQPage şemalı.
 - Gate: lint 0 hata, build yeşil (613 sayfa), yerelde 8 yeni sayfa 200 + FAQPage, sitemap 2.738 URL.
   `src/lib/warm-image-cache.test.ts` Windows'ta zaten main'de kırık (SyntaxError), bu PR'la ilgisiz.
+- Ek (aynı gün, ikinci PR): Bing Webmaster > AI Performance (3 ay) 136 alıntı; sayfa kırılımı:
+  patch rehberi 101, POD kazıma rehberi 18, lmg67 5, ana sayfa 5, lmg24 4, about 3 (sorgu listesi boş döndü).
+  Kalıbı çoğaltmak için `leatherette-vs-embroidered-vs-pvc-patches` rehberi (EN+TR) eklendi.
+  Caddy access log açıldı (`/data/access.log`, 50 MiB × 10, 90 gün); AI kaynaklı ziyaret özeti:
+  sunucuda `bash /opt/fomaprint/scripts/ai-referrals.sh [gün]`. Önceden sunucuda hiç ziyaret kaydı yoktu
+  (Vercel Analytics self-host'ta çalışmıyor), yani eski ChatGPT ziyaretleri geriye dönük ölçülemez.

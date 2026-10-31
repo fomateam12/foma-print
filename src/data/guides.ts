@@ -1010,6 +1010,131 @@ export const GUIDES: Guide[] = [
       },
     },
   },
+  {
+    slug: "leatherette-vs-embroidered-vs-pvc-patches",
+    published: "2026-10-31",
+    minutes: 5,
+    copy: {
+      en: {
+        title: "Leatherette vs embroidered vs PVC patches: which to use on hats",
+        description:
+          "How engraved leatherette, embroidered and PVC patches compare on look, detail, setup, minimums and durability — and which one fits a small custom hat business.",
+        lede: "Three patch types, three very different cost structures. Pick the one that matches how you sell.",
+        sections: [
+          {
+            heading: "The short answer",
+            paragraphs: [
+              "Leatherette patches suit one-off and small-batch custom hats, because each patch is laser engraved individually with no setup. Embroidered patches suit colourful logos ordered in volume. PVC patches suit bold, rubbery, multi-colour designs where a mould cost can be spread over a large run.",
+            ],
+          },
+          {
+            heading: "Engraved leatherette",
+            paragraphs: [
+              "A leatherette patch is a synthetic leather blank that a laser engraves to your artwork; the engraving removes the top layer and shows a contrasting colour underneath. The look is warm and premium, close to a debossed leather label, which is why it dominates trucker caps, outdoor brands and rustic gift lines.",
+              "Because the design is engraved rather than stitched or moulded, there is no digitizing charge, no mould and no minimum. A single patch with a customer's name costs the same to set up as a hundred with a logo. The trade-off is colour: engraving is single-tone, so a multi-colour logo has to become one-colour artwork.",
+            ],
+            bullets: [
+              "Best for: personalized names and dates, small batches, rustic and outdoor brands",
+              "Setup: none — vector artwork sized to the patch",
+              "Application: adhesive backing and a heat press, or sewn",
+            ],
+          },
+          {
+            heading: "Embroidered patches",
+            paragraphs: [
+              "Embroidery stitches thread onto a twill backing, so it handles several colours and has the classic textured look of team and uniform patches. Very fine text and small details are its weak point, because thread has a minimum width.",
+              "Embroidery usually needs the artwork digitized into a stitch file first, and producers commonly set minimum quantities. That makes it economical for one logo ordered many times, and expensive for a different name on every hat.",
+            ],
+          },
+          {
+            heading: "PVC patches",
+            paragraphs: [
+              "PVC patches are moulded from soft rubber in layered colours. They are bright, waterproof and three-dimensional, popular for tactical and outdoor gear. Each design needs its own mould, so they make sense only when one design will be produced in quantity, and they cannot be personalized per unit.",
+            ],
+          },
+          {
+            heading: "Which one for a custom hat shop",
+            paragraphs: [
+              "If you sell personalized hats — names, initials, small-business logos ordered a few at a time — leatherette is the format whose economics work at quantity one. If you sell a single team or company logo in large runs and need full colour, compare embroidery and PVC quotes for that run. Many shops use leatherette for personalization and outsource embroidery only for big uniform orders.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            q: "Are leatherette patches cheaper than embroidered patches?",
+            a: "For small quantities and personalized designs, usually yes, because there is no digitizing or minimum order. For a single logo in large volume, embroidery pricing can become competitive.",
+          },
+          {
+            q: "Can a leatherette patch be full colour?",
+            a: "No. Laser engraving is single-tone; the contrast comes from the layer under the surface. Full-colour designs need embroidery, PVC or a printed patch.",
+          },
+          {
+            q: "What leatherette patches does FomaPrint offer?",
+            a: "Rectangle, round, oval, square and hex patches in two sizes, with or without adhesive backing, in the standard leatherette colour range — each engraved to your artwork with no minimum.",
+          },
+        ],
+      },
+      tr: {
+        title: "Suni deri, nakış ve PVC arma karşılaştırması: şapkada hangisi kullanılmalı",
+        description:
+          "Kazımalı suni deri, nakışlı ve PVC armaların görünüm, detay, kurulum, alt limit ve dayanıklılık açısından farkı — ve küçük bir özel şapka işine hangisinin uyduğu.",
+        lede: "Üç arma türü, birbirinden çok farklı üç maliyet yapısı. Nasıl sattığına uyanı seç.",
+        sections: [
+          {
+            heading: "Kısa cevap",
+            paragraphs: [
+              "Suni deri armalar tek adetlik ve küçük partili özel şapkalara uyar; çünkü her arma kurulum olmadan tek tek lazerle kazınır. Nakışlı armalar yüksek adette sipariş edilen renkli logolara uyar. PVC armalar ise kalıp maliyetinin büyük bir üretime yayılabildiği, kalın, kauçuk dokulu, çok renkli tasarımlara uyar.",
+            ],
+          },
+          {
+            heading: "Kazımalı suni deri",
+            paragraphs: [
+              "Suni deri arma, lazerin senin tasarımına göre kazıdığı sentetik deri bir boş üründür; kazıma üst katmanı kaldırır ve altındaki kontrast rengi gösterir. Görünümü sıcak ve premiumdur, kabartmalı deri etikete yakındır; trucker şapkalarda, outdoor markalarda ve rustik hediye serilerinde bu yüzden öne çıkar.",
+              "Tasarım dikilmediği ya da kalıplanmadığı, kazındığı için dijitalleştirme ücreti, kalıp ve alt limit yoktur. Müşterinin adını taşıyan tek bir armanın kurulum maliyeti, logolu yüz armanınkiyle aynıdır. Bedeli renktir: kazıma tek tonludur, çok renkli bir logo tek renk çizime dönüşmek zorundadır.",
+            ],
+            bullets: [
+              "En uygun: kişiye özel isim ve tarihler, küçük partiler, rustik ve outdoor markalar",
+              "Kurulum: yok — armaya göre boyutlandırılmış vektör tasarım yeterli",
+              "Uygulama: yapışkanlı arka yüz ve ısı presi ya da dikiş",
+            ],
+          },
+          {
+            heading: "Nakışlı armalar",
+            paragraphs: [
+              "Nakış, ipliği dimi bir zemine diker; birkaç rengi kaldırır ve takım ve üniforma armalarının klasik dokulu görünümünü verir. Zayıf noktası çok ince yazı ve küçük detaylardır, çünkü ipliğin bir minimum genişliği vardır.",
+              "Nakış genellikle tasarımın önce dikiş dosyasına dijitalleştirilmesini ister ve üreticiler çoğunlukla minimum adet koyar. Bu da onu aynı logonun çok kez sipariş edildiği işlerde ekonomik, her şapkada farklı isim olan işlerde pahalı yapar.",
+            ],
+          },
+          {
+            heading: "PVC armalar",
+            paragraphs: [
+              "PVC armalar yumuşak kauçuktan katmanlı renklerle kalıplanır. Parlak, su geçirmez ve üç boyutludurlar; taktik ve outdoor ekipmanda popülerdirler. Her tasarım kendi kalıbını ister; bu yüzden yalnızca tek bir tasarım yüksek adette üretilecekse mantıklıdırlar ve ürün başına kişiselleştirilemezler.",
+            ],
+          },
+          {
+            heading: "Özel şapka mağazası için hangisi",
+            paragraphs: [
+              "Kişiselleştirilmiş şapka satıyorsan — isimler, baş harfler, birkaç adet sipariş edilen küçük işletme logoları — ekonomisi tek adette işleyen format suni deridir. Büyük partilerde tek bir takım ya da şirket logosu satıyor ve tam renk istiyorsan, o parti için nakış ve PVC tekliflerini karşılaştır. Birçok mağaza kişiselleştirme için suni deri kullanır, nakışı yalnızca büyük üniforma siparişleri için dışarı verir.",
+            ],
+          },
+        ],
+        faqs: [
+          {
+            q: "Suni deri armalar nakışlı armalardan ucuz mu?",
+            a: "Küçük adetlerde ve kişiselleştirilmiş tasarımlarda genellikle evet; çünkü dijitalleştirme ya da minimum sipariş yoktur. Yüksek adette tek bir logo için nakış fiyatı rekabetçi hale gelebilir.",
+          },
+          {
+            q: "Suni deri arma tam renkli olabilir mi?",
+            a: "Hayır. Lazer kazıma tek tonludur; kontrast yüzeyin altındaki katmandan gelir. Tam renkli tasarımlar için nakış, PVC ya da baskılı arma gerekir.",
+          },
+          {
+            q: "FomaPrint hangi suni deri armaları sunuyor?",
+            a: "Dikdörtgen, yuvarlak, oval, kare ve altıgen armalar, iki ölçüde, yapışkanlı ya da yapışkansız, standart suni deri renk yelpazesinde — her biri alt limit olmadan senin tasarımına göre kazınır.",
+          },
+        ],
+      },
+    },
+  },
 ];
 
 export function getGuide(slug: string): Guide | undefined {
