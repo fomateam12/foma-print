@@ -1,5 +1,16 @@
 # Cutover config: automatic HTTPS for the real hostnames.
 www.fomaprint.com {
+    # Access log, so referrals can be measured (ChatGPT, Copilot, Perplexity
+    # and Google send `Referer` and/or `utm_source`). Lives in the caddy_data
+    # volume; rolled at 50 MiB, at most 10 files / 90 days. Caddy redacts
+    # Cookie and Authorization headers by default. Summary: scripts/ai-referrals.sh
+    log {
+        output file /data/access.log {
+            roll_size 50MiB
+            roll_keep 10
+            roll_keep_for 2160h
+        }
+    }
     reverse_proxy app:3000
 }
 fomaprint.com {
