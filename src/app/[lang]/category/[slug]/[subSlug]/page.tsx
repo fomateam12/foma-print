@@ -73,7 +73,10 @@ export async function generateMetadata({
       .replace("{collection}", subName.toLocaleLowerCase(lang));
 
   return {
-    title: `${subName} — ${categoryName(category.name, lang)}`,
+    // Says what the page sells — custom wholesale for resellers — instead of
+    // only naming the product type. Google showed these pages for brand
+    // searches only; the H1 and the OG title keep the plain collection name.
+    title: dict.subcategory.metaTitle.replace("{name}", subName),
     description,
     alternates: alternatesFor(
       `/category/${category.slug}/${subcategory.slug}`,

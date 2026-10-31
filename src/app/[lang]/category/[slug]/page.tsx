@@ -56,7 +56,7 @@ export async function generateMetadata({
     (editorial && editorialMetaDescription(editorial)) ?? blurb;
 
   return {
-    title: name,
+    title: dict.category.metaTitle.replace("{name}", name),
     description,
     alternates: alternatesFor(`/category/${category.slug}`, lang),
     openGraph: { title: `${name} · FomaPrint`, description },

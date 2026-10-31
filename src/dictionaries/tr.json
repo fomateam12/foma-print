@@ -443,6 +443,7 @@
     "questionsAfter": "."
   },
   "category": {
+    "metaTitle": "Toptan Kişiye Özel {name} — Satıcılar İçin",
     "notFound": "Kategori bulunamadı",
     "eyebrow": "Kategori",
     "wholesaleOnRequest": "Toptan fiyatlar talep üzerine sunulur",
@@ -513,6 +514,7 @@
     "searching": "Aranıyor…"
   },
   "subcategory": {
+    "metaTitle": "Toptan Kişiye Özel {name} — Satıcılar İçin",
     "notFound": "Bulunamadı",
     "metaDescription": "Kişiselleştirilebilir {count} {collection} ürününü keşfedin. Sipariş üzerine lazer kazıma, gizli kargo ve satıcılara özel toptan fiyatlar FomaPrint'te.",
     "browseBySize": "Boyuta göre inceleyin",
