@@ -30,7 +30,7 @@ export function GET() {
     "",
     "Key facts:",
     "",
-    `- Business: ${site.name} is operated by ${site.legalName}, ${a.street}, ${a.city}, ${a.state} ${a.zip}, USA (founded ${site.foundedYear}).`,
+    `- Business: ${site.name} is operated by ${site.legalName}, ${a.street}, ${a.city}, ${a.state} ${a.zip}, USA.`,
     "- Model: white-label print-on-demand and laser engraving for online resellers (Etsy, Amazon, Shopify and corporate-gift sellers). The reseller owns the listing and the customer; FomaPrint personalizes, produces and ships each order.",
     "- Blind shipping: parcels ship under the reseller's brand and return address, with no FomaPrint branding or pricing in the box.",
     "- No minimums: a single engraved unit is a normal order; the whole catalogue is made to order from blanks stocked in Alpharetta, Georgia.",

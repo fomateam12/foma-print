@@ -1,6 +1,6 @@
 # FomaPrint
 
-Personalized & laser-engraved gifts storefront for **FOMA FAMILY LLC**. A fast,
+Personalized & laser-engraved gifts storefront for **FomaPrint LLC**. A fast,
 SEO-friendly catalog (drinkware, cutting boards, frames, journals and more) with
 custom-order and reseller-application flows that email the FomaPrint team.
 

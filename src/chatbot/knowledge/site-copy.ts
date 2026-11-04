@@ -28,7 +28,7 @@ const SECTIONS: { key: keyof typeof en; title: string }[] = [
 const PLACEHOLDERS: Record<string, string> = {
   cutoff: "2pm ET",
   count: "1,250+",
-  legal: "FOMA FAMILY LLC",
+  legal: "FomaPrint LLC",
   brand: "FomaPrint",
 };
 

@@ -105,7 +105,6 @@ export default async function RootLayout({
     "@type": "Organization",
     name: site.name,
     legalName: site.legalName,
-    foundingDate: String(site.foundedYear),
     url: site.url,
     email: site.email,
     telephone: "+1-404-934-8917",
