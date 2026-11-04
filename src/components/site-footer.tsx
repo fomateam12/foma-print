@@ -155,8 +155,7 @@ export function SiteFooter({
       <div className="border-t border-border">
         <div className="container-px flex flex-col items-center justify-between gap-3 py-5 text-xs text-muted-foreground sm:flex-row">
           <p>
-            © {year} {site.legalName} · {dict.footer.established}{" "}
-            {site.foundedYear} · {site.location} · {dict.site.madeIn}
+            © {year} {site.legalName} · {site.location} · {dict.site.madeIn}
           </p>
           <div className="flex items-center gap-5">
             <Link href="/privacy" className="hover:text-foreground">

@@ -128,7 +128,7 @@ export const fomaProducts: Product[] = [
     description:
       "Personalized 40 oz stainless steel tumbler with handle and straw in Black — double-wall vacuum insulated and laser-engraved to order with a custom name or design. Ships next day.",
     longDescription:
-      "FOMA FAMILY's 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Black powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
+      "Our 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Black powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
     badges: ["Bestseller"],
     leadTimeDays: 1,
     personalization: [
@@ -161,7 +161,7 @@ export const fomaProducts: Product[] = [
     description:
       "Personalized 40 oz stainless steel tumbler with handle and straw in White — double-wall vacuum insulated and laser-engraved to order with a custom name or design. Ships next day.",
     longDescription:
-      "FOMA FAMILY's 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the White powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
+      "Our 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the White powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
     badges: ["Bestseller"],
     leadTimeDays: 1,
     personalization: [
@@ -194,7 +194,7 @@ export const fomaProducts: Product[] = [
     description:
       "Personalized 40 oz stainless steel tumbler with handle and straw in Cream — double-wall vacuum insulated and laser-engraved to order with a custom name or design. Ships next day.",
     longDescription:
-      "FOMA FAMILY's 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Cream powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
+      "Our 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Cream powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
     badges: ["Bestseller"],
     leadTimeDays: 1,
     personalization: [
@@ -227,7 +227,7 @@ export const fomaProducts: Product[] = [
     description:
       "Personalized 40 oz stainless steel tumbler with handle and straw in Charcoal — double-wall vacuum insulated and laser-engraved to order with a custom name or design. Ships next day.",
     longDescription:
-      "FOMA FAMILY's 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Charcoal powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
+      "Our 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Charcoal powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
     badges: ["Bestseller"],
     leadTimeDays: 1,
     personalization: [
@@ -260,7 +260,7 @@ export const fomaProducts: Product[] = [
     description:
       "Personalized 40 oz stainless steel tumbler with handle and straw in Fog — double-wall vacuum insulated and laser-engraved to order with a custom name or design. Ships next day.",
     longDescription:
-      "FOMA FAMILY's 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Fog powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
+      "Our 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Fog powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
     badges: ["Bestseller"],
     leadTimeDays: 1,
     personalization: [
@@ -293,7 +293,7 @@ export const fomaProducts: Product[] = [
     description:
       "Personalized 40 oz stainless steel tumbler with handle and straw in Azure — double-wall vacuum insulated and laser-engraved to order with a custom name or design. Ships next day.",
     longDescription:
-      "FOMA FAMILY's 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Azure powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
+      "Our 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Azure powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
     badges: ["Bestseller"],
     leadTimeDays: 1,
     personalization: [
@@ -326,7 +326,7 @@ export const fomaProducts: Product[] = [
     description:
       "Personalized 40 oz stainless steel tumbler with handle and straw in Eucalyptus — double-wall vacuum insulated and laser-engraved to order with a custom name or design. Ships next day.",
     longDescription:
-      "FOMA FAMILY's 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Eucalyptus powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
+      "Our 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Eucalyptus powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
     badges: ["Bestseller"],
     leadTimeDays: 1,
     personalization: [
@@ -359,7 +359,7 @@ export const fomaProducts: Product[] = [
     description:
       "Personalized 40 oz stainless steel tumbler with handle and straw in Bay Leaf — double-wall vacuum insulated and laser-engraved to order with a custom name or design. Ships next day.",
     longDescription:
-      "FOMA FAMILY's 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Bay Leaf powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
+      "Our 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Bay Leaf powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
     badges: ["Bestseller"],
     leadTimeDays: 1,
     personalization: [
@@ -392,7 +392,7 @@ export const fomaProducts: Product[] = [
     description:
       "Personalized 40 oz stainless steel tumbler with handle and straw in Lilac — double-wall vacuum insulated and laser-engraved to order with a custom name or design. Ships next day.",
     longDescription:
-      "FOMA FAMILY's 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Lilac powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
+      "Our 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Lilac powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
     badges: ["Bestseller"],
     leadTimeDays: 1,
     personalization: [
@@ -425,7 +425,7 @@ export const fomaProducts: Product[] = [
     description:
       "Personalized 40 oz stainless steel tumbler with handle and straw in Hot Pink — double-wall vacuum insulated and laser-engraved to order with a custom name or design. Ships next day.",
     longDescription:
-      "FOMA FAMILY's 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Hot Pink powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
+      "Our 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Hot Pink powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
     badges: ["Bestseller"],
     leadTimeDays: 1,
     personalization: [
@@ -458,7 +458,7 @@ export const fomaProducts: Product[] = [
     description:
       "Personalized 40 oz stainless steel tumbler with handle and straw in Rose — double-wall vacuum insulated and laser-engraved to order with a custom name or design. Ships next day.",
     longDescription:
-      "FOMA FAMILY's 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Rose powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
+      "Our 40 oz tumbler in 18/8 stainless steel with double-wall vacuum insulation and a thermal copper lining — keeps drinks cold for up to 12 hours or hot for up to 6. Comfortable ergonomic handle, BPA-free clear sliding lid and a reusable straw for work, gym or travel. This is the Rose powder-coated colorway, laser-engraved to order with a name, monogram or birth-flower design for a crisp, permanent finish that won't fade or peel. A thoughtful personalized gift for birthdays, bridesmaids, weddings and the holidays — ships next day.",
     badges: ["Bestseller"],
     leadTimeDays: 1,
     personalization: [

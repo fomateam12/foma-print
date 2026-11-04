@@ -4,9 +4,7 @@
  */
 export const site = {
   name: "FomaPrint",
-  legalName: "FOMA FAMILY LLC",
-  /** Year the parent company was founded — used in trust copy and the footer. */
-  foundedYear: 2021,
+  legalName: "FomaPrint LLC",
   /** Short display form (city, state) — see `address` for the full street address. */
   location: "Alpharetta, GA",
   /** Physical business address — used in structured data and business-detail UI. */
@@ -22,7 +20,7 @@ export const site = {
   },
   tagline: "Print-on-demand & laser engraving for resellers",
   description:
-    "FomaPrint is a U.S. print-on-demand and laser-engraving partner for online resellers. You sell — we personalize, produce and blind-ship drinkware, gifts and décor under your brand. Made to order in the USA by FOMA FAMILY LLC.",
+    "FomaPrint is a U.S. print-on-demand and laser-engraving partner for online resellers. You sell — we personalize, produce and blind-ship drinkware, gifts and décor under your brand. Made to order in the USA by FomaPrint LLC.",
   /** One-line positioning used in heroes and OG copy. */
   positioning: "You sell it. We engrave, make and ship it — under your brand.",
   madeIn: "Made to order in the USA",

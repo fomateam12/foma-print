@@ -1,7 +1,7 @@
 {
   "site": {
     "tagline": "Print-on-demand & laser engraving for resellers",
-    "description": "FomaPrint is a U.S. print-on-demand and laser-engraving partner for online resellers. You sell — we personalize, produce and blind-ship drinkware, gifts and décor under your brand. Made to order in the USA by FOMA FAMILY LLC.",
+    "description": "FomaPrint is a U.S. print-on-demand and laser-engraving partner for online resellers. You sell — we personalize, produce and blind-ship drinkware, gifts and décor under your brand. Made to order in the USA by FomaPrint LLC.",
     "positioning": "You sell it. We engrave, make and ship it — under your brand.",
     "madeIn": "Made to order in the USA",
     "keywords": [
@@ -60,7 +60,6 @@
     "termsOfService": "Terms of Service",
     "privacy": "Privacy",
     "terms": "Terms",
-    "established": "Est.",
     "guides": "Guides"
   },
   "copy": {
@@ -253,12 +252,12 @@
   },
   "about": {
     "metaTitle": "About",
-    "metaDescription": "About FOMA FAMILY LLC — the U.S. print-on-demand and laser-engraving partner behind FomaPrint. You sell it; we personalize, produce and blind-ship it under your brand.",
-    "ogDescription": "The production partner behind your store — made to order in the USA by FOMA FAMILY LLC.",
+    "metaDescription": "About FomaPrint LLC — the U.S. print-on-demand and laser-engraving partner for online resellers. You sell it; we personalize, produce and blind-ship it under your brand.",
+    "ogDescription": "The production partner behind your store — made to order in the USA by FomaPrint LLC.",
     "eyebrow": "Our story",
     "headingBefore": "The production partner ",
     "headingAccent": "behind your store",
-    "lead": "{brand} is the print-on-demand and laser-engraving arm of {legal}. Resellers list our products under their own brand; we personalize, produce and blind-ship every order from the USA — so you can sell without holding inventory or running a workshop.",
+    "lead": "{legal} is a U.S. print-on-demand and laser-engraving partner for online resellers. Resellers list our products under their own brand; we personalize, produce and blind-ship every order from the USA — so you can sell without holding inventory or running a workshop.",
     "stat1": "products to private-label",
     "stat2": "blind drop-shipped",
     "stat3": "in personalized gifts",
@@ -273,7 +272,7 @@
     "value4Body": "From your first order to thousands a month, our production and your seller portal grow with your store.",
     "missionEyebrow": "Why we built it",
     "missionTitle": "Why we started {brand}",
-    "missionP1": "FomaPrint is the fulfillment arm of {legal}, a Georgia-based company founded in 2021. We started on the retail side — selling personalized engraved gifts to shoppers on Amazon under our Foma Family brand — and spent years engraving, packing and shipping one-at-a-time orders with our own machines.",
+    "missionP1": "{legal} is a Georgia-based print-on-demand and laser-engraving company. Our team started on the retail side in 2021 — selling personalized engraved gifts to shoppers on Amazon — and spent years engraving, packing and shipping one-at-a-time orders.",
     "missionP2": "Along the way we kept meeting small online sellers — Etsy shops, boutique brands, corporate-gift resellers — with great products to sell and nowhere dependable to make them. Sourcing, engraving, packing and shipping were eating the hours that should have gone into growing their store.",
     "missionP3": "So we became the part nobody sees. Today {legal} runs a U.S. studio and a catalog of over {count} personalizable products — drinkware, gifts, frames and office goods — all ready to engrave to order and blind-ship under your brand, with same-day printing and shipping on orders placed before {cutoff} and a same-day reply on every quote request.",
     "portalEyebrow": "Seller Portal",
@@ -567,7 +566,7 @@
   },
   "pricing": {
     "metaTitle": "Wholesale Pricing",
-    "metaDescription": "How FomaPrint wholesale pricing works for resellers — quote-based per-unit rates with personalization, blind drop-shipping, same-day reply on quotes and same-day printing + shipping on orders placed before {cutoff}. Request pricing from FOMA FAMILY LLC.",
+    "metaDescription": "How FomaPrint wholesale pricing works for resellers — quote-based per-unit rates with personalization, blind drop-shipping, same-day reply on quotes and same-day printing + shipping on orders placed before {cutoff}. Request pricing from FomaPrint LLC.",
     "ogDescription": "Quote-based wholesale pricing for resellers — personalization, blind drop-ship, same-day reply and same-day printing & shipping included.",
     "eyebrow": "Wholesale pricing",
     "headingBefore": "Pricing built for ",
@@ -639,8 +638,8 @@
   },
   "privacy": {
     "metaTitle": "Privacy Policy",
-    "metaDescription": "How FOMA FAMILY LLC collects, uses and protects your information at FomaPrint.",
-    "updated": "September 2026",
+    "metaDescription": "How FomaPrint LLC collects, uses and protects your information at FomaPrint.",
+    "updated": "November 2026",
     "intro": "{legal} (\"{brand}\", \"we\", \"us\") respects your privacy. This policy explains what information we collect when you use {brand}, how we use it, and the choices you have. By using our site or submitting a form, you agree to this policy.",
     "s1Heading": "Information we collect",
     "s1B1": "Contact details you provide through our custom order or reseller forms, such as your name, business name, email, phone number and website.",
@@ -664,9 +663,9 @@
   },
   "terms": {
     "metaTitle": "Terms of Service",
-    "metaDescription": "The terms and conditions for using FomaPrint and ordering from FOMA FAMILY LLC.",
-    "updated": "June 2026",
-    "intro1": "These Terms of Service (\"Terms\") govern your access to and use of FomaPrint and the fulfillment services operated by FOMA FAMILY LLC (\"FomaPrint\", \"we\", \"us\", or \"our\"), a limited liability company based in Alpharetta, Georgia, USA.",
+    "metaDescription": "The terms and conditions for using FomaPrint and ordering from FomaPrint LLC.",
+    "updated": "November 2026",
+    "intro1": "These Terms of Service (\"Terms\") govern your access to and use of FomaPrint and the fulfillment services operated by FomaPrint LLC (\"FomaPrint\", \"we\", \"us\", or \"our\"), a Georgia limited liability company based in Alpharetta, Georgia, USA.",
     "intro2": "FomaPrint is a business-to-business (B2B) production and fulfillment partner. We provide blind-ship, white-label print-on-demand and laser engraving for online resellers, brands, and shops who sell to their own customers. These Terms are an agreement between FomaPrint and you as a Reseller — they are not a consumer agreement with your end customers.",
     "intro3": "By creating an account, requesting a quote, funding a wallet, or submitting an order, you confirm that you are acting on behalf of a business and that you agree to these Terms. If you do not agree, do not use our services.",
     "s1Heading": "1. Definitions",
@@ -732,10 +731,10 @@
     "s11Heading": "11. Prohibited content and use",
     "s11P1": "You agree not to use FomaPrint to produce or ship content that is unlawful, infringing, counterfeit, defamatory, hateful, sexually exploitative, or that promotes violence or illegal activity, or to use the service in any way that creates legal liability for us or others. Violations may result in immediate suspension or termination.",
     "s12Heading": "12. Limitation of liability",
-    "s12P1": "To the fullest extent permitted by law, FOMA FAMILY LLC is not liable for any indirect, incidental, special, or consequential damages — including lost profits, lost sales, lost goodwill, or End Customer claims — arising from your use of our products, services, or website.",
+    "s12P1": "To the fullest extent permitted by law, FomaPrint LLC is not liable for any indirect, incidental, special, or consequential damages — including lost profits, lost sales, lost goodwill, or End Customer claims — arising from your use of our products, services, or website.",
     "s12P2": "Our total aggregate liability for any Order is limited to the amount you paid us for that Order. Some jurisdictions do not allow certain limitations, so portions of this section may not apply to you.",
     "s13Heading": "13. Indemnification",
-    "s13P1": "You agree to indemnify, defend, and hold harmless FOMA FAMILY LLC and its owners and staff from any claims, damages, liabilities, costs, and expenses (including reasonable legal fees) arising from: (a) artwork or content you submit; (b) your sales, marketing, pricing, and dealings with End Customers; (c) your tax or regulatory obligations; or (d) your breach of these Terms.",
+    "s13P1": "You agree to indemnify, defend, and hold harmless FomaPrint LLC and its owners and staff from any claims, damages, liabilities, costs, and expenses (including reasonable legal fees) arising from: (a) artwork or content you submit; (b) your sales, marketing, pricing, and dealings with End Customers; (c) your tax or regulatory obligations; or (d) your breach of these Terms.",
     "s14Heading": "14. Confidentiality and data",
     "s14P1": "Each party will protect the other's non-public business information. End Customer data you provide (names, addresses, order details) is processed by FomaPrint only to fulfill and ship your Orders and is not sold or used to market to your customers. You are responsible for having a lawful basis to share End Customer data with us and for your own privacy obligations to your customers.",
     "s15Heading": "15. Suspension and termination",

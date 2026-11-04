@@ -1,7 +1,7 @@
 {
   "site": {
     "tagline": "Satıcılar için talebe göre baskı ve lazer kazıma",
-    "description": "FomaPrint, online satıcılar için ABD merkezli talebe göre baskı ve lazer kazıma iş ortağıdır. Siz satarsınız — biz termos, hediyelik ve dekor ürünlerini sizin markanızla kişiselleştirir, üretir ve gizli kargo (blind drop-ship) ile müşterinize göndeririz. FOMA FAMILY LLC tarafından ABD'de siparişe özel üretilir.",
+    "description": "FomaPrint, online satıcılar için ABD merkezli talebe göre baskı ve lazer kazıma iş ortağıdır. Siz satarsınız — biz termos, hediyelik ve dekor ürünlerini sizin markanızla kişiselleştirir, üretir ve gizli kargo (blind drop-ship) ile müşterinize göndeririz. FomaPrint LLC tarafından ABD'de siparişe özel üretilir.",
     "positioning": "Siz satın. Kazımasını, üretimini ve kargosunu biz yapalım — sizin markanızla.",
     "madeIn": "ABD'de siparişe özel üretim",
     "keywords": [
@@ -60,7 +60,6 @@
     "termsOfService": "Kullanım Şartları",
     "privacy": "Gizlilik",
     "terms": "Şartlar",
-    "established": "Kuruluş",
     "guides": "Rehberler"
   },
   "copy": {
@@ -367,12 +366,12 @@
   },
   "about": {
     "metaTitle": "Hakkımızda",
-    "metaDescription": "FomaPrint'in arkasındaki ABD merkezli talebe göre baskı ve lazer kazıma ortağı FOMA FAMILY LLC'yi tanıyın. Siz satın; biz markanız adına kişiselleştirelim, üretelim ve gizli kargoyla gönderelim.",
-    "ogDescription": "Mağazanızın üretim ortağı — FOMA FAMILY LLC tarafından ABD'de sipariş üzerine üretilir.",
+    "metaDescription": "Online satıcıların ABD merkezli talebe göre baskı ve lazer kazıma ortağı FomaPrint LLC'yi tanıyın. Siz satın; biz markanız adına kişiselleştirelim, üretelim ve gizli kargoyla gönderelim.",
+    "ogDescription": "Mağazanızın üretim ortağı — FomaPrint LLC tarafından ABD'de sipariş üzerine üretilir.",
     "eyebrow": "Hikâyemiz",
     "headingBefore": "Mağazanızın arkasındaki",
     "headingAccent": "üretim ortağı",
-    "lead": "{brand}, {legal} bünyesindeki talebe göre baskı ve lazer kazıma birimidir. Satıcılar ürünlerimizi kendi markalarıyla listeler; biz her siparişi ABD'de kişiselleştirir, üretir ve markanız adına gizli kargoyla göndeririz. Böylece stok tutmadan veya atölye işletmeden satış yapabilirsiniz.",
+    "lead": "{legal}, online satıcılar için ABD merkezli talebe göre baskı ve lazer kazıma iş ortağıdır. Satıcılar ürünlerimizi kendi markalarıyla listeler; biz her siparişi ABD'de kişiselleştirir, üretir ve markanız adına gizli kargoyla göndeririz. Böylece stok tutmadan veya atölye işletmeden satış yapabilirsiniz.",
     "stat1": "beyaz etiket sunabileceğiniz ürün",
     "stat2": "gizli kargoyla gönderim",
     "stat3": "kişiselleştirilmiş hediyelerde",
@@ -387,7 +386,7 @@
     "value4Body": "İlk siparişinizden ayda binlerce siparişe kadar üretim kapasitemiz ve satıcı paneliniz mağazanızla birlikte büyür.",
     "missionEyebrow": "Neden kurduk",
     "missionTitle": "{brand}'i neden kurduk?",
-    "missionP1": "FomaPrint, 2021 yılında kurulan Georgia merkezli {legal} şirketinin sipariş karşılama birimidir. Yolculuğumuza perakende satışla başladık; Foma Family markamız altında Amazon müşterilerine kişiselleştirilmiş, lazer kazımalı hediyeler sattık. Yıllar boyunca kendi makinelerimizle siparişleri tek tek kazıdık, paketledik ve gönderdik.",
+    "missionP1": "{legal}, Georgia merkezli bir talebe göre baskı ve lazer kazıma şirketidir. Ekibimiz yolculuğuna 2021'de perakende satışla başladı; Amazon müşterilerine kişiselleştirilmiş, lazer kazımalı hediyeler sattık. Yıllar boyunca siparişleri tek tek kazıdık, paketledik ve gönderdik.",
     "missionP2": "Bu süreçte Etsy mağazaları, butik markalar ve kurumsal hediye satıcıları gibi pek çok küçük online satıcıyla tanıştık. Satacak harika ürünleri vardı ancak bunları güvenilir şekilde üretecek bir ortak bulamıyorlardı. Ürün tedariki, kazıma, paketleme ve kargo, mağazalarını büyütmeye ayırmaları gereken zamanı tüketiyordu.",
     "missionP3": "Biz de müşterinizin görmediği üretim gücünüz olduk. Bugün {legal}, ABD'deki atölyesi ve içecek gereçleri, hediyeler, çerçeveler ve ofis ürünlerinden oluşan {count} üzerinde kişiselleştirilebilir ürünlük kataloğuyla hizmet veriyor. Tüm ürünler sipariş üzerine kazınmaya ve markanız adına gizli kargoyla gönderilmeye hazırdır. {cutoff} öncesinde verilen siparişlerde aynı gün baskı ve kargo, tüm teklif taleplerinde ise aynı gün yanıt sunuyoruz.",
     "portalEyebrow": "Satıcı Paneli",
@@ -567,7 +566,7 @@
   },
   "pricing": {
     "metaTitle": "Toptan Fiyatlandırma",
-    "metaDescription": "FomaPrint'ın satıcılara özel toptan fiyatlandırması: kişiselleştirme ve gizli kargo dahil, teklif bazlı birim fiyatlar; tekliflere aynı gün yanıt ve {cutoff} öncesi verilen siparişlerde aynı gün baskı ve kargo. FOMA FAMILY LLC'den fiyat teklifi alın.",
+    "metaDescription": "FomaPrint'ın satıcılara özel toptan fiyatlandırması: kişiselleştirme ve gizli kargo dahil, teklif bazlı birim fiyatlar; tekliflere aynı gün yanıt ve {cutoff} öncesi verilen siparişlerde aynı gün baskı ve kargo. FomaPrint LLC'den fiyat teklifi alın.",
     "ogDescription": "Satıcılara özel teklif bazlı toptan fiyatlar; kişiselleştirme, gizli kargo, aynı gün yanıt ve aynı gün baskı ve kargo dahil.",
     "eyebrow": "Toptan fiyatlandırma",
     "headingBefore": "Satıcıların",
@@ -639,8 +638,8 @@
   },
   "privacy": {
     "metaTitle": "Gizlilik Politikası",
-    "metaDescription": "FOMA FAMILY LLC'nin FomaPrint'te bilgilerinizi nasıl topladığı, kullandığı ve koruduğu hakkında bilgi edinin.",
-    "updated": "Eylül 2026",
+    "metaDescription": "FomaPrint LLC'nin FomaPrint'te bilgilerinizi nasıl topladığı, kullandığı ve koruduğu hakkında bilgi edinin.",
+    "updated": "Kasım 2026",
     "intro": "{legal} (\"{brand}\", \"biz\", \"bize\") gizliliğinize saygı duyar. Bu politika, {brand} hizmetini kullandığınızda hangi bilgileri topladığımızı, bunları nasıl kullandığımızı ve sahip olduğunuz seçenekleri açıklar. Sitemizi kullanarak veya bir form göndererek bu politikayı kabul etmiş olursunuz.",
     "s1Heading": "Topladığımız bilgiler",
     "s1B1": "Özel sipariş veya satıcı formlarımız aracılığıyla paylaştığınız adınız, işletme adınız, e-posta adresiniz, telefon numaranız ve web siteniz gibi iletişim bilgileri.",
@@ -664,9 +663,9 @@
   },
   "terms": {
     "metaTitle": "Hizmet Şartları",
-    "metaDescription": "FomaPrint'i kullanmaya ve FOMA FAMILY LLC'den sipariş vermeye ilişkin şartlar ve koşullar.",
-    "updated": "Haziran 2026",
-    "intro1": "Bu Hizmet Şartları (\"Şartlar\"), ABD'nin Georgia eyaletindeki Alpharetta şehrinde bulunan bir limited şirket olan FOMA FAMILY LLC'nin (\"FomaPrint\", \"biz\" veya \"bizim\") işlettiği FomaPrint'e ve sipariş karşılama hizmetlerine erişiminizi ve bunları kullanımınızı düzenler.",
+    "metaDescription": "FomaPrint'i kullanmaya ve FomaPrint LLC'den sipariş vermeye ilişkin şartlar ve koşullar.",
+    "updated": "Kasım 2026",
+    "intro1": "Bu Hizmet Şartları (\"Şartlar\"), ABD'nin Georgia eyaletindeki Alpharetta şehrinde bulunan, Georgia eyaleti limited şirketi FomaPrint LLC'nin (\"FomaPrint\", \"biz\" veya \"bizim\") işlettiği FomaPrint'e ve sipariş karşılama hizmetlerine erişiminizi ve bunları kullanımınızı düzenler.",
     "intro2": "FomaPrint, işletmeler arası (B2B) bir üretim ve sipariş karşılama iş ortağıdır. Kendi müşterilerine satış yapan online satıcılara, markalara ve mağazalara gizli kargo, beyaz etiket talebe göre baskı ve lazer kazıma hizmetleri sunarız. Bu Şartlar, FomaPrint ile Satıcı olarak sizin aranızdaki sözleşmedir; nihai müşterilerinizle yapılmış bir tüketici sözleşmesi değildir.",
     "intro3": "Bir hesap oluşturarak, teklif alarak, cüzdanınıza bakiye yükleyerek veya sipariş vererek bir işletme adına hareket ettiğinizi ve bu Şartları kabul ettiğinizi onaylarsınız. Kabul etmiyorsanız hizmetlerimizi kullanmayın.",
     "s1Heading": "1. Tanımlar",
@@ -732,10 +731,10 @@
     "s11Heading": "11. Yasaklı içerik ve kullanım",
     "s11P1": "FomaPrint'i yasa dışı, hak ihlali oluşturan, sahte, karalayıcı, nefret içeren, cinsel istismar niteliğindeki veya şiddeti ya da yasa dışı faaliyetleri teşvik eden içerikleri üretmek veya göndermek için kullanmayacağınızı; hizmeti bize ya da başkalarına hukuki sorumluluk doğuracak şekilde kullanmayacağınızı kabul edersiniz. İhlaller, hesabınızın derhâl askıya alınmasına veya sonlandırılmasına yol açabilir.",
     "s12Heading": "12. Sorumluluğun sınırlandırılması",
-    "s12P1": "Yasaların izin verdiği azami ölçüde FOMA FAMILY LLC; ürünlerimizi, hizmetlerimizi veya internet sitemizi kullanmanızdan kaynaklanan kâr, satış veya itibar kaybı ve Son Müşteri talepleri dâhil olmak üzere dolaylı, arızi, özel veya sonuç olarak ortaya çıkan zararlardan sorumlu değildir.",
+    "s12P1": "Yasaların izin verdiği azami ölçüde FomaPrint LLC; ürünlerimizi, hizmetlerimizi veya internet sitemizi kullanmanızdan kaynaklanan kâr, satış veya itibar kaybı ve Son Müşteri talepleri dâhil olmak üzere dolaylı, arızi, özel veya sonuç olarak ortaya çıkan zararlardan sorumlu değildir.",
     "s12P2": "Herhangi bir Siparişe ilişkin toplam sorumluluğumuz, o Sipariş için bize ödediğiniz tutarla sınırlıdır. Bazı yargı bölgeleri belirli sorumluluk sınırlamalarına izin vermediğinden bu bölümün bazı kısımları sizin için geçerli olmayabilir.",
     "s13Heading": "13. Tazmin yükümlülüğü",
-    "s13P1": "Şunlardan kaynaklanan her türlü talep, zarar, yükümlülük, maliyet ve masrafa (makul hukuki ücretler dâhil) karşı FOMA FAMILY LLC'yi, sahiplerini ve çalışanlarını tazmin etmeyi, savunmayı ve zarardan muaf tutmayı kabul edersiniz: (a) gönderdiğiniz tasarım veya içerik; (b) satış, pazarlama ve fiyatlandırma faaliyetleriniz ile Son Müşterilerle ilişkileriniz; (c) vergi veya mevzuat yükümlülükleriniz ya da (d) bu Koşulları ihlal etmeniz.",
+    "s13P1": "Şunlardan kaynaklanan her türlü talep, zarar, yükümlülük, maliyet ve masrafa (makul hukuki ücretler dâhil) karşı FomaPrint LLC'yi, sahiplerini ve çalışanlarını tazmin etmeyi, savunmayı ve zarardan muaf tutmayı kabul edersiniz: (a) gönderdiğiniz tasarım veya içerik; (b) satış, pazarlama ve fiyatlandırma faaliyetleriniz ile Son Müşterilerle ilişkileriniz; (c) vergi veya mevzuat yükümlülükleriniz ya da (d) bu Koşulları ihlal etmeniz.",
     "s14Heading": "14. Gizlilik ve veriler",
     "s14P1": "Tarafların her biri, diğer tarafın kamuya açık olmayan ticari bilgilerini korur. Sağladığınız Son Müşteri verileri (adlar, adresler ve sipariş ayrıntıları), FomaPrint tarafından yalnızca Siparişlerinizi karşılamak ve göndermek amacıyla işlenir; satılmaz veya müşterilerinize pazarlama yapmak için kullanılmaz. Son Müşteri verilerini bizimle paylaşmak için hukuka uygun bir dayanağa sahip olmaktan ve müşterilerinize karşı kendi gizlilik yükümlülüklerinizi yerine getirmekten siz sorumlusunuz.",
     "s15Heading": "15. Askıya alma ve sonlandırma",
