@@ -8414,6 +8414,145 @@ const ADDED_PRODUCTS: RawProduct[] = [
     subSlug: "crystal-ornaments",
     subName: "Crystal Ornaments",
   },
+  // Eight more crystal ornaments (operator request, 4 Nov 2026). Price is the
+  // JDS 1-case tier, as for CRY3617/18; the K93xx line has a single price.
+  // Sizes come from the JDS product details, images from JDS's Cloudinary.
+  {
+    id: "cry1401",
+    name: "2 1/2\" Crystal Heart Ornament",
+    sku: "CRY1401",
+    size: "3\" x 2 1/2\"",
+    price: 7.15,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1689956185/products/images/large/CRY1401--fd945dfc.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1689956185/products/images/large/CRY1401--fd945dfc.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "137",
+    subSlug: "crystal-ornaments",
+    subName: "Crystal Ornaments",
+  },
+  {
+    id: "cry1403",
+    name: "3\" Crystal Tree Ornament",
+    sku: "CRY1403",
+    size: "2\" x 3\"",
+    price: 7.15,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1689955122/products/images/large/CRY1403--a80aab16.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1689955122/products/images/large/CRY1403--a80aab16.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "137",
+    subSlug: "crystal-ornaments",
+    subName: "Crystal Ornaments",
+  },
+  {
+    id: "cry3619",
+    name: "3 1/2\" Crystal Octagon Ornament",
+    sku: "CRY3619",
+    size: "2 3/4\" x 3 1/2\"",
+    price: 7.9,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1689954235/products/images/large/CRY3619--c5e2fad5.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1689954235/products/images/large/CRY3619--c5e2fad5.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "137",
+    subSlug: "crystal-ornaments",
+    subName: "Crystal Ornaments",
+  },
+  {
+    id: "cry3621",
+    name: "3\" Crystal Rectangle Clipped Corner Ornament",
+    sku: "CRY3621",
+    size: "2 3/4\" x 3\"",
+    price: 7.9,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1689954254/products/images/large/CRY3621--34409cb1.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1689954254/products/images/large/CRY3621--34409cb1.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "137",
+    subSlug: "crystal-ornaments",
+    subName: "Crystal Ornaments",
+  },
+  {
+    id: "cry3623",
+    name: "3\" Crystal Hexagon Ornament",
+    sku: "CRY3623",
+    size: "2 3/4\" x 3\"",
+    price: 7.9,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1689954281/products/images/large/CRY3623--7cc039cf.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1689954281/products/images/large/CRY3623--7cc039cf.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "137",
+    subSlug: "crystal-ornaments",
+    subName: "Crystal Ornaments",
+  },
+  {
+    id: "cry3627",
+    name: "3\" Crystal Diamond Ornament",
+    sku: "CRY3627",
+    size: "3\" x 3\"",
+    price: 7.9,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1689954302/products/images/large/CRY3627--77247a0a.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1689954302/products/images/large/CRY3627--77247a0a.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "137",
+    subSlug: "crystal-ornaments",
+    subName: "Crystal Ornaments",
+  },
+  {
+    id: "k9314",
+    name: "2 3/4\" Crystal Bell Ornament",
+    sku: "K9314",
+    size: "2 3/4\"(H)",
+    price: 5.5,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1733758458/products/images/large/K9314--def742fe.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1733758458/products/images/large/K9314--def742fe.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "137",
+    subSlug: "crystal-ornaments",
+    subName: "Crystal Ornaments",
+  },
+  {
+    id: "k9322",
+    name: "3 1/2\" Crystal Star Ornament",
+    sku: "K9322",
+    size: "3 1/2\"(H)",
+    price: 5.5,
+    image:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto,c_pad,b_transparent,w_300,h_300/v1733758456/products/images/large/K9322--68bdfe88.png",
+    imageFull:
+      "https://res.cloudinary.com/business-products/image/upload/q_auto/v1733758456/products/images/large/K9322--68bdfe88.png",
+    categoryId: "4",
+    categorySlug: "frames-and-decor",
+    categoryName: "Frames & Decor",
+    subId: "137",
+    subSlug: "crystal-ornaments",
+    subName: "Crystal Ornaments",
+  },
   // Acacia cutting boards with drip ring + corner hole, two sizes (JDS
   // master CSV, not in the scraped feed). Existing feed subcategory —
   // GIFTS_SPLIT routes it to Kitchen & Bar. Supplier Cloudinary images,
