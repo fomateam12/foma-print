@@ -9724,6 +9724,8 @@ interface EngraveColorInfo {
   color: string;
   frost?: boolean;
   opacity?: number;
+  /** Named mark colour when "light"/"dark" would mislead (gold ION reveals gold). */
+  mark?: "gold";
 }
 // Engraved-area colour per SKU (material x coating group, measured from the
 // supplier's decorated/blank photo pairs). Regenerate with
@@ -9818,6 +9820,9 @@ function enrich(p: Product): Product {
   const engrave = engravingColorByUpper.get(upper);
   if (engrave) {
     next = { ...next, engraveColor: engrave.hex, engraveTone: engrave.tone };
+    if (engrave.mark) {
+      next = { ...next, engraveMark: engrave.mark };
+    }
     if (engrave.frost) {
       next = { ...next, engraveFrost: true, engraveOpacity: engrave.opacity };
     }
