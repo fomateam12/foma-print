@@ -3756,42 +3756,48 @@
   "family": "steel-powder",
   "hex": "#CB9B43",
   "source": "jds-dekorlu-kare-olcumu-2026-08-30",
-  "tone": "light"
+  "tone": "light",
+  "mark": "gold"
  },
  "LTM7231": {
   "color": "Red",
   "family": "steel-powder",
   "hex": "#CAA14B",
   "source": "jds-dekorlu-kare-olcumu-2026-08-30",
-  "tone": "light"
+  "tone": "light",
+  "mark": "gold"
  },
  "LTM7232": {
   "color": "Purple",
   "family": "steel-powder",
   "hex": "#CCA446",
   "source": "jds-dekorlu-kare-olcumu-2026-08-30",
-  "tone": "light"
+  "tone": "light",
+  "mark": "gold"
  },
  "LTM7233": {
   "color": "Navy Blue",
   "family": "steel-powder",
   "hex": "#C39B43",
   "source": "jds-dekorlu-kare-olcumu-2026-08-30",
-  "tone": "light"
+  "tone": "light",
+  "mark": "gold"
  },
  "LTM7234": {
   "color": "Maroon",
   "family": "steel-powder",
   "hex": "#C59C45",
   "source": "jds-dekorlu-kare-olcumu-2026-08-30",
-  "tone": "light"
+  "tone": "light",
+  "mark": "gold"
  },
  "LTM7235": {
   "color": "Green",
   "family": "steel-powder",
   "hex": "#C69B45",
   "source": "jds-dekorlu-kare-olcumu-2026-08-30",
-  "tone": "light"
+  "tone": "light",
+  "mark": "gold"
  },
  "LTM7278": {
   "color": "Orange",

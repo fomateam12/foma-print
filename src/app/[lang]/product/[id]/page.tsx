@@ -300,9 +300,11 @@ export default async function ProductPage({
                     <span>
                       {product.engraveFrost
                         ? t.engraveFrost
-                        : product.engraveTone === "dark"
-                          ? t.engraveToneDark
-                          : t.engraveToneLight}
+                        : product.engraveMark === "gold"
+                          ? t.engraveMarkGold
+                          : product.engraveTone === "dark"
+                            ? t.engraveToneDark
+                            : t.engraveToneLight}
                     </span>
                   </dd>
                 </div>

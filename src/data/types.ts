@@ -68,6 +68,8 @@ export interface Product {
   engraveColor?: string;
   /** "light" or "dark" relative to the coating — drives preview contrast. */
   engraveTone?: "light" | "dark";
+  /** Named mark colour shown instead of the light/dark tone label. */
+  engraveMark?: "gold";
   /** Glass / acrylic: the mark is a translucent frost layer, not paint.
    *  Render `engraveColor` at `engraveOpacity` over the product photo. */
   engraveFrost?: boolean;
