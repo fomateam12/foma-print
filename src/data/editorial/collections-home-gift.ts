@@ -247,7 +247,7 @@ export const HOME_GIFT_COLLECTION_COPY: Record<string, EditorialEntry> = {
     en: {
       intro: [
         "BBQ sets are the single strongest Father's Day product in the catalogue, and they carry an unusually high perceived value because the blank arrives as a complete cased set rather than a loose tool.",
-        "Engraving goes on the case or the handles, so one mark makes the whole set look commissioned rather than bought.",
+        "Engraving goes on the case lid (and on the handles for sets that support it), so one mark makes the whole set look commissioned rather than bought.",
       ],
       highlights: [
         "Father's Day and birthday gifting",
@@ -257,14 +257,14 @@ export const HOME_GIFT_COLLECTION_COPY: Record<string, EditorialEntry> = {
       faqs: [
         {
           q: "Where is a BBQ set engraved?",
-          a: "The case lid is the standard placement because it is the presentation surface. Handle engraving is available on request when the tools should carry the mark individually.",
+          a: "The case lid is the standard placement because it is the presentation surface. Whether the tools can be engraved depends on the set: the 3-piece Bamboo BBQ Gift Set (BBQ02A) is engraved on the case lid only, while the 11-piece BBQ Grill Set with Case also takes engraving on the tool handles.",
         },
       ],
     },
     tr: {
       intro: [
         "Mangal setleri katalogun en güçlü Babalar Günü ürünüdür ve algılanan değerleri alışılmadık derecede yüksektir; çünkü boş ürün tek bir alet olarak değil, çantasıyla komple bir set olarak gelir.",
-        "Kazıma çantaya ya da saplara yapılır; tek bir iz tüm seti satın alınmış değil ısmarlanmış gösterir.",
+        "Kazıma çanta kapağına (destekleyen setlerde saplara da) yapılır; tek bir iz tüm seti satın alınmış değil ısmarlanmış gösterir.",
       ],
       highlights: [
         "Babalar Günü ve doğum günü hediyeleri",
@@ -274,7 +274,7 @@ export const HOME_GIFT_COLLECTION_COPY: Record<string, EditorialEntry> = {
       faqs: [
         {
           q: "Mangal seti nereye kazınıyor?",
-          a: "Standart yerleşim çanta kapağıdır, çünkü sunum yüzeyi orasıdır. Aletlerin tek tek iz taşıması isteniyorsa talep üzerine sap kazıma da yapılır.",
+          a: "Standart yerleşim çanta kapağıdır, çünkü sunum yüzeyi orasıdır. Aletlere kazıma yapılıp yapılamayacağı sete göre değişir: 3 parçalı bambu mangal seti (BBQ02A) yalnızca kutu kapağından kazınır, 11 parçalı çantalı mangal setinde ise alet saplarına da kazıma yapılır.",
         },
       ],
     },
