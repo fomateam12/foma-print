@@ -544,7 +544,7 @@ const REMOVED_SKUS = new Set<string>([
   "GFT357",
   "PTF446",
   "ADW10BK", "ADW8BK", "ADW8CL", "APF446B", "APF446GY",
-  "APF457B", "APF457GY", "APF4810B", "APF4810GY", "BBQ01A", "BBQ02A",
+  "APF457B", "APF457GY", "APF4810B", "APF4810GY", "BBQ01A",
   "BBQ03B", "BBQ11B", "BBQ12B", "BBQ13B", "BBQ14B", "BR2252",
   // CDL1011-CDL1017 (5.3 oz. tin candles) are sold again as of 14 Aug 2026 —
   // the line went live in FomaHub the same day (item 145, one product with a
@@ -9643,6 +9643,9 @@ function buildDescriptions(p: RawProduct): {
 // price with one engraved side (JDS ten-case cost + $5.00 engraving), instead
 // of the scraped retail figure. Internal only, never shown as a price tag.
 const PRICE_OVERRIDES: Record<string, number> = {
+  // BBQ02A re-listed 25 Nov 2026 (FomaHub replacement for the out-of-stock
+  // FBBQ set): $30.00 blank + $5.00 engraving on the case lid only.
+  BBQ02A: 35,
   GFT159: 14.8,
   FSK622: 10.45,
   FSK626: 10.45,
