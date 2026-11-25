@@ -23,6 +23,12 @@
     "engrave_mm": null,
     "fallback_weight_lb": null
   },
+  "BBQ02A": {
+    "type": "Bamboo BBQ Set",
+    "dim_in": "19.63 × 5.5 × 3.13 in",
+    "engrave_mm": "492 × 130 mm",
+    "fallback_weight_lb": 4.33
+  },
   "BPN101": {
     "type": "Cake Pan",
     "dim_in": "9 × 13 × 1 in",
