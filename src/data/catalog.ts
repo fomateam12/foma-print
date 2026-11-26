@@ -8568,6 +8568,8 @@ const ADDED_SUBCATEGORIES: Record<string, RawCategory["subcategories"]> = {
     // GIFTS_SPLIT routes to Personal Accessories.
     { subId: "122", slug: "pocket-knives", name: "Pocket Knives", count: 0 },
     { subId: "123", slug: "lighters", name: "Lighters", count: 0 },
+    // FOMA's knit beanies with an engraved leatherette patch (foma-products.ts). 140 = next free subId.
+    { subId: "140", slug: "beanies", name: "Beanies", count: 0 },
     { subId: "138", slug: "leatherette-sheet-stock", name: "Leatherette Sheet Stock", count: 0 },
     { subId: "106", slug: "wallets-with-strap", name: "Leatherette Wallet with Strap", count: 0 },
     { subId: "107", slug: "wallets-bifold-flip-id", name: "Leatherette Bifold Wallet with Flip ID", count: 0 },
@@ -9360,6 +9362,7 @@ const GIFTS_SPLIT: Record<string, { id: string; slug: string; name: string }> = 
   // FOMA's own products from the dissolved "Best Sellers" category.
   "pocket-knives": GIFTS_CATS.personal,
   "lighters": GIFTS_CATS.personal,
+  "beanies": GIFTS_CATS.personal,
   // Laserable leatherette sheet stock (ADDED_PRODUCTS) — explicit mapping
   // rather than relying on the unmapped-sub fallback.
   "leatherette-sheet-stock": GIFTS_CATS.personal,
